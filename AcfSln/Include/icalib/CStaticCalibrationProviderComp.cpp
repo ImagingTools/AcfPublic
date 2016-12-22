@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,49 +20,53 @@
 ********************************************************************************/
 
 
-#include <i2d/CPerspectiveCalibration2dComp.h>
+#include <icalib/CStaticCalibrationProviderComp.h>
 
 
-// ACF incldues
-#include <istd/CChangeGroup.h>
-
-
-namespace i2d
+namespace icalib
 {
+
+
+CStaticCalibrationProviderComp::CStaticCalibrationProviderComp()
+:	m_updateBridge(this)
+{
+}
+
+
+// reimplemented (i2d::ICalibrationProvider)
+
+const i2d::ICalibration2d* CStaticCalibrationProviderComp::GetCalibration() const
+{
+	if (m_calibrationCompPtr.IsValid()){
+		return m_calibrationCompPtr.GetPtr();
+	}
+
+	return NULL;
+}
 
 
 // protected methods
 
 // reimplemented (icomp::CComponentBase)
 
-void CPerspectiveCalibration2dComp::OnComponentCreated()
+void CStaticCalibrationProviderComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	istd::CChangeGroup changeGroup(this);
-	Q_UNUSED(changeGroup);
-
-	SetArgumentArea(m_argumentAreaCompPtr.GetPtr());
-	SetResultArea(m_resultAreaCompPtr.GetPtr());
-	SetArgumentUnitInfo(m_argumentUnitInfoCompPtr.GetPtr());
-	SetResultUnitInfo(m_resultUnitInfoCompPtr.GetPtr());
+	if (m_calibrationModelCompPtr.IsValid()){
+		m_calibrationModelCompPtr->AttachObserver(&m_updateBridge);
+	}
 }
 
 
-void CPerspectiveCalibration2dComp::OnComponentDestroyed()
+void CStaticCalibrationProviderComp::OnComponentDestroyed()
 {
+	m_updateBridge.EnsureModelsDetached();
+
 	BaseClass::OnComponentDestroyed();
-
-	istd::CChangeGroup changeGroup(this);
-	Q_UNUSED(changeGroup);
-
-	SetArgumentArea(NULL);
-	SetResultArea(NULL);
-	SetArgumentUnitInfo(NULL);
-	SetResultUnitInfo(NULL);
 }
 
 
-} // namespace i2d
+} // namespace icalib
 
 

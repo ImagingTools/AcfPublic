@@ -114,12 +114,26 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\CAffineCalibration2d.cpp" />
+    <ClCompile Include="..\CAffineCalibration2dComp.cpp" />
+    <ClCompile Include="..\CCalibration2dProxyComp.cpp" />
+    <ClCompile Include="..\CNoneCalibration2d.cpp" />
+    <ClCompile Include="..\CPerspectiveCalibration2d.cpp" />
+    <ClCompile Include="..\CPerspectiveCalibration2dComp.cpp" />
     <ClCompile Include="..\CSimpleLensCorrection.cpp" />
     <ClCompile Include="..\CSimpleLensCorrectionComp.cpp" />
+    <ClCompile Include="..\CStaticCalibrationProviderComp.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\CAffineCalibration2d.h" />
+    <ClInclude Include="..\CAffineCalibration2dComp.h" />
+    <ClInclude Include="..\CCalibration2dProxyComp.h" />
+    <ClInclude Include="..\CNoneCalibration2d.h" />
+    <ClInclude Include="..\CPerspectiveCalibration2d.h" />
+    <ClInclude Include="..\CPerspectiveCalibration2dComp.h" />
     <ClInclude Include="..\CSimpleLensCorrection.h" />
     <ClInclude Include="..\CSimpleLensCorrectionComp.h" />
+    <ClInclude Include="..\CStaticCalibrationProviderComp.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

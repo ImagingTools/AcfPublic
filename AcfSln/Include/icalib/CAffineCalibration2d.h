@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CAffineCalibration2d_included
-#define i2d_CAffineCalibration2d_included
+#ifndef icalib_CAffineCalibration2d_included
+#define icalib_CAffineCalibration2d_included
 
 
 // ACF includes
@@ -30,7 +30,7 @@
 #include <i2d/CAffine2d.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -38,11 +38,11 @@ namespace i2d
 	Definition of an affine transformation for 2D-spaces.
 */
 class CAffineCalibration2d:
-			public CAffineTransformation2d,
-			virtual public ICalibration2d
+			public i2d::CAffineTransformation2d,
+			virtual public i2d::ICalibration2d
 {
 public:
-	typedef CAffineTransformation2d BaseClass;
+	typedef i2d::CAffineTransformation2d BaseClass;
 
 	CAffineCalibration2d();
 
@@ -54,11 +54,11 @@ public:
 	void SetResultUnitInfo(const imath::IUnitInfo* unitInfoPtr);
 
 	// reimplemented (i2d::ICalibration2d)
-	virtual const CRectangle* GetArgumentArea() const;
-	virtual const CRectangle* GetResultArea() const;
+	virtual const i2d::CRectangle* GetArgumentArea() const;
+	virtual const i2d::CRectangle* GetResultArea() const;
 	virtual const imath::IUnitInfo* GetArgumentUnitInfo() const;
 	virtual const imath::IUnitInfo* GetResultUnitInfo() const;
-	virtual const ICalibration2d* CreateCombinedCalibration(const ITransformation2d& transformation) const;
+	virtual const i2d::ICalibration2d* CreateCombinedCalibration(const i2d::ITransformation2d& transformation) const;
 
 	// reimplemented (istd::IChangeable)
 	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
@@ -72,9 +72,9 @@ private:
 };
 
 
-} // namespace i2d
+} // namespace icalib
 
 
-#endif // !i2d_CAffineTransformation2d_included
+#endif // !icalib_CAffineTransformation2d_included
 
 

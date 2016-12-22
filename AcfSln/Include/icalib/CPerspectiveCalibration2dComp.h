@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,17 +20,17 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CPerspectiveCalibration2dComp_included
-#define i2d_CPerspectiveCalibration2dComp_included
+#ifndef icalib_CPerspectiveCalibration2dComp_included
+#define icalib_CPerspectiveCalibration2dComp_included
 
 
 // ACF includes
 #include <icomp/CComponentBase.h>
 
-#include <i2d/CPerspectiveCalibration2d.h>
+#include <icalib/CPerspectiveCalibration2d.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -67,9 +67,9 @@ private:
 };
 
 
-} // namespace i2d
+} // namespace icalib
 
 
-#endif // !i2d_CPerspectiveCalibration2dComp_included
+#endif // !icalib_CPerspectiveCalibration2dComp_included
 
 

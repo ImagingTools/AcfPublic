@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include <i2d/CAffineCalibration2dComp.h>
+#include <icalib/CPerspectiveCalibration2dComp.h>
 
 
 // ACF incldues
 #include <istd/CChangeGroup.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -35,54 +35,34 @@ namespace i2d
 
 // reimplemented (icomp::CComponentBase)
 
-void CAffineCalibration2dComp::OnComponentCreated()
+void CPerspectiveCalibration2dComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	CVector2d& translationRef = m_transformation.GetTranslationRef();
-	CMatrix2d& matrixRef = m_transformation.GetDeformMatrixRef();
+	istd::CChangeGroup changeGroup(this);
+	Q_UNUSED(changeGroup);
 
-	if (m_m00AttrPtr.IsValid()){
-		matrixRef.GetAtRef(0, 0) = *m_m00AttrPtr;
-	}
-
-	if (m_m10AttrPtr.IsValid()){
-		matrixRef.GetAtRef(1, 0) = *m_m10AttrPtr;
-	}
-
-	if (m_m01AttrPtr.IsValid()){
-		matrixRef.GetAtRef(0, 1) = *m_m01AttrPtr;
-	}
-
-	if (m_m11AttrPtr.IsValid()){
-		matrixRef.GetAtRef(1, 1) = *m_m11AttrPtr;
-	}
-
-	if (m_translationXAttrPtr.IsValid()){
-		translationRef.SetX(*m_translationXAttrPtr);
-	}
-
-	if (m_translationYAttrPtr.IsValid()){
-		translationRef.SetY(*m_translationYAttrPtr);
-	}
-
+	SetArgumentArea(m_argumentAreaCompPtr.GetPtr());
+	SetResultArea(m_resultAreaCompPtr.GetPtr());
 	SetArgumentUnitInfo(m_argumentUnitInfoCompPtr.GetPtr());
 	SetResultUnitInfo(m_resultUnitInfoCompPtr.GetPtr());
 }
 
 
-void CAffineCalibration2dComp::OnComponentDestroyed()
+void CPerspectiveCalibration2dComp::OnComponentDestroyed()
 {
 	BaseClass::OnComponentDestroyed();
 
 	istd::CChangeGroup changeGroup(this);
 	Q_UNUSED(changeGroup);
 
+	SetArgumentArea(NULL);
+	SetResultArea(NULL);
 	SetArgumentUnitInfo(NULL);
 	SetResultUnitInfo(NULL);
 }
 
 
-} // namespace i2d
+} // namespace icalib
 
 

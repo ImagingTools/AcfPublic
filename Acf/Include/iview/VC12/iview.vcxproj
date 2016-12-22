@@ -117,7 +117,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAffineTransformation2dShape.cpp" />
-    <ClCompile Include="..\CAffiniteCalibrationShape.cpp" />
     <ClCompile Include="..\CAnnulusSegmentShape.cpp" />
     <ClCompile Include="..\CAnnulusShape.cpp" />
     <ClCompile Include="..\CArcShape.cpp" />
@@ -135,10 +134,8 @@
     <ClCompile Include="..\CInteractiveViewLayer.cpp" />
     <ClCompile Include="..\CLabelShape.cpp" />
     <ClCompile Include="..\CLineShape.cpp" />
-    <ClCompile Include="..\CNoneCalibrationShape.cpp" />
     <ClCompile Include="..\COrientedCircleShape.cpp" />
     <ClCompile Include="..\CParallelogramShape.cpp" />
-    <ClCompile Include="..\CPerspectiveCalibrationShape.cpp" />
     <ClCompile Include="..\CPinShape.cpp" />
     <ClCompile Include="..\CPolygonShape.cpp" />
     <ClCompile Include="..\CPolylineShape.cpp" />
@@ -158,7 +155,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAffineTransformation2dShape.h" />
-    <ClInclude Include="..\CAffiniteCalibrationShape.h" />
     <ClInclude Include="..\CAnnulusSegmentShape.h" />
     <ClInclude Include="..\CAnnulusShape.h" />
     <ClInclude Include="..\CArcShape.h" />
@@ -185,10 +181,8 @@
     <ClInclude Include="..\CInteractiveViewLayer.h" />
     <ClInclude Include="..\CLabelShape.h" />
     <ClInclude Include="..\CLineShape.h" />
-    <ClInclude Include="..\CNoneCalibrationShape.h" />
     <ClInclude Include="..\COrientedCircleShape.h" />
     <ClInclude Include="..\CParallelogramShape.h" />
-    <ClInclude Include="..\CPerspectiveCalibrationShape.h" />
     <ClInclude Include="..\CPinShape.h" />
     <ClInclude Include="..\CPolygonShape.h" />
     <ClInclude Include="..\CPolylineShape.h" />

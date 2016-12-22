@@ -115,8 +115,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAffine2d.cpp" />
-    <ClCompile Include="..\CAffineCalibration2d.cpp" />
-    <ClCompile Include="..\CAffineCalibration2dComp.cpp" />
     <ClCompile Include="..\CAffineTransformation2d.cpp" />
     <ClCompile Include="..\CAnnulus.cpp" />
     <ClCompile Include="..\CAnnulusComp.cpp" />
@@ -125,7 +123,6 @@
     <ClCompile Include="..\CArc.cpp" />
     <ClCompile Include="..\CArcComp.cpp" />
     <ClCompile Include="..\CArcPointsCalculator.cpp" />
-    <ClCompile Include="..\CCalibration2dProxyComp.cpp" />
     <ClCompile Include="..\CCircle.cpp" />
     <ClCompile Include="..\CCircleComp.cpp" />
     <ClCompile Include="..\CDataNodePolylineBase.cpp" />
@@ -134,13 +131,10 @@
     <ClCompile Include="..\CLine2d.cpp" />
     <ClCompile Include="..\CLine2dComp.cpp" />
     <ClCompile Include="..\CMatrix2d.cpp" />
-    <ClCompile Include="..\CNoneCalibration2d.cpp" />
     <ClCompile Include="..\CObject2dBase.cpp" />
     <ClCompile Include="..\COrientedCircle.cpp" />
     <ClCompile Include="..\COrientedCircleComp.cpp" />
     <ClCompile Include="..\CParallelogram.cpp" />
-    <ClCompile Include="..\CPerspectiveCalibration2d.cpp" />
-    <ClCompile Include="..\CPerspectiveCalibration2dComp.cpp" />
     <ClCompile Include="..\CPolygon.cpp" />
     <ClCompile Include="..\CPolygonComp.cpp" />
     <ClCompile Include="..\CPolyline.cpp" />
@@ -155,15 +149,12 @@
     <ClCompile Include="..\CRectangleComp.cpp" />
     <ClCompile Include="..\CSpline.cpp" />
     <ClCompile Include="..\CSplineSegment.cpp" />
-    <ClCompile Include="..\CStaticCalibrationProviderComp.cpp" />
     <ClCompile Include="..\CTubeNode.cpp" />
     <ClCompile Include="..\CTubePolylineComp.cpp" />
     <ClCompile Include="..\CVector2d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAffine2d.h" />
-    <ClInclude Include="..\CAffineCalibration2d.h" />
-    <ClInclude Include="..\CAffineCalibration2dComp.h" />
     <ClInclude Include="..\CAffineTransformation2d.h" />
     <ClInclude Include="..\CAnnulus.h" />
     <ClInclude Include="..\CAnnulusComp.h" />
@@ -172,7 +163,6 @@
     <ClInclude Include="..\CArc.h" />
     <ClInclude Include="..\CArcComp.h" />
     <ClInclude Include="..\CArcPointsCalculator.h" />
-    <ClInclude Include="..\CCalibration2dProxyComp.h" />
     <ClInclude Include="..\CCircle.h" />
     <ClInclude Include="..\CCircleComp.h" />
     <ClInclude Include="..\CDataNodePolylineBase.h" />
@@ -181,13 +171,10 @@
     <ClInclude Include="..\CLine2d.h" />
     <ClInclude Include="..\CLine2dComp.h" />
     <ClInclude Include="..\CMatrix2d.h" />
-    <ClInclude Include="..\CNoneCalibration2d.h" />
     <ClInclude Include="..\CObject2dBase.h" />
     <ClInclude Include="..\COrientedCircle.h" />
     <ClInclude Include="..\COrientedCircleComp.h" />
     <ClInclude Include="..\CParallelogram.h" />
-    <ClInclude Include="..\CPerspectiveCalibration2d.h" />
-    <ClInclude Include="..\CPerspectiveCalibration2dComp.h" />
     <ClInclude Include="..\CPolygon.h" />
     <ClInclude Include="..\CPolygonComp.h" />
     <ClInclude Include="..\CPolyline.h" />
@@ -202,7 +189,6 @@
     <ClInclude Include="..\CRectangleComp.h" />
     <ClInclude Include="..\CSpline.h" />
     <ClInclude Include="..\CSplineSegment.h" />
-    <ClInclude Include="..\CStaticCalibrationProviderComp.h" />
     <ClInclude Include="..\CTubeNode.h" />
     <ClInclude Include="..\CTubePolyline.h" />
     <ClInclude Include="..\CTubePolylineComp.h" />

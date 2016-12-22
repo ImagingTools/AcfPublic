@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,14 +20,15 @@
 ********************************************************************************/
 
 
-#ifndef iview_CNoneCalibrationShape_included
-#define iview_CNoneCalibrationShape_included
+#ifndef icalibgui_CNoneCalibrationShape_included
+#define icalibgui_CNoneCalibrationShape_included
 
 
+// ACF includes
 #include <iview/CShapeBase.h>
 
 
-namespace iview
+namespace icalibgui
 {
 
 
@@ -35,10 +36,10 @@ namespace iview
 	Shape object for none calibration.
 	You need this shape to visualize grid without calibration on the shape view.
 */
-class CNoneCalibrationShape: public CShapeBase
+class CNoneCalibrationShape: public iview::CShapeBase
 {
 public:
-	typedef CShapeBase BaseClass;
+	typedef iview::CShapeBase BaseClass;
 
 	// reimplemented (iview::IVisualizable)
 	virtual void Draw(QPainter& drawContext) const;
@@ -65,9 +66,9 @@ protected:
 };
 
 
-} // namespace iview
+} // namespace icalibgui
 
 
-#endif // !iview_CNoneCalibrationShape_included
+#endif // !icalibgui_CNoneCalibrationShape_included
 
 

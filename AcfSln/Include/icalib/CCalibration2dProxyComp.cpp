@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <i2d/CCalibration2dProxyComp.h>
+#include <icalib/CCalibration2dProxyComp.h>
 
 
 // ACF includes
@@ -29,7 +29,7 @@
 #include <i2d/CAffineTransformation2d.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -43,7 +43,7 @@ CCalibration2dProxyComp::CCalibration2dProxyComp()
 
 const i2d::CRectangle* CCalibration2dProxyComp::GetArgumentArea() const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetArgumentArea();
 	}
@@ -54,7 +54,7 @@ const i2d::CRectangle* CCalibration2dProxyComp::GetArgumentArea() const
 
 const i2d::CRectangle* CCalibration2dProxyComp::GetResultArea() const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetResultArea();
 	}
@@ -65,7 +65,7 @@ const i2d::CRectangle* CCalibration2dProxyComp::GetResultArea() const
 
 const imath::IUnitInfo* CCalibration2dProxyComp::GetArgumentUnitInfo() const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetArgumentUnitInfo();
 	}
@@ -76,7 +76,7 @@ const imath::IUnitInfo* CCalibration2dProxyComp::GetArgumentUnitInfo() const
 
 const imath::IUnitInfo* CCalibration2dProxyComp::GetResultUnitInfo() const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetResultUnitInfo();
 	}
@@ -84,9 +84,9 @@ const imath::IUnitInfo* CCalibration2dProxyComp::GetResultUnitInfo() const
 	return NULL;
 }
 
-const ICalibration2d* CCalibration2dProxyComp::CreateCombinedCalibration(const ITransformation2d& transformation) const
+const i2d::ICalibration2d* CCalibration2dProxyComp::CreateCombinedCalibration(const i2d::ITransformation2d& transformation) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->CreateCombinedCalibration(transformation);
 	}
@@ -102,7 +102,7 @@ const ICalibration2d* CCalibration2dProxyComp::CreateCombinedCalibration(const I
 
 int CCalibration2dProxyComp::GetTransformationFlags() const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetTransformationFlags();
 	}
@@ -112,12 +112,12 @@ int CCalibration2dProxyComp::GetTransformationFlags() const
 
 
 bool CCalibration2dProxyComp::GetDistance(
-			const CVector2d& origPos1,
-			const CVector2d& origPos2,
+			const i2d::CVector2d& origPos1,
+			const i2d::CVector2d& origPos2,
 			double& result,
 			ExactnessMode mode) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetDistance(origPos1, origPos2, result, mode);
 	}
@@ -129,11 +129,11 @@ bool CCalibration2dProxyComp::GetDistance(
 
 
 bool CCalibration2dProxyComp::GetPositionAt(
-			const CVector2d& origPosition,
-			CVector2d& result,
+			const i2d::CVector2d& origPosition,
+			i2d::CVector2d& result,
 			ExactnessMode mode) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetPositionAt(origPosition, result, mode);
 	}
@@ -145,11 +145,11 @@ bool CCalibration2dProxyComp::GetPositionAt(
 
 
 bool CCalibration2dProxyComp::GetInvPositionAt(
-			const CVector2d& transfPosition,
-			CVector2d& result,
+			const i2d::CVector2d& transfPosition,
+			i2d::CVector2d& result,
 			ExactnessMode mode) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetInvPositionAt(transfPosition, result, mode);
 	}
@@ -161,41 +161,41 @@ bool CCalibration2dProxyComp::GetInvPositionAt(
 
 
 bool CCalibration2dProxyComp::GetLocalTransform(
-			const CVector2d& origPosition,
-			CAffine2d& result,
+			const i2d::CVector2d& origPosition,
+			i2d::CAffine2d& result,
 			ExactnessMode mode) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetLocalTransform(origPosition, result, mode);
 	}
 
-	result = CAffine2d::GetIdentity();
+	result = i2d::CAffine2d::GetIdentity();
 
 	return true;
 }
 
 
 bool CCalibration2dProxyComp::GetLocalInvTransform(
-				const CVector2d& transfPosition,
-				CAffine2d& result,
+				const i2d::CVector2d& transfPosition,
+				i2d::CAffine2d& result,
 				ExactnessMode mode) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetLocalInvTransform(transfPosition, result, mode);
 	}
 
-	result = CAffine2d::GetIdentity();
+	result = i2d::CAffine2d::GetIdentity();
 
 	return true;
 }
 
 // reimplemented (imath::TISurjectFunction)
 
-bool CCalibration2dProxyComp::GetInvValueAt(const CVector2d& argument, CVector2d& result) const
+bool CCalibration2dProxyComp::GetInvValueAt(const i2d::CVector2d& argument, i2d::CVector2d& result) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetInvValueAt(argument, result);
 	}
@@ -206,9 +206,9 @@ bool CCalibration2dProxyComp::GetInvValueAt(const CVector2d& argument, CVector2d
 }
 
 
-CVector2d CCalibration2dProxyComp::GetInvValueAt(const CVector2d& argument) const
+i2d::CVector2d CCalibration2dProxyComp::GetInvValueAt(const i2d::CVector2d& argument) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetInvValueAt(argument);
 	}
@@ -219,9 +219,9 @@ CVector2d CCalibration2dProxyComp::GetInvValueAt(const CVector2d& argument) cons
 
 // reimplemented (imath::TIMathFunction)
 
-bool CCalibration2dProxyComp::GetValueAt(const CVector2d& argument, CVector2d& result) const
+bool CCalibration2dProxyComp::GetValueAt(const i2d::CVector2d& argument, i2d::CVector2d& result) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetValueAt(argument, result);
 	}
@@ -232,9 +232,9 @@ bool CCalibration2dProxyComp::GetValueAt(const CVector2d& argument, CVector2d& r
 }
 
 
-CVector2d CCalibration2dProxyComp::GetValueAt(const CVector2d& argument) const
+i2d::CVector2d CCalibration2dProxyComp::GetValueAt(const i2d::CVector2d& argument) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->GetValueAt(argument);
 	}
@@ -255,7 +255,7 @@ bool CCalibration2dProxyComp::Serialize(iser::IArchive& /*archive*/)
 
 istd::IChangeable* CCalibration2dProxyComp::CloneMe(CompatibilityMode mode) const
 {
-	const ICalibration2d* calibrationPtr = GetCalibration();
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
 	if (calibrationPtr != NULL){
 		return calibrationPtr->CloneMe(mode);
 	}
@@ -288,7 +288,7 @@ void CCalibration2dProxyComp::OnComponentDestroyed()
 
 // private methods
 
-const ICalibration2d* CCalibration2dProxyComp::GetCalibration() const
+const i2d::ICalibration2d* CCalibration2dProxyComp::GetCalibration() const
 {
 	if (m_calibrationProviderCompPtr.IsValid()){
 		return m_calibrationProviderCompPtr->GetCalibration();
@@ -298,6 +298,6 @@ const ICalibration2d* CCalibration2dProxyComp::GetCalibration() const
 }
 
 
-} // namespace i2d
+} // namespace icalib
 
 

@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,20 +20,18 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CStaticCalibrationProviderComp_included
-#define i2d_CStaticCalibrationProviderComp_included
+#ifndef icalib_CStaticCalibrationProviderComp_included
+#define icalib_CStaticCalibrationProviderComp_included
 
 
 // ACF includes
 #include <icomp/CComponentBase.h>
-
 #include <imod/CModelUpdateBridge.h>
-
 #include <i2d/ICalibration2d.h>
 #include <i2d/ICalibrationProvider.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -44,13 +42,13 @@ namespace i2d
 */
 class CStaticCalibrationProviderComp:
 			public icomp::CComponentBase,
-			public ICalibrationProvider
+			public i2d::ICalibrationProvider
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
 
 	I_BEGIN_COMPONENT(CStaticCalibrationProviderComp);
-		I_REGISTER_INTERFACE(ICalibrationProvider);
+		I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
 		I_REGISTER_INTERFACE(istd::IChangeable);
 		I_ASSIGN(m_calibrationCompPtr, "Calibration", "Static calibration object", true, "Calibration");
 		I_ASSIGN_TO(m_calibrationModelCompPtr, m_calibrationCompPtr, false);
@@ -59,7 +57,7 @@ public:
 	CStaticCalibrationProviderComp();
 
 	// reimplemented (i2d::ICalibrationProvider)
-	virtual const ICalibration2d* GetCalibration() const;
+	virtual const i2d::ICalibration2d* GetCalibration() const;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
@@ -67,16 +65,16 @@ protected:
 	virtual void OnComponentDestroyed();
 
 private:
-	I_REF(ICalibration2d, m_calibrationCompPtr);
+	I_REF(i2d::ICalibration2d, m_calibrationCompPtr);
 	I_REF(imod::IModel, m_calibrationModelCompPtr);
 
 	imod::CModelUpdateBridge m_updateBridge;
 };
 
 
-} // namespace i2d
+} // namespace icalib
 
 
-#endif // !i2d_CStaticCalibrationProviderComp_included
+#endif // !icalib_CStaticCalibrationProviderComp_included
 
 

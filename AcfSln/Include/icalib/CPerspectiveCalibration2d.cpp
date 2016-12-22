@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include <i2d/CPerspectiveCalibration2d.h>
+#include <icalib/CPerspectiveCalibration2d.h>
 
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -35,9 +35,9 @@ namespace i2d
 static const iser::CArchiveTag s_affinePartTag("AffinePart", "Part of calibration representing affine transformation", iser::CArchiveTag::TT_GROUP);
 static const iser::CArchiveTag s_perspAxisTag("PerspAxis", "Axis of perspective deformation", iser::CArchiveTag::TT_GROUP);
 static const iser::CArchiveTag s_logicalAreaTag("LogicalArea", "Area where this calibration is valid", iser::CArchiveTag::TT_GROUP);
-static const istd::IChangeable::ChangeSet s_calibrationChangedChangeSet(ICalibration2d::CF_CALIBRATION_CHANGED, "Calibration changed");
-static const istd::IChangeable::ChangeSet s_areaChangedChangeSet(ICalibration2d::CF_AREA_CHANGED, "Calibration area changed");
-static const istd::IChangeable::ChangeSet s_unitsChangedChangeSet(ICalibration2d::CF_UNITS_CHANGED, "Calibration units changed");
+static const istd::IChangeable::ChangeSet s_calibrationChangedChangeSet(i2d::ICalibration2d::CF_CALIBRATION_CHANGED, "Calibration changed");
+static const istd::IChangeable::ChangeSet s_areaChangedChangeSet(i2d::ICalibration2d::CF_AREA_CHANGED, "Calibration area changed");
+static const istd::IChangeable::ChangeSet s_unitsChangedChangeSet(i2d::ICalibration2d::CF_UNITS_CHANGED, "Calibration units changed");
 
 
 CPerspectiveCalibration2d::CPerspectiveCalibration2d()
@@ -173,7 +173,7 @@ const imath::IUnitInfo* CPerspectiveCalibration2d::GetResultUnitInfo() const
 }
 
 
-const ICalibration2d* CPerspectiveCalibration2d::CreateCombinedCalibration(const ITransformation2d& /*transformation*/) const
+const i2d::ICalibration2d* CPerspectiveCalibration2d::CreateCombinedCalibration(const i2d::ITransformation2d& /*transformation*/) const
 {
 	return NULL;
 }
@@ -464,6 +464,6 @@ void CPerspectiveCalibration2d::OnEndChanges(const ChangeSet& changeSet)
 }
 
 
-} // namespace i2d
+} // namespace icalib
 
 

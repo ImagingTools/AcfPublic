@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CCalibration2dProxyComp_included
-#define i2d_CCalibration2dProxyComp_included
+#ifndef icalib_CCalibration2dProxyComp_included
+#define icalib_CCalibration2dProxyComp_included
 
 
 // ACF includes
@@ -31,7 +31,7 @@
 #include <i2d/ICalibrationProvider.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -41,7 +41,7 @@ namespace i2d
 */
 class CCalibration2dProxyComp:
 			public icomp::CComponentBase,
-			public ICalibration2d
+			public i2d::ICalibration2d
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
@@ -66,40 +66,40 @@ public:
 	// reimplemented (i2d::ITransformation2d)
 	virtual int GetTransformationFlags() const;
 	virtual bool GetDistance(
-				const CVector2d& origPos1,
-				const CVector2d& origPos2,
+				const i2d::CVector2d& origPos1,
+				const i2d::CVector2d& origPos2,
 				double& result,
 				ExactnessMode mode = EM_NONE) const;
 	virtual bool GetPositionAt(
-				const CVector2d& origPosition,
-				CVector2d& result,
+				const i2d::CVector2d& origPosition,
+				i2d::CVector2d& result,
 				ExactnessMode mode = EM_NONE) const;
 	virtual bool GetInvPositionAt(
-				const CVector2d& transfPosition,
-				CVector2d& result,
+				const i2d::CVector2d& transfPosition,
+				i2d::CVector2d& result,
 				ExactnessMode mode = EM_NONE) const;
 	virtual bool GetLocalTransform(
-				const CVector2d& origPosition,
-				CAffine2d& result,
+				const i2d::CVector2d& origPosition,
+				i2d::CAffine2d& result,
 				ExactnessMode mode = EM_NONE) const;
 	virtual bool GetLocalInvTransform(
-				const CVector2d& transfPosition,
-				CAffine2d& result,
+				const i2d::CVector2d& transfPosition,
+				i2d::CAffine2d& result,
 				ExactnessMode mode = EM_NONE) const;
 
 	// reimplemented (imath::TISurjectFunction<i2d::CVector2d, i2d::CVector2d>)
-	virtual bool GetInvValueAt(const CVector2d& argument, CVector2d& result) const;
-	virtual CVector2d GetInvValueAt(const CVector2d& argument) const;
+	virtual bool GetInvValueAt(const i2d::CVector2d& argument, i2d::CVector2d& result) const;
+	virtual i2d::CVector2d GetInvValueAt(const i2d::CVector2d& argument) const;
 
 	// reimplemented (imath::TIMathFunction<i2d::CVector2d, i2d::CVector2d>)
-	virtual bool GetValueAt(const CVector2d& argument, CVector2d& result) const;
-	virtual CVector2d GetValueAt(const CVector2d& argument) const;
+	virtual bool GetValueAt(const i2d::CVector2d& argument, i2d::CVector2d& result) const;
+	virtual i2d::CVector2d GetValueAt(const i2d::CVector2d& argument) const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IChangeable)
-	virtual IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
@@ -107,19 +107,19 @@ protected:
 	virtual void OnComponentDestroyed();
 
 private:
-	const ICalibration2d* GetCalibration() const;
+	const i2d::ICalibration2d* GetCalibration() const;
 
 private:
-	I_REF(ICalibrationProvider, m_calibrationProviderCompPtr);
+	I_REF(i2d::ICalibrationProvider, m_calibrationProviderCompPtr);
 	I_REF(imod::IModel, m_calibrationProviderModelCompPtr);
 
 	imod::CModelUpdateBridge m_updateBridge;
 };
 
 
-} // namespace i2d
+} // namespace icalib
 
 
-#endif // !i2d_CCalibration2dProxyComp_included
+#endif // !icalib_CCalibration2dProxyComp_included
 
 

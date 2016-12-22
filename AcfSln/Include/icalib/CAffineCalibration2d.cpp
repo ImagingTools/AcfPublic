@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <i2d/CAffineCalibration2d.h>
+#include <icalib/CAffineCalibration2d.h>
 
 
 // ACF includes
@@ -28,14 +28,14 @@
 #include <istd/CChangeNotifier.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
 // static constants
-static const istd::IChangeable::ChangeSet s_calibrationChangedChangeSet(ICalibration2d::CF_CALIBRATION_CHANGED, "Calibration changed");
-static const istd::IChangeable::ChangeSet s_areaChangedChangeSet(ICalibration2d::CF_AREA_CHANGED, "Calibration area changed");
-static const istd::IChangeable::ChangeSet s_unitsChangedChangeSet(ICalibration2d::CF_UNITS_CHANGED, "Calibration units changed");
+static const istd::IChangeable::ChangeSet s_calibrationChangedChangeSet(i2d::ICalibration2d::CF_CALIBRATION_CHANGED, "Calibration changed");
+static const istd::IChangeable::ChangeSet s_areaChangedChangeSet(i2d::ICalibration2d::CF_AREA_CHANGED, "Calibration area changed");
+static const istd::IChangeable::ChangeSet s_unitsChangedChangeSet(i2d::ICalibration2d::CF_UNITS_CHANGED, "Calibration units changed");
 
 
 // public methods
@@ -106,13 +106,13 @@ void CAffineCalibration2d::SetResultUnitInfo(const imath::IUnitInfo* unitInfoPtr
 
 // reimplemented (i2d::ICalibration2d)
 
-const CRectangle* CAffineCalibration2d::GetArgumentArea() const
+const i2d::CRectangle* CAffineCalibration2d::GetArgumentArea() const
 {
 	return m_argumentAreaPtr;
 }
 
 
-const CRectangle* CAffineCalibration2d::GetResultArea() const
+const i2d::CRectangle* CAffineCalibration2d::GetResultArea() const
 {
 	return m_resultAreaPtr;
 }
@@ -130,11 +130,11 @@ const imath::IUnitInfo* CAffineCalibration2d::GetResultUnitInfo() const
 }
 
 
-const ICalibration2d* CAffineCalibration2d::CreateCombinedCalibration(const ITransformation2d& transformation) const
+const i2d::ICalibration2d* CAffineCalibration2d::CreateCombinedCalibration(const i2d::ITransformation2d& transformation) const
 {
-	const CAffineTransformation2d* affineTransformPtr = dynamic_cast<const CAffineTransformation2d*>(&transformation);
+	const i2d::CAffineTransformation2d* affineTransformPtr = dynamic_cast<const i2d::CAffineTransformation2d*>(&transformation);
 	if (affineTransformPtr != NULL){
-		i2d::CAffineCalibration2d* combinedTransformPtr = new imod::TModelWrap<CAffineCalibration2d>();
+		CAffineCalibration2d* combinedTransformPtr = new imod::TModelWrap<CAffineCalibration2d>();
 
 		m_transformation.GetApply(affineTransformPtr->GetTransformation(), combinedTransformPtr->m_transformation);
 
@@ -224,6 +224,6 @@ istd::IChangeable* CAffineCalibration2d::CloneMe(CompatibilityMode /*mode*/) con
 }
 
 
-} // namespace i2d
+} // namespace icalib
 
 

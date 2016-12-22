@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,29 +20,31 @@
 ********************************************************************************/
 
 
-#ifndef iqt2d_CPerspectiveCalibEditorComp_included
-#define iqt2d_CPerspectiveCalibEditorComp_included
+#ifndef icalibgui_CPerspectiveCalibEditorComp_included
+#define icalibgui_CPerspectiveCalibEditorComp_included
 
 
 // ACF includes
 #include <imod/CMultiModelDispatcherBase.h>
-#include <i2d/CPerspectiveCalibration2d.h>
+#include <icalib/CPerspectiveCalibration2d.h>
 #include <iqt2d/TShapeParamsGuiCompBase.h>
-#include <GeneratedFiles/iqt2d/ui_CPerspectiveCalibEditorComp.h>
+
+// ACF-Solutions includes
+#include <GeneratedFiles/icalibgui/ui_CPerspectiveCalibEditorComp.h>
 
 
-namespace iqt2d
+namespace icalibgui
 {
 
 
 class CPerspectiveCalibEditorComp:
-			public iqtgui::TDesignerGuiObserverCompBase<Ui::CPerspectiveCalibEditorComp, i2d::CPerspectiveCalibration2d>,
+			public iqtgui::TDesignerGuiObserverCompBase<Ui::CPerspectiveCalibEditorComp, icalib::CPerspectiveCalibration2d>,
 			protected imod::CMultiModelDispatcherBase
 {
 	Q_OBJECT
 
 public:
-	typedef iqtgui::TDesignerGuiObserverCompBase<Ui::CPerspectiveCalibEditorComp, i2d::CPerspectiveCalibration2d> BaseClass;
+	typedef iqtgui::TDesignerGuiObserverCompBase<Ui::CPerspectiveCalibEditorComp, icalib::CPerspectiveCalibration2d> BaseClass;
 
 	I_BEGIN_COMPONENT(CPerspectiveCalibEditorComp);
 		I_ASSIGN(m_calibProviderCompPtr, "CalibrationProvider", "Optional calibration provider for calibrate button", false, "CalibrationProvider");
@@ -73,9 +75,9 @@ private:
 };
 
 
-} // namespace iqt2d
+} // namespace icalibgui
 
 
-#endif // !iqt2d_CPerspectiveCalibEditorComp_included
+#endif // !icalibgui_CPerspectiveCalibEditorComp_included
 
 

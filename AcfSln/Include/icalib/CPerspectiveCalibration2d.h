@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef i2d_CPerspectiveCalibration2d_included
-#define i2d_CPerspectiveCalibration2d_included
+#ifndef icalib_CPerspectiveCalibration2d_included
+#define icalib_CPerspectiveCalibration2d_included
 
 
 // ACF includes
@@ -30,7 +30,7 @@
 #include <i2d/CRectangle.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -160,9 +160,9 @@ inline bool CPerspectiveCalibration2d::operator!=(const CPerspectiveCalibration2
 }
 
 
-} // namespace i2d
+} // namespace icalib
 
 
-#endif // !i2d_CPerspectiveCalibration2d_included
+#endif // !icalib_CPerspectiveCalibration2d_included
 
 

@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <iview/CPerspectiveCalibrationShape.h>
+#include <icalibgui/CPerspectiveCalibrationShape.h>
 
 
 // Qt includes
@@ -36,7 +36,7 @@
 
 
 
-namespace iview
+namespace icalibgui
 {
 
 
@@ -349,6 +349,6 @@ bool CPerspectiveCalibrationShape::GetLineScreenPosition(const i2d::ICalibration
 }
 
 
-} // namespace iview
+} // namespace icalibgui
 
 

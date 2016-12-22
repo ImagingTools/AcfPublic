@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <iview/CNoneCalibrationShape.h>
+#include <icalibgui/CAffiniteCalibrationShape.h>
 
 
 // Qt includes
@@ -29,24 +29,27 @@
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
-
 #include <iqt/iqt.h>
-
 #include <iview/IRuler.h>
 #include <iview/IViewRulersAccessor.h>
 #include <iview/CCalibratedViewBase.h>
 
 
-namespace iview
+namespace icalibgui
 {
 
-
-// public methods
 
 // reimplemented (iview::IVisualizable)
 
-void CNoneCalibrationShape::Draw(QPainter& drawContext) const
+void CAffiniteCalibrationShape::Draw(QPainter& drawContext) const
 {
+	const i2d::ICalibration2d* calibrationPtr = GetCalibration();
+	if ((calibrationPtr == NULL) || ((calibrationPtr->GetTransformationFlags() & i2d::ITransformation2d::TF_AFFINE) == 0)){
+		BaseClass::Draw(drawContext);
+
+		return;
+	}
+
 	if (IsDisplayConnected()){
 		i2d::CRect clientRect = GetClientRect();
 		if (clientRect.IsEmpty()){
@@ -56,7 +59,7 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 		iview::IRuler* leftRulerPtr = NULL;
 		iview::IRuler* topRulerPtr = NULL;
 
-		iview::IViewRulersAccessor* rulersAccessorPtr = NULL;
+		iview::IViewRulersAccessor*  rulersAccessorPtr = NULL;
 		iview::IVisualCalibrationInfo* calibInfoPtr = NULL;
 		iview::IDisplay* displayPtr = GetDisplayPtr();
 		while (displayPtr != NULL){
@@ -69,12 +72,22 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 			displayPtr = displayPtr->GetParentDisplayPtr();
 		}
 
+		if (calibInfoPtr != NULL){
+			if (!calibInfoPtr->IsGridInMm()){
+				BaseClass::Draw(drawContext);
+				return;
+			}
+		}
+
 		if (rulersAccessorPtr != NULL){
 			leftRulerPtr = rulersAccessorPtr->GetLeftRulerPtr();
 			topRulerPtr = rulersAccessorPtr->GetTopRulerPtr();
 		}
 
 		if (calibInfoPtr != NULL){
+			i2d::CLine2d topRulerLine;
+			i2d::CLine2d leftRulerLine;
+
 			bool isGridVisible = calibInfoPtr->IsGridVisible();
 			if (isGridVisible || (leftRulerPtr != NULL) || (topRulerPtr != NULL)){
 				istd::CChangeNotifier leftRulerNotifier(leftRulerPtr);
@@ -95,24 +108,30 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 				}
 
 				const iview::IColorSchema& colorSchema = GetColorSchema();
+				iview::CScreenTransform transform = GetViewToScreenTransform();
+
+				i2d::CAffine2d calibTransform;
+				calibrationPtr->GetLocalTransform(i2d::CVector2d::GetZero(), calibTransform);
+
+				transform.Apply(calibTransform);
 
 				i2d::CVector2d logCorners[4];
-				logCorners[0] = GetLogPosition(i2d::CVector2d(clientRect.GetLeftTop()));
-				logCorners[1] = GetLogPosition(i2d::CVector2d(clientRect.GetRightTop()));
-				logCorners[2] = GetLogPosition(i2d::CVector2d(clientRect.GetLeftBottom()));
-				logCorners[3] = GetLogPosition(i2d::CVector2d(clientRect.GetRightBottom()));
+				logCorners[0] = transform.GetClientPosition(clientRect.GetLeftTop());
+				logCorners[1] = transform.GetClientPosition(clientRect.GetRightTop());
+				logCorners[2] = transform.GetClientPosition(clientRect.GetLeftBottom());
+				logCorners[3] = transform.GetClientPosition(clientRect.GetRightBottom());
 
 				double left = qMin(qMin(logCorners[0].GetX(), logCorners[1].GetX()), qMin(logCorners[2].GetX(), logCorners[3].GetX()));
 				double top = qMin(qMin(logCorners[0].GetY(), logCorners[1].GetY()), qMin(logCorners[2].GetY(), logCorners[3].GetY()));
 				double right = qMax(qMax(logCorners[0].GetX(), logCorners[1].GetX()), qMax(logCorners[2].GetX(), logCorners[3].GetX()));
 				double bottom = qMax(qMax(logCorners[0].GetY(), logCorners[1].GetY()), qMax(logCorners[2].GetY(), logCorners[3].GetY()));
 
-				i2d::CRectangle boundRectangle(left, top, right-left, bottom-top);
+				i2d::CRectangle boundRectangle(left, top, right - left, bottom - top);
 
-				double viewScale = GetViewToScreenTransform().GetDeformMatrix().GetApproxScale();
+				double scale = transform.GetDeformMatrix().GetApproxScale();
 
 				int levels[2];
-				double minGridDistance = calibInfoPtr->GetMinGridDistance() / viewScale;
+				double minGridDistance = calibInfoPtr->GetMinGridDistance() / scale;
 				double grid = qPow(10.0, qCeil(log10(minGridDistance)));
 				if (grid * 0.5 < minGridDistance){
 					levels[0] = 5;
@@ -129,6 +148,7 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 
 				drawContext.save();
 				drawContext.setPen(colorSchema.GetPen(iview::IColorSchema::SP_GUIDELINE3));
+				drawContext.save();
 				drawContext.setBrush(colorSchema.GetBrush(iview::IColorSchema::SB_TRANSPARENT));
 				const QPen& level0Pen = colorSchema.GetPen(iview::IColorSchema::SP_GUIDELINE2);
 				const QPen& level1Pen = colorSchema.GetPen(iview::IColorSchema::SP_GUIDELINE1);
@@ -137,8 +157,8 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 				for (index = firstIndex; index <= lastIndex; ++index){
 					i2d::CVector2d position1(index * grid, boundRectangle.GetTop());
 					i2d::CVector2d position2(index * grid, boundRectangle.GetBottom());
-					QPoint point1 = iqt::GetQPoint(GetScreenPosition(position1).ToIndex2d());
-					QPoint point2 = iqt::GetQPoint(GetScreenPosition(position2).ToIndex2d());
+					QPoint point1 = iqt::GetQPoint(transform.GetScreenPosition(position1));
+					QPoint point2 = iqt::GetQPoint(transform.GetScreenPosition(position2));
 
 					int levelIndex = 0;
 
@@ -184,8 +204,8 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 					i2d::CVector2d position1(boundRectangle.GetLeft(), index * grid);
 					i2d::CVector2d position2(boundRectangle.GetRight(), index * grid);
 
-					QPoint point1 = iqt::GetQPoint(GetScreenPosition(position1).ToIndex2d());
-					QPoint point2 = iqt::GetQPoint(GetScreenPosition(position2).ToIndex2d());
+					QPoint point1 = iqt::GetQPoint(transform.GetScreenPosition(position1));
+					QPoint point2 = iqt::GetQPoint(transform.GetScreenPosition(position2));
 
 					int levelIndex = 0;
 
@@ -225,80 +245,13 @@ void CNoneCalibrationShape::Draw(QPainter& drawContext) const
 				}
 
 				drawContext.restore();
+				drawContext.restore();
 			}
 		}
 	}
 }
 
 
-// reimplemented (iview::IInteractiveShape)
-
-iview::ITouchable::TouchState CNoneCalibrationShape::IsTouched(istd::CIndex2d /*position*/) const
-{
-	return TS_NONE;
-}
-
-
-// reimplemented (iview::IMouseActionObserver)
-
-bool CNoneCalibrationShape::OnMouseButton(istd::CIndex2d /*position*/, Qt::MouseButton /*buttonType*/, bool /*downFlag*/)
-{
-	return false;
-}
-
-
-bool CNoneCalibrationShape::OnMouseMove(istd::CIndex2d /*position*/)
-{
-	return false;
-}
-
-
-// protected methods
-
-const i2d::ICalibration2d* CNoneCalibrationShape::GetCalibration() const
-{
-	const i2d::ICalibration2d* calibrationPtr = dynamic_cast<const i2d::ICalibration2d*>(GetObservedModel());
-	if (calibrationPtr == NULL){
-		const iview::IDisplay* displayPtr = GetDisplayPtr();
-		while (displayPtr != NULL){
-			const i2d::ICalibrationProvider* calibrationProviderPtr = dynamic_cast<const i2d::ICalibrationProvider*>(displayPtr);
-			if ((calibrationProviderPtr != NULL)){
-				return calibrationProviderPtr->GetCalibration();
-			}
-
-			displayPtr = displayPtr->GetParentDisplayPtr();
-		}
-	}
-
-	return calibrationPtr;
-}
-
-
-// reimplemented (iview::CInteractiveShapeBase)
-
-void CNoneCalibrationShape::BeginLogDrag(const i2d::CVector2d& /*reference*/)
-{
-}
-
-
-void CNoneCalibrationShape::SetLogDragPosition(const i2d::CVector2d& /*position*/)
-{
-}
-
-
-// reimplemented (iview::CShapeBase)
-
-i2d::CRect CNoneCalibrationShape::CalcBoundingBox() const
-{
-	iview::IDisplay* displayPtr = GetDisplayPtr();
-	if (displayPtr != NULL){
-		return displayPtr->GetClientRect();
-	}
-
-	return i2d::CRect::GetEmpty();
-}
-
-
-} // namespace iview
+} // namespace icalibgui
 
 

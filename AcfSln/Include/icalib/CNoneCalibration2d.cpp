@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#include <i2d/CNoneCalibration2d.h>
+#include <icalib/CNoneCalibration2d.h>
 
 
 // ACF includes
 #include <i2d/CAffine2d.h>
 
 
-namespace i2d
+namespace icalib
 {
 
 
@@ -176,6 +176,6 @@ const CNoneCalibration2d& CNoneCalibration2d::GetInstance()
 CNoneCalibration2d CNoneCalibration2d::s_defaultInstance;
 
 
-} // namespace i2d
+} // namespace icalib
 
 

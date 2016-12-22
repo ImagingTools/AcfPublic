@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,53 +20,40 @@
 ********************************************************************************/
 
 
-#include <i2d/CStaticCalibrationProviderComp.h>
+#ifndef icalibgui_CPerspectiveCalibrationShape_included
+#define icalibgui_CPerspectiveCalibrationShape_included
 
 
-namespace i2d
+#include <icalibgui/CNoneCalibrationShape.h>
+
+
+namespace icalibgui
 {
 
 
-CStaticCalibrationProviderComp::CStaticCalibrationProviderComp()
-:	m_updateBridge(this)
+/**
+	Shape object for perspective calibration.
+	You need this shape to visualize calibration of type icalibgui::CPerspectiveCalibration on the shape view.
+*/
+class CPerspectiveCalibrationShape: public CNoneCalibrationShape
 {
-}
+public:
+	typedef CNoneCalibrationShape BaseClass;
+
+	// reimplemented (imod::IObserver)
+	virtual void Invalidate();
+
+	// reimplemented (iview::IVisualizable)
+	virtual void Draw(QPainter& drawContext) const;
+
+protected:
+	bool GetLineScreenPosition(const i2d::ICalibration2d& calib, const i2d::CLine2d& logLine, int gridSize, QPointF& point1, QPointF& point2) const;
+};
 
 
-// reimplemented (i2d::ICalibrationProvider)
-
-const ICalibration2d* CStaticCalibrationProviderComp::GetCalibration() const
-{
-	if (m_calibrationCompPtr.IsValid()){
-		return m_calibrationCompPtr.GetPtr();
-	}
-
-	return NULL;
-}
+} // namespace icalibgui
 
 
-// protected methods
-
-// reimplemented (icomp::CComponentBase)
-
-void CStaticCalibrationProviderComp::OnComponentCreated()
-{
-	BaseClass::OnComponentCreated();
-
-	if (m_calibrationModelCompPtr.IsValid()){
-		m_calibrationModelCompPtr->AttachObserver(&m_updateBridge);
-	}
-}
-
-
-void CStaticCalibrationProviderComp::OnComponentDestroyed()
-{
-	m_updateBridge.EnsureModelsDetached();
-
-	BaseClass::OnComponentDestroyed();
-}
-
-
-} // namespace i2d
+#endif // !icalibgui_CPerspectiveCalibrationShape_included
 
 

@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <iqt2d/CPerspectiveCalibEditorComp.h>
+#include <icalibgui/CPerspectiveCalibEditorComp.h>
 
 
 // ACF includes
@@ -29,7 +29,7 @@
 #include <iqt/CSignalBlocker.h>
 
 
-namespace iqt2d
+namespace icalibgui
 {
 
 
@@ -41,7 +41,7 @@ void CPerspectiveCalibEditorComp::UpdateModel() const
 {
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CPerspectiveCalibration2d* objectPtr = GetObservedObject();
+	icalib::CPerspectiveCalibration2d* objectPtr = GetObservedObject();
 	Q_ASSERT(objectPtr != NULL);
 
 	i2d::CMatrix2d deform(Rotation11Spin->value(), Rotation12Spin->value(), Rotation21Spin->value(), Rotation22Spin->value());
@@ -64,7 +64,7 @@ void CPerspectiveCalibEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& 
 {
 	Q_ASSERT(IsGuiCreated());
 
-	i2d::CPerspectiveCalibration2d* objectPtr = GetObservedObject();
+	icalib::CPerspectiveCalibration2d* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
 		const i2d::CAffine2d& affinePart = objectPtr->GetAffinePart();
 		const i2d::CMatrix2d& deform = affinePart.GetDeformMatrix();
@@ -157,7 +157,7 @@ void CPerspectiveCalibEditorComp::on_CalibrateButton_clicked()
 
 	const i2d::ICalibration2d* newCalibrationPtr = m_calibProviderCompPtr->GetCalibration();
 
-	i2d::CPerspectiveCalibration2d* objectPtr = GetObservedObject();
+	icalib::CPerspectiveCalibration2d* objectPtr = GetObservedObject();
 	if ((objectPtr != NULL) && (newCalibrationPtr != NULL)){
 		objectPtr->CopyFrom(*newCalibrationPtr);
 	}
@@ -170,6 +170,6 @@ void CPerspectiveCalibEditorComp::OnParamsChanged(double /*value*/)
 }
 
 
-} // namespace iqt2d
+} // namespace icalibgui
 
 
