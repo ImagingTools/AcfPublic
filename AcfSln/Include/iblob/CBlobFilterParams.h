@@ -36,8 +36,13 @@ class CBlobFilterParams: virtual public IBlobFilterParams
 public:
 	CBlobFilterParams();
 
+	/**
+		Set list of supported features.
+	*/
+	void SetSupportedProperties(const iprm::IOptionsList* featureListPtr);
+
 	// reimplemented (IBlobFilterParams)
-	virtual const BlobDescriptorInfoList* GetSupportedDescriptorsList() const;
+	virtual const iprm::IOptionsList* GetSupportedProperties() const;
 	virtual bool IsFiltersEnabled() const;
 	virtual void SetFiltersEnabled(bool enabled = true);
 	virtual int GetFiltersCount() const;
@@ -52,10 +57,11 @@ public:
 
 private:
 	typedef QList<Filter> FilterList;
-
 	FilterList m_filters;
 
 	bool m_filtersEnabled;
+
+	const iprm::IOptionsList* m_supportedFeaturesListPtr;
 };
 
 

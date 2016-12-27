@@ -20,37 +20,23 @@
 ********************************************************************************/
 
 
-#ifndef BlobPck_included
-#define BlobPck_included
-
-
-// ACF includes
-#include <icomp/TModelCompWrap.h>
-#include <icomp/TMakeComponentWrap.h>
-
-// ACF-Solutions includes
 #include <iblob/CBlobFilterParamsComp.h>
-#include <iblob/CPreciseBlobProcessorComp.h>
-
-#include <iblobgui/CBlobFilterParamsGuiComp.h>
 
 
-/**
-	Package for blob extraction components.
-*/
-namespace BlobPck
+namespace iblob
 {
 
 
-typedef icomp::TModelCompWrap<iblob::CBlobFilterParamsComp> BlobFilterParams;
-typedef iblob::CPreciseBlobProcessorComp PreciseBlobProcessor;
+// reimplemented (icomp::CComponentBase)
 
-typedef iblobgui::CBlobFilterParamsGuiComp BlobFilterParamsGui;
+void CBlobFilterParamsComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	SetSupportedProperties(m_supportedPropertiesCompPtr.GetPtr());
+}
 
 
-} // namespace BlobPck
-
-
-#endif // !BlobPck_included
+} // namespace iblob
 
 

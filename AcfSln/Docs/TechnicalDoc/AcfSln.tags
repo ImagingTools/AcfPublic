@@ -90,20 +90,6 @@
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
-    <name>CBlobDescriptorInfo.h</name>
-    <path>C:/Temp/AcfSln/Include/iblob/</path>
-    <filename>_c_blob_descriptor_info_8h</filename>
-    <class kind="class">iblob::CBlobDescriptorInfo</class>
-    <namespace>iblob</namespace>
-    <member kind="typedef">
-      <type>QList&lt; CBlobDescriptorInfo &gt;</type>
-      <name>BlobDescriptorInfoList</name>
-      <anchorfile>namespaceiblob.html</anchorfile>
-      <anchor>a0721ce046be2012b246acc0e72d40ab5</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="file">
     <name>CBlobFeature.h</name>
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_c_blob_feature_8h</filename>
@@ -117,6 +103,14 @@
     <filename>_c_blob_filter_params_8h</filename>
     <includes id="_i_blob_filter_params_8h" name="IBlobFilterParams.h" local="no" imported="no">iblob/IBlobFilterParams.h</includes>
     <class kind="class">iblob::CBlobFilterParams</class>
+    <namespace>iblob</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBlobFilterParamsComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iblob/</path>
+    <filename>_c_blob_filter_params_comp_8h</filename>
+    <includes id="_c_blob_filter_params_8h" name="CBlobFilterParams.h" local="no" imported="no">iblob/CBlobFilterParams.h</includes>
+    <class kind="class">iblob::CBlobFilterParamsComp</class>
     <namespace>iblob</namespace>
   </compound>
   <compound kind="file">
@@ -150,7 +144,6 @@
     <name>IBlobFilterParams.h</name>
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_i_blob_filter_params_8h</filename>
-    <includes id="_c_blob_descriptor_info_8h" name="CBlobDescriptorInfo.h" local="no" imported="no">iblob/CBlobDescriptorInfo.h</includes>
     <class kind="class">iblob::IBlobFilterParams</class>
     <namespace>iblob</namespace>
   </compound>
@@ -4640,93 +4633,12 @@
   <compound kind="namespace">
     <name>iblob</name>
     <filename>namespaceiblob.html</filename>
-    <class kind="class">iblob::CBlobDescriptorInfo</class>
     <class kind="class">iblob::CBlobFeature</class>
     <class kind="class">iblob::CBlobFilterParams</class>
+    <class kind="class">iblob::CBlobFilterParamsComp</class>
     <class kind="class">iblob::CBlobProcessorCompBase</class>
     <class kind="class">iblob::CPreciseBlobProcessorComp</class>
     <class kind="class">iblob::IBlobFilterParams</class>
-    <member kind="typedef">
-      <type>QList&lt; CBlobDescriptorInfo &gt;</type>
-      <name>BlobDescriptorInfoList</name>
-      <anchorfile>namespaceiblob.html</anchorfile>
-      <anchor>a0721ce046be2012b246acc0e72d40ab5</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iblob::CBlobDescriptorInfo</name>
-    <filename>classiblob_1_1_c_blob_descriptor_info.html</filename>
-    <member kind="enumeration">
-      <type></type>
-      <name>BlobDescriptorType</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>ad5c740638adaab6ec170136e0470b97d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BDT_PERIMETER</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>ad5c740638adaab6ec170136e0470b97dac4225d4d01c0820fd5764fc212f4acd7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BDT_AREA</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>ad5c740638adaab6ec170136e0470b97da11146ae22e059ccb884a682c3f18c828</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BDT_CIRCULARITY</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>ad5c740638adaab6ec170136e0470b97da1d5b43cad99a87a584901812dbb81a2d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BDT_USER</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>ad5c740638adaab6ec170136e0470b97da92ca3355e1e3a9c0713b45bd0e23137e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CBlobDescriptorInfo</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>a1b27b2eb46319167de663f7fb90b44f5</anchor>
-      <arglist>(int descriptorType, const QString &amp;fullName, const QString &amp;shortName, const QString &amp;description=QString())</arglist>
-    </member>
-    <member kind="function">
-      <type>QString</type>
-      <name>GetFullName</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>a636490194ee6ffbc3cc8a7e6b3f8bf76</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QString</type>
-      <name>GetShortName</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>a842d4906f3ed2bb4d09df583f43c5448</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QString</type>
-      <name>GetDescription</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>ada438b1f0eacffdbbbaf6bda9349b858</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetDescriptorType</name>
-      <anchorfile>classiblob_1_1_c_blob_descriptor_info.html</anchorfile>
-      <anchor>a9b6162993e7eca93151d84ccfce04acb</anchor>
-      <arglist>() const </arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iblob::CBlobFeature</name>
@@ -5031,11 +4943,18 @@
       <anchor>a2a669f42fb0746e28fd6fbe3513ae249</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const BlobDescriptorInfoList *</type>
-      <name>GetSupportedDescriptorsList</name>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSupportedProperties</name>
       <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
-      <anchor>ab3ca43f5ba55caa3475f6f9fcad808fa</anchor>
+      <anchor>a09b83f9006e9f210ac1662865d8f0166</anchor>
+      <arglist>(const iprm::IOptionsList *featureListPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetSupportedProperties</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>aae89db1c31baf85a1ed9241eb782f4dd</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5191,6 +5110,26 @@
       <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
       <anchor>a95dd017a3b43542749be25e816f66b43a25fad676448ebfb6b34214a9287c173f</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iblob::CBlobFilterParamsComp</name>
+    <filename>classiblob_1_1_c_blob_filter_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iblob::CBlobFilterParams</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params_comp.html</anchorfile>
+      <anchor>adb246d32d879b32f03607cb288c0eb7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params_comp.html</anchorfile>
+      <anchor>a30f60464831f8d508dcada3310f96840</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5416,10 +5355,10 @@
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static bool</type>
-      <name>IsValueAcceptedByFilter</name>
+      <name>IsBlobAcceptedByFilter</name>
       <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
-      <anchor>a0fb1eaace174ccb5297cea1c2781bee6</anchor>
-      <arglist>(const iblob::IBlobFilterParams::Filter &amp;filter, double value)</arglist>
+      <anchor>aa0d2e1deca0bd3568bd684b967fefba2</anchor>
+      <arglist>(const iblob::IBlobFilterParams &amp;filterParams, double area, double perimeter, double circularity)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -5474,10 +5413,10 @@
     <filename>classiblob_1_1_i_blob_filter_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual const BlobDescriptorInfoList *</type>
-      <name>GetSupportedDescriptorsList</name>
+      <type>virtual const iprm::IOptionsList *</type>
+      <name>GetSupportedProperties</name>
       <anchorfile>classiblob_1_1_i_blob_filter_params.html</anchorfile>
-      <anchor>a5f149673b23e46b2ae7b2c24c3e51c83</anchor>
+      <anchor>afbfbd4a62049490ffac1e2c278a0aeaa</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -5590,10 +5529,10 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>SetFeatures</name>
+      <name>SetSupportedProperties</name>
       <anchorfile>classiblobgui_1_1_c_blob_filter_gui.html</anchorfile>
-      <anchor>aec6df85633038057eb52db5f0a0d886a</anchor>
-      <arglist>(const iblob::BlobDescriptorInfoList &amp;features)</arglist>
+      <anchor>a08499f347f1db0c1c5a61c5adfda3f5d</anchor>
+      <arglist>(const iprm::IOptionsList &amp;features)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -32084,9 +32023,9 @@
     <name>Include/iblob</name>
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>dir_6b8f21da56aeb41654e138de0cf01fb3.html</filename>
-    <file>CBlobDescriptorInfo.h</file>
     <file>CBlobFeature.h</file>
     <file>CBlobFilterParams.h</file>
+    <file>CBlobFilterParamsComp.h</file>
     <file>CBlobProcessorCompBase.h</file>
     <file>CPreciseBlobProcessorComp.h</file>
     <file>iblob.h</file>
