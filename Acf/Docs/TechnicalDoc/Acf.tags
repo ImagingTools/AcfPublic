@@ -41247,12 +41247,33 @@
     <name>imod::CModelUpdateBridge</name>
     <filename>classimod_1_1_c_model_update_bridge.html</filename>
     <base virtualness="virtual">imod::IObserver</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>UpdateFlags</name>
+      <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
+      <anchor>a7fff528bec1fa14001377ada2177af71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>UF_DELEGATED</name>
+      <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
+      <anchor>a7fff528bec1fa14001377ada2177af71abf225f9817cf05f4b94851cd970e010c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>UF_SOURCE</name>
+      <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
+      <anchor>a7fff528bec1fa14001377ada2177af71af70cf6ea8bab0082fafdd086c6229830</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CModelUpdateBridge</name>
       <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
-      <anchor>aa6c25a26fdb4b13ac32f97555fdad567</anchor>
-      <arglist>(istd::IChangeable *changeablePtr)</arglist>
+      <anchor>a11a7a134fd8cffb5163c005a0239c1d8</anchor>
+      <arglist>(istd::IChangeable *changeablePtr, int updateFlags=UF_DELEGATED)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
