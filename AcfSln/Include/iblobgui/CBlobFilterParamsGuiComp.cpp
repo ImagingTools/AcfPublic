@@ -274,3 +274,5 @@ void CBlobFilterParamsGuiComp::CreateFilter()
 
 
 } // namespace iblobgui
+
+
