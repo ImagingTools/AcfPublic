@@ -10089,10 +10089,10 @@
     </member>
     <member kind="function">
       <type>bool</type>
-      <name>GetDecompositionQDQ</name>
+      <name>GetEigenVectors</name>
       <anchorfile>classi2d_1_1_c_matrix2d.html</anchorfile>
-      <anchor>a0dd5c7ad94342c53fa02de8ce996abca</anchor>
-      <arglist>(i2d::CMatrix2d &amp;matrixQ, i2d::CVector2d &amp;diagonalD)</arglist>
+      <anchor>a57fc3cce565a5c67e6a99365259133d1</anchor>
+      <arglist>(i2d::CVector2d &amp;vector1, i2d::CVector2d &amp;vector2, double &amp;value1, double &amp;value2) const </arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -10369,6 +10369,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetTrace</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a059363ee287c797483e6b1ac4c9a76b6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetFrobeniusNorm2</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a1f7e776a06df8d1c5bc3bc9e460b93a1</anchor>
@@ -10387,6 +10394,13 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a85dd8c54824770a9492eb398d37ff5a9</anchor>
       <arglist>(TMatrix&lt; Width, Height, double &gt; &amp;result, TMatrix&lt; Height, Height, double &gt; *matrixQPtr=NULL, int maxColumns=-1, double minHhNorm=I_BIG_EPSILON) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetDecompositionQDQ</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ab880ca4e41dac83acb42f9fbed2e8267</anchor>
+      <arglist>(TMatrix&lt; Height, Height, double &gt; &amp;matrixQ, TVector&lt; Height, double &gt; &amp;diagonalD, double tolerance=I_BIG_EPSILON, int maxIterations=100) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -13738,13 +13752,6 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>GetDecompositionQDQ</name>
-      <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
-      <anchor>a869400e48d46f99822f94a2374d7c32b</anchor>
-      <arglist>(i3d::CMatrix3d &amp;matrixQ, i3d::CVector3d &amp;diagonalD)</arglist>
-    </member>
-    <member kind="function">
       <type>double</type>
       <name>GetDet</name>
       <anchorfile>classi3d_1_1_c_matrix3d.html</anchorfile>
@@ -13998,6 +14005,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetTrace</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a059363ee287c797483e6b1ac4c9a76b6</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetFrobeniusNorm2</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a1f7e776a06df8d1c5bc3bc9e460b93a1</anchor>
@@ -14016,6 +14030,13 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a85dd8c54824770a9492eb398d37ff5a9</anchor>
       <arglist>(TMatrix&lt; Width, Height, double &gt; &amp;result, TMatrix&lt; Height, Height, double &gt; *matrixQPtr=NULL, int maxColumns=-1, double minHhNorm=I_BIG_EPSILON) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetDecompositionQDQ</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ab880ca4e41dac83acb42f9fbed2e8267</anchor>
+      <arglist>(TMatrix&lt; Height, Height, double &gt; &amp;matrixQ, TVector&lt; Height, double &gt; &amp;diagonalD, double tolerance=I_BIG_EPSILON, int maxIterations=100) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -38921,6 +38942,13 @@
       <arglist>(const CVarMatrix &amp;matrix, CVarMatrix &amp;result) const </arglist>
     </member>
     <member kind="function">
+      <type>CVarMatrix</type>
+      <name>GetMultiplied</name>
+      <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
+      <anchor>a2a10c3e503c8c8fec03df0e6f292fda4</anchor>
+      <arglist>(const CVarMatrix &amp;matrix) const </arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>GetScaled</name>
       <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
@@ -38947,6 +38975,13 @@
       <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
       <anchor>a7efeef7ac0053a1aaf765c59f134e99d</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetTrace</name>
+      <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
+      <anchor>afaa376e858f198690ebe125f66a8f2b7</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -38989,6 +39024,13 @@
       <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
       <anchor>a5f764aaaf087cfc54ff222ba11a56703</anchor>
       <arglist>(const CVarMatrix &amp;vector, CVarMatrix &amp;result, double minHhNorm=I_BIG_EPSILON) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetDecompositionQDQ</name>
+      <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
+      <anchor>a36f895ff2c1b41aee1d5d2afb3949c18</anchor>
+      <arglist>(CVarMatrix &amp;matrixQ, CVarVector &amp;diagonalD, double tolerance=I_BIG_EPSILON, int maxIterations=100) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -40622,6 +40664,13 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetTrace</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>a059363ee287c797483e6b1ac4c9a76b6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetFrobeniusNorm2</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a1f7e776a06df8d1c5bc3bc9e460b93a1</anchor>
@@ -40640,6 +40689,13 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a85dd8c54824770a9492eb398d37ff5a9</anchor>
       <arglist>(TMatrix&lt; Width, Height, Element &gt; &amp;result, TMatrix&lt; Height, Height, Element &gt; *matrixQPtr=NULL, int maxColumns=-1, double minHhNorm=I_BIG_EPSILON) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetDecompositionQDQ</name>
+      <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
+      <anchor>ab880ca4e41dac83acb42f9fbed2e8267</anchor>
+      <arglist>(TMatrix&lt; Height, Height, Element &gt; &amp;matrixQ, TVector&lt; Height, Element &gt; &amp;diagonalD, double tolerance=I_BIG_EPSILON, int maxIterations=100) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>

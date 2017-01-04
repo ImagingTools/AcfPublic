@@ -31,7 +31,6 @@
 #include <i2d/IMultiCalibrationProvider.h>
 #include <i2d/ICalibrationProvider.h>
 #include <i2d/CVector2d.h>
-#include <icalib/CAffineCalibration2d.h>
 #include <iprm/IParamsSet.h>
 #include <istd/IInformationProvider.h>
 
@@ -39,6 +38,7 @@
 #include <iproc/IProcessor.h>
 #include <iinsp/ISupplier.h>
 #include <iinsp/TSupplierCompWrap.h>
+#include <icalib/CAffineCalibration2d.h>
 #include <iipr/CFeaturesContainer.h>
 #include <iedge/IEdgeLinesProvider.h>
 

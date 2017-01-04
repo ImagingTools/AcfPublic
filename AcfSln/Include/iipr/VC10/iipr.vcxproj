@@ -156,6 +156,7 @@
     <ClCompile Include="..\CImagePolarTransformProcessorComp.cpp" />
     <ClCompile Include="..\CImageProcessorCompBase.cpp" />
     <ClCompile Include="..\CImageRegionProcessorCompBase.cpp" />
+    <ClCompile Include="..\CLensCorrFindSupplierComp.cpp" />
     <ClCompile Include="..\CLineProjectionProcessorComp.cpp" />
     <ClCompile Include="..\CMorphologicalProcessorComp.cpp" />
     <ClCompile Include="..\CMultiBitmapCacheComp.cpp" />
@@ -225,6 +226,7 @@
     <ClInclude Include="..\CImagePolarTransformProcessorComp.h" />
     <ClInclude Include="..\CImageProcessorCompBase.h" />
     <ClInclude Include="..\CImageRegionProcessorCompBase.h" />
+    <ClInclude Include="..\CLensCorrFindSupplierComp.h" />
     <ClInclude Include="..\CLineProjectionProcessorComp.h" />
     <ClInclude Include="..\CMorphologicalProcessorComp.h" />
     <ClInclude Include="..\CMultiBitmapCacheComp.h" />

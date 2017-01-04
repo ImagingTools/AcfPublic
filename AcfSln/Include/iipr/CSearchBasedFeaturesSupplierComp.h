@@ -27,7 +27,6 @@
 // ACF includes
 #include <i2d/IMultiCalibrationProvider.h>
 #include <i2d/CVector2d.h>
-#include <icalib/CAffineCalibration2d.h>
 #include <iprm/IParamsSet.h>
 #include <istd/IInformationProvider.h>
 
@@ -36,6 +35,7 @@
 #include <iinsp/ISupplier.h>
 #include <iinsp/TSupplierCompWrap.h>
 #include <iimg/IBitmapProvider.h>
+#include <icalib/CAffineCalibration2d.h>
 #include <iipr/IFeaturesProvider.h>
 #include <iipr/CFeaturesContainer.h>
 

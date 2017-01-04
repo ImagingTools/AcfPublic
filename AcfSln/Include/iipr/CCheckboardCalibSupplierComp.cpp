@@ -402,8 +402,8 @@ bool CCheckboardCalibSupplierComp::LinesConsumer::AddFeature(const imeas::INumer
 			LineInfo info;
 
 			info.line = i2d::CLine2d(vector[0], vector[1], vector[2], vector[3]);
-			if (vector.GetElementsCount() >= 5){
-				info.weight = vector[5];
+			if (vector.GetElementsCount() > 4){
+				info.weight = vector[4];
 			}
 			else{
 				info.weight = 1;
