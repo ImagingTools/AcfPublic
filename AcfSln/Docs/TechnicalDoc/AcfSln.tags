@@ -238,6 +238,14 @@
     <namespace>icalibgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeneralCalibrationShape.h</name>
+    <path>C:/Temp/AcfSln/Include/icalibgui/</path>
+    <filename>_c_general_calibration_shape_8h</filename>
+    <includes id="_c_none_calibration_shape_8h" name="CNoneCalibrationShape.h" local="no" imported="no">icalibgui/CNoneCalibrationShape.h</includes>
+    <class kind="class">icalibgui::CGeneralCalibrationShape</class>
+    <namespace>icalibgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CNoneCalibrationShape.h</name>
     <path>C:/Temp/AcfSln/Include/icalibgui/</path>
     <filename>_c_none_calibration_shape_8h</filename>
@@ -6404,15 +6412,15 @@
       <type></type>
       <name>CSimpleLensCorrection</name>
       <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
-      <anchor>a4c27f5fce0f12169e581991e0579faac</anchor>
-      <arglist>(const i2d::CVector2d &amp;opticalCenter, double distortionFactor=0)</arglist>
+      <anchor>a15101e38cb3f03b7549ecc28799a9984</anchor>
+      <arglist>(const i2d::CVector2d &amp;opticalCenter, double distortionFactor=0, double scaleFactor=1)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>Reset</name>
       <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
-      <anchor>af19092495cc5e83df628a1b8ef3dfa1d</anchor>
-      <arglist>(const i2d::CVector2d &amp;opticalCenter=i2d::CVector2d::GetZero(), double distortionFactor=0)</arglist>
+      <anchor>a06f034d3ce18bddc195d6a4fbea862b4</anchor>
+      <arglist>(const i2d::CVector2d &amp;opticalCenter=i2d::CVector2d::GetZero(), double distortionFactor=0, double scaleFactor=1)</arglist>
     </member>
     <member kind="function">
       <type>const i2d::CVector2d &amp;</type>
@@ -6440,6 +6448,20 @@
       <name>SetDistortionFactor</name>
       <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
       <anchor>aeef2ee891ca9673dc602306d08caf9e8</anchor>
+      <arglist>(double factor)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetScaleFactor</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a99051160a8ad0f83029d050a39be5bf2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetScaleFactor</name>
+      <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
+      <anchor>a1bf8a9cbc0c3bbf870592804da6d482a</anchor>
       <arglist>(double factor)</arglist>
     </member>
     <member kind="function">
@@ -6676,6 +6698,7 @@
     <name>icalibgui</name>
     <filename>namespaceicalibgui.html</filename>
     <class kind="class">icalibgui::CAffiniteCalibrationShape</class>
+    <class kind="class">icalibgui::CGeneralCalibrationShape</class>
     <class kind="class">icalibgui::CNoneCalibrationShape</class>
     <class kind="class">icalibgui::CPerspectiveCalibEditorComp</class>
     <class kind="class">icalibgui::CPerspectiveCalibrationShape</class>
@@ -6754,6 +6777,32 @@
       <anchorfile>classicalibgui_1_1_c_none_calibration_shape.html</anchorfile>
       <anchor>a26b85bba4e6b4be74f19fed2ad100cbc</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icalibgui::CGeneralCalibrationShape</name>
+    <filename>classicalibgui_1_1_c_general_calibration_shape.html</filename>
+    <base>icalibgui::CNoneCalibrationShape</base>
+    <member kind="typedef">
+      <type>CNoneCalibrationShape</type>
+      <name>BaseClass</name>
+      <anchorfile>classicalibgui_1_1_c_general_calibration_shape.html</anchorfile>
+      <anchor>a6f2492c591e12dc26a8a4dd41c761504</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Invalidate</name>
+      <anchorfile>classicalibgui_1_1_c_general_calibration_shape.html</anchorfile>
+      <anchor>aa12daa9f04732cc21d6cf50214996871</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classicalibgui_1_1_c_general_calibration_shape.html</anchorfile>
+      <anchor>afced9f2273e3edd780697c0c4135ef12</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32278,6 +32327,7 @@
     <path>C:/Temp/AcfSln/Include/icalibgui/</path>
     <filename>dir_dd8eb3da8bccd58a9946c5b55ede8641.html</filename>
     <file>CAffiniteCalibrationShape.h</file>
+    <file>CGeneralCalibrationShape.h</file>
     <file>CNoneCalibrationShape.h</file>
     <file>CPerspectiveCalibEditorComp.h</file>
     <file>CPerspectiveCalibrationShape.h</file>

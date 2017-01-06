@@ -34,19 +34,22 @@ namespace icalib
 
 // static constants
 static const iser::CArchiveTag s_distortionFactorTag("DistFactor", "Lens distortion factor", iser::CArchiveTag::TT_LEAF);
+static const iser::CArchiveTag s_scaleFactorTag("Scale", "Lens scale factor", iser::CArchiveTag::TT_LEAF);
 static const iser::CArchiveTag s_opticalCenterTag("OpticalCenter", "Position of optical center", iser::CArchiveTag::TT_GROUP);
 
 
 CSimpleLensCorrection::CSimpleLensCorrection()
 :	m_opticalCenter(i2d::CVector2d::GetZero()),
-	m_distortionFactor(0)
+	m_distortionFactor(0),
+	m_scaleFactor(1)
 {
 }
 
 
-CSimpleLensCorrection::CSimpleLensCorrection(const i2d::CVector2d& opticalCenter, double distortionFactor)
+CSimpleLensCorrection::CSimpleLensCorrection(const i2d::CVector2d& opticalCenter, double distortionFactor, double scaleFactor)
 :	m_opticalCenter(opticalCenter),
-	m_distortionFactor(distortionFactor)
+	m_distortionFactor(distortionFactor),
+	m_scaleFactor(scaleFactor)
 {
 }
 
@@ -54,10 +57,11 @@ CSimpleLensCorrection::CSimpleLensCorrection(const i2d::CVector2d& opticalCenter
 /**
 	Reset this calibration, set to be identity transform.
 */
-void CSimpleLensCorrection::Reset(const i2d::CVector2d& opticalCenter, double distortionFactor)
+void CSimpleLensCorrection::Reset(const i2d::CVector2d& opticalCenter, double distortionFactor, double scaleFactor)
 {
 	m_opticalCenter = opticalCenter;
 	m_distortionFactor = distortionFactor;
+	m_scaleFactor = scaleFactor;
 }
 
 
@@ -95,10 +99,30 @@ void CSimpleLensCorrection::SetDistortionFactor(double factor)
 }
 
 
+double CSimpleLensCorrection::GetScaleFactor() const
+{
+	return m_scaleFactor;
+}
+
+
+void CSimpleLensCorrection::SetScaleFactor(double factor)
+{
+	Q_ASSERT(m_scaleFactor != 0);
+
+	if (factor != m_scaleFactor){
+		istd::CChangeNotifier notifier(this);
+		Q_UNUSED(notifier);
+
+		m_scaleFactor = factor;
+	}
+}
+
+
 bool CSimpleLensCorrection::operator==(const CSimpleLensCorrection& calib) const
 {
 	return		(m_opticalCenter == calib.m_opticalCenter) &&
-				(m_distortionFactor == calib.m_distortionFactor);
+				(m_distortionFactor == calib.m_distortionFactor) &&
+				(m_scaleFactor == calib.m_scaleFactor);
 }
 
 
@@ -178,7 +202,7 @@ bool CSimpleLensCorrection::GetPositionAt(
 			ExactnessMode /*mode*/) const
 {
 	double distance = origPosition.GetLength();
-	double scaleFactor = 1 + m_distortionFactor * distance;
+	double scaleFactor = (1 + m_distortionFactor * distance) * m_scaleFactor;
 
 	result = m_opticalCenter + origPosition * scaleFactor;
 
@@ -191,7 +215,7 @@ bool CSimpleLensCorrection::GetInvPositionAt(
 			i2d::CVector2d& result,
 			ExactnessMode /*mode*/) const
 {
-	i2d::CVector2d normPos = transfPosition - m_opticalCenter;
+	i2d::CVector2d normPos = (transfPosition - m_opticalCenter) / m_scaleFactor;
 
 	double distance = normPos.GetLength();
 
@@ -219,7 +243,7 @@ bool CSimpleLensCorrection::GetLocalTransform(
 			ExactnessMode /*mode*/) const
 {
 	double distance = origPosition.GetLength();
-	double scaleFactor = 1 + m_distortionFactor * distance;
+	double scaleFactor = (1 + m_distortionFactor * distance) * m_scaleFactor;
 
 	result.SetTranslation(m_opticalCenter + origPosition * scaleFactor);
 	result.SetDeformMatrix(i2d::CMatrix2d::GetIdentity() * scaleFactor);	// TODO: implement it correctly, it is simple approximation only
@@ -233,7 +257,7 @@ bool CSimpleLensCorrection::GetLocalInvTransform(
 			i2d::CAffine2d& result,
 			ExactnessMode /*mode*/) const
 {
-	i2d::CVector2d normPos = transfPosition - m_opticalCenter;
+	i2d::CVector2d normPos = (transfPosition - m_opticalCenter) / m_scaleFactor;
 
 	double distance = normPos.GetLength();
 
@@ -307,6 +331,10 @@ bool CSimpleLensCorrection::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.BeginTag(s_distortionFactorTag);
 	retVal = retVal && archive.Process(m_distortionFactor);
 	retVal = retVal && archive.EndTag(s_distortionFactorTag);
+
+	retVal = retVal && archive.BeginTag(s_scaleFactorTag);
+	retVal = retVal && archive.Process(m_scaleFactor);
+	retVal = retVal && archive.EndTag(s_scaleFactorTag);
 
 	retVal = retVal && archive.BeginTag(s_opticalCenterTag);
 	retVal = retVal && m_opticalCenter.Serialize(archive);

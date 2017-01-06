@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAffiniteCalibrationShape.cpp" />
+    <ClCompile Include="..\CGeneralCalibrationShape.cpp" />
     <ClCompile Include="..\CNoneCalibrationShape.cpp" />
     <ClCompile Include="..\CPerspectiveCalibEditorComp.cpp" />
     <ClCompile Include="..\CPerspectiveCalibrationShape.cpp" />
@@ -124,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAffiniteCalibrationShape.h" />
+    <ClInclude Include="..\CGeneralCalibrationShape.h" />
     <ClInclude Include="..\CNoneCalibrationShape.h" />
     <CustomBuild Include="..\CPerspectiveCalibEditorComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CPerspectiveCalibEditorComp.h;%(AdditionalInputs)</AdditionalInputs>

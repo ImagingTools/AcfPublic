@@ -11828,6 +11828,34 @@
       <arglist>(const CVector2d &amp;bottomRight)</arglist>
     </member>
     <member kind="function">
+      <type>CVector2d</type>
+      <name>GetLeftCenter</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>ac9edb52cde2a03f6353cb1844dd30c07</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetRightCenter</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>abee0713090ea5a577976b778ee7d6bfd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetTopCenter</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a74d20ff93782592a4886d121b97ec173</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>CVector2d</type>
+      <name>GetBottomCenter</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>ad1b1fbca967f84e3c0fea0e35b81c8bc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>Contains</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
