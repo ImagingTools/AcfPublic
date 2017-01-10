@@ -162,6 +162,7 @@
     <ClCompile Include="..\CMultiBitmapCacheComp.cpp" />
     <ClCompile Include="..\CMultiLineProjectionSupplierComp.cpp" />
     <ClCompile Include="..\CMultiLineSupplierCompBase.cpp" />
+    <ClCompile Include="..\CMultiPointPosCorrSupplierComp.cpp" />
     <ClCompile Include="..\CObjectFeature.cpp" />
     <ClCompile Include="..\CPerspCalibFinder.cpp" />
     <ClCompile Include="..\CPositionFromImageSupplierComp.cpp" />
@@ -232,6 +233,7 @@
     <ClInclude Include="..\CMultiBitmapCacheComp.h" />
     <ClInclude Include="..\CMultiLineProjectionSupplierComp.h" />
     <ClInclude Include="..\CMultiLineSupplierCompBase.h" />
+    <ClInclude Include="..\CMultiPointPosCorrSupplierComp.h" />
     <ClInclude Include="..\CObjectFeature.h" />
     <ClInclude Include="..\CPerspCalibFinder.h" />
     <ClInclude Include="..\CPixelManip.h" />

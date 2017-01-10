@@ -291,7 +291,7 @@ bool CPreciseBlobProcessorComp::DoCalculateBlobs(
 		if (resultConsumerPtr != NULL){
 			blobMessagePtr.SetPtr(new ilog::CExtMessage(
 						istd::IInformationProvider::IC_INFO,
-						FOUND_BLOB,
+						MI_FOUND_BLOB,
 						"",
 						"PreciseBlobProcessor"));
 		}
@@ -300,7 +300,7 @@ bool CPreciseBlobProcessorComp::DoCalculateBlobs(
 		if (tempMessageConsumerPtr != NULL){
 			ignoredBlobsMessagePtr.SetPtr(new ilog::CExtMessage(
 						istd::IInformationProvider::IC_NONE,
-						FOUND_BLOB,
+						MI_FOUND_BLOB,
 						"",
 						"PreciseBlobProcessor"));
 		}
