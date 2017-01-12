@@ -52534,6 +52534,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetLogicalPageIndex</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>af4f3c05e9a7c8ec1e0b056ce6840f7c0</anchor>
+      <arglist>(int physicalWidgetIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreatePage</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
@@ -52628,8 +52635,8 @@
       <type>virtual void</type>
       <name>OnPageChanged</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>a37ded4d166ceb9f48f0957b7c0bc0973</anchor>
-      <arglist>(int pageIndex)</arglist>
+      <anchor>adfeed2a2829100de6086ca59b5495527</anchor>
+      <arglist>(int widgetIndex)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>imod::TModelWrap&lt; PageModel &gt;</type>
@@ -56227,8 +56234,8 @@
       <type>virtual void</type>
       <name>OnPageChanged</name>
       <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>a4c196fbdc554ad7aca582b01fc4f40f3</anchor>
-      <arglist>(int index)</arglist>
+      <anchor>ac46026056fc60f947c3217132345a389</anchor>
+      <arglist>(int widgetIndex)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

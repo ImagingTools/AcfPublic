@@ -102,6 +102,11 @@ protected:
 	virtual int GetDesignType() const = 0;
 
 	/**
+		Get logical page index from a given widget index.
+	*/
+	virtual int GetLogicalPageIndex(int physicalWidgetIndex) const;
+
+	/**
 		Create a page in the page container widget.
 	*/
 	virtual bool CreatePage(int pageIndex);
@@ -146,7 +151,7 @@ protected:
 	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 protected Q_SLOTS:
-	virtual void OnPageChanged(int pageIndex);
+	virtual void OnPageChanged(int widgetIndex);
 
 private:
 	class PageModel:
