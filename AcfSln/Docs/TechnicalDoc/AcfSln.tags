@@ -19457,8 +19457,8 @@
       <type>void</type>
       <name>SmoothHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a6c9913a4c947cf24916c3bfdab275bc3</anchor>
-      <arglist>(int iterations)</arglist>
+      <anchor>aba68173dddfacb1cb8ac8121e58c536d</anchor>
+      <arglist>(int iterationsX, int iterationsY=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -20060,22 +20060,22 @@
       <type>i2d::CVector2d</type>
       <name>CalcHoughPos</name>
       <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
-      <anchor>afdf4063bc8bc8e7544c4b33b345f0bb4</anchor>
-      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2, const istd::CIndex2d &amp;spaceSize) const </arglist>
+      <anchor>a6fa3516c4f13ef906afb949f5c42fef3</anchor>
+      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2, const i2d::CVector2d &amp;imageCenter, const istd::CIndex2d &amp;spaceSize) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CLine2d</type>
       <name>CalcCorrespondingLine</name>
       <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
-      <anchor>a7bd87bdf20df2c30a85a25fcf3d1c825</anchor>
-      <arglist>(const i2d::CVector2d &amp;houghPos, const istd::CIndex2d &amp;spaceSize) const </arglist>
+      <anchor>a5303890e429135a3109c949317db0c97</anchor>
+      <arglist>(const i2d::CVector2d &amp;houghPos, const i2d::CVector2d &amp;imageCenter, const istd::CIndex2d &amp;spaceSize) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>UpdateHoughSpace</name>
       <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
-      <anchor>ae3421f8f860676c0a9943161a398533f</anchor>
-      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2, double weight, CHoughSpace2d &amp;space) const </arglist>
+      <anchor>a6e95f1212c3efb0505a9648d2c0d28fb</anchor>
+      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2, double weight, const i2d::CVector2d &amp;imageCenter, CHoughSpace2d &amp;space) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
