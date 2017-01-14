@@ -40,22 +40,6 @@
 namespace iipr
 {
 
-QString ProcessingModeName(int i){
-
-	switch (i){
-	case CMorphologicalProcessorComp::PM_EROSION:
-		return QString("Erosion");
-	case CMorphologicalProcessorComp::PM_DILATATION:
-		return QString("Dilation");
-	case CMorphologicalProcessorComp::PM_OPENING:
-		return QString("Opening");
-	case CMorphologicalProcessorComp::PM_CLOSING:
-		return QString("Closing");
-	default:
-		return QString("Erosion");
-	}
-}
-
 
 template <typename PixelComponentType>
 inline void MinFunctor(PixelComponentType inputValue, PixelComponentType& outputValue)
@@ -352,15 +336,13 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 	Q_ASSERT(kernelMaxWidth >= 1);
 	Q_ASSERT(kernelMaxHeight >= 1);
 
-	int processingMode = GetProcessingMode(paramsPtr);
-
 	int pixelFormat = inputBitmap.GetPixelFormat();
 	switch (pixelFormat){
 		case iimg::IBitmap::PF_GRAY:
 		case iimg::IBitmap::PF_RGB:
 		case iimg::IBitmap::PF_RGBA:
 			ProcessImage<quint8, 255>(
-							CMorphologicalProcessorComp::ProcessingMode(processingMode),
+							CMorphologicalProcessorComp::ProcessingMode(*m_processingModeAttrPtr),
 							kernelMaxWidth,
 							kernelMaxHeight,
 							inputBitmap,
@@ -370,7 +352,7 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 
 		case iimg::IBitmap::PF_GRAY16:
 			ProcessImage<quint16, (1 << 16) - 1>(
-							CMorphologicalProcessorComp::ProcessingMode(processingMode),
+							CMorphologicalProcessorComp::ProcessingMode(*m_processingModeAttrPtr),
 							kernelMaxWidth,
 							kernelMaxHeight,
 							inputBitmap,
@@ -380,7 +362,7 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 
 		case iimg::IBitmap::PF_GRAY32:
 			ProcessImage<quint32, (quint64(1) << 32) - 1>(
-							CMorphologicalProcessorComp::ProcessingMode(processingMode),
+							CMorphologicalProcessorComp::ProcessingMode(*m_processingModeAttrPtr),
 							kernelMaxWidth,
 							kernelMaxHeight,
 							inputBitmap,
@@ -395,37 +377,6 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 	return true;
 }
 
-
-// reimplemented (icomp::CComponentBase)
-
-void CMorphologicalProcessorComp::OnComponentCreated()
-{
-	BaseClass::OnComponentCreated();
-
-	for (int i = PM_FIRST; i < PM_LAST + 1; ++i){
-		m_processingModes.InsertOption(ProcessingModeName(i), QByteArray::number(i), ProcessingModeName(i));
-	}
-}
-
-
-// private methods
-
-int CMorphologicalProcessorComp::GetProcessingMode(const iprm::IParamsSet* paramsPtr) const
-{
-	int mode = *m_defaultProcessingModeAttrPtr;
-
-	if ((paramsPtr != NULL) && m_processingModeIdAttrPtr.IsValid()) {
-		iprm::TParamsPtr<iprm::ISelectionParam> processingModeParamPtr(paramsPtr, *m_processingModeIdAttrPtr, false);
-		if (processingModeParamPtr != NULL) {
-			mode = processingModeParamPtr->GetSelectedOptionIndex();
-			if (mode < PM_FIRST || mode > PM_LAST) {
-				mode = PM_EROSION;
-			}
-		}
-	}
-
-	return mode;
-}
 
 } // namespace iipr
 

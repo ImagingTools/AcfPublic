@@ -9769,6 +9769,13 @@
       <anchor>a0ea5b4bfde89eb7fb2015c351e5093b1</anchor>
       <arglist>(const CLine2d &amp;line) const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ApproxFromPoints</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a69afcf858fd40224467da6f0f466ea87</anchor>
+      <arglist>(const QSet&lt; i2d::CVector2d &gt; &amp;points)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
