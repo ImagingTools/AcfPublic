@@ -1149,12 +1149,28 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>CSupplierActivationProxyComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_c_supplier_activation_proxy_comp_8h</filename>
+    <includes id="_i_enableable_supplier_8h" name="IEnableableSupplier.h" local="no" imported="no">iinsp/IEnableableSupplier.h</includes>
+    <class kind="class">iinsp::CSupplierActivationProxyComp</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSupplierCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_c_supplier_comp_base_8h</filename>
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">iinsp::CSupplierCompBase</class>
     <class kind="class">iinsp::CSupplierCompBase::Timer</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IEnableableSupplier.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_i_enableable_supplier_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
+    <class kind="class">iinsp::IEnableableSupplier</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -15779,7 +15795,9 @@
     <class kind="class">iinsp::CIdProviderCacheComp</class>
     <class kind="class">iinsp::CInformationProviderCacheComp</class>
     <class kind="class">iinsp::CInspectionTaskComp</class>
+    <class kind="class">iinsp::CSupplierActivationProxyComp</class>
     <class kind="class">iinsp::CSupplierCompBase</class>
+    <class kind="class">iinsp::IEnableableSupplier</class>
     <class kind="class">iinsp::IIdProvider</class>
     <class kind="class">iinsp::IInspectionTask</class>
     <class kind="class">iinsp::ISupplier</class>
@@ -16415,6 +16433,124 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iinsp::CSupplierActivationProxyComp</name>
+    <filename>classiinsp_1_1_c_supplier_activation_proxy_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iinsp::IEnableableSupplier</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>abd360628ea4b958ff3903e2d85729b14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiinsp_1_1_i_enableable_supplier.html</anchorfile>
+      <anchor>a6be49264be6d52e7d7132ac14616f81d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_SUPPLIER_ACTIVATION</name>
+      <anchorfile>classiinsp_1_1_i_enableable_supplier.html</anchorfile>
+      <anchor>a6be49264be6d52e7d7132ac14616f81daedaecfe8d89bbdcd846b2514bc4e6f8c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSupplierActivationProxyComp</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>a9928b5eb190e673957d6b53e174c29cb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetSupplierEnabled</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>ae8a19bfe62af7ee4c2de965dae630646</anchor>
+      <arglist>(bool isEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsSupplierEnabled</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>ac8a0438c107bbe44dff6883ca973e505</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsStateFixed</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>a1c86c0c74bbc393e4384c6dbfc9780b3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>ad45e998edfffaee7fa151adfdea079e0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>ad44dbb1cf82b48aaa0dda227dacbfd9a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>a3d9fc1ec050e583c52fa9265ba1a11e4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>ae5d54e2d4d9a98d433f1d85a91440418</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>a0c71a5adfd8b829ae8fa67f8f530695f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ilog::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>ab27bc7ca7c6289c1a091d23bdb135c99</anchor>
+      <arglist>(int messageType) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>a466a569b0b21c6e5712d16ae5444a843</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>a06ed0cfb06e021f58702066150123faf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>af19b42868ef79c8eb4d574b4dae08fea</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iinsp::CSupplierCompBase</name>
     <filename>classiinsp_1_1_c_supplier_comp_base.html</filename>
     <base>ilog::TLoggerCompWrap</base>
@@ -16451,6 +16587,74 @@
       <anchorfile>classiinsp_1_1_c_supplier_comp_base_1_1_timer.html</anchorfile>
       <anchor>aebb1e31f727bf4885e22c206eefcee33</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::IEnableableSupplier</name>
+    <filename>classiinsp_1_1_i_enableable_supplier.html</filename>
+    <base virtualness="virtual">iinsp::ISupplier</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetSupplierEnabled</name>
+      <anchorfile>classiinsp_1_1_i_enableable_supplier.html</anchorfile>
+      <anchor>a99524f9a6be8e7a3c96ce32b50d0f966</anchor>
+      <arglist>(bool isEnabled=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsSupplierEnabled</name>
+      <anchorfile>classiinsp_1_1_i_enableable_supplier.html</anchorfile>
+      <anchor>a1b5fc1ccfbdbaa9684c795c53b7c7508</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsStateFixed</name>
+      <anchorfile>classiinsp_1_1_i_enableable_supplier.html</anchorfile>
+      <anchor>afe832db74cc92327f4f539f51e891616</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetWorkStatus</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a036fc62dc455392c6974201d9819ed24</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>InvalidateSupplier</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a033646f2c95eaba98b21925a319d9a0f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkInitialized</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a97a77bd08359c882299150cf4515de03</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4f897c21e931245a7aa432d775a68881</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const ilog::IMessageContainer *</type>
+      <name>GetWorkMessages</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>ac8eabdbc6495d5dee2c782a4af297c97</anchor>
+      <arglist>(int containerType) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual iprm::IParamsSet *</type>
+      <name>GetModelParametersSet</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a4837a527075f7b2cb7eb7b38afcaea71</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16495,48 +16699,6 @@
     <name>iinsp::ISupplier</name>
     <filename>classiinsp_1_1_i_supplier.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetWorkStatus</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a036fc62dc455392c6974201d9819ed24</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>InvalidateSupplier</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a033646f2c95eaba98b21925a319d9a0f</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>EnsureWorkInitialized</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a97a77bd08359c882299150cf4515de03</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a4f897c21e931245a7aa432d775a68881</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const ilog::IMessageContainer *</type>
-      <name>GetWorkMessages</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>ac8eabdbc6495d5dee2c782a4af297c97</anchor>
-      <arglist>(int containerType) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual iprm::IParamsSet *</type>
-      <name>GetModelParametersSet</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a4837a527075f7b2cb7eb7b38afcaea71</anchor>
-      <arglist>() const =0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::ITimeStampProvider</name>
@@ -32601,7 +32763,9 @@
     <file>CIdProviderCacheComp.h</file>
     <file>CInformationProviderCacheComp.h</file>
     <file>CInspectionTaskComp.h</file>
+    <file>CSupplierActivationProxyComp.h</file>
     <file>CSupplierCompBase.h</file>
+    <file>IEnableableSupplier.h</file>
     <file>IIdProvider.h</file>
     <file>iinsp.h</file>
     <file>IInspectionTask.h</file>

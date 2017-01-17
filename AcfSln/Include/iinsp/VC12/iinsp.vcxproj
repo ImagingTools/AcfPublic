@@ -120,6 +120,7 @@
     <ClCompile Include="..\CIdProviderCacheComp.cpp" />
     <ClCompile Include="..\CInformationProviderCacheComp.cpp" />
     <ClCompile Include="..\CInspectionTaskComp.cpp" />
+    <ClCompile Include="..\CSupplierActivationProxyComp.cpp" />
     <ClCompile Include="..\CSupplierCompBase.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -127,7 +128,9 @@
     <ClInclude Include="..\CIdProviderCacheComp.h" />
     <ClInclude Include="..\CInformationProviderCacheComp.h" />
     <ClInclude Include="..\CInspectionTaskComp.h" />
+    <ClInclude Include="..\CSupplierActivationProxyComp.h" />
     <ClInclude Include="..\CSupplierCompBase.h" />
+    <ClInclude Include="..\IEnableableSupplier.h" />
     <ClInclude Include="..\IIdProvider.h" />
     <ClInclude Include="..\IInspectionTask.h" />
     <ClInclude Include="..\ISupplier.h" />
