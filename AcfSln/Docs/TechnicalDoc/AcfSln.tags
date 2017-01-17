@@ -10098,6 +10098,13 @@
       <anchor>a5e2a5e46247018d56513fc0f419405f8</anchor>
       <arglist>(const icomp::CComponentAddress &amp;address) const </arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>AreTypesCompatible</name>
+      <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
+      <anchor>a092dd586a506e82783d27be68dea1d1e</anchor>
+      <arglist>(const QByteArray &amp;metaTypeId, const QByteArray &amp;typeId)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>icomp::IRegistry::Ids</type>
       <name>GetCompatibleIds</name>
@@ -12551,14 +12558,6 @@
       <anchor>a153b4a35041c83a6f4df18387f7bb263</anchor>
       <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
     </member>
-  </compound>
-  <compound kind="namespace">
-    <name>icomp::TAttributeMember&lt; iattr::TAttribute&lt; QString &gt; &gt;</name>
-    <filename>namespaceicomp_1_1_t_attribute_member_3_01iattr_1_1_t_attribute_3_01_q_string_01_4_01_4.html</filename>
-  </compound>
-  <compound kind="namespace">
-    <name>icomp::TMultiAttributeMember&lt; iattr::TMultiAttribute&lt; QString &gt; &gt;</name>
-    <filename>namespaceicomp_1_1_t_multi_attribute_member_3_01iattr_1_1_t_multi_attribute_3_01_q_string_01_4_01_4.html</filename>
   </compound>
   <compound kind="namespace">
     <name>idocproc</name>
@@ -20367,6 +20366,13 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>PM_FIRST</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a529d2f9881ae98ec46d744dc003e2149</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>PM_EROSION</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a448e664dbee5a2c8ba527d7dc7891fcb</anchor>
@@ -20393,6 +20399,13 @@
       <anchor>a647cec348b95ec86f153c44508962228a2f2a6b1e8b700f6027d8f13d07187592</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_LAST</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a60bbba19b0f1e9df62713f5cb8fac20a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
@@ -20406,6 +20419,13 @@
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a7981c6af9bc393094a701a245c2dc623</anchor>
       <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a6f8fcd205bac88987765e5ea4634cffb</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
