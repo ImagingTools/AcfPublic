@@ -20210,6 +20210,27 @@
       <anchor>a99ec40afa280c93f07562ef5ad4ad965</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QList&lt; CorrectionLineInfo &gt;</type>
+      <name>AllCorrectionInfos</name>
+      <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
+      <anchor>a73f3f16080b1a4f103562db6564020c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalculateCalibrationFactors</name>
+      <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
+      <anchor>a38f8284507c10cb9b16bc039b62172d9</anchor>
+      <arglist>(const AllCorrectionInfos &amp;allCorrectionInfos, bool searchCenterFlag, const icalib::CSimpleLensCorrection &amp;inputCorrection, icalib::CSimpleLensCorrection &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>AddCorrectPointsMessage</name>
+      <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
+      <anchor>a490c254d860043a87a89f07744f26684</anchor>
+      <arglist>(const AllCorrectionInfos &amp;allCorrectionInfos, const icalib::CSimpleLensCorrection &amp;inputCorrection, const i2d::CVector2d &amp;imageCenter) const </arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CalculateCalibration</name>
@@ -20272,16 +20293,16 @@
     <filename>structiipr_1_1_c_lens_corr_find_supplier_comp_1_1_correction_info.html</filename>
     <member kind="variable">
       <type>i2d::CVector2d</type>
-      <name>position</name>
+      <name>foundPos</name>
       <anchorfile>structiipr_1_1_c_lens_corr_find_supplier_comp_1_1_correction_info.html</anchorfile>
-      <anchor>a49f0e8a64bda63b4ce862755f473dd38</anchor>
+      <anchor>a95328f72412ee53b937df5661e5282fe</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
       <type>i2d::CVector2d</type>
-      <name>diff</name>
+      <name>onLinePos</name>
       <anchorfile>structiipr_1_1_c_lens_corr_find_supplier_comp_1_1_correction_info.html</anchorfile>
-      <anchor>aec18920d1c0dcb68c8ae5718e9b690e2</anchor>
+      <anchor>a7bda03ff0c5a0f42c252ac776ff0809b</anchor>
       <arglist></arglist>
     </member>
   </compound>
