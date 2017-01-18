@@ -24,6 +24,13 @@
 #define icomp_TReferenceMember_included
 
 
+// Qt includes
+#include <QtCore/QThread>
+#include <QtWidgets/QApplication>
+#include <QtCore/QByteArray>
+#include <QtCore/QString>
+
+
 // ACF includes
 #include <icomp/IComponent.h>
 #include <icomp/TAttributeMember.h>
@@ -118,6 +125,20 @@ bool TReferenceMember<Interface>::EnsureInitialized() const
 		const ICompositeComponent* parentPtr = m_definitionComponentPtr->GetParentComponent();
 		if (parentPtr != NULL){
 			const QByteArray& componentId = BaseClass::operator*();
+			
+#ifndef QT_NO_DEBUG
+			if (QThread::currentThread() != qApp->thread()){
+				QByteArray componentName;
+				if ((m_definitionComponentPtr != nullptr) &&
+					(m_definitionComponentPtr->GetComponentContext() != nullptr)){
+					componentName = m_definitionComponentPtr->GetComponentContext()->GetContextId();
+				}
+				Q_ASSERT(!componentName.isEmpty());
+				qWarning("%s%s initialized outside of an application thread\n", 
+					componentName.isEmpty() ? componentId.constData() : qPrintable(QString("%1 ").arg(componentId.constData())),
+					componentName.isEmpty() ? "" : componentName.constData());
+				}
+#endif //QT_NO_DEBUG
 
 			QByteArray baseId;
 			QByteArray subId;
