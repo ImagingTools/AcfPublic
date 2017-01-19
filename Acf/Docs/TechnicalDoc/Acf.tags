@@ -39292,6 +39292,13 @@
       <arglist>(const TArray &amp;array)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>TArray</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a44238effa9666bd74783b5ffd22e7e6c</anchor>
+      <arglist>(const SizesType &amp;sizes, const ElementType &amp;value=ElementType())</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Reset</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
@@ -39435,8 +39442,8 @@
       <type>void</type>
       <name>UpdateElementsSize</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>a3011cec53e6786086e1abc7cdd627636</anchor>
-      <arglist>()</arglist>
+      <anchor>adcbfe7a1a327c3f9106948762a335db6</anchor>
+      <arglist>(const ElementType &amp;value=ElementType())</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -60977,6 +60984,13 @@
       <arglist>(const TArray &amp;array)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>TArray</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a44238effa9666bd74783b5ffd22e7e6c</anchor>
+      <arglist>(const SizesType &amp;sizes, const ElementType &amp;value=ElementType())</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Reset</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
@@ -61113,8 +61127,8 @@
       <type>void</type>
       <name>UpdateElementsSize</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
-      <anchor>a3011cec53e6786086e1abc7cdd627636</anchor>
-      <arglist>()</arglist>
+      <anchor>adcbfe7a1a327c3f9106948762a335db6</anchor>
+      <arglist>(const ElementType &amp;value=ElementType())</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

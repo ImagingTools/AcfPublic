@@ -27,6 +27,7 @@
 // ACF includes
 #include <iimg/IBitmap.h>
 
+// ACF-Solutions includes
 #include <iproc/TSyncProcessorCompBase.h>
 
 
@@ -34,7 +35,7 @@ namespace iipr
 {
 
 
-/**	
+/**
 	Implementation of a processor for the RGB to Grayscale image conversion.
 */
 class CRgbToGrayProcessorComp: public iproc::CSyncProcessorCompBase

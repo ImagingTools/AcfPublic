@@ -84,6 +84,7 @@ public:
 
 	TArray();
 	TArray(const TArray& array);
+	explicit TArray(const SizesType& sizes, const ElementType& value = ElementType());
 
 	/**
 		Removes all elements and set all sizes to 0.
@@ -182,7 +183,7 @@ protected:
 	/**
 		Update size of elements to size changes.
 	*/
-	void UpdateElementsSize();
+	void UpdateElementsSize(const ElementType& value = ElementType());
 
 	void DeepCopy(const Elements& elements, const SizesType& sizes);
 
@@ -350,6 +351,14 @@ TArray<Element, Dimensions>::TArray(const TArray& array)
 
 
 template <class Element, int Dimensions>
+TArray<Element, Dimensions>::TArray(const SizesType& sizes, const ElementType& value)
+:	m_sizes(sizes)
+{
+	UpdateElementsSize(value);
+}
+
+
+template <class Element, int Dimensions>
 void TArray<Element, Dimensions>::Reset()
 {
 	m_sizes.Reset();
@@ -397,14 +406,14 @@ void TArray<Element, Dimensions>::SetAllElements(const Element& value)
 // protected methods
 
 template <class Element, int Dimensions>
-void TArray<Element, Dimensions>::UpdateElementsSize()
+void TArray<Element, Dimensions>::UpdateElementsSize(const ElementType& value)
 {
 	int cumulatedSizes = 1;
 	for (int i = 0; i < Dimensions; ++i){
 		cumulatedSizes *= m_sizes[i];
 	}
 
-	m_elements.resize(cumulatedSizes);
+	m_elements.resize(cumulatedSizes, value);
 }
 
 
