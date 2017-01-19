@@ -116,10 +116,6 @@ public:
 
 	CInspectionTaskGuiComp();
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
-	virtual void UpdateEditor(const istd::IChangeable::ChangeSet& changeSet);
-
 	// reimplemented (imod::IObserver)
 	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
 	virtual bool OnModelDetached(imod::IModel* modelPtr);
@@ -127,6 +123,10 @@ public:
 protected:
 	void UpdateProcessingState();
 	void UpdateVisualElements();
+
+	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void UpdateModel() const;
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();

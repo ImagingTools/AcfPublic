@@ -63,11 +63,11 @@ protected:
 	class UpdateBlocker
 	{
 	public:
-		UpdateBlocker(TGuiObserverWrap<Gui, Observer>* parentPtr);
+		UpdateBlocker(const TGuiObserverWrap<Gui, Observer>* parentPtr);
 		~UpdateBlocker();
 
 	private:
-		TGuiObserverWrap<Gui, Observer>& m_parent;
+		const TGuiObserverWrap<Gui, Observer>& m_parent;
 	};
 
 	/**
@@ -99,16 +99,23 @@ protected:
 		Secure update model.
 		It use GUI block mechanism and it is designed to be called directly from UI slot.
 	*/
-	bool DoUpdateModel();
+	bool DoUpdateModel() const;
 
 	/**
-		Do update of the model GUI.
+		Do update of the model to reflect the current contents of GUI.
+		This method should be implmented by derived classes instead of \c imod::IModelEditor::UpdateModelFromEditor().
+	*/
+	virtual void UpdateModel() const;
+
+	/**
+		Do update of the GUI to reflect the state of model.
+		This method should be implmented by derived classes instead of \c imod::IModelEditor::UpdateEditor().
 	*/
 	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (imod::IModelEditor)
 	virtual void UpdateEditor(const istd::IChangeable::ChangeSet& changeSet);
-	virtual void UpdateModel() const;
+	virtual void UpdateModelFromEditor() const;
 
 	// pseudo-reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiShown();
@@ -138,12 +145,12 @@ private:
 
 private:
 	bool m_disableUiIfReadOnly;
-	int m_ignoreUpdatesCounter;
+	mutable int m_ignoreUpdatesCounter;
 
 	/**
 		Do editor update, if the gui change its state to visible.
 	*/
-	bool m_updateOnShow;
+	bool m_isUpdatePending;
 
 	/**
 		Cumulated flags for UI-update after it becomes visible state.
@@ -159,7 +166,7 @@ TGuiObserverWrap<Gui, Observer>::TGuiObserverWrap()
 :	m_isReadOnly(false),
 	m_disableUiIfReadOnly(true),
 	m_ignoreUpdatesCounter(0),
-	m_updateOnShow(true),
+	m_isUpdatePending(true),
 	m_onShowChangeIds(istd::IChangeable::GetAllChanges())
 {
 }
@@ -193,7 +200,7 @@ bool TGuiObserverWrap<Gui, Observer>::OnModelDetached(imod::IModel* modelPtr)
 {
 	if (Observer::IsModelAttached(modelPtr)){
 		if (Gui::IsGuiCreated()){
-			if (!m_isReadOnly && !IsUpdateBlocked() && !m_updateOnShow){
+			if (!m_isReadOnly && !IsUpdateBlocked() && !m_isUpdatePending){
 				UpdateBlocker updateBlocker(this);
 				Q_UNUSED(updateBlocker);
 
@@ -236,7 +243,7 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiModelAttached()
 template <class Gui, class Observer>
 void TGuiObserverWrap<Gui, Observer>::OnGuiModelDetached()
 {
-	if (!m_isReadOnly && Observer::IsModelAttached(NULL) && !IsUpdateBlocked() && !m_updateOnShow){
+	if (!m_isReadOnly && Observer::IsModelAttached(NULL) && !IsUpdateBlocked() && !m_isUpdatePending){
 		UpdateBlocker updateBlocker(this);
 		Q_UNUSED(updateBlocker);
 
@@ -262,7 +269,7 @@ void TGuiObserverWrap<Gui, Observer>::SetDisableUiIfReadOnly(bool state)
 // provate methods
 
 template <class Gui, class Observer>
-bool TGuiObserverWrap<Gui, Observer>::DoUpdateModel()
+bool TGuiObserverWrap<Gui, Observer>::DoUpdateModel() const
 {
 	if (!m_isReadOnly && !IsUpdateBlocked() && Observer::IsModelAttached()){
 		UpdateBlocker updateBlocker(this);
@@ -274,6 +281,12 @@ bool TGuiObserverWrap<Gui, Observer>::DoUpdateModel()
 	}
 
 	return false;
+}
+
+
+template <class Gui, class Observer>
+void TGuiObserverWrap<Gui, Observer>::UpdateModel() const
+{
 }
 
 
@@ -293,15 +306,18 @@ void TGuiObserverWrap<Gui, Observer>::UpdateEditor(const istd::IChangeable::Chan
 	}
 	else{
 		// prepare postponed update
-		m_updateOnShow = true;
+		m_isUpdatePending = true;
 		m_onShowChangeIds += changeSet;
 	}
 }
 
 
 template <class Gui, class Observer>
-void TGuiObserverWrap<Gui, Observer>::UpdateModel() const
+void TGuiObserverWrap<Gui, Observer>::UpdateModelFromEditor() const
 {
+	if (!m_isReadOnly && !m_isUpdatePending){
+		UpdateModel();
+	}
 }
 
 
@@ -313,12 +329,13 @@ void TGuiObserverWrap<Gui, Observer>::OnGuiShown()
 	Gui::OnGuiShown();
 
 	if (Observer::IsModelAttached(NULL)){
-		if (m_updateOnShow){
+		if (m_isUpdatePending){
 			// skip update if the UI is not visible:
 			DoUpdate(m_onShowChangeIds);
 
 			m_onShowChangeIds.Reset();
-			m_updateOnShow = false;
+
+			m_isUpdatePending = false;
 		}
 
 		OnGuiModelShown();
@@ -436,7 +453,7 @@ void TGuiObserverWrap<Gui, Observer>::DoUpdate(const istd::IChangeable::ChangeSe
 // public methods of embedded class UpdateBlocker
 
 template <class Gui, class Observer>
-TGuiObserverWrap<Gui, Observer>::UpdateBlocker::UpdateBlocker(TGuiObserverWrap<Gui, Observer>* parentPtr)
+TGuiObserverWrap<Gui, Observer>::UpdateBlocker::UpdateBlocker(const TGuiObserverWrap<Gui, Observer>* parentPtr)
 :	m_parent(*parentPtr)
 {
 	++m_parent.m_ignoreUpdatesCounter;

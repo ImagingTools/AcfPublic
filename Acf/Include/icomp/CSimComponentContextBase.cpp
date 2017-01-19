@@ -35,6 +35,9 @@ namespace icomp
 {
 
 
+
+// public methods
+
 CSimComponentContextBase::CSimComponentContextBase(const IComponentStaticInfo* infoPtr)
 :	m_metaInfo(*infoPtr)
 {
@@ -165,7 +168,6 @@ bool CSimComponentContextBase::InsertMultiFactory(const QByteArray& factoryId, c
 }
 
 
-
 bool CSimComponentContextBase::SetBoolAttr(const QByteArray& attributeId, bool value)
 {
 	Q_ASSERT(IsAttributeTypeCorrect< iattr::TAttribute<bool> >(attributeId));
@@ -196,7 +198,8 @@ bool CSimComponentContextBase::SetStringAttr(const QByteArray& attributeId, cons
 }
 
 
-bool CSimComponentContextBase::SetIdAttr(const QByteArray& attributeId, const QByteArray& value){
+bool CSimComponentContextBase::SetIdAttr(const QByteArray& attributeId, const QByteArray& value)
+{
 	Q_ASSERT(IsAttributeTypeCorrect< iattr::TAttribute<QByteArray> >(attributeId));
 
 	return SetAttr(attributeId, new iattr::TAttribute<QByteArray>(value));

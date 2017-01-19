@@ -31,7 +31,9 @@ namespace iqtipr
 {
 
 
-// reimplemented (imod::IModelEditor)
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CConvolution2dParamsGuiComp::UpdateModel() const
 {
@@ -40,10 +42,6 @@ void CConvolution2dParamsGuiComp::UpdateModel() const
 	UpdateKernelSize();
 }
 
-
-// protected methods
-
-// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CConvolution2dParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {

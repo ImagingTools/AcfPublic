@@ -31,7 +31,9 @@
 #include <IAconstraints.h>
 
 
-// reimplemented (imod::IModelEditor)
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CAbGuiComp::UpdateModel() const
 {
@@ -45,10 +47,6 @@ void CAbGuiComp::UpdateModel() const
 	objectPtr->SetB(BValueEdit->text().toLocal8Bit());
 }
 
-
-// protected methods
-
-// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CAbGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
@@ -77,7 +75,7 @@ void CAbGuiComp::OnGuiModelAttached()
 }
 
 
-// reimplemented (CGuiComponentBase)
+// reimplemented (iqtgui::CGuiComponentBase)
 
 void CAbGuiComp::OnGuiCreated()
 {

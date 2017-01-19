@@ -1692,27 +1692,6 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ad98795e7386a0745cdab5e6c7476ee87</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>a7e97d91f1f8dd1c7aba7d8e9fd247fcc</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ad9b3fb8be8766613c0e23ff1f638adca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
@@ -1724,6 +1703,27 @@
       <name>OnTextChanged</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
       <anchor>ad5d9fc48a322f1e3a18c8e8f628961da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>ad98795e7386a0745cdab5e6c7476ee87</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>a7e97d91f1f8dd1c7aba7d8e9fd247fcc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>ad9b3fb8be8766613c0e23ff1f638adca</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">

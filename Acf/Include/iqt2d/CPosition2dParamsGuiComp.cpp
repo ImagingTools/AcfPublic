@@ -31,9 +31,9 @@ namespace iqt2d
 {
 
 
-// public methods
+// protected methods
 
-// reimplemented (imod::IModelEditor)
+// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CPosition2dParamsGuiComp::UpdateModel() const
 {
@@ -49,10 +49,6 @@ void CPosition2dParamsGuiComp::UpdateModel() const
 	objectPtr->SetPosition(postion);
 }
 
-
-// protected methods
-
-// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CPosition2dParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {

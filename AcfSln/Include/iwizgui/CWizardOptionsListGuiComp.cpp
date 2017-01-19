@@ -40,7 +40,9 @@ namespace iwizgui
 {
 
 
-// reimplemented (imod::IModelEditor)
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CWizardOptionsListGuiComp::UpdateModel() const
 {
@@ -72,10 +74,6 @@ void CWizardOptionsListGuiComp::UpdateModel() const
 	}
 }
 
-
-// protected methods
-
-// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CWizardOptionsListGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {

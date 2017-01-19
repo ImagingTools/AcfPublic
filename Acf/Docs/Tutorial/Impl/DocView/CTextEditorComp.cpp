@@ -42,39 +42,6 @@ CTextEditorComp::CTextEditorComp()
 }
 
 
-// reimplemented (imod::IModelEditor)
-
-void CTextEditorComp::UpdateModel() const
-{
-	Q_ASSERT(IsGuiCreated());
-
-	QTextEdit* textEditPtr = GetQtWidget();
-	Q_ASSERT(textEditPtr != NULL);
-
-	idoc::ITextDocument* objectPtr = GetObservedObject();
-	Q_ASSERT(objectPtr != NULL);
-
-	objectPtr->SetText(textEditPtr->toPlainText());
-}
-
-
-// reimplemented (iqtgui::TGuiObserverWrap)
-
-void CTextEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
-{
-	Q_ASSERT(IsGuiCreated());
-
-	QTextEdit* textEditPtr = GetQtWidget();
-	Q_ASSERT(textEditPtr != NULL);
-
-	idoc::ITextDocument* objectPtr = GetObservedObject();
-
-	if ((objectPtr != NULL) && !textEditPtr->signalsBlocked()){
-		textEditPtr->setText(objectPtr->GetText());
-	}
-}
-
-
 // reimplemented (ibase::ICommandsProvider)
 
 const ibase::IHierarchicalCommand* CTextEditorComp::GetCommands() const
@@ -139,6 +106,39 @@ void CTextEditorComp::OnToUppercase()
 	OnSelectionChanged();
 
 	DoUpdateModel();
+}
+
+
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CTextEditorComp::UpdateModel() const
+{
+	Q_ASSERT(IsGuiCreated());
+
+	QTextEdit* textEditPtr = GetQtWidget();
+	Q_ASSERT(textEditPtr != NULL);
+
+	idoc::ITextDocument* objectPtr = GetObservedObject();
+	Q_ASSERT(objectPtr != NULL);
+
+	objectPtr->SetText(textEditPtr->toPlainText());
+}
+
+
+void CTextEditorComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
+{
+	Q_ASSERT(IsGuiCreated());
+
+	QTextEdit* textEditPtr = GetQtWidget();
+	Q_ASSERT(textEditPtr != NULL);
+
+	idoc::ITextDocument* objectPtr = GetObservedObject();
+
+	if ((objectPtr != NULL) && !textEditPtr->signalsBlocked()){
+		textEditPtr->setText(objectPtr->GetText());
+	}
 }
 
 

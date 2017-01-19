@@ -47,9 +47,6 @@ public:
 
 	CPolylineParamsGuiComp();
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
-
 protected:
 	// reimplemented (iqt2d::TShapeParamsGuiCompBase)
 	virtual bool PopulateActions(QWidget& host, imod::IModel* modelPtr);

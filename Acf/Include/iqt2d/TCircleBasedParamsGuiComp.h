@@ -50,12 +50,10 @@ public:
 	I_BEGIN_BASE_COMPONENT(TCircleBasedParamsGuiComp);
 	I_END_COMPONENT;
 
-	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
-
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
+	virtual void UpdateModel() const;
 	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
@@ -81,9 +79,16 @@ protected:
 };
 
 
-// public methods
+// protected methods
 
-// reimplemented (imod::IModelEditor)
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+template <class CircleBasedShape, class CircleBasedModel>
+void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::OnGuiModelAttached()
+{
+	BaseClass::OnGuiModelAttached();
+}
+
 
 template <class CircleBasedShape, class CircleBasedModel>
 void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::UpdateModel() const
@@ -101,17 +106,6 @@ void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::UpdateModel(
 
 	double radius = RadiusSpin->value();
 	objectPtr->SetRadius(radius);
-}
-
-
-// protected methods
-
-// reimplemented (iqtgui::TGuiObserverWrap)
-
-template <class CircleBasedShape, class CircleBasedModel>
-void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::OnGuiModelAttached()
-{
-	BaseClass::OnGuiModelAttached();
 }
 
 

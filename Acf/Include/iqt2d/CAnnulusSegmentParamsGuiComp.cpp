@@ -31,9 +31,9 @@ namespace iqt2d
 {
 
 
-// public methods
+// protected methods
 
-// reimplemented (imod::IModelEditor)
+// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CAnnulusSegmentParamsGuiComp::UpdateModel() const
 {
@@ -67,10 +67,6 @@ void CAnnulusSegmentParamsGuiComp::UpdateModel() const
 	}
 }
 
-
-// protected methods
-
-// reimplemented (iqtgui::TGuiObserverWrap)
 
 void CAnnulusSegmentParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {

@@ -67,7 +67,6 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (imod::IModelEditor)
-	virtual void UpdateModel() const;
 	virtual void UpdateEditor(const istd::IChangeable::ChangeSet& changeSet);
 	virtual void SetReadOnly(bool state);
 
@@ -90,6 +89,7 @@ protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
 	virtual void OnGuiModelDetached();
+	virtual void UpdateModel() const;
 
 private:
 	I_MULTIREF(imod::IModelEditor, m_editorsCompPtr);

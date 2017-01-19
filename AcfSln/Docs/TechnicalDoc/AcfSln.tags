@@ -5627,13 +5627,6 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
-      <anchor>a3ce93887c488ff8b37ccf551f006a7a9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
       <anchor>a2b83e06936dd3db2897b811145a28845</anchor>
@@ -5673,6 +5666,13 @@
       <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
       <anchor>ad26148fa267f779cd51440e163b0254a</anchor>
       <arglist>(QWidget *filterGui)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</anchorfile>
+      <anchor>a3ce93887c488ff8b37ccf551f006a7a9</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -6854,13 +6854,6 @@
       <anchor>af1d68ea1929b420368c69e1e0958335a</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classicalibgui_1_1_c_perspective_calib_editor_comp.html</anchorfile>
-      <anchor>a8daaeb7348e736b1059afd4799ff1014</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_CalibrateButton_clicked</name>
@@ -6874,6 +6867,13 @@
       <anchorfile>classicalibgui_1_1_c_perspective_calib_editor_comp.html</anchorfile>
       <anchor>ab850547745f170c41fce227cbf871ccd</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classicalibgui_1_1_c_perspective_calib_editor_comp.html</anchorfile>
+      <anchor>a8daaeb7348e736b1059afd4799ff1014</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -6949,13 +6949,6 @@
       <anchor>a23c1ac37d9197e2bd2249d21f0cb0ef1</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
-      <anchor>aac9b71c76e0b9ace998625220f02220f</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_CalibrateButton_clicked</name>
@@ -6969,6 +6962,13 @@
       <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
       <anchor>abd31f3dadd30d17f7edb8d33062db21e</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</anchorfile>
+      <anchor>aac9b71c76e0b9ace998625220f02220f</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -9035,17 +9035,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
-      <anchor>aaf01f0208fb5cbf3e7cf065829cd129a</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
       <anchor>a828f3322b626ef3c895942549a4f734f</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classicmpstr_1_1_c_component_note_editor_comp.html</anchorfile>
+      <anchor>aaf01f0208fb5cbf3e7cf065829cd129a</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -15607,27 +15607,6 @@
       <anchor>a2413c83747d0b2d44deb803f2e3ad1a4</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a610352078e028f8879b8f9b4aa41670b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>ad2c10cb6427a46decb930c6752042ce4</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>a40f3ae2c9638d467875459f218e0eeaf</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_FilesCheck_toggled</name>
@@ -15747,6 +15726,27 @@
       <anchor>af93a0eae6cad3c209fd45575b8ba16e9</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a610352078e028f8879b8f9b4aa41670b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>ad2c10cb6427a46decb930c6752042ce4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
+      <anchor>a40f3ae2c9638d467875459f218e0eeaf</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ihotfgui::CFileNamingParamsGuiComp</name>
@@ -15759,19 +15759,19 @@
       <anchor>abac98ae9a461ea37c03700fbed869f37</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
-      <anchor>acb87ef78aad519ecb4e2b3b60413c1f9</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnModelChanged</name>
       <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
       <anchor>a446d85dddac3e7f4d6c2a8971981d0c4</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classihotfgui_1_1_c_file_naming_params_gui_comp.html</anchorfile>
+      <anchor>acb87ef78aad519ecb4e2b3b60413c1f9</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -27056,40 +27056,40 @@
       <anchor>af89666c177e115a5e908be66fc506079</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>a59f4c0d992720d17c76ea273613c70ab</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>a921df935784531c58e3e114a3a4f0d49</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>afb2bc2f8617f5818f36258a2bc0adfbc</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
-      <anchor>a4de1e6df00d310222b60b095ae465b88</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>OnParamsChanged</name>
       <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
       <anchor>ab102c5e5e8a623af668af7d9b1b799e7</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a59f4c0d992720d17c76ea273613c70ab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a921df935784531c58e3e114a3a4f0d49</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>a4de1e6df00d310222b60b095ae465b88</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtcam_1_1_c_exposure_params_gui_comp.html</anchorfile>
+      <anchor>afb2bc2f8617f5818f36258a2bc0adfbc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27338,17 +27338,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
-      <anchor>a51456bb8bf4f792b70306118444316d2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
       <anchor>af7a5ebb53f6fb5a3cd7545c1b7d30c15</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtcam_1_1_c_scale_calibration_editor_comp.html</anchorfile>
+      <anchor>a51456bb8bf4f792b70306118444316d2</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28347,20 +28347,6 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a66aa60cd6d6869f9f3478b4dafa34e17</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateEditor</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ad7f0740a13a02899e137318ce2bf2e7b</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
@@ -28478,6 +28464,20 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>aeac2e84c62cd29921303541e4b4acf41</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a66aa60cd6d6869f9f3478b4dafa34e17</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a00da780da6db945206a9173d33b19c5d</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28604,13 +28604,6 @@
       <anchor>a084b3142033a6867421eac5e78836464</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
-      <anchor>aa67dc317f6424c63d853f2fd48fb2794</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_ThresholdSB_valueChanged</name>
@@ -28631,6 +28624,13 @@
       <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
       <anchor>ae7517f929bb0035783307753d57fd4d4</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_caliper_params_gui_comp.html</anchorfile>
+      <anchor>aa67dc317f6424c63d853f2fd48fb2794</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28657,13 +28657,6 @@
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
       <anchor>adbbbed76288d9871b050a2727fa338c0</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
-      <anchor>afe838b9e0e22dbe86cadc4505ae1f7fb</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -28692,6 +28685,13 @@
       <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
       <anchor>ac3a823b15cf3464be10108e075d9de70</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</anchorfile>
+      <anchor>afe838b9e0e22dbe86cadc4505ae1f7fb</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28773,13 +28773,6 @@
       <anchor>a4bd534d8c62466d81c0a682226c4af21</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
-      <anchor>af17dc6936bad4f472e6041bdca4935fc</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_KernelWidthSpin_valueChanged</name>
@@ -28800,6 +28793,13 @@
       <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
       <anchor>a96ad30402a8b760d41707d790b5184d2</anchor>
       <arglist>(QTableWidgetItem *item)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</anchorfile>
+      <anchor>af17dc6936bad4f472e6041bdca4935fc</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28826,13 +28826,6 @@
       <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
       <anchor>a9e11ab36a0eda73aec80a4149321ef25</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
-      <anchor>a646dfb07f30e7411e2f7c2f10fbeb44f</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -28864,6 +28857,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a646dfb07f30e7411e2f7c2f10fbeb44f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
       <anchor>a213a4a6d9675631abd3f415c73662c3c</anchor>
@@ -28881,19 +28881,19 @@
       <anchor>a4784c345d97d4287469aeea32df9b474</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
-      <anchor>a0a16c003f9a5a5e7c7fb47ee3bff6b4e</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_InterpolationModeCombo_currentIndexChanged</name>
       <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
       <anchor>af9147e27b60560c700f22a282889e3b9</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</anchorfile>
+      <anchor>a0a16c003f9a5a5e7c7fb47ee3bff6b4e</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -29931,27 +29931,6 @@
       <anchor>adbc80b0da300f07523bd4283c360b22e</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a940f409ec2d5182ebc44d18d676ad8f7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a218a29d983c4de456221a29366dda07b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a4f438f3020d29784b1221a7fc09357e1</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
@@ -29968,10 +29947,31 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>a940f409ec2d5182ebc44d18d676ad8f7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
       <anchor>ae27be25e01b6709a79cd285ff9e182aa</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>a218a29d983c4de456221a29366dda07b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
+      <anchor>a4f438f3020d29784b1221a7fc09357e1</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -30479,13 +30479,6 @@
       <anchor>ae8fff1099d54e962287cada3feeb5d0a</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
-      <anchor>a43d3bc3c9c5be222fe304fd162c17a51</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_DelayTimeSB_valueChanged</name>
@@ -30513,6 +30506,13 @@
       <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
       <anchor>ab8a678a79285ef016afee932b1fcaeff</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtsig_1_1_c_pulse_params_gui_comp.html</anchorfile>
+      <anchor>a43d3bc3c9c5be222fe304fd162c17a51</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -30764,13 +30764,6 @@
       <anchor>a550985c96eb93d1e586f4b753d65803d</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
-      <anchor>af5362448b52ea04403a71905262ce911</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_NoTriggerRB_toggled</name>
@@ -30826,6 +30819,13 @@
       <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
       <anchor>ac2f7bf66d60e925792fee35f8be7d14e</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqtsig_1_1_c_trigger_params_gui_comp.html</anchorfile>
+      <anchor>af5362448b52ea04403a71905262ce911</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -32548,19 +32548,19 @@
       <anchor>aa1cdca8d6dfd0eedd613d1a9cca6b819</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
-      <anchor>a56164f1aba89911a7fdf3fc214bf03d9</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>on_OptionsList_itemSelectionChanged</name>
       <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
       <anchor>a30a17cd10f3dd2fceb6ba0a80aec2821</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</anchorfile>
+      <anchor>a56164f1aba89911a7fdf3fc214bf03d9</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

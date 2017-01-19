@@ -50,25 +50,6 @@ COptionsManagerGuiComp::COptionsManagerGuiComp()
 }
 
 
-// reimplemented (imod::IModelEditor)
-
-void COptionsManagerGuiComp::UpdateModel() const
-{
-	Q_ASSERT(IsGuiCreated());
-
-	if (m_isEditingFlag){
-		return;
-	}
-
-	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObservedObject());
-	if (selectionPtr != NULL){
-		selectionPtr->SetSelectedOptionIndex(Selector->currentIndex());
-	}
-}
-
-
-// protected methods
-
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void COptionsManagerGuiComp::OnGuiModelAttached()
@@ -107,6 +88,21 @@ void COptionsManagerGuiComp::OnGuiModelDetached()
 	m_selectorLabelPtr.Reset();
 
 	BaseClass::OnGuiModelDetached();
+}
+
+
+void COptionsManagerGuiComp::UpdateModel() const
+{
+	Q_ASSERT(IsGuiCreated());
+
+	if (m_isEditingFlag){
+		return;
+	}
+
+	iprm::ISelectionParam* selectionPtr = CompCastPtr<iprm::ISelectionParam>(GetObservedObject());
+	if (selectionPtr != NULL){
+		selectionPtr->SetSelectedOptionIndex(Selector->currentIndex());
+	}
 }
 
 
