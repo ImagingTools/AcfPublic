@@ -68,10 +68,10 @@ protected:
 	// reimplemented (imod::CSingleModelObserverBase)
 	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
-private:
-	void EnsurePreviewGenerated();
+protected:
+	virtual void EnsurePreviewGenerated();
 
-private:
+protected:
 	I_FACT(iimg::IBitmap, m_bitmapFactoryCompPtr);
 	I_REF(iproc::IProcessor, m_renderingProcessorCompPtr);
 	I_ATTR(int, m_imageSizeAttrPtr);
