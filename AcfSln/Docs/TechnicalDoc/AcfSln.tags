@@ -12635,6 +12635,13 @@
       <anchor>a7f1f07914007f61c326334ce8e1b11bd</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsurePreviewGenerated</name>
+      <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
+      <anchor>aa3d3e444d2603916a6275e4abcc7acd6</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="namespace">
     <name>iedge</name>

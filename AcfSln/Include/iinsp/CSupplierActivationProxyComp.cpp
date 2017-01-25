@@ -35,7 +35,7 @@ namespace iinsp
 // public methods
 
 CSupplierActivationProxyComp::CSupplierActivationProxyComp()
-	:m_updateBridge(this)
+	:m_updateBridge(this, imod::CModelUpdateBridge::UF_SOURCE)
 {
 }
 
@@ -116,7 +116,7 @@ void CSupplierActivationProxyComp::ClearWorkResults()
 
 const ilog::IMessageContainer* CSupplierActivationProxyComp::GetWorkMessages(int containerType) const
 {
-	if (m_slaveSupplierCompPtr.IsValid()){
+	if (m_slaveSupplierCompPtr.IsValid() && IsSupplierEnabled()){
 		return m_slaveSupplierCompPtr->GetWorkMessages(containerType);
 	}
 
@@ -144,6 +144,10 @@ void CSupplierActivationProxyComp::OnComponentCreated()
 
 	if (m_supplierEnabledParamModelCompPtr.IsValid()){
 		m_supplierEnabledParamModelCompPtr->AttachObserver(&m_updateBridge);
+	}
+
+	if (m_slaveSupplierModelCompPtr.IsValid()){
+		m_slaveSupplierModelCompPtr->AttachObserver(&m_updateBridge);
 	}
 }
 

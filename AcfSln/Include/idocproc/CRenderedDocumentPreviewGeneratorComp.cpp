@@ -87,7 +87,7 @@ void CRenderedDocumentPreviewGeneratorComp::OnUpdate(const istd::IChangeable::Ch
 }
 
 
-// private methods
+// protected methods
 
 void CRenderedDocumentPreviewGeneratorComp::EnsurePreviewGenerated()
 {
