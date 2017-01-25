@@ -1399,7 +1399,7 @@
     <includes id="_c_class_info_8h" name="CClassInfo.h" local="no" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="no" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_i_registry_8h" name="IRegistry.h" local="no" imported="no">icomp/IRegistry.h</includes>
-    <includes id="_i_component_context_8h" name="IComponentContext.h" local="no" imported="no">icomp/IComponentContext.h</includes>
+    <includes id="_c_composite_component_context_8h" name="CCompositeComponentContext.h" local="no" imported="no">icomp/CCompositeComponentContext.h</includes>
     <includes id="_c_interface_manip_base_8h" name="CInterfaceManipBase.h" local="no" imported="no">icomp/CInterfaceManipBase.h</includes>
     <class kind="class">icomp::CCompositeComponent</class>
     <namespace>icomp</namespace>

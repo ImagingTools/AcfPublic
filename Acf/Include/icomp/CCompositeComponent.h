@@ -33,7 +33,7 @@
 
 #include <icomp/ICompositeComponent.h>
 #include <icomp/IRegistry.h>
-#include <icomp/IComponentContext.h>
+#include <icomp/CCompositeComponentContext.h>
 #include <icomp/CInterfaceManipBase.h>
 
 
@@ -125,7 +125,7 @@ private:
 
 	mutable ComponentMap m_componentMap;
 
-	const IComponentContext* m_contextPtr;
+	const CCompositeComponentContext* m_contextPtr;
 	const ICompositeComponent* m_parentPtr;
 	bool m_isParentOwner;
 
