@@ -235,23 +235,23 @@ static void DoFilter(
 				const PixelComponentType* inputLinePtr = (PixelComponentType*)inputImage.GetLinePtr(y);
 				PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
-				//for (int x = regionLeft; x < regionLeft + kernelHalfWidth; ++x){
-				//	PixelComponentType outputValue = OutputInitValue;
+				for (int x = regionLeft; x < regionLeft + kernelHalfWidth; ++x){
+					PixelComponentType outputValue = OutputInitValue;
 
-				//	int outputComponentPosition = x * componentsCount + componentIndex;
+					int outputComponentPosition = x * componentsCount + componentIndex;
 
-				//	for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
-				//		int pixelIndex = x + kernelX;
+					for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
+						int pixelIndex = x + kernelX;
 
-				//		if (pixelIndex >= regionLeft && pixelIndex < inputImageWidth){
-				//			int componentPosition = pixelIndex * componentsCount + componentIndex;
+						if (pixelIndex >= regionLeft && pixelIndex < inputImageWidth){
+							int componentPosition = pixelIndex * componentsCount + componentIndex;
 
-				//			CalculateOutputValue(inputLinePtr[componentPosition], outputValue);
-				//		}
-				//	}
+							CalculateOutputValue(inputLinePtr[componentPosition], outputValue);
+						}
+					}
 
-				//	*(outputLinePtr + outputComponentPosition) = outputValue;
-				//}
+					*(outputLinePtr + outputComponentPosition) = outputValue;
+				}
 
 				for (int x = regionLeft; x < regionRight; ++x){
 					PixelComponentType outputValue = OutputInitValue;
@@ -266,22 +266,22 @@ static void DoFilter(
 					*(outputLinePtr + outputComponentPosition) = outputValue;
 				}
 
-				//for (int x = regionRight - kernelHalfWidth; x < regionRight; ++x){
-				//	PixelComponentType outputValue = OutputInitValue;
-				//	int outputComponentPosition = x * componentsCount + componentIndex;
+				for (int x = regionRight - kernelHalfWidth; x < regionRight; ++x){
+					PixelComponentType outputValue = OutputInitValue;
+					int outputComponentPosition = x * componentsCount + componentIndex;
 
-				//	for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
-				//		int pixelIndex = x + kernelX;
+					for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
+						int pixelIndex = x + kernelX;
 
-				//		if (pixelIndex >= 0 && pixelIndex < regionRight){
-				//			int componentPosition = pixelIndex * componentsCount + componentIndex;
+						if (pixelIndex >= 0 && pixelIndex < regionRight){
+							int componentPosition = pixelIndex * componentsCount + componentIndex;
 
-				//			CalculateOutputValue(inputLinePtr[componentPosition], outputValue);
-				//		}
-				//	}
+							CalculateOutputValue(inputLinePtr[componentPosition], outputValue);
+						}
+					}
 
-				//	*(outputLinePtr + outputComponentPosition) = outputValue;
-				//}
+					*(outputLinePtr + outputComponentPosition) = outputValue;
+				}
 			}
 		} // componentIndex
 
