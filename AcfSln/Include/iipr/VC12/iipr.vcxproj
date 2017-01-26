@@ -120,6 +120,7 @@
     <ClCompile Include="..\CBitmapJoinerSupplierComp.cpp" />
     <ClCompile Include="..\CBitmapOperations.cpp" />
     <ClCompile Include="..\CBitmapProviderCacheComp.cpp" />
+    <ClCompile Include="..\CCalibratedImageCropProcessorComp.cpp" />
     <ClCompile Include="..\CCaliperDistanceFeature.cpp" />
     <ClCompile Include="..\CCaliperFeature.cpp" />
     <ClCompile Include="..\CCaliperParams.cpp" />
@@ -191,6 +192,7 @@
     <ClInclude Include="..\CBitmapJoinerSupplierComp.h" />
     <ClInclude Include="..\CBitmapOperations.h" />
     <ClInclude Include="..\CBitmapProviderCacheComp.h" />
+    <ClInclude Include="..\CCalibratedImageCropProcessorComp.h" />
     <ClInclude Include="..\CCaliperDistanceFeature.h" />
     <ClInclude Include="..\CCaliperFeature.h" />
     <ClInclude Include="..\CCaliperParams.h" />

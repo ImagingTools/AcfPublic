@@ -1251,6 +1251,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CCalibratedImageCropProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_calibrated_image_crop_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <class kind="class">iipr::CCalibratedImageCropProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCaliperDistanceFeature.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_distance_feature_8h</filename>
@@ -12621,6 +12629,13 @@
       <anchor>a3bd6bf4978b97882fa1dfd304678c467</anchor>
       <arglist>(int bitmapIndex) const </arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TPointerVector&lt; iimg::IBitmap &gt;</type>
+      <name>PreviewBitmaps</name>
+      <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
+      <anchor>ac1bc21a3b0f8e8635fafc832ffda8daa</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
@@ -12641,6 +12656,13 @@
       <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
       <anchor>aa3d3e444d2603916a6275e4abcc7acd6</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>PreviewBitmaps</type>
+      <name>m_previewBitmaps</name>
+      <anchorfile>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</anchorfile>
+      <anchor>afad9cc1b11706858671f68c3f4705889</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -16781,6 +16803,7 @@
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
+    <class kind="class">iipr::CCalibratedImageCropProcessorComp</class>
     <class kind="class">iipr::CCaliperDistanceFeature</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
@@ -17116,6 +17139,32 @@
       <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
       <anchor>aa5b3aef85624cb3f666328f1a9c3942d</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCalibratedImageCropProcessorComp</name>
+    <filename>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</anchorfile>
+      <anchor>a11f095ae2b7dda74a7849766210a4323</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</anchorfile>
+      <anchor>aa99c0cb94a4711afdcbb6457f559b27b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CropImage</name>
+      <anchorfile>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</anchorfile>
+      <anchor>a6574d68f323f704a5eb7abc682b8f39e</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::CRectangle &amp;sourceAoi, iimg::IBitmap &amp;outputBitmap)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20594,6 +20643,41 @@
       <name>PM_LAST</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a60bbba19b0f1e9df62713f5cb8fac20a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>KernelType</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a02c5a832f8dc1b371b4efe653d865e9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>KT_FIRST</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a02c5a832f8dc1b371b4efe653d865e9ba5049ba7fd60c97dd72bf7d205d1d9c80</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>KT_RECT</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a02c5a832f8dc1b371b4efe653d865e9baa60a036e73280e995dd02b8a49e40b22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>KT_CIRC</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a02c5a832f8dc1b371b4efe653d865e9baeb1c938ed6515991174840cef71105fa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>KT_LAST</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a02c5a832f8dc1b371b4efe653d865e9bacea8ae777dfd8983461e1c2675ee8410</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -32809,6 +32893,7 @@
     <file>CBitmapJoinerSupplierComp.h</file>
     <file>CBitmapOperations.h</file>
     <file>CBitmapProviderCacheComp.h</file>
+    <file>CCalibratedImageCropProcessorComp.h</file>
     <file>CCaliperDistanceFeature.h</file>
     <file>CCaliperFeature.h</file>
     <file>CCaliperParams.h</file>

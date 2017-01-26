@@ -43,22 +43,6 @@
 namespace iipr
 {
 
-QString ProcessingModeName(int i){
-
-	switch (i){
-	case CMorphologicalProcessorComp::PM_EROSION:
-		return QString("Erosion");
-	case CMorphologicalProcessorComp::PM_DILATATION:
-		return QString("Dilation");
-	case CMorphologicalProcessorComp::PM_OPENING:
-		return QString("Opening");
-	case CMorphologicalProcessorComp::PM_CLOSING:
-		return QString("Closing");
-	default:
-		return QString("Erosion");
-	}
-}
-
 
 template <typename PixelComponentType>
 inline void MinFunctor(PixelComponentType inputValue, PixelComponentType& outputValue)
@@ -73,22 +57,6 @@ inline void MaxFunctor(PixelComponentType inputValue, PixelComponentType& output
 {
 	if (inputValue > outputValue){
 		outputValue = inputValue;
-	}
-}
-
-
-template <typename PixelComponentType>
-inline PixelComponentType BruteCalculateOutputValue(QList<PixelComponentType>& values, CMorphologicalProcessorComp::ProcessingMode operationType)
-{
-	qSort(values.begin(), values.end());
-
-	switch (operationType){
-		case CMorphologicalProcessorComp::PM_EROSION:
-			return values.first();
-		case CMorphologicalProcessorComp::PM_DILATATION:
-			return values.last();
-		default:
-			return 0;
 	}
 }
 
@@ -235,12 +203,12 @@ static void DoFilter(
 				const PixelComponentType* inputLinePtr = (PixelComponentType*)inputImage.GetLinePtr(y);
 				PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
-				for (int x = regionLeft; x < regionLeft + kernelHalfWidth; ++x){
+				for(int x = regionLeft; x < regionLeft + kernelHalfWidth; ++x){
 					PixelComponentType outputValue = OutputInitValue;
 
 					int outputComponentPosition = x * componentsCount + componentIndex;
 
-					for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
+					for(int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
 						int pixelIndex = x + kernelX;
 
 						if (pixelIndex >= regionLeft && pixelIndex < inputImageWidth){
@@ -253,11 +221,11 @@ static void DoFilter(
 					*(outputLinePtr + outputComponentPosition) = outputValue;
 				}
 
-				for (int x = regionLeft; x < regionRight; ++x){
+				for(int x = regionLeft + kernelHalfWidth; x < regionRight - kernelHalfWidth; ++x){
 					PixelComponentType outputValue = OutputInitValue;
 					int outputComponentPosition = x * componentsCount + componentIndex;
 
-					for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
+					for(int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
 						int pixelIndex = (x + kernelX) * componentsCount + componentIndex;
 
 						CalculateOutputValue(inputLinePtr[pixelIndex], outputValue);
@@ -266,11 +234,11 @@ static void DoFilter(
 					*(outputLinePtr + outputComponentPosition) = outputValue;
 				}
 
-				for (int x = regionRight - kernelHalfWidth; x < regionRight; ++x){
+				for(int x = regionRight - kernelHalfWidth; x < regionRight; ++x){
 					PixelComponentType outputValue = OutputInitValue;
 					int outputComponentPosition = x * componentsCount + componentIndex;
 
-					for (int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
+					for(int kernelX = -kernelHalfWidth; kernelX <= kernelHalfWidth; ++kernelX){
 						int pixelIndex = x + kernelX;
 
 						if (pixelIndex >= 0 && pixelIndex < regionRight){
@@ -298,12 +266,12 @@ static void DoFilter(
 				const PixelComponentType* inputLinePtr = (PixelComponentType*)tempBitmap.GetLinePtr(y);
 				PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
-				for (int x = regionLeft; x < regionRight; ++x){
+				for(int x = regionLeft; x < regionRight; ++x){
 					PixelComponentType outputValue = OutputInitValue;
 
 					int componentPosition = x * componentsCount + componentIndex;
 
-					for (int kernelY = -kernelHalfHeight; kernelY <= kernelHalfHeight; ++kernelY){
+					for(int kernelY = -kernelHalfHeight; kernelY <= kernelHalfHeight; ++kernelY){
 						int imageLineIndex = y + kernelY;
 
 						if (imageLineIndex >= regionTop && imageLineIndex < inputImageHeight){
@@ -317,19 +285,19 @@ static void DoFilter(
 				}
 			}
 
-			for (int y = regionTop + kernelHalfHeight; y < regionBottom - kernelHalfHeight; ++y) {
+			for (int y = regionTop + kernelHalfHeight; y < regionBottom - kernelHalfHeight; ++y){
 				Q_ASSERT(y >= 0);
 				Q_ASSERT(y < inputImageHeight);
 
 				const PixelComponentType* inputLinePtr = (PixelComponentType*)tempBitmap.GetLinePtr(y);
 				PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
-				for (int x = regionLeft; x < regionRight; ++x) {
+				for(int x = regionLeft; x < regionRight; ++x){
 					PixelComponentType outputValue = OutputInitValue;
 
 					int componentPosition = x * componentsCount + componentIndex;
 
-					for (int kernelY = -kernelHalfHeight; kernelY <= kernelHalfHeight; ++kernelY) {
+					for(int kernelY = -kernelHalfHeight; kernelY <= kernelHalfHeight; ++kernelY){
 						PixelComponentType value = inputLinePtr[componentPosition + kernelY * inputLineDifference];
 
 						CalculateOutputValue(value, outputValue);
@@ -339,21 +307,21 @@ static void DoFilter(
 				}
 			}
 
-			for (int y = regionBottom - kernelHalfHeight; y < regionBottom; ++y) {
+			for (int y = regionBottom - kernelHalfHeight; y < regionBottom; ++y){
 				Q_ASSERT(y >= 0);
 				Q_ASSERT(y < inputImageHeight);
 
 				const PixelComponentType* inputLinePtr = (PixelComponentType*)tempBitmap.GetLinePtr(y);
 				PixelComponentType* outputLinePtr = (PixelComponentType*)outputImage.GetLinePtr(y);
 
-				for (int x = regionLeft; x < regionRight; ++x) {
+				for(int x = regionLeft; x < regionRight; ++x){
 					PixelComponentType outputValue = OutputInitValue;
 					int componentPosition = x * componentsCount + componentIndex;
 
-					for (int kernelY = -kernelHalfHeight; kernelY <= kernelHalfHeight; ++kernelY) {
+					for(int kernelY = -kernelHalfHeight; kernelY <= kernelHalfHeight; ++kernelY){
 						int imageLineIndex = y + kernelY;
 
-						if (imageLineIndex >= 0 && imageLineIndex < regionBottom) {
+						if (imageLineIndex >= 0 && imageLineIndex < regionBottom){
 							PixelComponentType value = inputLinePtr[componentPosition + kernelY * inputLineDifference];
 
 							CalculateOutputValue(value, outputValue);
@@ -541,9 +509,10 @@ void CMorphologicalProcessorComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	for (int i = PM_FIRST; i < PM_LAST + 1; ++i){
-		m_processingModes.InsertOption(ProcessingModeName(i), QByteArray::number(i), ProcessingModeName(i));
-	}
+	m_processingModes.InsertOption(QObject::tr("Erosion"), "Erosion");
+	m_processingModes.InsertOption(QObject::tr("Dilation"), "Dilation");
+	m_processingModes.InsertOption(QObject::tr("Opening"), "Opening");
+	m_processingModes.InsertOption(QObject::tr("Closing"), "Closing");
 }
 
 
