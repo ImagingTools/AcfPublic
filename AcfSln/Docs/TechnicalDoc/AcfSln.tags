@@ -1251,14 +1251,6 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CCalibratedImageCropProcessorComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_calibrated_image_crop_processor_comp_8h</filename>
-    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
-    <class kind="class">iipr::CCalibratedImageCropProcessorComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>CCaliperDistanceFeature.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_caliper_distance_feature_8h</filename>
@@ -1535,6 +1527,14 @@
     <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
     <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageCopyProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CImageCropDecalibrateProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_crop_decalibrate_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <class kind="class">iipr::CImageCropDecalibrateProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -16803,7 +16803,6 @@
     <class kind="class">iipr::CBitmapJoinerSupplierComp</class>
     <class kind="class">iipr::CBitmapOperations</class>
     <class kind="class">iipr::CBitmapProviderCacheComp</class>
-    <class kind="class">iipr::CCalibratedImageCropProcessorComp</class>
     <class kind="class">iipr::CCaliperDistanceFeature</class>
     <class kind="class">iipr::CCaliperFeature</class>
     <class kind="class">iipr::CCaliperParams</class>
@@ -16832,6 +16831,7 @@
     <class kind="class">iipr::CHoughSpace2d</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CImageCopyProcessorComp</class>
+    <class kind="class">iipr::CImageCropDecalibrateProcessorComp</class>
     <class kind="class">iipr::CImageCropProcessorComp</class>
     <class kind="class">iipr::CImageFlipProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
@@ -17139,32 +17139,6 @@
       <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
       <anchor>aa5b3aef85624cb3f666328f1a9c3942d</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CCalibratedImageCropProcessorComp</name>
-    <filename>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
-    <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</anchorfile>
-      <anchor>a11f095ae2b7dda74a7849766210a4323</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</anchorfile>
-      <anchor>aa99c0cb94a4711afdcbb6457f559b27b</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>CropImage</name>
-      <anchorfile>classiipr_1_1_c_calibrated_image_crop_processor_comp.html</anchorfile>
-      <anchor>a6574d68f323f704a5eb7abc682b8f39e</anchor>
-      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::CRectangle &amp;sourceAoi, iimg::IBitmap &amp;outputBitmap)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19756,6 +19730,32 @@
       <anchorfile>classiipr_1_1_c_image_copy_processor_comp.html</anchorfile>
       <anchor>a483da8ccc116fed768f3cefb3706637e</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageCropDecalibrateProcessorComp</name>
+    <filename>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a44b668fcd8de3e667177159850c6fbcc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a71ab4711d62c04fa9bf8a08f22629445</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CropImage</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>aad0881842632a062a92ecf4c7bc3f75d</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::CRectangle &amp;sourceAoi, iimg::IBitmap &amp;outputBitmap)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32893,7 +32893,6 @@
     <file>CBitmapJoinerSupplierComp.h</file>
     <file>CBitmapOperations.h</file>
     <file>CBitmapProviderCacheComp.h</file>
-    <file>CCalibratedImageCropProcessorComp.h</file>
     <file>CCaliperDistanceFeature.h</file>
     <file>CCaliperFeature.h</file>
     <file>CCaliperParams.h</file>
@@ -32922,6 +32921,7 @@
     <file>CHoughSpace2d.h</file>
     <file>CImageBinarizeProcessorComp.h</file>
     <file>CImageCopyProcessorComp.h</file>
+    <file>CImageCropDecalibrateProcessorComp.h</file>
     <file>CImageCropProcessorComp.h</file>
     <file>CImageFlipProcessorComp.h</file>
     <file>CImageHistogramProcessorComp.h</file>

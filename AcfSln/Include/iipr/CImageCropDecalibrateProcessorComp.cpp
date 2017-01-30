@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include "iipr/CCalibratedImageCropProcessorComp.h"
+#include "iipr/CImageCropDecalibrateProcessorComp.h"
 
 
 // ACF includes
@@ -34,7 +34,7 @@ namespace iipr
 {
 
 
-bool CCalibratedImageCropProcessorComp::CropImage(
+bool CImageCropDecalibrateProcessorComp::CropImage(
 			const iimg::IBitmap& inputBitmap,
 			const i2d::CRectangle& sourceAoi,
 			iimg::IBitmap& outputBitmap)
@@ -149,7 +149,7 @@ bool CCalibratedImageCropProcessorComp::CropImage(
 
 // reimplemented (iproc::IProcessor)
 
-int CCalibratedImageCropProcessorComp::DoProcessing(
+int CImageCropDecalibrateProcessorComp::DoProcessing(
 			const iprm::IParamsSet* paramsPtr,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
