@@ -64,7 +64,13 @@ bool CSupplierActivationProxyComp::IsSupplierEnabled() const
 
 bool CSupplierActivationProxyComp::IsStateFixed() const
 {
-	return *m_isStateFixedAttrPtr;
+	bool isStateFixed = *m_isStateFixedAttrPtr;
+
+	if (m_supplierEnabledParamCompPtr.IsValid()){
+		isStateFixed = isStateFixed || !m_supplierEnabledParamCompPtr->IsEnablingAllowed();
+	}
+
+	return isStateFixed;
 }
 
 
@@ -72,7 +78,7 @@ bool CSupplierActivationProxyComp::IsStateFixed() const
 
 int CSupplierActivationProxyComp::GetWorkStatus() const
 {
-	int retVal = IsSupplierEnabled() ? WS_OK : WS_INVALID;
+	int retVal = WS_OK;
 
 	if (m_slaveSupplierCompPtr.IsValid() && IsSupplierEnabled()){
 		retVal = m_slaveSupplierCompPtr->GetWorkStatus();
