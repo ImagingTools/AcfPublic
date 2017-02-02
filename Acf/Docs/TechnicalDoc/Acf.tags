@@ -11032,6 +11032,13 @@
       <arglist>(const CLine2d &amp;firstDiagonal, const CLine2d &amp;secondDiagonal)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CQuadrangle</name>
+      <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
+      <anchor>afd98366e4fef688427ca8a06f335a09b</anchor>
+      <arglist>(const CRectangle &amp;rectangle)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>operator==</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>

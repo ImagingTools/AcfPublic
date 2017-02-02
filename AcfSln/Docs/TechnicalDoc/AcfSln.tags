@@ -1533,6 +1533,7 @@
     <name>CImageCropDecalibrateProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_crop_decalibrate_processor_comp_8h</filename>
+    <includes id="_c_affine_calibration2d_8h" name="CAffineCalibration2d.h" local="no" imported="no">icalib/CAffineCalibration2d.h</includes>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageCropDecalibrateProcessorComp</class>
     <namespace>iipr</namespace>
@@ -19754,8 +19755,22 @@
       <type>static bool</type>
       <name>CropImage</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
-      <anchor>aad0881842632a062a92ecf4c7bc3f75d</anchor>
-      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::CRectangle &amp;sourceAoi, iimg::IBitmap &amp;outputBitmap)</arglist>
+      <anchor>a471fb933421184614891e3f729b15507</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CalcCalibration</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>ae6a65361299d8777341345c643134184</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, icalib::CAffineCalibration2d &amp;outputCalib)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>CalcOutputImageSize</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>ab3a527900b339c0008fa30092b539dba</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, istd::CIndex2d &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22032,26 +22047,33 @@
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iimg::IBitmap *</type>
+      <name>GetBitmap</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a4793eb6519151884fa07dee2021e624e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearWorkResults</name>
+      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
+      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>EnsureBitmapCreated</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
       <anchor>adad5c951f9d5be363e0c717ee2f55a4e</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual iimg::IBitmap *</type>
-      <name>CreateBitmap</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
-      <anchor>a3c557c9c59d62c9f8c4d4e0ef5ac7b08</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual const iimg::IBitmap *</type>
-      <name>GetBitmap</name>
-      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
-      <anchor>a4793eb6519151884fa07dee2021e624e</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -22067,26 +22089,19 @@
       <anchor>a159fab163e419f801fced883ab57facf</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual iimg::IBitmap *</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a3c557c9c59d62c9f8c4d4e0ef5ac7b08</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>const istd::TDelPtr&lt; iimg::IBitmap &gt; *</type>
       <name>GetWorkProduct</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>afc5d3aff1a564ac41ffa65014c17d05e</anchor>
       <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearWorkResults</name>
-      <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
