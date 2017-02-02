@@ -69873,11 +69873,25 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>istd::CIndex2d</type>
+      <type>i2d::CVector2d</type>
       <name>m_corners</name>
       <anchorfile>classiview_1_1_c_rectangle_shape.html</anchorfile>
-      <anchor>a88673cf259873a20b9fc6ae6fc881755</anchor>
-      <arglist>[2][2]</arglist>
+      <anchor>afb2b62b53cf6491ae252f9cd2a83f1c8</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>m_ctrlsLeft</name>
+      <anchorfile>classiview_1_1_c_rectangle_shape.html</anchorfile>
+      <anchor>a9767bb78a452ee7871b20004cceca3c1</anchor>
+      <arglist>[4]</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>m_ctrlsRight</name>
+      <anchorfile>classiview_1_1_c_rectangle_shape.html</anchorfile>
+      <anchor>ad58657fb0a0dab03c4508b064aa15baf</anchor>
+      <arglist>[4]</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
