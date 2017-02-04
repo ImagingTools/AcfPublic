@@ -101,6 +101,7 @@ public:
 
 	// reimplemented (iinsp::ISupplier)
 	virtual int GetWorkStatus() const;
+	virtual imod::IModel* GetWorkStatusModel() const;
 	virtual void InvalidateSupplier();
 	virtual void EnsureWorkInitialized();
 	virtual void EnsureWorkFinished();
@@ -206,7 +207,6 @@ protected:
 
 	istd::IChangeable::ChangeSet m_supplierResultsChangeSet;
 	typedef istd::TDelPtr<istd::CChangeNotifier> NotifierPtr;
-	NotifierPtr m_productChangeNotifierPtr;
 
 	typedef QMap<iinsp::ISupplier*, NotifierPtr> SubtaskNotifiers;
 	SubtaskNotifiers m_subtaskNotifiers;

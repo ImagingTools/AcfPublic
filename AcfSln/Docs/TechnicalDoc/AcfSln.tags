@@ -1163,6 +1163,7 @@
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <class kind="class">iinsp::CSupplierCompBase</class>
     <class kind="class">iinsp::CSupplierCompBase::Timer</class>
+    <class kind="class">iinsp::CSupplierCompBase::Status</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -2757,6 +2758,7 @@
     <includes id="iqtinsp_8h" name="iqtinsp.h" local="no" imported="no">iqtinsp/iqtinsp.h</includes>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
+    <class kind="class">iqtinsp::TSupplierGuiCompBase::StatusObserver</class>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
@@ -7619,6 +7621,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual imod::IModel *</type>
+      <name>GetWorkStatusModel</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a80ceefc2ce5d88ddc4ec7268f961432d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
@@ -7730,6 +7739,13 @@
       <anchor>aa0e46038cab3a1fffb4b8f4f62ea46e7</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>imod::TModelWrap&lt; Status &gt;</type>
+      <name>StatusModel</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>adc4b1013177f4ca4405dff92141e89d0</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
       <name>m_productPtr</name>
@@ -7738,17 +7754,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>int</type>
+      <type>StatusModel</type>
       <name>m_workStatus</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a2856802443d8313ae09a174ed7efb1cf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; istd::CChangeNotifier &gt;</type>
-      <name>m_productChangeNotifierPtr</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a483afc5fe1653a73e52c7596a9a3dfe0</anchor>
+      <anchor>a989b1794443d4cd7bc7e23deaf82754b</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -16136,6 +16145,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual imod::IModel *</type>
+      <name>GetWorkStatusModel</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a5d4d2659eeacf34e0d1e8d299de527c1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
@@ -16346,13 +16362,6 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>NotifierPtr</type>
-      <name>m_productChangeNotifierPtr</name>
-      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
-      <anchor>a4c0c239c027efff8b0b8a159f7b7fb20</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
       <type>SubtaskNotifiers</type>
       <name>m_subtaskNotifiers</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
@@ -16524,6 +16533,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual imod::IModel *</type>
+      <name>GetWorkStatusModel</name>
+      <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
+      <anchor>aedcf071d9a2ffe23376d8339d83c5dc3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateSupplier</name>
       <anchorfile>classiinsp_1_1_c_supplier_activation_proxy_comp.html</anchorfile>
@@ -16585,6 +16601,7 @@
     <filename>classiinsp_1_1_c_supplier_comp_base.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
+    <class kind="class">iinsp::CSupplierCompBase::Status</class>
     <class kind="class">iinsp::CSupplierCompBase::Timer</class>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -16599,6 +16616,32 @@
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
       <anchor>af7066d9359298b7a7bec92b29bf0f734</anchor>
       <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CSupplierCompBase::Status</name>
+    <filename>classiinsp_1_1_c_supplier_comp_base_1_1_status.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function">
+      <type></type>
+      <name>Status</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base_1_1_status.html</anchorfile>
+      <anchor>a2fec6d1f75ee62fd2d870cccc4071ce8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetSupplierState</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base_1_1_status.html</anchorfile>
+      <anchor>a84429d0b4d97cf9478ad6c2f901f2ee5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSupplierState</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base_1_1_status.html</anchorfile>
+      <anchor>afada3e0d9554bdf3fcdb2645f9f37517</anchor>
+      <arglist>(int state)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16649,6 +16692,13 @@
       <name>GetWorkStatus</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
       <anchor>a036fc62dc455392c6974201d9819ed24</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual imod::IModel *</type>
+      <name>GetWorkStatusModel</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>a8a15d1caca20a29eeea4fb8e55c33760</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -18607,6 +18657,13 @@
       <name>GetWorkStatus</name>
       <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
       <anchor>a41e2d09d2166cbcfa375f22dfbffc1af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imod::IModel *</type>
+      <name>GetWorkStatusModel</name>
+      <anchorfile>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</anchorfile>
+      <anchor>af2f88ef5364be43c8af08ec3c82ee9bf</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28235,6 +28292,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>UpdateVisualStatus</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ae28c9e7a742d7e7cb0c8ac5eedd27807</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a4a0eb2b9c3f3e5da91e159ca43b56414</anchor>
@@ -28287,6 +28351,13 @@
       <name>m_paramsObserver</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>acae5b307680abde64cf369ff3b4bb3ce</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>StatusObserver</type>
+      <name>m_statusObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>aa8fff01ba54a48dbbc62dacb08163727</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -28639,6 +28710,7 @@
     <templarg>UI</templarg>
     <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt; &gt;</base>
     <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
+    <class kind="class">iqtinsp::TSupplierGuiCompBase::StatusObserver</class>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSupplierParamsChanged</name>
@@ -28677,6 +28749,25 @@
       <name>OnUpdate</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
       <anchor>a5493fde27936d7901c3501f42af6ebf9</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtinsp::TSupplierGuiCompBase::StatusObserver</name>
+    <filename>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_status_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>StatusObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_status_observer.html</anchorfile>
+      <anchor>a2d975f01f569cfc0050bd1b69c8711bc</anchor>
+      <arglist>(TSupplierGuiCompBase *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_status_observer.html</anchorfile>
+      <anchor>a92494648c3bb3fa6837e92028852174c</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>

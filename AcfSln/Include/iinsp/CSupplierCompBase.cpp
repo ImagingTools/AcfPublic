@@ -38,8 +38,7 @@ static const istd::IChangeable::ChangeSet s_supplierResultsSet(iinsp::ISupplier:
 
 
 CSupplierCompBase::CSupplierCompBase()
-:	m_workStatus(WS_INVALID),
-	m_inputsObserver(this),
+:	m_inputsObserver(this),
 	m_paramsObserver(this),
 	m_paramsSetPtr(NULL),
 	m_areParametersValid(false)
@@ -51,26 +50,28 @@ CSupplierCompBase::CSupplierCompBase()
 
 int CSupplierCompBase::GetWorkStatus() const
 {
-	return m_workStatus;
+	return m_workStatus.GetSupplierState();
+}
+
+
+imod::IModel* CSupplierCompBase::GetWorkStatusModel() const
+{
+	return &(const_cast<CSupplierCompBase*>(this))->m_workStatus;
 }
 
 
 void CSupplierCompBase::InvalidateSupplier()
 {
-	if (m_workStatus >= WS_OK){	
-		m_workStatus = WS_LOCKED;
-
-		m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, &s_supplierResultsSet));
-
-		m_workStatus = WS_INVALID;
+	if (m_workStatus.GetSupplierState() >= WS_OK){	
+		m_workStatus.SetSupplierState(WS_INVALID);
 	}
 }
 
 
 void CSupplierCompBase::EnsureWorkInitialized()
 {
-	if (m_workStatus < WS_INIT){
-		m_workStatus = WS_LOCKED;
+	if (m_workStatus.GetSupplierState() < WS_INIT){
+		m_workStatus.SetSupplierState(WS_LOCKED);
 
 		for (int i = 0; i <= MTC_LAST; ++i){
 			m_messageContainers[i].ClearMessages();
@@ -85,7 +86,7 @@ void CSupplierCompBase::EnsureWorkInitialized()
 			supplierPtr->EnsureWorkInitialized();
 		}
 
-		m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, &s_supplierResultsSet));
+		istd::CChangeNotifier changeNotifier(this, &s_supplierResultsSet);
 
 		if (!m_areParametersValid){
 			OnParametersChanged();
@@ -94,10 +95,10 @@ void CSupplierCompBase::EnsureWorkInitialized()
 		}
 
 		if (InitializeWork()){
-			m_workStatus = WS_INIT;
+			m_workStatus.SetSupplierState(WS_INIT);
 		}
 		else{
-			m_workStatus = WS_CRITICAL;
+			m_workStatus.SetSupplierState(WS_CRITICAL);
 		}
 	}
 }
@@ -105,17 +106,17 @@ void CSupplierCompBase::EnsureWorkInitialized()
 
 void CSupplierCompBase::ClearWorkResults()
 {
-	if (m_workStatus == WS_LOCKED){
+	if (m_workStatus.GetSupplierState() == WS_LOCKED){
 		return;
 	}
 
-	m_workStatus = WS_INVALID;
+	istd::CChangeNotifier changeNotifier(this, &s_supplierResultsSet);
+
+	m_workStatus.SetSupplierState(WS_INVALID);
 	
 	for (int i = 0; i <= MTC_LAST; ++i){
 		m_messageContainers[i].ClearMessages();
 	}
-
-	m_productChangeNotifierPtr.Reset();
 }
 
 
@@ -208,8 +209,6 @@ void CSupplierCompBase::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	m_productChangeNotifierPtr.Reset();
-
 	m_paramsSetPtr = m_paramsSetCompPtr.GetPtr();
 
 	if ((m_paramsSetPtr != NULL) && m_paramsSetModelCompPtr.IsValid()){
@@ -224,7 +223,7 @@ void CSupplierCompBase::OnComponentCreated()
 		}
 	}
 
-	m_workStatus = WS_INVALID;
+	m_workStatus.SetSupplierState(WS_INVALID);
 }
 
 
@@ -232,11 +231,6 @@ void CSupplierCompBase::OnComponentDestroyed()
 {
 	m_inputsObserver.EnsureModelsDetached();
 	m_paramsObserver.EnsureModelsDetached();
-
-	if (m_productChangeNotifierPtr.IsValid()){
-		m_productChangeNotifierPtr->Abort();
-	}
-	m_productChangeNotifierPtr.Reset();
 
 	m_paramsSetPtr = NULL;
 
@@ -265,6 +259,30 @@ CSupplierCompBase::Timer::~Timer()
 						diagnosticName);
 			m_parentPtr->AddMessage(messagePtr, MCT_RESULTS);
 		}
+	}
+}
+
+
+// public methods of embedded class Status
+
+CSupplierCompBase::Status::Status()
+	:m_state(ISupplier::WS_INVALID)
+{
+}
+
+
+int CSupplierCompBase::Status::GetSupplierState() const
+{
+	return m_state;
+}
+
+
+void CSupplierCompBase::Status::SetSupplierState(int state)
+{
+	if (m_state != state){
+		istd::CChangeNotifier changeNotifier(this);
+
+		m_state = state;
 	}
 }
 

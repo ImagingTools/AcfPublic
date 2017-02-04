@@ -139,6 +139,12 @@ int CInspectionTaskComp::GetWorkStatus() const
 }
 
 
+imod::IModel* CInspectionTaskComp::GetWorkStatusModel() const
+{
+	return NULL;
+}
+
+
 void CInspectionTaskComp::InvalidateSupplier()
 {
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
@@ -162,7 +168,7 @@ void CInspectionTaskComp::InvalidateSupplier()
 
 void CInspectionTaskComp::EnsureWorkInitialized()
 {
-	m_productChangeNotifierPtr.SetPtr(new istd::CChangeNotifier(this, &m_supplierResultsChangeSet));
+	istd::CChangeNotifier changeNotifier(this, &m_supplierResultsChangeSet);
 
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 
@@ -243,13 +249,13 @@ void CInspectionTaskComp::EnsureWorkFinished()
 	}
 
 	m_subtaskNotifiers.clear();
-
-	m_productChangeNotifierPtr.Reset();
 }
 
 
 void CInspectionTaskComp::ClearWorkResults()
 {
+	istd::CChangeNotifier changeNotifier(this, &m_supplierResultsChangeSet);
+
 	int inspectionsCount = m_subtasksCompPtr.GetCount();
 	for (int i = 0; i < inspectionsCount; ++i){
 		iinsp::ISupplier* supplierPtr = m_subtasksCompPtr[i];
@@ -266,8 +272,6 @@ void CInspectionTaskComp::ClearWorkResults()
 			supplierPtr->ClearWorkResults();
 		}
 	}
-
-	m_productChangeNotifierPtr.Reset();
 }
 
 
@@ -420,8 +424,14 @@ void CInspectionTaskComp::OnComponentCreated()
 		}
 
 		iinsp::ISupplier* taskPtr = m_subtasksCompPtr[i];
+		if (taskPtr != NULL){
+			imod::IModel* taskStatusModelPtr = taskPtr->GetWorkStatusModel();
+			if (taskStatusModelPtr != NULL){
+				taskStatusModelPtr->AttachObserver(this);
+			}
 
-		m_subtasks.push_back(taskPtr);
+			m_subtasks.push_back(taskPtr);
+		}
 	}
 
 	m_isStatusKnown = false;
@@ -434,8 +444,6 @@ void CInspectionTaskComp::OnComponentDestroyed()
 {
 	m_subtaskNotifiers.clear();
 	m_subtasks.clear();
-
-	m_productChangeNotifierPtr.Reset();
 
 	EnsureModelsDetached();
 
