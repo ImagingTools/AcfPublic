@@ -5301,6 +5301,7 @@
     <name>CSelectableParamsSetGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_selectable_params_set_gui_comp_8h</filename>
+    <includes id="_i_params_set_8h" name="IParamsSet.h" local="no" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_c_selectable_gui_comp_8h" name="CSelectableGuiComp.h" local="no" imported="no">iqtprm/CSelectableGuiComp.h</includes>
     <class kind="class">iqtprm::CSelectableParamsSetGuiComp</class>
     <namespace>iqtprm</namespace>

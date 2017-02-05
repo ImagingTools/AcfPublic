@@ -25,6 +25,7 @@
 
 
 // ACF includes
+#include <iprm/IParamsSet.h>
 #include <iqtprm/CSelectableGuiComp.h>
 
 
@@ -32,6 +33,10 @@ namespace iqtprm
 {
 
 
+/**
+	Editor for the selected parameter in the parameter manager.
+	\sa iprm::IParamsManager
+*/
 class CSelectableParamsSetGuiComp: public iqtprm::CSelectableGuiComp
 {
 public:
@@ -39,7 +44,6 @@ public:
 
 	I_BEGIN_COMPONENT(CSelectableParamsSetGuiComp);
 		I_ASSIGN_MULTI_0(m_slaveObserversCompPtr, "Editors", "Editors for the parameters in the parameter set", true);
-		I_ASSIGN(m_showSeparatorAttrPtr, "ShowSeparator", "Show separator line between selector and editors", true, false);
 	I_END_COMPONENT;
 
 public:
@@ -58,11 +62,12 @@ private:
 	void EnsureDetachLastEditor();
 	void ConnectCurrentEditor();
 
+	iprm::IParamsSet* ExtractParamsSetPtr(imod::IModel* modelPtr) const;
+
 private:
 	int m_currentParamsSetIndex;
 
 	I_MULTIREF(imod::IObserver, m_slaveObserversCompPtr);
-	I_ATTR(bool, m_showSeparatorAttrPtr);
 };
 
 
