@@ -141,7 +141,7 @@ void TGeneralSupplierGuiComp<UI>::UpdateGui(const istd::IChangeable::ChangeSet& 
 
 	Q_ASSERT(BaseClass::IsGuiCreated());
 
-	UpdateVisualStatus();
+	BaseClass::UpdateVisualStatus();
 
 	QString statusLabelText = BaseClass::tr("Unknown");
 
