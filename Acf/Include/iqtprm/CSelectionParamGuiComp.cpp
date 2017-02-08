@@ -433,6 +433,13 @@ void CSelectionParamGuiComp::UpdateDescriptionFrame()
 		if ((constraintsPtr != NULL) && (selectedIndex >= 0) && (selectedIndex < constraintsPtr->GetOptionsCount())){
 
 			QString optionDescription = constraintsPtr->GetOptionDescription(selectedIndex);
+			// Elide if FixedWidth defined
+			if (m_labelWidthAttrPtr.IsValid()){
+				DescriptionLabel->setToolTip(optionDescription);
+				QFontMetrics fontMetrics = GetQtWidget()->fontMetrics();
+				optionDescription = fontMetrics.elidedText(optionDescription, Qt::ElideRight,
+					*m_labelWidthAttrPtr > GetQtWidget()->minimumWidth() ? *m_labelWidthAttrPtr : GetQtWidget()->minimumWidth());
+			}
 			DescriptionLabel->setText(optionDescription);
 
 			if (!optionDescription.isEmpty()){
