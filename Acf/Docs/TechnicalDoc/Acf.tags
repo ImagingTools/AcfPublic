@@ -23910,6 +23910,13 @@
       <anchor>acf042457ccccd5a4f00f8b840a2dfe4ba5fac9427da0260475ba2230f16b22413</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>EF_IS_DETACHED</name>
+      <anchorfile>classicomp_1_1_i_registry_element.html</anchorfile>
+      <anchor>acf042457ccccd5a4f00f8b840a2dfe4badf173c4fa9d963d16f8154e4eb54e637</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>istd::TDelPtr&lt; iser::IObject &gt;</type>
       <name>AttributePtr</name>

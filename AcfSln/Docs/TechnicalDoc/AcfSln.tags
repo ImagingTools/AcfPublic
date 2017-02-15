@@ -8820,6 +8820,13 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
+      <name>on_IsDetachedCB_toggled</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>a06151a6a04d3d9e407ca762c625ec0b8</anchor>
+      <arglist>(bool checked)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
       <name>UpdateGeneralView</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>a8576d5879b6197591169e2c41ba0d318</anchor>
@@ -8864,8 +8871,8 @@
       <type>bool</type>
       <name>SetInterfaceToItem</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a43c87471790c8d21e309c6190bc249c4</anchor>
-      <arglist>(QTreeWidgetItem &amp;item, icomp::IRegistry::ExportedInterfacesMap *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
+      <anchor>a8339b2bcf43c473e0e15495eebdce8ca</anchor>
+      <arglist>(QTreeWidgetItem &amp;item, icomp::IRegistry::ExportedInterfacesMap *interfacesMapPtr, const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool &amp;hasWarning, bool &amp;hasExport, bool readOnly) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -8892,15 +8899,15 @@
       <type>void</type>
       <name>CreateInterfacesTree</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a61b2e621f8b43af937e0bf1f8fcd57ea</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo *infoPtr, icomp::IRegistry::ExportedInterfacesMap &amp;registryInterfaces, QTreeWidgetItem *parentItemPtr, bool &amp;hasWarning, bool &amp;hasExport, bool includeSubelement)</arglist>
+      <anchor>a8674c7a767c01569791a1e8899517f8d</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo *infoPtr, icomp::IRegistry::ExportedInterfacesMap &amp;registryInterfaces, QTreeWidgetItem *parentItemPtr, bool &amp;hasWarning, bool &amp;hasExport, bool includeSubelement, bool readOnly)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CreateExportedComponentsTree</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>adccaaae8270689783b821601f9d03d0b</anchor>
-      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool &amp;hasWarning, bool &amp;hasExport) const </arglist>
+      <anchor>a28da951399d5e4de62b606f30bcf6a0a</anchor>
+      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;globalElementId, const icomp::IElementStaticInfo *elementMetaInfoPtr, QTreeWidgetItem &amp;item, bool &amp;hasWarning, bool &amp;hasExport, bool readOnly) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -10083,6 +10090,13 @@
       <anchor>a17277f70a9bf291a4806d392aa37d8b2abb55871b094fb117fd7751b669ff42de</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>QF_DETACHED_FROM_CONTAINER</name>
+      <anchorfile>classicmpstr_1_1_i_registry_consist_info.html</anchorfile>
+      <anchor>a17277f70a9bf291a4806d392aa37d8b2ad729b591d589a8e309c4dbc7c8be2811</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icomp::IRegistry::Ids</type>
       <name>GetCompatibleElements</name>
@@ -10143,8 +10157,8 @@
       <type>icomp::IRegistry::Ids</type>
       <name>GetCompatibleIds</name>
       <anchorfile>classicmpstr_1_1_c_registry_consist_info_comp.html</anchorfile>
-      <anchor>a80445013f4628821e2ba95d01d2af920</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, int queryFlags, bool subcomponentsFlag) const </arglist>
+      <anchor>a2090dd92530192b0c5a9a6734abccb92</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::IElementStaticInfo &amp;elementStaticInfo, const icomp::IElementStaticInfo::Ids &amp;interfaceNames, int queryFlags) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

@@ -122,6 +122,13 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 
 	QRectF mainRect = rect();
 
+	QColor normalFramePen(Qt::black);
+
+	quint32 elementFlags = objectPtr->GetElementFlags();
+	if ((elementFlags & icomp::IRegistryElement::EF_IS_DETACHED) != 0){
+		normalFramePen = QColor(Qt::darkYellow);
+	}
+
 	QRectF shadowRect = mainRect;
 	shadowRect.adjust(SHADOW_OFFSET, SHADOW_OFFSET, SHADOW_OFFSET, SHADOW_OFFSET);
 
@@ -137,7 +144,7 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 	}
 
 	if (m_isConsistent){
-		painterPtr->setPen(Qt::black);
+		painterPtr->setPen(normalFramePen);
 	}
 	else{
 		painterPtr->setPen(Qt::red);
@@ -163,7 +170,7 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 
 	// draw composite indication rectangle:
 	if (m_componentType == icomp::IComponentStaticInfo::CT_COMPOSITE){
-		painterPtr->setPen(Qt::black);
+		painterPtr->setPen(normalFramePen);
 		painterPtr->drawRect(mainRect);
 		mainRect.adjust(SIDE_OFFSET, SIDE_OFFSET, -SIDE_OFFSET, -SIDE_OFFSET);
 	}
@@ -200,7 +207,6 @@ void CRegistryElementShape::paint(QPainter* painterPtr, const QStyleOptionGraphi
 	}
 
 	// draw element flags icon:
-	quint32 elementFlags = objectPtr->GetElementFlags();
 	if ((elementFlags & icomp::IRegistryElement::EF_AUTO_INSTANCE) != 0){
 		QRectF iconRect(
 					mainRect.right() - (attributeIconSize + SIDE_OFFSET) * ++iconsCount,
