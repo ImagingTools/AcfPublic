@@ -16,6 +16,12 @@ else{
 # Get path to the ACF tools folder from the external variable:
 ACFTOOLS = $$(ACF_TOOLS_BIN)
 
+macx*{
+	!isEmpty(ACFTOOLS){
+		ARX_COMPILER = Arxc.app/Contents/MacOS/Arxc
+	}
+}
+
 isEmpty(ACFTOOLS){
 	# for non-cross compiling use local generated tools
 
@@ -44,7 +50,6 @@ win32{
 	ARXCBIN ~= s,/,\\,g
 	ACFBIN ~= s,/,\\,g
 }
-
 
 # custom build for ACF Registry Compiler (Arxc)
 ARX_COMPILER_OUTPUT = $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.cpp $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.h
@@ -129,5 +134,3 @@ generatedResources.variable_out = SOURCES
 generatedResources.dependency_type = TYPE_C
 generatedResources.depends += $$[QT_INSTALL_BINS]/$$QMAKE_RCC
 QMAKE_EXTRA_COMPILERS += generatedResources
-
-
