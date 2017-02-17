@@ -19822,12 +19822,68 @@
     <name>iipr::CImageCropDecalibrateProcessorComp</name>
     <filename>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>OrientationMode</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a3cb70c009856e12face5fc228c8ae894</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OM_SIMPLE</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a3cb70c009856e12face5fc228c8ae894aaff216c4b6be1cdca3ccf1f8f985eef1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OM_VISUAL</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a3cb70c009856e12face5fc228c8ae894ac03e967eb69bcabc84526e12656076c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OM_NO_REFLEXION</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a3cb70c009856e12face5fc228c8ae894a08fefefc38424e587a06fcfd547474c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>InterpolationMode</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>adae7eca1a641e3a77210957e1199e8a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IM_SIMPLE</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>adae7eca1a641e3a77210957e1199e8a5adb0681e631aaf86f1a6ed46ed709a58a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>IM_LINEAR</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>adae7eca1a641e3a77210957e1199e8a5aeeed5d402e9342b3a5716c2b13b37e80</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
       <anchor>a44b668fcd8de3e667177159850c6fbcc</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CImageCropDecalibrateProcessorComp</name>
+      <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
+      <anchor>a41495396ffb163d2ff4e187da5e612a8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -19840,15 +19896,15 @@
       <type>static bool</type>
       <name>CropImage</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
-      <anchor>a471fb933421184614891e3f729b15507</anchor>
-      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap)</arglist>
+      <anchor>a01e154067d40aa2cc45f9e5e6d57a583</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, int interpolationMode=IM_LINEAR, int orientationMode=OM_SIMPLE)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>CalcCalibration</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
-      <anchor>ae6a65361299d8777341345c643134184</anchor>
-      <arglist>(const i2d::CRectangle &amp;sourceAoi, icalib::CAffineCalibration2d &amp;outputCalib)</arglist>
+      <anchor>a3e817d6942c4fb19052e6ec01fe99211</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, icalib::CAffineCalibration2d &amp;outputCalib, int orientationMode=OM_SIMPLE)</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static bool</type>
