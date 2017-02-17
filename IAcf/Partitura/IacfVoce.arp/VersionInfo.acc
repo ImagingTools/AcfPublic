@@ -30,6 +30,7 @@
                                 <Value>0.3.3</Value>
                                 <Value>0.3.4</Value>
                                 <Value>0.4.0</Value>
+                                <Value>0.4.1</Value>
                             </Values>
                         </Data>
                     </AttributeInfo>
@@ -47,6 +48,7 @@
                                 <Value>529</Value>
                                 <Value>588</Value>
                                 <Value>631</Value>
+                                <Value>767</Value>
                             </Values>
                         </Data>
                     </AttributeInfo>
@@ -60,7 +62,7 @@
                         <Data IsEnabled="true" Value="IACF"/>
                     </AttributeInfo>
                     <AttributeInfo Id="VersionNumber" Type="Integer" ExportId="">
-                        <Data IsEnabled="true" Value="767"/>
+                        <Data IsEnabled="true" Value="768"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
             </Data>

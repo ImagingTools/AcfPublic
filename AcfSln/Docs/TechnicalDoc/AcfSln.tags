@@ -8568,9 +8568,23 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>AM_FACTORY</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a3426483211f219debc43237a46091b81</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>AM_MULTI_REFERENCE</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
       <anchor>ad8b45c49f2f9036d9a63fbb828752a03a6974b9498aebbd6f3c3f384a75ab94b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AM_MULTI_FACTORY</name>
+      <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
+      <anchor>ad8b45c49f2f9036d9a63fbb828752a03a88acb0f2095633212d82949634093c3a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
