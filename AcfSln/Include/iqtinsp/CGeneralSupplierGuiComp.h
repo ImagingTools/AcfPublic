@@ -69,6 +69,8 @@ void TGeneralSupplierGuiComp<UI>::Test()
 {
 	iinsp::ISupplier* supplierPtr = BaseClass::GetObservedObject();
 	if (supplierPtr != NULL){
+		istd::CChangeGroup changeGroup(supplierPtr);
+
 		supplierPtr->InvalidateSupplier();
 		supplierPtr->EnsureWorkInitialized();
 		supplierPtr->EnsureWorkFinished();

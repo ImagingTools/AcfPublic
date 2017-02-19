@@ -33,6 +33,7 @@
 #include <imod/IModel.h>
 #include <imod/TModelWrap.h>
 #include <imod/CModelUpdateBridge.h>
+#include <imod/CMultiModelObserverBase.h>
 #include <ilog/CMessageContainer.h>
 #include <ilog/TLoggerCompWrap.h>
 
@@ -172,6 +173,20 @@ protected:
 		CInspectionTaskComp* m_parentPtr;
 	};
 
+	class TaskStatusObserver: public imod::CMultiModelObserverBase
+	{
+	public:
+		typedef imod::CMultiModelObserverBase BaseClass;
+
+		TaskStatusObserver(CInspectionTaskComp* parentPtr);
+
+		// reimplemented (imod::IObserver)
+		virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
+
+	private:
+		CInspectionTaskComp* m_parentPtr;
+	};
+
 	I_MULTIREF(iinsp::ISupplier, m_subtasksCompPtr);
 	I_MULTIREF(imod::IModel, m_subtaskModelsCompPtr);
 	I_MULTIREF(IInspectionTask, m_subtaskInspectionCompPtr);
@@ -210,6 +225,8 @@ protected:
 
 	typedef QMap<iinsp::ISupplier*, NotifierPtr> SubtaskNotifiers;
 	SubtaskNotifiers m_subtaskNotifiers;
+
+	TaskStatusObserver m_subTaskStatusObserver;
 };
 
 

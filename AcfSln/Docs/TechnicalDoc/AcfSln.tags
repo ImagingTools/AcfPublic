@@ -1146,6 +1146,7 @@
     <class kind="class">iinsp::CInspectionTaskComp</class>
     <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
+    <class kind="class">iinsp::CInspectionTaskComp::TaskStatusObserver</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -16060,6 +16061,7 @@
     <base protection="protected">imod::CModelUpdateBridge</base>
     <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
+    <class kind="class">iinsp::CInspectionTaskComp::TaskStatusObserver</class>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -16396,6 +16398,13 @@
       <anchor>a4a83932311e9844e4fe5a41e164d7f98</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>TaskStatusObserver</type>
+      <name>m_subTaskStatusObserver</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a5cb3b54d52e6e80233e28bdf981cb046</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::MessageContainer</name>
@@ -16497,6 +16506,32 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
       <anchor>a64425f71d60d22b20096a538161e6ae6</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CInspectionTaskComp::TaskStatusObserver</name>
+    <filename>classiinsp_1_1_c_inspection_task_comp_1_1_task_status_observer.html</filename>
+    <base>imod::CMultiModelObserverBase</base>
+    <member kind="typedef">
+      <type>imod::CMultiModelObserverBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_task_status_observer.html</anchorfile>
+      <anchor>ae892d05c85c00e970705c35c5221f315</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TaskStatusObserver</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_task_status_observer.html</anchorfile>
+      <anchor>ac463ea1cd32c893cbb222acf7899fa3a</anchor>
+      <arglist>(CInspectionTaskComp *parentPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_task_status_observer.html</anchorfile>
+      <anchor>a16f55bd42d247f7b2f236ae90e166597</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
