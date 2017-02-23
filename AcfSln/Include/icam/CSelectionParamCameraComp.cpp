@@ -1,6 +1,6 @@
 /********************************************************************************
 **
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**	Copyright (C) 2007-2015 Witold Gantzke & Kirill Lepskiy
 **
 **	This file is part of the ACF-Solutions Toolkit.
 **
@@ -218,6 +218,20 @@ const iser::ISerializable* CSelectionParamCameraComp::JoinParamsSet::GetParamete
 iser::ISerializable* CSelectionParamCameraComp::JoinParamsSet::GetEditableParameter(const QByteArray& /*id*/)
 {
 	return NULL;
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CSelectionParamCameraComp::JoinParamsSet::GetFactoryId() const
+{
+	QByteArray retVal;
+
+	if (m_selectedParamsPtr != NULL){
+		retVal = m_selectedParamsPtr->GetFactoryId();
+	}
+
+	return retVal;
 }
 
 
