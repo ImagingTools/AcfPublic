@@ -7976,6 +7976,13 @@
       <arglist>(const QByteArray &amp;id)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
+      <anchor>a285aab0e739970d050af4736fb527cb2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</anchorfile>
