@@ -80,7 +80,6 @@ int CParamsManagerCompBase::InsertParamsSet(int typeIndex, int index)
 	paramsSetPtr->uuid = QUuid::createUuid().toString().toLatin1();
 #endif
 
-	paramsSetPtr->typeId = newParamsSetPtr->GetFactoryId();
 	paramsSetPtr->parentPtr = this;
 
 	imod::IModel* paramsModelPtr = dynamic_cast<imod::IModel*>(newParamsSetPtr);
@@ -159,13 +158,9 @@ bool CParamsManagerCompBase::SwapParamsSet(int index1, int index2)
 	ParamSet& paramsSet2 = *m_paramSets[index2 - fixedParamsCount];
 
 	paramsSet1.paramSetPtr.Swap(paramsSet2.paramSetPtr);
-	qSwap(paramsSet1.typeId, paramsSet2.typeId);
 	qSwap(paramsSet1.name, paramsSet2.name);
 	qSwap(paramsSet1.isEnabled, paramsSet2.isEnabled);
 	qSwap(paramsSet1.uuid, paramsSet2.uuid);
-
-	Q_ASSERT(paramsSet1.paramSetPtr->GetFactoryId() == paramsSet1.typeId);
-	Q_ASSERT(paramsSet2.paramSetPtr->GetFactoryId() == paramsSet2.typeId);
 
 	return true;
 }
@@ -231,7 +226,6 @@ IParamsSet* CParamsManagerCompBase::CreateParameterSet(int typeIndex, int index)
 
 			retVal->isEnabled = sourceParamsSetImplPtr->isEnabled;
 			retVal->name = sourceParamsSetImplPtr->name;
-			retVal->typeId = sourceParamsSetImplPtr->typeId;
 			retVal->description = sourceParamsSetImplPtr->description;
 			retVal->uuid = sourceParamsSetImplPtr->uuid;
 		}
@@ -654,7 +648,9 @@ bool CParamsManagerCompBase::ParamSet::IsNameFixed() const
 
 QByteArray CParamsManagerCompBase::ParamSet::GetFactoryId() const
 {
-	return typeId;
+	Q_ASSERT(paramSetPtr.IsValid());
+
+	return paramSetPtr->GetFactoryId();
 }
 
 
@@ -713,7 +709,7 @@ QByteArray CParamsManagerCompBase::SelectedParams::GetFactoryId() const
 {
 	if ((parentPtr != NULL) && (parentPtr->m_selectedIndex >= 0)){
 		const ParamSetPtr& selectedParamsSetPtr = parentPtr->m_paramSets[parentPtr->m_selectedIndex];
-		return selectedParamsSetPtr->typeId;
+		return selectedParamsSetPtr->GetFactoryId();
 	}
 
 	return "";
