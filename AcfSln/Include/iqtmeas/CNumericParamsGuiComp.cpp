@@ -68,7 +68,7 @@ void CNumericParamsGuiComp::OnGuiModelDetached()
 void CNumericParamsGuiComp::UpdateModel() const
 {
 	imeas::INumericValue* objectPtr = GetObservedObject();
-	if ((objectPtr != NULL) && IsGuiCreated()) {
+	if ((objectPtr != NULL) && IsGuiCreated()){
 		int valuesCount = int(m_valueWidgets.GetCount());
 		imath::CVarVector values(valuesCount);
 
@@ -196,7 +196,6 @@ void CNumericParamsGuiComp::OnGuiDestroyed()
 	BaseClass::OnGuiDestroyed();
 
 	m_valueWidgets.Reset();
-
 }
 
 

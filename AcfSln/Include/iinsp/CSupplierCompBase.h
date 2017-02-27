@@ -246,6 +246,8 @@ private:
 	iprm::IParamsSet* m_paramsSetPtr;
 
 	bool m_areParametersValid;
+
+	istd::TDelPtr<istd::CChangeNotifier> m_productChangeNotifierPtr;
 };
 
 
