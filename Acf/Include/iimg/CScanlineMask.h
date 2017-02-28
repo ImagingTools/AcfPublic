@@ -136,6 +136,12 @@ public:
 	void GetInverted(const i2d::CRect& clipArea, CScanlineMask& result) const;
 
 	/**
+		Invert mask on place.
+		\param	clipArea	clipping area.
+	*/
+	void Invert(const i2d::CRect& clipArea);
+
+	/**
 		Get union of two masks.
 	*/
 	CScanlineMask GetUnion(const CScanlineMask& mask) const;

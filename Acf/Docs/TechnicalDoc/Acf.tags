@@ -35440,6 +35440,13 @@
       <arglist>(const i2d::CRect &amp;clipArea, CScanlineMask &amp;result) const </arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>Invert</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ae984c735e1ed8814abdb50f49522f5dc</anchor>
+      <arglist>(const i2d::CRect &amp;clipArea)</arglist>
+    </member>
+    <member kind="function">
       <type>CScanlineMask</type>
       <name>GetUnion</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
@@ -63313,6 +63320,13 @@
       <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
       <anchor>a12e4f5ce2b4dba106247feb74b10227c</anchor>
       <arglist>(TRanges&lt; ValueType &gt; &amp;result, const TRange&lt; ValueType &gt; *clipRangePtr) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Invert</name>
+      <anchorfile>classistd_1_1_t_ranges.html</anchorfile>
+      <anchor>a0a6d1df10cec5fd9f78f122addf876f9</anchor>
+      <arglist>(const TRange&lt; ValueType &gt; *clipRangePtr)</arglist>
     </member>
     <member kind="function">
       <type>TRanges&lt; ValueType &gt;</type>
