@@ -19790,8 +19790,8 @@
       <type>bool</type>
       <name>ExtractToBitmap</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a90e68647add35953be65b742a590cd8c</anchor>
-      <arglist>(iimg::IBitmap &amp;bitmap)</arglist>
+      <anchor>a7ee7186deba952a6f5de5d5e091d8a1f</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap) const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -29041,27 +29041,6 @@
       <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
       <anchor>a634185b56e783e70de8f2678260d5ec5</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>on_TaskEnabledCB_toggled</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>aa07ff7fa265fbdf01b9343fc7eb51f39</anchor>
-      <arglist>(bool)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a64006342b4bc7069cfc19f6fd88790a6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqtipr_1_1_c_color_pattern_comparator_gui_comp.html</anchorfile>
-      <anchor>a35f15af6ce55e0907d850686839bc0c5</anchor>
-      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
