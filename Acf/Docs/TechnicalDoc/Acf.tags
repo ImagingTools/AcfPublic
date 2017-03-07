@@ -14928,6 +14928,7 @@
     <name>iattr::CAttributesManager</name>
     <filename>classiattr_1_1_c_attributes_manager.html</filename>
     <base virtualness="virtual">iattr::IAttributesManager</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CAttributesManager</name>
