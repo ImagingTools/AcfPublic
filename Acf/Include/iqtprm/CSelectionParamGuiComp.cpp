@@ -297,31 +297,31 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 
 		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){
-			const int optionsCount = constraintsPtr->GetOptionsCount();
-			const int selectedIndex = selectionPtr->GetSelectedOptionIndex();
-			int selectedItem = -1;
-			int itemIndex = 0;
-			for (int i = 0; i < optionsCount; ++i){
-				if (constraintsPtr->IsOptionEnabled(i) || *m_fillWithDisabledOptionsEnabledAttrPtr){
-					const QString& name = constraintsPtr->GetOptionName(i);
+			int optionsCount = constraintsPtr->GetOptionsCount();
 
-					if (i == selectedIndex){
-						selectedItem = itemIndex;
-					}
+			int selectedIndex = selectionPtr->GetSelectedOptionIndex();
+
+			for (int i = 0, itemIndex = 0; i < optionsCount; ++i){
+				if (constraintsPtr->IsOptionEnabled(i) || *m_fillWithDisabledOptionsEnabledAttrPtr){
+					QString name = constraintsPtr->GetOptionName(i);
+
 					switchBoxPtr->addItem(name);
 					switchBoxPtr->setItemData(itemIndex++, i);
 				}
+				else if (i == selectedIndex){
+					selectedIndex = -1;
+				}
 			}
 
-			if (*m_noSelectionAllowedAttrPtr && (selectedItem >= 0)){
-				switchBoxPtr->insertSeparator(itemIndex++);
+			if (*m_noSelectionAllowedAttrPtr){
+				switchBoxPtr->insertSeparator(optionsCount);
 				switchBoxPtr->addItem(tr("Reset"));
-				switchBoxPtr->setItemData(itemIndex++, -1);
+				switchBoxPtr->setItemData(optionsCount+1, -1);
 			}
 
-			switchBoxPtr->setCurrentIndex(selectedItem);
+			switchBoxPtr->setCurrentIndex(selectedIndex);
 
-			if (*m_disableWhenEmptyAttrPtr && (optionsCount <= 0)){
+			if (*m_disableWhenEmptyAttrPtr && optionsCount == 0){
 				switchBoxPtr->setEnabled(false);
 			}
 		}
