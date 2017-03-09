@@ -112,6 +112,7 @@ protected:
 	int GetSelectedIndex() const;
 	void EnsureParamsGuiDetached();
 	QByteArray GetSelectedParamsSetTypeId() const;
+	void InsertNewParamsSet(int typeIndex = -1);
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();

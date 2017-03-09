@@ -56997,6 +56997,13 @@
       <anchor>ae48ad48124b09aba18aa49ae8a3284de</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InsertNewParamsSet</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>af33aec1909fc23348d19820e2e5ac047</anchor>
+      <arglist>(int typeIndex=-1)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
