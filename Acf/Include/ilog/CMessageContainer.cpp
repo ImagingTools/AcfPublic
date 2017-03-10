@@ -103,7 +103,7 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 
 	if (archive.IsStoring()){
 		int serializableMessageCount = 0;
-		for (		MessageList::ConstIterator iter = m_messages.constBegin();
+		for (		Messages::ConstIterator iter = m_messages.constBegin();
 					iter != m_messages.constEnd();
 					++iter){
 			const IMessageConsumer::MessagePtr& messagePtr = *iter;
@@ -128,7 +128,7 @@ bool CMessageContainer::Serialize(iser::IArchive& archive)
 	Q_UNUSED(notifier);
 
 	if (archive.IsStoring()){
-		for (		MessageList::ConstIterator iter = m_messages.constBegin();
+		for (		Messages::ConstIterator iter = m_messages.constBegin();
 					iter != m_messages.constEnd();
 					++iter){
 			const IMessageConsumer::MessagePtr& messagePtr = *iter;
@@ -203,7 +203,7 @@ int CMessageContainer::GetWorstCategory() const
 	if (m_worstCategory < 0){
 		m_worstCategory = 0;
 
-		for (		MessageList::ConstIterator iter = m_messages.constBegin();
+		for (		Messages::ConstIterator iter = m_messages.constBegin();
 					iter != m_messages.constEnd();
 					++iter){
 			const IMessageConsumer::MessagePtr& messagePtr = *iter;
@@ -234,7 +234,7 @@ IMessageContainer::Messages CMessageContainer::GetMessages() const
 {
 	IMessageContainer::Messages messages;
 
-	for (		MessageList::ConstIterator iter = m_messages.constBegin();
+	for (		Messages::ConstIterator iter = m_messages.constBegin();
 				iter != m_messages.constEnd();
 				++iter){	
 		messages.push_back(*iter);
@@ -412,7 +412,7 @@ bool CMessageContainer::IsEqual(const istd::IChangeable& object) const
 {
 	const CMessageContainer* otherObjectPtr = dynamic_cast<const CMessageContainer*>(&object);
 	if (otherObjectPtr != NULL){
-		MessageList otherMessages = otherObjectPtr->GetMessages();
+		Messages otherMessages = otherObjectPtr->GetMessages();
 		if (m_messages.count() != otherMessages.count()){
 			return false;
 		}

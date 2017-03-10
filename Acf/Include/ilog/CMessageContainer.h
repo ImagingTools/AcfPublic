@@ -120,8 +120,7 @@ private:
 	static MessageFactory& GetMessageFactory();
 
 private:
-	typedef QList<IMessageConsumer::MessagePtr> MessageList;
-	MessageList m_messages;
+	Messages m_messages;
 
 	typedef QVector<IHierarchicalMessageContainer*> Childs;
 	Childs m_childContainers;
