@@ -35,7 +35,7 @@
 
 #ifdef __clang__
 	#define __forceinline __attribute__((always_inline))
-#elif defined(__GNUC__)
+#elif defined(__GNUC__) && !defined(__forceinline)
 	#define __forceinline inline
 #endif
 
