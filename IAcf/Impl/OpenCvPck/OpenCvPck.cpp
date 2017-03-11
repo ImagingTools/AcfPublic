@@ -55,6 +55,11 @@ I_EXPORT_COMPONENT(
 			"OpenCV-based normalized correlation search processor",
 			"OpenCV Normalized Correlation Search Processor Model Image Find Pattern Matching");
 
+I_EXPORT_COMPONENT(
+			OpenCvMedianProcessor,
+			"OpenCV-based median blur processor",
+			"OpenCV Median Blue Smoothing Processor");
+
 
 } // namespace OpenCvPck
 

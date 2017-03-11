@@ -110,6 +110,13 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvMedianProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_median_processor_comp_8h</filename>
+    <class kind="class">iocv::COcvMedianProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvVideoControllerComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_video_controller_comp_8h</filename>
@@ -887,6 +894,7 @@
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <class kind="class">iocv::COcvImage</class>
+    <class kind="class">iocv::COcvMedianProcessorComp</class>
     <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
   <compound kind="class">
@@ -1057,6 +1065,25 @@
       <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
       <anchor>a048bc2b81b42c38bf0d314cf570138da</anchor>
       <arglist>(const IplImage &amp;image, iimg::IBitmap &amp;outputBitmap)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvMedianProcessorComp</name>
+    <filename>classiocv_1_1_c_ocv_median_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_median_processor_comp.html</anchorfile>
+      <anchor>a28d1cbc155ad9f992116c486243c5276</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_ocv_median_processor_comp.html</anchorfile>
+      <anchor>aa6b3f5a4ce1c022c49bc2cc80512651d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2290,6 +2317,7 @@
     <file>COcvAcquisitionComp.h</file>
     <file>COcvBlobProcessorComp.h</file>
     <file>COcvImage.h</file>
+    <file>COcvMedianProcessorComp.h</file>
     <file>COcvVideoControllerComp.h</file>
     <file>iocv.h</file>
   </compound>
