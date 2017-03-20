@@ -2122,16 +2122,8 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_statistics_8h</filename>
     <includes id="_i_data_sequence_statistics_8h" name="IDataSequenceStatistics.h" local="no" imported="no">imeas/IDataSequenceStatistics.h</includes>
-    <includes id="_c_data_statistics_8h" name="CDataStatistics.h" local="no" imported="no">imeas/CDataStatistics.h</includes>
+    <includes id="_c_simple_data_statistics_8h" name="CSimpleDataStatistics.h" local="no" imported="no">imeas/CSimpleDataStatistics.h</includes>
     <class kind="class">imeas::CDataSequenceStatistics</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CDataStatistics.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_data_statistics_8h</filename>
-    <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="no" imported="no">imeas/IDataStatistics.h</includes>
-    <class kind="class">imeas::CDataStatistics</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2165,6 +2157,7 @@
     <filename>_c_histogram_statistics_processor_comp_8h</filename>
     <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
     <includes id="_i_data_sequence_statistics_processor_8h" name="IDataSequenceStatisticsProcessor.h" local="no" imported="no">imeas/IDataSequenceStatisticsProcessor.h</includes>
+    <includes id="_c_simple_data_statistics_8h" name="CSimpleDataStatistics.h" local="no" imported="no">imeas/CSimpleDataStatistics.h</includes>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
     <namespace>imeas</namespace>
   </compound>
@@ -2210,6 +2203,14 @@
     <filename>_c_samples_info_8h</filename>
     <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="no" imported="no">imeas/CDataSequenceInfoBase.h</includes>
     <class kind="class">imeas::CSamplesInfo</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSimpleDataStatistics.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_simple_data_statistics_8h</filename>
+    <includes id="_i_data_statistics_8h" name="IDataStatistics.h" local="no" imported="no">imeas/IDataStatistics.h</includes>
+    <class kind="class">imeas::CSimpleDataStatistics</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -24006,7 +24007,6 @@
     <class kind="class">imeas::CCrossCorrelationProcessorComp</class>
     <class kind="class">imeas::CDataSequenceInfoBase</class>
     <class kind="class">imeas::CDataSequenceStatistics</class>
-    <class kind="class">imeas::CDataStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
     <class kind="class">imeas::CGeneralNumericConstraints</class>
     <class kind="class">imeas::CGeneralNumericValue</class>
@@ -24016,6 +24016,7 @@
     <class kind="class">imeas::CNumericParamsComp</class>
     <class kind="class">imeas::CRelativeUnitSelectorComp</class>
     <class kind="class">imeas::CSamplesInfo</class>
+    <class kind="class">imeas::CSimpleDataStatistics</class>
     <class kind="class">imeas::CSimpleNumericValue</class>
     <class kind="class">imeas::CWavSamplesLoaderComp</class>
     <class kind="class">imeas::IDataSequence</class>
@@ -24249,60 +24250,6 @@
       <name>Serialize</name>
       <anchorfile>classimeas_1_1_c_data_sequence_statistics.html</anchorfile>
       <anchor>a102a23b9843d4b3687ef1c8c3b5924f5</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::CDataStatistics</name>
-    <filename>classimeas_1_1_c_data_statistics.html</filename>
-    <base virtualness="virtual">imeas::IDataStatistics</base>
-    <member kind="function">
-      <type></type>
-      <name>CDataStatistics</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>a6743dd3de985f25b9d66236d48658b01</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CreateStatistics</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>a5f83d518fae3f53120817816079a5d51</anchor>
-      <arglist>(double average, double median, double standardDeviation, const istd::CRange &amp;dataBoundaries)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetDataBoundaries</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>a2b789615205cf6e89ca609f2dec622ef</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetStandardDeviation</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>ae94ff40094389276dfb3d903b9ae1461</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetAverage</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>acd110e726a2ff89d5f50feabc3ff9224</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetMedian</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>af0daf9c948b767b3098197272903f50b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classimeas_1_1_c_data_statistics.html</anchorfile>
-      <anchor>a00fcc1465d1e41aae22cfa475ccd67a2</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
@@ -25238,6 +25185,110 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imeas::CSimpleDataStatistics</name>
+    <filename>classimeas_1_1_c_simple_data_statistics.html</filename>
+    <base virtualness="virtual">imeas::IDataStatistics</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleDataStatistics</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a28f3dce1b8e0ffa4922e588f7553f9a0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleDataStatistics</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a4517eeb01b5c17b283856c408b7124b0</anchor>
+      <arglist>(double average, double median, double standardDeviation, const istd::CRange &amp;dataBoundaries)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CreateStatistics</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>af45ee9e88e1baedd4ee4114a16daeddc</anchor>
+      <arglist>(double average, double median, double standardDeviation, const istd::CRange &amp;dataBoundaries)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedStatFeatures</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a13f8f5c32cae750184762e3907e9f0a9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetDataBoundaries</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a28cb2bef34a222ebd1fbd6a701d2be20</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetStandardDeviation</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a36505cb1e913bcdc65a2f2945c600c30</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetAverage</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a9118233bdae462b6facc2919ff35bf94</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMedian</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>ae14a18c24cd962bfa19b458122be400c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_simple_data_statistics.html</anchorfile>
+      <anchor>a25ab97239589abe49d903c5f694e3a2f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SupportedStatFeatures</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>a2de853d9ace5564cefb6b66bde228ea0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_BOUNDARIES</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>a2de853d9ace5564cefb6b66bde228ea0a68f782fb38c247e09ce6627d2b980bbb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_STD_DEVIATION</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>a2de853d9ace5564cefb6b66bde228ea0a87bb74f30ca5ecde35a2091adce8686b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_AVERAGE</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>a2de853d9ace5564cefb6b66bde228ea0a16899bd05fef6c4b07c1a9317d5e23b3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_MEDIAN</name>
+      <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
+      <anchor>a2de853d9ace5564cefb6b66bde228ea0a808eabc4eecc2d01fb51bae458f99d6f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::CSimpleNumericValue</name>
     <filename>classimeas_1_1_c_simple_numeric_value.html</filename>
     <base virtualness="virtual">imeas::INumericValue</base>
@@ -25520,13 +25571,13 @@
   <compound kind="class">
     <name>imeas::IDataStatistics</name>
     <filename>classimeas_1_1_i_data_statistics.html</filename>
-    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>CreateStatistics</name>
+      <type>virtual int</type>
+      <name>GetSupportedStatFeatures</name>
       <anchorfile>classimeas_1_1_i_data_statistics.html</anchorfile>
-      <anchor>a172f74ee14896a089d5359e761460f82</anchor>
-      <arglist>(double average, double median, double standardDeviation, const istd::CRange &amp;dataBoundaries)=0</arglist>
+      <anchor>af468f66dbf59347bbe842408020da3d5</anchor>
+      <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
@@ -33202,7 +33253,6 @@
     <file>CCrossCorrelationProcessorComp.h</file>
     <file>CDataSequenceInfoBase.h</file>
     <file>CDataSequenceStatistics.h</file>
-    <file>CDataStatistics.h</file>
     <file>CGeneralDataSequence.h</file>
     <file>CGeneralNumericConstraints.h</file>
     <file>CGeneralNumericValue.h</file>
@@ -33212,6 +33262,7 @@
     <file>CNumericParamsComp.h</file>
     <file>CRelativeUnitSelectorComp.h</file>
     <file>CSamplesInfo.h</file>
+    <file>CSimpleDataStatistics.h</file>
     <file>CSimpleNumericValue.h</file>
     <file>CWavSamplesLoaderComp.h</file>
     <file>IDataSequence.h</file>

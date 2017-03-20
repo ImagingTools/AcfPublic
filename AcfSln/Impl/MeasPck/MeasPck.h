@@ -33,7 +33,7 @@
 #include <imeas/TDiscreteDataSequence.h>
 #include <imeas/CGeneralDataSequence.h>
 #include <imeas/CWavSamplesLoaderComp.h>
-#include <imeas/CDataStatistics.h>
+#include <imeas/CSimpleDataStatistics.h>
 #include <imeas/CDataSequenceStatistics.h>
 #include <imeas/CHistogramStatisticsProcessorComp.h>
 #include <imeas/CNumericParamsComp.h>
@@ -82,9 +82,9 @@ typedef icomp::TModelCompWrap< icomp::TMakeComponentWrap<
 			istd::IChangeable> > SimpleSamplesSequence32;
 typedef imeas::CWavSamplesLoaderComp WavSamplesLoader;
 typedef icomp::TModelCompWrap< icomp::TMakeComponentWrap<
-			imeas::CDataStatistics,
+			imeas::CSimpleDataStatistics,
 			imeas::IDataStatistics,
-			iser::ISerializable> > DataStatistics;
+			iser::ISerializable> > SimpleDataStatistics;
 typedef icomp::TModelCompWrap< icomp::TMakeComponentWrap<
 			imeas::CDataSequenceStatistics,
 			imeas::IDataSequenceStatistics,

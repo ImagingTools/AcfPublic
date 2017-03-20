@@ -29,6 +29,7 @@
 
 // ACF-Solutions includes
 #include <imeas/IDataSequenceStatisticsProcessor.h>
+#include <imeas/CSimpleDataStatistics.h>
 
 
 namespace imeas
@@ -37,7 +38,6 @@ namespace imeas
 
 class IDataSequence;
 class IDataSequenceStatistics;
-class IDataStatistics;
 
 
 /**	
@@ -65,7 +65,7 @@ public:
 				imeas::IDataSequenceStatistics& dataStatistics) const;
 
 private:
-	bool CalculateChannelStatistics(const imeas::IDataSequence& input, int inputIndex, imeas::IDataStatistics& dataStatistics) const;
+	bool CalculateChannelStatistics(const imeas::IDataSequence& input, int inputIndex, imeas::CSimpleDataStatistics& dataStatistics) const;
 };
 
 

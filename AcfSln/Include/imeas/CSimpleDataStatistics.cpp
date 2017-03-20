@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <imeas/CDataStatistics.h>
+#include <imeas/CSimpleDataStatistics.h>
 
 
 // ACF includes
@@ -34,17 +34,28 @@ namespace imeas
 {
 
 
-CDataStatistics::CDataStatistics()
-	:m_average(0.0),
+CSimpleDataStatistics::CSimpleDataStatistics()
+:	m_average(0.0),
 	m_median(0.0),
 	m_standardDeviation(0.0)
 {
 }
 
 
-// reimplemented (imeas::IDataStatistics)
+CSimpleDataStatistics::CSimpleDataStatistics(
+				double average,
+				double median,
+				double standardDeviation,
+				const istd::CRange& dataBoundaries)
+:	m_average(average),
+	m_median(median),
+	m_standardDeviation(standardDeviation),
+	m_dataBoundaries(dataBoundaries)
+{
+}
 
-void CDataStatistics::CreateStatistics(
+
+void CSimpleDataStatistics::CreateStatistics(
 			double average,
 			double median,
 			double standardDeviation,
@@ -79,25 +90,33 @@ void CDataStatistics::CreateStatistics(
 }
 
 
-istd::CRange CDataStatistics::GetDataBoundaries() const
+// reimplemented (imeas::IDataStatistics)
+
+int CSimpleDataStatistics::GetSupportedStatFeatures() const
+{
+	return SSF_BOUNDARIES | SSF_AVERAGE | SSF_AVERAGE | SSF_MEDIAN;
+}
+
+
+istd::CRange CSimpleDataStatistics::GetDataBoundaries() const
 {
 	return m_dataBoundaries;
 }
 
 
-double CDataStatistics::GetStandardDeviation() const
+double CSimpleDataStatistics::GetStandardDeviation() const
 {
 	return m_standardDeviation;
 }
 
 
-double CDataStatistics::GetAverage() const
+double CSimpleDataStatistics::GetAverage() const
 {
 	return m_average;
 }
 
 
-double CDataStatistics::GetMedian() const
+double CSimpleDataStatistics::GetMedian() const
 {
 	return m_median;
 }
@@ -106,7 +125,7 @@ double CDataStatistics::GetMedian() const
 
 // reimplemented (iser::ISerializable)
 
-bool CDataStatistics::Serialize(iser::IArchive& archive)
+bool CSimpleDataStatistics::Serialize(iser::IArchive& archive)
 {
 	static iser::CArchiveTag averageTag("Average", "Data average", iser::CArchiveTag::TT_LEAF);
 	static iser::CArchiveTag medianTag("Median", "Data median", iser::CArchiveTag::TT_LEAF);
