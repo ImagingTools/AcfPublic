@@ -59,7 +59,7 @@ public:
 	virtual bool Process(QString& value);
 
 protected:
-	CBinaryWriteArchiveBase(const IVersionInfo* versionInfoPtr);
+	explicit CBinaryWriteArchiveBase(const IVersionInfo* versionInfoPtr);
 };
 
 

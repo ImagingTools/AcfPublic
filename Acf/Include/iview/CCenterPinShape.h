@@ -53,8 +53,6 @@ public:
 protected:
 	// reimplemented (iview::CShapeBase)
 	virtual i2d::CRect CalcBoundingBox() const;
-
-	i2d::CVector2d m_referencePosition;
 };
 
 

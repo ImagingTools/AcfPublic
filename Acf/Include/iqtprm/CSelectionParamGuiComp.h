@@ -129,6 +129,8 @@ public:
 		I_ASSIGN(m_useCompleterAttrPtr, "UseCompleter", "Enable completer for combo box", true, false);
 	I_END_COMPONENT;
 
+	CSelectionParamGuiComp();
+
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
 	virtual void OnGuiModelAttached();
@@ -199,7 +201,7 @@ private:
 	istd::TPointerVector<RadioButtonWidget> m_radioButtons;
 	istd::TPointerVector<QButtonGroup> m_radioButtonGroups;
 	istd::TDelPtr<QFrame> m_radioButtonFramePtr;
-	QPushButton* m_resetButtonWidget;
+	QPushButton* m_resetButtonWidgetPtr;
 
 	QStandardItemModel m_completionModel;
 };

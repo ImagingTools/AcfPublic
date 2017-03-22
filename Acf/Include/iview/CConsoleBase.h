@@ -86,7 +86,7 @@ public:
 		FM_COVER
 	};
 
-	CConsoleBase(QWidget* parent);
+	explicit CConsoleBase(QWidget* parent);
 
 	// console visibility
 	bool IsZoomToFit() const;

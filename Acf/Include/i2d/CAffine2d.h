@@ -221,9 +221,9 @@ private:
 // inline methods
 
 inline CAffine2d::CAffine2d()
-	:m_translation(0.0, 0.0)
+:	m_translation(0.0, 0.0),
+	m_deformMatrix(CMatrix2d::GetIdentity())
 {
-	m_deformMatrix = CMatrix2d::GetIdentity();
 }
 
 

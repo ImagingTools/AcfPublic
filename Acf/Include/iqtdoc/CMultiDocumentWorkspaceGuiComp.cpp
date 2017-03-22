@@ -120,8 +120,9 @@ void CMultiDocumentWorkspaceGuiComp::UpdateAllTitles()
 					QFileInfo(info.filePath).fileName();
 
 		NameFrequencies::Iterator freqIter = nameFrequencies.find(titleName);
-		int& frequency = freqIter.value();
 		if (freqIter != nameFrequencies.end()){
+			int& frequency = freqIter.value();
+
 			frequency++;
 
 			titleName = tr("%1 <%2>").arg(titleName).arg(frequency + 1);
@@ -260,8 +261,7 @@ void CMultiDocumentWorkspaceGuiComp::SetActiveView(istd::IPolymorphic* viewPtr)
 			if (windowPtr != NULL){
 				QWidget* viewWidgetPtr = windowPtr->widget();
 				if (viewWidgetPtr != NULL){
-					iqtgui::IGuiObject* guiObjectPtr = NULL;
-					guiObjectPtr = GetViewFromWidget(*viewWidgetPtr);
+					iqtgui::IGuiObject* guiObjectPtr = GetViewFromWidget(*viewWidgetPtr);
 					if (viewPtr == guiObjectPtr){
 						workspacePtr->setActiveSubWindow(windowPtr);
 					}
@@ -339,9 +339,9 @@ void CMultiDocumentWorkspaceGuiComp::OnSaveSettings(QSettings& settings) const
 
 	Q_ASSERT(IsGuiCreated());
 
+#if QT_VERSION >= 0x040400
 	QMdiArea* workspacePtr = GetQtWidget();
 
-#if QT_VERSION >= 0x040400
 	settings.setValue("MDIWorkspace/ViewMode", workspacePtr->viewMode());
 #endif
 }
@@ -627,9 +627,8 @@ bool CMultiDocumentWorkspaceGuiComp::DocumentSelectionInfo::SetSelectedOptionInd
 
 		m_selectedDocumentIndex = index;
 
-		istd::IPolymorphic* viewPtr = NULL;
 		if (m_selectedDocumentIndex >= 0){
-			viewPtr = m_parent->GetViewFromIndex(m_selectedDocumentIndex, 0);
+			istd::IPolymorphic* viewPtr = m_parent->GetViewFromIndex(m_selectedDocumentIndex, 0);
 
 			m_parent->SetActiveView(viewPtr);
 		}

@@ -92,7 +92,9 @@ bool CFileReadArchive::EndTag(const iser::CArchiveTag& tag)
 
 	m_tagStack.pop_back();
 
-	return BaseClass::EndTag(tag);
+	retVal = retVal && BaseClass::EndTag(tag);
+
+	return retVal;
 }
 
 

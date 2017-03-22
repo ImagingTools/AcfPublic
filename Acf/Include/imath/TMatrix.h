@@ -87,7 +87,7 @@ public:
 	/**
 		Create matrix with initialization to some specified one.
 	*/
-	TMatrix(MatrixInitMode mode);
+	explicit TMatrix(MatrixInitMode mode);
 
 	/**
 		Copy constructor.

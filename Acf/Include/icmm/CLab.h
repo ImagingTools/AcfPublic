@@ -73,7 +73,7 @@ public:
 	CLab operator*(double value) const;
 	CLab operator/(double value) const;
 
-	const CLab& operator=(const CLab& color);
+	CLab& operator=(const CLab& color);
 
 	const CLab& operator+=(const CLab& color);
 	const CLab& operator-=(const CLab& color);
@@ -204,7 +204,7 @@ inline CLab CLab::operator/(double value) const
 }
 
 
-inline const CLab& CLab::operator=(const CLab& color)
+inline CLab& CLab::operator=(const CLab& color)
 {
 	BaseClass::operator=(color);
 

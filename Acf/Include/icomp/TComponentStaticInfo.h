@@ -39,7 +39,7 @@ class TComponentStaticInfo: public CBaseComponentStaticInfo
 public:
 	typedef CBaseComponentStaticInfo BaseClass;
 
-	TComponentStaticInfo(const IRealComponentStaticInfo* baseComponentPtr = NULL);
+	explicit TComponentStaticInfo(const IRealComponentStaticInfo* baseComponentPtr = NULL);
 
 	// reimplemented (icomp::IRealComponentStaticInfo)
 	virtual IComponent* CreateComponent() const;

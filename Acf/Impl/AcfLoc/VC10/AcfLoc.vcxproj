@@ -115,12 +115,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp" />
-    <ClCompile Include="debug\qrc_AcfLoc.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\qrc_AcfLoc.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\Impl\AcfLoc\Translations\*.ts" />
@@ -129,13 +124,13 @@
     <CustomBuild Include="..\AcfLoc.qrc">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfLoc.qrc;..\Translations\Acf_en_US.qm;..\Translations\Acf_pl_PL.qm;..\Translations\Acf_ru_RU.qm;..\Translations\Acf_de_DE.qm;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name AcfLoc ..\AcfLoc.qrc -o debug\qrc_AcfLoc.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name AcfLoc ..\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\AcfLoc.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_AcfLoc.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\AcfLoc.qrc;..\Translations\Acf_en_US.qm;..\Translations\Acf_pl_PL.qm;..\Translations\Acf_ru_RU.qm;..\Translations\Acf_de_DE.qm;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name AcfLoc ..\AcfLoc.qrc -o release\qrc_AcfLoc.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name AcfLoc ..\AcfLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\AcfLoc.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_AcfLoc.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\qrc_AcfLoc.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <None Include="..\Translations\Acf_de_DE.qm" />
     <None Include="..\Translations\Acf_en_US.qm" />

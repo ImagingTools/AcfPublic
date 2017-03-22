@@ -140,7 +140,7 @@ public:
 	CFastColor operator*(double value) const;
 	CFastColor operator/(double value) const;
 
-	const CFastColor& operator=(const CFastColor& color);
+	CFastColor& operator=(const CFastColor& color);
 
 	const CFastColor& operator+=(const CFastColor& color);
 	const CFastColor& operator-=(const CFastColor& color);
@@ -409,7 +409,7 @@ inline CFastColor CFastColor::operator/(double value) const
 }
 
 
-inline const CFastColor& CFastColor::operator=(const CFastColor& color)
+inline CFastColor& CFastColor::operator=(const CFastColor& color)
 {
 #ifdef COLOR_COMPONENTS_COUNT
 	m_elementsCount = color.m_elementsCount;

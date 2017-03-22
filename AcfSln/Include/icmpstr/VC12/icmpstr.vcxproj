@@ -344,12 +344,7 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CSceneProviderGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CVisualRegistryEditorComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\moc_CXpcEditorComp.cpp" />
-    <ClCompile Include="debug\qrc_icmpstr.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\qrc_icmpstr.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\qrc_icmpstr.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CAttributeEditorComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CComponentNoteEditorComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\ui_CConvertComponentCommandComp.h" />
@@ -499,13 +494,13 @@
     <CustomBuild Include="..\icmpstr.qrc">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\icmpstr.qrc;..\Resources\Icons\CompositeComponent.svg;..\Resources\Icons\Export.svg;..\Resources\Icons\MixedComponent.svg;..\Resources\Icons\NoteAttached.svg;..\Resources\Icons\ToEmbeddedComponent.svg;..\Resources\Icons\Import.svg;..\Resources\Icons\Anchor.svg;..\Resources\Icons\RealComponent.svg;..\Resources\Icons\ExportToCode.svg;..\Resources\Icons\EmbeddedComponent.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name icmpstr ..\icmpstr.qrc -o debug\qrc_icmpstr.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name icmpstr ..\icmpstr.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\qrc_icmpstr.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\icmpstr.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_icmpstr.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\qrc_icmpstr.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\icmpstr.qrc;..\Resources\Icons\CompositeComponent.svg;..\Resources\Icons\Export.svg;..\Resources\Icons\MixedComponent.svg;..\Resources\Icons\NoteAttached.svg;..\Resources\Icons\ToEmbeddedComponent.svg;..\Resources\Icons\Import.svg;..\Resources\Icons\Anchor.svg;..\Resources\Icons\RealComponent.svg;..\Resources\Icons\ExportToCode.svg;..\Resources\Icons\EmbeddedComponent.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name icmpstr ..\icmpstr.qrc -o release\qrc_icmpstr.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name icmpstr ..\icmpstr.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\qrc_icmpstr.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\icmpstr.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_icmpstr.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icmpstr\qrc_icmpstr.cpp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

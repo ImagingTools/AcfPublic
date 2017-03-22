@@ -101,7 +101,7 @@ private:
 	class LanguageSelectionObserver: public imod::TSingleModelObserverBase<iprm::ISelectionParam>
 	{
 	public:
-		LanguageSelectionObserver(CTranslationManagerComp& parent);
+		explicit LanguageSelectionObserver(CTranslationManagerComp& parent);
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)

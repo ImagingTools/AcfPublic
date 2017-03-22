@@ -297,12 +297,7 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\moc_CQuadrangleParamsGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\moc_CRectangleParamsGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\moc_CTubePolylineParamsGuiComp.cpp" />
-    <ClCompile Include="debug\qrc_iqt2d.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\qrc_iqt2d.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\qrc_iqt2d.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\ui_CAffineTransformationParamsGui.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\ui_CAnnulusParamsGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\ui_CAnnulusSegmentParamsGuiComp.h" />
@@ -464,13 +459,13 @@
     <CustomBuild Include="..\iqt2d.qrc">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\iqt2d.qrc;..\Resources\Icons\CircleAoi.svg;..\Resources\Icons\PolygonAoi.svg;..\Resources\Icons\OpenCloseLine.svg;..\Resources\Icons\FlipVertical.svg;..\Resources\Icons\Annulus.svg;..\Resources\Icons\AnnulusSegment.svg;..\Resources\Icons\Polygon.svg;..\Resources\Icons\FlipHorizontal.svg;..\Resources\Icons\AnnulusAoi.svg;..\Resources\Icons\Circle.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name iqt2d ..\iqt2d.qrc -o debug\qrc_iqt2d.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name iqt2d ..\iqt2d.qrc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\qrc_iqt2d.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\iqt2d.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_iqt2d.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\qrc_iqt2d.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\iqt2d.qrc;..\Resources\Icons\CircleAoi.svg;..\Resources\Icons\PolygonAoi.svg;..\Resources\Icons\OpenCloseLine.svg;..\Resources\Icons\FlipVertical.svg;..\Resources\Icons\Annulus.svg;..\Resources\Icons\AnnulusSegment.svg;..\Resources\Icons\Polygon.svg;..\Resources\Icons\FlipHorizontal.svg;..\Resources\Icons\AnnulusAoi.svg;..\Resources\Icons\Circle.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name iqt2d ..\iqt2d.qrc -o release\qrc_iqt2d.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name iqt2d ..\iqt2d.qrc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\qrc_iqt2d.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\iqt2d.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_iqt2d.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqt2d\qrc_iqt2d.cpp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

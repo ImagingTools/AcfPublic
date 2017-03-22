@@ -61,7 +61,7 @@ void CRegistryPropEditorComp::CreateOverview()
 
 			for (		icomp::IRegistry::ExportedInterfacesMap::const_iterator iter = exportedInterfaces.begin();
 						iter != exportedInterfaces.end();
-						iter++){
+						++iter){
 
 				QByteArray componentId = iter.value();
 				QByteArray exportId = iter.key();
@@ -87,7 +87,7 @@ void CRegistryPropEditorComp::CreateOverview()
 
 			for (		icomp::IRegistry::ExportedElementsMap::const_iterator iter = exportedComponents.begin();
 						iter != exportedComponents.end();
-						iter++){
+						++iter){
 
 				QByteArray componentId = iter.value();
 				QByteArray exportId = iter.key();

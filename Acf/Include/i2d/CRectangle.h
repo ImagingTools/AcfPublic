@@ -32,7 +32,6 @@
 #include <istd/CIndex2d.h>
 #include <iser/ISerializable.h>
 #include <i2d/CObject2dBase.h>
-#include <i2d/CLine2d.h>
 
 
 namespace i2d
@@ -40,6 +39,7 @@ namespace i2d
 
 
 class CRect;
+class CLine2d;
 
 
 /**

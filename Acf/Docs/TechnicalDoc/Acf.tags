@@ -298,7 +298,6 @@
     <includes id="_c_index2d_8h" name="CIndex2d.h" local="no" imported="no">istd/CIndex2d.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="no" imported="no">i2d/CObject2dBase.h</includes>
-    <includes id="_c_line2d_8h" name="CLine2d.h" local="no" imported="no">i2d/CLine2d.h</includes>
     <class kind="class">i2d::CRectangle</class>
     <namespace>i2d</namespace>
   </compound>
@@ -2398,6 +2397,26 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CTextFileLogComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_text_file_log_comp_8h</filename>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="no" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
+    <class kind="class">ifile::CTextFileLogComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextFileLogStreamerComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_text_file_log_streamer_comp_8h</filename>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
+    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
+    <class kind="class">ifile::CTextFileLogStreamerComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTimeStampFileNameParamComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_time_stamp_file_name_param_comp_8h</filename>
@@ -2974,26 +2993,6 @@
     <filename>_c_stream_log_comp_base_8h</filename>
     <includes id="_c_log_comp_base_8h" name="CLogCompBase.h" local="no" imported="no">ilog/CLogCompBase.h</includes>
     <class kind="class">ilog::CStreamLogCompBase</class>
-    <namespace>ilog</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTextFileLogComp.h</name>
-    <path>C:/Temp/Acf/Include/ilog/</path>
-    <filename>_c_text_file_log_comp_8h</filename>
-    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="no" imported="no">imod/CSingleModelObserverBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
-    <class kind="class">ilog::CTextFileLogComp</class>
-    <namespace>ilog</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTextFileLogStreamerComp.h</name>
-    <path>C:/Temp/Acf/Include/ilog/</path>
-    <filename>_c_text_file_log_streamer_comp_8h</filename>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
-    <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
-    <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
-    <class kind="class">ilog::CTextFileLogStreamerComp</class>
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
@@ -18947,10 +18946,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CCmy &amp;</type>
+      <type>CCmy &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_cmy.html</anchorfile>
-      <anchor>ae58f450cf80c7e77376e2ffc17e0bc9b</anchor>
+      <anchor>a40ee6ce3c54449f3370ed555204557e9</anchor>
       <arglist>(const CCmy &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -19666,10 +19665,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CCmyk &amp;</type>
+      <type>CCmyk &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_cmyk.html</anchorfile>
-      <anchor>a38759dfcdeb5ca75ae488bc3fa4e7864</anchor>
+      <anchor>acc9c359d613e6ded5d7b21ff4efa0104</anchor>
       <arglist>(const CCmyk &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -20171,10 +20170,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CFastColor &amp;</type>
+      <type>CFastColor &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_fast_color.html</anchorfile>
-      <anchor>a0dfb656197938730d1df68be148d5044</anchor>
+      <anchor>ab1ef433bd9eb6b5ba2159acef36bc986</anchor>
       <arglist>(const CFastColor &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -20722,10 +20721,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CHsv &amp;</type>
+      <type>CHsv &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_hsv.html</anchorfile>
-      <anchor>ae260414430e4fc888f44db46d60b3ab6</anchor>
+      <anchor>ace49d77191037699b6bd8e6c67b0b827</anchor>
       <arglist>(const CHsv &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -20942,10 +20941,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CLab &amp;</type>
+      <type>CLab &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_lab.html</anchorfile>
-      <anchor>af31692ef434e6dab1f661c415c1aa475</anchor>
+      <anchor>a6152afaef7ef39b44faeec7ddf45752e</anchor>
       <arglist>(const CLab &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -21143,10 +21142,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CRgb &amp;</type>
+      <type>CRgb &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_rgb.html</anchorfile>
-      <anchor>a68dd78faa7cc5cee92a1903bc3ad01bd</anchor>
+      <anchor>a794833048cf2ccf293e3f6066df8e8d7</anchor>
       <arglist>(const CRgb &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -21381,10 +21380,10 @@
       <arglist>(double value) const </arglist>
     </member>
     <member kind="function">
-      <type>const CVarColor &amp;</type>
+      <type>CVarColor &amp;</type>
       <name>operator=</name>
       <anchorfile>classicmm_1_1_c_var_color.html</anchorfile>
-      <anchor>a37906509c9aa61b39b382d8ecdf47cb2</anchor>
+      <anchor>a20ef0e875cbc1d8887ebabeff140854e</anchor>
       <arglist>(const CVarColor &amp;color)</arglist>
     </member>
     <member kind="function">
@@ -29397,6 +29396,8 @@
     <class kind="class">ifile::CSimpleXmlFileReadArchive</class>
     <class kind="class">ifile::CSimpleXmlFileWriteArchive</class>
     <class kind="class">ifile::CSystemLocationComp</class>
+    <class kind="class">ifile::CTextFileLogComp</class>
+    <class kind="class">ifile::CTextFileLogStreamerComp</class>
     <class kind="class">ifile::CTimeStampFileNameParamComp</class>
     <class kind="class">ifile::IFileArchiveInfo</class>
     <class kind="class">ifile::IFileListProvider</class>
@@ -32101,6 +32102,220 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifile::CTextFileLogComp</name>
+    <filename>classifile_1_1_c_text_file_log_comp.html</filename>
+    <base>ilog::CStreamLogCompBase</base>
+    <member kind="typedef">
+      <type>ilog::CStreamLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>aff6859b32660a8ea376894d2e3ba4c15</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>ad5213788e7550f9739087c4beb842c4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a9e7d8e4e790f90b1c9a9d319f8772dbb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QObject</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a518d369d3ee4ddbd2af1bb7ac379a40c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
+      <anchor>a2e55146441b763f0e7df74aa210fcd64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TSmartPtr&lt; const istd::IInformationProvider &gt;</type>
+      <name>MessagePtr</name>
+      <anchorfile>classilog_1_1_i_message_consumer.html</anchorfile>
+      <anchor>a23ac5d41df864166db9ddb457ea7058d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextFileLogComp</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ad996407e1858701c411d5964cb411ba0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CStreamLogCompBase</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>ac0a95326f3818aa505dda07f95bd24a7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::IInformationProvider::InformationCategory</type>
+      <name>GetWorseCategory</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>ac99a0f230d1b9df4483acdae5a6d9a9b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageSupported</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a42e4eb8bd6c0999495a3c910f19c5224</anchor>
+      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLogCompBase</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a776066d614f935f04008f4fedc96abdd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddMessage</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a0b35969938323e313be83d51ee13f483</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>abdefc2011dc2a240b237db11dda2f395</anchor>
+      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>a870ad0291d422c489b5055829b2ce677</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
+      <anchor>ac26ec2b439ee3b2eafb058aba1ea9462</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteMessageToStream</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a7d47ff00b092a70ca160dd744874cb0f</anchor>
+      <arglist>(const istd::IInformationProvider &amp;message)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GenerateMessageText</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a0f73e53f6074d88aac9a7fac950e5075</anchor>
+      <arglist>(const istd::IInformationProvider &amp;message) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteMessageToLog</name>
+      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
+      <anchor>a6a1af9b68b70ce793e194102b97a2e2b</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitAddMessage</name>
+      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
+      <anchor>a79c2b072401f11b61062918d54f6a2fd</anchor>
+      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::CTextFileLogStreamerComp</name>
+    <filename>classifile_1_1_c_text_file_log_streamer_comp.html</filename>
+    <base>ilog::CStreamLogCompBase</base>
+    <base>ifile::IFilePersistence</base>
+    <member kind="typedef">
+      <type>ilog::CStreamLogCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a8f51a0310e1acea1b4b9918919c68eb9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextFileLogStreamerComp</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a1ea316992ebde57a73dc43e25b106d5a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>ad782399bc1cd560d17336ce90523439f</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>af9a75d2a33922ad20bf64b002e5ff70a</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>ad50b99d47ad934cff09a2424ab230001</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a4e22582727bb577c4728434749db02f0</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>ad3c6c9be28396fee11b7b6a259c38f52</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WriteText</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a41fb39c8d07866ba1efb219f1ca4dfae</anchor>
+      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>af0a0e1fce9f0fbcd2e5a2d7370d1b60a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
+      <anchor>a6eee2e1f601f4e78fb7f4152897f9cfb</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifile::CTimeStampFileNameParamComp</name>
     <filename>classifile_1_1_c_time_stamp_file_name_param_comp.html</filename>
     <base>ifile::CRelativeFileNameParamComp</base>
@@ -33367,6 +33582,13 @@
       <anchor>a8db3d15f1269b9502782a28191195495</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileSystemExplorerGuiComp</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>aeac03a86f0f3dfc021028eb61b054dcb</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QStringList</type>
       <name>GetDefaultFilters</name>
@@ -33421,6 +33643,13 @@
       <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
       <anchor>ad334cae08d80140ad989549eb17c10ee</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CFileTreeViewGuiComp</name>
+      <anchorfile>classifilegui_1_1_c_file_tree_view_gui_comp.html</anchorfile>
+      <anchor>a7bd6be3ed731096497f17c41a0ceaf7d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -35970,8 +36199,6 @@
     <class kind="class">ilog::CMessage</class>
     <class kind="class">ilog::CMessageContainer</class>
     <class kind="class">ilog::CStreamLogCompBase</class>
-    <class kind="class">ilog::CTextFileLogComp</class>
-    <class kind="class">ilog::CTextFileLogStreamerComp</class>
     <class kind="class">ilog::ILoggable</class>
     <class kind="class">ilog::IMessageConsumer</class>
     <class kind="class">ilog::IMessageContainer</class>
@@ -36006,41 +36233,6 @@
       <anchor>af39ac15b4b11a22fbc2cfcb1694f8594</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>ilog::CLogCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>ad5213788e7550f9739087c4beb842c4e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::TMessageDelegatorComp&lt; icomp::CComponentBase &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
-      <anchor>a9e7d8e4e790f90b1c9a9d319f8772dbb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QObject</type>
-      <name>BaseClass2</name>
-      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
-      <anchor>a518d369d3ee4ddbd2af1bb7ac379a40c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_t_message_delegator_comp.html</anchorfile>
-      <anchor>a2e55146441b763f0e7df74aa210fcd64</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TSmartPtr&lt; const istd::IInformationProvider &gt;</type>
-      <name>MessagePtr</name>
-      <anchorfile>classilog_1_1_i_message_consumer.html</anchorfile>
-      <anchor>a23ac5d41df864166db9ddb457ea7058d</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>WriteText</name>
@@ -36050,73 +36242,10 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>WriteMessageToStream</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a7d47ff00b092a70ca160dd744874cb0f</anchor>
-      <arglist>(const istd::IInformationProvider &amp;message)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GenerateMessageText</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a0f73e53f6074d88aac9a7fac950e5075</anchor>
-      <arglist>(const istd::IInformationProvider &amp;message) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteMessageToLog</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a6a1af9b68b70ce793e194102b97a2e2b</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
       <anchor>a9f10811e49b682acf3fb777be6ac48f6</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>EmitAddMessage</name>
-      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
-      <anchor>a79c2b072401f11b61062918d54f6a2fd</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CStreamLogCompBase</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>ac0a95326f3818aa505dda07f95bd24a7</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>istd::IInformationProvider::InformationCategory</type>
-      <name>GetWorseCategory</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>ac99a0f230d1b9df4483acdae5a6d9a9b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsMessageSupported</name>
-      <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
-      <anchor>a42e4eb8bd6c0999495a3c910f19c5224</anchor>
-      <arglist>(int messageCategory=-1, int messageId=-1, const istd::IInformationProvider *messagePtr=NULL) const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CLogCompBase</name>
-      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
-      <anchor>a776066d614f935f04008f4fedc96abdd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddMessage</name>
-      <anchorfile>classilog_1_1_c_log_comp_base.html</anchorfile>
-      <anchor>a0b35969938323e313be83d51ee13f483</anchor>
-      <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36827,122 +36956,6 @@
       <anchorfile>classilog_1_1_c_stream_log_comp_base.html</anchorfile>
       <anchor>af7436f5fed401c44edef50b23c45817a</anchor>
       <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ilog::CTextFileLogComp</name>
-    <filename>classilog_1_1_c_text_file_log_comp.html</filename>
-    <base>ilog::CStreamLogCompBase</base>
-    <member kind="typedef">
-      <type>CStreamLogCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a54c23724021864e670e6b9885191c6e3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTextFileLogComp</name>
-      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>ac30bd25eb2212388ab11ecdfe71a0ed5</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteText</name>
-      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a5e683c387a4ff28ed4bb199bfed6f196</anchor>
-      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>ab1c7ca004aa23f75005b4d02d807cd08</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classilog_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>ad8ccde9f1e71cd539cd0a9c8326e6219</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ilog::CTextFileLogStreamerComp</name>
-    <filename>classilog_1_1_c_text_file_log_streamer_comp.html</filename>
-    <base>ilog::CStreamLogCompBase</base>
-    <base>ifile::IFilePersistence</base>
-    <member kind="typedef">
-      <type>CStreamLogCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a03eec54d37c32fe0a868b23f3dc1fabb</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTextFileLogStreamerComp</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>aa8a156d1ed5f6bfc9bb70cbfbb8be896</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>af956e3e965fa41d1b976a36638b4e9da</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a87684a3c2060d2587a48819245485a59</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>ad3086f82793552a1163174b5d222968c</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a5107695f7f80838aa364e93034564638</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a16e4fbc0896e1631ff2401793b709180</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WriteText</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>aa351582cbc0c619c7418be45cde10570</anchor>
-      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>ab4b645c84939f380fcc0bc5f48567c21</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classilog_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a7e520ce2e041e13f7af751c582e352a5</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -56927,6 +56940,34 @@
       <anchor>acd265036ca5efac1498c2abe28d89e70</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CMultiParamsManagerGuiComp</name>
+      <anchorfile>classiqtprm_1_1_c_multi_params_manager_gui_comp.html</anchorfile>
+      <anchor>a6527cb4a18af65166e436ce1a2e085cd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CParamsManagerGuiCompBase</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>ac6c19b8ea97872a572d9eceeaae52c0b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a16969fb83b7cf4a305098bd7ab17b466</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a273c46617d34bd3cc8b669484b7b0494</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual imod::IObserver *</type>
       <name>GetObserverPtr</name>
@@ -57045,27 +57086,6 @@
       <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
       <anchor>a85f17ee4134f6b9f683e635c3bf73659</anchor>
       <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CParamsManagerGuiCompBase</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
-      <anchor>ac6c19b8ea97872a572d9eceeaae52c0b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AddItemsToScene</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
-      <anchor>a16969fb83b7cf4a305098bd7ab17b466</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>RemoveItemsFromScene</name>
-      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
-      <anchor>a273c46617d34bd3cc8b669484b7b0494</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -57919,6 +57939,13 @@
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>af5ad10b570faa651f7ee4f4c7dd6b595</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSelectionParamGuiComp</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a2e6e13b2521af715c064c90808b5421f</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -66021,13 +66048,6 @@
       <anchor>aa4950e57de117dc0e495b7685edc40d9</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="variable" protection="protected">
-      <type>i2d::CVector2d</type>
-      <name>m_referencePosition</name>
-      <anchorfile>classiview_1_1_c_center_pin_shape.html</anchorfile>
-      <anchor>a28d5a62627926ff36f68e60d83c786f7</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iview::CCircleShape</name>
@@ -73998,6 +74018,8 @@
     <file>CSimpleXmlFileReadArchive.h</file>
     <file>CSimpleXmlFileWriteArchive.h</file>
     <file>CSystemLocationComp.h</file>
+    <file>CTextFileLogComp.h</file>
+    <file>CTextFileLogStreamerComp.h</file>
     <file>CTimeStampFileNameParamComp.h</file>
     <file>ifile.h</file>
     <file>IFileArchiveInfo.h</file>
@@ -74066,8 +74088,6 @@
     <file>CMessage.h</file>
     <file>CMessageContainer.h</file>
     <file>CStreamLogCompBase.h</file>
-    <file>CTextFileLogComp.h</file>
-    <file>CTextFileLogStreamerComp.h</file>
     <file>ilog.h</file>
     <file>ILoggable.h</file>
     <file>IMessageConsumer.h</file>

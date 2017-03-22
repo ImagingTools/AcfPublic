@@ -24,6 +24,14 @@
 #define iwidgets_CWidgetUpdateBlocker_included
 
 
+// Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QWidget>
+#else
+#include <QtGui/QWidget>
+#endif
+
 
 namespace iwidgets
 {
@@ -35,7 +43,7 @@ namespace iwidgets
 class CWidgetUpdateBlocker
 {
 public:
-	CWidgetUpdateBlocker(QWidget* widgetPtr);
+	explicit CWidgetUpdateBlocker(QWidget* widgetPtr);
 	~CWidgetUpdateBlocker();
 
 private:

@@ -92,7 +92,7 @@ protected:
 	public:
 		typedef RefCountBase BaseClass;
 
-		RefCounter(Type* pointer)
+		explicit RefCounter(Type* pointer)
 		:	BaseClass(pointer),
 			m_count(1),
 			m_lock(QMutex::Recursive)

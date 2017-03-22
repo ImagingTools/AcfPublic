@@ -59,10 +59,10 @@ void CAboutWidgetGuiComp::OnGuiRetranslate()
 	if (m_applicationInfoCompPtr.IsValid()){
 		const iser::IVersionInfo& versionInfo = m_applicationInfoCompPtr->GetVersionInfo();
 
-		quint32 mainVersionNumber;
-
 		int mainVersionId = m_applicationInfoCompPtr->GetMainVersionId();
 		if (mainVersionId >= 0){
+			quint32 mainVersionNumber;
+
 			if (versionInfo.GetVersionNumber(mainVersionId, mainVersionNumber)){
 				mainVersionText = versionInfo.GetEncodedVersionName(mainVersionId, mainVersionNumber);
 			}

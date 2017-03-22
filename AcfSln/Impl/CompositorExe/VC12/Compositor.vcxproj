@@ -150,24 +150,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Compositor\CCompositor.cpp" />
-    <ClCompile Include="debug\qrc_Compositor.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\qrc_Compositor.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Compositor\qrc_Compositor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\Compositor.qrc">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\Compositor.qrc;..\Resources\Icons\CompositorIcon.svg;..\Resources\Images\CompositorLogo.svg;..\Resources\Images\CompositorSplashScreen.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name Compositor ..\Compositor.qrc -o debug\qrc_Compositor.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name Compositor ..\Compositor.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Compositor\qrc_Compositor.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\Compositor.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_Compositor.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Compositor\qrc_Compositor.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\Compositor.qrc;..\Resources\Icons\CompositorIcon.svg;..\Resources\Images\CompositorLogo.svg;..\Resources\Images\CompositorSplashScreen.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name Compositor ..\Compositor.qrc -o release\qrc_Compositor.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name Compositor ..\Compositor.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Compositor\qrc_Compositor.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\Compositor.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_Compositor.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Compositor\qrc_Compositor.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <None Include="..\Resources\Icons\CompositorIcon.svg" />
     <None Include="..\Resources\Images\CompositorLogo.svg" />

@@ -115,7 +115,7 @@ public:
 	CVarColor operator*(double value) const;
 	CVarColor operator/(double value) const;
 
-	const CVarColor& operator=(const CVarColor& color);
+	CVarColor& operator=(const CVarColor& color);
 
 	const CVarColor& operator+=(const CVarColor& color);
 	const CVarColor& operator-=(const CVarColor& color);

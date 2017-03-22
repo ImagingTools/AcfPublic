@@ -138,7 +138,7 @@ void CSingletonDocApplicationComp::OnComponentCreated()
 		if (!m_processDataPtr->attach()){
 			if (m_processDataPtr->create(sizeof(RunningProcessInfo))){
 				if (m_processDataPtr->lock()){
-					RunningProcessInfo* dataPtr = (RunningProcessInfo*)m_processDataPtr->data();
+					RunningProcessInfo* dataPtr = static_cast<RunningProcessInfo*>(m_processDataPtr->data());
 					if (dataPtr != NULL){
 						dataPtr->processId = QCoreApplication::applicationPid();
 					}
@@ -148,7 +148,7 @@ void CSingletonDocApplicationComp::OnComponentCreated()
 			}
 		}
 		else{
-			RunningProcessInfo* dataPtr = (RunningProcessInfo*)(m_processDataPtr->data());
+			RunningProcessInfo* dataPtr = static_cast<RunningProcessInfo*>(m_processDataPtr->data());
 			if (dataPtr->processId == 0){
 				dataPtr->processId = QCoreApplication::applicationPid();
 			}
@@ -174,7 +174,7 @@ void CSingletonDocApplicationComp::OnComponentDestroyed()
 	EnsureModelDetached();
 
 	if (m_processDataPtr->isAttached()){
-		RunningProcessInfo* dataPtr = (RunningProcessInfo*)m_processDataPtr->data();
+		RunningProcessInfo* dataPtr = static_cast<RunningProcessInfo*>(m_processDataPtr->data());
 		if (dataPtr->processId == QCoreApplication::applicationPid()){
 			dataPtr->processId = 0;
 		}
@@ -191,7 +191,7 @@ void CSingletonDocApplicationComp::ShareDocumentsForOpening(int argc, char** arg
 {
 	// Set the list of documents need to be open by the document manager:
 	if (m_processDataPtr->lock()){
-		RunningProcessInfo* dataPtr = (RunningProcessInfo*)m_processDataPtr->data();
+		RunningProcessInfo* dataPtr = static_cast<RunningProcessInfo*>(m_processDataPtr->data());
 		if (dataPtr != NULL){
 			memset(dataPtr->requestedDocuments, 0, sizeof(dataPtr->requestedDocuments));
 
@@ -218,7 +218,7 @@ QStringList CSingletonDocApplicationComp::PopDocumentsForOpening() const
 
 	// Set the list of documents need to be open by the document manager:
 	if (m_processDataPtr->lock()){
-		RunningProcessInfo* dataPtr = (RunningProcessInfo*)m_processDataPtr->data();
+		RunningProcessInfo* dataPtr = static_cast<RunningProcessInfo*>(m_processDataPtr->data());
 		if (dataPtr != NULL){
 			for (int documentIndex = 0; documentIndex < MAX_DOCUMENTS_COUNT; ++documentIndex){
 				QString filePath(dataPtr->requestedDocuments[documentIndex]);

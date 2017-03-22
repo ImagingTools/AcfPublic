@@ -46,7 +46,7 @@ public:
 	int GetLastReadLine() const;
 
 protected:
-	CXmlStreamReadArchiveBase(const CArchiveTag& rootTag = s_acfRootTag);
+	explicit CXmlStreamReadArchiveBase(const CArchiveTag& rootTag = s_acfRootTag);
 
 	// reimplemented (iser::CXmlReadArchiveBase)
 	virtual bool ReadToDelimeter(

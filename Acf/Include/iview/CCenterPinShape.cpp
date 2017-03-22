@@ -37,8 +37,6 @@ namespace iview
 
 
 CCenterPinShape::CCenterPinShape()
-	:m_referencePosition(0.0, 0.0)
-
 {
 }
 

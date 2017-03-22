@@ -135,7 +135,7 @@ void CModelProxy::AttachProxyObservers()
 
 	for (		Observers::iterator index = m_proxyObservers.begin();
 				index != m_proxyObservers.end();
-				index++){
+				++index){
 		imod::IObserver* observerPtr = (*index).m_observerPtr;
 		if (!m_modelPtr->IsAttached(observerPtr)){
 			if (m_modelPtr->AttachObserver(observerPtr)){
@@ -155,7 +155,7 @@ void CModelProxy::DetachProxyObservers()
 
 	for (		Observers::iterator index = m_proxyObservers.begin();
 				index != m_proxyObservers.end();
-				index++){
+				++index){
 		imod::IObserver* observerPtr = (*index).m_observerPtr;
 
 		if (modelPtr->IsAttached(observerPtr)){

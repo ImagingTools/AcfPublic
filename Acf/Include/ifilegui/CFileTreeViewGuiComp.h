@@ -84,6 +84,8 @@ public:
 		DR_ISDIR
 	};
 
+	CFileTreeViewGuiComp();
+
 protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
@@ -158,7 +160,7 @@ private:
 	class InternalThread: public QThread
 	{
 	public:
-		InternalThread(CFileTreeViewGuiComp* parentPtr): QThread(parentPtr),
+		explicit InternalThread(CFileTreeViewGuiComp* parentPtr): QThread(parentPtr),
 			m_parentPtr(parentPtr)
 		{
 		}
@@ -177,7 +179,6 @@ private:
 	InternalThread* m_internalThreadPtr;
 
 	QMutex m_lock;
-
 
 	bool m_fileModelUpdateAllowed;
 	int m_filesCount;

@@ -57,7 +57,7 @@ class CExtLineEdit: public QLineEdit
 public:
 	typedef QLineEdit BaseClass;
 
-	CExtLineEdit(QWidget* parent = NULL);
+	explicit CExtLineEdit(QWidget* parent = NULL);
 
 	/**
 		Construct a line edit with the given properties.

@@ -136,6 +136,8 @@
     <ClCompile Include="..\CSimpleXmlFileReadArchive.cpp" />
     <ClCompile Include="..\CSimpleXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\CSystemLocationComp.cpp" />
+    <ClCompile Include="..\CTextFileLogComp.cpp" />
+    <ClCompile Include="..\CTextFileLogStreamerComp.cpp" />
     <ClCompile Include="..\CTimeStampFileNameParamComp.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -188,6 +190,8 @@
     <ClInclude Include="..\CSimpleXmlFileReadArchive.h" />
     <ClInclude Include="..\CSimpleXmlFileWriteArchive.h" />
     <ClInclude Include="..\CSystemLocationComp.h" />
+    <ClInclude Include="..\CTextFileLogComp.h" />
+    <ClInclude Include="..\CTextFileLogStreamerComp.h" />
     <ClInclude Include="..\CTimeStampFileNameParamComp.h" />
     <ClInclude Include="..\IFileArchiveInfo.h" />
     <ClInclude Include="..\IFileListProvider.h" />

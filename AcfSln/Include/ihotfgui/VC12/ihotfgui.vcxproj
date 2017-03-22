@@ -157,12 +157,7 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\moc_CDirectoryMonitorComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\moc_CDirectoryMonitorParamsGui.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\moc_CFileNamingParamsGuiComp.cpp" />
-    <ClCompile Include="debug\qrc_ihotfgui.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
-    <ClCompile Include="release\qrc_ihotfgui.cpp">
-      <ExcludedFromBuild Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</ExcludedFromBuild>
-    </ClCompile>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\qrc_ihotfgui.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\ui_CDirectoryMonitorParamsGui.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\ui_CFileNamingParamsGuiComp.h" />
   </ItemGroup>
@@ -196,13 +191,13 @@
     <CustomBuild Include="..\ihotfgui.qrc">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\ihotfgui.qrc;..\Resources\Icons\HotfolderSettings.svg;..\Resources\Icons\Hotfolder.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name ihotfgui ..\ihotfgui.qrc -o debug\qrc_ihotfgui.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name ihotfgui ..\ihotfgui.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\qrc_ihotfgui.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\ihotfgui.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">debug\qrc_ihotfgui.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\qrc_ihotfgui.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\ihotfgui.qrc;..\Resources\Icons\HotfolderSettings.svg;..\Resources\Icons\Hotfolder.svg;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name ihotfgui ..\ihotfgui.qrc -o release\qrc_ihotfgui.cpp</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name ihotfgui ..\ihotfgui.qrc -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\qrc_ihotfgui.cpp</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\ihotfgui.qrc</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">release\qrc_ihotfgui.cpp;%(Outputs)</Outputs>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ihotfgui\qrc_ihotfgui.cpp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

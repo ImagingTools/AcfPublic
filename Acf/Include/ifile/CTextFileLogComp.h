@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef ilog_CTextFileLogStreamerComp_included
-#define ilog_CTextFileLogStreamerComp_included
+#ifndef ifile_CTextFileLogComp_included
+#define ifile_CTextFileLogComp_included
 
 
 // Qt includes
@@ -29,50 +29,32 @@
 #include <QtCore/QTextStream>
 
 // ACF includes
+#include <imod/CSingleModelObserverBase.h>
 #include <ifile/IFileNameParam.h>
-#include <ifile/IFilePersistence.h>
 #include <ilog/CStreamLogCompBase.h>
 
 
-namespace ilog
+namespace ifile
 {
 
 
 /**
 	Message container displaying messages as log list.
+
+	\ingroup Logging
 */
-class CTextFileLogStreamerComp: 
-			public CStreamLogCompBase,
-			public ifile::IFilePersistence
+class CTextFileLogComp: public ilog::CStreamLogCompBase
 {
 public:
-	typedef CStreamLogCompBase BaseClass;
+	typedef ilog::CStreamLogCompBase BaseClass;
 
-	I_BEGIN_COMPONENT(CTextFileLogStreamerComp);
-		I_REGISTER_INTERFACE(ifile::IFilePersistence);
+	I_BEGIN_COMPONENT(CTextFileLogComp);
+		I_ASSIGN(m_fileNameCompPtr, "LogFile", "Name of the log file", true, "LogFile");
+		I_ASSIGN_TO(m_fileNameModelCompPtr, m_fileNameCompPtr, true);
 		I_ASSIGN(m_isAppendAttrPtr, "AppendToExisting", "Don't overwrite existing log file", true, false);
 	I_END_COMPONENT;
 
-	CTextFileLogStreamerComp();
-
-	// reimplemented (ifile::IFilePersistence)
-	virtual bool IsOperationSupported(
-		const istd::IChangeable* dataObjectPtr,
-		const QString* filePathPtr = NULL,
-		int flags = -1,
-		bool beQuiet = true) const;
-	virtual int LoadFromFile(
-				istd::IChangeable& data,
-				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const;
-	virtual int SaveToFile(
-				const istd::IChangeable& data,
-				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const;
-
-	// reimplemented (ifile::IFileTypeInfo)
-	virtual bool GetFileExtensions(QStringList& result, const istd::IChangeable* dataObjectPtr = NULL, int flags = -1, bool doAppend = false) const;
-	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const;
+	CTextFileLogComp();
 
 protected:
 	// reimplemented (CStreamLogCompBase)
@@ -83,20 +65,41 @@ protected:
 	virtual void OnComponentDestroyed();
 
 private:
-	bool OpenFileStream(const QString& filePath);
+	void OpenFileStream();
 	void CloseFileStream();
 
 private:
+	I_REF(ifile::IFileNameParam, m_fileNameCompPtr);
+	I_REF(imod::IModel, m_fileNameModelCompPtr);
 	I_ATTR(bool, m_isAppendAttrPtr);
 
-	mutable QFile m_outputFile;
-	mutable QTextStream m_outputFileStream;
+	QFile m_outputFile;
+	QTextStream m_outputFileStream;
+
+	class FilePathObserver: public imod::CSingleModelObserverBase
+	{
+	public:
+		typedef imod::CSingleModelObserverBase BaseClass;
+
+		explicit FilePathObserver(CTextFileLogComp& parent);
+
+	protected:
+		// reimplemented (imod::CSingleModelObserverBase)
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
+
+	private:
+		CTextFileLogComp& m_parent;
+	};
+
+	FilePathObserver m_filePathObserver;
+
+	QMutex m_mutex;
 };
 
 
-} // namespace ilog
+} // namespace ifile
 
 
-#endif // !ilog_CTextFileLogStreamerComp_included
+#endif // !ifile_CTextFileLogComp_included
 
 

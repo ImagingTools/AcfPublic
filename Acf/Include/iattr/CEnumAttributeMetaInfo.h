@@ -49,7 +49,7 @@ class CEnumAttributeMetaInfo:
 public:
 	typedef CAttributeMetaInfo BaseClass;
 
-	CEnumAttributeMetaInfo(const QByteArray& typeId = "");
+	explicit CEnumAttributeMetaInfo(const QByteArray& typeId = "");
 
 	void SetOtherValueAllowed(bool state);
 	/**

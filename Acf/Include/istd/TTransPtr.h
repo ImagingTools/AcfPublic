@@ -99,7 +99,7 @@ protected:
 	public:
 		typedef TPointerBase<Type> BaseClass;
 
-		RefCountBase(Type* pointer)
+		explicit RefCountBase(Type* pointer)
 		:	BaseClass(pointer)
 		{
 			Q_ASSERT(pointer != NULL);

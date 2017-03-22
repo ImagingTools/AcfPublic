@@ -42,8 +42,8 @@ class CSampledFunction2d: virtual public ISampledFunction2d
 public:
 	CSampledFunction2d();
 	CSampledFunction2d(const CSampledFunction2d& function2d);
-	CSampledFunction2d(const imath::ISampledFunction2d& function2d);
-	CSampledFunction2d(const istd::CIndex2d& size, double defaultValue = 0);
+	explicit CSampledFunction2d(const imath::ISampledFunction2d& function2d);
+	explicit CSampledFunction2d(const istd::CIndex2d& size, double defaultValue = 0);
 
 	void Reset();
 	bool CreateGrid2d(const istd::CIndex2d& size, double defaultValue = 0);

@@ -121,8 +121,6 @@
     <ClCompile Include="..\CMessage.cpp" />
     <ClCompile Include="..\CMessageContainer.cpp" />
     <ClCompile Include="..\CStreamLogCompBase.cpp" />
-    <ClCompile Include="..\CTextFileLogComp.cpp" />
-    <ClCompile Include="..\CTextFileLogStreamerComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CConsoleLogComp.h" />
@@ -141,8 +139,6 @@
     <ClInclude Include="..\CMessage.h" />
     <ClInclude Include="..\CMessageContainer.h" />
     <ClInclude Include="..\CStreamLogCompBase.h" />
-    <ClInclude Include="..\CTextFileLogComp.h" />
-    <ClInclude Include="..\CTextFileLogStreamerComp.h" />
     <ClInclude Include="..\ILoggable.h" />
     <ClInclude Include="..\IMessageConsumer.h" />
     <ClInclude Include="..\IMessageContainer.h" />
