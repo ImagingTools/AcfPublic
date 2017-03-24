@@ -118,6 +118,9 @@ private:
 	QMenu* m_menuPtr;
 	QAbstractButton* m_menuButtonPtr;
 
+	typedef QSet<QAction*> Actions;
+	Actions m_toolBarActions;
+
 	I_REF(imath::IUnitInfo, m_defaultUnitInfoCompPtr);
 	I_REF(iview::IColorSchema, m_colorSchemaCompPtr);
 	I_ATTR(bool, m_fixedPositionAttrPtr);
@@ -345,9 +348,14 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelAttachedAndGuiShown(
 
 	QToolBar* toolBarPtr = GetToolBar();
 	if (toolBarPtr != NULL){
-		toolBarPtr->clear();
+		// get actual toolbar actions
+		QSet<QAction*> oldActions = toolBarPtr->actions().toSet();
 
 		if (PopulateActions(*toolBarPtr, modelPtr)){
+			// store added actions
+			QSet<QAction*> newActions = toolBarPtr->actions().toSet();
+			m_toolBarActions = newActions - oldActions;
+
 			toolBarPtr->setVisible(true);
 
 			// connect toolbar signals ONLY if there is no menu
@@ -358,7 +366,6 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelAttachedAndGuiShown(
 		}
 		else{
 			toolBarPtr->disconnect();
-			toolBarPtr->hide();
 		}
 	}
 }
@@ -374,7 +381,13 @@ void TShapeParamsGuiCompBase<Ui, Shape, ShapeModel>::OnModelDetachedOrGuiHidden(
 	QToolBar* toolBarPtr = GetToolBar();
 	if (toolBarPtr){
 		toolBarPtr->disconnect();
-		toolBarPtr->hide();
+
+		// depopulate stored actions
+		for (Actions::ConstIterator iter = m_toolBarActions.constBegin(); iter != m_toolBarActions.constEnd(); ++iter){
+			toolBarPtr->removeAction(*iter);
+		}
+
+		m_toolBarActions.clear();
 	}
 }
 

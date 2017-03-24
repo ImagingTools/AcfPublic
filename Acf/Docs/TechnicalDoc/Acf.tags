@@ -33719,6 +33719,13 @@
       <anchor>a9c8fbf9e5eedcf59a562d8a9ae92f037</anchor>
       <arglist>(const QString &amp;text)</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_PathEdit_editingFinished</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>ab8f61994665282a74465947d4d649e58</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
