@@ -83,6 +83,7 @@
 #include <iipr/CProjectionSupplierComp.h>
 #include <iipr/CAdaptiveImageBinarizeProcessorComp.h>
 #include <iipr/CHoughLineFinderComp.h>
+#include <iipr/CHoughLineFromPosFinderComp.h>
 #include <iipr/CCheckboardCalibSupplierComp.h>
 #include <iipr/CMultiPointPosCorrSupplierComp.h>
 #include <iipr/CLensCorrFindSupplierComp.h>
@@ -158,6 +159,7 @@ typedef iipr::CImageNormalizeProcessorComp ImageNormalizeProcessor;
 typedef icomp::TModelCompWrap<iipr::CProjectionSupplierComp> ProjectionSupplier;
 typedef iipr::CAdaptiveImageBinarizeProcessorComp AdaptiveImageBinarizeProcessor;
 typedef iipr::CHoughLineFinderComp HoughLineFinder;
+typedef iipr::CHoughLineFromPosFinderComp HoughLineFromPosFinder;
 typedef icomp::TModelCompWrap<iipr::CCheckboardCalibSupplierComp> CheckboardCalibSupplier;
 typedef icomp::TModelCompWrap<iipr::CMultiPointPosCorrSupplierComp> MultiPointPosCorrSupplier;
 typedef icomp::TModelCompWrap<iipr::CLensCorrFindSupplierComp> LensCorrFindSupplier;

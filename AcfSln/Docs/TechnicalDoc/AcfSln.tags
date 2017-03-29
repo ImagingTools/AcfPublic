@@ -1506,6 +1506,18 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CHoughLineFromPosFinderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_hough_line_from_pos_finder_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="no" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">iipr/CHoughSpace2d.h</includes>
+    <includes id="_i_feature_to_feature_processor_8h" name="IFeatureToFeatureProcessor.h" local="no" imported="no">iipr/IFeatureToFeatureProcessor.h</includes>
+    <class kind="class">iipr::CHoughLineFromPosFinderComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHoughSpace2d.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_hough_space2d_8h</filename>
@@ -16950,6 +16962,7 @@
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
     <class kind="class">iipr::CHoughLineFinderComp</class>
+    <class kind="class">iipr::CHoughLineFromPosFinderComp</class>
     <class kind="class">iipr::CHoughSpace2d</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CImageCopyProcessorComp</class>
@@ -19665,17 +19678,17 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
-      <anchor>a64dda8fc594332fef94dd5ff174176fe</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
       <name>DoExtractFeatures</name>
       <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
       <anchor>a7a93822536dca1a45e6df2957eb11ad5</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
+      <anchor>a64dda8fc594332fef94dd5ff174176fe</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -19696,6 +19709,103 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_hough_line_finder_comp.html</anchorfile>
       <anchor>abb63b83f5fd37ef71482140fa39b3c26</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CHoughLineFromPosFinderComp</name>
+    <filename>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>TSyncProcessorWrap&lt; IFeatureToFeatureProcessor &gt;</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a1e0fc1e147bb4c36fa62d8517837305e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>FOUND_LINE</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a1e0fc1e147bb4c36fa62d8517837305ead0fdc84ac32a4c4aa19a96126b2f77a4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>HOUGH_SPACE</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a1e0fc1e147bb4c36fa62d8517837305eabbcaba7060cfb1672abf073f634eed89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QList&lt; i2d::CLine2d &gt;</type>
+      <name>Lines</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a3d8559d3cb403343e550d83d1b6c3995</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a9f559a20e045fafec9ab0d3b60ff2424</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoConvertFeatures</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>aaef75f7aa0a44d554678b3558c0fd3e2</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const IFeaturesProvider &amp;container, IFeaturesConsumer &amp;results)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a0549bf6bf51dbb80db98819d3ca39cc5</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>FindLines</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a3c0be8547661331b59a1e0d6d7e65e0d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, int maxLines, const i2d::CPolypoint &amp;points, IFeaturesConsumer &amp;results)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a2c91328618f4073a2a2ff4d89df19cf6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CVector2d</type>
+      <name>CalcHoughPos</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a9e103c4fa2a46a5671e2cf9ceebf2965</anchor>
+      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>i2d::CLine2d</type>
+      <name>CalcCorrespondingLine</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>ad2e991ff724a704337e1ef662afe8ec9</anchor>
+      <arglist>(const i2d::CVector2d &amp;houghPos) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateHoughSpace</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a9c1abc20adfaaa35de4efd6ec1c97101</anchor>
+      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</anchorfile>
+      <anchor>a3e65634120394db5b0147f4316aad30d</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -33194,6 +33304,7 @@
     <file>CFeaturesContainer.h</file>
     <file>CFeatureToImageMapperProcessorComp.h</file>
     <file>CHoughLineFinderComp.h</file>
+    <file>CHoughLineFromPosFinderComp.h</file>
     <file>CHoughSpace2d.h</file>
     <file>CImageBinarizeProcessorComp.h</file>
     <file>CImageCopyProcessorComp.h</file>

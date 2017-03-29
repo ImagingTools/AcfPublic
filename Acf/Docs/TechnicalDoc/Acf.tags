@@ -9272,6 +9272,20 @@
       <arglist>(const CDirection2d &amp;direction)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CDirection2d</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>ad03872c961aaa3128ea9c62f6cb94b33</anchor>
+      <arglist>(double radian)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDirection2d</name>
+      <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>
+      <anchor>ae19206d55e675399230d135712731f88</anchor>
+      <arglist>(const CVector2d &amp;direction)</arglist>
+    </member>
+    <member kind="function">
       <type>double</type>
       <name>ToDegree</name>
       <anchorfile>classi2d_1_1_c_direction2d.html</anchorfile>

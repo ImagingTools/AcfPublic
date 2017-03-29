@@ -143,6 +143,7 @@
     <ClCompile Include="..\CFeatureToImageMapperProcessorComp.cpp" />
     <ClCompile Include="..\CFeaturesContainer.cpp" />
     <ClCompile Include="..\CHoughLineFinderComp.cpp" />
+    <ClCompile Include="..\CHoughLineFromPosFinderComp.cpp" />
     <ClCompile Include="..\CHoughSpace2d.cpp" />
     <ClCompile Include="..\CImageBinarizeProcessorComp.cpp" />
     <ClCompile Include="..\CImageCopyProcessorComp.cpp" />
@@ -215,6 +216,7 @@
     <ClInclude Include="..\CFeatureToImageMapperProcessorComp.h" />
     <ClInclude Include="..\CFeaturesContainer.h" />
     <ClInclude Include="..\CHoughLineFinderComp.h" />
+    <ClInclude Include="..\CHoughLineFromPosFinderComp.h" />
     <ClInclude Include="..\CHoughSpace2d.h" />
     <ClInclude Include="..\CImageBinarizeProcessorComp.h" />
     <ClInclude Include="..\CImageCopyProcessorComp.h" />
