@@ -19802,6 +19802,20 @@
       <arglist>(const i2d::CVector2d &amp;position, i2d::CVector2d &amp;result) const </arglist>
     </member>
     <member kind="function">
+      <type>double</type>
+      <name>GetDistance</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>addb67d0a8ff9bd408bb01af890bf1e77</anchor>
+      <arglist>(const i2d::CVector2d &amp;position1, const i2d::CVector2d &amp;position2) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDistance2</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a72df4ebf2532c81ca14407cab2446b11</anchor>
+      <arglist>(const i2d::CVector2d &amp;position1, const i2d::CVector2d &amp;position2) const </arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>CalcSpaceMin</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
