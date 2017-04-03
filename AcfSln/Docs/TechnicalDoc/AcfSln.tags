@@ -5426,8 +5426,8 @@
       <type>virtual bool</type>
       <name>CalculateBlobs</name>
       <anchorfile>classiblob_1_1_c_blob_processor_comp_base.html</anchorfile>
-      <anchor>a58ed540e30fb0e0df9ed676724b11606</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)=0</arglist>
+      <anchor>a988088ccf1d91a7d2f407f77d294905b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const i2d::IObject2d *aoiPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)=0</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static bool</type>
@@ -5480,8 +5480,8 @@
       <type>virtual bool</type>
       <name>CalculateBlobs</name>
       <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
-      <anchor>a41987d6ddf537fc7d60b1d538866feb3</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)</arglist>
+      <anchor>a97c0a3b10dd3ef7afd53fc373c27d282</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const i2d::IObject2d *aoiPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22382,6 +22382,13 @@
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
       <anchor>adad5c951f9d5be363e0c717ee2f55a4e</anchor>
       <arglist>(ProductType &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual iproc::IProcessor *</type>
+      <name>GetImageProcessor</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a89ff3fadebc4492717087ad680bac95b</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>

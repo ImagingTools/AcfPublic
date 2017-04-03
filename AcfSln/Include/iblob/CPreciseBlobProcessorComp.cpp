@@ -376,6 +376,7 @@ bool CPreciseBlobProcessorComp::DoCalculateBlobs(
 bool CPreciseBlobProcessorComp::CalculateBlobs(
 			const iprm::IParamsSet* paramsPtr,
 			const iblob::IBlobFilterParams* filterParamsPtr,
+			const i2d::IObject2d* aoiPtr,
 			const iimg::IBitmap& image,
 			iipr::IFeaturesConsumer& result)
 {
@@ -384,11 +385,10 @@ bool CPreciseBlobProcessorComp::CalculateBlobs(
 	i2d::CRect clipArea(imageSize);
 
 	iimg::CScanlineMask imageMask;
-	iprm::TParamsPtr<i2d::IObject2d> aoiObjectPtr(paramsPtr, m_aoiParamIdAttrPtr, m_defaultAoiCompPtr, false);
-	if (aoiObjectPtr.IsValid()){
+	if (aoiPtr != NULL){
 		imageMask.SetCalibration(image.GetCalibration());
 
-		if (!imageMask.CreateFromGeometry(*aoiObjectPtr.GetPtr(), &clipArea)){
+		if (!imageMask.CreateFromGeometry(*aoiPtr, &clipArea)){
 			SendErrorMessage(0, QObject::tr("AOI type is not supported"));
 
 			return false;
