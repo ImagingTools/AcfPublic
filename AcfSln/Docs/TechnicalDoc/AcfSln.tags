@@ -20063,8 +20063,8 @@
       <type>static bool</type>
       <name>CropImage</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
-      <anchor>a01e154067d40aa2cc45f9e5e6d57a583</anchor>
-      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, int interpolationMode=IM_LINEAR, int orientationMode=OM_SIMPLE)</arglist>
+      <anchor>a9d27d55bdd3781ead3aa14ff6e4a7b1f</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, int interpolationMode=IM_LINEAR, int orientationMode=OM_SIMPLE, ilog::IMessageConsumer *resultConsumerPtr=NULL)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
