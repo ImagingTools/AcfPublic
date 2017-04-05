@@ -1574,10 +1574,8 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_histogram_processor_comp_8h</filename>
     <includes id="_i_discrete_data_sequence_8h" name="IDiscreteDataSequence.h" local="no" imported="no">imeas/IDiscreteDataSequence.h</includes>
-    <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="no" imported="no">imeas/CDataSequenceInfoBase.h</includes>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="no" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
-    <class kind="class">iipr::CImageHistogramProcessorComp::HistogramChannelInfo</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -2122,14 +2120,6 @@
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
-    <name>CDataSequenceInfoBase.h</name>
-    <path>C:/Temp/AcfSln/Include/imeas/</path>
-    <filename>_c_data_sequence_info_base_8h</filename>
-    <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="no" imported="no">imeas/IDataSequenceInfo.h</includes>
-    <class kind="class">imeas::CDataSequenceInfoBase</class>
-    <namespace>imeas</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDataSequenceStatistics.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_data_sequence_statistics_8h</filename>
@@ -2144,6 +2134,15 @@
     <filename>_c_general_data_sequence_8h</filename>
     <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="no" imported="no">imeas/IDataSequence.h</includes>
     <class kind="class">imeas::CGeneralDataSequence</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CGeneralDataSequenceInfo.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_c_general_data_sequence_info_8h</filename>
+    <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="no" imported="no">imeas/IDataSequenceInfo.h</includes>
+    <includes id="_c_general_numeric_constraints_8h" name="CGeneralNumericConstraints.h" local="no" imported="no">imeas/CGeneralNumericConstraints.h</includes>
+    <class kind="class">imeas::CGeneralDataSequenceInfo</class>
     <namespace>imeas</namespace>
   </compound>
   <compound kind="file">
@@ -2213,7 +2212,7 @@
     <name>CSamplesInfo.h</name>
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>_c_samples_info_8h</filename>
-    <includes id="_c_data_sequence_info_base_8h" name="CDataSequenceInfoBase.h" local="no" imported="no">imeas/CDataSequenceInfoBase.h</includes>
+    <includes id="_i_data_sequence_info_8h" name="IDataSequenceInfo.h" local="no" imported="no">imeas/IDataSequenceInfo.h</includes>
     <class kind="class">imeas::CSamplesInfo</class>
     <namespace>imeas</namespace>
   </compound>
@@ -20130,7 +20129,6 @@
     <name>iipr::CImageHistogramProcessorComp</name>
     <filename>classiipr_1_1_c_image_histogram_processor_comp.html</filename>
     <base>iipr::CImageRegionProcessorCompBase</base>
-    <class kind="class">iipr::CImageHistogramProcessorComp::HistogramChannelInfo</class>
     <member kind="typedef">
       <type>CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
@@ -20144,137 +20142,6 @@
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
       <anchor>a6464fa31137bd56a0bc6352140211547</anchor>
       <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CImageHistogramProcessorComp::HistogramChannelInfo</name>
-    <filename>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</filename>
-    <base>imeas::CDataSequenceInfoBase</base>
-    <member kind="function">
-      <type></type>
-      <name>HistogramChannelInfo</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
-      <anchor>abff40f83c3fbcf81ee130246ca53d3c6</anchor>
-      <arglist>(const QStringList &amp;channelNames)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
-      <anchor>a8bebf6e136b717741a146fccdcdafd5d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
-      <anchor>a741c069b48ac11e31a79e292d0f40dd3</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp_1_1_histogram_channel_info.html</anchorfile>
-      <anchor>ad30d749d8e11338c6decf19b32b53caf</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSequenceInfoFlags</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>ab8742552b73f99a3b0c3a2215cbead96</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetDefaultSamplesCount</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>aa920243bbfc4bbd954ea23c0a7a77f6e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetDefaultChannelsCount</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a4a74931ff01bae453404a7e69d9531f0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetWeightMode</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a946cf8663a6c859940e218187f6412c0</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const imath::IUnitInfo *</type>
-      <name>GetNumericValueUnitInfo</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a7c6fd21adae9cbca60ffda621d99dd2c</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>af078794b6798ac77fdeb986c085f4c84</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>SequenceInfoFlags</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>a799d2bc45d0c73ed828937ba43d1623e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SIF_SAMPLES_COUNT_FIXED</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SIF_CHANNELS_COUNT_FIXED</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>WeightMode</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>WM_NONE</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>WM_LAST</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>WM_INTERLEAVED</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>WM_UNKNOWN</name>
-      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
-      <anchor>ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24136,9 +24003,9 @@
     <name>imeas</name>
     <filename>namespaceimeas.html</filename>
     <class kind="class">imeas::CCrossCorrelationProcessorComp</class>
-    <class kind="class">imeas::CDataSequenceInfoBase</class>
     <class kind="class">imeas::CDataSequenceStatistics</class>
     <class kind="class">imeas::CGeneralDataSequence</class>
+    <class kind="class">imeas::CGeneralDataSequenceInfo</class>
     <class kind="class">imeas::CGeneralNumericConstraints</class>
     <class kind="class">imeas::CGeneralNumericValue</class>
     <class kind="class">imeas::CHistogramStatisticsProcessorComp</class>
@@ -24316,32 +24183,6 @@
       <anchorfile>classimeas_1_1_c_cross_correlation_processor_comp.html</anchorfile>
       <anchor>ae734547d0684a6e4f2b8f8f8a6194f34</anchor>
       <arglist>(const imeas::IDataSequence &amp;input, int channelIndex)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>imeas::CDataSequenceInfoBase</name>
-    <filename>classimeas_1_1_c_data_sequence_info_base.html</filename>
-    <base virtualness="virtual">imeas::IDataSequenceInfo</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a380cfd1b8ff2dcd1b872ff755ac7e1eb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a17f97a951adc0a4951eb3d6972ce8c8d</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_data_sequence_info_base.html</anchorfile>
-      <anchor>a2b8ac66049cf3e28f4b76004ec5c4944</anchor>
-      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24559,9 +24400,150 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>imeas::CGeneralNumericConstraints</name>
-    <filename>classimeas_1_1_c_general_numeric_constraints.html</filename>
-    <base virtualness="virtual">imeas::INumericConstraints</base>
+    <name>imeas::CGeneralDataSequenceInfo</name>
+    <filename>classimeas_1_1_c_general_data_sequence_info.html</filename>
+    <base>imeas::CGeneralNumericConstraints</base>
+    <base virtualness="virtual">imeas::IDataSequenceInfo</base>
+    <member kind="typedef">
+      <type>imeas::CGeneralNumericConstraints</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a1eea78bd6f6296a6fe8fe99b3b774a32</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>a799d2bc45d0c73ed828937ba43d1623e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SIF_SAMPLES_COUNT_FIXED</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>a799d2bc45d0c73ed828937ba43d1623eaffbf9ceb24b3cd902d878fd04e0c139c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SIF_CHANNELS_COUNT_FIXED</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>a799d2bc45d0c73ed828937ba43d1623eaf7e0ba28364c2f0a90e5d5e5c3c8255e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WeightMode</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_NONE</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1acd19b3c481e23c09e28ab37f8344b2d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_LAST</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a9f2597f45365d41a85ddbfaae5165d06</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_INTERLEAVED</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1a0c727a1b26aed71f8cdbd7ddb284746d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_UNKNOWN</name>
+      <anchorfile>classimeas_1_1_i_data_sequence_info.html</anchorfile>
+      <anchor>ac9385a6602e6b92291cd1ae403dff2a1ad876765fa8242bf6d2d364db62965f79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CGeneralDataSequenceInfo</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a4b592e3d2a831fad93c7a04b9906a11a</anchor>
+      <arglist>(int defaultChannelsCount, int defaultSamplesCount, WeightMode mode=WeightMode::WM_NONE, int sequenceFlags=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>InsertValueInfo</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>ade1ee5b2633f3c5b83cf0b4dea40ead3</anchor>
+      <arglist>(const QString &amp;name, const QString &amp;description, const imath::CGeneralUnitInfo &amp;unitInfo, int index=-1)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>ae2fb68f1af6ec06fa8100912cff6278a</anchor>
+      <arglist>(int flags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDefaultSamplesCount</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a16a445085a2671c0b841c97f7c84b846</anchor>
+      <arglist>(int samplesCount)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDefaultChannelsCount</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a527422ab0301bc8943594ad948b7a193</anchor>
+      <arglist>(int channelsCount)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeightMode</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>ac83e27f80cd8af16be86c1eccde02748</anchor>
+      <arglist>(WeightMode mode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a136b5862df4b96e564c26dbfbc0b04a2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDefaultSamplesCount</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a8976815dda9cce0b9a7a26390e967926</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetDefaultChannelsCount</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a2ed93e44f1d609e4d9bdf74fd7c2c140</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWeightMode</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>ac735611f520daee02f869a0a62c1679b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>aac2241455700a08f8857e02b7f85e14f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>Reset</name>
@@ -24582,6 +24564,13 @@
       <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
       <anchor>afa750f34567830c3050dbbbdec217bd4</anchor>
       <arglist>(int index)</arglist>
+    </member>
+    <member kind="function">
+      <type>const imath::CGeneralUnitInfo &amp;</type>
+      <name>GetGeneralUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>a6cabcb52a7c25564156b8508b3748c9e</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -24611,6 +24600,11 @@
       <anchor>a84ebf9ba5f950a43b303b970a4b1e352</anchor>
       <arglist>(int index) const </arglist>
     </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::CGeneralNumericConstraints</name>
+    <filename>classimeas_1_1_c_general_numeric_constraints.html</filename>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
   </compound>
   <compound kind="class">
     <name>imeas::CGeneralNumericValue</name>
@@ -25271,7 +25265,7 @@
   <compound kind="class">
     <name>imeas::CSamplesInfo</name>
     <filename>classimeas_1_1_c_samples_info.html</filename>
-    <base virtualness="virtual">imeas::CDataSequenceInfoBase</base>
+    <base virtualness="virtual">imeas::IDataSequenceInfo</base>
     <member kind="function">
       <type></type>
       <name>CSamplesInfo</name>
@@ -25295,6 +25289,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
+      <name>GetSequenceInfoFlags</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a292e7629b92bd9e6286e7e93de4a9ba1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
       <name>GetDefaultSamplesCount</name>
       <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
       <anchor>ab565faf5149b9570973ac501fd2d07d6</anchor>
@@ -25306,6 +25307,41 @@
       <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
       <anchor>a2aedd820128a93895552ed804fe328a5</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetWeightMode</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>ab6a671303f7e76ff4bd13a238849398d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetNumericValuesCount</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a7fec7cb6ccff2c30ad51021ce863a701</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueName</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>af4450d6c8cfe5adb5611e41786aa98d1</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetNumericValueDescription</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a9926b7754a2b0433f1d05ac7bfaea4d8</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetNumericValueUnitInfo</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a9d053b1d8a8341ca0e490190fbd6d985</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -33383,9 +33419,9 @@
     <path>C:/Temp/AcfSln/Include/imeas/</path>
     <filename>dir_e592bbcd5a2a1afe8c7af0cb6d8b6366.html</filename>
     <file>CCrossCorrelationProcessorComp.h</file>
-    <file>CDataSequenceInfoBase.h</file>
     <file>CDataSequenceStatistics.h</file>
     <file>CGeneralDataSequence.h</file>
+    <file>CGeneralDataSequenceInfo.h</file>
     <file>CGeneralNumericConstraints.h</file>
     <file>CGeneralNumericValue.h</file>
     <file>CHistogramStatisticsProcessorComp.h</file>

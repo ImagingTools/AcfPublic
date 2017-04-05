@@ -3178,6 +3178,7 @@
     <name>CGeneralUnitInfo.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_c_general_unit_info_8h</filename>
+    <includes id="_i_archive_8h" name="IArchive.h" local="no" imported="no">iser/IArchive.h</includes>
     <includes id="_i_unit_info_8h" name="IUnitInfo.h" local="no" imported="no">imath/IUnitInfo.h</includes>
     <class kind="class">imath::CGeneralUnitInfo</class>
     <namespace>imath</namespace>
@@ -38929,6 +38930,13 @@
       <anchorfile>classimath_1_1_c_general_unit_info.html</anchorfile>
       <anchor>a321bef05b809d616e499f1866b20be1a</anchor>
       <arglist>(const istd::CRange &amp;range)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimath_1_1_c_general_unit_info.html</anchorfile>
+      <anchor>a10811443d5e542e2dfaba19877fa5cba</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>

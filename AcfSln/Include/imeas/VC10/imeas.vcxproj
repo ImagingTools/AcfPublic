@@ -115,9 +115,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CCrossCorrelationProcessorComp.cpp" />
-    <ClCompile Include="..\CDataSequenceInfoBase.cpp" />
     <ClCompile Include="..\CDataSequenceStatistics.cpp" />
     <ClCompile Include="..\CGeneralDataSequence.cpp" />
+    <ClCompile Include="..\CGeneralDataSequenceInfo.cpp" />
     <ClCompile Include="..\CGeneralNumericConstraints.cpp" />
     <ClCompile Include="..\CGeneralNumericValue.cpp" />
     <ClCompile Include="..\CHistogramStatisticsProcessorComp.cpp" />
@@ -132,9 +132,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CCrossCorrelationProcessorComp.h" />
-    <ClInclude Include="..\CDataSequenceInfoBase.h" />
     <ClInclude Include="..\CDataSequenceStatistics.h" />
     <ClInclude Include="..\CGeneralDataSequence.h" />
+    <ClInclude Include="..\CGeneralDataSequenceInfo.h" />
     <ClInclude Include="..\CGeneralNumericConstraints.h" />
     <ClInclude Include="..\CGeneralNumericValue.h" />
     <ClInclude Include="..\CHistogramStatisticsProcessorComp.h" />
