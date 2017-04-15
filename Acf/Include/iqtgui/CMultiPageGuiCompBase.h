@@ -142,6 +142,7 @@ protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
+	virtual void OnGuiRetranslate();
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
