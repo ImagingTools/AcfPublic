@@ -1147,6 +1147,7 @@
     <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <class kind="class">iinsp::CInspectionTaskComp::TaskStatusObserver</class>
+    <class kind="class">iinsp::CInspectionTaskComp::Status</class>
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
@@ -16080,6 +16081,7 @@
     <base protection="protected">imod::CModelUpdateBridge</base>
     <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
+    <class kind="class">iinsp::CInspectionTaskComp::Status</class>
     <class kind="class">iinsp::CInspectionTaskComp::TaskStatusObserver</class>
     <member kind="enumeration">
       <type></type>
@@ -16285,6 +16287,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="typedef" protection="protected">
+      <type>imod::TModelWrap&lt; Status &gt;</type>
+      <name>StatusModel</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a79d0e25110ef0b0c82a8eabc591aaada</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
       <type>QVector&lt; iinsp::ISupplier * &gt;</type>
       <name>Suppliers</name>
       <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
@@ -16424,6 +16433,13 @@
       <anchor>a5cb3b54d52e6e80233e28bdf981cb046</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>StatusModel</type>
+      <name>m_workStatus</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp.html</anchorfile>
+      <anchor>a3b93ab5667d38d744b7e1981aaecc5e0</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::MessageContainer</name>
@@ -16525,6 +16541,32 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
       <anchor>a64425f71d60d22b20096a538161e6ae6</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::CInspectionTaskComp::Status</name>
+    <filename>classiinsp_1_1_c_inspection_task_comp_1_1_status.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function">
+      <type></type>
+      <name>Status</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_status.html</anchorfile>
+      <anchor>abefae8c922853924f05b638c57ac1b9b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetSupplierState</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_status.html</anchorfile>
+      <anchor>aff6a1d1250a715ff26dc2c23fac84e7b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSupplierState</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_status.html</anchorfile>
+      <anchor>ad8652fd137c121dde08cbcf8936f26a2</anchor>
+      <arglist>(int state)</arglist>
     </member>
   </compound>
   <compound kind="class">

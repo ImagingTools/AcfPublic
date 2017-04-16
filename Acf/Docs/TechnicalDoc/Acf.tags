@@ -52593,6 +52593,13 @@
       <anchor>adbfd019679674dc1467c6710b75d2471</anchor>
       <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QToolBar &amp;result, int prevGroupId=ibase::ICommand::GI_NONE)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static int</type>
+      <name>SetupContextMenu</name>
+      <anchorfile>classiqtgui_1_1_c_command_tools.html</anchorfile>
+      <anchor>acc630f785d668fef587af086e46079c1</anchor>
+      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QWidget &amp;menuOwner, int prevGroupId=ibase::ICommand::GI_NONE)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CComposedGuiComp</name>
