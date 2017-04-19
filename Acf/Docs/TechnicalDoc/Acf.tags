@@ -29970,11 +29970,11 @@
       <anchor>a479bbee31b8aed41a7bb532e7cb0f7aa</anchor>
       <arglist>(QByteArray &amp;text)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>SerializeAcfHeader</name>
       <anchorfile>classiser_1_1_c_read_archive_base.html</anchorfile>
-      <anchor>aa108a6ece5bf737958de07e2577c9e3d</anchor>
+      <anchor>af9ac3c435836328c66dd881644807d89</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -30340,11 +30340,11 @@
       <anchor>a965921958d45b14b91ad6bd41acea3c6</anchor>
       <arglist>(const IVersionInfo *versionInfoPtr)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
+    <member kind="function" protection="protected">
+      <type>bool</type>
       <name>SerializeAcfHeader</name>
       <anchorfile>classiser_1_1_c_write_archive_base.html</anchorfile>
-      <anchor>a0ce51565080e536dd8c08bd83720955e</anchor>
+      <anchor>a103e85b377ffdeb0b7392f959fad389c</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
