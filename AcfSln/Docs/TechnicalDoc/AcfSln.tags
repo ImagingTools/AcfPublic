@@ -17281,6 +17281,13 @@
       <anchor>a046a2ea6bb4b7f21d59f87b14395792d</anchor>
       <arglist>(const BitmapList &amp;bitmapList, CombineMode combineMode, iimg::IBitmap &amp;outputBitmap, imath::CVarVector *weghtsPtr=NULL, istd::ILogger *operationLogPtr=NULL)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CaclulateBitmapDifference</name>
+      <anchorfile>classiipr_1_1_c_bitmap_operations.html</anchorfile>
+      <anchor>a8f407dfed6e138752b15a7c0c31abb31</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap1, const iimg::IBitmap &amp;inputBitmap2, iimg::IBitmap &amp;outputBitmap, double offset=0, ilog::IMessageConsumer *messageConsumerPtr=NULL)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CBitmapProviderCacheComp</name>
@@ -20868,6 +20875,27 @@
       <name>PM_CLOSING</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
       <anchor>a647cec348b95ec86f153c44508962228a2f2a6b1e8b700f6027d8f13d07187592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_WHITE_TOP_HAT</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228acb981dc5b2495d6311a5bc17c0020c47</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_BLACK_TOP_HAT</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a4222b662391c73f9bb7abc0a5aae2d04</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PM_MORPHO_GRADIENT</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
+      <anchor>a647cec348b95ec86f153c44508962228a24905c01c69c697b737dd3eee09510ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

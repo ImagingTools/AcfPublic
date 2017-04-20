@@ -30,14 +30,14 @@
 #include <istd/CChangeNotifier.h>
 #include <istd/CIndex2d.h>
 #include <ibase/CSize.h>
-#include <iimg/CGeneralBitmap.h>
 #include <iprm/TParamsPtr.h>
+#include <iimg/CGeneralBitmap.h>
 #include <iimg/CScanlineMask.h>
 
 // ACF-Solitions includes
 #include <imeas/INumericValue.h>
 #include <iipr/CConvolutionKernel2d.h>
-
+#include <iipr/CBitmapOperations.h>
 
 
 namespace iipr
@@ -170,14 +170,14 @@ static void DoCircleFilter(
 
 template <typename PixelComponentType, PixelComponentType OutputInitValue, void (*CalculateOutputValue)(PixelComponentType, PixelComponentType&)>
 static void DoFilter(
-			CMorphologicalProcessorComp::KernelType type,
+			CMorphologicalProcessorComp::KernelType kernelType,
 			int kernelWidth,
 			int kernelHeight,
 			const iimg::IBitmap& inputImage,
 			const i2d::CRect& region,
 			iimg::IBitmap& outputImage)
 {
-	if (type == CMorphologicalProcessorComp::KT_CIRC){
+	if (kernelType == CMorphologicalProcessorComp::KT_CIRC){
 		DoCircleFilter<PixelComponentType, OutputInitValue, CalculateOutputValue>(kernelWidth, kernelHeight, inputImage, region, outputImage);
 	}
 	else {
@@ -339,7 +339,7 @@ static void DoFilter(
 template <typename PixelComponentType, PixelComponentType InitMaxValue>
 static void ProcessImage(
 			CMorphologicalProcessorComp::ProcessingMode processingMode,
-			CMorphologicalProcessorComp::KernelType type,
+			CMorphologicalProcessorComp::KernelType kernelType,
 			int kernelWidth,
 			int kernelHeight,
 			const iimg::IBitmap& inputImage,
@@ -348,28 +348,62 @@ static void ProcessImage(
 {	
 	switch (processingMode){
 		case CMorphologicalProcessorComp::PM_EROSION:
-			DoFilter<PixelComponentType, InitMaxValue, MinFunctor<PixelComponentType> >(type, kernelWidth, kernelHeight, inputImage, regionRect, outputImage);
+			DoFilter<PixelComponentType, InitMaxValue, MinFunctor<PixelComponentType> >(kernelType, kernelWidth, kernelHeight, inputImage, regionRect, outputImage);
 			break;
 				
 		case CMorphologicalProcessorComp::PM_DILATATION:
-			DoFilter<PixelComponentType, 0, MaxFunctor<PixelComponentType> >(type, kernelWidth, kernelHeight, inputImage, regionRect, outputImage);
+			DoFilter<PixelComponentType, 0, MaxFunctor<PixelComponentType> >(kernelType, kernelWidth, kernelHeight, inputImage, regionRect, outputImage);
 			break;
 				
 		case CMorphologicalProcessorComp::PM_OPENING:{
 			iimg::CGeneralBitmap tempBitmap;
 			tempBitmap.CopyFrom(outputImage);
 
-			DoFilter<PixelComponentType, InitMaxValue, MinFunctor<PixelComponentType> >(type, kernelWidth, kernelHeight, inputImage, regionRect, tempBitmap);
-			DoFilter<PixelComponentType, 0, MaxFunctor<PixelComponentType> >(type, kernelWidth, kernelHeight, tempBitmap, regionRect, outputImage);
+			DoFilter<PixelComponentType, InitMaxValue, MinFunctor<PixelComponentType> >(kernelType, kernelWidth, kernelHeight, inputImage, regionRect, tempBitmap);
+			DoFilter<PixelComponentType, 0, MaxFunctor<PixelComponentType> >(kernelType, kernelWidth, kernelHeight, tempBitmap, regionRect, outputImage);
 			break;
 		}
 
-		case CMorphologicalProcessorComp::PM_CLOSING:{
+		case CMorphologicalProcessorComp::PM_CLOSING:
+		{
 			iimg::CGeneralBitmap tempBitmap;
 			tempBitmap.CopyFrom(outputImage);
 
-			DoFilter<PixelComponentType, 0, MaxFunctor<PixelComponentType> >(type, kernelWidth, kernelHeight, inputImage, regionRect, tempBitmap);
-			DoFilter<PixelComponentType, InitMaxValue, MinFunctor<PixelComponentType> >(type, kernelWidth, kernelHeight, tempBitmap, regionRect, outputImage);
+			DoFilter<PixelComponentType, 0, MaxFunctor<PixelComponentType> >(kernelType, kernelWidth, kernelHeight, inputImage, regionRect, tempBitmap);
+			DoFilter<PixelComponentType, InitMaxValue, MinFunctor<PixelComponentType> >(kernelType, kernelWidth, kernelHeight, tempBitmap, regionRect, outputImage);
+			break;
+		}
+
+		case CMorphologicalProcessorComp::PM_WHITE_TOP_HAT:
+		{
+			iimg::CGeneralBitmap tempBitmap;
+			ProcessImage<PixelComponentType, InitMaxValue>(CMorphologicalProcessorComp::PM_OPENING, kernelType, kernelWidth, kernelHeight, inputImage, regionRect, tempBitmap);
+
+			iipr::CBitmapOperations::CaclulateBitmapDifference(tempBitmap, inputImage, outputImage);
+
+			break;
+		}
+
+		case CMorphologicalProcessorComp::PM_BLACK_TOP_HAT:
+		{
+			iimg::CGeneralBitmap tempBitmap;
+			ProcessImage<PixelComponentType, InitMaxValue>(CMorphologicalProcessorComp::PM_CLOSING, kernelType, kernelWidth, kernelHeight, inputImage, regionRect, tempBitmap);
+
+			iipr::CBitmapOperations::CaclulateBitmapDifference(tempBitmap, inputImage, outputImage);
+
+			break;
+		}
+
+		case CMorphologicalProcessorComp::PM_MORPHO_GRADIENT:
+		{
+			iimg::CGeneralBitmap dilatedBitmap;
+			iimg::CGeneralBitmap erodedBitmap;
+
+			ProcessImage<PixelComponentType, InitMaxValue>(CMorphologicalProcessorComp::PM_DILATATION, kernelType, kernelWidth, kernelHeight, inputImage, regionRect, dilatedBitmap);
+			ProcessImage<PixelComponentType, InitMaxValue>(CMorphologicalProcessorComp::PM_EROSION, kernelType, kernelWidth, kernelHeight, inputImage, regionRect, erodedBitmap);
+
+			iipr::CBitmapOperations::CaclulateBitmapDifference(dilatedBitmap, erodedBitmap, outputImage);
+
 			break;
 		}
 	}
@@ -454,7 +488,7 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 	Q_ASSERT(kernelMaxWidth >= 1);
 	Q_ASSERT(kernelMaxHeight >= 1);
 	
-	int processingMode = GetProcessingMode(paramsPtr);
+	ProcessingMode processingMode = GetProcessingMode(paramsPtr);
 
 	KernelType kernelType = GetKernelType();
 
@@ -464,7 +498,7 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 		case iimg::IBitmap::PF_RGB:
 		case iimg::IBitmap::PF_RGBA:
 			ProcessImage<quint8, 255>(
-							CMorphologicalProcessorComp::ProcessingMode(processingMode),
+							processingMode,
 							kernelType,
 							kernelMaxWidth,
 							kernelMaxHeight,
@@ -475,7 +509,7 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 
 		case iimg::IBitmap::PF_GRAY16:
 			ProcessImage<quint16, (1 << 16) - 1>(
-							CMorphologicalProcessorComp::ProcessingMode(processingMode),
+							processingMode,
 							kernelType,
 							kernelMaxWidth,
 							kernelMaxHeight,
@@ -486,7 +520,7 @@ bool CMorphologicalProcessorComp::ProcessImageRegion(
 
 		case iimg::IBitmap::PF_GRAY32:
 			ProcessImage<quint32, (quint64(1) << 32) - 1>(
-							CMorphologicalProcessorComp::ProcessingMode(processingMode),
+							processingMode,
 							kernelType,
 							kernelMaxWidth,
 							kernelMaxHeight,
@@ -513,12 +547,15 @@ void CMorphologicalProcessorComp::OnComponentCreated()
 	m_processingModes.InsertOption(QObject::tr("Dilation"), "Dilation");
 	m_processingModes.InsertOption(QObject::tr("Opening"), "Opening");
 	m_processingModes.InsertOption(QObject::tr("Closing"), "Closing");
+	m_processingModes.InsertOption(QObject::tr("White Top-Hat"), "WhiteTopHat");
+	m_processingModes.InsertOption(QObject::tr("Black Top-Hat"), "BlackTopHat");
+	m_processingModes.InsertOption(QObject::tr("Morphological Gradient"), "MorphologicalGradient");
 }
 
 
 // private methods
 
-int CMorphologicalProcessorComp::GetProcessingMode(const iprm::IParamsSet* paramsPtr) const
+CMorphologicalProcessorComp::ProcessingMode  CMorphologicalProcessorComp::GetProcessingMode(const iprm::IParamsSet* paramsPtr) const
 {
 	int mode = *m_defaultProcessingModeAttrPtr;
 
@@ -532,7 +569,7 @@ int CMorphologicalProcessorComp::GetProcessingMode(const iprm::IParamsSet* param
 		}
 	}
 
-	return mode;
+	return ProcessingMode(mode);
 }
 
 
