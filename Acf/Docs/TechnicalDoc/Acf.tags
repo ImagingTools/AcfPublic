@@ -235,6 +235,7 @@
     <name>CPolypoint.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polypoint_8h</filename>
+    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="no" imported="no">istd/CChangeNotifier.h</includes>
     <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="no" imported="no">iser/CArchiveTag.h</includes>
     <includes id="_c_object2d_base_8h" name="CObject2dBase.h" local="no" imported="no">i2d/CObject2dBase.h</includes>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="no" imported="no">i2d/CVector2d.h</includes>
@@ -16165,6 +16166,13 @@
       <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AllowMessageOnceAgain</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a56ab5b0e3506d38a23b2a83cc7785ad8</anchor>
+      <arglist>(int id)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
@@ -31132,6 +31140,13 @@
       <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AllowMessageOnceAgain</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a56ab5b0e3506d38a23b2a83cc7785ad8</anchor>
+      <arglist>(int id)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
@@ -31705,6 +31720,13 @@
       <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
       <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AllowMessageOnceAgain</name>
+      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
+      <anchor>a56ab5b0e3506d38a23b2a83cc7785ad8</anchor>
+      <arglist>(int id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
