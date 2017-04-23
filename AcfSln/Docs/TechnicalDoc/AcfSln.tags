@@ -28886,7 +28886,7 @@
   <compound kind="class">
     <name>iqtinsp::CInspectionTaskGuiComp</name>
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
-    <base>TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt;</base>
+    <base>TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <type></type>
@@ -28910,17 +28910,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt;</type>
+      <type>iqtgui::TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a6197c0691f008409466eb68adbb1f4e0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CInspectionTaskGuiCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
-      <anchor>a7533e8726af42954c7e0116a753f20dd</anchor>
+      <anchor>a5de0e7e329be3e6020a5a1e260c4b11a</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -28950,13 +28943,6 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>ad9058807cc1e70f35c76cf5ae0acb41c</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iview::IShape *</type>
-      <name>CreateResultShape</name>
-      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
-      <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
-      <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -29058,6 +29044,20 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnRestoreSettings</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a42b2c0ef5e402fd77c301d1691768873</anchor>
+      <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSaveSettings</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a8a6c10474af67a9d6e9fb185517653a8</anchor>
+      <arglist>(QSettings &amp;settings) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a66aa60cd6d6869f9f3478b4dafa34e17</anchor>
@@ -29102,7 +29102,7 @@
   <compound kind="class">
     <name>iqtinsp::TResultShapeCreatorWrap</name>
     <filename>classiqtinsp_1_1_t_result_shape_creator_wrap.html</filename>
-    <templarg>Base</templarg>
+    <templarg></templarg>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>

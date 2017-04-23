@@ -293,6 +293,35 @@ void CInspectionTaskGuiComp::UpdateVisualElements()
 }
 
 
+// reimplemented (iqtgui::TRestorableGuiWrap)
+
+void CInspectionTaskGuiComp::OnRestoreSettings(const QSettings& settings)
+{
+	Q_ASSERT(IsGuiCreated());
+	Q_ASSERT(PreviewSplitter != NULL);
+
+	// preserve overriding of splitter orientation:
+	Qt::Orientation splitterOrientation = PreviewSplitter->orientation();
+
+	QByteArray splitterState = settings.value(GetSettingsKey()).toByteArray();
+
+	PreviewSplitter->restoreState(splitterState);
+
+	PreviewSplitter->setOrientation(splitterOrientation);
+}
+
+
+void CInspectionTaskGuiComp::OnSaveSettings(QSettings& settings) const
+{
+	Q_ASSERT(IsGuiCreated());
+	Q_ASSERT(PreviewSplitter != NULL);
+
+	QByteArray splitterState = PreviewSplitter->saveState();
+
+	settings.setValue(GetSettingsKey(), splitterState);
+}
+
+
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void CInspectionTaskGuiComp::UpdateModel() const
@@ -1095,6 +1124,17 @@ bool CInspectionTaskGuiComp::ReadTaskParametersFromClipboard(iser::ISerializable
 	}
 
 	return false;
+}
+
+
+QString CInspectionTaskGuiComp::GetSettingsKey() const
+{
+	QString settingsKey = "Splitter";
+	if (m_settingsKeyAttrPtr.IsValid()){
+		settingsKey = *m_settingsKeyAttrPtr + QString("/") + settingsKey;
+	}
+
+	return settingsKey;
 }
 
 
