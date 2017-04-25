@@ -2784,7 +2784,7 @@
     <includes id="_c_annulus_8h" name="CAnnulus.h" local="no" imported="no">i2d/CAnnulus.h</includes>
     <includes id="_c_polygon_8h" name="CPolygon.h" local="no" imported="no">i2d/CPolygon.h</includes>
     <includes id="_c_tube_polyline_8h" name="CTubePolyline.h" local="no" imported="no">i2d/CTubePolyline.h</includes>
-    <includes id="_i_raster_image_8h" name="IRasterImage.h" local="no" imported="no">iimg/IRasterImage.h</includes>
+    <includes id="_i_bitmap_8h" name="IBitmap.h" local="no" imported="no">iimg/IBitmap.h</includes>
     <class kind="class">iimg::CScanlineMask</class>
     <namespace>iimg</namespace>
     <member kind="function">
@@ -29540,18 +29540,11 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
       <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a946a504308522c3c3df474b877343720</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a5d4caa6adb4fa980a476cfe3b0bbe05f</anchor>
-      <arglist>()</arglist>
+      <anchor>a3623a95ca162eb2fd163d74041a86c3f</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -29559,6 +29552,20 @@
       <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
       <anchor>a63b266e2943b72a665fdc113be7aeabe</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a946a504308522c3c3df474b877343720</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
+      <anchor>a5d4caa6adb4fa980a476cfe3b0bbe05f</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QString</type>
@@ -35722,6 +35729,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>CreateFromBitmap</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>a5ab421ed65b9e1011bae5459afbed975</anchor>
+      <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CRect *clipAreaPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>GetInverted</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
       <anchor>a50c962898958b8a6b6f5068aafaf7a70</anchor>
@@ -35939,10 +35953,17 @@
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
-      <name>InitFromBoudingBox</name>
+      <name>InitFromBoundingBox</name>
       <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
-      <anchor>a2793645d0eaef198c83499393433ac03</anchor>
+      <anchor>ad771ec51dbc48885b50fe781a8a7c675</anchor>
       <arglist>(const i2d::CRectangle &amp;objectBoundingBox, const i2d::CRect *clipAreaPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CalculateMaskFromBitmap</name>
+      <anchorfile>classiimg_1_1_c_scanline_mask.html</anchorfile>
+      <anchor>ac0e391f00dba72fee20b3b69a7a40268</anchor>
+      <arglist>(const iimg::IBitmap &amp;bitmap, const i2d::CRect *clipAreaPtr=NULL)</arglist>
     </member>
     <member kind="friend">
       <type>friend uint</type>
