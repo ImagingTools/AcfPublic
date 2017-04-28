@@ -217,31 +217,22 @@ const IColorSchema& CViewLayer::GetColorSchema() const
 
 void CViewLayer::OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect& newArea)
 {
-	if (m_isBoundingBoxValid) {
-		if (!m_boundingBox.IsInside(prevArea)) {
-			if (m_boundingBox.IsInside(newArea)) {
-				m_boundingBox.Union(newArea);
-				Q_ASSERT(m_boundingBox.IsInside(newArea));
-			}
-			else {
-				m_isBoundingBoxValid = false;
-			}
-		}
-		else {
-			Q_ASSERT(m_boundingBox.IsInside(prevArea));
+	Q_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(prevArea));
 
-			if (prevArea.IsEmpty() || (
-				(m_boundingBox.GetLeft() <= prevArea.GetLeft()) &&
-				(m_boundingBox.GetRight() >= prevArea.GetRight()) &&
-				(m_boundingBox.GetTop() <= prevArea.GetTop()) &&
-				(m_boundingBox.GetBottom() >= prevArea.GetBottom()))){
-				m_boundingBox.Union(newArea);
-			}
-			else{
-				m_isBoundingBoxValid = false;
-			}
-			Q_ASSERT(m_boundingBox.IsInside(newArea));
+	if (m_isBoundingBoxValid){
+		Q_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(prevArea));
+
+		if (prevArea.IsEmpty() || (
+						(m_boundingBox.GetLeft() <= prevArea.GetLeft()) &&
+						(m_boundingBox.GetRight() >= prevArea.GetRight()) &&
+						(m_boundingBox.GetTop() <= prevArea.GetTop()) &&
+						(m_boundingBox.GetBottom() >= prevArea.GetBottom()))){
+			m_boundingBox.Union(newArea);
 		}
+		else{
+			m_isBoundingBoxValid = false;
+		}
+		Q_ASSERT(!m_isBoundingBoxValid || m_boundingBox.IsInside(newArea));
 	}
 
 	if (m_viewPtr != NULL){
