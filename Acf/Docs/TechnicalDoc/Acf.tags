@@ -5841,6 +5841,7 @@
     <name>IPolymorphic.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_i_polymorphic_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="no" imported="no">istd/istd.h</includes>
     <class kind="class">istd::IPolymorphic</class>
     <namespace>istd</namespace>
   </compound>
@@ -36569,6 +36570,13 @@
       <anchorfile>classilog_1_1_c_message.html</anchorfile>
       <anchor>a09acb35d4402f4da8c81e9926b40c723</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classistd_1_1_i_information_provider.html</anchorfile>
+      <anchor>ab10ad8da52454b06e9dcc761d55d4306</anchor>
+      <arglist>(InformationCategory, IC_NONE, IC_INFO, IC_WARNING, IC_ERROR, IC_CRITICAL)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
