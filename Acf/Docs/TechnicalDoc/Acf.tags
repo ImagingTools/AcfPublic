@@ -42916,6 +42916,13 @@
       <anchor>af16e9c98e4133dae8b5342a00e677016</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>a9114bf9d87186c8de47b0ebbfc02cc3b</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::CEnableableParamComp</name>
