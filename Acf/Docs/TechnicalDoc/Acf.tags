@@ -39082,8 +39082,8 @@
       <type></type>
       <name>CLinearInterpolator</name>
       <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
-      <anchor>aae3eeb754d076baabb634b5e3c935e12</anchor>
-      <arglist>(double *positions, double *values, int nodesCount)</arglist>
+      <anchor>a868f64fd8356120c756285bde6d10f21</anchor>
+      <arglist>(double *positions, double *values, int nodesCount, bool isExtrapolationEnabled=false)</arglist>
     </member>
     <member kind="function">
       <type>void</type>

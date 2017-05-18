@@ -17323,6 +17323,13 @@
       <anchor>aa5b3aef85624cb3f666328f1a9c3942d</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiipr_1_1_c_bitmap_provider_cache_comp.html</anchorfile>
+      <anchor>a8a1a3f2c123ae9271a62ebbc596f0066</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CCaliperDistanceFeature</name>

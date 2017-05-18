@@ -1,3 +1,25 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
 #include <imeas/CGeneralDataSequence.h>
 
 
@@ -12,6 +34,8 @@
 
 // ACF-Solutions
 #include <imeas/CSamplesInfo.h>
+#include <imeas/CGeneralDataSequenceInfo.h>
+#include <imath/CGeneralUnitInfo.h>
 
 
 namespace imeas
@@ -275,6 +299,19 @@ bool CGeneralDataSequence::CopyFrom(const istd::IChangeable& object, Compatibili
 		if (nativeSequencePtr != NULL){
 			m_samples = nativeSequencePtr->m_samples;
 			m_channelsCount = nativeSequencePtr->m_channelsCount;
+
+			const imeas::IDataSequenceInfo* inputInfoPtr = sequencePtr->GetSequenceInfo();
+			if (inputInfoPtr != NULL){
+				const int infoCount = inputInfoPtr->GetNumericValuesCount();
+				imeas::CGeneralDataSequenceInfo sequenceInfo(infoCount, m_samples.size());
+
+				for (int i = 0; i < infoCount; ++i){
+					sequenceInfo.InsertValueInfo(inputInfoPtr->GetNumericValueName(i),
+						inputInfoPtr->GetNumericValueDescription(i),
+						imath::CGeneralUnitInfo());
+				}
+				m_sequenceInfoPtr.SetPtr(new CGeneralDataSequenceInfo(sequenceInfo));
+			}
 		}
 		else{
 			int samplesCount = sequencePtr->GetSamplesCount();
