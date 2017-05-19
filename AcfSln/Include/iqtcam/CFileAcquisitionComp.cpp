@@ -69,7 +69,7 @@ int CFileAcquisitionComp::DoProcessing(
 	}
 
 	QString inputPath = *m_defaultDirAttrPtr;
-	iprm::TParamsPtr<ifile::IFileNameParam> pathParamsPtr(paramsPtr, m_pathParamIdAttrPtr, m_defaultDirParamCompPtr, false);
+	iprm::TParamsPtr<ifile::IFileNameParam> pathParamsPtr(paramsPtr, m_pathParamIdAttrPtr, m_defaultPathParamCompPtr, false);
 	if (pathParamsPtr.IsValid()){
 		inputPath = pathParamsPtr->GetPath();
 	}
@@ -146,20 +146,13 @@ int CFileAcquisitionComp::DoProcessing(
 			if (m_lastFileNameCompPtr.IsValid()){
 				m_lastFileNameCompPtr->SetPath(imageFileName);
 			}
-
-			iprm::TParamsPtr<ifile::IFileNameParam> lastFileNameParamsPtr(paramsPtr, *m_lastFileNameParamIdAttrPtr, false);
-			if (lastFileNameParamsPtr.IsValid()){
-				(const_cast<ifile::IFileNameParam*>(lastFileNameParamsPtr.GetPtr()))->SetPath(imageFileName);
-			}
-
-			SendVerboseMessage(QString("File Name: %1").arg(imageFileName), GetComponentContext()->GetContextId());
 		}
 		else{
 			retVal = TS_OK;
 		}
 	}
 
-	if (int(m_dirInfos.size()) > *m_maxCachedDirectoriesAttrPtr){
+	if (m_dirInfos.count() > *m_maxCachedDirectoriesAttrPtr){
 		DirInfos::iterator maxIdStampDiffIter = m_dirInfos.end();
 		quint32 maxIdStampDiff = 0;
 
@@ -202,7 +195,7 @@ void CFileAcquisitionComp::OnComponentCreated()
 
 	// preinitialize components
 	m_bitmapLoaderCompPtr.EnsureInitialized();
-	m_defaultDirParamCompPtr.EnsureInitialized();
+	m_defaultPathParamCompPtr.EnsureInitialized();
 	m_lastFileNameCompPtr.EnsureInitialized();
 }
 
