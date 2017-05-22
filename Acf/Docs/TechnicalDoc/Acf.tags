@@ -32592,8 +32592,8 @@
       <type>virtual LicenseStatus</type>
       <name>GetLicenseStatus</name>
       <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
-      <anchor>a862a119d9cfe7b564a611934ad38dce9</anchor>
-      <arglist>(const QByteArray &amp;resourceId, ilog::IMessageConsumer *messageConsumerPtr=NULL) const =0</arglist>
+      <anchor>a3e218e92fcca0e8748fd7d360eb1608b</anchor>
+      <arglist>(const QByteArray &amp;resourceId, const QByteArray &amp;resourceTypeId=QByteArray(), ilog::IMessageConsumer *messageConsumerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="interface">
