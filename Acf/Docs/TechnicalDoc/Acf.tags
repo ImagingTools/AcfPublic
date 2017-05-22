@@ -2958,6 +2958,15 @@
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
+    <name>CLoggerBase.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_logger_base_8h</filename>
+    <includes id="_i_logger_8h" name="ILogger.h" local="no" imported="no">istd/ILogger.h</includes>
+    <includes id="_i_loggable_8h" name="ILoggable.h" local="no" imported="no">ilog/ILoggable.h</includes>
+    <class kind="class">ilog::CLoggerBase</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMessage.h</name>
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_c_message_8h</filename>
@@ -3061,7 +3070,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_c_component_context_8h" name="CComponentContext.h" local="no" imported="no">icomp/CComponentContext.h</includes>
     <includes id="_i_logger_8h" name="ILogger.h" local="no" imported="no">istd/ILogger.h</includes>
-    <includes id="_t_logger_wrap_8h" name="TLoggerWrap.h" local="no" imported="no">ilog/TLoggerWrap.h</includes>
+    <includes id="_c_logger_base_8h" name="CLoggerBase.h" local="no" imported="no">ilog/CLoggerBase.h</includes>
     <class kind="class">ilog::TLoggerCompWrap</class>
     <namespace>ilog</namespace>
     <member kind="typedef">
@@ -3071,17 +3080,6 @@
       <anchor>ga2ac8e0a207c9bb18de1ac6883d2cf09c</anchor>
       <arglist></arglist>
     </member>
-  </compound>
-  <compound kind="file">
-    <name>TLoggerWrap.h</name>
-    <path>C:/Temp/Acf/Include/ilog/</path>
-    <filename>_t_logger_wrap_8h</filename>
-    <includes id="_i_logger_8h" name="ILogger.h" local="no" imported="no">istd/ILogger.h</includes>
-    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
-    <includes id="_i_loggable_8h" name="ILoggable.h" local="no" imported="no">ilog/ILoggable.h</includes>
-    <includes id="_c_message_8h" name="CMessage.h" local="no" imported="no">ilog/CMessage.h</includes>
-    <class kind="class">ilog::TLoggerWrap</class>
-    <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
     <name>TMessageDelegatorComp.h</name>
@@ -16000,10 +15998,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ilog::TLoggerWrap&lt; Base &gt;</type>
+      <type>Base</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
+      <anchor>afcae5ad32dfdcd4693b68dcf17bb2069</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a0ae5d42d5b2156eb02936d530f77cb2e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -16036,37 +16041,37 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>TLoggerWrap</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
+      <name>CLoggerBase</name>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a1340a8434d0b9b6975d83e45e0fae1b9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>abd377565ca13633ed308867c3c31f862</anchor>
       <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ilog::IMessageConsumer *</type>
       <name>GetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a212243d36b7bdbd342633014a2fa7824</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a346ea48f77bcc49ce918d15a0d2d88a7</anchor>
       <arglist>(bool trace)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a48fe86fa6b0b01c4b20d42987b053bbe</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -16114,85 +16119,85 @@
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendInfoMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>ae7f7d731d35d9061b484c5e7eecf09d0</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendWarningMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a0cbfa3bebc8672492b2772c45e3dafce</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendErrorMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>ab114759a9e01420ed9aa0d9b27343b17</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendCriticalMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a98119826d282a0b93975e0b46ce02092</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendInfoMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a330e46b0293cfe29aab54beddaa2cf03</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendWarningMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a9dc92f488a91efae5e068d827bc95b15</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendErrorMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>ae654236004f6c8c14233d148a786329a</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>SendCriticalMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>adc177616f30f02a57051787d53540557</anchor>
       <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AllowMessageOnceAgain</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a56ab5b0e3506d38a23b2a83cc7785ad8</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a0e3de3d429ddf503cb7a6147b1cdb35b</anchor>
       <arglist>(int id)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>adae449859ec09608aed73aee40e31d96</anchor>
       <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SendLogMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a096048f4383e3c1e38cc0d4170edd5cc</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const </arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QSet&lt; int &gt;</type>
       <name>m_onceMessageIds</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a99a001aadc619309b712edc22852f3a3</anchor>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a6e416bd9d2370b80ad0e9f67f208170f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -30953,10 +30958,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ilog::TLoggerWrap&lt; CFileTypeInfoComp &gt;</type>
+      <type>CFileTypeInfoComp</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
+      <anchor>afcae5ad32dfdcd4693b68dcf17bb2069</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a0ae5d42d5b2156eb02936d530f77cb2e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -30965,41 +30977,6 @@
       <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
       <anchor>a6d599ca86417f859523d1ff83821ba25</anchor>
       <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TLoggerWrap</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
-      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ilog::IMessageConsumer *</type>
-      <name>GetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
-      <arglist>(bool trace)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
-      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -31091,90 +31068,6 @@
       <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
       <anchor>a2f7bc4d824caa22797d1e8e2c35a2782</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>AllowMessageOnceAgain</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a56ab5b0e3506d38a23b2a83cc7785ad8</anchor>
-      <arglist>(int id)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QSet&lt; int &gt;</type>
-      <name>m_onceMessageIds</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a99a001aadc619309b712edc22852f3a3</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31583,10 +31476,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ilog::TLoggerWrap&lt; ifile::CRelativeFileNameParamComp &gt;</type>
+      <type>ifile::CRelativeFileNameParamComp</type>
       <name>BaseClass</name>
       <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
-      <anchor>a590fd3e388adbdb4dc9bf584b9c9cd2a</anchor>
+      <anchor>afcae5ad32dfdcd4693b68dcf17bb2069</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
+      <anchor>a0ae5d42d5b2156eb02936d530f77cb2e</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -31595,41 +31495,6 @@
       <anchorfile>classifile_1_1_c_generated_file_name_param_comp.html</anchorfile>
       <anchor>a212c9f36d566007bc9a4f45c5bed3e9b</anchor>
       <arglist>(const QString &amp;path)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TLoggerWrap</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a57511dfea9c5c1e102647f1f7ca826aa</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a87506bdfa64e0509f5fb7a3d430a5dd4</anchor>
-      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ilog::IMessageConsumer *</type>
-      <name>GetLogPtr</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab6314c71cabb4562e7229c3c8c06761c</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ae9e590b90904a64afde7a5ad10f3bca8</anchor>
-      <arglist>(bool trace)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTracingEnabled</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa796620cca275e7834d7a0d5599f73af</anchor>
-      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
@@ -31672,90 +31537,6 @@
       <anchorfile>classilog_1_1_t_logger_comp_wrap.html</anchorfile>
       <anchor>a148b8b1a78a6265cc95bb8434fb1e3c7</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adc0cc2f5c3b599a9824a0ed6ebe9124c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>adb540f7def3c56fecc5f7eef36d26ef7</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0a071c19b2b632b147df41207bf979c</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abadaac82ecdb83f794136c894ab487ca</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendInfoMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a80fd5dff3aa3d83e4d39b24e4fc63f52</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendWarningMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>aa0d77dbf2bb831b29438936446f0a393</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendErrorMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a31e82291cfe271a91013cccf67dbb716</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SendCriticalMessageOnce</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a1d6acbc0e51abd89a4b2fe22b4b15781</anchor>
-      <arglist>(int id, const QString &amp;message, const QString &amp;messageSource=QString(), int flags=0) const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>AllowMessageOnceAgain</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a56ab5b0e3506d38a23b2a83cc7785ad8</anchor>
-      <arglist>(int id)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsLogConsumed</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>ab4b51ebab3e9634407680f35ef4afa98</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *categoryPtr=NULL, const int *flagsPtr=NULL) const</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SendLogMessage</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>abeeedb5fce3b703e62b314beb2dc9ae2</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;message, const QString &amp;messageSource, int flags=0) const</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QSet&lt; int &gt;</type>
-      <name>m_onceMessageIds</name>
-      <anchorfile>classilog_1_1_t_logger_wrap.html</anchorfile>
-      <anchor>a99a001aadc619309b712edc22852f3a3</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36262,6 +36043,7 @@
     <class kind="class">ilog::CExtMessage</class>
     <class kind="class">ilog::CLogComp</class>
     <class kind="class">ilog::CLogCompBase</class>
+    <class kind="class">ilog::CLoggerBase</class>
     <class kind="class">ilog::CMessage</class>
     <class kind="class">ilog::CMessageContainer</class>
     <class kind="class">ilog::CStreamLogCompBase</class>
@@ -36271,7 +36053,6 @@
     <class kind="class">ilog::TExtMessage</class>
     <class kind="class">ilog::TExtMessageModel</class>
     <class kind="class">ilog::TLoggerCompWrap</class>
-    <class kind="class">ilog::TLoggerWrap</class>
     <class kind="class">ilog::TMessageDelegatorComp</class>
     <member kind="typedef">
       <type>istd::TIHierarchical&lt; ilog::IMessageContainer &gt;</type>
@@ -36966,6 +36747,19 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ilog::CLoggerBase</name>
+    <filename>classilog_1_1_c_logger_base.html</filename>
+    <base virtualness="virtual">ilog::ILoggable</base>
+    <base protection="protected" virtualness="virtual">istd::ILogger</base>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DecorateMessage</name>
+      <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
+      <anchor>a38b06af2d258c4a55d5422168f579b7a</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ilog::CMessage</name>
     <filename>classilog_1_1_c_message.html</filename>
     <base virtualness="virtual">istd::IInformationProvider</base>
@@ -37335,14 +37129,7 @@
     <name>ilog::TLoggerCompWrap</name>
     <filename>classilog_1_1_t_logger_comp_wrap.html</filename>
     <templarg>Base</templarg>
-    <base>ilog::TLoggerWrap</base>
-  </compound>
-  <compound kind="class">
-    <name>ilog::TLoggerWrap</name>
-    <filename>classilog_1_1_t_logger_wrap.html</filename>
-    <templarg>Base</templarg>
-    <base virtualness="virtual">ilog::ILoggable</base>
-    <base virtualness="virtual">istd::ILogger</base>
+    <base>ilog::CLoggerBase</base>
   </compound>
   <compound kind="class">
     <name>ilog::TMessageDelegatorComp</name>
@@ -74186,6 +73973,7 @@
     <file>CExtMessage.h</file>
     <file>CLogComp.h</file>
     <file>CLogCompBase.h</file>
+    <file>CLoggerBase.h</file>
     <file>CMessage.h</file>
     <file>CMessageContainer.h</file>
     <file>CStreamLogCompBase.h</file>
@@ -74195,7 +73983,6 @@
     <file>IMessageContainer.h</file>
     <file>TExtMessage.h</file>
     <file>TLoggerCompWrap.h</file>
-    <file>TLoggerWrap.h</file>
     <file>TMessageDelegatorComp.h</file>
   </compound>
   <compound kind="dir">

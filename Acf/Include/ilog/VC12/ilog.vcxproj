@@ -120,6 +120,7 @@
     <ClCompile Include="..\CExtMessage.cpp" />
     <ClCompile Include="..\CLogComp.cpp" />
     <ClCompile Include="..\CLogCompBase.cpp" />
+    <ClCompile Include="..\CLoggerBase.cpp" />
     <ClCompile Include="..\CMessage.cpp" />
     <ClCompile Include="..\CMessageContainer.cpp" />
     <ClCompile Include="..\CStreamLogCompBase.cpp" />
@@ -138,6 +139,7 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CLogCompBase.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ilog\moc_CLogCompBase.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <ClInclude Include="..\CLoggerBase.h" />
     <ClInclude Include="..\CMessage.h" />
     <ClInclude Include="..\CMessageContainer.h" />
     <ClInclude Include="..\CStreamLogCompBase.h" />
@@ -146,7 +148,6 @@
     <ClInclude Include="..\IMessageContainer.h" />
     <ClInclude Include="..\TExtMessage.h" />
     <ClInclude Include="..\TLoggerCompWrap.h" />
-    <ClInclude Include="..\TLoggerWrap.h" />
     <ClInclude Include="..\TMessageDelegatorComp.h" />
     <ClInclude Include="..\ilog.h" />
   </ItemGroup>

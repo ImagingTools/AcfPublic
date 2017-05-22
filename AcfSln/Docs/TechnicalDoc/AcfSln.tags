@@ -23120,13 +23120,13 @@
   <compound kind="class">
     <name>iipr::CSearchParamsComp</name>
     <filename>classiipr_1_1_c_search_params_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CSearchParams</base>
     <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
+      <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_search_params_comp.html</anchorfile>
-      <anchor>ad10cf4e89cfa85b63a8db5137710ac27</anchor>
+      <anchor>a1475bb5d363d0aa4d3a31e94187b0414</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">

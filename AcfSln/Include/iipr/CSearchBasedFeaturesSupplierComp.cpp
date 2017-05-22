@@ -24,6 +24,7 @@
 
 
 // ACF includes
+#include <ilog/CMessage.h>
 #include <iprm/IParamsManager.h>
 #include <iprm/TParamsPtr.h>
 

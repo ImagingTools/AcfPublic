@@ -1,0 +1,211 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef ilog_CLoggerBase_included
+#define ilog_CLoggerBase_included
+
+
+// ACF includes
+#include <istd/ILogger.h>
+#include <ilog/ILoggable.h>
+
+
+namespace ilog
+{
+
+
+class IMessageConsumer;
+
+
+/**
+	Base class implementing interface istd::ILogger sending log messages over ilog::IMessageConsumer.
+	Access to interface ilog::IMessageConsumer must be registered by user.
+	To register it use interface ilog::ILoggable implemented by this wrapper.
+
+	\ingroup Logging
+*/
+class CLoggerBase:
+			virtual public ILoggable,
+			virtual protected istd::ILogger
+{
+public:
+	CLoggerBase();
+
+	// reimplemented (ilog::ILoggable)
+	virtual void SetLogPtr(ilog::IMessageConsumer* logPtr);
+	virtual ilog::IMessageConsumer* GetLogPtr() const;
+	virtual void SetTracingEnabled(bool trace);
+	virtual bool IsTracingEnabled() const;
+
+protected:
+	/**
+		Send info message to log.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	source of the message
+	*/
+	bool SendInfoMessage(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send warning message to log.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	source of the message
+	*/
+	bool SendWarningMessage(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send error message to log.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	source of the message
+	*/
+	bool SendErrorMessage(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send critical message to log.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	optional human readable description of message source.
+	*/
+	bool SendCriticalMessage(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send once info message to log.
+		Agains to \c SendInfoMessage the message will be sent only first time.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	source of the message
+	*/
+	bool SendInfoMessageOnce(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send once warning message to log.
+		Agains to \c SendWarningMessage the message will be sent only first time.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	source of the message
+	*/
+	bool SendWarningMessageOnce(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send once error message to log.
+		Agains to \c SendErrorMessage the message will be sent only first time.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	source of the message
+	*/
+	bool SendErrorMessageOnce(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Send once critical message to log.
+		Agains to \c SendCriticalMessage the message will be sent only first time.
+		\sa istd::IInformationProvider for message meaning documentation.
+		\param	id				binary id identifying this message type for automatic processing.
+		\param	message			message text will be send.
+		\param	messageSource	optional human readable description of message source.
+	*/
+	bool SendCriticalMessageOnce(
+				int id,
+				const QString& message,
+				const QString& messageSource = QString(),
+				int flags = 0) const;
+
+	/**
+		Reset message lock. Enable message to be send again.
+		Agains to \c SendXXXlMessageOnce for id will be sent once again.
+		\param	id				binary id identifying this message type for automatic processing.
+	*/
+	bool AllowMessageOnceAgain(int id);
+
+	/**
+		Decorate message parts before outputting.
+		It is designed to be overloaded if you want to change the decoration.
+	*/
+	virtual void DecorateMessage(
+				istd::IInformationProvider::InformationCategory category,
+				int id,
+				int flags,
+				QString& message,
+				QString& messageSource) const;
+
+	// reimplemented (istd::ILogger)
+	virtual bool IsLogConsumed(
+				const istd::IInformationProvider::InformationCategory* categoryPtr = NULL,
+				const int* flagsPtr = NULL) const;
+	virtual bool SendLogMessage(
+				istd::IInformationProvider::InformationCategory category,
+				int id,
+				const QString& message,
+				const QString& messageSource,
+				int flags = 0) const;
+
+protected:
+	mutable QSet<int> m_onceMessageIds;
+
+private:
+	ilog::IMessageConsumer* m_logPtr;
+	bool m_isTracingEnabled;
+};
+
+
+} // namespace ilog
+
+
+#endif // !ilog_CLoggerBase_included
+
+

@@ -23,6 +23,10 @@
 #include <iipr/CProcessedBitmapSupplierComp.h>
 
 
+// ACF includes
+#include <ilog/CMessage.h>
+
+
 namespace iipr
 {
 

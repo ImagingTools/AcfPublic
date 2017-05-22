@@ -23,6 +23,10 @@
 #include <iipr/CImageHistogramSupplierComp.h>
 
 
+// ACF includes
+#include <ilog/CMessage.h>
+
+
 namespace iipr
 {
 

@@ -23,6 +23,9 @@
 #include <iipr/CEdgeDistancesSupplierComp.h>
 
 
+// ACF includes
+#include <ilog/CMessage.h>
+
 
 namespace iipr
 {

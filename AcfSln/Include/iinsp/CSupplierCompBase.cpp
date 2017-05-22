@@ -28,6 +28,7 @@
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
+#include <ilog/CMessage.h>
 
 
 namespace iinsp

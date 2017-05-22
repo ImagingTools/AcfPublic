@@ -268,8 +268,6 @@ bool CCompactXmlReadArchiveBase::ReadTextNode(QByteArray& text)
 }
 
 
-// reimplemented (istd::ILogger)
-
 void CCompactXmlReadArchiveBase::DecorateMessage(
 			istd::IInformationProvider::InformationCategory category,
 			int id,
