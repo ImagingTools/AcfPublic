@@ -26,8 +26,6 @@
 
 #include <ilog/IMessageConsumer.h>
 
-#include <istd/IPolymorphic.h>
-
 
 namespace ilog
 {

@@ -45,11 +45,10 @@ class IMessageConsumer;
 */
 class CLoggerBase:
 			virtual public ILoggable,
-			virtual public istd::ILogger
+			virtual protected istd::ILogger
 {
 public:
 	CLoggerBase();
-	virtual ~CLoggerBase(){}
 
 	// reimplemented (ilog::ILoggable)
 	virtual void SetLogPtr(ilog::IMessageConsumer* logPtr);
@@ -165,6 +164,13 @@ protected:
 				const QString& message,
 				const QString& messageSource = QString(),
 				int flags = 0) const;
+
+	/**
+		Send message with user object.
+		\param	messagePtr	pointer to user message object.
+							This function overtake ownership to this object.
+	*/
+	bool SendUserMessage(const istd::IInformationProvider* messagePtr) const;
 
 	/**
 		Reset message lock. Enable message to be send again.

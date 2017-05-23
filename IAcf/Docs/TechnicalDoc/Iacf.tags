@@ -1033,6 +1033,20 @@
     <name>iocv::COcvBlobProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_blob_processor_comp.html</filename>
     <base>iblob::CBlobProcessorCompBase</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
+      <anchor>a24f8313ee7b7d53b351e72b0f395865a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_FOUND_BLOB</name>
+      <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
+      <anchor>a24f8313ee7b7d53b351e72b0f395865aabefad07f2b6c37e04b4b334f61964f17</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iblob::CBlobProcessorCompBase</type>
       <name>BaseClass</name>
