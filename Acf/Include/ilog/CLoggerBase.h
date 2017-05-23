@@ -49,6 +49,7 @@ class CLoggerBase:
 {
 public:
 	CLoggerBase();
+	virtual ~CLoggerBase(){}
 
 	// reimplemented (ilog::ILoggable)
 	virtual void SetLogPtr(ilog::IMessageConsumer* logPtr);
