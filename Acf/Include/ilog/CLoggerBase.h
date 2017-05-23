@@ -45,7 +45,7 @@ class IMessageConsumer;
 */
 class CLoggerBase:
 			virtual public ILoggable,
-			virtual protected istd::ILogger
+			virtual public istd::ILogger
 {
 public:
 	CLoggerBase();
