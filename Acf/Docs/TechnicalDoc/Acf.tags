@@ -169,6 +169,14 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CObject2dFactory.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_object2d_factory_8h</filename>
+    <includes id="_i_object_8h" name="IObject.h" local="no" imported="no">iser/IObject.h</includes>
+    <class kind="class">i2d::CObject2dFactory</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>COrientedCircle.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_oriented_circle_8h</filename>
@@ -7148,6 +7156,7 @@
     <class kind="class">i2d::CLine2dComp</class>
     <class kind="class">i2d::CMatrix2d</class>
     <class kind="class">i2d::CObject2dBase</class>
+    <class kind="class">i2d::CObject2dFactory</class>
     <class kind="class">i2d::COrientedCircle</class>
     <class kind="class">i2d::COrientedCircleComp</class>
     <class kind="class">i2d::CParallelogram</class>
@@ -9840,6 +9849,20 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a2ceb190dda3632ad9fa0031aab18c34e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>aae8e660611fa681843fc72590678f4b1</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
@@ -9860,12 +9883,12 @@
       <anchor>a838ff36e94875672ef45934e1914cdc8</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>aae8e660611fa681843fc72590678f4b1</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a2f1446832702f09621a5f28404cb0e80</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10609,6 +10632,46 @@
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>aca17d0aedcec31b0ae88d233033622bc</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CObject2dFactory</name>
+    <filename>classi2d_1_1_c_object2d_factory.html</filename>
+    <base virtualness="virtual">istd::TIFactory</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IObject *</type>
+      <name>CreateInstance</name>
+      <anchorfile>classi2d_1_1_c_object2d_factory.html</anchorfile>
+      <anchor>a3dec000ad7bdef17b8872cb22b177488</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual KeyList</type>
+      <name>GetFactoryKeys</name>
+      <anchorfile>classi2d_1_1_c_object2d_factory.html</anchorfile>
+      <anchor>ad3094349388014b893ce30c84dccedb6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static const CObject2dFactory &amp;</type>
+      <name>GetInstance</name>
+      <anchorfile>classi2d_1_1_c_object2d_factory.html</anchorfile>
+      <anchor>a1d57b82cc3d1327fc025aa65a073cd6b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="typedef">
+      <type>Interface</type>
+      <name>InterfaceType</name>
+      <anchorfile>classistd_1_1_t_i_factory.html</anchorfile>
+      <anchor>a4a533e49b6efed0c5a2cc5fa02729bcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QSet&lt; QByteArray &gt;</type>
+      <name>KeyList</name>
+      <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
+      <anchor>ae1894175a9fe040b7b729506f188a35f</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15213,20 +15276,6 @@
       <anchorfile>classiattr_1_1_c_standard_attributes_factory.html</anchorfile>
       <anchor>aa45674326e2738b9d4344cedfd36bc1a</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="typedef">
-      <type>Interface</type>
-      <name>InterfaceType</name>
-      <anchorfile>classistd_1_1_t_i_factory.html</anchorfile>
-      <anchor>a4a533e49b6efed0c5a2cc5fa02729bcd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QSet&lt; QByteArray &gt;</type>
-      <name>KeyList</name>
-      <anchorfile>classistd_1_1_i_factory_info.html</anchorfile>
-      <anchor>ae1894175a9fe040b7b729506f188a35f</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -73669,6 +73718,7 @@
     <file>CLine2dComp.h</file>
     <file>CMatrix2d.h</file>
     <file>CObject2dBase.h</file>
+    <file>CObject2dFactory.h</file>
     <file>COrientedCircle.h</file>
     <file>COrientedCircleComp.h</file>
     <file>CParallelogram.h</file>

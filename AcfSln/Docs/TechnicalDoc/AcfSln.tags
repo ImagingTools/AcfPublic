@@ -2752,6 +2752,15 @@
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>CMessageBasedViewExtenderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
+    <filename>_c_message_based_view_extender_comp_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="_t_result_shape_creator_wrap_8h" name="TResultShapeCreatorWrap.h" local="no" imported="no">iqtinsp/TResultShapeCreatorWrap.h</includes>
+    <class kind="class">iqtinsp::CMessageBasedViewExtenderComp</class>
+    <namespace>iqtinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqtinsp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>iqtinsp_8h</filename>
@@ -7760,6 +7769,13 @@
       <anchor>adc4b1013177f4ca4405dff92141e89d0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>imod::TModelWrap&lt; ilog::CMessageContainer &gt;</type>
+      <name>MessageContainer</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>ac1aa6eec524f78e5b7a5a057a514903a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>istd::TDelPtr&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
       <name>m_productPtr</name>
@@ -7773,6 +7789,13 @@
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
       <anchor>a989b1794443d4cd7bc7e23deaf82754b</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>MessageContainer</type>
+      <name>m_messageContainers</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a47940a5107adf22acbadc7a99449f063</anchor>
+      <arglist>[MTC_LAST+1]</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19893,15 +19916,15 @@
       <type></type>
       <name>CHoughSpace2d</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a243bb2f4bf41f34e1976f4eb1bc88052</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, double isWrappedX=false, double isWrappedY=false)</arglist>
+      <anchor>ab7de16e250bd2fcdbe490b9fac23b2ad</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>CreateHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a788039e919bbbb86564f89ae15754834</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, double isWrappedX=false, double isWrappedY=false)</arglist>
+      <anchor>a8400d19ba734e139dfac76cbcecbe8f3</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false, bool isFloatSpace=false)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -19993,6 +20016,20 @@
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
       <anchor>aa7423afbb13e29beef05b553dc0401e7</anchor>
       <arglist>(const CHoughSpace2d &amp;space)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>abede1d891a61264db73900b0f0216337</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, int pixelBitsCount=0, int componentsCount=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ac94cf8a222c4d40192dc186de6aa9d4e</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28605,6 +28642,7 @@
     <class kind="class">iqtinsp::CGeneralSupplierGuiComp</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
+    <class kind="class">iqtinsp::CMessageBasedViewExtenderComp</class>
     <class kind="class">iqtinsp::TResultShapeCreatorWrap</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
   </compound>
@@ -29107,9 +29145,64 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtinsp::CMessageBasedViewExtenderComp</name>
+    <filename>classiqtinsp_1_1_c_message_based_view_extender_comp.html</filename>
+    <base>TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <member kind="typedef">
+      <type>iqtinsp::TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>abeac0b53d825551f6992f8f2deeafc33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
+      <anchor>a7533e8726af42954c7e0116a753f20dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AddItemsToScene</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>ab2f485eb7f06ccc89320ca3b2eb6ba34</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveItemsFromScene</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>af73c83b80780a24cba0332afddec67b9</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a10bb300f0583c6627ab8618b96ffec60</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a66d7e07bd42d6c381e59bc9e927e1c46</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::IShape *</type>
+      <name>CreateResultShape</name>
+      <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
+      <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
+      <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtinsp::TResultShapeCreatorWrap</name>
     <filename>classiqtinsp_1_1_t_result_shape_creator_wrap.html</filename>
-    <templarg></templarg>
+    <templarg>Base</templarg>
     <member kind="typedef">
       <type>Base</type>
       <name>BaseClass</name>
@@ -31813,6 +31906,20 @@
       <arglist>(int triggerMode)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTriggersCount</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>ae7aef36f1598c22150144bcdfdaf43ca</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetTriggersCount</name>
+      <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
+      <anchor>a205d8403d5b5422bf6a1f7b6c87b650a</anchor>
+      <arglist>(int triggersCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const iprm::IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classisig_1_1_c_trigger_params_comp.html</anchorfile>
@@ -32161,6 +32268,20 @@
       <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
       <anchor>a66ebe1c5c3511d7fbe95d5e8124d3887</anchor>
       <arglist>(int triggerMode)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetTriggersCount</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>adcba5d965d5ef48b326fde583ed45544</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetTriggersCount</name>
+      <anchorfile>classisig_1_1_i_trigger_params.html</anchorfile>
+      <anchor>ab835a78d66f7a23902e0f85596c7559b</anchor>
+      <arglist>(int triggersCount)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -33642,6 +33763,7 @@
     <filename>dir_20452451cdb86f26cfdbc571306ad63f.html</filename>
     <file>CGeneralSupplierGuiComp.h</file>
     <file>CInspectionTaskGuiComp.h</file>
+    <file>CMessageBasedViewExtenderComp.h</file>
     <file>iqtinsp.h</file>
     <file>TResultShapeCreatorWrap.h</file>
     <file>TSupplierGuiCompBase.h</file>

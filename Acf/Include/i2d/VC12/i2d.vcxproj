@@ -134,6 +134,7 @@
     <ClCompile Include="..\CLine2dComp.cpp" />
     <ClCompile Include="..\CMatrix2d.cpp" />
     <ClCompile Include="..\CObject2dBase.cpp" />
+    <ClCompile Include="..\CObject2dFactory.cpp" />
     <ClCompile Include="..\COrientedCircle.cpp" />
     <ClCompile Include="..\COrientedCircleComp.cpp" />
     <ClCompile Include="..\CParallelogram.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="..\CLine2dComp.h" />
     <ClInclude Include="..\CMatrix2d.h" />
     <ClInclude Include="..\CObject2dBase.h" />
+    <ClInclude Include="..\CObject2dFactory.h" />
     <ClInclude Include="..\COrientedCircle.h" />
     <ClInclude Include="..\COrientedCircleComp.h" />
     <ClInclude Include="..\CParallelogram.h" />
