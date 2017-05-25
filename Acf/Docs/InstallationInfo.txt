@@ -1,3 +1,3 @@
-Installation creation time: Mi Mai 24 03:37:25 2017
-ACF Version: 2.0.2.69 (4511)
+Installation creation time: Do Mai 25 02:26:25 2017
+ACF Version: 2.0.2.70 (4512)
 Compiler code: VC9

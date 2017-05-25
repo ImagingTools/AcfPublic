@@ -133,6 +133,7 @@
     <ClInclude Include="..\IEnableableSupplier.h" />
     <ClInclude Include="..\IIdProvider.h" />
     <ClInclude Include="..\IInspectionTask.h" />
+    <ClInclude Include="..\IModelTeachController.h" />
     <ClInclude Include="..\ISupplier.h" />
     <ClInclude Include="..\ITimeStampProvider.h" />
     <ClInclude Include="..\TSupplierCompWrap.h" />

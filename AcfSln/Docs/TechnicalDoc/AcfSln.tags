@@ -1199,6 +1199,13 @@
     <namespace>iinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>IModelTeachController.h</name>
+    <path>C:/Temp/AcfSln/Include/iinsp/</path>
+    <filename>_i_model_teach_controller_8h</filename>
+    <class kind="class">iinsp::IModelTeachController</class>
+    <namespace>iinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>ISupplier.h</name>
     <path>C:/Temp/AcfSln/Include/iinsp/</path>
     <filename>_i_supplier_8h</filename>
@@ -2758,6 +2765,14 @@
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_result_shape_creator_wrap_8h" name="TResultShapeCreatorWrap.h" local="no" imported="no">iqtinsp/TResultShapeCreatorWrap.h</includes>
     <class kind="class">iqtinsp::CMessageBasedViewExtenderComp</class>
+    <namespace>iqtinsp</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTeachableParamsDecoratorGuiComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
+    <filename>_c_teachable_params_decorator_gui_comp_8h</filename>
+    <includes id="_i_model_teach_controller_8h" name="IModelTeachController.h" local="no" imported="no">iinsp/IModelTeachController.h</includes>
+    <class kind="class">iqtinsp::CTeachableParamsDecoratorGuiComp</class>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
@@ -15911,6 +15926,7 @@
     <class kind="class">iinsp::IEnableableSupplier</class>
     <class kind="class">iinsp::IIdProvider</class>
     <class kind="class">iinsp::IInspectionTask</class>
+    <class kind="class">iinsp::IModelTeachController</class>
     <class kind="class">iinsp::ISupplier</class>
     <class kind="class">iinsp::ITimeStampProvider</class>
     <class kind="class">iinsp::TSupplierCompWrap</class>
@@ -16920,6 +16936,39 @@
       <anchorfile>classiinsp_1_1_i_inspection_task.html</anchorfile>
       <anchor>acc84ce65b152a98a4121084041212f92</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iinsp::IModelTeachController</name>
+    <filename>classiinsp_1_1_i_model_teach_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsModelTeachable</name>
+      <anchorfile>classiinsp_1_1_i_model_teach_controller.html</anchorfile>
+      <anchor>aace97a1e54226ee94d2a769e42375cbd</anchor>
+      <arglist>(const iprm::IParamsSet &amp;modelParams, const iprm::IParamsSet *modelDataPtr=NULL, bool beQuiet=false, bool *needUserInteractionPtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DoModelTeach</name>
+      <anchorfile>classiinsp_1_1_i_model_teach_controller.html</anchorfile>
+      <anchor>a7b0636b1207e2fbea3292765859bf188</anchor>
+      <arglist>(const iprm::IParamsSet &amp;modelParams, iprm::IParamsSet &amp;result, bool beQuiet=false) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetModelData</name>
+      <anchorfile>classiinsp_1_1_i_model_teach_controller.html</anchorfile>
+      <anchor>a1f9243da31a83b5cae1af5d967b9fa71</anchor>
+      <arglist>(iprm::IParamsSet &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsModelDataValid</name>
+      <anchorfile>classiinsp_1_1_i_model_teach_controller.html</anchorfile>
+      <anchor>a6603e17513118d73aaa6b1c4d1de79a3</anchor>
+      <arglist>(const iprm::IParamsSet &amp;modelData) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20184,7 +20233,14 @@
       <anchor>a8bd0f4bb480440da7bd9dd13f61ccf9c</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>DoImageCrop</name>
+      <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
+      <anchor>ada2696fa532f03143df59784b417f83d</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::IObject2d &amp;aoi, iimg::IBitmap &amp;outputBitmap, istd::ILogger *loggerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiipr_1_1_c_image_crop_processor_comp.html</anchorfile>
@@ -28643,6 +28699,7 @@
     <class kind="class">iqtinsp::CInspectionTaskGuiCompBase</class>
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <class kind="class">iqtinsp::CMessageBasedViewExtenderComp</class>
+    <class kind="class">iqtinsp::CTeachableParamsDecoratorGuiComp</class>
     <class kind="class">iqtinsp::TResultShapeCreatorWrap</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
   </compound>
@@ -29197,6 +29254,95 @@
       <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
       <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
       <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtinsp::CTeachableParamsDecoratorGuiComp</name>
+    <filename>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CTeachableParamsDecoratorGuiComp, iprm::IParamsSet &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTeachableParamsDecoratorGuiComp, iprm::IParamsSet &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>ab0920235efd7f2b868542e08b21bf91f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateEditor</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>ada3a8933adc13d73adc2ace7fb7d5442</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModelFromEditor</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a756f8703aad6034baac063822cf10c00</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsReadOnly</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a1c66374bf9296daabcde54771010f31f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetReadOnly</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a9f36bf4d3614399016d5c5754df7d1d6</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a0ee3a6e9f8b52ca9b494c037a7046ec5</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a3ee1c1ae58a8e345fe7375979b83e3e5</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_TeachModelButton_clicked</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a29ae5e7d8af7f998c93e0d0b287d59ee</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ResetModelButton_clicked</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a160d1e6bf60b1179d3f445ffb4aa7947</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateButtonsState</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>a878f556568a8f3413dec260623218c01</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>ad208180269bb8d49d95c9c040fd193a1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
+      <anchor>ad5c3d4596793f0e2e6a3d4fda8bfcf68</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33508,6 +33654,7 @@
     <file>IIdProvider.h</file>
     <file>iinsp.h</file>
     <file>IInspectionTask.h</file>
+    <file>IModelTeachController.h</file>
     <file>ISupplier.h</file>
     <file>ITimeStampProvider.h</file>
     <file>TSupplierCompWrap.h</file>
@@ -33764,6 +33911,7 @@
     <file>CGeneralSupplierGuiComp.h</file>
     <file>CInspectionTaskGuiComp.h</file>
     <file>CMessageBasedViewExtenderComp.h</file>
+    <file>CTeachableParamsDecoratorGuiComp.h</file>
     <file>iqtinsp.h</file>
     <file>TResultShapeCreatorWrap.h</file>
     <file>TSupplierGuiCompBase.h</file>
