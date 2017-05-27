@@ -121,27 +121,25 @@ void CTeachableParamsDecoratorGuiComp::UpdateButtonsState()
 }
 
 
-// reimplemented (iqtgui::TGuiObserverWrap)
+// reimplemented (iqtgui::CGuiComponentBase)
 
-void CTeachableParamsDecoratorGuiComp::OnGuiModelAttached()
+void CTeachableParamsDecoratorGuiComp::OnGuiCreated()
 {
-	BaseClass::OnGuiModelAttached();
-
 	if (m_slaveGuiCompPtr.IsValid()){
 		m_slaveGuiCompPtr->CreateGui(ParamsFrame);
 	}
 
-	UpdateButtonsState();
+	BaseClass::OnGuiCreated();
 }
 
 
-void CTeachableParamsDecoratorGuiComp::OnGuiModelDetached()
+void CTeachableParamsDecoratorGuiComp::OnGuiDestroyed()
 {
 	if (m_slaveGuiCompPtr.IsValid()){
 		m_slaveGuiCompPtr->DestroyGui();
 	}
 
-	BaseClass::OnGuiModelDetached();
+	BaseClass::OnGuiDestroyed();
 }
 
 
@@ -153,6 +151,8 @@ void CTeachableParamsDecoratorGuiComp::on_TeachModelButton_clicked()
 	if (m_teachControllerCompPtr.IsValid() && (objectPtr != NULL)){
 		m_teachControllerCompPtr->DoModelTeach(*objectPtr, *objectPtr);
 	}
+
+	UpdateButtonsState();
 }
 
 
@@ -162,6 +162,8 @@ void CTeachableParamsDecoratorGuiComp::on_ResetModelButton_clicked()
 	if (m_teachControllerCompPtr.IsValid() && (objectPtr != NULL)){
 		m_teachControllerCompPtr->ResetModelData(*objectPtr);
 	}
+
+	UpdateButtonsState();
 }
 
 

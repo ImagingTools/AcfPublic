@@ -29332,16 +29332,16 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
+      <name>OnGuiCreated</name>
       <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
-      <anchor>ad208180269bb8d49d95c9c040fd193a1</anchor>
+      <anchor>ae9c7f3cc0f1656e7cd38365c36fe961e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
+      <name>OnGuiDestroyed</name>
       <anchorfile>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</anchorfile>
-      <anchor>ad5c3d4596793f0e2e6a3d4fda8bfcf68</anchor>
+      <anchor>a218f8dd98bb7da85b02c7e9abfb343ac</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
