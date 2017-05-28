@@ -2932,6 +2932,7 @@
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_c_console_log_comp_8h</filename>
     <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
     <class kind="class">ilog::CConsoleLogComp</class>
     <namespace>ilog</namespace>
   </compound>

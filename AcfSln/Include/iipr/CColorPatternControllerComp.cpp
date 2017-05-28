@@ -107,7 +107,7 @@ void CColorPatternControllerComp::ResetPattern()
 
 bool CColorPatternControllerComp::IsPatternValid() const
 {
-	return !m_patternBitmap.IsEmpty();
+	return !m_patternBitmap.IsEmpty() && !m_histogram.IsEmpty();
 }
 
 
