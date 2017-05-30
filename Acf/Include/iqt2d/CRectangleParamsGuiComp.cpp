@@ -25,7 +25,6 @@
 
 // ACF includes
 #include <istd/CChangeGroup.h>
-#include <iqt/CSignalBlocker.h>
 
 
 namespace iqt2d
@@ -68,17 +67,10 @@ void CRectangleParamsGuiComp::UpdateModel() const
 	istd::CChangeGroup changeGroup(objectPtr);
 	Q_UNUSED(changeGroup);
 
-	double left = LeftSpin->value();
-	double right = RightSpin->value();
-	Q_ASSERT(left <= right);
-	objectPtr->SetLeft(left);
-	objectPtr->SetRight(right);
-
-	double top = TopSpin->value();
-	double bottom = BottomSpin->value();
-	Q_ASSERT(top <= bottom);
-	objectPtr->SetTop(top);
-	objectPtr->SetBottom(bottom);
+	objectPtr->SetLeft(LeftSpin->value());
+	objectPtr->SetRight(RightSpin->value());
+	objectPtr->SetTop(TopSpin->value());
+	objectPtr->SetBottom(BottomSpin->value());
 }
 
 
@@ -88,27 +80,10 @@ void CRectangleParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*ch
 
 	i2d::CRectangle* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
-		iqt::CSignalBlocker block(GetWidget(), true);
-
-		double left = objectPtr->GetLeft();
-		double right = objectPtr->GetRight();
-		if (left > right) {
-			std::swap(left, right);
-		}
-		LeftSpin->setMaximum(right);
-		RightSpin->setMinimum(left);
-		LeftSpin->setValue(left);
-		RightSpin->setValue(right);
-
-		double top = objectPtr->GetTop();
-		double bottom = objectPtr->GetBottom();
-		if (top > bottom) {
-			std::swap(top, bottom);
-		}
-		TopSpin->setMaximum(bottom);
-		BottomSpin->setMinimum(top);
-		TopSpin->setValue(top);
-		BottomSpin->setValue(bottom);
+		LeftSpin->setValue(objectPtr->GetLeft());
+		RightSpin->setValue(objectPtr->GetRight());
+		BottomSpin->setValue(objectPtr->GetBottom());
+		TopSpin->setValue(objectPtr->GetTop());
 
 		UpdateAllViews();
 	}
@@ -140,14 +115,6 @@ void CRectangleParamsGuiComp::OnGuiRetranslate()
 
 void CRectangleParamsGuiComp::OnParamsChanged(double /*value*/)
 {
-	//Left <= Right
-	LeftSpin->setMaximum(RightSpin->value());
-	RightSpin->setMinimum(LeftSpin->value());
-
-	//Top <= Bottom
-	TopSpin->setMaximum(BottomSpin->value());
-	BottomSpin->setMinimum(TopSpin->value());
-
 	DoUpdateModel();
 }
 

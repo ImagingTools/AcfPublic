@@ -29011,6 +29011,13 @@
       <anchor>aaf567d81493ff1fd3b1e02461dd7f453a178e6606d830a1094dd3a5f89b85d256</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DR_IS_RESULT</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aaf567d81493ff1fd3b1e02461dd7f453af61786cd9fbf9e7ebf077cd13423cea3</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</type>
       <name>BaseClass</name>
