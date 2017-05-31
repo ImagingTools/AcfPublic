@@ -17200,6 +17200,13 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>int</type>
+      <name>GetIterationIndex</name>
+      <anchorfile>classistd_1_1_t_index.html</anchorfile>
+      <anchor>a8c94c9778812a34a47d75a4280655ff6</anchor>
+      <arglist>(const TIndex &amp;boundaries) const</arglist>
+    </member>
+    <member kind="function">
       <type>Iterator</type>
       <name>Begin</name>
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
@@ -61311,6 +61318,13 @@
       <anchorfile>classistd_1_1_t_index.html</anchorfile>
       <anchor>a8af27cd001f8678a3b96e3467fead82d</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetIterationIndex</name>
+      <anchorfile>classistd_1_1_t_index.html</anchorfile>
+      <anchor>a8c94c9778812a34a47d75a4280655ff6</anchor>
+      <arglist>(const TIndex &amp;boundaries) const </arglist>
     </member>
     <member kind="function">
       <type>Iterator</type>
