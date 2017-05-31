@@ -37,7 +37,6 @@
 // ACF includes
 #include <idoc/IDocumentMetaInfo.h>
 #include <imod/TSingleModelObserverBase.h>
-#include <ibase/TModelObserverCompWrap.h>
 #include <iqtgui/TGuiObserverWrap.h>
 #include <iqtgui/TGuiComponentBase.h>
 
@@ -47,17 +46,15 @@ namespace iqtdoc
 
 
 class CDocumentMetaInfoEditorComp:
-			public ibase::TModelObserverCompWrap<
-						iqtgui::TGuiObserverWrap<
-									iqtgui::TGuiComponentBase<QWidget>,
-									imod::TSingleModelObserverBase<idoc::IDocumentMetaInfo> > >
+			public iqtgui::TGuiObserverWrap<
+						iqtgui::TGuiComponentBase<QWidget>,
+						imod::TSingleModelObserverBase<idoc::IDocumentMetaInfo> >
 {
 	Q_OBJECT
 public:
-	typedef ibase::TModelObserverCompWrap<
-		iqtgui::TGuiObserverWrap<
-		iqtgui::TGuiComponentBase<QWidget>,
-		imod::TSingleModelObserverBase<idoc::IDocumentMetaInfo> > > BaseClass;
+	typedef iqtgui::TGuiObserverWrap<
+				iqtgui::TGuiComponentBase<QWidget>,
+				imod::TSingleModelObserverBase<idoc::IDocumentMetaInfo> > BaseClass;
 
 	I_BEGIN_COMPONENT(CDocumentMetaInfoEditorComp);
 	I_END_COMPONENT;

@@ -45,12 +45,12 @@ namespace ibase
 	\ingroup DataModel
 */
 template <class ObserverComponent>
-class TModelObserverCompWrap: public ObserverComponent
+class TModelObserverCompBaseWrap: public ObserverComponent
 {
 public:
 	typedef ObserverComponent BaseClass;
 
-	I_BEGIN_BASE_COMPONENT(TModelObserverCompWrap);
+	I_BEGIN_BASE_COMPONENT(TModelObserverCompBaseWrap);
 		I_REGISTER_INTERFACE(imod::IObserver);
 		I_ASSIGN(m_defaultModelCompPtr, "DefaultModel", "Data model to be connected to the observer", false, "DefaultModel");
 		I_TASSIGN_TO(m_defaultObjectCompPtr, m_defaultModelCompPtr, false);
@@ -72,7 +72,7 @@ private:
 // reimplemented (icomp::CComponentBase)
 
 template <class ObserverComponent>
-void TModelObserverCompWrap<ObserverComponent>::OnComponentCreated()
+void TModelObserverCompBaseWrap<ObserverComponent>::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
@@ -119,7 +119,7 @@ void TModelObserverCompWrap<ObserverComponent>::OnComponentCreated()
 
 
 template <class ObserverComponent>
-void TModelObserverCompWrap<ObserverComponent>::OnComponentDestroyed()
+void TModelObserverCompBaseWrap<ObserverComponent>::OnComponentDestroyed()
 {
 	if (m_defaultModelCompPtr.IsValid() && m_defaultModelCompPtr->IsAttached(this)){
 		m_defaultModelCompPtr->DetachObserver(this);
@@ -127,6 +127,21 @@ void TModelObserverCompWrap<ObserverComponent>::OnComponentDestroyed()
 
 	BaseClass::OnComponentDestroyed();
 }
+
+
+/**
+	Final implementation of the component-based observer wrapper.
+	In contrast to the TModelObserverCompBaseWrap it can be used also as outer-most-wrapper (e.g. by component registration in the package).
+*/
+template <class BaseComponent>
+class TModelObserverCompWrap : public TModelObserverCompBaseWrap<BaseComponent>
+{
+public:
+	typedef TModelObserverCompBaseWrap<BaseComponent> BaseClass;
+
+	I_BEGIN_COMPONENT(TModelObserverCompWrap);
+	I_END_COMPONENT;
+};
 
 
 } // namespace ibase

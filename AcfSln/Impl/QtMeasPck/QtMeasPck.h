@@ -27,6 +27,7 @@
 // ACF includes
 #include <icomp/TModelCompWrap.h>
 #include <icomp/TMakeComponentWrap.h>
+#include <ibase/TModelObserverCompWrap.h>
 
 // ACF-Solutions includes
 #include <iqtmeas/CDataSequenceViewComp.h>
@@ -44,7 +45,7 @@ namespace QtMeasPck
 
 typedef iqtmeas::CDataSequenceViewComp DataSequenceView;
 typedef iqtmeas::CDataStatisticsGuiComp DataStatisticsGui;
-typedef iqtmeas::CNumericParamsGuiComp NumericParamsGui;
+typedef ibase::TModelObserverCompWrap<iqtmeas::CNumericParamsGuiComp> NumericParamsGui;
 typedef iqtmeas::CDataSequenceSupplierResultsViewComp DataSequenceSupplierResultsView;
 
 

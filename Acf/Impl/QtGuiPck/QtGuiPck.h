@@ -26,6 +26,7 @@
 
 #include <icomp/TModelCompWrap.h>
 #include <icomp/TMakeComponentWrap.h>
+#include <ibase/TModelObserverCompWrap.h>
 
 #include <iqtgui/CGuiApplicationComp.h>
 #include <iqtgui/CDialogApplicationComp.h>
@@ -127,7 +128,7 @@ typedef icomp::TModelCompWrap<iqtgui::CCommandBasedSelectionControllerComp> Comm
 typedef iqtgui::CVersionInfoGuiComp VersionInfoGui;
 typedef iqtgui::CProgressManagerGuiComp ProgressManagerGui;
 typedef iqtgui::CTableBasedModelEditorComp TableBasedModelEditor;
-typedef iqtgui::CStatusGuiComp StatusGui;
+typedef ibase::TModelObserverCompWrap<iqtgui::CStatusGuiComp> StatusGui;
 typedef iqtgui::CCalendarGuiComp CalendarGui;
 typedef icomp::TModelCompWrap<iqtgui::CCommandsMultiplexerComp> CommandsMultiplexer;
 typedef iqtgui::CProcessStartCommandComp ProcessStartCommand;
@@ -152,7 +153,7 @@ typedef iqtprm::CCheckableOptionsEditorComp CheckableOptionsEditor;
 typedef iqtprm::CEnableableParamGuiComp EnableableParamGui;
 typedef iqtprm::CButtonBasedSelectionParamGuiComp ButtonBasedSelectionEditor;
 typedef iqtprm::CMultiParamsManagerGuiComp MultiParamsManagerGui;
-typedef iqtprm::CExtComposedParamsSetGuiComp ExtComposedParamsSetGui;
+typedef ibase::TModelObserverCompWrap<iqtprm::CExtComposedParamsSetGuiComp> ExtComposedParamsSetGui;
 typedef iqtprm::CExtParamsManagerGuiComp ExtParamsManagerGui;
 
 typedef iqtdoc::CMainWindowGuiComp MainWindowGui;
@@ -160,7 +161,7 @@ typedef icomp::TModelCompWrap<iqtdoc::CSingleDocumentWorkspaceGuiComp> SingleDoc
 typedef icomp::TModelCompWrap<iqtdoc::CMultiDocumentWorkspaceGuiComp> MultiDocWorkspaceGui;
 typedef iqtdoc::CHtmlHelpGuiComp HtmlHelpGui;
 typedef iqtdoc::CHtmlHelpViewerComp HtmlHelpViewer;
-typedef iqtdoc::CDocumentMetaInfoEditorComp DocumentMetaInfoEditor;
+typedef ibase::TModelObserverCompWrap<iqtdoc::CDocumentMetaInfoEditorComp> DocumentMetaInfoEditor;
 typedef iqtdoc::CExtendedDocumentTemplateComp ExtendedDocumentTemplate;
 typedef iqtdoc::CStaticHelpFileProviderComp StaticHelpFileProvider;
 typedef iqtdoc::CDoxygenHelpFileProviderComp DoxygenHelpFileProvider;

@@ -26,7 +26,6 @@
 
 // ACF includes
 #include <icomp/CComponentBase.h>
-#include <ibase/TModelObserverCompWrap.h>
 #include <i2d/ICalibration2d.h>
 #include <i2d/ICalibrationProvider.h>
 #include <iqtgui/TGuiComponentBase.h>
@@ -44,13 +43,11 @@ namespace iqt2d
 	This class extends standard 2D-console to provide background bitmap object.
 */
 class CImageViewComp:
-			public ibase::TModelObserverCompWrap<
-						iqtgui::TGuiObserverWrap<CViewProviderGuiComp, iview::CImageShape> >
+			public iqtgui::TGuiObserverWrap<CViewProviderGuiComp, iview::CImageShape>
 
 {
 public:
-	typedef ibase::TModelObserverCompWrap<
-				iqtgui::TGuiObserverWrap<CViewProviderGuiComp, iview::CImageShape> > BaseClass;
+	typedef iqtgui::TGuiObserverWrap<CViewProviderGuiComp, iview::CImageShape> BaseClass;
 
 	I_BEGIN_COMPONENT(CImageViewComp);
 		I_REGISTER_INTERFACE(imod::IObserver);

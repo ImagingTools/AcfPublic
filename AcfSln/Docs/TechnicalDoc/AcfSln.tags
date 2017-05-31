@@ -452,7 +452,6 @@
     <path>C:/Temp/AcfSln/Include/icmpstr/</path>
     <filename>_c_convert_component_command_comp_8h</filename>
     <includes id="_i_element_selection_info_8h" name="IElementSelectionInfo.h" local="no" imported="no">icmpstr/IElementSelectionInfo.h</includes>
-    <class kind="class">icmpstr::CConvertComponentCommandCompBase</class>
     <class kind="class">icmpstr::CConvertComponentCommandComp</class>
     <namespace>icmpstr</namespace>
   </compound>
@@ -8526,7 +8525,6 @@
     <class kind="class">icmpstr::CAttributeEditorComp</class>
     <class kind="class">icmpstr::CComponentHelpFileProviderComp</class>
     <class kind="class">icmpstr::CComponentNoteEditorComp</class>
-    <class kind="class">icmpstr::CConvertComponentCommandCompBase</class>
     <class kind="class">icmpstr::CConvertComponentCommandComp</class>
     <class kind="class">icmpstr::CElementSelectionInfoManagerBase</class>
     <class kind="class">icmpstr::CGraphicsConnectorItem</class>
@@ -8560,7 +8558,7 @@
   <compound kind="class">
     <name>icmpstr::CAttributeEditorComp</name>
     <filename>classicmpstr_1_1_c_attribute_editor_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</base>
+    <base>TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt;</base>
     <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <member kind="enumeration">
       <type></type>
@@ -8794,10 +8792,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt; &gt;</type>
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_attribute_editor_comp.html</anchorfile>
-      <anchor>a0c77ba80f9c0832dd5fb5eb8f1eefadd</anchor>
+      <anchor>a51b02ee9dcad605f144636530c93519c</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -9182,21 +9180,16 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>icmpstr::CConvertComponentCommandCompBase</name>
-    <filename>classicmpstr_1_1_c_convert_component_command_comp_base.html</filename>
-    <base>icomp::CComponentBase</base>
-    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
-  </compound>
-  <compound kind="class">
     <name>icmpstr::CConvertComponentCommandComp</name>
     <filename>classicmpstr_1_1_c_convert_component_command_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; CConvertComponentCommandCompBase &gt;</base>
+    <base>icomp::CComponentBase</base>
+    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; CConvertComponentCommandCompBase &gt;</type>
+      <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classicmpstr_1_1_c_convert_component_command_comp.html</anchorfile>
-      <anchor>ab828943aa7a9eab981ae3d2796521137</anchor>
+      <anchor>a6bd9853b47a495766a235736b7390145</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -30744,13 +30737,13 @@
   <compound kind="class">
     <name>iqtmeas::CNumericParamsGuiComp</name>
     <filename>classiqtmeas_1_1_c_numeric_params_gui_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt; &gt;</base>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt; &gt;</type>
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_params_gui_comp.html</anchorfile>
-      <anchor>a8d2ee2c442102f9565c29a92f10309ab</anchor>
+      <anchor>a1a499ccb89f80c68460bcb31445e7f29</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">

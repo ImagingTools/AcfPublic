@@ -982,6 +982,7 @@
     <includes id="_i_model_8h" name="IModel.h" local="no" imported="no">imod/IModel.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_t_logger_comp_wrap_8h" name="TLoggerCompWrap.h" local="no" imported="no">ilog/TLoggerCompWrap.h</includes>
+    <class kind="class">ibase::TModelObserverCompBaseWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <namespace>ibase</namespace>
   </compound>
@@ -1975,13 +1976,11 @@
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_c_serialized_undo_manager_comp_8h</filename>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="no" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_memory_write_archive_8h" name="CMemoryWriteArchive.h" local="no" imported="no">iser/CMemoryWriteArchive.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="no" imported="no">idoc/IUndoManager.h</includes>
-    <class kind="class">idoc::CSerializedUndoManagerCompBase</class>
     <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <class kind="struct">idoc::CSerializedUndoManagerComp::UndoStepInfo</class>
     <namespace>idoc</namespace>
@@ -4202,7 +4201,6 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_image_view_comp_8h</filename>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="no" imported="no">i2d/ICalibration2d.h</includes>
     <includes id="_i_calibration_provider_8h" name="ICalibrationProvider.h" local="no" imported="no">i2d/ICalibrationProvider.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
@@ -4227,7 +4225,6 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_multi_bitmap_view_comp_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="no" imported="no">istd/TPointerVector.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
@@ -4483,7 +4480,6 @@
     <filename>_c_document_meta_info_editor_comp_8h</filename>
     <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="no" imported="no">idoc/IDocumentMetaInfo.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <class kind="class">iqtdoc::CDocumentMetaInfoEditorComp</class>
@@ -4942,7 +4938,7 @@
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_status_gui_comp_8h</filename>
     <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
+    <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <class kind="class">iqtgui::CStatusGuiComp</class>
@@ -5191,7 +5187,6 @@
     <path>C:/Temp/Acf/Include/iqtprm/</path>
     <filename>_c_ext_composed_params_set_gui_comp_8h</filename>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_t_model_observer_comp_wrap_8h" name="TModelObserverCompWrap.h" local="no" imported="no">ibase/TModelObserverCompWrap.h</includes>
     <includes id="_i_params_set_8h" name="IParamsSet.h" local="no" imported="no">iprm/IParamsSet.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_c_composed_gui_comp_8h" name="CComposedGuiComp.h" local="no" imported="no">iqtgui/CComposedGuiComp.h</includes>
@@ -6917,7 +6912,7 @@
     <filename>group___data_model.html</filename>
     <class kind="class">ibase::CObjectSynchronizerComp</class>
     <class kind="class">ibase::TMakeModelObserverCompWrap</class>
-    <class kind="class">ibase::TModelObserverCompWrap</class>
+    <class kind="class">ibase::TModelObserverCompBaseWrap</class>
     <class kind="class">istd::CChangeDelegator</class>
     <class kind="class">istd::CChangeGroup</class>
     <class kind="class">istd::CChangeNotifier</class>
@@ -15803,6 +15798,7 @@
     <class kind="class">ibase::TFactorisableContainer</class>
     <class kind="class">ibase::TLocalizableWrap</class>
     <class kind="class">ibase::TMakeModelObserverCompWrap</class>
+    <class kind="class">ibase::TModelObserverCompBaseWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
     <class kind="class">ibase::TSerializableContainer</class>
@@ -18618,19 +18614,19 @@
     <templarg></templarg>
     <templarg></templarg>
     <templarg></templarg>
-    <base>TModelObserverCompWrap&lt; icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt; &gt;</base>
+    <base>TModelObserverCompBaseWrap&lt; icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt; &gt;</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt; &gt;</type>
+      <type>ibase::TModelObserverCompBaseWrap&lt; icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_make_model_observer_comp_wrap.html</anchorfile>
-      <anchor>a208517fe697ffc0cb4d694e4e91a8064</anchor>
+      <anchor>aebcad061bc3f93893041096fb7b1bb81</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>icomp::TMakeComponentWrap&lt; Base, Interface1, Interface2, Interface3, Interface4, Interface5, Interface6, Interface7, Interface8, Interface9, Interface10 &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a067d2510f7015b27e30434536623c52d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -18650,41 +18646,75 @@
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a666a6afeb437ea0d49c062df35693191</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a2997a15a101ce82271180cee8c450d16</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::TModelObserverCompBaseWrap</name>
+    <filename>classibase_1_1_t_model_observer_comp_base_wrap.html</filename>
+    <templarg>ObserverComponent</templarg>
+    <member kind="typedef">
+      <type>ObserverComponent</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a067d2510f7015b27e30434536623c52d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a666a6afeb437ea0d49c062df35693191</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a2997a15a101ce82271180cee8c450d16</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>ibase::TModelObserverCompWrap</name>
     <filename>classibase_1_1_t_model_observer_comp_wrap.html</filename>
-    <templarg>ObserverComponent</templarg>
+    <templarg></templarg>
+    <base>TModelObserverCompBaseWrap&lt; BaseComponent &gt;</base>
     <member kind="typedef">
-      <type>ObserverComponent</type>
+      <type>TModelObserverCompBaseWrap&lt; BaseComponent &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchor>a8ffc6a82c6490a403027beb96bb1185f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BaseComponent</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a067d2510f7015b27e30434536623c52d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a666a6afeb437ea0d49c062df35693191</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a2997a15a101ce82271180cee8c450d16</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -26651,7 +26681,6 @@
     <class kind="class">idoc::CMultiDocumentManagerBase</class>
     <class kind="class">idoc::CMultiPageDocumentFilePersistenceComp</class>
     <class kind="class">idoc::CSelectedDocModelBinderComp</class>
-    <class kind="class">idoc::CSerializedUndoManagerCompBase</class>
     <class kind="class">idoc::CSerializedUndoManagerComp</class>
     <class kind="class">idoc::CSingleDocumentManagerBase</class>
     <class kind="class">idoc::CSingleDocumentTemplateBase</class>
@@ -27794,15 +27823,24 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>idoc::CSerializedUndoManagerCompBase</name>
-    <filename>classidoc_1_1_c_serialized_undo_manager_comp_base.html</filename>
+    <name>idoc::CSerializedUndoManagerComp</name>
+    <filename>classidoc_1_1_c_serialized_undo_manager_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>TSingleModelObserverBase&lt; iser::ISerializable &gt;</base>
+    <base virtualness="virtual">idoc::IUndoManager</base>
+    <class kind="struct">idoc::CSerializedUndoManagerComp::UndoStepInfo</class>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp_base.html</anchorfile>
-      <anchor>a155c2b66e04c405c505c1f75933749af</anchor>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a6636f3b6fd8c293a7d6097dd9bdab83b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a2694d296840a09d5d4df838fb8918a3c</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -27817,83 +27855,6 @@
       <name>ModelType</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>aa1175e19f553666eddc1bdf3fa40deec</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSingleModelObserverBase</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>iser::ISerializable *</type>
-      <name>GetObservedObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>iser::ISerializable *</type>
-      <name>GetObjectPtr</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AttachOrSetObject</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
-      <arglist>(iser::ISerializable *objectPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelAttached</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelDetached</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual iser::ISerializable *</type>
-      <name>CastFromModel</name>
-      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
-      <arglist>(imod::IModel *modelPtr) const</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>idoc::CSerializedUndoManagerComp</name>
-    <filename>classidoc_1_1_c_serialized_undo_manager_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; CSerializedUndoManagerCompBase &gt;</base>
-    <base virtualness="virtual">idoc::IUndoManager</base>
-    <class kind="struct">idoc::CSerializedUndoManagerComp::UndoStepInfo</class>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; CSerializedUndoManagerCompBase &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
-      <anchor>afa2a6c733bee4d072256bace3cf95c23</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::TSingleModelObserverBase&lt; iser::ISerializable &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
-      <anchor>a2694d296840a09d5d4df838fb8918a3c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>CSerializedUndoManagerCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">
@@ -27994,6 +27955,34 @@
       <anchor>a73c576ae7e2b56e9357d9e32aa7934b0</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>TSingleModelObserverBase</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>a203370facc9a8df2ddbcff099afb9f20</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>iser::ISerializable *</type>
+      <name>GetObservedObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>ab3556bb30d4c07187abbe38b99306325</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>iser::ISerializable *</type>
+      <name>GetObjectPtr</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>aa2eb7ca2a1cfe05e1bc943086c120815</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>AttachOrSetObject</name>
+      <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
+      <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
+      <arglist>(iser::ISerializable *objectPtr)</arglist>
+    </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; iser::CMemoryWriteArchive &gt;</type>
       <name>UndoArchivePtr</name>
@@ -28063,20 +28052,6 @@
       <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
       <anchor>a98afd4d8d1bff706bc64b55e90467e60</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -46283,19 +46258,12 @@
   <compound kind="class">
     <name>iqt2d::CImageViewComp</name>
     <filename>classiqt2d_1_1_c_image_view_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</base>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
-      <anchor>ae889bd9ccb05821fe4267f5f75711dce</anchor>
-      <arglist></arglist>
-    </member>
+    <base>TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; CViewProviderGuiComp, iview::CImageShape &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>adac782324508e06ea2df8aad8cd94530</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -46415,20 +46383,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
       <anchor>a86eab23c6253d004a56d7b0aa1bc8377</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -46951,14 +46905,14 @@
   <compound kind="class">
     <name>iqt2d::CMultiBitmapViewComp</name>
     <filename>classiqt2d_1_1_c_multi_bitmap_view_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt; &gt;</base>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <class kind="class">iqt2d::CMultiBitmapViewComp::CSingleView</class>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt; &gt;</type>
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>aec59edcc4fb43330a7f1b01cfd9d5568</anchor>
+      <anchor>a18f2f20e2977be592107848e17e72eb9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -46966,13 +46920,6 @@
       <name>BaseClass2</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a5fe23233393b6c8575d3a11654d8b708</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -47072,13 +47019,6 @@
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a15972710eefa8f70f1d426f9561d9b46</anchor>
       <arglist>(m_viewLabelPrefixesAttrPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50080,19 +50020,12 @@
   <compound kind="class">
     <name>iqtdoc::CDocumentMetaInfoEditorComp</name>
     <filename>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; idoc::IDocumentMetaInfo &gt; &gt; &gt;</base>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; idoc::IDocumentMetaInfo &gt; &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
-      <anchor>a1f5e5b93439df2795c7b669571559cb8</anchor>
-      <arglist></arglist>
-    </member>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; idoc::IDocumentMetaInfo &gt; &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; idoc::IDocumentMetaInfo &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
+      <anchor>a5a472702b03780e1257d14e40b3f6767</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -50142,20 +50075,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
       <anchor>aeb05edd41a85c265cd0aa4873832fecb</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -54278,19 +54197,12 @@
   <compound kind="class">
     <name>iqtgui::CStatusGuiComp</name>
     <filename>classiqtgui_1_1_c_status_gui_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QLabel &gt;, imod::TSingleModelObserverBase&lt; istd::IInformationProvider &gt; &gt; &gt;</base>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QLabel &gt;, imod::TSingleModelObserverBase&lt; istd::IInformationProvider &gt; &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
-      <anchor>aab4aeb9cda7c2f9523edeb448971088f</anchor>
-      <arglist></arglist>
-    </member>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QLabel &gt;, imod::TSingleModelObserverBase&lt; istd::IInformationProvider &gt; &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QLabel &gt;, imod::TSingleModelObserverBase&lt; istd::IInformationProvider &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
+      <anchor>a545e26703101b6e45275dfff02f65139</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -54326,20 +54238,6 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_c_status_gui_comp.html</anchorfile>
       <anchor>a14fdec1abc89476fb18a4691e8f1d016</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -54605,17 +54503,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; QTableView &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</type>
+      <type>ibase::TModelObserverCompBaseWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; QTableView &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_t_item_model_editor_comp_base.html</anchorfile>
-      <anchor>abceb39bc2241bd6fa25df96830efca9c</anchor>
+      <anchor>ae0a861ab45181ea3e10b53d4c3b17f75</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TGuiObserverWrap&lt; TGuiComponentBase&lt; QTableView &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a067d2510f7015b27e30434536623c52d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -54656,15 +54554,15 @@
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a666a6afeb437ea0d49c062df35693191</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a2997a15a101ce82271180cee8c450d16</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -55189,19 +55087,19 @@
     <templarg>UI</templarg>
     <templarg>Model</templarg>
     <templarg>WidgetType</templarg>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</base>
+    <base>TModelObserverCompBaseWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</type>
+      <type>ibase::TModelObserverCompBaseWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
-      <anchor>a5fd4bd071b17d67ebfc151794f14c4ea</anchor>
+      <anchor>a99a4bbda9608c1b7d8db5446bc85b5ff</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; UI, WidgetType &gt;, imod::TSingleModelObserverBase&lt; Model &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a067d2510f7015b27e30434536623c52d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -55291,8 +55189,8 @@
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a2997a15a101ce82271180cee8c450d16</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -55633,19 +55531,19 @@
     <name>iqtgui::TItemModelEditorCompBase</name>
     <filename>classiqtgui_1_1_t_item_model_editor_comp_base.html</filename>
     <templarg>ItemWidgetClass</templarg>
-    <base>TModelObserverCompWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</base>
+    <base>TModelObserverCompBaseWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</base>
     <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</type>
+      <type>ibase::TModelObserverCompBaseWrap&lt; TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_t_item_model_editor_comp_base.html</anchorfile>
-      <anchor>abceb39bc2241bd6fa25df96830efca9c</anchor>
+      <anchor>ae0a861ab45181ea3e10b53d4c3b17f75</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>TGuiObserverWrap&lt; TGuiComponentBase&lt; ItemWidgetClass &gt;, imod::TSingleModelObserverBase&lt; ibase::IQtItemModelProvider &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a067d2510f7015b27e30434536623c52d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -55672,15 +55570,15 @@
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a666a6afeb437ea0d49c062df35693191</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
+      <anchorfile>classibase_1_1_t_model_observer_comp_base_wrap.html</anchorfile>
+      <anchor>a2997a15a101ce82271180cee8c450d16</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -56290,20 +56188,13 @@
   <compound kind="class">
     <name>iqtprm::CExtComposedParamsSetGuiComp</name>
     <filename>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</filename>
-    <base>TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</base>
+    <base>TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt;</base>
     <base>iqt2d::IViewExtender</base>
-    <member kind="typedef">
-      <type>ibase::TModelObserverCompWrap&lt; iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
-      <anchor>ad215328a9f3c291888de0faaae1135cb</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::CComposedGuiComp, imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt; &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>afa3fcab514bf33fbdb6ec2f83eb8f075</anchor>
+      <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a45da92ddb379a7642d7378db265e0a64</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -56417,20 +56308,6 @@
       <anchorfile>classiqtprm_1_1_c_ext_composed_params_set_gui_comp.html</anchorfile>
       <anchor>a78a567a736d65e2639dafee2b5c89ae4</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>ac046dfe3995e995397f20a1ebf031436</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classibase_1_1_t_model_observer_comp_wrap.html</anchorfile>
-      <anchor>aacf9336769a621402f913fad75bb5cf5</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
