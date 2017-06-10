@@ -448,8 +448,6 @@ void TRanges<ValueType>::Invert(const TRange<ValueType>* clipRangePtr)
 			}
 
 			state = !state;
-
-			++iter;
 		}
 
 		if (!state){
