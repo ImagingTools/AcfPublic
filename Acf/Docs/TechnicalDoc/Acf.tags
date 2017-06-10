@@ -1939,7 +1939,7 @@
     <filename>_c_multi_document_manager_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="no" imported="no">istd/TPointerVector.h</includes>
     <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="no" imported="no">istd/TDelPtr.h</includes>
-    <includes id="_c_multi_model_observer_base_8h" name="CMultiModelObserverBase.h" local="no" imported="no">imod/CMultiModelObserverBase.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="no" imported="no">idoc/IUndoManager.h</includes>
     <includes id="_c_tmpl_based_document_manager_base_8h" name="CTmplBasedDocumentManagerBase.h" local="no" imported="no">idoc/CTmplBasedDocumentManagerBase.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="no" imported="no">iser/IArchive.h</includes>
@@ -26869,6 +26869,118 @@
     <base>idoc::CTmplBasedDocumentManagerBase</base>
     <class kind="struct">idoc::CMultiDocumentManagerBase::SingleDocumentData</class>
     <class kind="struct">idoc::CMultiDocumentManagerBase::ViewInfo</class>
+    <member kind="enumeration">
+      <type></type>
+      <name>ModelId</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a13972b6b9dfe0ee23c65cc1247b6cdec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_UNDO_MANAGER</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a13972b6b9dfe0ee23c65cc1247b6cdeca47e3f3e85a334481d0f30567e8ff8eb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_DOCUMENT</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a13972b6b9dfe0ee23c65cc1247b6cdecad2621a224ed3dfe25cd02cb46b7b452f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a107e005cba647e72b873771fc3f073f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_DOCUMENT_RENAMED</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a107e005cba647e72b873771fc3f073f7a110e7e4a41dfce474719b45d9bcbd34c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_DOCUMENT_CREATED</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a107e005cba647e72b873771fc3f073f7aedd0b3aec95885c3e2408b8bc791492c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_DOCUMENT_REMOVED</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a107e005cba647e72b873771fc3f073f7affcd0135f022a529b5975383a4f102a0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_DOCUMENT_COUNT_CHANGED</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a107e005cba647e72b873771fc3f073f7a63bdf7a8cbdb010b7ee6686351e75ef0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_VIEW_ACTIVATION_CHANGED</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a107e005cba647e72b873771fc3f073f7a135e119f42ffae2b8dda97124c750817</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>OperationFlags</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a89e647a0fda1965099fc82077d3be520</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OF_FILE_NEW</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a89e647a0fda1965099fc82077d3be520a5552809a82115d7e22ed3e8ae64cdab8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OF_FILE_OPEN</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a89e647a0fda1965099fc82077d3be520ab833008aa5e1df0fe0dda13c55f494cc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OF_FILE_SAVE</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a89e647a0fda1965099fc82077d3be520a936499a686a015daa845b6b337714598</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OF_FILE_SAVE_AS</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a89e647a0fda1965099fc82077d3be520ae68bfccd0e99d69ec77731797f994cc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>OF_KNOWN_PATH</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QMap&lt; QString, QByteArray &gt;</type>
+      <name>FileToTypeMap</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>ad2308086fe7ddbed930cb6cbcf5d7f70</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CMultiDocumentManagerBase</name>
@@ -27191,102 +27303,11 @@
       <anchor>ac16356fdd68644a29bdb429f4c86f666</anchor>
       <arglist>(const idoc::IDocumentTemplate *documentTemplatePtr)</arglist>
     </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>ChangeFlags</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a107e005cba647e72b873771fc3f073f7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_DOCUMENT_RENAMED</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a107e005cba647e72b873771fc3f073f7a110e7e4a41dfce474719b45d9bcbd34c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_DOCUMENT_CREATED</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a107e005cba647e72b873771fc3f073f7aedd0b3aec95885c3e2408b8bc791492c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_DOCUMENT_REMOVED</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a107e005cba647e72b873771fc3f073f7affcd0135f022a529b5975383a4f102a0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_DOCUMENT_COUNT_CHANGED</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a107e005cba647e72b873771fc3f073f7a63bdf7a8cbdb010b7ee6686351e75ef0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>CF_VIEW_ACTIVATION_CHANGED</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a107e005cba647e72b873771fc3f073f7a135e119f42ffae2b8dda97124c750817</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>OperationFlags</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OF_FILE_NEW</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520a5552809a82115d7e22ed3e8ae64cdab8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OF_FILE_OPEN</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520ab833008aa5e1df0fe0dda13c55f494cc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OF_FILE_SAVE</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520a936499a686a015daa845b6b337714598</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OF_FILE_SAVE_AS</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520ae68bfccd0e99d69ec77731797f994cc5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>OF_KNOWN_PATH</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a89e647a0fda1965099fc82077d3be520a5d307d6b8ba9b3081073db71ef8c6d6b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QMap&lt; QString, QByteArray &gt;</type>
-      <name>FileToTypeMap</name>
-      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>ad2308086fe7ddbed930cb6cbcf5d7f70</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="struct">
     <name>idoc::CMultiDocumentManagerBase::SingleDocumentData</name>
     <filename>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</filename>
-    <base>imod::CMultiModelObserverBase</base>
+    <base>imod::CMultiModelDispatcherBase</base>
     <member kind="function">
       <type></type>
       <name>SingleDocumentData</name>
@@ -27302,88 +27323,32 @@
       <arglist>()</arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>CMultiModelObserverBase</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aeadfce921ec80b2066bec1294403cdb0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CMultiModelObserverBase</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>abeb03f6db4c68b652dce9307e3d307a3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetModelCount</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>IModel *</type>
-      <name>GetObservedModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>ac1d382a0a61d625499ffa9023cbfe835</anchor>
-      <arglist>(int modelIndex) const </arglist>
-    </member>
-    <member kind="function">
-      <type>IModel *</type>
-      <name>GetModelPtr</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
-      <arglist>(int modelIndex) const </arglist>
+      <type>bool</type>
+      <name>RegisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a86e533cd9e891f37137809dcfe60b4b6</anchor>
+      <arglist>(IModel *modelPtr, int modelId=0, const istd::IChangeable::ChangeSet &amp;relevantFlags=istd::IChangeable::GetAllChanges())</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>EnsureModelsDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a6bfa8b39bc6680c04dbfc20966257289</anchor>
-      <arglist>()</arglist>
+      <name>UnregisterModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
+      <arglist>(int modelId=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
-      <name>SetObservedIds</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a37bb58c2bb0a2a4745badfce29d8d80d</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <name>UnregisterAllModels</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
+      <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsModelAttached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a92391a2b6e1dcccfc3987e89ace6da32</anchor>
-      <arglist>(const IModel *modelPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelAttached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
-      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelDetached</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
-      <arglist>(IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeforeUpdate</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aa6b5ca21c74dca15d5f16c524456d45b</anchor>
-      <arglist>(IModel *modelPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a88786b6e7b8392095b7946e214d9fd9b</anchor>
-      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    <member kind="function">
+      <type>Object *</type>
+      <name>GetObjectAt</name>
+      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
+      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
+      <arglist>(int modelId) const </arglist>
     </member>
     <member kind="variable">
       <type>CMultiDocumentManagerBase *</type>
@@ -27415,10 +27380,10 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnUpdate</name>
+      <name>OnModelChanged</name>
       <anchorfile>structidoc_1_1_c_multi_document_manager_base_1_1_single_document_data.html</anchorfile>
-      <anchor>a0627443324f49c884a928a506478778f</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ae784e1d7348541a82e7dc567b76a2f64</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -29712,34 +29677,6 @@
       <anchorfile>classifile_1_1_c_auto_persistence_comp.html</anchorfile>
       <anchor>a8afaeff890da1baaf8fc208830c9b31c</anchor>
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>RegisterModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a86e533cd9e891f37137809dcfe60b4b6</anchor>
-      <arglist>(IModel *modelPtr, int modelId=0, const istd::IChangeable::ChangeSet &amp;relevantFlags=istd::IChangeable::GetAllChanges())</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterModel</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>ae131419147b8d67ae7600f426465804b</anchor>
-      <arglist>(int modelId=0)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>UnregisterAllModels</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>a870c0f1ab69a56f2b01fbc136d36ce76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>Object *</type>
-      <name>GetObjectAt</name>
-      <anchorfile>classimod_1_1_c_multi_model_dispatcher_base.html</anchorfile>
-      <anchor>ac95053e3935765098a79b3dcf127e968</anchor>
-      <arglist>(int modelId) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41573,6 +41510,90 @@
     <name>imod::CMultiModelObserverBase</name>
     <filename>classimod_1_1_c_multi_model_observer_base.html</filename>
     <base virtualness="virtual">imod::IObserver</base>
+    <member kind="function">
+      <type></type>
+      <name>CMultiModelObserverBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aeadfce921ec80b2066bec1294403cdb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CMultiModelObserverBase</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>abeb03f6db4c68b652dce9307e3d307a3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetModelCount</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a9b9d05f1e8eed6f32dd8458746860cce</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>IModel *</type>
+      <name>GetObservedModel</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>ac1d382a0a61d625499ffa9023cbfe835</anchor>
+      <arglist>(int modelIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>IModel *</type>
+      <name>GetModelPtr</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a44e4ecc264d102606dd19b954b4b861e</anchor>
+      <arglist>(int modelIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>EnsureModelsDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a6bfa8b39bc6680c04dbfc20966257289</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObservedIds</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a37bb58c2bb0a2a4745badfce29d8d80d</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsModelAttached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a92391a2b6e1dcccfc3987e89ace6da32</anchor>
+      <arglist>(const IModel *modelPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
+      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
+      <arglist>(IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeUpdate</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>aa6b5ca21c74dca15d5f16c524456d45b</anchor>
+      <arglist>(IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
+      <anchor>a88786b6e7b8392095b7946e214d9fd9b</anchor>
+      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>

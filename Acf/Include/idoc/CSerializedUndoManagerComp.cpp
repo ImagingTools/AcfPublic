@@ -149,11 +149,11 @@ bool CSerializedUndoManagerComp::DoListShift(int steps, UndoList& fromList, Undo
 		iser::ISerializable* objectPtr = GetObservedObject();
 
 		if (objectPtr != NULL){
-			istd::CChangeNotifier objectNotifier(objectPtr, &s_undoChangeSet);
-			Q_UNUSED(objectNotifier);
-
 			Q_ASSERT(!m_isBlocked);
 			m_isBlocked = true;
+
+			istd::CChangeNotifier objectNotifier(objectPtr, &s_undoChangeSet);
+			Q_UNUSED(objectNotifier);
 
 			// stores pointer to last processed description container, necessary due of description shift
 			// in undo list the state corresponds to state before changes, in redo - after changes. It causes description shift.
@@ -189,6 +189,7 @@ bool CSerializedUndoManagerComp::DoListShift(int steps, UndoList& fromList, Undo
 				if (lastDescriptionPtr != NULL){
 					*lastDescriptionPtr = fromList.back().description;
 				}
+
 				fromList.pop_back();
 
 				retVal = true;

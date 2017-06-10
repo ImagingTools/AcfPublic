@@ -30,7 +30,7 @@
 // ACF includes
 #include <istd/TPointerVector.h>
 #include <istd/TDelPtr.h>
-#include <imod/CMultiModelObserverBase.h>
+#include <imod/CMultiModelDispatcherBase.h>
 #include <idoc/IUndoManager.h>
 #include <idoc/CTmplBasedDocumentManagerBase.h>
 #include <iser/IArchive.h>
@@ -46,6 +46,12 @@ namespace idoc
 class CMultiDocumentManagerBase: public idoc::CTmplBasedDocumentManagerBase
 {
 public:
+	enum ModelId
+	{
+		MI_UNDO_MANAGER = 1,
+		MI_DOCUMENT
+	};
+
 	/**
 		Default constructor.
 	*/
@@ -102,7 +108,7 @@ protected:
 	/**
 		Document data definition.
 	*/
-	struct SingleDocumentData: public DocumentInfo, public imod::CMultiModelObserverBase
+	struct SingleDocumentData: public DocumentInfo, public imod::CMultiModelDispatcherBase
 	{
 		SingleDocumentData(
 					CMultiDocumentManagerBase* parentPtr,
@@ -117,8 +123,8 @@ protected:
 		Views views;
 
 	protected:
-		// reimplemented (imod::CMultiModelObserverBase)
-		virtual void OnUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
+		// reimplemented (imod::CMultiModelDispatcherBase)
+		virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 	};
 
 	/**
