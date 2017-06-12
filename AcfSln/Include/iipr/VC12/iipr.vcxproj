@@ -144,6 +144,7 @@
     <ClCompile Include="..\CFastGaussianProcessorComp.cpp" />
     <ClCompile Include="..\CFeatureToImageMapperProcessorComp.cpp" />
     <ClCompile Include="..\CFeaturesContainer.cpp" />
+    <ClCompile Include="..\CGrayToRgbProcessorComp.cpp" />
     <ClCompile Include="..\CHoughLineFinderComp.cpp" />
     <ClCompile Include="..\CHoughLineFromPosFinderComp.cpp" />
     <ClCompile Include="..\CHoughSpace2d.cpp" />
@@ -217,6 +218,7 @@
     <ClInclude Include="..\CFastGaussianProcessorComp.h" />
     <ClInclude Include="..\CFeatureToImageMapperProcessorComp.h" />
     <ClInclude Include="..\CFeaturesContainer.h" />
+    <ClInclude Include="..\CGrayToRgbProcessorComp.h" />
     <ClInclude Include="..\CHoughLineFinderComp.h" />
     <ClInclude Include="..\CHoughLineFromPosFinderComp.h" />
     <ClInclude Include="..\CHoughSpace2d.h" />

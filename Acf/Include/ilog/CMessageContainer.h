@@ -119,7 +119,7 @@ private:
 
 	static MessageFactory& GetMessageFactory();
 
-protected:
+private:
 	Messages m_messages;
 
 	typedef QVector<IHierarchicalMessageContainer*> Childs;

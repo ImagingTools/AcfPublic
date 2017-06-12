@@ -1502,6 +1502,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CGrayToRgbProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_gray_to_rgb_processor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <class kind="class">iipr::CGrayToRgbProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CHoughLineFinderComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_hough_line_finder_comp_8h</filename>
@@ -17077,6 +17085,7 @@
     <class kind="class">iipr::CFastGaussianProcessorComp</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
+    <class kind="class">iipr::CGrayToRgbProcessorComp</class>
     <class kind="class">iipr::CHoughLineFinderComp</class>
     <class kind="class">iipr::CHoughLineFromPosFinderComp</class>
     <class kind="class">iipr::CHoughSpace2d</class>
@@ -19772,6 +19781,25 @@
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
       <anchor>a4c008f6b71e0917ca53da1ed4ba387fa</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CGrayToRgbProcessorComp</name>
+    <filename>classiipr_1_1_c_gray_to_rgb_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_gray_to_rgb_processor_comp.html</anchorfile>
+      <anchor>ac6fdcd078476100ca564704e49e7c06c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_gray_to_rgb_processor_comp.html</anchorfile>
+      <anchor>a312f01400a495fa766ea20fb9c815b4c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33875,6 +33903,7 @@
     <file>CFastGaussianProcessorComp.h</file>
     <file>CFeaturesContainer.h</file>
     <file>CFeatureToImageMapperProcessorComp.h</file>
+    <file>CGrayToRgbProcessorComp.h</file>
     <file>CHoughLineFinderComp.h</file>
     <file>CHoughLineFromPosFinderComp.h</file>
     <file>CHoughSpace2d.h</file>
