@@ -36692,6 +36692,48 @@
       <anchor>a72de740600619759bababeda00bdff30</anchor>
       <arglist>(const QByteArray &amp;messageTypeId=QByteArray())</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>QVector&lt; IHierarchicalMessageContainer * &gt;</type>
+      <name>Childs</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ace8543fd8e99602f8ab0396454f45c1d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Messages</type>
+      <name>m_messages</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a9630c51a140bbeec469a2de09ad9d122</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Childs</type>
+      <name>m_childContainers</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a889f86c62ef22989377b73e205cbf073</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ilog::IMessageConsumer *</type>
+      <name>m_slaveConsumerPtr</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>a9e6c1680803f98520429e18c37acc909</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_maxMessagesCount</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ac35bda379185dc7887aca20aaa4429a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_worstCategory</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ae3f17893ecde003b6059cb5d83ff79f2</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>typename IHierarchicalMessageContainer::InterfaceType *</type>
       <name>m_parentPtr</name>
