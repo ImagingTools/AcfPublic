@@ -24,7 +24,7 @@
 #define ibase_TModelObserverCompWrap_included
 
 
-// QT includes
+// Qt includes
 #include <QtCore/QDebug>
 
 // ACF includes
