@@ -20052,10 +20052,10 @@
       <arglist>(const istd::TIndex&lt; 2 &gt; &amp;iterations)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a3e0c42793b18f2453699af06637426c9</anchor>
+      <anchor>a588dc5f01c361daa6ababf6aff3206f3</anchor>
       <arglist>(const double &amp;minValue, ResultsConsumer &amp;resultProcessor)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20152,6 +20152,13 @@
       <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
       <anchor>afc24b15f51ce72cbdbf1ce4baff4b76e</anchor>
       <arglist>(int maxPoints, int maxConsideredPoints, double minDistance, double minMaxRatio)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QList&lt; int &gt;</type>
+      <name>GetSupportedNeghboursCount</name>
+      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>ab2776baaae6d0a3c100f37b2cc491215</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -24144,10 +24151,10 @@
       <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;iterations)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
+      <type>virtual bool</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a859fe7e1666e522326ccb44e104e7427</anchor>
+      <anchor>a033c3b8cf22ddea7a9766f34cb7686f6</anchor>
       <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -24183,6 +24190,13 @@
     <name>iipr::TIHoughSpace::ResultsConsumer</name>
     <filename>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QList&lt; int &gt;</type>
+      <name>GetSupportedNeghboursCount</name>
+      <anchorfile>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
+      <anchor>a8c54b604aa63a887b783ad2c4c183d24</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnProcessingBegin</name>
