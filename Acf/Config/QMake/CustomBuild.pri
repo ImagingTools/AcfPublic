@@ -75,6 +75,18 @@ arxCompiler.dependency_type = TYPE_C
 arxCompiler.depend_command = $$ARXCBIN ${QMAKE_FILE_IN} -mode depends -config $${ARXC_CONFIG} -conf_name $$COMPILER_DIR
 QMAKE_EXTRA_COMPILERS += arxCompiler
 
+#force ARX Compiler to run as first build step and enforce dependency to created header file to ensure correct order in build process using parallel builds (e.g. via make on OSX)
+ARX_COMPILER_OUTPUT_HEADER = $${ARXC_OUTDIR}/C${QMAKE_FILE_BASE}.h
+win32{
+	ARX_COMPILER_OUTPUT_HEADER ~= s,/,\\,g
+}
+arxCompiler.target = $$ARX_COMPILER_OUTPUT_HEADER
+
+!isEmpty(ARXC_FILES) {
+	PRE_TARGETS += $$ARX_COMPILER_OUTPUT_HEADER
+	HEADERS += $$ARX_COMPILER_OUTPUT_HEADER
+}
+
 
 # custom build for ACF transformations
 
