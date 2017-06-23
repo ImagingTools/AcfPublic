@@ -27572,16 +27572,16 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>QF_SAVE</name>
+      <name>QF_LOAD</name>
       <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aac65cfe44dd19de2a48738f0175386d1d</anchor>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aaaa7d8800b08ce989914b9782c6820dca</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>QF_LOAD</name>
+      <name>QF_SAVE</name>
       <anchorfile>classifile_1_1_i_file_type_info.html</anchorfile>
-      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aaaa7d8800b08ce989914b9782c6820dca</anchor>
+      <anchor>a327f9848e8ae67a4a3c227b62b07fb1aac65cfe44dd19de2a48738f0175386d1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

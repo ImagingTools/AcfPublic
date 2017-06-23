@@ -28708,6 +28708,13 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
+      <anchor>a7abf9d65b13281c3a8900e38ce06b436</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiqtex_1_1_c_xsl_serializer_comp.html</anchorfile>
