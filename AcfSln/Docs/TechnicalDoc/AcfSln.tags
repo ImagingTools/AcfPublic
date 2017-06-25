@@ -7575,16 +7575,9 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>WS_ERROR</name>
+      <name>WS_FAILED</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a4b8a7542f5a8558d5c7563b16d51a931ac67ed7f5de78b6b5714203746ae2e12c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>WS_CRITICAL</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>a4b8a7542f5a8558d5c7563b16d51a931a874c7249820809dfb9c88c9f81802367</anchor>
+      <anchor>a4b8a7542f5a8558d5c7563b16d51a931ac91efcaaf8fd6419ec20ab3a7c7d376a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration">

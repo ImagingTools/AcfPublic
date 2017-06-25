@@ -53,7 +53,7 @@ int CImageHistogramSupplierComp::ProduceObject(imod::TModelWrap<imeas::CSimpleSa
 		if (bitmapPtr == NULL){
 			AddMessage(new ilog::CMessage(ilog::CMessage::IC_ERROR, 0, QObject::tr("No input image"), "ImageHistogram"));
 
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 
 		Timer performanceTimer(this, "Histogram calculation");
@@ -65,13 +65,13 @@ int CImageHistogramSupplierComp::ProduceObject(imod::TModelWrap<imeas::CSimpleSa
 						&result);
 
 		if (processingState != iproc::IProcessor::TS_OK){
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 
 		return WS_OK;
 	}
 
-	return WS_CRITICAL;
+	return WS_FAILED;
 }
 
 

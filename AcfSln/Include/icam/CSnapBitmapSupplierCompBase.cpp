@@ -88,7 +88,7 @@ int CSnapBitmapSupplierCompBase::ProduceObject(ProductType& result) const
 	if (!m_bitmapAcquisitionCompPtr.IsValid()){
 		SendCriticalMessage(0, "Bad component architecture, 'BitmapAcquisition' component reference is not set");
 
-		return WS_CRITICAL;
+		return WS_FAILED;
 	}
 
 	if (!result.second.IsValid()){
@@ -96,7 +96,7 @@ int CSnapBitmapSupplierCompBase::ProduceObject(ProductType& result) const
 		if (!result.second.IsValid()){
 			SendErrorMessage(0, "Bitmap instance could not be created");
 
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 	}
 
@@ -123,10 +123,10 @@ int CSnapBitmapSupplierCompBase::ProduceObject(ProductType& result) const
 			return WS_CANCELED;
 
 		default:
-			return WS_ERROR;
+			return WS_FAILED;
 	}
 
-	return WS_CRITICAL;
+	return WS_FAILED;
 }
 
 

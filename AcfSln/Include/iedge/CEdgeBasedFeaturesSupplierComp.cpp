@@ -206,7 +206,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 				if (!paramsManagerPtr.IsValid()){
 					SendErrorMessage(iproc::IProcessor::MI_BAD_PARAMS, "No inspection list found");
 
-					return WS_ERROR;
+					return WS_FAILED;
 				}
 
 				multiSearchParamsManagerPtr = paramsManagerPtr.GetPtr();
@@ -236,7 +236,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 									multiSearchParamsManagerPtr->GetParamsSetName(searchIndex));
 						AddMessage(message);
 
-						return WS_ERROR;
+						return WS_FAILED;
 					}
 
 					// logical backup status set to error if no models found
@@ -258,7 +258,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 							m_defaultInformationCategory = IC_CRITICAL;
 							searchResultText = QObject::tr("Wrong result type");
 
-							return WS_CRITICAL;
+							return WS_FAILED;
 						}
 
 						QString modelId = multiSearchParamsManagerPtr->GetParamsSetName(searchIndex) + "/" + clonedFeaturePtr->GetObjectId();
@@ -303,7 +303,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 					
 					AddMessage(message);
 					
-					return WS_ERROR;
+					return WS_FAILED;
 				}
 
 				// check if certain amount of models was found
@@ -323,7 +323,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 						m_defaultInformationCategory = IC_CRITICAL;
 						searchResultText = QObject::tr("Wrong result type");
 
-						return WS_CRITICAL;
+						return WS_FAILED;
 					}
 
 					QString modelId = searchFeaturePtr->GetObjectId();
@@ -379,7 +379,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 		}
 	}
 
-	return WS_CRITICAL;
+	return WS_FAILED;
 }
 
 

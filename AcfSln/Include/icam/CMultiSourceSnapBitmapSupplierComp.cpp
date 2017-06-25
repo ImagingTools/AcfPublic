@@ -92,7 +92,7 @@ int CMultiSourceSnapBitmapSupplierComp::ProduceObject(ProductType& result) const
 	if (!m_bitmapCompFact.IsValid()){
 		SendCriticalMessage(0, "Bad component architecture, 'BitmapFactory' component reference is not set");
 
-		return WS_CRITICAL;
+		return WS_FAILED;
 	}
 
 	int selectedCameraIndex = -1;
@@ -100,7 +100,7 @@ int CMultiSourceSnapBitmapSupplierComp::ProduceObject(ProductType& result) const
 	if (cameraPtr == NULL){
 		SendErrorMessage(0, "No camera was selected");
 
-		return WS_CRITICAL;
+		return WS_FAILED;
 	}
 
 	if (!result.second.IsValid()){
@@ -108,7 +108,7 @@ int CMultiSourceSnapBitmapSupplierComp::ProduceObject(ProductType& result) const
 		if (!result.second.IsValid()){
 			SendErrorMessage(0, "Bitmap instance could not be created");
 
-			return WS_CRITICAL;
+			return WS_FAILED;
 		}
 	}
 
@@ -131,12 +131,12 @@ int CMultiSourceSnapBitmapSupplierComp::ProduceObject(ProductType& result) const
 					return WS_CANCELED;
 
 				default:
-					return WS_CRITICAL;
+					return WS_FAILED;
 			}
 		}
 	}
 
-	return WS_CRITICAL;
+	return WS_FAILED;
 }
 
 

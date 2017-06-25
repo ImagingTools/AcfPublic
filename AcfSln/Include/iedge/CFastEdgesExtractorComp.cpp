@@ -27,7 +27,7 @@
 #include <cmath>
 #include <vector>
 
-// QT includes
+// Qt includes
 #include <QtCore/QtMath>
 #include <QtCore/QMutexLocker>
 #include <QtCore/QDebug>

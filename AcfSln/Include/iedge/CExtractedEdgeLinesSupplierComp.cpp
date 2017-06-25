@@ -46,13 +46,13 @@ int CExtractedEdgeLinesSupplierComp::ProduceObject(CEdgeLineContainer& result) c
 	if (!m_bitmapProviderCompPtr.IsValid()){
 		SendCriticalMessage(0, "Bad component architecture, 'BitmapProvider' component reference is not set");
 
-		return WS_CRITICAL;
+		return WS_FAILED;
 	}
 
 	if (!m_edgesExtractorCompPtr.IsValid()){
 		SendCriticalMessage(0, "Bad component architecture, 'EdgesExtractor' component reference is not set");
 
-		return WS_CRITICAL;
+		return WS_FAILED;
 	}
 
 	const iimg::IBitmap* bitmapPtr = m_bitmapProviderCompPtr->GetBitmap();
@@ -84,7 +84,7 @@ int CExtractedEdgeLinesSupplierComp::ProduceObject(CEdgeLineContainer& result) c
 		}
 	}
 
-	return WS_ERROR;
+	return WS_FAILED;
 }
 
 

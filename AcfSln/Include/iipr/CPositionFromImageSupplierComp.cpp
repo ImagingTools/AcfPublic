@@ -93,7 +93,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		if (bitmapPtr == NULL){
 			AddMessage(new ilog::CMessage(ilog::CMessage::IC_ERROR, 0, QObject::tr("No input image"), "PositionFinder"));
 
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 
 		iprm::IParamsSet* paramsSetPtr = GetModelParametersSet();
@@ -106,7 +106,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 						&result);
 
 		if (positionState != iproc::IProcessor::TS_OK){
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 
 		const i2d::ICalibration2d* inputCalibrationPtr = NULL;
@@ -115,12 +115,12 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		}
 
 		if (result.GetFeaturesCount() < 1){
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 
 		const i2d::CObject2dBase* positionPtr = dynamic_cast<const i2d::CObject2dBase*>(&result.GetFeature(0));
 		if (positionPtr == NULL){
-			return WS_ERROR;
+			return WS_FAILED;
 		}
 
 		i2d::CVector2d resultVector;
@@ -132,7 +132,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		if (circlePtr != NULL){
 			i2d::CCircle transformedCircle;
 			if (!transformedCircle.CopyFrom(*circlePtr, istd::IChangeable::CM_CONVERT)){
-				return WS_ERROR;
+				return WS_FAILED;
 			}
 
 			resultVector = transformedCircle.GetPosition();
@@ -155,7 +155,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		else if (linePtr != NULL){
 			i2d::CLine2d transformedLine;
 			if (!transformedLine.CopyFrom(*linePtr, istd::IChangeable::CM_CONVERT)){
-				return WS_ERROR;
+				return WS_FAILED;
 			}
 
 			resultVector = transformedLine.GetPoint1();
@@ -177,7 +177,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		else if (polylinePtr != NULL){
 			i2d::CPolyline transformedLine;
 			if (!transformedLine.CopyFrom(*polylinePtr, istd::IChangeable::CM_CONVERT)){
-				return WS_ERROR;
+				return WS_FAILED;
 			}
 
 			resultVector = transformedLine.GetCenter();
@@ -197,7 +197,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		else{
 			i2d::CPosition2d transformedPosition;
 			if (!transformedPosition.CopyFrom(*positionPtr, istd::IChangeable::CM_CONVERT)){
-				return WS_ERROR;
+				return WS_FAILED;
 			}
 
 			resultVector = transformedPosition.GetPosition();
@@ -233,7 +233,7 @@ int CPositionFromImageSupplierComp::ProduceObject(ProductType& result) const
 		return WS_OK;
 	}
 
-	return WS_CRITICAL;
+	return WS_FAILED;
 }
 
 
