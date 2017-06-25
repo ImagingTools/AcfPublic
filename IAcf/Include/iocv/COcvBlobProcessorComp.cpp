@@ -27,6 +27,7 @@
 #include <opencv2/features2d/features2d.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/imgproc/types_c.h>
+#include <opencv2/opencv.hpp>
 
 // ACF includes
 #include <istd/CChangeGroup.h>
@@ -112,6 +113,7 @@ bool COcvBlobProcessorComp::CalculateBlobs(
 	else{
 		void* imageDataBufferPtr = const_cast<void*>(image.GetLinePtr(0));
 		cv::Mat inputBitmap(size.GetY(), size.GetX(), CV_8UC1, imageDataBufferPtr, image.GetLineBytesCount());
+
 		tmpBinaryImage = inputBitmap.clone();
 	}
 
@@ -128,7 +130,7 @@ bool COcvBlobProcessorComp::CalculateBlobs(
 			istd::IInformationProvider::IC_INFO,
 			MI_FOUND_BLOB,
 			"",
-			"PreciseBlobProcessor"));
+			"OpenCV Blob Detector"));
 	}
 
 	for (int contourIndex = 0; contourIndex < int(contours.size()); contourIndex++){

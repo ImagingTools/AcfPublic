@@ -963,15 +963,7 @@
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">isig::ITriggerConstraints</base>
-    <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>aeccc867e45d338bbb44145d69b62e24d</anchor>
-      <arglist></arglist>
-    </member>
+    <base>TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -986,13 +978,6 @@
       <anchor>a51d27aae4ca682c2cb799477bea4dabb</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsCameraValid</name>
-      <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>a60fe39d2f91594a455a9c3f28c326e60</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>DoProcessing</name>
@@ -1006,13 +991,6 @@
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
       <anchor>a2f421ded15797848b6f474a587ebf5e2</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTriggerModeSupported</name>
-      <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>aac566bdb5c9b922cec4d4610bedde958</anchor>
-      <arglist>(int triggerMode) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -1079,6 +1057,13 @@
       <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
       <anchor>a048bc2b81b42c38bf0d314cf570138da</anchor>
       <arglist>(const IplImage &amp;image, iimg::IBitmap &amp;outputBitmap)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ConvertToBitmap</name>
+      <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
+      <anchor>ad6c2d977e345f6ca8429abcbae26fc01</anchor>
+      <arglist>(const cv::Mat &amp;image, iimg::IBitmap &amp;outputBitmap)</arglist>
     </member>
   </compound>
   <compound kind="class">

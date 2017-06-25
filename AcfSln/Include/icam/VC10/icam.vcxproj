@@ -120,6 +120,7 @@
     <ClCompile Include="..\CExposureParamsComp.cpp" />
     <ClCompile Include="..\CMemoryAcquisitionComp.cpp" />
     <ClCompile Include="..\CMultiCameraBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CMultiSourceSnapBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CSelectableBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CSelectionParamCameraComp.cpp" />
     <ClCompile Include="..\CSnapBitmapSupplierComp.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="..\CExposureParamsComp.h" />
     <ClInclude Include="..\CMemoryAcquisitionComp.h" />
     <ClInclude Include="..\CMultiCameraBitmapSupplierComp.h" />
+    <ClInclude Include="..\CMultiSourceSnapBitmapSupplierComp.h" />
     <ClInclude Include="..\CSelectableBitmapSupplierComp.h" />
     <ClInclude Include="..\CSelectionParamCameraComp.h" />
     <ClInclude Include="..\CSnapBitmapSupplierComp.h" />

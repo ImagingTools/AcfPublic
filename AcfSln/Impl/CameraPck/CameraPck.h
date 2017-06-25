@@ -42,6 +42,7 @@
 #include <icam/CSnapMultiPageBitmapSupplierComp.h>
 #include <icam/CSnapBitmapSupplierComp.h>
 #include <icam/CCalibratedCameraComp.h>
+#include <icam/CMultiSourceSnapBitmapSupplierComp.h>
 
 
 /**
@@ -66,6 +67,7 @@ typedef icomp::TModelCompWrap<
 typedef icomp::TModelCompWrap<
 			icam::TSnapBitmapSupplierComp<iimg::CGeneralBitmap> > StandardBitmapSnapSupplier;
 typedef icam::CCalibratedCameraComp CalibratedCamera;
+typedef icomp::TModelCompWrap<icam::CMultiSourceSnapBitmapSupplierComp> MultiSourceSnapBitmapSupplier;
 
 
 } // namespace CameraPck
