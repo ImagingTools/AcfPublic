@@ -60516,6 +60516,13 @@
     </member>
     <member kind="function">
       <type>int</type>
+      <name>GetIterationIndex</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>adafd727aa3dcd83936484a4f91615818</anchor>
+      <arglist>(const CVarIndex &amp;boundaries) const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
       <name>GetMinDimensionsCount</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
       <anchor>af2605dafa7e5d1f1c015a8515c661500</anchor>
