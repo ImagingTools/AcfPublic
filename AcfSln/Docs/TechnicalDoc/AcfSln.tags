@@ -6,6 +6,30 @@
     <filename>_acf_sln_8h</filename>
   </compound>
   <compound kind="file">
+    <name>CHoughSpace2d.h</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>_c_hough_space2d_8h</filename>
+    <includes id="_t_i_hough_space_8h" name="TIHoughSpace.h" local="no" imported="no">ialgo/TIHoughSpace.h</includes>
+    <class kind="class">ialgo::CHoughSpace2d</class>
+    <class kind="class">ialgo::CHoughSpace2d::StdConsumer</class>
+    <namespace>ialgo</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CNeighbourBinCaller.h</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>_c_neighbour_bin_caller_8h</filename>
+    <class kind="class">ialgo::CNeighbourBinCaller</class>
+    <namespace>ialgo</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TIHoughSpace.h</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>_t_i_hough_space_8h</filename>
+    <class kind="class">ialgo::TIHoughSpace</class>
+    <class kind="class">ialgo::TIHoughSpace::ResultsConsumer</class>
+    <namespace>ialgo</namespace>
+  </compound>
+  <compound kind="file">
     <name>CRightsBasedEnablerComp.h</name>
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>_c_rights_based_enabler_comp_8h</filename>
@@ -1525,7 +1549,7 @@
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="no" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
-    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">iipr/CHoughSpace2d.h</includes>
+    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">ialgo/CHoughSpace2d.h</includes>
     <class kind="class">iipr::CHoughLineFinderComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -1536,18 +1560,9 @@
     <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="no" imported="no">iproc/TSyncProcessorWrap.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
     <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
-    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">iipr/CHoughSpace2d.h</includes>
+    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">ialgo/CHoughSpace2d.h</includes>
     <includes id="_i_feature_to_feature_processor_8h" name="IFeatureToFeatureProcessor.h" local="no" imported="no">iipr/IFeatureToFeatureProcessor.h</includes>
     <class kind="class">iipr::CHoughLineFromPosFinderComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CHoughSpace2d.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_hough_space2d_8h</filename>
-    <includes id="_t_i_hough_space_8h" name="TIHoughSpace.h" local="no" imported="no">iipr/TIHoughSpace.h</includes>
-    <class kind="class">iipr::CHoughSpace2d</class>
-    <class kind="class">iipr::CHoughSpace2d::StdConsumer</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -1676,7 +1691,7 @@
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_c_simple_lens_correction_8h" name="CSimpleLensCorrection.h" local="no" imported="no">icalib/CSimpleLensCorrection.h</includes>
     <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
-    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">iipr/CHoughSpace2d.h</includes>
+    <includes id="_c_hough_space2d_8h" name="CHoughSpace2d.h" local="no" imported="no">ialgo/CHoughSpace2d.h</includes>
     <class kind="class">iipr::CLensCorrFindSupplierComp</class>
     <class kind="struct">iipr::CLensCorrFindSupplierComp::FeatureInfo</class>
     <class kind="class">iipr::CLensCorrFindSupplierComp::FeaturesConsumer</class>
@@ -2094,14 +2109,6 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_i_search_params_8h</filename>
     <class kind="class">iipr::ISearchParams</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
-    <name>TIHoughSpace.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_t_i_hough_space_8h</filename>
-    <class kind="class">iipr::TIHoughSpace</class>
-    <class kind="class">iipr::TIHoughSpace::ResultsConsumer</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -4156,6 +4163,370 @@
       <anchorfile>class_qt_unix_socket.html</anchorfile>
       <anchor>a412e4407c955f2cfceabdae69f1626ff</anchor>
       <arglist>(const QString &amp;path)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>ialgo</name>
+    <filename>namespaceialgo.html</filename>
+    <class kind="class">ialgo::CHoughSpace2d</class>
+    <class kind="class">ialgo::CNeighbourBinCaller</class>
+    <class kind="class">ialgo::TIHoughSpace</class>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::CHoughSpace2d</name>
+    <filename>classialgo_1_1_c_hough_space2d.html</filename>
+    <base>iimg::CGeneralBitmap</base>
+    <base virtualness="virtual">TIHoughSpace&lt; 2 &gt;</base>
+    <class kind="class">ialgo::CHoughSpace2d::StdConsumer</class>
+    <member kind="typedef">
+      <type>iimg::CGeneralBitmap</type>
+      <name>BaseClass</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a4dcb7abae58899150ac03adc26d9fa9a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QMultiMap&lt; double, i2d::CVector2d &gt;</type>
+      <name>WeightToHoughPosMap</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a7de8828893b6cc05cd6885b6897feb6f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHoughSpace2d</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a26dc00b4316bf641ac7f5e8f5c872f26</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHoughSpace2d</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a0888f2c2b1bdcac14d101004959da784</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a4de5213044aee3ec6245faa2a9f57534</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false, bool isFloatSpace=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CombineWithSpace</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a56c0e50df193ac486fcb904b1e82a676</anchor>
+      <arglist>(const CHoughSpace2d &amp;space, Operation operation)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a4837d38db08d97c00ee3c6dee7b38989</anchor>
+      <arglist>(const istd::TIndex&lt; 2 &gt; &amp;size, const double &amp;initValue=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a0f41fddd9905764df4cbf64cdfa40c98</anchor>
+      <arglist>(int dimensionIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a7ea5d2f3575b9dae0962e6ca7eb32b44</anchor>
+      <arglist>(int dimensionIndex, bool state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>IncreaseValueAt</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>aad92697294ca2e8c2cae09fda68ed606</anchor>
+      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position, double value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SmoothHoughSpace</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a4ecb0af70bf141d0727d01ef9e77133a</anchor>
+      <arglist>(const istd::TIndex&lt; 2 &gt; &amp;iterations)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AnalyseHoughSpace</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a8977ab23ff84a67d7db5cbf6b7130401</anchor>
+      <arglist>(const double &amp;minValue, ResultsConsumer &amp;resultProcessor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ExtractToBitmap</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a256718aa23372529de8298bfd3216be2</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetSpacePosition</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a8867b0260348303ecb4423ec53d124b1</anchor>
+      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position, imath::TVector&lt; 2 &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDistance</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a0f68b61b57baf34388ffbae11194f3ea</anchor>
+      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position1, const imath::TVector&lt; 2 &gt; &amp;position2) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDistance2</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>ad03ed1d17c06b08012c674140cf64d9c</anchor>
+      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position1, const imath::TVector&lt; 2 &gt; &amp;position2) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>aea910116fd13e6d48ddc602f74947a5f</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, int pixelBitsCount=0, int componentsCount=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateBitmap</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a8d878b86be59582c5ba77523f060bb07</anchor>
+      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a6a2f8836d614915e0fde7c30c7251b8d</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;size, const double &amp;initValue=0)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>IncreaseValueAt</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>aa4f89f9d83ff7c6b2e1f20a4e5265eda</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, doublevalue)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SmoothHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a560e7a0e339fddd687be13322f88aeef</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;iterations)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetSpacePosition</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a15b5098e1d70ac4d1d1f5244e11c847f</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, imath::TVector&lt; Dimensions &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetDistance</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>aa9cdb4288f18789b14567b0f22ffa1cd</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetDistance2</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a27491e21cb64029cdfddeec7bd3892d0</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::CHoughSpace2d::StdConsumer</name>
+    <filename>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>StdConsumer</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>afb4f375e5e6ceb1a36bcd631cb54341c</anchor>
+      <arglist>(int maxPoints, int maxConsideredPoints, double minDistance, double minMaxRatio)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QList&lt; int &gt;</type>
+      <name>GetSupportedNeghboursCount</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>ab8e2636298e372e50a4778edf5d8d904</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnProcessingBegin</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>a95a3e945c45c1f280ca769476a9f0c91</anchor>
+      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space, const double &amp;minValue)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnProcessingEnd</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>aafb0d3643f540647ddcd934cb559bac4</anchor>
+      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMaximumFound</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>a10a7e937a43396afe0388875c7f6cbd1</anchor>
+      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space, const istd::TIndex&lt; 2 &gt; &amp;position, const double &amp;value, const double *neghboursPtr, int neghboursCount, double &amp;minValue)</arglist>
+    </member>
+    <member kind="variable">
+      <type>WeightToHoughPosMap</type>
+      <name>positions</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
+      <anchor>a9206cf3e6d682e7ea71cd700951a55b1</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::CNeighbourBinCaller</name>
+    <filename>classialgo_1_1_c_neighbour_bin_caller.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CNeighbourBinCaller</name>
+      <anchorfile>classialgo_1_1_c_neighbour_bin_caller.html</anchorfile>
+      <anchor>aba5f173e751958c71d68ea5939e1d437</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InitForCyclicSpace</name>
+      <anchorfile>classialgo_1_1_c_neighbour_bin_caller.html</anchorfile>
+      <anchor>a55801114032b5231ddc20068c70870f2</anchor>
+      <arglist>(const istd::CVarIndex &amp;spaceSizes, int leftTolerance, int rightTolerance)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>VisitAllCorrelations</name>
+      <anchorfile>classialgo_1_1_c_neighbour_bin_caller.html</anchorfile>
+      <anchor>a52272b117e49846bd5d6e2e33df494a9</anchor>
+      <arglist>(Visitor &amp;visitor)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::TIHoughSpace</name>
+    <filename>classialgo_1_1_t_i_hough_space.html</filename>
+    <templarg>Dimensions</templarg>
+    <templarg>Element</templarg>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <class kind="class">ialgo::TIHoughSpace::ResultsConsumer</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a6a2f8836d614915e0fde7c30c7251b8d</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;size, const Element &amp;initValue=0)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>aa8023c21c38b6b5c07bdbc3a7b182d6f</anchor>
+      <arglist>(int dimensionIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>af79912353194ae97b65a68adbfb378e4</anchor>
+      <arglist>(int dimensionIndex, bool state)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>IncreaseValueAt</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>aa4f89f9d83ff7c6b2e1f20a4e5265eda</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, Element value)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SmoothHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a560e7a0e339fddd687be13322f88aeef</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;iterations)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>AnalyseHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a6b000cb1e5a2715392875ea626b5bd5e</anchor>
+      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ExtractToBitmap</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>aea5cf5a49ba5707b1b524a45b6742584</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetSpacePosition</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a15b5098e1d70ac4d1d1f5244e11c847f</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, imath::TVector&lt; Dimensions &gt; &amp;result) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetDistance</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>aa9cdb4288f18789b14567b0f22ffa1cd</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetDistance2</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a27491e21cb64029cdfddeec7bd3892d0</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::TIHoughSpace::ResultsConsumer</name>
+    <filename>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QList&lt; int &gt;</type>
+      <name>GetSupportedNeghboursCount</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
+      <anchor>ad535f9e2e8495e6dd32530016df3a3db</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnProcessingBegin</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
+      <anchor>a570e2aec07697d690f6ce7179ae0b4bd</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const Element &amp;minValue)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnProcessingEnd</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
+      <anchor>a68b2372c931fa08c7165f9ec0130d103</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>OnMaximumFound</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
+      <anchor>a16fb0665708a8ee5ed8b8cc7b97079c7</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const istd::TIndex&lt; Dimensions &gt; &amp;position, const Element &amp;value, const Element *neghboursPtr, int neghboursCount, Element &amp;minValue)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -17140,7 +17511,6 @@
     <class kind="class">iipr::CGrayToRgbProcessorComp</class>
     <class kind="class">iipr::CHoughLineFinderComp</class>
     <class kind="class">iipr::CHoughLineFromPosFinderComp</class>
-    <class kind="class">iipr::CHoughSpace2d</class>
     <class kind="class">iipr::CImageBinarizeProcessorComp</class>
     <class kind="class">iipr::CImageCopyProcessorComp</class>
     <class kind="class">iipr::CImageCropDecalibrateProcessorComp</class>
@@ -17201,7 +17571,6 @@
     <class kind="class">iipr::IRingPatternGeneratorParams</class>
     <class kind="class">iipr::ISearchConstraints</class>
     <class kind="class">iipr::ISearchParams</class>
-    <class kind="class">iipr::TIHoughSpace</class>
     <class kind="class">iipr::TImagePixelInterpolator</class>
     <class kind="class">iipr::TProcessedBitmapSupplierComp</class>
     <class kind="class">iipr::InvertFunction</class>
@@ -20021,227 +20390,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CHoughSpace2d</name>
-    <filename>classiipr_1_1_c_hough_space2d.html</filename>
-    <base>iimg::CGeneralBitmap</base>
-    <base virtualness="virtual">TIHoughSpace&lt; 2 &gt;</base>
-    <class kind="class">iipr::CHoughSpace2d::StdConsumer</class>
-    <member kind="typedef">
-      <type>iimg::CGeneralBitmap</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ada98a8c9f9fc7d0c5aacce3cfcbb01fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QMultiMap&lt; double, i2d::CVector2d &gt;</type>
-      <name>WeightToHoughPosMap</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>aba04b81efb0dfe4e28ac4a3cbf4f21b6</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHoughSpace2d</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a6716285359c8c6c4963753e63b51598a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CHoughSpace2d</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ab7de16e250bd2fcdbe490b9fac23b2ad</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>CreateHoughSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a8400d19ba734e139dfac76cbcecbe8f3</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false, bool isFloatSpace=false)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>CombineWithSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a5380639c93a30a6868782ee6248f8d0b</anchor>
-      <arglist>(const CHoughSpace2d &amp;space, Operation operation)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateHoughSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>afe717c7a80e908bea7959ef0a2a0e589</anchor>
-      <arglist>(const istd::TIndex&lt; 2 &gt; &amp;size, const double &amp;initValue=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsDimensionWrapped</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a221ab92017a215b96eab0c33aa8d39dd</anchor>
-      <arglist>(int dimensionIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetDimensionWrapped</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a2325f19eb5a623a01a95152a7cbef03a</anchor>
-      <arglist>(int dimensionIndex, bool state)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>IncreaseValueAt</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a9af448537ce5661ec652ba0ec84b6946</anchor>
-      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position, double value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SmoothHoughSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>abf0b320c2407dcb89c04f1aa51fcfedc</anchor>
-      <arglist>(const istd::TIndex&lt; 2 &gt; &amp;iterations)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AnalyseHoughSpace</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a588dc5f01c361daa6ababf6aff3206f3</anchor>
-      <arglist>(const double &amp;minValue, ResultsConsumer &amp;resultProcessor)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ExtractToBitmap</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>acd26f0e751390fdcb989d79422439816</anchor>
-      <arglist>(iimg::IBitmap &amp;bitmap) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetSpacePosition</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a6c386b640c88786055642613e6a3ce91</anchor>
-      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position, imath::TVector&lt; 2 &gt; &amp;result) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDistance</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ab628aeb2ba8dff56d3f82556f1515a8b</anchor>
-      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position1, const imath::TVector&lt; 2 &gt; &amp;position2) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetDistance2</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a20da576769104576e2a2d2247742bbc6</anchor>
-      <arglist>(const imath::TVector&lt; 2 &gt; &amp;position1, const imath::TVector&lt; 2 &gt; &amp;position2) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateBitmap</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>abede1d891a61264db73900b0f0216337</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, int pixelBitsCount=0, int componentsCount=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CreateBitmap</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ac94cf8a222c4d40192dc186de6aa9d4e</anchor>
-      <arglist>(PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>CreateHoughSpace</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aeb5f526877abb9f07da2864696c974f9</anchor>
-      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;size, const double &amp;initValue=0)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>IncreaseValueAt</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aac6e30f839a85478473389de0b674196</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, doublevalue)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SmoothHoughSpace</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>ad876a0107f400d7f105ad7a5c8151dfd</anchor>
-      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;iterations)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetSpacePosition</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a1be1b5405757366ce57e2992316ccb2a</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, imath::TVector&lt; Dimensions &gt; &amp;result) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetDistance</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a779996b4b5e466a2003acd96d8d36230</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetDistance2</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>ae951e6632227453cf573094a5dac59e3</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::CHoughSpace2d::StdConsumer</name>
-    <filename>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>StdConsumer</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>afc24b15f51ce72cbdbf1ce4baff4b76e</anchor>
-      <arglist>(int maxPoints, int maxConsideredPoints, double minDistance, double minMaxRatio)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QList&lt; int &gt;</type>
-      <name>GetSupportedNeghboursCount</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>ab2776baaae6d0a3c100f37b2cc491215</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnProcessingBegin</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>a4cb7bf10389a214b1edd9de42402a987</anchor>
-      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space, const double &amp;minValue)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnProcessingEnd</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>ab117bea9898ca9e47f22265569b0a831</anchor>
-      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMaximumFound</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>aa62dca54007a9e125020e1803d70c241</anchor>
-      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space, const istd::TIndex&lt; 2 &gt; &amp;position, const double &amp;value, const double *neghboursPtr, int neghboursCount, double &amp;minValue)</arglist>
-    </member>
-    <member kind="variable">
-      <type>WeightToHoughPosMap</type>
-      <name>positions</name>
-      <anchorfile>classiipr_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>a6855da281d8497cfcf947b775d3441d7</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iipr::CImageBinarizeProcessorComp</name>
     <filename>classiipr_1_1_c_image_binarize_processor_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -20811,8 +20959,8 @@
       <type>void</type>
       <name>UpdateHoughSpace</name>
       <anchorfile>classiipr_1_1_c_lens_corr_find_supplier_comp.html</anchorfile>
-      <anchor>a6e95f1212c3efb0505a9648d2c0d28fb</anchor>
-      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2, double weight, const i2d::CVector2d &amp;imageCenter, CHoughSpace2d &amp;space) const </arglist>
+      <anchor>aad3f94b2e0e5c46a1ed7f163a0b2d2db</anchor>
+      <arglist>(const i2d::CVector2d &amp;point1, const i2d::CVector2d &amp;point2, double weight, const i2d::CVector2d &amp;imageCenter, ialgo::CHoughSpace2d &amp;space) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -24158,117 +24306,6 @@
       <anchorfile>classiipr_1_1_i_search_params.html</anchorfile>
       <anchor>aa8ed7557cfd27fcf7d282a5729c0043c</anchor>
       <arglist>(int nominalModelsCount)=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TIHoughSpace</name>
-    <filename>classiipr_1_1_t_i_hough_space.html</filename>
-    <templarg>Dimensions</templarg>
-    <templarg>Element</templarg>
-    <base virtualness="virtual">iser::ISerializable</base>
-    <class kind="class">iipr::TIHoughSpace::ResultsConsumer</class>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>CreateHoughSpace</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aeb5f526877abb9f07da2864696c974f9</anchor>
-      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;size, const Element &amp;initValue=0)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>IsDimensionWrapped</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aad3642db0f6a37484a48e50abe52dfff</anchor>
-      <arglist>(int dimensionIndex) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetDimensionWrapped</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a8878ceb51a0ad228bfebce04f15cc203</anchor>
-      <arglist>(int dimensionIndex, bool state)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>IncreaseValueAt</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aac6e30f839a85478473389de0b674196</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, Element value)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SmoothHoughSpace</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>ad876a0107f400d7f105ad7a5c8151dfd</anchor>
-      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;iterations)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>AnalyseHoughSpace</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a033c3b8cf22ddea7a9766f34cb7686f6</anchor>
-      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>ExtractToBitmap</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>ae9088e736ca6d297c024139332faee47</anchor>
-      <arglist>(iimg::IBitmap &amp;bitmap) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>GetSpacePosition</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a1be1b5405757366ce57e2992316ccb2a</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, imath::TVector&lt; Dimensions &gt; &amp;result) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetDistance</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a779996b4b5e466a2003acd96d8d36230</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetDistance2</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>ae951e6632227453cf573094a5dac59e3</anchor>
-      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iipr::TIHoughSpace::ResultsConsumer</name>
-    <filename>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual QList&lt; int &gt;</type>
-      <name>GetSupportedNeghboursCount</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
-      <anchor>a8c54b604aa63a887b783ad2c4c183d24</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnProcessingBegin</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
-      <anchor>a59a59c0e65a5bba762e13929b118c8c5</anchor>
-      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const Element &amp;minValue)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnProcessingEnd</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
-      <anchor>a89d6c4f480bb51d1f415e9238ad8e8e8</anchor>
-      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual bool</type>
-      <name>OnMaximumFound</name>
-      <anchorfile>classiipr_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
-      <anchor>a774c728bb58f16d67d39eb4f84ccc609</anchor>
-      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const istd::TIndex&lt; Dimensions &gt; &amp;position, const Element &amp;value, const Element *neghboursPtr, int neghboursCount, Element &amp;minValue)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33727,6 +33764,14 @@
     </member>
   </compound>
   <compound kind="dir">
+    <name>Include/ialgo</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>dir_f6f461692b238894d85af1851e9e98b0.html</filename>
+    <file>CHoughSpace2d.h</file>
+    <file>CNeighbourBinCaller.h</file>
+    <file>TIHoughSpace.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/iauth</name>
     <path>C:/Temp/AcfSln/Include/iauth/</path>
     <filename>dir_b4883bb8fd90455e4a712223a3312662.html</filename>
@@ -33980,7 +34025,6 @@
     <file>CGrayToRgbProcessorComp.h</file>
     <file>CHoughLineFinderComp.h</file>
     <file>CHoughLineFromPosFinderComp.h</file>
-    <file>CHoughSpace2d.h</file>
     <file>CImageBinarizeProcessorComp.h</file>
     <file>CImageCopyProcessorComp.h</file>
     <file>CImageCropDecalibrateProcessorComp.h</file>
@@ -34041,7 +34085,6 @@
     <file>IRingPatternGeneratorParams.h</file>
     <file>ISearchConstraints.h</file>
     <file>ISearchParams.h</file>
-    <file>TIHoughSpace.h</file>
     <file>TImagePixelInterpolator.h</file>
     <file>TProcessedBitmapSupplierComp.h</file>
     <file>TUnaryTransformProcessorComp.h</file>
@@ -34096,6 +34139,7 @@
     <name>Include</name>
     <path>C:/Temp/AcfSln/Include/</path>
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
+    <dir>Include/ialgo</dir>
     <dir>Include/iauth</dir>
     <dir>Include/iblob</dir>
     <dir>Include/iblobgui</dir>

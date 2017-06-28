@@ -1,0 +1,551 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#include <ialgo/CHoughSpace2d.h>
+
+
+// STL includes
+#include <cmath>
+
+// ACF includes
+#include <istd/CChangeNotifier.h>
+
+
+namespace ialgo
+{
+
+
+// template methods for type specific bitmap operations, TODO: implement wrapping for Y axis
+
+template <	typename PixelType,
+			typename WorkingType>
+void DoSmoothHoughSpace(
+			int iterationsX, int iterationsY,
+			bool isWrappedX, bool /*isWrappedY*/,
+			CHoughSpace2d& space)
+{
+	istd::CIndex2d spaceSize = space.CGeneralBitmap::GetImageSize();
+
+	if (spaceSize.GetX() >= 3){
+		for (int i = 0; i < iterationsX; ++i){
+			for (int y = 0; y < spaceSize.GetY(); ++y){
+				PixelType* spaceLinePtr = (PixelType*)space.CGeneralBitmap::GetLinePtr(y);
+
+				int nextX;
+				PixelType prevValue;
+				PixelType value;
+				PixelType storedValue = 0;
+				if (isWrappedX){
+					nextX = 1;
+					prevValue = spaceLinePtr[spaceSize.GetX() - 1];
+					value = spaceLinePtr[0];
+					storedValue = value;
+				}
+				else{
+					nextX = 1;
+					prevValue = spaceLinePtr[0];
+					value = spaceLinePtr[1];
+				}
+
+				for (; nextX < spaceSize.GetX(); ++nextX){
+					PixelType nextValue = spaceLinePtr[nextX];
+
+					spaceLinePtr[nextX - 1] = PixelType((WorkingType(value) * 2 + WorkingType(prevValue) + WorkingType(nextValue)) / 4);
+
+					prevValue = value;
+					value = nextValue;
+				}
+
+				if (isWrappedX){
+					spaceLinePtr[nextX - 1] = PixelType((WorkingType(value) * 2 + WorkingType(prevValue) + WorkingType(storedValue)) / 4);
+				}
+				else{
+					spaceLinePtr[nextX - 1] = PixelType((WorkingType(value) * 2 + WorkingType(prevValue)) / 4);
+				}
+			}
+		}
+	}
+
+	if (spaceSize.GetY() >= 3){
+		for (int i = 0; i < iterationsY; ++i){
+			QVector<PixelType> prevLine(spaceSize.GetX(), 0);
+		
+			PixelType* spaceLinePtr = (PixelType*)space.CGeneralBitmap::GetLinePtr(0);
+
+			for (int y = 0; y < spaceSize.GetY() - 1; ++y){
+				PixelType* nextLinePtr = (PixelType*)space.CGeneralBitmap::GetLinePtr(y + 1);
+
+				for (int x = 0; x < spaceSize.GetX(); ++x){
+					PixelType value = spaceLinePtr[x];
+					PixelType nextValue = nextLinePtr[x];
+
+					spaceLinePtr[x] = PixelType((WorkingType(value) * 2 + WorkingType(prevLine[x]) + WorkingType(nextValue)) / 4);
+
+					prevLine[x] = value;
+				}
+
+				spaceLinePtr = nextLinePtr;
+			}
+
+			for (int x = 0; x < spaceSize.GetX(); ++x){
+				int value = spaceLinePtr[x];
+
+				spaceLinePtr[x] = (WorkingType(value) * 2 + WorkingType(prevLine[x])) / 4;
+			}
+		}
+	}
+}
+
+
+template <	typename PixelType,
+			typename WorkingType>
+void DoAnalyseSpace(
+			double minWeight,
+			bool isWrappedX, bool /*isWrappedY*/,
+			const CHoughSpace2d& space,
+			CHoughSpace2d::ResultsConsumer& resultProcessor)
+{
+	resultProcessor.OnProcessingBegin(space, minWeight);
+
+	istd::CIndex2d spaceSize = space.CGeneralBitmap::GetImageSize();
+
+	if (spaceSize.GetX() < 3){
+		return;
+	}
+
+	PixelType minValue = minWeight;
+
+	istd::CIndex2d position;
+	for (position.SetY(0); position.GetY() < spaceSize.GetY(); ++position[1]){
+		const PixelType* prevSpaceLinePtr = (const PixelType*)space.CGeneralBitmap::GetLinePtr((position.GetY() + spaceSize.GetY() - 1) % spaceSize.GetY());
+		const PixelType* spaceLinePtr = (const PixelType*)space.CGeneralBitmap::GetLinePtr(position.GetY());
+		const PixelType* nextSpaceLinePtr = (const PixelType*)space.CGeneralBitmap::GetLinePtr((position.GetY() + 1) % spaceSize.GetY());
+
+		int prevX;
+		int nextX;
+		if (isWrappedX){
+			prevX = spaceSize.GetX() - 2;
+			position.SetX(spaceSize.GetX() - 1);
+			nextX = 0;
+		}
+		else{
+			prevX = 0;
+			position.SetX(1);
+			nextX = 2;
+		}
+
+		for (; nextX < spaceSize.GetX(); ++nextX){
+			PixelType value = spaceLinePtr[position.GetX()];
+			if (		(value >= minValue) &&
+						(value > prevSpaceLinePtr[position.GetX()]) &&
+						(value >= spaceLinePtr[prevX]) &&
+						(value > spaceLinePtr[nextX]) &&
+						(value >= nextSpaceLinePtr[position.GetX()])){
+				double neighbours[] = {
+							double(spaceLinePtr[prevX]),
+							double(spaceLinePtr[nextX]),
+							double(prevSpaceLinePtr[position.GetX()]),
+							double(nextSpaceLinePtr[position.GetX()])};
+
+				if (resultProcessor.OnMaximumFound(space, position, double(value), neighbours, 4, minWeight)){
+					resultProcessor.OnProcessingEnd(space);
+					return;
+				}
+
+				minValue = minWeight;
+			}
+
+			prevX = position.GetX();
+			position.SetX(nextX);
+		}
+	}
+
+	resultProcessor.OnProcessingEnd(space);
+}
+
+
+template <	typename PixelType,
+			typename WorkingType>
+bool DoExtractToBitmap(
+			const CHoughSpace2d& space,
+			iimg::IBitmap& bitmap)
+{
+	istd::CIndex2d spaceSize = space.CGeneralBitmap::GetImageSize();
+
+	if (bitmap.CreateBitmap(iimg::IBitmap::PF_GRAY, spaceSize)){
+		PixelType maxValue = 0;
+		for (int y = 0; y < spaceSize.GetY(); ++y){
+			const PixelType* spaceLinePtr = (const PixelType*)space.CGeneralBitmap::GetLinePtr(y);
+
+			for (int x = 0; x < spaceSize.GetX(); ++x){
+				PixelType value = spaceLinePtr[x];
+
+				if (value > maxValue){
+					maxValue = value;
+				}
+			}
+		}
+
+		if (maxValue > 0){
+			for (int y = 0; y < spaceSize.GetY(); ++y){
+				const PixelType* spaceLinePtr = (const PixelType*)space.CGeneralBitmap::GetLinePtr(y);
+				quint8* resultLinePtr = (quint8*)bitmap.GetLinePtr(y);
+
+				for (int x = 0; x < spaceSize.GetX(); ++x){
+					PixelType value = spaceLinePtr[x];
+
+					resultLinePtr[x] = quint8(WorkingType(value) * 255 / maxValue);
+				}
+			}
+		}
+		else{
+			bitmap.ClearImage();
+		}
+
+		return true;
+	}
+
+	return false;
+}
+
+
+// public methods
+
+CHoughSpace2d::CHoughSpace2d()
+{
+}
+
+
+CHoughSpace2d::CHoughSpace2d(const istd::CIndex2d& size, bool isWrappedX, bool isWrappedY)
+{
+	CHoughSpace2d::CreateHoughSpace(size, isWrappedX, isWrappedY);
+}
+
+
+bool CHoughSpace2d::CreateHoughSpace(
+			const istd::CIndex2d& size,
+			bool isWrappedX,
+			bool isWrappedY,
+			bool isFloatSpace)
+{
+	istd::CChangeNotifier notifier(this);
+
+	m_isWrapped[0] = isWrappedX;
+	m_isWrapped[1] = isWrappedY;
+
+	if (BaseClass::CreateBitmap(isFloatSpace? iimg::IBitmap::PF_FLOAT32: iimg::IBitmap::PF_GRAY32, size)){
+		BaseClass::ClearImage();
+
+		return true;
+	}
+
+	return false;
+}
+
+
+// reimplemented (ialgo::TIHoughSpace<2>)
+
+bool CHoughSpace2d::CreateHoughSpace(const istd::TIndex<2>& size, const double& /*initValue*/)
+{
+	istd::CChangeNotifier notifier(this);
+
+	m_isWrapped[0] = false;
+	m_isWrapped[1] = false;
+
+	if (BaseClass::CreateBitmap(iimg::IBitmap::PF_FLOAT32, size)){
+		BaseClass::ClearImage();
+
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CHoughSpace2d::IsDimensionWrapped(int dimensionIndex) const
+{
+	Q_ASSERT(dimensionIndex >= 0);
+	Q_ASSERT(dimensionIndex < 2);
+
+	return m_isWrapped[dimensionIndex];
+}
+
+
+void CHoughSpace2d::SetDimensionWrapped(int dimensionIndex, bool state)
+{
+	Q_ASSERT(dimensionIndex >= 0);
+	Q_ASSERT(dimensionIndex < 2);
+
+	m_isWrapped[dimensionIndex] = state;
+}
+
+
+void CHoughSpace2d::IncreaseValueAt(const imath::TVector<2>& position, double value)
+{
+	istd::CIndex2d size = BaseClass::GetImageSize();
+
+	int posX = int(position[0]);
+	if (m_isWrapped[0]){	// correct the position if is wrapped
+		posX = (posX + size.GetX()) % size.GetX();
+	}
+
+	int posY = int(position[1]);
+	if (m_isWrapped[1]){	// correct the position if is wrapped
+		posY = (posY + size.GetY()) % size.GetY();
+	}
+
+	if ((posX >= 0) && (posX < size.GetX()) && (posY >= 0) && (posY < size.GetY())){
+		if (GetPixelFormat() == PF_FLOAT32){
+			float* linePtr = (float*)BaseClass::GetLinePtr(posY);
+
+			linePtr[posX] += float(value);
+		}
+		else{
+			Q_ASSERT(GetPixelFormat() == PF_GRAY32);
+
+			quint32* linePtr = (quint32*)BaseClass::GetLinePtr(posY);
+
+			linePtr[posX] += quint32(value);
+		}
+	}
+}
+
+
+void CHoughSpace2d::SmoothHoughSpace(const istd::TIndex<2>& iterations)
+{
+	switch (GetPixelFormat()){
+	case PF_GRAY32:
+		DoSmoothHoughSpace<quint32, quint32>(iterations[0], iterations[1], m_isWrapped[0], m_isWrapped[1], *this);
+		break;
+
+	case PF_FLOAT32:
+		DoSmoothHoughSpace<float, float>(iterations[0], iterations[1], m_isWrapped[0], m_isWrapped[1], *this);
+		break;
+
+	default:
+		break;
+	}
+}
+
+
+bool CHoughSpace2d::AnalyseHoughSpace(
+			const double& minValue,
+			ResultsConsumer& resultProcessor)
+{
+	QList<int> supportedNeighboursCount = resultProcessor.GetSupportedNeghboursCount();
+	if (supportedNeighboursCount.contains(4) || supportedNeighboursCount.isEmpty()){
+		switch (GetPixelFormat())
+		{
+		case PF_GRAY32:
+			DoAnalyseSpace<quint32, qint32>(minValue, m_isWrapped[0], m_isWrapped[1], *this, resultProcessor);
+			return true;
+
+		case PF_FLOAT32:
+			DoAnalyseSpace<float, float>(minValue, m_isWrapped[0], m_isWrapped[1], *this, resultProcessor);
+			return true;
+
+		default:
+			break;
+		}
+	}
+
+	return false;
+}
+
+
+bool CHoughSpace2d::ExtractToBitmap(iimg::IBitmap& bitmap) const
+{
+	switch (GetPixelFormat())
+	{
+	case PF_GRAY32:
+		return DoExtractToBitmap<quint32, quint64>(*this, bitmap);
+
+	case PF_FLOAT32:
+		return DoExtractToBitmap<float, float>(*this, bitmap);
+
+	default:
+		return false;
+	}
+}
+
+
+bool CHoughSpace2d::GetSpacePosition(const imath::TVector<2>& position, imath::TVector<2>& result) const
+{
+	istd::CIndex2d size = BaseClass::GetImageSize();
+
+	result = position;
+
+	if (m_isWrapped[0]){	// correct the position if is wrapped
+		result[0] = fmod(result[0] + size.GetX(), size.GetX());
+	}
+
+	if (m_isWrapped[1]){	// correct the position if is wrapped
+		result[1] = (fmod(result[1] + size.GetY(), size.GetY()));
+	}
+
+	return ((result[0] >= 0) && (result[0] < size.GetX()) && (result[1] >= 0) && (result[1] < size.GetY()));
+}
+
+
+// reimplemented (iimg::CGeneralBitmap)
+
+bool CHoughSpace2d::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int pixelBitsCount, int componentsCount)
+{
+	if ((pixelFormat != PF_GRAY32) && (pixelFormat != PF_FLOAT32)){
+		return false;
+	}
+
+	return BaseClass::CreateBitmap(pixelFormat, size, pixelBitsCount, componentsCount);
+}
+
+
+bool CHoughSpace2d::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference)
+{
+	if ((pixelFormat != PF_GRAY32) && (pixelFormat != PF_FLOAT32)){
+		return false;
+	}
+
+	return BaseClass::CreateBitmap(pixelFormat, size, dataPtr, releaseFlag, linesDifference);
+}
+
+
+// public methods of embedded class StdConsumer
+
+// reimplemented (ialgo::TIHoughSpace<2>::ResultsConsumer)
+
+CHoughSpace2d::StdConsumer::StdConsumer(int maxPoints, int maxConsideredPoints, double minDistance, double minMaxRatio)
+:	m_maxPoints(maxPoints),
+	m_maxConsideredPoints(maxConsideredPoints),
+	m_minDistance(minDistance),
+	m_minMaxRatio(minMaxRatio)
+{
+}
+
+
+QList<int> CHoughSpace2d::StdConsumer::GetSupportedNeghboursCount() const
+{
+	return QList<int>() << 4;
+}
+
+
+void CHoughSpace2d::StdConsumer::OnProcessingBegin(
+			const TIHoughSpace<2, double>& /*space*/,
+			const double& /*minValue*/)
+{
+	m_maxValue = 0;
+}
+
+
+void CHoughSpace2d::StdConsumer::OnProcessingEnd(const TIHoughSpace<2, double>& space)
+{
+	QMultiMap<double, i2d::CVector2d> finalPositions;
+
+	// remove elements beeing to close to each other
+	for (		QMultiMap<double, i2d::CVector2d>::ConstIterator pointIter = positions.constBegin();
+				pointIter != positions.constEnd();
+				++pointIter){
+		const i2d::CVector2d& point1 = pointIter.value();
+
+		bool isToClose = false;
+
+		for (		QMultiMap<double, i2d::CVector2d>::ConstIterator searchClosedIter = finalPositions.constBegin();
+					searchClosedIter != finalPositions.constEnd();
+					++searchClosedIter){
+			const i2d::CVector2d& point2 = searchClosedIter.value();
+
+			double dist2 = space.GetDistance2(point1, point2);
+			if (dist2 <= m_minDistance * m_minDistance){
+				isToClose = true;
+
+				break;
+			}
+		}
+
+		if (!isToClose){
+			finalPositions.insertMulti(-pointIter.key(), point1);
+
+			if ((m_maxPoints >= 0) && (finalPositions.size() > m_maxPoints)){
+				break;
+			}
+		}
+	}
+
+	positions.swap(finalPositions);
+}
+
+
+bool CHoughSpace2d::StdConsumer::OnMaximumFound(
+			const TIHoughSpace<2, double>& /*space*/,
+			const istd::TIndex<2>& position,
+			const double& value,
+			const double* neghboursPtr,
+			int neghboursCount,
+			double& minValue)
+{
+	Q_ASSERT(neghboursCount == 4);
+	Q_UNUSED(neghboursCount);
+
+	double diffLeft = value - neghboursPtr[0];
+	double diffRight = value - neghboursPtr[1];
+	double diffTop = value - neghboursPtr[2];
+	double diffBottom = value - neghboursPtr[3];
+
+	double correctionX = diffLeft / (diffLeft + diffRight);
+	double correctionY = diffTop / (diffTop + diffBottom);
+
+	i2d::CVector2d resultPos(position[0] + correctionX, position[1] + correctionY);
+
+	positions.insert(-value, resultPos);
+
+	if (value > m_maxValue){
+		m_maxValue = value;
+		double propValue = value * m_minMaxRatio;
+		if (minValue < propValue){
+			minValue = propValue;
+
+			// remove elements weeker than new calculated minValue
+			while (!positions.isEmpty() && positions.firstKey() < minValue){
+				QMultiMap<double, i2d::CVector2d>::Iterator lastIter = positions.end() - 1;
+
+				positions.erase(lastIter);
+			}
+		}
+	}
+
+	// try remove the last one if we have too many points
+	if (positions.count() > m_maxConsideredPoints){
+		QMultiMap<double, i2d::CVector2d>::Iterator lastIter = positions.end() - 1;
+		double lastValue = lastIter.key();
+		positions.erase(lastIter);
+
+		if (lastValue > minValue){
+			minValue = lastValue;
+		}
+	}
+
+	return false;
+}
+
+
+} // namespace ialgo
+
+

@@ -35,7 +35,7 @@
 #include <iprm/TParamsPtr.h>
 
 // ACF-Solutions includes
-#include <iipr/CHoughSpace2d.h>
+#include <ialgo/CHoughSpace2d.h>
 #include <iipr/CPerspCalibFinder.h>
 #include <iimg/CBitmap.h>
 
@@ -226,7 +226,7 @@ bool CLensCorrFindSupplierComp::CalculateCalibration(const iimg::IBitmap& image,
 		}
 	}
 
-	CHoughSpace2d lineSpace;
+	ialgo::CHoughSpace2d lineSpace;
 	istd::CIndex2d lineSpaceSize(angleGridSize, radiusGridSize);
 
 	if (!lineSpace.CreateHoughSpace(lineSpaceSize, true, false)){
@@ -252,7 +252,7 @@ bool CLensCorrFindSupplierComp::CalculateCalibration(const iimg::IBitmap& image,
 
 	lineSpace.SmoothHoughSpace(istd::CIndex2d(*m_smoothKernelAttrPtr, *m_smoothKernelAttrPtr));
 
-	iipr::CHoughSpace2d::StdConsumer foundLinesResults(maxLinesCount, maxLinesCount * 10, *m_smoothKernelAttrPtr, 0.25);
+	ialgo::CHoughSpace2d::StdConsumer foundLinesResults(maxLinesCount, maxLinesCount * 10, *m_smoothKernelAttrPtr, 0.25);
 	lineSpace.AnalyseHoughSpace(1, foundLinesResults);
 	if (foundLinesResults.positions.size() < 2){
 		AddMessage(new ilog::CMessage(istd::IInformationProvider::IC_ERROR, 0, QObject::tr("No lines found"), "LensCorrectionFinder"));
@@ -270,7 +270,7 @@ bool CLensCorrFindSupplierComp::CalculateCalibration(const iimg::IBitmap& image,
 
 	double linePosTolerance = imageCenter.GetLength() * *m_smoothKernelAttrPtr / lineSpaceSize.GetY();
 
-	for (		iipr::CHoughSpace2d::WeightToHoughPosMap::ConstIterator houghIter = foundLinesResults.positions.constBegin();
+	for (		ialgo::CHoughSpace2d::WeightToHoughPosMap::ConstIterator houghIter = foundLinesResults.positions.constBegin();
 				houghIter != foundLinesResults.positions.constEnd();
 				++houghIter){
 		const i2d::CVector2d& foundSpacePos = houghIter.value();
@@ -404,7 +404,7 @@ void CLensCorrFindSupplierComp::UpdateHoughSpace(
 			const i2d::CVector2d& point2,
 			double weight,
 			const i2d::CVector2d& imageCenter,
-			CHoughSpace2d& space) const
+			ialgo::CHoughSpace2d& space) const
 {
 	istd::CIndex2d spaceSize = space.GetImageSize();
 

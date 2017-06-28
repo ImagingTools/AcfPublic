@@ -145,7 +145,6 @@
     <ClCompile Include="..\CGrayToRgbProcessorComp.cpp" />
     <ClCompile Include="..\CHoughLineFinderComp.cpp" />
     <ClCompile Include="..\CHoughLineFromPosFinderComp.cpp" />
-    <ClCompile Include="..\CHoughSpace2d.cpp" />
     <ClCompile Include="..\CImageBinarizeProcessorComp.cpp" />
     <ClCompile Include="..\CImageCopyProcessorComp.cpp" />
     <ClCompile Include="..\CImageCropDecalibrateProcessorComp.cpp" />
@@ -219,7 +218,6 @@
     <ClInclude Include="..\CGrayToRgbProcessorComp.h" />
     <ClInclude Include="..\CHoughLineFinderComp.h" />
     <ClInclude Include="..\CHoughLineFromPosFinderComp.h" />
-    <ClInclude Include="..\CHoughSpace2d.h" />
     <ClInclude Include="..\CImageBinarizeProcessorComp.h" />
     <ClInclude Include="..\CImageCopyProcessorComp.h" />
     <ClInclude Include="..\CImageCropDecalibrateProcessorComp.h" />
@@ -279,7 +277,6 @@
     <ClInclude Include="..\IRingPatternGeneratorParams.h" />
     <ClInclude Include="..\ISearchConstraints.h" />
     <ClInclude Include="..\ISearchParams.h" />
-    <ClInclude Include="..\TIHoughSpace.h" />
     <ClInclude Include="..\TImagePixelInterpolator.h" />
     <ClInclude Include="..\TProcessedBitmapSupplierComp.h" />
     <ClInclude Include="..\TUnaryTransformProcessorComp.h" />
