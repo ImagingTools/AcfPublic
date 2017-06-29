@@ -115,12 +115,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CHoughSpace2d.cpp" />
-    <ClCompile Include="..\CNeighbourBinCaller.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CHoughSpace2d.h" />
-    <ClInclude Include="..\CNeighbourBinCaller.h" />
     <ClInclude Include="..\TIHoughSpace.h" />
+    <ClInclude Include="..\TNeighbourBinCaller.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

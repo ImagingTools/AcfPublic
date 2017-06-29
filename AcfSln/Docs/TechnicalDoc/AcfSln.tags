@@ -15,18 +15,18 @@
     <namespace>ialgo</namespace>
   </compound>
   <compound kind="file">
-    <name>CNeighbourBinCaller.h</name>
-    <path>C:/Temp/AcfSln/Include/ialgo/</path>
-    <filename>_c_neighbour_bin_caller_8h</filename>
-    <class kind="class">ialgo::CNeighbourBinCaller</class>
-    <namespace>ialgo</namespace>
-  </compound>
-  <compound kind="file">
     <name>TIHoughSpace.h</name>
     <path>C:/Temp/AcfSln/Include/ialgo/</path>
     <filename>_t_i_hough_space_8h</filename>
     <class kind="class">ialgo::TIHoughSpace</class>
     <class kind="class">ialgo::TIHoughSpace::ResultsConsumer</class>
+    <namespace>ialgo</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TNeighbourBinCaller.h</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>_t_neighbour_bin_caller_8h</filename>
+    <class kind="class">ialgo::TNeighbourBinCaller</class>
     <namespace>ialgo</namespace>
   </compound>
   <compound kind="file">
@@ -4169,8 +4169,8 @@
     <name>ialgo</name>
     <filename>namespaceialgo.html</filename>
     <class kind="class">ialgo::CHoughSpace2d</class>
-    <class kind="class">ialgo::CNeighbourBinCaller</class>
     <class kind="class">ialgo::TIHoughSpace</class>
+    <class kind="class">ialgo::TNeighbourBinCaller</class>
   </compound>
   <compound kind="class">
     <name>ialgo::CHoughSpace2d</name>
@@ -4394,31 +4394,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ialgo::CNeighbourBinCaller</name>
-    <filename>classialgo_1_1_c_neighbour_bin_caller.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>CNeighbourBinCaller</name>
-      <anchorfile>classialgo_1_1_c_neighbour_bin_caller.html</anchorfile>
-      <anchor>aba5f173e751958c71d68ea5939e1d437</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>InitForCyclicSpace</name>
-      <anchorfile>classialgo_1_1_c_neighbour_bin_caller.html</anchorfile>
-      <anchor>a55801114032b5231ddc20068c70870f2</anchor>
-      <arglist>(const istd::CVarIndex &amp;spaceSizes, int leftTolerance, int rightTolerance)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>VisitAllCorrelations</name>
-      <anchorfile>classialgo_1_1_c_neighbour_bin_caller.html</anchorfile>
-      <anchor>a52272b117e49846bd5d6e2e33df494a9</anchor>
-      <arglist>(Visitor &amp;visitor)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>ialgo::TIHoughSpace</name>
     <filename>classialgo_1_1_t_i_hough_space.html</filename>
     <templarg>Dimensions</templarg>
@@ -4527,6 +4502,32 @@
       <anchorfile>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</anchorfile>
       <anchor>a16fb0665708a8ee5ed8b8cc7b97079c7</anchor>
       <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const istd::TIndex&lt; Dimensions &gt; &amp;position, const Element &amp;value, const Element *neghboursPtr, int neghboursCount, Element &amp;minValue)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::TNeighbourBinCaller</name>
+    <filename>classialgo_1_1_t_neighbour_bin_caller.html</filename>
+    <templarg>SpaceDimension</templarg>
+    <member kind="function">
+      <type></type>
+      <name>TNeighbourBinCaller</name>
+      <anchorfile>classialgo_1_1_t_neighbour_bin_caller.html</anchorfile>
+      <anchor>a6abed941f1a1873a374f6fac29387050</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>InitForCyclicSpace</name>
+      <anchorfile>classialgo_1_1_t_neighbour_bin_caller.html</anchorfile>
+      <anchor>a01e79dbc5a58754762314003a5f51bf7</anchor>
+      <arglist>(const istd::CVarIndex &amp;spaceSizes, int leftTolerance, int rightTolerance)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>VisitAllCorrelations</name>
+      <anchorfile>classialgo_1_1_t_neighbour_bin_caller.html</anchorfile>
+      <anchor>a7b0e77874909da1edccb6cd9360579f0</anchor>
+      <arglist>(Visitor &amp;visitor)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -33768,8 +33769,8 @@
     <path>C:/Temp/AcfSln/Include/ialgo/</path>
     <filename>dir_f6f461692b238894d85af1851e9e98b0.html</filename>
     <file>CHoughSpace2d.h</file>
-    <file>CNeighbourBinCaller.h</file>
     <file>TIHoughSpace.h</file>
+    <file>TNeighbourBinCaller.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iauth</name>
