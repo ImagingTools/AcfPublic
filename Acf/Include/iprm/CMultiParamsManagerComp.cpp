@@ -36,10 +36,20 @@ namespace iprm
 {
 
 
-const istd::IChangeable::ChangeSet s_enableChangeSet(IParamsManager::CF_SET_ENABLE_CHANGED, QObject::tr("Enable/disable option"));
-const istd::IChangeable::ChangeSet s_optionTypeChangeSet(IOptionsList::CF_OPTIONS_CHANGED, QObject::tr("Change parameter type"));
-const istd::IChangeable::ChangeSet s_renameChangeSet(IParamsManager::CF_SET_NAME_CHANGED, QObject::tr("Change parameter name"));
-const istd::IChangeable::ChangeSet s_insertChangeSet(IParamsManager::CF_SET_INSERTED, QObject::tr("Insert parameter"));
+// static attributes
+static const istd::IChangeable::ChangeSet s_optionTypeChangeSet(IOptionsList::CF_OPTIONS_CHANGED, QObject::tr("Change parameter type"));
+static const istd::IChangeable::ChangeSet s_renameChangeSet(IParamsManager::CF_SET_NAME_CHANGED, QObject::tr("Change parameter name"));
+static const istd::IChangeable::ChangeSet s_enableChangeSet(IParamsManager::CF_SET_ENABLE_CHANGED, QObject::tr("Enable/disable option"));
+static const istd::IChangeable::ChangeSet s_insertChangeSet(IParamsManager::CF_SET_INSERTED, QObject::tr("Insert parameter"));
+static const iser::CArchiveTag s_paramsSetListTag("ParamsSetList", "List of parameter set", iser::CArchiveTag::TT_MULTIPLE);
+static const iser::CArchiveTag s_paramsSetTag("ParamsSet", "Single parameter set", iser::CArchiveTag::TT_GROUP, &s_paramsSetListTag, true);
+static const iser::CArchiveTag s_typeIdTag("TypeId", "Type id of factory of parameter set", iser::CArchiveTag::TT_LEAF, &s_paramsSetTag);
+static const iser::CArchiveTag s_nameTag("Name", "Name of set", iser::CArchiveTag::TT_LEAF, &s_paramsSetTag);
+static const iser::CArchiveTag s_uuidTag("Uuid", "Uuid of parameter set", iser::CArchiveTag::TT_LEAF, &s_paramsSetTag);
+static const iser::CArchiveTag s_enabledTag("Enabled", "Is parameter set enabled", iser::CArchiveTag::TT_LEAF, &s_paramsSetTag);
+static const iser::CArchiveTag s_valueTag("Value", "Value of set", iser::CArchiveTag::TT_GROUP, &s_paramsSetTag, true);
+static const iser::CArchiveTag s_selectedIndexTag("Selected", "Selected index", iser::CArchiveTag::TT_LEAF);
+
 
 		
 // reimplemented (iprm::IParamsManager)
@@ -54,14 +64,6 @@ const IOptionsList* CMultiParamsManagerComp::GetParamsTypeConstraints() const
 
 bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag paramsSetListTag("ParamsSetList", "List of parameter set", iser::CArchiveTag::TT_MULTIPLE);
-	static iser::CArchiveTag paramsSetTag("ParamsSet", "Single parameter set", iser::CArchiveTag::TT_GROUP, &paramsSetListTag, true);
-	static iser::CArchiveTag typeIdTag("TypeId", "Type id of factory of parameter set", iser::CArchiveTag::TT_LEAF, &paramsSetTag);
-	static iser::CArchiveTag nameTag("Name", "Name of set", iser::CArchiveTag::TT_LEAF, &paramsSetTag);
-	static iser::CArchiveTag enabledTag("Enabled", "Is parameter set enabled", iser::CArchiveTag::TT_LEAF, &paramsSetTag);
-	static iser::CArchiveTag valueTag("Value", "Value of set", iser::CArchiveTag::TT_GROUP, &paramsSetTag, true);
-	static iser::CArchiveTag selectedIndexTag("Selected", "Selected index", iser::CArchiveTag::TT_LEAF);
-
 	bool retVal = true;
 
 	bool isStoring = archive.IsStoring();
@@ -85,16 +87,16 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 	}
 
 	int paramsCount = GetParamsSetsCount();
-	retVal = retVal && archive.BeginMultiTag(paramsSetListTag, paramsSetTag, paramsCount);
+	retVal = retVal && archive.BeginMultiTag(s_paramsSetListTag, s_paramsSetTag, paramsCount);
 
 	if (!isStoring && !retVal){
 		return false;
 	}
 
 	for (int i = 0; i < paramsCount; ++i){
-		retVal = retVal && archive.BeginTag(paramsSetTag);
+		retVal = retVal && archive.BeginTag(s_paramsSetTag);
 
-		retVal = retVal && archive.BeginTag(typeIdTag);
+		retVal = retVal && archive.BeginTag(s_typeIdTag);
 		
 		QByteArray typeId;
 
@@ -119,26 +121,35 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 			}		
 		}
 
-		retVal = retVal && archive.EndTag(typeIdTag);
+		retVal = retVal && archive.EndTag(s_typeIdTag);
 
 		QString name;
+		QByteArray uuid;
 		bool isEnabled = true;
 
 		if (isStoring){
 			name = GetParamsSetName(i);
+			uuid = GetOptionId(i);
 			isEnabled = IsOptionEnabled(i);
 		}
 
-		retVal = retVal && archive.BeginTag(nameTag);
+		retVal = retVal && archive.BeginTag(s_nameTag);
 		retVal = retVal && archive.Process(name);
-		retVal = retVal && archive.EndTag(nameTag);	
+		retVal = retVal && archive.EndTag(s_nameTag);
 
 		quint32 version = 0;
-		if (		!archive.GetVersionInfo().GetVersionNumber(iser::IVersionInfo::AcfVersionId, version) ||
-					(version > 3186)){
-			retVal = retVal && archive.BeginTag(enabledTag);
+		bool hasVersion = archive.GetVersionInfo().GetVersionNumber(iser::IVersionInfo::AcfVersionId, version);
+
+		if (!hasVersion || (version > 4532)){
+			retVal = retVal && archive.BeginTag(s_uuidTag);
+			retVal = retVal && archive.Process(uuid);
+			retVal = retVal && archive.EndTag(s_uuidTag);
+		}
+
+		if (!hasVersion || (version > 3186)){
+			retVal = retVal && archive.BeginTag(s_enabledTag);
 			retVal = retVal && archive.Process(isEnabled);
-			retVal = retVal && archive.EndTag(enabledTag);
+			retVal = retVal && archive.EndTag(s_enabledTag);
 		}
 
 		if (!isStoring){
@@ -146,7 +157,7 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 				return false;
 			}		
 
-			if (!EnsureParamExist(i, typeId, name, isEnabled)){
+			if (!EnsureParamExist(i, typeId, name, uuid, isEnabled)){
 				return false;
 			}
 		}
@@ -156,23 +167,23 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 			return false;
 		}
 
-		retVal = retVal && archive.BeginTag(valueTag);		
+		retVal = retVal && archive.BeginTag(s_valueTag);		
 		retVal = retVal && paramsSetPtr->Serialize(archive);
-		retVal = retVal && archive.EndTag(valueTag);
+		retVal = retVal && archive.EndTag(s_valueTag);
 
-		retVal = retVal && archive.EndTag(paramsSetTag);
+		retVal = retVal && archive.EndTag(s_paramsSetTag);
 	}
 
-	retVal = retVal && archive.EndTag(paramsSetListTag);
+	retVal = retVal && archive.EndTag(s_paramsSetListTag);
 
 	int selectedIndex = -1;
 	if (*m_serializeSelectionAttrPtr){
 		selectedIndex = m_selectedIndex;
 	}
 
-	retVal = retVal && archive.BeginTag(selectedIndexTag);
+	retVal = retVal && archive.BeginTag(s_selectedIndexTag);
 	retVal = retVal && archive.Process(selectedIndex);
-	retVal = retVal && archive.EndTag(selectedIndexTag);
+	retVal = retVal && archive.EndTag(s_selectedIndexTag);
 
 	if (*m_serializeSelectionAttrPtr && !archive.IsStoring()){
 		m_selectedIndex = selectedIndex;
@@ -246,7 +257,7 @@ bool CMultiParamsManagerComp::SetOptionDescription(int /*optionIndex*/, const QS
 
 // protected methods
 
-bool CMultiParamsManagerComp::EnsureParamExist(int index, const QByteArray& typeId, const QString& name, bool isEnabled)
+bool CMultiParamsManagerComp::EnsureParamExist(int index, const QByteArray& typeId, const QString& name, const QByteArray& uuid, bool isEnabled)
 {
 	int fixedParamsCount = m_fixedParamSetsCompPtr.GetCount();
 
@@ -298,17 +309,12 @@ bool CMultiParamsManagerComp::EnsureParamExist(int index, const QByteArray& type
 			}
 		}
 
-		if (name != paramSet.name){
-			istd::CChangeNotifier notifier(this, &s_renameChangeSet);
+		if ((name != paramSet.name) || (uuid != paramSet.uuid) || (isEnabled != paramSet.isEnabled)){
+			istd::CChangeNotifier notifier(this);
 			Q_UNUSED(notifier);
 
 			paramSet.name = name;
-		}
-
-		if (isEnabled != paramSet.isEnabled){
-			istd::CChangeNotifier notifier(this, &s_enableChangeSet);
-			Q_UNUSED(notifier);
-
+			paramSet.uuid = uuid;
 			paramSet.isEnabled = isEnabled;
 		}
 	}
@@ -340,6 +346,7 @@ bool CMultiParamsManagerComp::EnsureParamExist(int index, const QByteArray& type
 
 		paramsSetPtr->paramSetPtr.SetPtr(newParamsSetPtr);
 		paramsSetPtr->name = name.isEmpty() ? CalculateNewDefaultName() : name;
+		paramsSetPtr->uuid = uuid;
 		paramsSetPtr->isEnabled = isEnabled;
 		paramsSetPtr->parentPtr = this;
 

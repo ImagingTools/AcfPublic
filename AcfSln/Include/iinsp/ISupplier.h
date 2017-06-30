@@ -47,11 +47,11 @@ public:
 	enum WorkStatus
 	{
 		/**
-			Supplier is invalidated and will produce new result on demand.
+			Supplier is invalidated, no result is produced.
 		*/
 		WS_INVALID,
 		/**
-			New work is initialized.
+			New work is initialized and will produce new result on demand.
 		*/
 		WS_INIT,
 		/**
@@ -66,9 +66,8 @@ public:
 			Work was canceled.
 		*/
 		WS_CANCELED,
-
 		/**
-			Work cannot be done.
+			Work couldn't be done.
 		*/
 		WS_FAILED
 	};

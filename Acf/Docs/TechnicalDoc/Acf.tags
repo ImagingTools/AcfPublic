@@ -43321,8 +43321,8 @@
       <type>bool</type>
       <name>EnsureParamExist</name>
       <anchorfile>classiprm_1_1_c_multi_params_manager_comp.html</anchorfile>
-      <anchor>afe0de449c8aeba00dcce80c7ec6b2f78</anchor>
-      <arglist>(int index, const QByteArray &amp;typeId, const QString &amp;name, bool isEnabled)</arglist>
+      <anchor>a81ca2638eb0dc2161d3d2624b49bfdbf</anchor>
+      <arglist>(int index, const QByteArray &amp;typeId, const QString &amp;name, const QByteArray &amp;uuid, bool isEnabled)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
