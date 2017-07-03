@@ -56,7 +56,7 @@ CApplicationCompBase::CApplicationCompBase()
 
 // reimplemented (ibase::IApplication)
 
-bool CApplicationCompBase::InitializeApplication(int& argc, char** argv)
+bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 {
 	m_applicationArguments.clear();
 

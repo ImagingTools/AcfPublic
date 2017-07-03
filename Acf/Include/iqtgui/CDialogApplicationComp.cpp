@@ -38,7 +38,7 @@ namespace iqtgui
 
 // reimplemented (ibase::IApplication)
 
-int CDialogApplicationComp::Execute(int& argc, char** argv)
+int CDialogApplicationComp::Execute(int argc, char** argv)
 {
 	if (InitializeApplication(argc, argv)){
 		QByteArray appStyle;

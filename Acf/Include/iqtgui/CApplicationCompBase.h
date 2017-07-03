@@ -71,7 +71,7 @@ public:
 	CApplicationCompBase();
 
 	// reimplemented (ibase::IApplication)
-    virtual bool InitializeApplication(int& argc, char** argv);
+	virtual bool InitializeApplication(int argc, char** argv);
 	virtual QStringList GetApplicationArguments() const;
 
 protected:

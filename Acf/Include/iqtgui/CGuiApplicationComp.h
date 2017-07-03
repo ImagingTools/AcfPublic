@@ -102,8 +102,8 @@ public:
 	virtual const iqtgui::IGuiObject* GetApplicationGui() const;
 
 	// reimplemented (ibase::IApplication)
-    virtual bool InitializeApplication(int& argc, char** argv);
-    virtual int Execute(int& argc, char** argv);
+	virtual bool InitializeApplication(int argc, char** argv);
+	virtual int Execute(int argc, char** argv);
 	virtual QString GetHelpText() const;
 
 protected:
