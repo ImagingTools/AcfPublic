@@ -47,12 +47,12 @@ public:
 	/**
 		Initialize the application object.
 	*/
-	virtual bool InitializeApplication(int argc, char** argv) = 0;
+    virtual bool InitializeApplication(int& argc, char** argv) = 0;
 
 	/**
 		Start execution loop of the application.
 	*/
-	virtual int Execute(int argc, char** argv) = 0;
+    virtual int Execute(int& argc, char** argv) = 0;
 
 	/**
 		Get information about the possible command line arguments of this application.

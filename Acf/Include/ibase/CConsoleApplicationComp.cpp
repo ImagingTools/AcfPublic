@@ -35,7 +35,7 @@ namespace ibase
 
 // reimplemented (ibase::IApplication)
 
-bool CConsoleApplicationComp::InitializeApplication(int argc, char** argv)
+bool CConsoleApplicationComp::InitializeApplication(int& argc, char** argv)
 {
 	m_applicationArguments.clear();
 
@@ -91,7 +91,7 @@ bool CConsoleApplicationComp::InitializeApplication(int argc, char** argv)
 }
 
 
-int CConsoleApplicationComp::Execute(int argc, char** argv)
+int CConsoleApplicationComp::Execute(int& argc, char** argv)
 {
 	m_runtimeStatus.SetRuntimeStatus(ibase::IRuntimeStatusProvider::RS_STARTING);
 

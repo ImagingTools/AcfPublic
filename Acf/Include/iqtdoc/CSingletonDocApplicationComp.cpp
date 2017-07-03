@@ -44,7 +44,7 @@ CSingletonDocApplicationComp::CSingletonDocApplicationComp()
 
 // reimplemented (ibase::IApplication)
 
-bool CSingletonDocApplicationComp::InitializeApplication(int argc, char** argv)
+bool CSingletonDocApplicationComp::InitializeApplication(int& argc, char** argv)
 {
 	if (!m_isApplicationInitialized && m_slaveApplicationCompPtr.IsValid()){
 		if (m_slaveApplicationCompPtr->InitializeApplication(argc, argv)){
@@ -62,7 +62,7 @@ bool CSingletonDocApplicationComp::InitializeApplication(int argc, char** argv)
 }
 
 
-int CSingletonDocApplicationComp::Execute(int argc, char** argv)
+int CSingletonDocApplicationComp::Execute(int& argc, char** argv)
 {
 	if (m_isAlreadyRunning){
 		ShareDocumentsForOpening(argc, argv);
