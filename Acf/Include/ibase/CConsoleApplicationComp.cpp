@@ -31,6 +31,9 @@ namespace ibase
 {
 
 
+static int s_argc = 0;
+
+
 // public methods
 
 // reimplemented (ibase::IApplication)
@@ -53,7 +56,8 @@ bool CConsoleApplicationComp::InitializeApplication(int argc, char** argv)
 		}
 		else
 		{
-			m_applicationPtr.SetPtr(new QCoreApplication(argc, argv), true);
+			s_argc = argc;
+			m_applicationPtr.SetPtr(new QCoreApplication(s_argc, argv), true);
 			if (!m_applicationPtr.IsValid()){
 				return false;
 			}
