@@ -10019,8 +10019,8 @@
       <type></type>
       <name>CMultiAttributeEditor</name>
       <anchorfile>classicmpstr_1_1_c_multi_attribute_editor.html</anchorfile>
-      <anchor>aca88f10c53941fe8bddfde47f13d2fc3</anchor>
-      <arglist>(const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, const QByteArray &amp;attributeId, int attributeFlags)</arglist>
+      <anchor>a62a9749aeae0c7beaf55566fa493cd16</anchor>
+      <arglist>(QWidget *parentPtr, const CElementSelectionInfoManagerBase &amp;elementSelectionInfoManager, const QByteArray &amp;attributeId, int attributeFlags)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
