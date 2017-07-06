@@ -401,9 +401,9 @@ bool CVarMatrix::TransformR(int firstPartWidth)
 		double element0 = GetAt(istd::CIndex2d(column, column));
 
 		double hhSign = (element0 >= 0)? 1: -1;
-		double lenghtA = sqrt(normA2);
+		double lengthA = sqrt(normA2);
 
-		double hhVector_0 = element0 + hhSign * lenghtA;	// v = a + e * |a|, where e = {1, 0, 0, ..., 0}'
+		double hhVector_0 = element0 + hhSign * lengthA;	// v = a + e * |a|, where e = {1, 0, 0, ..., 0}'
 		double normV2 = normA2 + hhVector_0 * hhVector_0 - element0 * element0;	// norm2 := |v|^2;
 
 		// transform matrix R
@@ -437,7 +437,7 @@ bool CVarMatrix::TransformR(int firstPartWidth)
 			}
 		}
 
-		SetAt(istd::CIndex2d(column, column), -hhSign * lenghtA);
+		SetAt(istd::CIndex2d(column, column), -hhSign * lengthA);
 		for (i = column + 1; i < size.GetY(); i++){
 			SetAt(istd::CIndex2d(column, i), 0.0);
 		}
