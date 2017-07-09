@@ -4215,6 +4215,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>ApplyOperation</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a177341528ed05e06a4ef44673a83b53c</anchor>
+      <arglist>(Operation operation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>CombineWithSpace</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
       <anchor>a56c0e50df193ac486fcb904b1e82a676</anchor>
