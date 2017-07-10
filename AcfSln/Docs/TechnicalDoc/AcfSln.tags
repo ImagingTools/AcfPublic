@@ -1632,6 +1632,14 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CImageIntegralProcessorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_image_integral_processor_comp_8h</filename>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
+    <class kind="class">iipr::CImageIntegralProcessorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CImageInterpolationParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_image_interpolation_params_8h</filename>
@@ -17526,6 +17534,7 @@
     <class kind="class">iipr::CImageFlipProcessorComp</class>
     <class kind="class">iipr::CImageHistogramProcessorComp</class>
     <class kind="class">iipr::CImageHistogramSupplierComp</class>
+    <class kind="class">iipr::CImageIntegralProcessorComp</class>
     <class kind="class">iipr::CImageInterpolationParams</class>
     <class kind="class">iipr::CImageInterpolationParamsComp</class>
     <class kind="class">iipr::CImageNormalizeProcessorComp</class>
@@ -20690,6 +20699,32 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CImageIntegralProcessorComp</name>
+    <filename>classiipr_1_1_c_image_integral_processor_comp.html</filename>
+    <base>iipr::CImageProcessorCompBase</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CalculateIntegralImage</name>
+      <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
+      <anchor>a1beb064a9651c23b3b94b986558d157c</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage, const iimg::CScanlineMask *maskPtr=NULL, iimg::IBitmap::PixelFormat outputPixelFormat=iimg::IBitmap::PF_UNKNOWN, bool fillOutOfMask=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>MakeIntegralImage</name>
+      <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
+      <anchor>aeead600e1ab6160d2ffbc9d83361f529</anchor>
+      <arglist>(iimg::IBitmap &amp;image)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
+      <anchor>aff37ca9267351a05c64bed12042de6d5</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34040,6 +34075,7 @@
     <file>CImageFlipProcessorComp.h</file>
     <file>CImageHistogramProcessorComp.h</file>
     <file>CImageHistogramSupplierComp.h</file>
+    <file>CImageIntegralProcessorComp.h</file>
     <file>CImageInterpolationParams.h</file>
     <file>CImageInterpolationParamsComp.h</file>
     <file>CImageNormalizeProcessorComp.h</file>

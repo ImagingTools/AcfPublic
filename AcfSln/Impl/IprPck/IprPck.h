@@ -88,6 +88,7 @@
 #include <iipr/CCheckboardCalibSupplierComp.h>
 #include <iipr/CMultiPointPosCorrSupplierComp.h>
 #include <iipr/CLensCorrFindSupplierComp.h>
+#include <iipr/CImageIntegralProcessorComp.h>
 
 
 /**
@@ -165,6 +166,7 @@ typedef iipr::CHoughLineFromPosFinderComp HoughLineFromPosFinder;
 typedef icomp::TModelCompWrap<iipr::CCheckboardCalibSupplierComp> CheckboardCalibSupplier;
 typedef icomp::TModelCompWrap<iipr::CMultiPointPosCorrSupplierComp> MultiPointPosCorrSupplier;
 typedef icomp::TModelCompWrap<iipr::CLensCorrFindSupplierComp> LensCorrFindSupplier;
+typedef iipr::CImageIntegralProcessorComp ImageIntegralProcessor;
 
 
 } // namespace IprPck

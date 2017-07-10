@@ -152,6 +152,7 @@
     <ClCompile Include="..\CImageFlipProcessorComp.cpp" />
     <ClCompile Include="..\CImageHistogramProcessorComp.cpp" />
     <ClCompile Include="..\CImageHistogramSupplierComp.cpp" />
+    <ClCompile Include="..\CImageIntegralProcessorComp.cpp" />
     <ClCompile Include="..\CImageInterpolationParams.cpp" />
     <ClCompile Include="..\CImageInterpolationParamsComp.cpp" />
     <ClCompile Include="..\CImageNormalizeProcessorComp.cpp" />
@@ -225,6 +226,7 @@
     <ClInclude Include="..\CImageFlipProcessorComp.h" />
     <ClInclude Include="..\CImageHistogramProcessorComp.h" />
     <ClInclude Include="..\CImageHistogramSupplierComp.h" />
+    <ClInclude Include="..\CImageIntegralProcessorComp.h" />
     <ClInclude Include="..\CImageInterpolationParams.h" />
     <ClInclude Include="..\CImageInterpolationParamsComp.h" />
     <ClInclude Include="..\CImageNormalizeProcessorComp.h" />

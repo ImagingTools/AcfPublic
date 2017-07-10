@@ -1,0 +1,79 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iipr_CImageIntegralProcessorComp_included
+#define iipr_CImageIntegralProcessorComp_included
+
+
+// ACF includes
+#include <istd/IPolymorphic.h>
+#include <iprm/IParamsSet.h>
+#include <iimg/IBitmap.h>
+#include <iimg/CScanlineMask.h>
+#include <iipr/CImageProcessorCompBase.h>
+
+
+namespace iipr
+{
+
+
+/**
+	Helper class allowing to find perspective calibration using list of nominal and found positions.
+*/
+class CImageIntegralProcessorComp: public CImageProcessorCompBase
+{
+public:
+	/**
+		Calculates integral image.
+		\param	inputImage			input image.
+		\param	outputImage			result image, will be initializated.
+		\param	maskPtr				optional mask. Points out of mask will be not touched inside of input image and not set in output image.
+		\param	outputPixelFormat	requested format of output image or \c iimg::IBitmap::PF_UNKNOWN if it should be automatically calculated.
+	*/
+	virtual bool CalculateIntegralImage(
+				const iimg::IBitmap& inputImage,
+				iimg::IBitmap& outputImage,
+				const iimg::CScanlineMask* maskPtr = NULL,
+				iimg::IBitmap::PixelFormat outputPixelFormat = iimg::IBitmap::PF_UNKNOWN,
+				bool fillOutOfMask = true);
+
+	/**
+		Calculates integral image in place.
+		\param	image	image will be converted to its integral.
+	*/
+	virtual bool MakeIntegralImage(iimg::IBitmap& image);
+
+protected:
+	// reimplemented (iipr::CImageProcessorCompBase)
+	virtual bool ProcessImage(
+				const iprm::IParamsSet* paramsPtr, 
+				const iimg::IBitmap& inputImage,
+				iimg::IBitmap& outputImage);
+};
+
+
+} // namespace iipr
+
+
+#endif // !iipr_CImageIntegralProcessorComp_included
+
+
