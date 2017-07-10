@@ -20705,18 +20705,18 @@
     <name>iipr::CImageIntegralProcessorComp</name>
     <filename>classiipr_1_1_c_image_integral_processor_comp.html</filename>
     <base>iipr::CImageProcessorCompBase</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+    <member kind="function" static="yes">
+      <type>static bool</type>
       <name>CalculateIntegralImage</name>
       <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
-      <anchor>a1beb064a9651c23b3b94b986558d157c</anchor>
+      <anchor>aeea9cfc44ce134ae2010f13d652c8e2b</anchor>
       <arglist>(const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage, const iimg::CScanlineMask *maskPtr=NULL, iimg::IBitmap::PixelFormat outputPixelFormat=iimg::IBitmap::PF_UNKNOWN, bool fillOutOfMask=true)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
+    <member kind="function" static="yes">
+      <type>static bool</type>
       <name>MakeIntegralImage</name>
       <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
-      <anchor>aeead600e1ab6160d2ffbc9d83361f529</anchor>
+      <anchor>abffb4f1e11161d192368f5b0565d3450</anchor>
       <arglist>(iimg::IBitmap &amp;image)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
