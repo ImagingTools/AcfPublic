@@ -113,9 +113,13 @@ const iser::ISerializable* CSelectableParamsSetComp::GetParameter(const QByteArr
 }
 
 
-iser::ISerializable* CSelectableParamsSetComp::GetEditableParameter(const QByteArray& /*id*/)
+iser::ISerializable* CSelectableParamsSetComp::GetEditableParameter(const QByteArray& id)
 {
-	return NULL;
+	if (!*m_allowEditingAttrPtr){
+		return NULL;
+	}
+
+	return const_cast<iser::ISerializable*>(GetParameter(id));
 }
 
 
