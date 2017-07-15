@@ -114,6 +114,46 @@
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
+    <name>CBarcode.h</name>
+    <path>C:/Temp/AcfSln/Include/ibarcode/</path>
+    <filename>_c_barcode_8h</filename>
+    <includes id="_i_barcode_8h" name="IBarcode.h" local="no" imported="no">ibarcode/IBarcode.h</includes>
+    <class kind="class">ibarcode::CBarcode</class>
+    <namespace>ibarcode</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CBarcodeSearchFeature.h</name>
+    <path>C:/Temp/AcfSln/Include/ibarcode/</path>
+    <filename>_c_barcode_search_feature_8h</filename>
+    <includes id="_c_object_feature_8h" name="CObjectFeature.h" local="no" imported="no">iipr/CObjectFeature.h</includes>
+    <includes id="_c_barcode_8h" name="CBarcode.h" local="no" imported="no">ibarcode/CBarcode.h</includes>
+    <class kind="class">ibarcode::CBarcodeSearchFeature</class>
+    <namespace>ibarcode</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CGeneralBarcodeSearchParams.h</name>
+    <path>C:/Temp/AcfSln/Include/ibarcode/</path>
+    <filename>_c_general_barcode_search_params_8h</filename>
+    <includes id="_i_general_barcode_search_params_8h" name="IGeneralBarcodeSearchParams.h" local="no" imported="no">ibarcode/IGeneralBarcodeSearchParams.h</includes>
+    <class kind="class">ibarcode::CGeneralBarcodeSearchParams</class>
+    <namespace>ibarcode</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IBarcode.h</name>
+    <path>C:/Temp/AcfSln/Include/ibarcode/</path>
+    <filename>_i_barcode_8h</filename>
+    <class kind="class">ibarcode::IBarcode</class>
+    <namespace>ibarcode</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IGeneralBarcodeSearchParams.h</name>
+    <path>C:/Temp/AcfSln/Include/ibarcode/</path>
+    <filename>_i_general_barcode_search_params_8h</filename>
+    <includes id="_i_barcode_8h" name="IBarcode.h" local="no" imported="no">ibarcode/IBarcode.h</includes>
+    <class kind="class">ibarcode::IGeneralBarcodeSearchParams</class>
+    <namespace>ibarcode</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBlobFeature.h</name>
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>_c_blob_feature_8h</filename>
@@ -5144,24 +5184,204 @@
     </member>
   </compound>
   <compound kind="namespace">
-    <name>iblob</name>
-    <filename>namespaceiblob.html</filename>
-    <class kind="class">iblob::CBlobFeature</class>
-    <class kind="class">iblob::CBlobFilterParams</class>
-    <class kind="class">iblob::CBlobFilterParamsComp</class>
-    <class kind="class">iblob::CBlobProcessorCompBase</class>
-    <class kind="class">iblob::CPreciseBlobProcessorComp</class>
-    <class kind="class">iblob::IBlobFilterParams</class>
+    <name>ibarcode</name>
+    <filename>namespaceibarcode.html</filename>
+    <class kind="class">ibarcode::CBarcode</class>
+    <class kind="class">ibarcode::CBarcodeSearchFeature</class>
+    <class kind="class">ibarcode::CGeneralBarcodeSearchParams</class>
+    <class kind="class">ibarcode::IBarcode</class>
+    <class kind="class">ibarcode::IGeneralBarcodeSearchParams</class>
   </compound>
   <compound kind="class">
-    <name>iblob::CBlobFeature</name>
-    <filename>classiblob_1_1_c_blob_feature.html</filename>
+    <name>ibarcode::CBarcode</name>
+    <filename>classibarcode_1_1_c_barcode.html</filename>
+    <base virtualness="virtual">ibarcode::IBarcode</base>
+    <member kind="function">
+      <type></type>
+      <name>CBarcode</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>a7eaa8a1240deb275310cf2943ad5eb94</anchor>
+      <arglist>(int barcodeType=BT_UNKNOWN, const QString &amp;data=QString())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CBarcode</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>ad49a7751b372869c466f297657705998</anchor>
+      <arglist>(const ibarcode::CBarcode &amp;barcode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CBarcode &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>a0518de912df2204f964a376e04f0e8c8</anchor>
+      <arglist>(const CBarcode &amp;barcode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>operator==</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>a828de41400e6912f3cbbad14a2f40da4</anchor>
+      <arglist>(const CBarcode &amp;barcode) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>operator!=</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>ab246d00f6210564c03a20f79028f4a8c</anchor>
+      <arglist>(const CBarcode &amp;barcode) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetData</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>abf3ea6f7bb7581d5aa486ccd64d6c300</anchor>
+      <arglist>(const QString &amp;barcodeData)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetBarcodeData</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>a3b828cdbe692856827df0398df619c03</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetBarcodeType</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>aec455ab68393d365bdab5131212152ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>ac1c2b305f314d6647d78e4b085fbdae7</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>a7d9e85c87ed98a805cd9d858a3f4e720</anchor>
+      <arglist>(BarcodeType, BT_UNKNOWN, BT_CODABAR, BT_EAN_8, BT_EAN_13, BT_CODE_128, BT_CODE_39, BT_CODE_93, BT_INTERLEAVED_2_5, BT_PDF_417, BT_DATAMATRIX, BT_QR)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_barcodeData</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>ad7f3e75f74fb8e5e455bb96e794aae7c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_barcodeType</name>
+      <anchorfile>classibarcode_1_1_c_barcode.html</anchorfile>
+      <anchor>a2325c8ca7a6aa3cd0a9ae7e5f71a9bdf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>BarcodeType</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_UNKNOWN</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a6628d0c1e5649c73cc7810cd5269f915</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_CODABAR</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a1ea0df90d91aa514b995e6279c2e589e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_EAN_8</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612ab127c45a1340c1d6fb3023cf65eff4c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_EAN_13</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a2cf93822eaa10d1aff12e8642f999432</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_CODE_128</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612ac245749ed5762afb238bfeacf1829523</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_CODE_39</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612aeb74cb7bfb1f9614fdc7eb9a7cc384f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_CODE_93</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a6d7cc2a1e647b83fae9727ccba1094c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_INTERLEAVED_2_5</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612ad66a893426764f6012421d1787cbc4a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_PDF_417</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a1d1a35a32529e6b296ac6b09e0b88600</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_DATAMATRIX</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a286eaa85121cbae69bdb120fd0411a23</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BT_QR</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>ac59e3892a41ccea02c0841cefe274612a2f812d61f1adfcaa22ad15310df5dac6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibarcode::CBarcodeSearchFeature</name>
+    <filename>classibarcode_1_1_c_barcode_search_feature.html</filename>
     <base>iipr::CObjectFeature</base>
+    <base>ibarcode::CBarcode</base>
     <member kind="typedef">
       <type>iipr::CObjectFeature</type>
       <name>BaseClass</name>
-      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a1ecf09264902e93c7ca46ef871a6d5d7</anchor>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>acb9e77afe1b785f6bf329153791c664c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CBarcode</type>
+      <name>BaseClass2</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a74491c7b2c7a4e2007c7c960368765b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -5264,6 +5484,316 @@
     </member>
     <member kind="function">
       <type></type>
+      <name>CBarcodeSearchFeature</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>af64174b4c7110e4b001d662b6f2c8f28</anchor>
+      <arglist>(ibarcode::IBarcode::BarcodeType barcodeType=BT_UNKNOWN, const QString &amp;barcodeData=QString(), const i2d::CPolygon &amp;barcodeArea=i2d::CPolygon(), bool isChecksumValid=false, double weight=0.0, const i2d::CVector2d &amp;position=i2d::CVector2d(0, 0), double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0))</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsBarcodeValid</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a1f87fca1e61f0617e7a489a8e86b028b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetBarcode</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a36d40d201b7e31e976dd976a1d0d721f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CPolygon</type>
+      <name>GetBarcodeArea</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a0677c47e8ea8cc250832c74b86edec69</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetBarcodeArea</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>aa99bb49bc451e2554484c775a93fa512</anchor>
+      <arglist>(const i2d::CPolygon &amp;barcodeArea)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCheckSumValid</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a0f96d027a5647e9df6786e9bdd8d1254</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCheckSumValid</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a4e4b0d38721f5a4c79895dfe6aa95c11</anchor>
+      <arglist>(bool isCheckSumValid=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetValidSymbolCount</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a949703f1dee9b554216da076373b9cf9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetValidSymbolCount</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a6d6d2ac420f9f25ea10537000d334262</anchor>
+      <arglist>(int validSymbolCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetPosition</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>ae22d6899363edd6ba9e1527c6a26349d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetData</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a67f76eb19078d2a3804fcb77faaf59be</anchor>
+      <arglist>(const QByteArray &amp;barcodeData)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>ae2c71e510a514af6e6f6e0b2e014ff3d</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a2581f066625852ad6f7c9f640f3a20e3</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
+      <anchor>a2f7fe8a1cf8687affcc9fee76553068f</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CObjectFeature</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>aba4955b8438510850eb84231728724ab</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CObjectFeature</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1af29eab9362f95bd60a4213795503be</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0))</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetAngle</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>afcb0e7d4c7e1880c49ce6e85efa049f3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetScale</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a89225c376285d0961cbe164d26ae9bed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetObjectId</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ab555d01219e186eaefa886c9b584d5ac</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetObjectId</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>ab5170a366b62e5b611e04ba6331d9ba8</anchor>
+      <arglist>(const QByteArray &amp;objectId)</arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::ITransformation2d &amp;</type>
+      <name>GetTransformation</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a3d20716c3b35381aa0583acb8d92f173</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>afa5429742a2f847c275d0fe03b681e34</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
+      <anchor>a1e53fe5cc766129d06f84f5e2c211ae0</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TWeightedFeatureWrap</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
+      <arglist>(double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const INumericConstraints *</type>
+      <name>GetNumericConstraints</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetValues</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
+      <arglist>(const imath::CVarVector &amp;values)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_weight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>imath::CVarVector</type>
+      <name>m_values</name>
+      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
+      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibarcode::CGeneralBarcodeSearchParams</name>
+    <filename>classibarcode_1_1_c_general_barcode_search_params.html</filename>
+    <base virtualness="virtual">ibarcode::IGeneralBarcodeSearchParams</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual BarcodeTypes</type>
+      <name>GetSearchBarcodeTypes</name>
+      <anchorfile>classibarcode_1_1_c_general_barcode_search_params.html</anchorfile>
+      <anchor>a42fb85797f3504855d626cd96eb198c9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSearchBarcodeTypes</name>
+      <anchorfile>classibarcode_1_1_c_general_barcode_search_params.html</anchorfile>
+      <anchor>aa5133833abe441aa03a5fbccaa258437</anchor>
+      <arglist>(const BarcodeTypes &amp;barcodeTypes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classibarcode_1_1_c_general_barcode_search_params.html</anchorfile>
+      <anchor>afa7ec422c9e690476e615edc5d480682</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="typedef">
+      <type>QSet&lt; IBarcode::BarcodeType &gt;</type>
+      <name>BarcodeTypes</name>
+      <anchorfile>classibarcode_1_1_i_general_barcode_search_params.html</anchorfile>
+      <anchor>ac1d215eacecd43b048da5fabd088d4bb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibarcode::IBarcode</name>
+    <filename>classibarcode_1_1_i_barcode.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QString &amp;</type>
+      <name>GetBarcodeData</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>a191d98066c78745f42fa03122e8cd25b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetBarcodeType</name>
+      <anchorfile>classibarcode_1_1_i_barcode.html</anchorfile>
+      <anchor>a5104b56727799051ee544d659210fab7</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibarcode::IGeneralBarcodeSearchParams</name>
+    <filename>classibarcode_1_1_i_general_barcode_search_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual BarcodeTypes</type>
+      <name>GetSearchBarcodeTypes</name>
+      <anchorfile>classibarcode_1_1_i_general_barcode_search_params.html</anchorfile>
+      <anchor>a54dab5ab6cb98cd24402506379d7ddf9</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetSearchBarcodeTypes</name>
+      <anchorfile>classibarcode_1_1_i_general_barcode_search_params.html</anchorfile>
+      <anchor>a7840659abcce0befc636c322b1c6aa4d</anchor>
+      <arglist>(const BarcodeTypes &amp;barcodeTypes)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>iblob</name>
+    <filename>namespaceiblob.html</filename>
+    <class kind="class">iblob::CBlobFeature</class>
+    <class kind="class">iblob::CBlobFilterParams</class>
+    <class kind="class">iblob::CBlobFilterParamsComp</class>
+    <class kind="class">iblob::CBlobProcessorCompBase</class>
+    <class kind="class">iblob::CPreciseBlobProcessorComp</class>
+    <class kind="class">iblob::IBlobFilterParams</class>
+  </compound>
+  <compound kind="class">
+    <name>iblob::CBlobFeature</name>
+    <filename>classiblob_1_1_c_blob_feature.html</filename>
+    <base>iipr::CObjectFeature</base>
+    <member kind="typedef">
+      <type>iipr::CObjectFeature</type>
+      <name>BaseClass</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a1ecf09264902e93c7ca46ef871a6d5d7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
       <name>CBlobFeature</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
       <anchor>ab5fab12b98cc37b9a513f8f8567a41dd</anchor>
@@ -5325,55 +5855,6 @@
       <anchor>a96ba3f0b68993a5d0d9225af6a538cf0</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
-    <member kind="function">
-      <type></type>
-      <name>CObjectFeature</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>aba4955b8438510850eb84231728724ab</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CObjectFeature</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a1af29eab9362f95bd60a4213795503be</anchor>
-      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0))</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetAngle</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>afcb0e7d4c7e1880c49ce6e85efa049f3</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>i2d::CVector2d</type>
-      <name>GetScale</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a89225c376285d0961cbe164d26ae9bed</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>QByteArray</type>
-      <name>GetObjectId</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>ab555d01219e186eaefa886c9b584d5ac</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetObjectId</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>ab5170a366b62e5b611e04ba6331d9ba8</anchor>
-      <arglist>(const QByteArray &amp;objectId)</arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::ITransformation2d &amp;</type>
-      <name>GetTransformation</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a3d20716c3b35381aa0583acb8d92f173</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsValueTypeSupported</name>
@@ -5387,62 +5868,6 @@
       <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
       <anchor>a1a4d1851c26c98ca17bea2ddce002816</anchor>
       <arglist>(ValueTypeId valueTypeId) const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TWeightedFeatureWrap</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
-      <arglist>(double weight=1.0)</arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetWeight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetWeight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
-      <arglist>(double weight)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const INumericConstraints *</type>
-      <name>GetNumericConstraints</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>aa8251e0134e3a7c8706bfaf71d2115fd</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a4c85027810c725fdaac439b18007fbdf</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetValues</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a0bc635bfc29198638308d81786abe212</anchor>
-      <arglist>(const imath::CVarVector &amp;values)</arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>double</type>
-      <name>m_weight</name>
-      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>imath::CVarVector</type>
-      <name>m_values</name>
-      <anchorfile>classimeas_1_1_c_simple_numeric_value.html</anchorfile>
-      <anchor>a98fa43cc574e0e7bf15178d0b23f1e74</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21759,20 +22184,6 @@
       <anchor>ad747179555c63a51e8eb307e3a6727a8</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>afa5429742a2f847c275d0fe03b681e34</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a1e53fe5cc766129d06f84f5e2c211ae0</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CPerspCalibFinder</name>
@@ -33830,6 +34241,16 @@
     <file>IUsersManager.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/ibarcode</name>
+    <path>C:/Temp/AcfSln/Include/ibarcode/</path>
+    <filename>dir_20dd126c967fa43e469d3a0b384d32a0.html</filename>
+    <file>CBarcode.h</file>
+    <file>CBarcodeSearchFeature.h</file>
+    <file>CGeneralBarcodeSearchParams.h</file>
+    <file>IBarcode.h</file>
+    <file>IGeneralBarcodeSearchParams.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/iblob</name>
     <path>C:/Temp/AcfSln/Include/iblob/</path>
     <filename>dir_6b8f21da56aeb41654e138de0cf01fb3.html</filename>
@@ -34185,6 +34606,7 @@
     <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
     <dir>Include/ialgo</dir>
     <dir>Include/iauth</dir>
+    <dir>Include/ibarcode</dir>
     <dir>Include/iblob</dir>
     <dir>Include/iblobgui</dir>
     <dir>Include/icalib</dir>
