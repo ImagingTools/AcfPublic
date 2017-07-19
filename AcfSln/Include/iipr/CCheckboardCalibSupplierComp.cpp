@@ -33,7 +33,6 @@
 // ACF-Solutions includes
 #include <ialgo/CHoughSpace2d.h>
 #include <iipr/CPerspCalibFinder.h>
-#include <iimg/CBitmap.h>
 
 
 namespace iipr

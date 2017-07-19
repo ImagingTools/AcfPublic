@@ -21141,8 +21141,15 @@
       <type>static bool</type>
       <name>MakeIntegralImage</name>
       <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
-      <anchor>abffb4f1e11161d192368f5b0565d3450</anchor>
-      <arglist>(iimg::IBitmap &amp;image)</arglist>
+      <anchor>a60d642f7b262441dfea4596492a449d6</anchor>
+      <arglist>(iimg::IBitmap &amp;outputImage)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CalculateIntegralReference</name>
+      <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
+      <anchor>a5cd91039179ff5d4b05156bf2dbf2c6a</anchor>
+      <arglist>(const iimg::CScanlineMask &amp;mask, iimg::IBitmap &amp;outputImage)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>

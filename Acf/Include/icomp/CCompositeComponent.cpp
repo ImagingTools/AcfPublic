@@ -40,11 +40,12 @@ namespace icomp
 {
 
 
-CCompositeComponent::CCompositeComponent()
+CCompositeComponent::CCompositeComponent(bool manualAutoInit)
 :	m_contextPtr(NULL),
 	m_parentPtr(NULL),
 	m_isParentOwner(false),
-	m_autoInitialized(false)
+	m_autoInitialized(false),
+	m_manualAutoInit(manualAutoInit)
 {
 }
 
@@ -64,6 +65,8 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 	bool retVal = false;
 
 	if ((m_contextPtr != NULL) && !m_autoInitialized){
+		m_autoInitialized = true;
+
 		while (!m_autoInitComponentIds.isEmpty()){
 			QByteArray autoInitId = *m_autoInitComponentIds.begin();
 
@@ -90,8 +93,6 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 				retVal = compositeComponentPtr->EnsureAutoInitComponentsCreated() || retVal;
 			}
 		}
-
-		m_autoInitialized = true;
 	}
 
 	return retVal;
@@ -435,9 +436,11 @@ bool CCompositeComponent::CreateSubcomponentInfo(
 
 			(*subComponentPtr)->SetComponentContext(subContextPtr.GetPtr(), this, isOwned);
 
-			icomp::CCompositeComponent* compositeComponentPtr = dynamic_cast<icomp::CCompositeComponent*>((*subComponentPtr).GetPtr());
-			if (compositeComponentPtr != NULL){
-				compositeComponentPtr->EnsureAutoInitComponentsCreated();
+			if (!m_manualAutoInit || m_autoInitialized){
+				icomp::CCompositeComponent* compositeComponentPtr = dynamic_cast<icomp::CCompositeComponent*>((*subComponentPtr).GetPtr());
+				if (compositeComponentPtr != NULL){
+					compositeComponentPtr->EnsureAutoInitComponentsCreated();
+				}
 			}
 		}
 	}

@@ -1908,6 +1908,7 @@
     <name>TSimComponentWrap.h</name>
     <path>C:/Temp/Acf/Include/icomp/</path>
     <filename>_t_sim_component_wrap_8h</filename>
+    <includes id="_c_class_info_8h" name="CClassInfo.h" local="no" imported="no">istd/CClassInfo.h</includes>
     <includes id="_i_composite_component_8h" name="ICompositeComponent.h" local="no" imported="no">icomp/ICompositeComponent.h</includes>
     <includes id="_t_component_wrap_8h" name="TComponentWrap.h" local="no" imported="no">icomp/TComponentWrap.h</includes>
     <includes id="_c_sim_component_context_base_8h" name="CSimComponentContextBase.h" local="no" imported="no">icomp/CSimComponentContextBase.h</includes>
@@ -2634,6 +2635,7 @@
     <name>CFileSystemExplorerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/ifilegui/</path>
     <filename>_c_file_system_explorer_gui_comp_8h</filename>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_i_file_type_info_8h" name="IFileTypeInfo.h" local="no" imported="no">ifile/IFileTypeInfo.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="no" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
@@ -2872,7 +2874,6 @@
     <filename>_t_multi_page_bitmap_8h</filename>
     <includes id="_c_multi_page_bitmap_base_8h" name="CMultiPageBitmapBase.h" local="no" imported="no">iimg/CMultiPageBitmapBase.h</includes>
     <includes id="_c_general_bitmap_8h" name="CGeneralBitmap.h" local="no" imported="no">iimg/CGeneralBitmap.h</includes>
-    <includes id="_c_bitmap_8h" name="CBitmap.h" local="no" imported="no">iimg/CBitmap.h</includes>
     <class kind="class">iimg::TMultiPageBitmap</class>
     <namespace>iimg</namespace>
     <member kind="typedef">
@@ -2880,13 +2881,6 @@
       <name>CGeneralMultiPageBitmap</name>
       <anchorfile>namespaceiimg.html</anchorfile>
       <anchor>a6b3f2208566bf715f82d50017f31f89d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiPageBitmap&lt; CBitmap &gt;</type>
-      <name>CQImageBasedMultiPageBitmap</name>
-      <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>aad7fe919a72b04c53bc78f7c070cfff9</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23022,8 +23016,8 @@
       <type></type>
       <name>CCompositeComponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a92bd601da3c6fa131e04e15c013b6426</anchor>
-      <arglist>()</arglist>
+      <anchor>a42d52f3c5e6e509d9bb320c8afc81ffb</anchor>
+      <arglist>(bool manualAutoInit)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual</type>
@@ -33388,6 +33382,7 @@
     <name>ifilegui::CFileSystemExplorerGuiComp</name>
     <filename>classifilegui_1_1_c_file_system_explorer_gui_comp.html</filename>
     <base>TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam &gt;</type>
       <name>BaseClass</name>
@@ -33409,6 +33404,20 @@
       <anchor>a9afb2aa611533a6725e72a15be6a3000</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InvalidateFileSystemModel</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>a00501a26a03538f38d904f597d54f1a4</anchor>
+      <arglist>(const QString &amp;currentFilePath)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>UpdateFileRoot</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>ada093eb58d7818170d44a4a805b90e2f</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
@@ -33422,6 +33431,13 @@
       <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
       <anchor>ace9559f82c725ae5fa104fab4f15b528</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classifilegui_1_1_c_file_system_explorer_gui_comp.html</anchorfile>
+      <anchor>ae21de47caa848c8a733abe744ace20f0</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33603,13 +33619,6 @@
       <name>CGeneralMultiPageBitmap</name>
       <anchorfile>namespaceiimg.html</anchorfile>
       <anchor>a6b3f2208566bf715f82d50017f31f89d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TMultiPageBitmap&lt; CBitmap &gt;</type>
-      <name>CQImageBasedMultiPageBitmap</name>
-      <anchorfile>namespaceiimg.html</anchorfile>
-      <anchor>aad7fe919a72b04c53bc78f7c070cfff9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -41915,8 +41924,8 @@
       <type></type>
       <name>CComponentAccessor</name>
       <anchorfile>classipackage_1_1_c_component_accessor.html</anchorfile>
-      <anchor>a4be81778358e8242e8e33a160d3a08d7</anchor>
-      <arglist>(const QString &amp;registryFile, const QString &amp;configFile=QString(), bool isDiagnosticEnabled=false)</arglist>
+      <anchor>a179d81e1c959d9ba01967c772bc59ab4</anchor>
+      <arglist>(const QString &amp;registryFile, const QString &amp;configFile=QString(), bool isDiagnosticEnabled=false, bool manualAutoInit=false)</arglist>
     </member>
     <member kind="function">
       <type>InterfaceType *</type>
@@ -41924,6 +41933,13 @@
       <anchorfile>classipackage_1_1_c_component_accessor.html</anchorfile>
       <anchor>af825bae09991e2e31518806f969e3706</anchor>
       <arglist>(const QByteArray &amp;componentId=QByteArray())</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>EnsureAutoInitComponentsCreated</name>
+      <anchorfile>classipackage_1_1_c_component_accessor.html</anchorfile>
+      <anchor>a04a94a9a06392ddfb3101d88a9f0abb7</anchor>
+      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">

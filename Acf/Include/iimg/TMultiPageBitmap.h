@@ -27,7 +27,6 @@
 // ACF includes
 #include <iimg/CMultiPageBitmapBase.h>
 #include <iimg/CGeneralBitmap.h>
-#include <iimg/CBitmap.h>
 
 
 namespace iimg
@@ -83,7 +82,6 @@ IBitmap* TMultiPageBitmap<BitmapImpl>::CreateBitmap() const
 
 
 typedef TMultiPageBitmap<CGeneralBitmap> CGeneralMultiPageBitmap;
-typedef TMultiPageBitmap<CBitmap> CQImageBasedMultiPageBitmap;
 
 
 } // namespace iimg

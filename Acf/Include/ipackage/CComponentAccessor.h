@@ -50,7 +50,8 @@ public:
 	explicit CComponentAccessor(
 				const QString& registryFile, 
 				const QString& configFile = QString(),
-				bool isDiagnosticEnabled = false);
+				bool isDiagnosticEnabled = false,
+				bool manualAutoInit = false);
 
 	/**
 		Gets component interface.
@@ -63,13 +64,13 @@ public:
 	template <class InterfaceType>
 	InterfaceType* GetComponentInterface(const QByteArray& componentId = QByteArray());
 
+	bool EnsureAutoInitComponentsCreated() const;
+
 private:
 	icomp::CCompositeComponent m_mainComponent;
 
 	istd::TDelPtr<icomp::IComponentStaticInfo> m_mainComponentStaticInfoPtr;
 	istd::TDelPtr<icomp::IComponentContext> m_mainComponentContextPtr;
-
-	bool m_isAutoInitBlocked;
 };
 
 

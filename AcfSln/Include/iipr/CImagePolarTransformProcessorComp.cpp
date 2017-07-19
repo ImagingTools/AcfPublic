@@ -28,7 +28,6 @@
 #include <ibase/CSize.h>
 #include <i2d/CAnnulusSegment.h>
 #include <iprm/TParamsPtr.h>
-#include <iimg/CBitmap.h>
 #include <iimg/CScanlineMask.h>
 #include <imeas/INumericValue.h>
 #include <iipr/TImagePixelInterpolator.h>
@@ -273,9 +272,6 @@ bool CImagePolarTransformProcessorComp::ProcessImageRegion(
 		
 	delete [] cosTable;
 	delete [] sinTable;
-
-	//iimg::CBitmap qbmp; qbmp.CopyFrom(*outputBitmapPtr);
-	//qbmp.GetQImageRef().save("c:\\temp-orig.bmp", "BMP");
 
 	return true;
 }
