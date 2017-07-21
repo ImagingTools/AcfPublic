@@ -4422,6 +4422,7 @@
     <includes id="_i_shape_factory_8h" name="IShapeFactory.h" local="no" imported="no">iview/IShapeFactory.h</includes>
     <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="no" imported="no">iview/CInteractiveShapeBase.h</includes>
     <includes id="_t_view_extender_comp_base_8h" name="TViewExtenderCompBase.h" local="no" imported="no">iqt2d/TViewExtenderCompBase.h</includes>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="no" imported="no">iprm/IEnableableParam.h</includes>
     <class kind="class">iqt2d::TShapeParamsGuiCompBase</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -39414,6 +39415,20 @@
       <anchor>af3dbbe63b0c2c99b4aea461ca79b1d29</anchor>
       <arglist>(const Elements &amp;elements, const SizesType &amp;sizes)</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>SizesType</type>
+      <name>m_sizes</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a30ac1c58c5455c62ef0066adb4b4b1d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Elements</type>
+      <name>m_elements</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>abd7578395033f04dc002b226bdfbe6a5</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imath::CVarVector</name>
@@ -46613,10 +46628,10 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>DrawBitmap</name>
+      <name>DrawPixmap</name>
       <anchorfile>classiview_1_1_c_image_shape.html</anchorfile>
-      <anchor>a75945e74309720116e9d600e7186a045</anchor>
-      <arglist>(QPainter &amp;painter, const iimg::IBitmap &amp;bitmap, const i2d::CRect &amp;bitmapArea, const i2d::CAffine2d &amp;destTransform) const </arglist>
+      <anchor>a2a45ddcb1d5a04b49405f93102fbe274</anchor>
+      <arglist>(QPainter &amp;painter, const QPixmap &amp;pixmap, const i2d::CRect &amp;bitmapArea, const i2d::CAffine2d &amp;destTransform) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CVector2d</type>
@@ -61168,6 +61183,20 @@
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
       <anchor>af3dbbe63b0c2c99b4aea461ca79b1d29</anchor>
       <arglist>(const Elements &amp;elements, const SizesType &amp;sizes)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>SizesType</type>
+      <name>m_sizes</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a30ac1c58c5455c62ef0066adb4b4b1d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Elements</type>
+      <name>m_elements</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>abd7578395033f04dc002b226bdfbe6a5</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

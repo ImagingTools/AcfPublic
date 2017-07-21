@@ -120,8 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CHoughSpace2d.h" />
+    <ClInclude Include="..\TGeneralHoughSpace.h" />
     <ClInclude Include="..\TIHoughSpace.h" />
     <ClInclude Include="..\TNeighbourBinCaller.h" />
+    <ClInclude Include="..\TSimpleSpaceResultConsumer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

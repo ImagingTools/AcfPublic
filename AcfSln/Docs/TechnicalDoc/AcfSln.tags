@@ -10,8 +10,16 @@
     <path>C:/Temp/AcfSln/Include/ialgo/</path>
     <filename>_c_hough_space2d_8h</filename>
     <includes id="_t_i_hough_space_8h" name="TIHoughSpace.h" local="no" imported="no">ialgo/TIHoughSpace.h</includes>
+    <includes id="_t_simple_space_result_consumer_8h" name="TSimpleSpaceResultConsumer.h" local="no" imported="no">ialgo/TSimpleSpaceResultConsumer.h</includes>
     <class kind="class">ialgo::CHoughSpace2d</class>
-    <class kind="class">ialgo::CHoughSpace2d::StdConsumer</class>
+    <namespace>ialgo</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TGeneralHoughSpace.h</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>_t_general_hough_space_8h</filename>
+    <includes id="_t_i_hough_space_8h" name="TIHoughSpace.h" local="no" imported="no">ialgo/TIHoughSpace.h</includes>
+    <class kind="class">ialgo::TGeneralHoughSpace</class>
     <namespace>ialgo</namespace>
   </compound>
   <compound kind="file">
@@ -27,6 +35,14 @@
     <path>C:/Temp/AcfSln/Include/ialgo/</path>
     <filename>_t_neighbour_bin_caller_8h</filename>
     <class kind="class">ialgo::TNeighbourBinCaller</class>
+    <namespace>ialgo</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TSimpleSpaceResultConsumer.h</name>
+    <path>C:/Temp/AcfSln/Include/ialgo/</path>
+    <filename>_t_simple_space_result_consumer_8h</filename>
+    <includes id="_t_i_hough_space_8h" name="TIHoughSpace.h" local="no" imported="no">ialgo/TIHoughSpace.h</includes>
+    <class kind="class">ialgo::TSimpleSpaceResultConsumer</class>
     <namespace>ialgo</namespace>
   </compound>
   <compound kind="file">
@@ -4217,15 +4233,16 @@
     <name>ialgo</name>
     <filename>namespaceialgo.html</filename>
     <class kind="class">ialgo::CHoughSpace2d</class>
+    <class kind="class">ialgo::TGeneralHoughSpace</class>
     <class kind="class">ialgo::TIHoughSpace</class>
     <class kind="class">ialgo::TNeighbourBinCaller</class>
+    <class kind="class">ialgo::TSimpleSpaceResultConsumer</class>
   </compound>
   <compound kind="class">
     <name>ialgo::CHoughSpace2d</name>
     <filename>classialgo_1_1_c_hough_space2d.html</filename>
     <base>iimg::CGeneralBitmap</base>
     <base virtualness="virtual">TIHoughSpace&lt; 2 &gt;</base>
-    <class kind="class">ialgo::CHoughSpace2d::StdConsumer</class>
     <member kind="typedef">
       <type>iimg::CGeneralBitmap</type>
       <name>BaseClass</name>
@@ -4234,10 +4251,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QMultiMap&lt; double, i2d::CVector2d &gt;</type>
-      <name>WeightToHoughPosMap</name>
+      <type>TSimpleSpaceResultConsumer&lt; 2 &gt;</type>
+      <name>StdConsumer</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a7de8828893b6cc05cd6885b6897feb6f</anchor>
+      <anchor>a3c6158b58c497109391619804a73de37</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -4258,8 +4275,8 @@
       <type>bool</type>
       <name>CreateHoughSpace</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a4de5213044aee3ec6245faa2a9f57534</anchor>
-      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX=false, bool isWrappedY=false, bool isFloatSpace=false)</arglist>
+      <anchor>ac6155ef8168e17b827924c360e5268dd</anchor>
+      <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX, bool isWrappedY, bool isFloatSpace)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -4274,6 +4291,13 @@
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
       <anchor>a56c0e50df193ac486fcb904b1e82a676</anchor>
       <arglist>(const CHoughSpace2d &amp;space, Operation operation)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::TIndex&lt; 2 &gt;</type>
+      <name>GetSpaceSize</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a0f8790bdaf262a5f9144af700bc8c75d</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4403,49 +4427,130 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>ialgo::CHoughSpace2d::StdConsumer</name>
-    <filename>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</filename>
+    <name>ialgo::TGeneralHoughSpace</name>
+    <filename>classialgo_1_1_t_general_hough_space.html</filename>
+    <templarg>Dimensions</templarg>
+    <templarg></templarg>
+    <base>istd::TArray</base>
+    <base virtualness="virtual">ialgo::TIHoughSpace</base>
+    <member kind="typedef">
+      <type>istd::TArray&lt; Element, Dimensions &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>aaabda169be9dcdf80b253e9355bbf16a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
-      <name>StdConsumer</name>
-      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>afb4f375e5e6ceb1a36bcd631cb54341c</anchor>
-      <arglist>(int maxPoints, int maxConsideredPoints, double minDistance, double minMaxRatio)</arglist>
+      <name>TGeneralHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a8a1148d585a0278e0e1658e9bbe9fd6d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TGeneralHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a6823c17bc579d5728bb2f6314b57e0f4</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>ApplyOperation</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a07e54ad98d4ac9834884a34622f0400e</anchor>
+      <arglist>(Operation operation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CombineWithSpace</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a682c3310cc65e212e01a5e923f0da67b</anchor>
+      <arglist>(const TGeneralHoughSpace &amp;space, Operation operation)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual QList&lt; int &gt;</type>
-      <name>GetSupportedNeghboursCount</name>
-      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>ab8e2636298e372e50a4778edf5d8d904</anchor>
+      <type>virtual istd::TIndex&lt; Dimensions &gt;</type>
+      <name>GetSpaceSize</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a5ad023fb09dbc09b89fa7fbca64b8880</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnProcessingBegin</name>
-      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>a95a3e945c45c1f280ca769476a9f0c91</anchor>
-      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space, const double &amp;minValue)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnProcessingEnd</name>
-      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>aafb0d3643f540647ddcd934cb559bac4</anchor>
-      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space)</arglist>
+      <type>virtual bool</type>
+      <name>CreateHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>ab7c13b6152b5a9d00617167aa6f2fd62</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;size, const Element &amp;initValue=0)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
-      <name>OnMaximumFound</name>
-      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>a10a7e937a43396afe0388875c7f6cbd1</anchor>
-      <arglist>(const TIHoughSpace&lt; 2, double &gt; &amp;space, const istd::TIndex&lt; 2 &gt; &amp;position, const double &amp;value, const double *neghboursPtr, int neghboursCount, double &amp;minValue)</arglist>
+      <name>IsDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>af0354c920571646d6033fa602dcd8d82</anchor>
+      <arglist>(int dimensionIndex) const </arglist>
     </member>
-    <member kind="variable">
-      <type>WeightToHoughPosMap</type>
-      <name>positions</name>
-      <anchorfile>classialgo_1_1_c_hough_space2d_1_1_std_consumer.html</anchorfile>
-      <anchor>a9206cf3e6d682e7ea71cd700951a55b1</anchor>
-      <arglist></arglist>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a60c901cae27f0079df613e3e5eff8ecd</anchor>
+      <arglist>(int dimensionIndex, bool state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>IncreaseValueAt</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a088b6d6a5ce1094f7ca9f1cb1869acd1</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, Element value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SmoothHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a78e7dd0a95322f7a4e8dab4fe6a02a76</anchor>
+      <arglist>(const istd::TIndex&lt; Dimensions &gt; &amp;iterations)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AnalyseHoughSpace</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a1d5ce0df86618e13cd6d2b15b137d9e9</anchor>
+      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ExtractToBitmap</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a40a98aeea4b57d00639605b79aece726</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetSpacePosition</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>aca7d4a45077977cb2653461ab1e3f46c</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position, imath::TVector&lt; Dimensions &gt; &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDistance</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a0c67f4a32f259d3891e2d6c559733b43</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetDistance2</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>ab972bf277371a4863061bbd7378a10d9</anchor>
+      <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SmoothSingleDimension</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>aaf6bebda3b086e5f814784dc9d0d66f6</anchor>
+      <arglist>(int dimensionIndex, int iterations)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -4455,6 +4560,13 @@
     <templarg>Element</templarg>
     <base virtualness="virtual">iser::ISerializable</base>
     <class kind="class">ialgo::TIHoughSpace::ResultsConsumer</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual istd::TIndex&lt; Dimensions &gt;</type>
+      <name>GetSpaceSize</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>ae9e1ed04115de74cbfd7e8034aaf4d77</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateHoughSpace</name>
@@ -4583,6 +4695,70 @@
       <anchorfile>classialgo_1_1_t_neighbour_bin_caller.html</anchorfile>
       <anchor>a7b0e77874909da1edccb6cd9360579f0</anchor>
       <arglist>(Visitor &amp;visitor)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ialgo::TSimpleSpaceResultConsumer</name>
+    <filename>classialgo_1_1_t_simple_space_result_consumer.html</filename>
+    <templarg>Dimensions</templarg>
+    <templarg></templarg>
+    <base>iimg::CGeneralBitmap</base>
+    <base virtualness="virtual">ialgo::TIHoughSpace::ResultsConsumer</base>
+    <member kind="typedef">
+      <type>imath::TVector&lt; Dimensions &gt;</type>
+      <name>PosVector</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>aa4c7ca84c411e5eb43567217e842f365</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QMultiMap&lt; double, PosVector &gt;</type>
+      <name>PosMap</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>a9f0804ca1513182061abda4259251519</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSimpleSpaceResultConsumer</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>a7ea56b9f43896acb2f6e6947c843ee42</anchor>
+      <arglist>(int maxPoints, int maxConsideredPoints, double minDistance, double minMaxRatio)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QList&lt; int &gt;</type>
+      <name>GetSupportedNeghboursCount</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>a2a3faccfc897f03b0df28fc9badcea5e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnProcessingBegin</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>a2afac2ba9669c337ccba72d20197f697</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const double &amp;minValue)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnProcessingEnd</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>afa95f349599c1fd6f2ca00e87b009d3f</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMaximumFound</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>a063a35c754de249b11c20d491265cd20</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const istd::TIndex&lt; 2 &gt; &amp;position, const double &amp;value, const double *neghboursPtr, int neghboursCount, double &amp;minValue)</arglist>
+    </member>
+    <member kind="variable">
+      <type>PosMap</type>
+      <name>positions</name>
+      <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
+      <anchor>ad6a70b466649136203fc38157eba2f8e</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -14200,6 +14376,7 @@
     <filename>classiedge_1_1_c_edges_reductor_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</type>
       <name>BaseClass</name>
@@ -14271,25 +14448,11 @@
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>a2bf913706ffc0e2ef2cc24b96630aa36</anchor>
+      <anchor>ad9b3b9ac8fb19600979900416a512065</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>a4debc7d7e0760a5b19e6f4a1d7d18ce0</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
-      <anchor>ac6f96ee3ad4e429b29fe46e77f0c52b8</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -14374,6 +14537,48 @@
       <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
       <anchor>a4432385e9d790cdb5d37b23b8a9ec1c3</anchor>
       <arglist>(const CEdgeLine &amp;edgeLine, double positionTolerance, double weightTolerance, int firstIndex, int lastIndex, NodesToRemove &amp;nodesToRemove, int &amp;firstInsideIndex, int &amp;lastInsideIndex) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>ad8d0d4806cba66102c71344fe7f165d0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a3339b21a2e26844c8f6177db6737c708</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a07908304d70b1435701b89cdfbc9dfea</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a132d5a1aadc791f1e2056342f09ca8f9</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>a7a53088187b15278c53f53599ee0dbed</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiedge_1_1_c_edges_reductor_comp.html</anchorfile>
+      <anchor>acbd9c70c13e9ed2a96fb7b7a1ed0071f</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -14477,7 +14682,8 @@
     <name>iedge::CFastEdgesExtractorComp</name>
     <filename>classiedge_1_1_c_fast_edges_extractor_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</base>
-    <base>imeas::INumericConstraints</base>
+    <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</type>
       <name>BaseClass</name>
@@ -14528,25 +14734,11 @@
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
-      <anchor>a67e9b4d72546275ba3fa3b9d558e487d</anchor>
+      <anchor>ad349e64d4fe2de0e65599d4c68bd66ee</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
-      <anchor>a2d1e8ca5abbfea3645389d8f2f24408f</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
-      <anchor>ae775ef2dad9d63f173121341e7378851</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -14617,6 +14809,48 @@
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a6572887e29d4903ddcd60ec6e444c6c7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>af4ea1b31b13484eb0f126a89dc0d7adc</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a9f47763a0991f7eea6590c1f93153f5f</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>af1227197042652ed0e163e28090a25d4</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>a31b8a122d04904cda2fd9b5070d80910</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiedge_1_1_c_fast_edges_extractor_comp.html</anchorfile>
+      <anchor>ad25ea67333da7eef9585499df1c3e1af</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -18719,6 +18953,7 @@
     <name>iipr::CCheckboardCalibSupplierComp::ChessboardParamsContraints</name>
     <filename>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</filename>
     <base>imeas::INumericConstraints</base>
+    <base protection="protected">iprm::IOptionsList</base>
     <member kind="function">
       <type></type>
       <name>ChessboardParamsContraints</name>
@@ -18727,31 +18962,59 @@
       <arglist>(const CCheckboardCalibSupplierComp *supplierPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
-      <anchor>adba5561c16542e32a346ad51fba03b99</anchor>
+      <anchor>a71a4a9b277a8516d148e361143feca9d</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
-      <anchor>a51037c5bf9d75549357842840764069a</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
-      <anchor>ad7e4849eaa37cfad8a0e6b797735d0f0</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetNumericValueUnitInfo</name>
       <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
       <anchor>a9f3c915be65241426d53e3716b3879d3</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>acc12e80b26608810fd0de7c7fdb3b703</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>ae3d09f5fe615caae095863060cee9c16</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>adb7f0971d390dbeadffb6ed1875b9d97</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>a4367ea383ad7a191ddaaa7944f79ebdd</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>a127386518b08c0ab3791fab2dcb280cf</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</anchorfile>
+      <anchor>a7ba7f9279211302df5cbe96f3098f49e</anchor>
       <arglist>(int index) const </arglist>
     </member>
   </compound>
@@ -25414,13 +25677,6 @@
       <arglist>(int defaultChannelsCount, int defaultSamplesCount, WeightMode mode=WeightMode::WM_NONE, int sequenceFlags=0)</arglist>
     </member>
     <member kind="function">
-      <type>bool</type>
-      <name>InsertValueInfo</name>
-      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
-      <anchor>ade1ee5b2633f3c5b83cf0b4dea40ead3</anchor>
-      <arglist>(const QString &amp;name, const QString &amp;description, const imath::CGeneralUnitInfo &amp;unitInfo, int index=-1)</arglist>
-    </member>
-    <member kind="function">
       <type>void</type>
       <name>SetSequenceInfoFlags</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
@@ -25447,6 +25703,13 @@
       <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
       <anchor>ac83e27f80cd8af16be86c1eccde02748</anchor>
       <arglist>(WeightMode mode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertValueInfo</name>
+      <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
+      <anchor>a9cbdd303698728777ad79a9708ebac51</anchor>
+      <arglist>(const QString &amp;name, const QString &amp;description, const QByteArray &amp;valueId, const imath::CGeneralUnitInfo &amp;unitInfo, int index=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -25492,13 +25755,6 @@
     </member>
     <member kind="function">
       <type>void</type>
-      <name>InsertValueInfo</name>
-      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
-      <anchor>a5395ae0f25138eb6434a2b5a7e55746b</anchor>
-      <arglist>(const QString &amp;name, const QString &amp;description, const imath::CGeneralUnitInfo &amp;unitInfo, int index=-1)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
       <name>RemoveValueInfo</name>
       <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
       <anchor>afa750f34567830c3050dbbbdec217bd4</anchor>
@@ -25512,25 +25768,11 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
-      <anchor>ab2e74bff3381a7f4822d9bdc369f3669</anchor>
+      <anchor>a4732d12730295f4f3a99fedc298a00d4</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
-      <anchor>a6e5c8325e455ec87f1bba605de72109e</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
-      <anchor>abedaa4e56aef6b97f4b6d67351da4fe4</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -25539,11 +25781,61 @@
       <anchor>a84ebf9ba5f950a43b303b970a4b1e352</anchor>
       <arglist>(int index) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>a076b9103c9bb125a751b3cac3a6872e1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>afe7f0de7f5c1f05d1556542f313a3366</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>a7dd93ca1efce543f512bb809c78d6b34</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>afb355b7690deaa26ab702345c492ce67</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>a58313cd823e966dd2e492a99f3b01d24</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>abfdaeba649b1a21e0170e00473a3d8a3</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imeas::CGeneralNumericConstraints</name>
     <filename>classimeas_1_1_c_general_numeric_constraints.html</filename>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertValueInfo</name>
+      <anchorfile>classimeas_1_1_c_general_numeric_constraints.html</anchorfile>
+      <anchor>afc65aa2de8f0470053263f9473f338a1</anchor>
+      <arglist>(const QString &amp;name, const QString &amp;description, const QByteArray &amp;valueId, const imath::CGeneralUnitInfo &amp;unitInfo, int index=-1)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imeas::CGeneralNumericValue</name>
@@ -25829,25 +26121,11 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
-      <anchor>ad3e26bcf3fc2d11eba62c976010d2954</anchor>
+      <anchor>afd13f4bfc21a96e35fd183679052e922</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
-      <anchor>af0e5f73348f7929cee35d9c515b6099c</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_linear_adjust_params_comp.html</anchorfile>
-      <anchor>a1583ed60ba8d7af3b457f96c4d36d7eb</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -25871,6 +26149,7 @@
     <base virtualness="virtual">imeas::INumericConstraints</base>
     <base virtualness="virtual">imath::IUnitInfo</base>
     <base protection="protected">imath::CDoubleManip</base>
+    <base protection="protected">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -25879,25 +26158,11 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>a46ea8f969fb991dab11f48747eb64dea</anchor>
+      <anchor>a22b2af5ec5c0722d8e0bf313ba095465</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>a807ba9208ec18a8c912d7ed8fedd8788</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
-      <anchor>a249eb0edf8aa723a4003459b3ce1abc4</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -25947,6 +26212,48 @@
       <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
       <anchor>a1fc88f197fa952637f4100aff8476be4</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a0e6b3cd377583cc3dead0bbbf7392328</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a611b14ce979eea69ef9e1e52e8bf95b2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a87ed5c4d5c5d179ab06242098b080266</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>a32fb30d76e116ef9fc5279800c8fbd68</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>adb571b42463bf80c2274c6e40c74e1f4</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classimeas_1_1_c_numeric_constraints_comp.html</anchorfile>
+      <anchor>aac193db091c437323091128b2d82c702</anchor>
+      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -26205,6 +26512,7 @@
     <name>imeas::CSamplesInfo</name>
     <filename>classimeas_1_1_c_samples_info.html</filename>
     <base virtualness="virtual">imeas::IDataSequenceInfo</base>
+    <base protection="protected">iprm::IOptionsList</base>
     <member kind="function">
       <type></type>
       <name>CSamplesInfo</name>
@@ -26255,25 +26563,11 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
-      <anchor>a7fec7cb6ccff2c30ad51021ce863a701</anchor>
+      <anchor>abb48674afd81c7505bf3c9ab42e07fc7</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
-      <anchor>af4450d6c8cfe5adb5611e41786aa98d1</anchor>
-      <arglist>(int index) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
-      <anchor>a9926b7754a2b0433f1d05ac7bfaea4d8</anchor>
-      <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
@@ -26288,6 +26582,48 @@
       <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
       <anchor>a290d85c76a02ae9783ccbfcffba647b2</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsFlags</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a48b4a6b790a9e2e7f38d133b9c3cbaae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetOptionsCount</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>af4e8bb410e2d77e036e16064cd702385</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionName</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a86011fb56b29a548686b7ab2deeba881</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOptionDescription</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>abfb4e5eb275ce3facf954f90d70e4a72</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetOptionId</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>aa5c6fbd061813e7da924797725a8abfe</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOptionEnabled</name>
+      <anchorfile>classimeas_1_1_c_samples_info.html</anchorfile>
+      <anchor>a77f8dd8734bcfcdfa676526c18e54ff4</anchor>
+      <arglist>(int index) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26589,25 +26925,11 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetNumericValuesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetValueListInfo</name>
       <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>afb5236f4459c18f02f9e62df438e5eee</anchor>
+      <anchor>ac99560775233a800dc4bfdb8829262dd</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetNumericValueName</name>
-      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>adbde228cdec587b904b887db335fbb5d</anchor>
-      <arglist>(int index) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual QString</type>
-      <name>GetNumericValueDescription</name>
-      <anchorfile>classimeas_1_1_i_numeric_constraints.html</anchorfile>
-      <anchor>a04e085fa7191e9ba6b778c69c2f6b012</anchor>
-      <arglist>(int index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual const imath::IUnitInfo *</type>
@@ -34229,8 +34551,10 @@
     <path>C:/Temp/AcfSln/Include/ialgo/</path>
     <filename>dir_f6f461692b238894d85af1851e9e98b0.html</filename>
     <file>CHoughSpace2d.h</file>
+    <file>TGeneralHoughSpace.h</file>
     <file>TIHoughSpace.h</file>
     <file>TNeighbourBinCaller.h</file>
+    <file>TSimpleSpaceResultConsumer.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iauth</name>

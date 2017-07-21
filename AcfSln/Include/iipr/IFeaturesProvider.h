@@ -20,11 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef iipr_FeaturesProvider_included
-#define iipr_FeaturesProvider_included
+#ifndef iipr_IFeaturesContainer_included
+#define iipr_IFeaturesContainer_included
 
 
-#include <imeas/INumericValue.h>
+#include <iipr/IFeaturesConsumer.h>
 
 
 namespace iipr
@@ -51,5 +51,5 @@ public:
 } // namespace iipr
 
 
-#endif // !iipr_FeaturesProvider_included
+#endif // !iipr_IFeaturesContainer_included
 

@@ -126,7 +126,7 @@ bool CCheckboardCalibSupplierComp::CalculateCalibration(const iimg::IBitmap& ima
 	double vanDistScale = 40000;
 
 	ialgo::CHoughSpace2d vanishingSpace;
-	vanishingSpace.CreateHoughSpace(vanSpaceSize, true, false);
+	vanishingSpace.CreateHoughSpace(vanSpaceSize, true, false, false);
 
 	i2d::CVector2d imageCenter = image.GetCenter();
 
@@ -186,7 +186,7 @@ bool CCheckboardCalibSupplierComp::CalculateCalibration(const iimg::IBitmap& ima
 	QSet<i2d::CLine2d> vanLines[2];
 
 	int vanishingPointIndex = 0;
-	for (		ialgo::CHoughSpace2d::WeightToHoughPosMap::ConstIterator foundVanIter = foundVanResults.positions.constBegin();
+	for (		ialgo::CHoughSpace2d::StdConsumer::PosMap::ConstIterator foundVanIter = foundVanResults.positions.constBegin();
 				foundVanIter != foundVanResults.positions.constEnd();
 				++foundVanIter, ++vanishingPointIndex){
 		const i2d::CVector2d& foundVanSpacePos = foundVanIter.value();
@@ -436,31 +436,9 @@ CCheckboardCalibSupplierComp::ChessboardParamsContraints::ChessboardParamsContra
 
 // reimplemented (imeas::INumericConstraints)
 
-int CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetNumericValuesCount() const
+const iprm::IOptionsList& CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetValueListInfo() const
 {
-	return 2;
-}
-
-
-QString CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetNumericValueName(int index) const
-{
-	if (index != 0){
-		return QObject::tr("Cell Size");
-	}
-	else{
-		return QObject::tr("Grid Size");
-	}
-}
-
-
-QString CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetNumericValueDescription(int index) const
-{
-	if (index != 0){
-		return QObject::tr("Size of single cell");
-	}
-	else{
-		return QObject::tr("Number of grid cells in each checkboard row and column");
-	}
+	return *this;
 }
 
 
@@ -472,6 +450,63 @@ const imath::IUnitInfo* CCheckboardCalibSupplierComp::ChessboardParamsContraints
 	else{
 		return &s_gridSizeUnit;
 	}
+}
+
+
+// protected methods of embedded class ChessboardParamsContraints
+
+// reimplemented (iprm::IOptionsList)
+
+int CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetOptionsFlags() const
+{
+	return SCF_SUPPORT_UNIQUE_ID;
+}
+
+
+int CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetOptionsCount() const
+{
+	return 2;
+}
+
+
+QString CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetOptionName(int index) const
+{
+	if (index != 0){
+		return QObject::tr("Cell Size");
+	}
+	else{
+		return QObject::tr("Grid Size");
+	}
+}
+
+
+QString CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetOptionDescription(int index) const
+{
+	if (index != 0){
+		return QObject::tr("Size of single cell");
+	}
+	else{
+		return QObject::tr("Number of grid cells in each checkboard row and column");
+	}
+}
+
+
+QByteArray CCheckboardCalibSupplierComp::ChessboardParamsContraints::GetOptionId(int index) const
+{
+	if (index != 0){
+		return "CellSize";
+	}
+	else{
+		return "GridSize";
+	}
+
+	return QByteArray();
+}
+
+
+bool CCheckboardCalibSupplierComp::ChessboardParamsContraints::IsOptionEnabled(int /*index*/) const
+{
+	return true;
 }
 
 

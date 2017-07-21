@@ -576,8 +576,8 @@ void CRectImageSmoothProcessorComp::OnComponentCreated()
 		{
 			imath::CGeneralUnitInfo unitInfo(imath::IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0, 1), &percentManip);
 
-			m_filterConstraints.InsertValueInfo(QObject::tr("Filter width"), QObject::tr("Horizontal bluring filter length"), unitInfo);
-			m_filterConstraints.InsertValueInfo(QObject::tr("Filter height"), QObject::tr("Vertical bluring filter length"), unitInfo);
+			m_filterConstraints.InsertValueInfo(QObject::tr("Filter width"), QObject::tr("Horizontal bluring filter length"), "FilterWidth", unitInfo);
+			m_filterConstraints.InsertValueInfo(QObject::tr("Filter height"), QObject::tr("Vertical bluring filter length"), "FilterHeight", unitInfo);
 		}
 		break;
 
@@ -585,7 +585,7 @@ void CRectImageSmoothProcessorComp::OnComponentCreated()
 		{
 			imath::CGeneralUnitInfo unitInfo(imath::IUnitInfo::UT_RELATIVE, "%", 100, istd::CRange(0, 1), &percentManip);
 
-			m_filterConstraints.InsertValueInfo(QObject::tr("Filter"), QObject::tr("Bluring filter length"), unitInfo);
+			m_filterConstraints.InsertValueInfo(QObject::tr("Filter"), QObject::tr("Bluring filter length"), "Filter", unitInfo);
 		}
 		break;
 
@@ -593,8 +593,8 @@ void CRectImageSmoothProcessorComp::OnComponentCreated()
 		{
 			imath::CGeneralUnitInfo unitInfo(imath::IUnitInfo::UT_TECHNICAL, "px", 1, istd::CRange(1, 100), &pixelManip);
 
-			m_filterConstraints.InsertValueInfo(QObject::tr("Filter width"), QObject::tr("Horizontal bluring filter length"), unitInfo);
-			m_filterConstraints.InsertValueInfo(QObject::tr("Filter height"), QObject::tr("Vertical bluring filter length"), unitInfo);
+			m_filterConstraints.InsertValueInfo(QObject::tr("Filter width"), QObject::tr("Horizontal bluring filter length"), "FilterWidth", unitInfo);
+			m_filterConstraints.InsertValueInfo(QObject::tr("Filter height"), QObject::tr("Vertical bluring filter length"), "FilterHeight", unitInfo);
 		}
 		break;
 	}

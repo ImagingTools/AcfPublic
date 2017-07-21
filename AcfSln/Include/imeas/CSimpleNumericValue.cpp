@@ -84,7 +84,9 @@ bool CSimpleNumericValue::SetValues(const imath::CVarVector& values)
 
 		const INumericConstraints* constraintsPtr = GetNumericConstraints();
 		if (constraintsPtr != NULL){
-			m_values.SetElementsCount(constraintsPtr->GetNumericValuesCount(), 0);
+			const iprm::IOptionsList& valueListInfo = constraintsPtr->GetValueListInfo();
+
+			m_values.SetElementsCount(valueListInfo.GetOptionsCount(), 0);
 		}
 	}
 
@@ -115,7 +117,9 @@ bool CSimpleNumericValue::Serialize(iser::IArchive& archive)
 
 		const INumericConstraints* constraintsPtr = GetNumericConstraints();
 		if (constraintsPtr != NULL){
-			m_values.SetElementsCount(constraintsPtr->GetNumericValuesCount(), 0);
+			const iprm::IOptionsList& valueListInfo = constraintsPtr->GetValueListInfo();
+
+			m_values.SetElementsCount(valueListInfo.GetOptionsCount(), 0);
 		}
 	}
 
@@ -133,7 +137,9 @@ bool CSimpleNumericValue::CopyFrom(const IChangeable& object, CompatibilityMode 
 
 		const INumericConstraints* constraintsPtr = GetNumericConstraints();
 		if (constraintsPtr != NULL){
-			int expectedElemetsCount = constraintsPtr->GetNumericValuesCount();
+			const iprm::IOptionsList& valueListInfo = constraintsPtr->GetValueListInfo();
+
+			int expectedElemetsCount = valueListInfo.GetOptionsCount();
 			if ((mode == CM_STRICT) && (values.GetElementsCount() != expectedElemetsCount)){
 				return false;
 			}
