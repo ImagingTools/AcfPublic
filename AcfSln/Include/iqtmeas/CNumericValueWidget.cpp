@@ -23,6 +23,9 @@
 #include <iqtmeas/CNumericValueWidget.h>
 
 
+// STL includes
+#include <limits>
+
 // ACF includes
 #include <iqt/CSignalBlocker.h>
 
@@ -38,11 +41,14 @@ CNumericValueWidget::CNumericValueWidget(
 			QWidget* parentPtr,
 			int sliderFlags,
 			int inputPolicy,
-			int maxPrecision)
+			int maxPrecision,
+			bool isPostValidationEnabled)
 :	QWidget(parentPtr),
 	m_unitMultiplicationFactor(1),
 	m_sliderScaleFactor(100),
-	m_maxEditPrecision(maxPrecision)
+	m_maxEditPrecision(maxPrecision),
+	m_isPostValidationEnabled(isPostValidationEnabled),
+	m_valueRange(0, 100)
 {
 	m_ignoreEvents = false;
 
@@ -90,7 +96,6 @@ void CNumericValueWidget::SetUnitInfo(const QString& name, const QString& descri
 	QString unitName;
 	m_unitMultiplicationFactor = 1;
 	int precision = 2;
-	istd::CRange valueRange(0, 100);
 	
 	if (unitInfoPtr != NULL){
 		unitName = unitInfoPtr->GetUnitName();
@@ -99,7 +104,7 @@ void CNumericValueWidget::SetUnitInfo(const QString& name, const QString& descri
 
 		istd::CRange range = unitInfoPtr->GetValueRange();
 		if (range.IsValid()){
-			valueRange = range;
+			m_valueRange = range;
 		}
 	}
 
@@ -110,17 +115,29 @@ void CNumericValueWidget::SetUnitInfo(const QString& name, const QString& descri
 	int displayPrecision = qMin(m_maxEditPrecision, qMax(0, precision - multiplicationPrecision));
 	m_sliderScaleFactor = qPow(10.0, double(displayPrecision + multiplicationPrecision));
 
-	double minValue = valueRange.GetMinValue() * m_unitMultiplicationFactor;
-	double maxValue = valueRange.GetMaxValue() * m_unitMultiplicationFactor;
+	double minValue = m_valueRange.GetMinValue() * m_unitMultiplicationFactor;
+	double maxValue = m_valueRange.GetMaxValue() * m_unitMultiplicationFactor;
 
 	ValueSB->setDecimals(displayPrecision);
-	ValueSB->setRange(minValue, maxValue);
+
+	if (!m_isPostValidationEnabled){
+		ValueSB->setRange(minValue, maxValue);
+	}
+	else{
+		double initialRangeMin = minValue >= 0 ? 0 : -std::numeric_limits<double>::max();
+		double initialRangeMax = maxValue < 0 ? 0 : std::numeric_limits<double>::max();
+
+		ValueSB->setRange(initialRangeMin, initialRangeMax);
+	}
+
 	ValueSB->setSingleStep(displayPrecision > 0 ? qPow(0.1, displayPrecision) : 1);
-	ValueSlider->setRange(valueRange.GetMinValue() * m_sliderScaleFactor, valueRange.GetMaxValue() * m_sliderScaleFactor);
+	ValueSB->setToolTip(tr("Range: %1 - %2").arg(minValue).arg(maxValue));
+
+	ValueSlider->setRange(m_valueRange.GetMinValue() * m_sliderScaleFactor, m_valueRange.GetMaxValue() * m_sliderScaleFactor);
 	ValueSlider->setPageStep(10 * ValueSlider->singleStep());
+
 	MinButton->setText(QString::number(minValue));
 	MaxButton->setText(QString::number(maxValue));
-	ValueSB->setToolTip(tr("Range: %1 - %2").arg(minValue).arg(maxValue));
 }
 
 
@@ -143,12 +160,50 @@ void CNumericValueWidget::SetValue(double value)
 
 void CNumericValueWidget::on_ValueSB_valueChanged(double value)
 {
+	if (m_isPostValidationEnabled){
+		return;
+	}
+
 	if (m_ignoreEvents){
 		return;
 	}
 
 	m_ignoreEvents = true;
-	ValueSlider->setValue(value * m_sliderScaleFactor / m_unitMultiplicationFactor );
+	ValueSlider->setValue(value * m_sliderScaleFactor / m_unitMultiplicationFactor);
+	m_ignoreEvents = false;
+
+	Q_EMIT ValueChanged();
+}
+
+
+void CNumericValueWidget::on_ValueSB_editingFinished()
+{
+	if (!m_isPostValidationEnabled){
+		return;
+	}
+
+	if (m_ignoreEvents){
+		return;
+	}
+
+	double value = ValueSB->value();
+
+	if (!m_valueRange.Contains(value)){
+		value = m_valueRange.GetNearestInside(value);
+
+		// Force slider update:
+		m_isPostValidationEnabled = false;
+
+		ValueSB->setValue(value);
+
+		m_isPostValidationEnabled = true;
+
+		return;
+	}
+
+	m_ignoreEvents = true;
+
+	ValueSlider->setValue(value * m_sliderScaleFactor / m_unitMultiplicationFactor);
 	m_ignoreEvents = false;
 
 	Q_EMIT ValueChanged();
@@ -189,17 +244,16 @@ void CNumericValueWidget::on_ValueSlider_sliderReleased()
 
 void CNumericValueWidget::on_MinButton_clicked()
 {
-	ValueSB->setValue(ValueSB->minimum());
-	ValueSlider->setValue(ValueSlider->minimum());
+	ValueSB->setValue(m_valueRange.GetMinValue());
+	ValueSlider->setValue(m_valueRange.GetMinValue());
 }
 
 
 void CNumericValueWidget::on_MaxButton_clicked()
 {
-	ValueSB->setValue(ValueSB->maximum());
-	ValueSlider->setValue(ValueSlider->maximum());
+	ValueSB->setValue(m_valueRange.GetMaxValue());
+	ValueSlider->setValue(m_valueRange.GetMaxValue());
 }
-
 
 
 } // namespace iqtmeas

@@ -31971,8 +31971,8 @@
       <type></type>
       <name>CNumericValueWidget</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
-      <anchor>a4bf6bbc6b688ccff27d0a7151e9511af</anchor>
-      <arglist>(QWidget *parentPtr=NULL, int sliderFlags=SF_SLIDER_BUTTONS, int inputPolicy=0, int maxPrecision=2)</arglist>
+      <anchor>ab2994c78208975d9079ee01675967d72</anchor>
+      <arglist>(QWidget *parentPtr=NULL, int sliderFlags=SF_SLIDER_BUTTONS, int inputPolicy=0, int maxPrecision=2, bool isPostValidationEnabled=false)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -32001,6 +32001,13 @@
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>a1b7b26eed28a80b173cab9193807d4c8</anchor>
       <arglist>(double value)</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ValueSB_editingFinished</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a5eb83e8cc16e117955c62b0950f2877d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
