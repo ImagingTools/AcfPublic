@@ -4338,8 +4338,8 @@
       <type>virtual bool</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a8977ab23ff84a67d7db5cbf6b7130401</anchor>
-      <arglist>(const double &amp;minValue, ResultsConsumer &amp;resultProcessor)</arglist>
+      <anchor>adfc382c37c9be01bd7d2198499851888</anchor>
+      <arglist>(const double &amp;minValue, ResultsConsumer &amp;resultProcessor) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4357,16 +4357,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetDistance</name>
+      <name>GetSpaceDistance</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a0f68b61b57baf34388ffbae11194f3ea</anchor>
+      <anchor>a3c1a2f4da5a6152f6369c126ae6000d1</anchor>
       <arglist>(const imath::TVector&lt; 2 &gt; &amp;position1, const imath::TVector&lt; 2 &gt; &amp;position2) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetDistance2</name>
+      <name>GetSpaceDistance2</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>ad03ed1d17c06b08012c674140cf64d9c</anchor>
+      <anchor>ae2fdd321c2f49315ab96ba98f6ced08c</anchor>
       <arglist>(const imath::TVector&lt; 2 &gt; &amp;position1, const imath::TVector&lt; 2 &gt; &amp;position2) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4413,16 +4413,16 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
-      <name>GetDistance</name>
+      <name>GetSpaceDistance</name>
       <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aa9cdb4288f18789b14567b0f22ffa1cd</anchor>
+      <anchor>a4f749725627e61821f2fc225de28b33c</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
-      <name>GetDistance2</name>
+      <name>GetSpaceDistance2</name>
       <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a27491e21cb64029cdfddeec7bd3892d0</anchor>
+      <anchor>aedf4df77dd8391a15c0c39c1e0c44f12</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
     </member>
   </compound>
@@ -4514,8 +4514,8 @@
       <type>virtual bool</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
-      <anchor>a1d5ce0df86618e13cd6d2b15b137d9e9</anchor>
-      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor)</arglist>
+      <anchor>aaf9480ad17f98ec5577b235dc72cb184</anchor>
+      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -4533,16 +4533,16 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetDistance</name>
+      <name>GetSpaceDistance</name>
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
-      <anchor>a0c67f4a32f259d3891e2d6c559733b43</anchor>
+      <anchor>a5b1d0197ca84f7794c226871b73a6cd1</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetDistance2</name>
+      <name>GetSpaceDistance2</name>
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
-      <anchor>ab972bf277371a4863061bbd7378a10d9</anchor>
+      <anchor>ac3504a9b85d5eecd2897cada36d8a10f</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const </arglist>
     </member>
     <member kind="function" protection="protected">
@@ -4606,8 +4606,8 @@
       <type>virtual bool</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a6b000cb1e5a2715392875ea626b5bd5e</anchor>
-      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor)=0</arglist>
+      <anchor>a8005bc9ae9be944e2d6495b7c8a8b1f1</anchor>
+      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -4625,16 +4625,16 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
-      <name>GetDistance</name>
+      <name>GetSpaceDistance</name>
       <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>aa9cdb4288f18789b14567b0f22ffa1cd</anchor>
+      <anchor>a4f749725627e61821f2fc225de28b33c</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
-      <name>GetDistance2</name>
+      <name>GetSpaceDistance2</name>
       <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>a27491e21cb64029cdfddeec7bd3892d0</anchor>
+      <anchor>aedf4df77dd8391a15c0c39c1e0c44f12</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const =0</arglist>
     </member>
   </compound>
