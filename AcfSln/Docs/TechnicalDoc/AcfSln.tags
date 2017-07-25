@@ -4545,6 +4545,13 @@
       <anchor>ac3504a9b85d5eecd2897cada36d8a10f</anchor>
       <arglist>(const imath::TVector&lt; Dimensions &gt; &amp;position1, const imath::TVector&lt; Dimensions &gt; &amp;position2) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>adf653c2f7332b1b59478301d33b3c131</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>SmoothSingleDimension</name>
