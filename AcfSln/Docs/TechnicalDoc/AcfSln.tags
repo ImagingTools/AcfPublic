@@ -4743,8 +4743,8 @@
       <type>virtual void</type>
       <name>OnProcessingBegin</name>
       <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
-      <anchor>a2afac2ba9669c337ccba72d20197f697</anchor>
-      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const double &amp;minValue)</arglist>
+      <anchor>a635c1adf15d81dd4cd7bda2c706f3925</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const Element &amp;minValue)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -4757,8 +4757,8 @@
       <type>virtual bool</type>
       <name>OnMaximumFound</name>
       <anchorfile>classialgo_1_1_t_simple_space_result_consumer.html</anchorfile>
-      <anchor>a063a35c754de249b11c20d491265cd20</anchor>
-      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const istd::TIndex&lt; 2 &gt; &amp;position, const double &amp;value, const double *neghboursPtr, int neghboursCount, double &amp;minValue)</arglist>
+      <anchor>a58f4dcbc10186eed1702c0f7da0dc8c2</anchor>
+      <arglist>(const TIHoughSpace&lt; Dimensions, Element &gt; &amp;space, const istd::TIndex&lt; Dimensions &gt; &amp;position, const Element &amp;value, const Element *neghboursPtr, int neghboursCount, Element &amp;minValue)</arglist>
     </member>
     <member kind="variable">
       <type>PosMap</type>
