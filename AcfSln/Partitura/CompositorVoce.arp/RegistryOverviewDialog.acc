@@ -16,19 +16,19 @@
                     <AttributeInfo Id="DialogSize" Type="Real" ExportId="">
                         <Data IsEnabled="true" Value="0.5"/>
                     </AttributeInfo>
-                    <AttributeInfo Id="DialogTitle" Type="String" ExportId="">
+                    <AttributeInfo Id="DialogTitle" Type="Text" ExportId="">
                         <Data IsEnabled="true" Value="Component Topology"/>
                     </AttributeInfo>
                     <AttributeInfo Id="Gui" Type="Reference" ExportId="">
                         <Data IsEnabled="true" Value="RegistryTreeView"/>
                     </AttributeInfo>
-                    <AttributeInfo Id="MenuDescription" Type="String" ExportId="">
+                    <AttributeInfo Id="MenuDescription" Type="Text" ExportId="">
                         <Data IsEnabled="true" Value="Shows component topology of the currently opened registry"/>
                     </AttributeInfo>
-                    <AttributeInfo Id="MenuName" Type="String" ExportId="">
+                    <AttributeInfo Id="MenuName" Type="Text" ExportId="">
                         <Data IsEnabled="true" Value="Show Registry Overview..."/>
                     </AttributeInfo>
-                    <AttributeInfo Id="RootMenu" Type="String" ExportId="">
+                    <AttributeInfo Id="RootMenu" Type="Text" ExportId="">
                         <Data IsEnabled="true" Value="&amp;Tools"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
