@@ -4468,6 +4468,20 @@
       <anchor>a682c3310cc65e212e01a5e923f0da67b</anchor>
       <arglist>(const TGeneralHoughSpace &amp;space, Operation operation)</arglist>
     </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetDistScalingFactor</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a90aaefa87620982488cdaa1c3fc66777</anchor>
+      <arglist>(int dimensionIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDistScalingFactor</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a2f26e611d33533525244d1e48a1e103a</anchor>
+      <arglist>(int dimensionIndex, double factor)</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::TIndex&lt; Dimensions &gt;</type>
       <name>GetSpaceSize</name>

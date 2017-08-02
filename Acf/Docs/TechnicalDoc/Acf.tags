@@ -12900,6 +12900,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>adf2fa32f33a6ef0d5d244328a6b84948</anchor>
+      <arglist>(const double &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>Reset</name>
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>af7c4d45b04c2f9196272cf0ccb0afab1</anchor>
@@ -14495,6 +14502,13 @@
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>aefb4e0720e2623b16b5be4aa5cb2a249</anchor>
       <arglist>(int i, const double &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>adf2fa32f33a6ef0d5d244328a6b84948</anchor>
+      <arglist>(const double &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -19314,6 +19328,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>adf2fa32f33a6ef0d5d244328a6b84948</anchor>
+      <arglist>(const double &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>Reset</name>
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>af7c4d45b04c2f9196272cf0ccb0afab1</anchor>
@@ -21633,6 +21654,13 @@
       <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
       <anchor>ab1686a789730cdedf84d9eaafdd46671</anchor>
       <arglist>(int index, double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classimath_1_1_c_var_vector.html</anchorfile>
+      <anchor>adc2bd7e0ee1deaf708fee21f2f596504</anchor>
+      <arglist>(double value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -38347,6 +38375,13 @@
     </member>
     <member kind="function">
       <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>adf2fa32f33a6ef0d5d244328a6b84948</anchor>
+      <arglist>(const double &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
       <name>Reset</name>
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>af7c4d45b04c2f9196272cf0ccb0afab1</anchor>
@@ -41080,6 +41115,13 @@
       <anchorfile>classimath_1_1_t_vector.html</anchorfile>
       <anchor>aefb4e0720e2623b16b5be4aa5cb2a249</anchor>
       <arglist>(int i, const Element &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetAllElements</name>
+      <anchorfile>classimath_1_1_t_vector.html</anchorfile>
+      <anchor>adf2fa32f33a6ef0d5d244328a6b84948</anchor>
+      <arglist>(const Element &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
