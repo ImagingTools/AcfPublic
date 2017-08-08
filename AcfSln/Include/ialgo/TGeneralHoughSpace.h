@@ -66,6 +66,17 @@ public:
 	void CombineWithSpace(const TGeneralHoughSpace& space, Operation operation);
 
 	/**
+		Set if this space to be wrapped horizontaly or not.
+		Space is horizonally wrapped if the left pixel is neighbour of the right one.
+	*/
+	void SetDimensionWrapped(int dimensionIndex, bool state);
+
+	/**
+		Set mode of extension mode to border or not.
+	*/
+	void SetExtensionBorder(int dimensionIndex, bool state);
+
+	/**
 		Get the distance scaling factors used to calculate how far are elements in this space.
 	*/
 	double GetDistScalingFactor(int dimensionIndex) const;
@@ -78,7 +89,7 @@ public:
 	virtual istd::TIndex<Dimensions> GetSpaceSize() const;
 	virtual bool CreateHoughSpace(const istd::TIndex<Dimensions>& size, const Element& initValue = 0);
 	virtual bool IsDimensionWrapped(int dimensionIndex) const;
-	virtual void SetDimensionWrapped(int dimensionIndex, bool state);
+	virtual ExtensionMode GetExtensionMode(int dimensionIndex) const;
 	virtual void IncreaseValueAt(const imath::TVector<Dimensions>& position, Element value);
 	virtual void SmoothHoughSpace(const istd::TIndex<Dimensions>& iterations);
 	virtual bool AnalyseHoughSpace(
@@ -97,6 +108,7 @@ protected:
 
 private:
 	bool m_isWrapped[Dimensions];
+	bool m_extensionModeBorders[Dimensions];
 	double m_distScalingFactors[Dimensions];
 };
 
@@ -151,6 +163,26 @@ TGeneralHoughSpace<Dimensions, Element>::TGeneralHoughSpace(const istd::TIndex<D
 
 
 template <int Dimensions, class Element>
+void TGeneralHoughSpace<Dimensions, Element>::SetDimensionWrapped(int dimensionIndex, bool state)
+{
+	Q_ASSERT(dimensionIndex >= 0);
+	Q_ASSERT(dimensionIndex < Dimensions);
+
+	m_isWrapped[dimensionIndex] = state;
+}
+
+
+template <int Dimensions, class Element>
+void TGeneralHoughSpace<Dimensions, Element>::SetExtensionBorder(int dimensionIndex, bool state)
+{
+	Q_ASSERT(dimensionIndex >= 0);
+	Q_ASSERT(dimensionIndex < Dimensions);
+
+	m_extensionModeBorders[dimensionIndex] = state;
+}
+
+
+template <int Dimensions, class Element>
 double TGeneralHoughSpace<Dimensions, Element>::GetDistScalingFactor(int dimensionIndex) const
 {
 	Q_ASSERT(dimensionIndex >= 0);
@@ -186,6 +218,7 @@ bool TGeneralHoughSpace<Dimensions, Element>::CreateHoughSpace(const istd::TInde
 
 	for (int i = 0; i < Dimensions; ++i){
 		m_isWrapped[i] = false;
+		m_extensionModeBorders[i] = false;
 		
 		m_distScalingFactors[i] = 1;
 	}
@@ -208,12 +241,12 @@ bool TGeneralHoughSpace<Dimensions, Element>::IsDimensionWrapped(int dimensionIn
 
 
 template <int Dimensions, class Element>
-void TGeneralHoughSpace<Dimensions, Element>::SetDimensionWrapped(int dimensionIndex, bool state)
+typename TIHoughSpace<Dimensions, Element>::ExtensionMode TGeneralHoughSpace<Dimensions, Element>::GetExtensionMode(int dimensionIndex) const
 {
 	Q_ASSERT(dimensionIndex >= 0);
 	Q_ASSERT(dimensionIndex < Dimensions);
 
-	m_isWrapped[dimensionIndex] = state;
+	return m_extensionModeBorders[dimensionIndex]? EM_ZERO: EM_BORDER;
 }
 
 
@@ -321,8 +354,11 @@ bool TGeneralHoughSpace<Dimensions, Element>::AnalyseHoughSpace(
 	
 								neighbours[i * 2] = prevValue;
 							}
-							else{
+							else if (m_extensionModeBorders[i]){
 								neighbours[i * 2] = value;
+							}
+							else{
+								neighbours[i * 2] = 0;
 							}
 
 							if (index[i] < size - 1){
@@ -335,8 +371,11 @@ bool TGeneralHoughSpace<Dimensions, Element>::AnalyseHoughSpace(
 
 								neighbours[i * 2 + 1] = nextValue;
 							}
-							else{
+							else if (m_extensionModeBorders[i]){
 								neighbours[i * 2 + 1] = value;
+							}
+							else{
+								neighbours[i * 2 + 1] = 0;
 							}
 						}
 					}

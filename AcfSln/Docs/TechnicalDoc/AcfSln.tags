@@ -4257,6 +4257,13 @@
       <anchor>a3c6158b58c497109391619804a73de37</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ExtensionMode</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a1d5039cabc680e258d278f2f68f393e8</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CHoughSpace2d</name>
@@ -4277,6 +4284,13 @@
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
       <anchor>ac6155ef8168e17b827924c360e5268dd</anchor>
       <arglist>(const istd::CIndex2d &amp;size, bool isWrappedX, bool isWrappedY, bool isFloatSpace)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
+      <anchor>a59d96e9cc40be59575e70c2b1c212e15</anchor>
+      <arglist>(int dimensionIndex, bool state)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -4314,11 +4328,11 @@
       <arglist>(int dimensionIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetDimensionWrapped</name>
+      <type>virtual ExtensionMode</type>
+      <name>GetExtensionMode</name>
       <anchorfile>classialgo_1_1_c_hough_space2d.html</anchorfile>
-      <anchor>a7ea5d2f3575b9dae0962e6ca7eb32b44</anchor>
-      <arglist>(int dimensionIndex, bool state)</arglist>
+      <anchor>ad8f8f54972744786d3d2de58c2171a7d</anchor>
+      <arglist>(int dimensionIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -4440,6 +4454,34 @@
       <anchor>aaabda169be9dcdf80b253e9355bbf16a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ExtensionMode</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a1d5039cabc680e258d278f2f68f393e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>EM_UNKNOWN</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a1d5039cabc680e258d278f2f68f393e8abf438bcdb01f68978a8a4ebb88f2b262</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>EM_ZERO</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a1d5039cabc680e258d278f2f68f393e8abb43631bf76430091cf70bcf1d9386dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>EM_BORDER</name>
+      <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
+      <anchor>a1d5039cabc680e258d278f2f68f393e8a0a8f8fa2f801b3af254831e3ac344e00</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>TGeneralHoughSpace</name>
@@ -4467,6 +4509,20 @@
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
       <anchor>a682c3310cc65e212e01a5e923f0da67b</anchor>
       <arglist>(const TGeneralHoughSpace &amp;space, Operation operation)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDimensionWrapped</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a60c901cae27f0079df613e3e5eff8ecd</anchor>
+      <arglist>(int dimensionIndex, bool state)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetExtensionBorder</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>a890bb18cc91b8d50e9db920ac75e5071</anchor>
+      <arglist>(int dimensionIndex, bool state)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -4504,11 +4560,11 @@
       <arglist>(int dimensionIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetDimensionWrapped</name>
+      <type>virtual ExtensionMode</type>
+      <name>GetExtensionMode</name>
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
-      <anchor>a60c901cae27f0079df613e3e5eff8ecd</anchor>
-      <arglist>(int dimensionIndex, bool state)</arglist>
+      <anchor>a1655be6db4e241ae96134e683fb33ac0</anchor>
+      <arglist>(int dimensionIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -4603,11 +4659,11 @@
       <arglist>(int dimensionIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetDimensionWrapped</name>
+      <type>virtual ExtensionMode</type>
+      <name>GetExtensionMode</name>
       <anchorfile>classialgo_1_1_t_i_hough_space.html</anchorfile>
-      <anchor>af79912353194ae97b65a68adbfb378e4</anchor>
-      <arglist>(int dimensionIndex, bool state)=0</arglist>
+      <anchor>a1d20d6637ec47f656938cb1b62ff865b</anchor>
+      <arglist>(int dimensionIndex) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
