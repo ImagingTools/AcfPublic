@@ -17295,6 +17295,13 @@
       <anchor>ada657f45df5c50a4296da4ca552b3012</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiinsp_1_1_c_information_provider_cache_comp.html</anchorfile>
+      <anchor>a97134a185979165c714bafafc0935421</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp</name>
@@ -26345,6 +26352,7 @@
     <filename>classimeas_1_1_c_numeric_params_comp.html</filename>
     <base>icomp::CComponentBase</base>
     <base>imeas::CSimpleNumericValue</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -26389,9 +26397,23 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ab3f5ca0dfda3c90950ad192b4adffcd9</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
       <anchor>a66df79f5747b3d2bbb39be65805502e9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classimeas_1_1_c_numeric_params_comp.html</anchorfile>
+      <anchor>ae4004edfb0bf06efd35ef479fda16cfe</anchor>
       <arglist>()</arglist>
     </member>
   </compound>

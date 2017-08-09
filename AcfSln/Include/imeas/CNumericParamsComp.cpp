@@ -47,6 +47,28 @@ const INumericConstraints* CNumericParamsComp::GetNumericConstraints() const
 
 // protected methods
 
+// reimplemented (imeas::INumericValue)
+
+void CNumericParamsComp::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
+{
+	const INumericConstraints* constraintsPtr = GetNumericConstraints();
+	if (constraintsPtr != NULL){
+		const iprm::IOptionsList& valueListInfo = constraintsPtr->GetValueListInfo();
+		int count = valueListInfo.GetOptionsCount();
+
+		istd::CChangeNotifier changeNotifier(this);
+
+		for (int i = 0; (i < count) && (i < m_values.GetElementsCount()); ++i){
+			// correct the value according to the constraints
+			const imath::IUnitInfo* unitInfoPtr = constraintsPtr->GetNumericValueUnitInfo(i);
+			if ((unitInfoPtr != NULL) && unitInfoPtr->GetValueRange().IsValid()){
+				m_values[i] = unitInfoPtr->GetValueRange().GetClipped(m_values[i]);
+			}
+		}
+	}
+}
+
+
 // reimplemented (icomp::CComponentBase)
 
 void CNumericParamsComp::OnComponentCreated()
@@ -61,6 +83,12 @@ void CNumericParamsComp::OnComponentCreated()
 		const iprm::IOptionsList& valueListInfo = constraintsPtr->GetValueListInfo();
 
 		count = valueListInfo.GetOptionsCount();
+
+		// observe constrains
+		imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(const_cast<INumericConstraints*>(constraintsPtr));
+		if (modelPtr != NULL){
+			modelPtr->AttachObserver(this);
+		}
 	}
 	else{
 		count = defaultValuesCount;
@@ -88,6 +116,14 @@ void CNumericParamsComp::OnComponentCreated()
 			m_values[i] = lastValue;
 		}
 	}
+}
+
+
+void CNumericParamsComp::OnComponentDestroyed()
+{
+	EnsureModelDetached();
+
+	BaseClass::OnComponentDestroyed();
 }
 
 
