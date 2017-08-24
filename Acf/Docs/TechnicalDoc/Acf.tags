@@ -6725,10 +6725,8 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_t_visual_objects_8h</filename>
     <includes id="_t_model_wrap_8h" name="TModelWrap.h" local="no" imported="no">imod/TModelWrap.h</includes>
-    <includes id="_c_circle_8h" name="CCircle.h" local="no" imported="no">i2d/CCircle.h</includes>
-    <includes id="_c_circle_shape_8h" name="CCircleShape.h" local="no" imported="no">iview/CCircleShape.h</includes>
     <includes id="_c_image_shape_8h" name="CImageShape.h" local="no" imported="no">iview/CImageShape.h</includes>
-    <class kind="struct">iview::TCircleVisualObject</class>
+    <class kind="struct">iview::TVisualObject</class>
     <class kind="struct">iview::TBitmapVisualObject</class>
     <namespace>iview</namespace>
   </compound>
@@ -64135,7 +64133,7 @@
     <class kind="class">iview::IViewRulersAccessor</class>
     <class kind="class">iview::IVisualCalibrationInfo</class>
     <class kind="class">iview::IVisualizable</class>
-    <class kind="struct">iview::TCircleVisualObject</class>
+    <class kind="struct">iview::TVisualObject</class>
     <class kind="struct">iview::TBitmapVisualObject</class>
     <member kind="function">
       <type>iview::IColorSchema::TickerType</type>
@@ -71589,36 +71587,36 @@
     <base virtualness="virtual">istd::IPolymorphic</base>
   </compound>
   <compound kind="struct">
-    <name>iview::TCircleVisualObject</name>
-    <filename>structiview_1_1_t_circle_visual_object.html</filename>
+    <name>iview::TVisualObject</name>
+    <filename>structiview_1_1_t_visual_object.html</filename>
     <templarg></templarg>
     <templarg></templarg>
     <member kind="typedef">
+      <type>Shape</type>
+      <name>BaseClass</name>
+      <anchorfile>structiview_1_1_t_visual_object.html</anchorfile>
+      <anchor>a5a565c56190ec0b85add02d57929ec4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>imod::TModelWrap&lt; Object &gt;</type>
       <name>PositionModel</name>
-      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
-      <anchor>a18c8adc82923b2907d7bceab5c0dd6cd</anchor>
+      <anchorfile>structiview_1_1_t_visual_object.html</anchorfile>
+      <anchor>a20362c48ba3274ef7f77b132d6a61f1d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>TCircleVisualObject</name>
-      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
-      <anchor>a36827f992973a2052f765b98574a08dc</anchor>
+      <name>TVisualObject</name>
+      <anchorfile>structiview_1_1_t_visual_object.html</anchorfile>
+      <anchor>a6f0a822862d95bf84bf262493b12c6ef</anchor>
       <arglist>(bool editable=false)</arglist>
     </member>
     <member kind="variable">
       <type>istd::TDelPtr&lt; PositionModel &gt;</type>
       <name>model</name>
-      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
-      <anchor>a1f68f7c2fc48fc33dcc841a9cdd038d8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::TDelPtr&lt; Shape &gt;</type>
-      <name>shape</name>
-      <anchorfile>structiview_1_1_t_circle_visual_object.html</anchorfile>
-      <anchor>a02fffad41295e73e23030b5cf9cb7751</anchor>
+      <anchorfile>structiview_1_1_t_visual_object.html</anchorfile>
+      <anchor>a5e377d68faaae665c169fbb546e7f9df</anchor>
       <arglist></arglist>
     </member>
   </compound>

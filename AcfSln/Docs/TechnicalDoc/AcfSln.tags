@@ -15745,6 +15745,13 @@
       <anchor>ad2e2a5a5145f9ebb34351f4d97ae6a51</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetOverwriteStrategy</name>
+      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
+      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
+      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>OverwriteStrategy</type>
       <name>m_overwriteStrategy</name>
@@ -16085,13 +16092,6 @@
       <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
       <anchor>a676375f2aadf7f987715775c9e380aa4</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetOverwriteStrategy</name>
-      <anchorfile>classifileproc_1_1_i_file_naming_params.html</anchorfile>
-      <anchor>a213e37f01756a3c6b2594137a2df9d20</anchor>
-      <arglist>(OverwriteStrategy overwriteStrategy)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
