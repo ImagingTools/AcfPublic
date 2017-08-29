@@ -89,6 +89,13 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>CHoughBasedSearchProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_hough_based_search_processor_comp_8h</filename>
+    <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_acquisition_comp_8h</filename>
@@ -114,6 +121,13 @@
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_median_processor_comp_8h</filename>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COcvResamplingProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_resampling_processor_comp_8h</filename>
+    <class kind="class">iocv::COcvResamplingProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
@@ -891,10 +905,12 @@
     <name>iocv</name>
     <filename>namespaceiocv.html</filename>
     <class kind="class">iocv::CCorrSearchProcessorComp</class>
+    <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <class kind="class">iocv::COcvImage</class>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
+    <class kind="class">iocv::COcvResamplingProcessorComp</class>
     <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
   <compound kind="class">
@@ -957,6 +973,89 @@
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
       <anchor>a40c1870d84467779dbbc72e786a9cabd</anchor>
       <arglist>(const iimg::IBitmap &amp;image, const iimg::IBitmap &amp;modelImage, const i2d::CRect &amp;aoi, double minScore, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::CHoughBasedSearchProcessorComp</name>
+    <filename>classiocv_1_1_c_hough_based_search_processor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <base virtualness="virtual">iipr::ISearchConstraints</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ModelType</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MT_CIRCLE</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743a45689983b300b2fa952669f3ec9044b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MT_LINE</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743ae9605a6c17e924f8d696e141b17a50ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a0786a04dc8da177fea8b66cbe58ebbc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoExtractFeatures</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a775954a88150db1bba9c3b78ce2b1344</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a350afaa6e7e6695c17d822d65622982b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSearchSupportedFlags</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a6524ef4839ff49810ffce16e1cc09fee</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetRotationRangeConstraints</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>adb46ca7c598f42145289c6d110e5490d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetScaleRangeConstraints</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>af637f807a88d7055a751c9c213f25da4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CIntRange &amp;</type>
+      <name>GetResultsCountConstraints</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a0a9ad9bccb7e91188c3afc027c9a68eb</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoModelSearch</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a65f39d847bdd2acf543ed02db4e0bddd</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, const i2d::CRect &amp;aoi, int scale, int minDistance, int edgeThreshold, int houghThreshold, int minRadius, int maxRadius, iipr::IFeaturesConsumer &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1082,6 +1181,25 @@
       <name>DoProcessing</name>
       <anchorfile>classiocv_1_1_c_ocv_median_processor_comp.html</anchorfile>
       <anchor>aa6b3f5a4ce1c022c49bc2cc80512651d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvResamplingProcessorComp</name>
+    <filename>classiocv_1_1_c_ocv_resampling_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_resampling_processor_comp.html</anchorfile>
+      <anchor>aeb5065c12f2d566c033022408b2aa2d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_ocv_resampling_processor_comp.html</anchorfile>
+      <anchor>afc010ec23450b29e1face2393dafd867</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
@@ -2313,10 +2431,12 @@
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>dir_ef2d50ad1eb08c82cfa91c345faf6524.html</filename>
     <file>CCorrSearchProcessorComp.h</file>
+    <file>CHoughBasedSearchProcessorComp.h</file>
     <file>COcvAcquisitionComp.h</file>
     <file>COcvBlobProcessorComp.h</file>
     <file>COcvImage.h</file>
     <file>COcvMedianProcessorComp.h</file>
+    <file>COcvResamplingProcessorComp.h</file>
     <file>COcvVideoControllerComp.h</file>
     <file>iocv.h</file>
   </compound>

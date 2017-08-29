@@ -25,7 +25,7 @@
 
 
 // OpenCV includes
-#include <opencv/cv.h>
+#include <opencv2/opencv.hpp>
 #include <opencv/highgui.h>
 #undef min
 #undef max

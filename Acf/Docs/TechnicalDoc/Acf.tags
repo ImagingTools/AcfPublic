@@ -44628,8 +44628,8 @@
       <type>virtual bool</type>
       <name>IsParamsSetConsistent</name>
       <anchorfile>classiprm_1_1_i_params_set_validator.html</anchorfile>
-      <anchor>aa79935224f977fb542147421f3de0de9</anchor>
-      <arglist>(const IParamsSet &amp;paramsSet, ilog::IMessageConsumer *validationMessagesConsumerPtr=NULL) const =0</arglist>
+      <anchor>a47420ea445713416410aa0b4434e4020</anchor>
+      <arglist>(const QByteArray &amp;validationContextId, const IParamsSet &amp;paramsSet, ilog::IMessageConsumer *validationMessagesConsumerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
