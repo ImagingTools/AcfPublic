@@ -18682,8 +18682,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
+      <anchor>a662e0f1751f6b0bbf85b9138528b1488</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
@@ -25274,8 +25274,8 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
-      <anchor>af46630f53b557371604ee44bc032bd8b</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode)</arglist>
+      <anchor>a662e0f1751f6b0bbf85b9138528b1488</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
