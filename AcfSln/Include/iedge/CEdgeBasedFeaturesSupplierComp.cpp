@@ -333,7 +333,7 @@ int CEdgeBasedFeaturesSupplierComp::ProduceObject(ProductType& result) const
 
 						m_defaultInformationCategory = istd::IInformationProvider::IC_ERROR;
 					}
-				}				
+				}
 
 				if ((nominalModelsCount > 0) && (featuresCount < nominalModelsCount)){
 					m_defaultInformationCategory = istd::IInformationProvider::IC_ERROR;
