@@ -3167,15 +3167,6 @@
     <namespace>iqtsig</namespace>
   </compound>
   <compound kind="file">
-    <name>CScriptDataProcessorComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtsig/</path>
-    <filename>_c_script_data_processor_comp_8h</filename>
-    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="no" imported="no">iproc/TSyncProcessorWrap.h</includes>
-    <includes id="iqtsig_8h" name="iqtsig.h" local="no" imported="no">iqtsig/iqtsig.h</includes>
-    <class kind="class">iqtsig::CScriptDataProcessorComp</class>
-    <namespace>iqtsig</namespace>
-  </compound>
-  <compound kind="file">
     <name>CTriggerParamsGuiComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtsig/</path>
     <filename>_c_trigger_params_gui_comp_8h</filename>
@@ -32512,7 +32503,6 @@
     <class kind="class">iqtsig::CSampleAcquisitionGuiComp</class>
     <class kind="class">iqtsig::CSampleContainerView</class>
     <class kind="class">iqtsig::CSamplingParamsGuiComp</class>
-    <class kind="class">iqtsig::CScriptDataProcessorComp</class>
     <class kind="class">iqtsig::CTriggerParamsGuiComp</class>
   </compound>
   <compound kind="class">
@@ -32736,68 +32726,6 @@
       <anchorfile>classiqtsig_1_1_c_sampling_params_gui_comp.html</anchorfile>
       <anchor>a8a12767a1fb7378a9cf90fbb3f982584</anchor>
       <arglist>(int index)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtsig::CScriptDataProcessorComp</name>
-    <filename>classiqtsig_1_1_c_script_data_processor_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base>iproc::TSyncProcessorWrap</base>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a3c9f237c3b028fe26a3582962da19c7d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CScriptDataProcessorComp</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>abdb15e7bca5de76c4ad23358b0dda149</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>ad281b9d9964a03f3998d383751ee0e06</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetIntervalRange</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>abc7bd09ca1f2ca6aa543eb944c5bd833</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsSamplingModeSupported</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a5264292f917d63866788b35d19d06da4</anchor>
-      <arglist>(int mode) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CRange</type>
-      <name>GetValueRange</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>acf837e72ccb12d66dcbd31583fbff654</anchor>
-      <arglist>(bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=0) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetMaximalSamplesCount</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a8bb49c30779938f1f181e6a0a1640d9b</anchor>
-      <arglist>(bool forInput=true, bool forOutput=true, const iprm::IParamsSet *paramsSetPtr=0) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classiqtsig_1_1_c_script_data_processor_comp.html</anchorfile>
-      <anchor>a34bdaad5171c27cca12366a81947adfe</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35202,7 +35130,6 @@
     <file>CSampleAcquisitionGuiComp.h</file>
     <file>CSampleContainerView.h</file>
     <file>CSamplingParamsGuiComp.h</file>
-    <file>CScriptDataProcessorComp.h</file>
     <file>CTriggerParamsGuiComp.h</file>
     <file>iqtsig.h</file>
   </compound>
