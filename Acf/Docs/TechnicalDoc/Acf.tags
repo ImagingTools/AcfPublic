@@ -71519,15 +71519,15 @@
       <type>virtual bool</type>
       <name>OnSelectChange</name>
       <anchorfile>classiview_1_1_i_view_event_observer.html</anchorfile>
-      <anchor>a82cfd6b2215fcddca35150fca4cab189</anchor>
-      <arglist>(const IShapeView &amp;view, const istd::CIndex2d &amp;position, const iview::IInteractiveShape &amp;shape, bool state)=0</arglist>
+      <anchor>a4496c28f3d6f9c2710bc1f2075cc6a50</anchor>
+      <arglist>(const IShapeView &amp;view, const istd::CIndex2d &amp;position, const IInteractiveShape &amp;shape, bool state)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>OnViewMouseButton</name>
       <anchorfile>classiview_1_1_i_view_event_observer.html</anchorfile>
-      <anchor>a2bdc7c09964e96377550c6ec315ae2a9</anchor>
-      <arglist>(const IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const iview::IInteractiveShape *shapePtr)=0</arglist>
+      <anchor>a093238d2334ee08e79cce3578dfcc8fa</anchor>
+      <arglist>(const IShapeView &amp;view, const istd::CIndex2d &amp;position, Qt::MouseButton buttonType, bool state, const IInteractiveShape *shapePtr)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
