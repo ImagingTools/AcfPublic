@@ -4445,6 +4445,13 @@
       <anchor>aaabda169be9dcdf80b253e9355bbf16a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>TIHoughSpace&lt; Dimensions, Element &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
+      <anchor>af15ce5afaf4dce8db12174c8cbf7e77a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>ExtensionMode</name>
@@ -4551,7 +4558,7 @@
       <arglist>(int dimensionIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual ExtensionMode</type>
+      <type>virtual BaseClass2::ExtensionMode</type>
       <name>GetExtensionMode</name>
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
       <anchor>a1655be6db4e241ae96134e683fb33ac0</anchor>
@@ -4575,8 +4582,8 @@
       <type>virtual bool</type>
       <name>AnalyseHoughSpace</name>
       <anchorfile>classialgo_1_1_t_general_hough_space.html</anchorfile>
-      <anchor>aaf9480ad17f98ec5577b235dc72cb184</anchor>
-      <arglist>(const Element &amp;minValue, ResultsConsumer &amp;resultProcessor) const </arglist>
+      <anchor>a9f75071b90c7f95ec89797c70a481448</anchor>
+      <arglist>(const Element &amp;minValue, typename BaseClass2::ResultsConsumer &amp;resultProcessor) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -25748,8 +25755,8 @@
       <type></type>
       <name>CGeneralDataSequenceInfo</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence_info.html</anchorfile>
-      <anchor>a4b592e3d2a831fad93c7a04b9906a11a</anchor>
-      <arglist>(int defaultChannelsCount, int defaultSamplesCount, WeightMode mode=WeightMode::WM_NONE, int sequenceFlags=0)</arglist>
+      <anchor>a8ff0e8ae7829feb9d6e52f01eae98feb</anchor>
+      <arglist>(int defaultChannelsCount, int defaultSamplesCount, IDataSequenceInfo::WeightMode mode=WM_NONE, int sequenceFlags=0)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -30210,7 +30217,7 @@
       <type>iqtgui::TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a5de0e7e329be3e6020a5a1e260c4b11a</anchor>
+      <anchor>a28840ec49d7930bcf11fbf9e6033bd86</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">

@@ -84,13 +84,13 @@ protected:
 
 
 class CInspectionTaskGuiComp:
-			public iqtgui::TRestorableGuiWrap<TResultShapeCreatorWrap<CInspectionTaskGuiCompBase>>,
+            public iqtgui::TRestorableGuiWrap< TResultShapeCreatorWrap<CInspectionTaskGuiCompBase> >,
 			protected imod::CMultiModelDispatcherBase
 {
 	Q_OBJECT
 
 public:
-	typedef  iqtgui::TRestorableGuiWrap<TResultShapeCreatorWrap<CInspectionTaskGuiCompBase>> BaseClass;
+    typedef  iqtgui::TRestorableGuiWrap< TResultShapeCreatorWrap<CInspectionTaskGuiCompBase> > BaseClass;
 
 	enum DataRole
 	{

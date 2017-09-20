@@ -427,8 +427,8 @@ void TRanges<ValueType>::Invert(const TRange<ValueType>* clipRangePtr)
 		// remove all points before
 		for (		typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
 					(iter != m_switchPoints.end()) && (*iter < prevPosition);
-					iter = m_switchPoints.erase(iter)){
-			state = !state;
+                    m_switchPoints.erase(iter++)){
+            state = !state;
 		}
 
 		typename SwitchPoints::const_iterator iter = m_switchPoints.begin();
@@ -827,7 +827,7 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 				if (*prevIter > point - absoluteSum){
 					// previous range should be removed - is smaller than the erosion kernel
 					m_switchPoints.erase(prevIter);
-					iter = m_switchPoints.erase(iter);
+                    m_switchPoints.erase(iter++);
 
 					continue;
 				}
@@ -835,7 +835,7 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 
 			// range can be moved using kernel size
 			if (rightValueCorr > 0){
-				iter = m_switchPoints.erase(iter);
+                m_switchPoints.erase(iter++);
 				iter = m_switchPoints.insert(iter, point - rightValueCorr);
 			}
 		}
@@ -847,8 +847,8 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 			if (nextIter != m_switchPoints.end()){
 				if (*nextIter < point + absoluteSum){
 					// following range should be removed - is smaller than the erosion kernel
-					iter = m_switchPoints.erase(iter);
-					iter = m_switchPoints.erase(iter);
+                    m_switchPoints.erase(iter++);
+                    m_switchPoints.erase(iter++);
 
 					continue;
 				}
@@ -856,7 +856,7 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 
 			if (leftValueCorr > 0){
 				// range can be moved using kernel size
-				iter = m_switchPoints.erase(iter);
+                m_switchPoints.erase(iter++);
 				iter = m_switchPoints.insert(iter, point + leftValueCorr);
 			}
 		}

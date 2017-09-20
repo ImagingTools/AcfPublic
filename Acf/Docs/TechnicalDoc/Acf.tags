@@ -2409,6 +2409,7 @@
     <name>CTextFileLogComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_text_file_log_comp_8h</filename>
+    <includes id="_i_model_8h" name="IModel.h" local="no" imported="no">imod/IModel.h</includes>
     <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="no" imported="no">imod/CSingleModelObserverBase.h</includes>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
     <includes id="_c_stream_log_comp_base_8h" name="CStreamLogCompBase.h" local="no" imported="no">ilog/CStreamLogCompBase.h</includes>
@@ -29582,18 +29583,32 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classifile_1_1_c_relative_file_name_param_comp.html</anchorfile>
-      <anchor>a3623a95ca162eb2fd163d74041a86c3f</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPathType</name>
       <anchorfile>classifile_1_1_c_file_name_param_comp.html</anchorfile>
       <anchor>a63b266e2943b72a665fdc113be7aeabe</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>a193d387d7e9eaf8a2e70655bed476406</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>ac5698a67d6eb27402c5c30344367a324</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
+      <anchor>a8dae1ad599ab3e68fe1556580f5cb5cf</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
