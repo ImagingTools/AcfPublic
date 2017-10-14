@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include <istd/IPolymorphic.h>
+#include <iprm/IOptionsList.h>
 
 
 class QTranslator;
@@ -41,9 +41,9 @@ class ITranslationManager: virtual public istd::IPolymorphic
 {
 public:
 	/**
-		Get number of provided languages.
+		Get the list of supported languages given as a list of options.
 	*/
-	virtual int GetLanguagesCount() const = 0;
+	virtual const iprm::IOptionsList& GetLanguagesInfo() const = 0;
 
 	/**
 		Get current language index.

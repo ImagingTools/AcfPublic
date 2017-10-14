@@ -118,9 +118,9 @@ void CTranslationManagerComp::OnComponentDestroyed()
 
 // reimplemented (iqt::ITranslationManager)
 
-int CTranslationManagerComp::GetLanguagesCount() const
+const iprm::IOptionsList& CTranslationManagerComp::GetLanguagesInfo() const
 {
-	return m_translatorsList.count();
+	return *this;
 }
 
 
@@ -192,7 +192,7 @@ int CTranslationManagerComp::GetOptionsFlags() const
 
 int CTranslationManagerComp::GetOptionsCount() const
 {
-	return GetLanguagesCount();
+	return m_translatorsList.count();
 }
 
 

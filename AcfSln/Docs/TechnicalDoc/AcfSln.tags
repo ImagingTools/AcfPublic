@@ -19506,6 +19506,13 @@
       <anchor>a767388a30a4f6875ab9be101295b9a6a</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>wasChecked</name>
+      <anchorfile>structiipr_1_1_c_circle_find_processor_comp_1_1_point.html</anchorfile>
+      <anchor>adac5f4f6e3ed551f1c6076f3dbdf9f2a</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>iipr::CCircleFindProcessorComp::Ray</name>
@@ -25588,21 +25595,21 @@
       <type>virtual int</type>
       <name>GetChannelsCount</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a684e561633393c73a926e54c60458c17</anchor>
+      <anchor>ad808de1c3091e9126eb5cf97b0b5242d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetSample</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a3f681c847fb752239d08237e9d8915ed</anchor>
+      <anchor>aa9283e96016674a47186ae9f48b5fc86</anchor>
       <arglist>(int index, int channel=0) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSample</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a7fdf540be2ed54328e754be5edcb0524</anchor>
+      <anchor>a418b1ef75d3a13cbee6a76cfd79c4c46</anchor>
       <arglist>(int index, int channel, double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">

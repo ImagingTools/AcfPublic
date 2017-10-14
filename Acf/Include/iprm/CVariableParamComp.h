@@ -24,8 +24,9 @@
 #define iprm_CVariableParamComp_included
 
 
+// ACF includes
+#include <imod/CModelUpdateBridge.h>
 #include <icomp/CComponentBase.h>
-
 #include <iprm/IVariableParam.h>
 
 
@@ -47,6 +48,8 @@ public:
 		I_ASSIGN_MULTI_0(m_factoryIdsAttrPtr, "TypeIds", "List of factory ID for each factory object", true);
 	I_END_COMPONENT;
 
+	CVariableParamComp();
+
 	// reimplemented (iprm::IVariableParam)
 	virtual TypeIds GetKnownTypeIds() const;
 	virtual QByteArray GetParameterTypeId() const;
@@ -63,6 +66,8 @@ private:
 
 	QByteArray m_paramTypeId;
 	istd::TDelPtr<iser::ISerializable> m_paramPtr;
+
+	imod::CModelUpdateBridge m_updateBridge;
 };
 
 

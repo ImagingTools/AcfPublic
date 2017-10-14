@@ -140,6 +140,7 @@
     <ClCompile Include="..\CPolygonShape.cpp" />
     <ClCompile Include="..\CPolylineShape.cpp" />
     <ClCompile Include="..\CPolypointShape.cpp" />
+    <ClCompile Include="..\CRectControlledShapeBase.cpp" />
     <ClCompile Include="..\CRectangleShape.cpp" />
     <ClCompile Include="..\CScreenTransform.cpp" />
     <ClCompile Include="..\CShapeBase.cpp" />
@@ -147,7 +148,6 @@
     <ClCompile Include="..\CShapeStatusInfoComp.cpp" />
     <ClCompile Include="..\CSimpleShapeFactoryComp.cpp" />
     <ClCompile Include="..\CSplineShape.cpp" />
-    <ClCompile Include="..\CTransformableRectangleShape.cpp" />
     <ClCompile Include="..\CTubePolylineShape.cpp" />
     <ClCompile Include="..\CViewBase.cpp" />
     <ClCompile Include="..\CViewLayer.cpp" />
@@ -187,6 +187,7 @@
     <ClInclude Include="..\CPolygonShape.h" />
     <ClInclude Include="..\CPolylineShape.h" />
     <ClInclude Include="..\CPolypointShape.h" />
+    <ClInclude Include="..\CRectControlledShapeBase.h" />
     <ClInclude Include="..\CRectangleShape.h" />
     <ClInclude Include="..\CScreenTransform.h" />
     <ClInclude Include="..\CShapeBase.h" />
@@ -203,7 +204,6 @@
     <ClInclude Include="..\CShapeStatusInfoComp.h" />
     <ClInclude Include="..\CSimpleShapeFactoryComp.h" />
     <ClInclude Include="..\CSplineShape.h" />
-    <ClInclude Include="..\CTransformableRectangleShape.h" />
     <ClInclude Include="..\CTubePolylineShape.h" />
     <ClInclude Include="..\CViewBase.h" />
     <ClInclude Include="..\CViewLayer.h" />

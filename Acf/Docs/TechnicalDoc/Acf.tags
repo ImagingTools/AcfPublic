@@ -3810,6 +3810,7 @@
     <name>CVariableParamComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_variable_param_comp_8h</filename>
+    <includes id="_c_model_update_bridge_8h" name="CModelUpdateBridge.h" local="no" imported="no">imod/CModelUpdateBridge.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_variable_param_8h" name="IVariableParam.h" local="no" imported="no">iprm/IVariableParam.h</includes>
     <class kind="class">iprm::CVariableParamComp</class>
@@ -4128,7 +4129,7 @@
     <name>ITranslationManager.h</name>
     <path>C:/Temp/Acf/Include/iqt/</path>
     <filename>_i_translation_manager_8h</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
     <class kind="class">iqt::ITranslationManager</class>
     <namespace>iqt</namespace>
   </compound>
@@ -6389,7 +6390,7 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_polygon_shape_8h</filename>
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="no" imported="no">i2d/CVector2d.h</includes>
-    <includes id="_c_transformable_rectangle_shape_8h" name="CTransformableRectangleShape.h" local="no" imported="no">iview/CTransformableRectangleShape.h</includes>
+    <includes id="_c_rect_controlled_shape_base_8h" name="CRectControlledShapeBase.h" local="no" imported="no">iview/CRectControlledShapeBase.h</includes>
     <class kind="class">iview::CPolygonShape</class>
     <namespace>iview</namespace>
   </compound>
@@ -6415,6 +6416,14 @@
     <filename>_c_rectangle_shape_8h</filename>
     <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="no" imported="no">iview/CInteractiveShapeBase.h</includes>
     <class kind="class">iview::CRectangleShape</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRectControlledShapeBase.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_rect_controlled_shape_base_8h</filename>
+    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="no" imported="no">iview/CInteractiveShapeBase.h</includes>
+    <class kind="class">iview::CRectControlledShapeBase</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -6473,15 +6482,6 @@
     <includes id="_c_vector2d_8h" name="CVector2d.h" local="no" imported="no">i2d/CVector2d.h</includes>
     <includes id="_c_polyline_shape_8h" name="CPolylineShape.h" local="no" imported="no">iview/CPolylineShape.h</includes>
     <class kind="class">iview::CSplineShape</class>
-    <namespace>iview</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CTransformableRectangleShape.h</name>
-    <path>C:/Temp/Acf/Include/iview/</path>
-    <filename>_c_transformable_rectangle_shape_8h</filename>
-    <includes id="_c_parallelogram_8h" name="CParallelogram.h" local="no" imported="no">i2d/CParallelogram.h</includes>
-    <includes id="_c_interactive_shape_base_8h" name="CInteractiveShapeBase.h" local="no" imported="no">iview/CInteractiveShapeBase.h</includes>
-    <class kind="class">iview::CTransformableRectangleShape</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -44421,6 +44421,13 @@
       <anchor>a2dc438b59573ce7fd4b9a2d9e27d19b5</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>CVariableParamComp</name>
+      <anchorfile>classiprm_1_1_c_variable_param_comp.html</anchorfile>
+      <anchor>a4f7d3c6cc6428511bde95e7baa76d411</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual TypeIds</type>
       <name>GetKnownTypeIds</name>
@@ -45639,10 +45646,10 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetLanguagesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetLanguagesInfo</name>
       <anchorfile>classiqt_1_1_c_translation_manager_comp.html</anchorfile>
-      <anchor>a41338a4bf9ebc70192095cc0286d897d</anchor>
+      <anchor>a55fc6ac8203ca8fc40793f758cc55c99</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -45740,10 +45747,10 @@
     <filename>classiqt_1_1_i_translation_manager.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
-      <type>virtual int</type>
-      <name>GetLanguagesCount</name>
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetLanguagesInfo</name>
       <anchorfile>classiqt_1_1_i_translation_manager.html</anchorfile>
-      <anchor>a498ebb8cfaf7473f1adc14fa06602a2a</anchor>
+      <anchor>a9bb763a6dcca91a56b3cb291394c5b16</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -64118,13 +64125,13 @@
     <class kind="class">iview::CPolylineShape</class>
     <class kind="class">iview::CPolypointShape</class>
     <class kind="class">iview::CRectangleShape</class>
+    <class kind="class">iview::CRectControlledShapeBase</class>
     <class kind="class">iview::CScreenTransform</class>
     <class kind="class">iview::CShapeBase</class>
     <class kind="class">iview::CShapeInfoGuiComp</class>
     <class kind="class">iview::CShapeStatusInfoComp</class>
     <class kind="class">iview::CSimpleShapeFactoryComp</class>
     <class kind="class">iview::CSplineShape</class>
-    <class kind="class">iview::CTransformableRectangleShape</class>
     <class kind="class">iview::CTubePolylineShape</class>
     <class kind="class">iview::CViewBase</class>
     <class kind="class">iview::CViewLayer</class>
@@ -68992,9 +68999,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
-      <name>IsFigureTouched</name>
+      <name>IsCurveTouched</name>
       <anchorfile>classiview_1_1_c_parallelogram_shape.html</anchorfile>
-      <anchor>a1a739aa721cf868b8ee5e59d38c125d4</anchor>
+      <anchor>a09598960a7e4edddaa91795dabc155ec</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -69083,12 +69090,12 @@
   <compound kind="class">
     <name>iview::CPolygonShape</name>
     <filename>classiview_1_1_c_polygon_shape.html</filename>
-    <base>iview::CTransformableRectangleShape</base>
+    <base>iview::CRectControlledShapeBase</base>
     <member kind="typedef">
-      <type>CTransformableRectangleShape</type>
+      <type>CRectControlledShapeBase</type>
       <name>BaseClass</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
-      <anchor>ae70d03286d38908a1f763f0511d0e3d3</anchor>
+      <anchor>af653551018e157d227dc2b533ca3e5a7</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -69101,15 +69108,15 @@
     <member kind="typedef">
       <type>CInteractiveShapeBase</type>
       <name>BaseClass</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>aa5a187e986ff04383e8f2600665b1264</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>aecc03413aa5fba14f474531180c3fa8e</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>CInteractiveShapeBase</type>
       <name>ShapeBaseClass</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>aa5fd40d37f0b9f7df0adad1ab87b9b7c</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>af4cf0a6b48e63b3b09c76c0ff1728d10</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -69191,72 +69198,72 @@
     </member>
     <member kind="function">
       <type></type>
-      <name>CTransformableRectangleShape</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a529858b64f01d26ed15a017b3a2dcd69</anchor>
+      <name>CRectControlledShapeBase</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a3d6019db99bb30bb4268e729a18e16f6</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEditableRotation</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ad2c54d970bf2fdaab97e020106d6437e</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a759cfc7994a5ca8e8507832938f121cb</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEditableRotation</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ab20dda20e02b5cdd6b7b783e9834de4f</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a89c6ba872e2481873cc182b7dcd301e4</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEditableWidth</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ac871ce6d0c675ef509af61c824217dda</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>af58f317b1ccbe9ec7c958ec28e7ff433</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEditableWidth</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a415ec65f012d20c19971961807a39135</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a6dc07809fef63f6155722c8b30ba2a9d</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEditableHeight</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a48ae47756b54f85056c5c15ff2ff811f</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a397085edab696c6ac2bb7a9f25d851b5</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetEditableHeight</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>aa15c8bea66ea3fb27c34cb88f8657a71</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a1a17083144609c0adf77807f5f3161ba</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsProportionalScaled</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a8dd95c596d09407c5bda24b6b2824471</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abe3cbd2458299518211fdadbf709c4b1</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetProportionalScaled</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a7a71bc801dd49f8f0cf8e8242fe50864</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>ad42d420de5f42a68815a00c8fcbc2526</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>InvalidateBoundingBox</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a6749c782ab0fcf06261d0430d86417fc</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a8f842773d623f4cd5dac34ea72dc0a18</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -69288,18 +69295,18 @@
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsCurveTouched</name>
-      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
-      <anchor>a70633844ab332b81e0e4118da0027a88</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>EnsureValidNodes</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
       <anchor>a093229c48ef436740e39fcf1c70fedf4</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCurveTouched</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>a70633844ab332b81e0e4118da0027a88</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -69325,85 +69332,78 @@
     <member kind="function" protection="protected">
       <type>void</type>
       <name>CalcNodes</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a51a4c2722cec9182f0d346c193c3b5b5</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>ab28b9687b787adeb5331b4d6ff93a5e3</anchor>
       <arglist>(const i2d::CAffine2d &amp;parallTransform) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>ResetNodes</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>aee437324e34a2f38e4ea568dcc47aac0</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a66b348bde7cc916edde47c73ca75fbc9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>AreNodesValid</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a9216321cceea3cfe0d49f2b07d274b5f</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abd828ca518d2902fa1bd6151a0d2dcfe</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcMoveTransform</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ac41aa0b71472b2f6869bc9e41791e3d3</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a6b9f7bedfa403aa95326fc0247b36b6f</anchor>
       <arglist>(i2d::CVector2d position, const i2d::CAffine2d &amp;transform)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTickerTouched</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a7fdf097a6cde3b1604a74d58339a73ef</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsFigureTouched</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a7398f264476da6bac5c47cb05e1ded8c</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a294658a01e4128b8770cd429bc0912c3</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawTickers</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a0df7a3d2e11758c6ab9bc85581df1689</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a7643f13ed3de18fa5f7b46acfc2d9ef0</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawFigure</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a0a0fa784a9259988408b985f00625ebd</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a39d95efdd7441009f86de2f025ae08af</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>IsParallTouched</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a39db38758ff024214d8749da27e6a820</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a63d9d25410246394f80e90f7ca8f9e77</anchor>
       <arglist>(const i2d::CAffine2d &amp;parallTransform, istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcScaleTransform</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a97a0b35a38b3ef13817f94d565271079</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a911daaf9622ffb6e25ccded822d31e58</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcSizeTransform</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a25050e8d4892dba2e7ffc14e42879a2b</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a93806272b1d76258ffa8c68d9cff9337</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>i2d::CAffine2d</type>
       <name>CalcRotatedTransform</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>aae4a48a9a79c710d2ddc7af1c0dde8fa</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>acc5586bf5e4568e6149c8a9ab57032f0</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -69444,190 +69444,190 @@
     <member kind="variable" protection="protected">
       <type>MouseMode</type>
       <name>m_mouseMode</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ad722ba660e949bf12298bb9f29be58dc</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a1dd76a736a01f25caa36b70384fe1196</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>i2d::CVector2d</type>
       <name>m_referencePosition</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a144e332b60e2a23a4b64fb1abcc45be3</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a23b46fe92cdee623d62f602f3e5e5745</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration" protection="protected">
       <type></type>
       <name>EditNode</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_NODE1</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82a4712af170849bbe779eb561301f2b54a</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8afead572c81b52f472ebe41237bfcbc01</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_NODE2</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82a471e596626e9d471f4ec10cf75cd4f37</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a56ed614e031bc039be4124ba82fd06cc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_NODE3</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82ac9a67a3a503670ba0e3e14c70e5a6ddd</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8acb107d129db3e93ddf5279f8e7f3bfd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_NODE4</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82a7945a8d203a878732f0327cd3f88134e</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a2a998355ba41f7d0b82eeb9ae51aec57</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_CENTER</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82a7e4647d5a2da01dd39747e7bb3936342</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a58fb2f48446785d77f8b40b43abc53d6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_MIDDLE12</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82aeb4a3c2b7da7b9c8a3527be7e402c335</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a556349fc5846bc0ccb2b8a253942dec1</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_MIDDLE23</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82ac34a00ba604079a3f3a6607049237136</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a4e31186d516c3945c24e3e776a6ef9e7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_MIDDLE34</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82ace4ab3dbb71805969fb0352c7264658a</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a92b36b28206003f6d55febc9c7ba7dd7</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_MIDDLE41</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82a9c097ec28d652b00e10e80eff10b96d0</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a03393f7b6d010cd10b330c3b770435b0</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_ROTATION1</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82ac0439c2f0baece59f77f80892c313559</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8a095fa3992957c8d0b32268ece47152e8</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_ROTATION2</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82adf0d28a6d1803bb501163e3eff9664b9</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8aeb3b64a76dade33737bd533798857647</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>EN_LAST</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a53bbf5fa067e762ff647224bb49f9d82afe4bddfaa3f791ff0f00ff90a0704719</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a90f867d4dc445155eccbb705d804b3e8ada28f07cfb92ae4074c33eb516a91d04</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumeration" protection="protected">
       <type></type>
       <name>MouseMode</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_NONE</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09aeac751788ac7c369d879ac85f5c4f4c7</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a9de218201ef2307bc5871e4dfef56993</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_ROTATION1</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a47ff651c4d5feaf5440df03bb3a79abb</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4af04572d98a97e40dbd6cc3a2f4f30d67</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_ROTATION2</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a85faba7f3225cec91bfde5d2431f2e2f</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a327f62c93e4277ef732fc1c05667ba54</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_WIDTH1</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a72a79412c2ed651591fdd2c5376fca86</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a3dad85471ed52615d50e08af4ac9bc43</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_WIDTH2</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09ac184f8c29847bc275e06eb9910489a56</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a178df5cf909fa884b79d78c00e6f1542</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_HEIGHT1</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a1220eee4aba46af10ca36046e46ae6ed</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4ab33b30be9f3e5fae181b44f26d33cce3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_HEIGHT2</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a9c648ca8a987da7e4ca3fbc25450bbcf</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a3b3c00f9719512620fa53ea44ef2597a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_SIZE1</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a99586f085731e05320f05670761e12b6</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a8efabac1f12d8ac9d7926ae21d3b1b26</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_SIZE2</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09ab74cd48526498c80522e6a26db3edc87</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a17d65c8c909fc606ffb876eb8cb789e2</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_SIZE3</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a7d4a454dd7bca04f298c1443fbe7e9dc</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a29a9396c7646757aa65e630e87f6de12</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>MM_SIZE4</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a2f0fbd69e4ba78ecc87ca82ee8892c09a9513d2bdec7b447804183d81278be501</anchor>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>abc42d156d4eac3e3b7b878c1a3a39ed4a320be8b5e23a77b03396f6a2308e312f</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -69990,6 +69990,67 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CRectControlledShapeBase</name>
+    <filename>classiview_1_1_c_rect_controlled_shape_base.html</filename>
+    <base>iview::CInteractiveShapeBase</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a7a2edf399d0fc52b2b50a3974ed0ae6c</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a91924628f4952744ff1cc51020ffa78e</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a3ec0a5fd07854b7ebc3acfe4a3a252c9</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginLogDrag</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a05892f6dafebf3f3be53635c5a3d46e3</anchor>
+      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLogDragPosition</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a4337d53ca047cfc821f460f314d2c52f</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a79c25ed4b246999e42964d5903cd1a42</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureValidNodes</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>a3bc096d4da06dbabf53f221701db2091</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsCurveTouched</name>
+      <anchorfile>classiview_1_1_c_rect_controlled_shape_base.html</anchorfile>
+      <anchor>ae418c973d3a21c32722834a71b539170</anchor>
+      <arglist>(istd::CIndex2d position) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CScreenTransform</name>
     <filename>classiview_1_1_c_screen_transform.html</filename>
     <base>i2d::CAffine2d</base>
@@ -70327,74 +70388,6 @@
       <name>CalcBoundingBox</name>
       <anchorfile>classiview_1_1_c_spline_shape.html</anchorfile>
       <anchor>a483c8dc8fea4d30cc488e72182ec3de8</anchor>
-      <arglist>() const </arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iview::CTransformableRectangleShape</name>
-    <filename>classiview_1_1_c_transformable_rectangle_shape.html</filename>
-    <base>iview::CInteractiveShapeBase</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual TouchState</type>
-      <name>IsTouched</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ad5a45a60140de898f50be3eaa1de4749</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Draw</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ac3bad93ea7fe364a5615b22975292864</anchor>
-      <arglist>(QPainter &amp;drawContext) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelAttached</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>abd7d3a8e913f16cc70287ed78a3e51ab</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseButton</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a412a4da48ac88d7d89ac78bc110ee7c1</anchor>
-      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnMouseMove</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a99d83e86e43d5391c176070f97b5e8bd</anchor>
-      <arglist>(istd::CIndex2d position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureValidNodes</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a485e9d8a5b144776db72b496ee445cbe</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>BeginLogDrag</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>ad9a8aae68a801486d8df5bb7c71a4e1a</anchor>
-      <arglist>(const i2d::CVector2d &amp;reference)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogDragPosition</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a61ff8ea30dcba073b521784a70c3aae1</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>CalcBoundingBox</name>
-      <anchorfile>classiview_1_1_c_transformable_rectangle_shape.html</anchorfile>
-      <anchor>a0ac391750eda92fad36d4047ce0fe08a</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -74521,13 +74514,13 @@
     <file>CPolylineShape.h</file>
     <file>CPolypointShape.h</file>
     <file>CRectangleShape.h</file>
+    <file>CRectControlledShapeBase.h</file>
     <file>CScreenTransform.h</file>
     <file>CShapeBase.h</file>
     <file>CShapeInfoGuiComp.h</file>
     <file>CShapeStatusInfoComp.h</file>
     <file>CSimpleShapeFactoryComp.h</file>
     <file>CSplineShape.h</file>
-    <file>CTransformableRectangleShape.h</file>
     <file>CTubePolylineShape.h</file>
     <file>CViewBase.h</file>
     <file>CViewLayer.h</file>
