@@ -110,6 +110,13 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvEdgeExtractorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_edge_extractor_comp_8h</filename>
+    <class kind="class">iocv::COcvEdgeExtractorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvImage.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_image_8h</filename>
@@ -908,6 +915,7 @@
     <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
+    <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <class kind="class">iocv::COcvImage</class>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
@@ -1137,6 +1145,32 @@
       <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
       <anchor>af3550ca37a9d7ae01105b58b594fd89c</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const i2d::IObject2d *aoiPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvEdgeExtractorComp</name>
+    <filename>classiocv_1_1_c_ocv_edge_extractor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; iedge::IEdgesExtractor &gt;</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iedge::IEdgesExtractor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_edge_extractor_comp.html</anchorfile>
+      <anchor>a1bf8f496dbced32a3af1270ef95f0a8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoContourExtraction</name>
+      <anchorfile>classiocv_1_1_c_ocv_edge_extractor_comp.html</anchorfile>
+      <anchor>a201fe1b0b745c861b617de382e0a0810</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;bitmap, iedge::CEdgeLineContainer &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_ocv_edge_extractor_comp.html</anchorfile>
+      <anchor>a409bc95d042b48445696a35142c4e24a</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2434,6 +2468,7 @@
     <file>CHoughBasedSearchProcessorComp.h</file>
     <file>COcvAcquisitionComp.h</file>
     <file>COcvBlobProcessorComp.h</file>
+    <file>COcvEdgeExtractorComp.h</file>
     <file>COcvImage.h</file>
     <file>COcvMedianProcessorComp.h</file>
     <file>COcvResamplingProcessorComp.h</file>
