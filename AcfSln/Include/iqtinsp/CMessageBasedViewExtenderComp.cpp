@@ -125,7 +125,6 @@ void CMessageBasedViewExtenderComp::OnComponentCreated()
 	// component initialization
 	m_resultShapeFactoryCompPtr.IsValid();
 	m_messageContainerCompPtr.IsValid();
-	m_supplierMessagesCompPtr.IsValid();
 	m_slaveViewExtenderCompPtr.IsValid();
 }
 
@@ -140,3 +139,5 @@ void CMessageBasedViewExtenderComp::OnComponentDestroyed()
 
 
 } // namespace iqtinsp
+
+
