@@ -50933,6 +50933,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiShown</name>
+      <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>
+      <anchor>aa3ce7694e3623644998c04af75439084</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>eventFilter</name>
       <anchorfile>classiqtgui_1_1_c_simple_main_window_gui_comp.html</anchorfile>

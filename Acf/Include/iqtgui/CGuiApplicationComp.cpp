@@ -277,7 +277,6 @@ void CGuiApplicationComp::ShowWindow()
 
 	switch (uiStartMode){
 		case 1:
-			m_mainWidgetPtr->showMaximized();
 			m_mainWidgetPtr->showFullScreen();
 			break;
 
