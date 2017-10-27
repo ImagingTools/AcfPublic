@@ -6203,6 +6203,13 @@
       <arglist>(const Filter &amp;filterInfo)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
+      <anchor>a36acb1cfb11a58be9cb3354146b64107</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiblob_1_1_c_blob_filter_params.html</anchorfile>
@@ -6313,7 +6320,14 @@
       <anchor>adb246d32d879b32f03607cb288c0eb7f</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function">
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiblob_1_1_c_blob_filter_params_comp.html</anchorfile>
+      <anchor>a76383abb80419a8df7534ab1e0edbab6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
       <type>void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiblob_1_1_c_blob_filter_params_comp.html</anchorfile>
@@ -6601,6 +6615,7 @@
     <name>iblob::IBlobFilterParams</name>
     <filename>classiblob_1_1_i_blob_filter_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="function" virtualness="pure">
       <type>virtual const iprm::IOptionsList *</type>
       <name>GetSupportedProperties</name>
@@ -22274,6 +22289,13 @@
       <anchor>ac45d1399c07b2604515d7d5ad1745b49</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_multi_bitmap_cache_comp.html</anchorfile>
+      <anchor>a695a02a08a1de95eae25b4653df9345e</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CMultiLineProjectionSupplierComp</name>
@@ -30470,6 +30492,13 @@
       <anchorfile>classiqtinsp_1_1_t_result_shape_creator_wrap.html</anchorfile>
       <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
       <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsMessageAccepted</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a0b6ae9a2f5bc862e60a54f4b8d628d43</anchor>
+      <arglist>(const istd::IInformationProvider &amp;message) const </arglist>
     </member>
   </compound>
   <compound kind="class">

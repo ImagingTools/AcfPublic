@@ -30,6 +30,7 @@
 #include <istd/istd.h>
 #include <istd/TRange.h>
 #include <iser/ISerializable.h>
+#include <i2d/ICalibrationProvider.h>
 #include <iprm/IOptionsList.h>
 
 
@@ -40,7 +41,7 @@ namespace iblob
 /**
 	Interface for parameters of the blob filtering.
 */
-class IBlobFilterParams: virtual public iser::ISerializable
+class IBlobFilterParams: virtual public iser::ISerializable, virtual public i2d::ICalibrationProvider
 {
 public:
 	enum FilterOperation

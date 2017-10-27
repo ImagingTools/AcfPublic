@@ -45,10 +45,6 @@ const iprm::IOptionsList* CMultiBitmapCacheComp::GetBitmapListInfo() const
 		return NULL;
 	}
 
-	if (m_bitmapConstraints.m_count < 0){
-		return NULL;
-	}
-
 	return &m_bitmapConstraints;
 }
 
@@ -97,8 +93,6 @@ const i2d::ICalibration2d* CMultiBitmapCacheComp::GetCalibration(int calibration
 bool CMultiBitmapCacheComp::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 {
 	bool retVal = false;
-
-	m_copyConstraints = *m_copyConstraintsAttrPtr;
 	
 	if (m_copyConstraints){
 		m_bitmapConstraints.Reset();
@@ -166,6 +160,17 @@ bool CMultiBitmapCacheComp::Serialize(iser::IArchive& /*archive*/)
 	return true;
 }
 
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CMultiBitmapCacheComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	m_copyConstraints = *m_copyConstraintsAttrPtr;
+}
 
 
 } // namespace iipr
