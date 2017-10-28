@@ -255,7 +255,7 @@ QString CImageShape::GetShapeDescriptionAt(istd::CIndex2d position) const
 						pixelValueInfo += ", ";
 					}
 				}
-				pixelValueInfo = "]";
+				pixelValueInfo += "]";
 				break;
 			}
 
