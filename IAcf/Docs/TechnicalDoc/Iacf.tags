@@ -103,6 +103,13 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvAdaptiveBinarizationComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_adaptive_binarization_comp_8h</filename>
+    <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvBlobProcessorComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_blob_processor_comp_8h</filename>
@@ -914,6 +921,7 @@
     <class kind="class">iocv::CCorrSearchProcessorComp</class>
     <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
     <class kind="class">iocv::COcvAcquisitionComp</class>
+    <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <class kind="class">iocv::COcvImage</class>
@@ -1112,6 +1120,25 @@
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
       <anchor>a34db5ccc34e5b6ce35c9ebfc2e5f53ee</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvAdaptiveBinarizationComp</name>
+    <filename>classiocv_1_1_c_ocv_adaptive_binarization_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_adaptive_binarization_comp.html</anchorfile>
+      <anchor>a0d1cb904951a761b2f0c38debe3e21cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_ocv_adaptive_binarization_comp.html</anchorfile>
+      <anchor>a739847cd5f4bdcb1e2ab49f97811b57a</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2467,6 +2494,7 @@
     <file>CCorrSearchProcessorComp.h</file>
     <file>CHoughBasedSearchProcessorComp.h</file>
     <file>COcvAcquisitionComp.h</file>
+    <file>COcvAdaptiveBinarizationComp.h</file>
     <file>COcvBlobProcessorComp.h</file>
     <file>COcvEdgeExtractorComp.h</file>
     <file>COcvImage.h</file>
