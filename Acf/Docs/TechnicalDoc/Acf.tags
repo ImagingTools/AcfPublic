@@ -2467,6 +2467,7 @@
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_i_file_meta_info_provider_8h</filename>
     <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="no" imported="no">ibase/IProgressManager.h</includes>
     <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="no" imported="no">idoc/IDocumentMetaInfo.h</includes>
     <class kind="class">ifile::IFileMetaInfoProvider</class>
     <namespace>ifile</namespace>
@@ -3250,6 +3251,20 @@
     <filename>imath_8h</filename>
     <includes id="iser_8h" name="iser.h" local="no" imported="no">iser/iser.h</includes>
     <namespace>imath</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>qInf</name>
+      <anchorfile>imath_8h.html</anchorfile>
+      <anchor>a2b33fa474ec6a82b92bb8dc5d15f9a0e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>qIsNaN</name>
+      <anchorfile>imath_8h.html</anchorfile>
+      <anchor>abd83d41a21cc60f8f9453e66a8f3e63a</anchor>
+      <arglist>(double x)</arglist>
+    </member>
     <member kind="function">
       <type>double</type>
       <name>GetRadianFromDegree</name>
@@ -28061,6 +28076,13 @@
       <anchor>a98afd4d8d1bff706bc64b55e90467e60</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classidoc_1_1_c_serialized_undo_manager_comp.html</anchorfile>
+      <anchor>a4c998e8e5654e5106827a4d900373bba</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>idoc::CSerializedUndoManagerComp::UndoStepInfo</name>
@@ -30429,8 +30451,8 @@
       <type>virtual MetaInfoPtr</type>
       <name>GetFileMetaInfo</name>
       <anchorfile>classifile_1_1_c_composed_file_meta_info_provider_comp.html</anchorfile>
-      <anchor>ac9c25ae13af9f62c5944e0702a7706e9</anchor>
-      <arglist>(const QString &amp;filePath) const </arglist>
+      <anchor>adb4234e41179afaa2ac573932fed5bf0</anchor>
+      <arglist>(const QString &amp;filePath, ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -32215,8 +32237,8 @@
       <type>virtual MetaInfoPtr</type>
       <name>GetFileMetaInfo</name>
       <anchorfile>classifile_1_1_i_file_meta_info_provider.html</anchorfile>
-      <anchor>a466bbe3a6cd2258c370bab010f2bd1f3</anchor>
-      <arglist>(const QString &amp;filePath) const =0</arglist>
+      <anchor>ab0e4435272ec7cf4a1cd67e3f0648c78</anchor>
+      <arglist>(const QString &amp;filePath, ibase::IProgressManager *progressManagerPtr=NULL) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">

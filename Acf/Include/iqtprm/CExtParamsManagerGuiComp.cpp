@@ -27,8 +27,10 @@
 #include <QtGui/QPainter>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QMessageBox>
+#include <QtWidgets/QStyleOptionViewItem>
 #else
 #include <QtGui/QMessageBox>
+#include <QtGui/QStyleOptionViewItemV4>
 #endif
 
 // ACF includes
@@ -393,7 +395,11 @@ void CExtParamsManagerGuiComp::on_ElementList_itemSelectionChanged()
 
 void CExtParamsManagerGuiComp::CElementItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
+#if QT_VERSION >= 0x050000
 	QStyleOptionViewItem itemOption;
+#else
+	QStyleOptionViewItemV4 itemOption;
+#endif
 	initStyleOption(&itemOption, index);
 
 	int iconWidth = qMax(0, option.decorationSize.width());

@@ -25,6 +25,7 @@
 
 
 // Qt includes
+#include <QtCore/QByteArray>
 #include <QtCore/QString>
 #include <QtCore/QMap>
 

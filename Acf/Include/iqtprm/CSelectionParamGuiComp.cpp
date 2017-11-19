@@ -285,7 +285,7 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 
 				switchBoxPtr->lineEdit()->setCompleter(completer);
 
-				BaseClass::connect(switchBoxPtr->lineEdit(), &QLineEdit::textEdited, this, &CSelectionParamGuiComp::ApplyFilterToProxyModel);
+				BaseClass::connect(switchBoxPtr->lineEdit(), SIGNAL(textEdited(QString)), this, SLOT(ApplyFilterToProxyModel(QString)));
 			}
 
 			m_comboBoxes.PushBack(switchBoxPtr);
@@ -296,6 +296,7 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 		}
 
 		iqt::CSignalBlocker blocker(switchBoxPtr);
+		Q_UNUSED(blocker);
 
 		while (switchBoxPtr->count() > 0){
 			switchBoxPtr->removeItem(0);

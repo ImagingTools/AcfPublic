@@ -23,9 +23,6 @@
 #include <ialgo/CHoughSpace2d.h>
 
 
-// STL includes
-#include <cmath>
-
 // ACF includes
 #include <istd/CChangeNotifier.h>
 

@@ -850,6 +850,8 @@ void CVisualRegistryEditorComp::OnComponentCreated()
 
 void CVisualRegistryEditorComp::OnComponentDestroyed()
 {
+	EnsureModelDetached();
+
 	if (m_metaInfoManagerModelCompPtr.IsValid() && m_metaInfoManagerModelCompPtr->IsAttached(&m_environmentObserver)){
 		m_metaInfoManagerModelCompPtr->DetachObserver(&m_environmentObserver);
 	}
