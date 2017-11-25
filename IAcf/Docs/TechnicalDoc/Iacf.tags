@@ -1017,6 +1017,13 @@
       <anchor>a327cd41ef5f0ff35be1c66486cbd6743ae9605a6c17e924f8d696e141b17a50ee</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MT_TEMPLATE</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743a2cc24446b8b7dd2477c169ce3300e68d</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
       <name>BaseClass</name>
@@ -1068,10 +1075,24 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
-      <name>DoModelSearch</name>
+      <name>DoCircleSearch</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>a65f39d847bdd2acf543ed02db4e0bddd</anchor>
+      <anchor>acddf15bbc53d18fa6d13d58ca476fe4b</anchor>
       <arglist>(const iimg::IBitmap &amp;image, const i2d::CRect &amp;aoi, int scale, int minDistance, int edgeThreshold, int houghThreshold, int minRadius, int maxRadius, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoLineSearch</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a127a70871dab08381a34b6ee527e99da</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, const i2d::CRect &amp;aoi, int scale, int minDistance, int edgeThreshold, int houghThreshold, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoTemplateSearch</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a2b3f45b578fb54e59589139fb2c84c71</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, const iimg::IBitmap &amp;modelImage, const i2d::CRect &amp;aoi, const istd::CRange &amp;scaleRange, double scaleStep, const istd::CRange &amp;angleRange, double angleStep, int minDistance, int levels, const istd::CRange &amp;cannyEdgeThreshold, iipr::IFeaturesConsumer &amp;result)</arglist>
     </member>
   </compound>
   <compound kind="class">

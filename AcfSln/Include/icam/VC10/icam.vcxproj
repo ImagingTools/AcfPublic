@@ -115,6 +115,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAcquisitionConstraintsComp.cpp" />
+    <ClCompile Include="..\CBitmapSupplierMultiplexerComp.cpp" />
     <ClCompile Include="..\CCalibratedCameraComp.cpp" />
     <ClCompile Include="..\CCameraDelegatorComp.cpp" />
     <ClCompile Include="..\CExposureParamsComp.cpp" />
@@ -129,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAcquisitionConstraintsComp.h" />
+    <ClInclude Include="..\CBitmapSupplierMultiplexerComp.h" />
     <ClInclude Include="..\CCalibratedCameraComp.h" />
     <ClInclude Include="..\CCameraDelegatorComp.h" />
     <ClInclude Include="..\CExposureParamsComp.h" />

@@ -2,8 +2,8 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4468" Description="ACF"/>
-            <Version Id="1" Number="1811" Description="ACF-Solutions"/>
+            <Version Id="0" Number="4606" Description="ACF"/>
+            <Version Id="1" Number="1937" Description="ACF-Solutions"/>
             <Version Id="1023" Number="329217" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
@@ -85,6 +85,9 @@
                             </Values>
                         </Data>
                     </AttributeInfo>
+                    <AttributeInfo Id="TypeId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="Median"/>
+                    </AttributeInfo>
                 </AttributeInfoMap>
             </Data>
         </Element>
@@ -112,7 +115,7 @@
                     <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
                         <Data IsEnabled="false"/>
                     </AttributeInfo>
-                    <AttributeInfo Id="ParamsSet" Type="Reference" ExportId="">
+                    <AttributeInfo Id="ParamsSet" Type="Reference" ExportId="ParamsSet">
                         <Data IsEnabled="true" Value="Params"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
@@ -128,6 +131,6 @@
         <Interface InterfaceId="istd::IPolymorphic" ComponentId="Task"/>
     </ExportedInterfaces>
     <ExportedComponents>
-        <Component ExportedId="CurrentGrayImage" ComponentId="Bitmap"/>
+        <Component ExportedId="Params" ComponentId="Params"/>
     </ExportedComponents>
 </Acf>

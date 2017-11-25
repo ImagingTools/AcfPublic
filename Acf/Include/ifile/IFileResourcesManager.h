@@ -32,7 +32,6 @@
 #include <ilog/IMessageConsumer.h>
 #include <iprm/IOptionsList.h>
 #include <idoc/IDocumentMetaInfo.h>
-#include <ifile/IFileMetaInfoProvider.h>
 
 
 namespace ifile
@@ -50,8 +49,6 @@ class IFileResourcesManager: virtual public istd::IChangeable
 public:
 	typedef istd::TSmartPtr<istd::IChangeable> DataObjectPtr;
 	typedef QList<QByteArray> Ids;
-
-	typedef ifile::IFileMetaInfoProvider::MetaInfoPtr MetaInfoPtr;
 
 	/**
 		Status of the resource license.
@@ -123,7 +120,7 @@ public:
 		\param resourceId			ID of the file resource.
 		\return Pointer to the meta-info instance or \c NULL, if no information could be provided.
 	*/
-	virtual MetaInfoPtr GetFileMetaInfo(const QByteArray& resourceId) const = 0;
+	virtual const idoc::IDocumentMetaInfo* GetFileMetaInfo(const QByteArray& resourceId) const = 0;
 
 	/**
 		Get the name of the file resource in the storage.
