@@ -22237,9 +22237,9 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>KT_CIRC</name>
+      <name>KT_CIRCLE</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
-      <anchor>a02c5a832f8dc1b371b4efe653d865e9baeb1c938ed6515991174840cef71105fa</anchor>
+      <anchor>a02c5a832f8dc1b371b4efe653d865e9bad058d7ae108243b3b77635fc61137648</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
