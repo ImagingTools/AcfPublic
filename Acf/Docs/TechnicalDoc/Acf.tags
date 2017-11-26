@@ -2507,6 +2507,7 @@
     <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="no" imported="no">idoc/IDocumentMetaInfo.h</includes>
+    <includes id="_i_file_meta_info_provider_8h" name="IFileMetaInfoProvider.h" local="no" imported="no">ifile/IFileMetaInfoProvider.h</includes>
     <class kind="class">ifile::IFileResourcesManager</class>
     <namespace>ifile</namespace>
   </compound>
@@ -32380,10 +32381,10 @@
       <arglist>(const QByteArray &amp;fileId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual const idoc::IDocumentMetaInfo *</type>
+      <type>virtual ifile::IFileMetaInfoProvider::ConstMetaInfoPtr</type>
       <name>GetFileMetaInfo</name>
       <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
-      <anchor>ab9d121137f7304aaa07d5d676b143861</anchor>
+      <anchor>a98cf28e81a0978cdbc6c29b7ceae9838</anchor>
       <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
