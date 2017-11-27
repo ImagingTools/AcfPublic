@@ -32381,10 +32381,10 @@
       <arglist>(const QByteArray &amp;fileId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual ifile::IFileMetaInfoProvider::ConstMetaInfoPtr</type>
+      <type>virtual ifile::IFileMetaInfoProvider::MetaInfoPtr</type>
       <name>GetFileMetaInfo</name>
       <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
-      <anchor>a98cf28e81a0978cdbc6c29b7ceae9838</anchor>
+      <anchor>a14bc2c2bb0663728130a95338e8ed046</anchor>
       <arglist>(const QByteArray &amp;resourceId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
