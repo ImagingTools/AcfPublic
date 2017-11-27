@@ -32338,6 +32338,13 @@
       <anchor>aa3e2ae2231a08ad072ae46c12a7552b0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>IFileMetaInfoProvider::MetaInfoPtr</type>
+      <name>MetaInfoPtr</name>
+      <anchorfile>classifile_1_1_i_file_resources_manager.html</anchorfile>
+      <anchor>a4d29b1b91451ace7fbcd931f9284db2e</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual Ids</type>
       <name>GetFileIds</name>
