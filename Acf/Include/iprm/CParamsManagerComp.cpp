@@ -315,6 +315,12 @@ void CParamsManagerComp::OnComponentCreated()
 		}
 	}
 
+	m_selectedIndex = -1;
+
+	if (m_defaultSelectedIndexAttrPtr.IsValid() && (*m_defaultSelectedIndexAttrPtr < fixedSetsCount)){
+		m_selectedIndex = *m_defaultSelectedIndexAttrPtr;
+	}
+
 	BaseClass::OnComponentCreated();
 }
 
