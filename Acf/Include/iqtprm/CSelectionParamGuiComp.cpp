@@ -41,6 +41,23 @@ CSelectionParamGuiComp::CSelectionParamGuiComp()
 
 // protected methods
 
+void CSelectionParamGuiComp::DoGuiRetranslate()
+{
+	UpdateBlocker updateBlocker(this);
+
+	BaseClass::OnGuiRetranslate();
+
+	if (m_infoLabelAttrPtr.IsValid()){
+		InfoLabel->setText(*m_infoLabelAttrPtr);
+	}
+
+	UpdateSelectorLabel();
+
+	UpdateDescriptionFrame();
+
+}
+
+
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void CSelectionParamGuiComp::OnGuiModelAttached()
@@ -57,6 +74,8 @@ void CSelectionParamGuiComp::OnGuiModelAttached()
 			}
 		}
 	}
+
+	DoGuiRetranslate();
 }
 
 
@@ -133,17 +152,7 @@ void CSelectionParamGuiComp::OnGuiShown()
 
 void CSelectionParamGuiComp::OnGuiRetranslate()
 {
-	UpdateBlocker updateBlocker(this);
-
-	BaseClass::OnGuiRetranslate();
-
-	if (m_infoLabelAttrPtr.IsValid()){
-		InfoLabel->setText(*m_infoLabelAttrPtr);
-	}
-
-	UpdateSelectorLabel();
-
-	UpdateDescriptionFrame();
+	DoGuiRetranslate();
 }
 
 
@@ -249,6 +258,26 @@ void CSelectionParamGuiComp::OnResetButtonClicked()
 }
 
 
+void CSelectionParamGuiComp::OnFilterTextEdited(const QString& text)
+{
+	QLineEdit* signalSenderPtr = dynamic_cast<QLineEdit*>(BaseClass::sender());
+	if (signalSenderPtr != NULL){
+		QComboBox* comboBoxPtr = dynamic_cast<QComboBox*>(signalSenderPtr->parentWidget());
+		if (comboBoxPtr != NULL){
+			QSortFilterProxyModel* modelPtr = dynamic_cast<QSortFilterProxyModel*>(comboBoxPtr->lineEdit()->completer()->model());
+			if (modelPtr != NULL) {
+				QString stringFilter = text;
+				// some recover special symbols in string, may be should add another translate for special symbols
+				stringFilter.replace("*", ".*");
+				modelPtr->blockSignals(true);
+				modelPtr->setFilterRegExp(QRegExp(stringFilter, Qt::CaseInsensitive));
+				modelPtr->blockSignals(false);
+			}
+		}
+	}
+}
+
+
 // private methods
 
 void CSelectionParamGuiComp::UpdateComboBoxesView()
@@ -285,7 +314,7 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 
 				switchBoxPtr->lineEdit()->setCompleter(completer);
 
-				BaseClass::connect(switchBoxPtr->lineEdit(), SIGNAL(textEdited(QString)), this, SLOT(ApplyFilterToProxyModel(QString)));
+				BaseClass::connect(switchBoxPtr->lineEdit(), SIGNAL(textEdited(const QString&)), this, SLOT(OnFilterTextEdited(const QString&)));
 			}
 
 			m_comboBoxes.PushBack(switchBoxPtr);
@@ -678,24 +707,6 @@ QRadioButton* CSelectionParamGuiComp::RadioButtonWidget::GetRadioButton() const
 	return m_radioButtonPtr;
 }
 
-void CSelectionParamGuiComp::ApplyFilterToProxyModel(const QString& /*filter*/) const
-{
-	QLineEdit* signalSenderPtr = dynamic_cast<QLineEdit*>(BaseClass::sender());
-	if (signalSenderPtr != NULL){
-		QComboBox* comboBoxPtr = dynamic_cast<QComboBox*>(signalSenderPtr->parentWidget());
-		if (comboBoxPtr != NULL){
-			QSortFilterProxyModel* modelPtr = dynamic_cast<QSortFilterProxyModel*>(comboBoxPtr->lineEdit()->completer()->model());
-			if (modelPtr != NULL) {
-				QString stringFilter = comboBoxPtr->lineEdit()->text();
-				// some recover special symbols in string, may be should add another translate for special symbols
-				stringFilter.replace("*", ".*");
-				modelPtr->blockSignals(true);
-				modelPtr->setFilterRegExp(QRegExp(stringFilter, Qt::CaseInsensitive));
-				modelPtr->blockSignals(false);
-			}
-		}
-	}
-}
 
 } // namespace iqtprm
 

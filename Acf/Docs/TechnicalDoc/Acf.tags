@@ -58008,6 +58008,20 @@
       <anchor>ab37905e1efb51df0fd859c86e5bc822d</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnFilterTextEdited</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>a0137d1c43b5ab53ca1a0224011c09937</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DoGuiRetranslate</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>af4804304d9815b3898205f2b24d97969</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
