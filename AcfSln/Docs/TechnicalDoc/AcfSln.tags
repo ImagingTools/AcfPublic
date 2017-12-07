@@ -5806,13 +5806,6 @@
       <arglist>(int validSymbolCount)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual imath::CVarVector</type>
-      <name>GetPosition</name>
-      <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>
-      <anchor>ae22d6899363edd6ba9e1527c6a26349d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetData</name>
       <anchorfile>classibarcode_1_1_c_barcode_search_feature.html</anchorfile>

@@ -67,8 +67,6 @@ public:
 	virtual int GetValidSymbolCount() const;
 	virtual void SetValidSymbolCount(int validSymbolCount);
 
-	virtual imath::CVarVector GetPosition() const;
-
 	// reimplemented (IBarcode)
 	virtual void SetData(const QByteArray& barcodeData);
 
