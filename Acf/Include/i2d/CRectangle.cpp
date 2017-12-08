@@ -29,6 +29,7 @@
 // ACF includes
 #include <istd/TDelPtr.h>
 #include <istd/CChangeNotifier.h>
+#include <istd/CClassInfo.h>
 #include <iser/IArchive.h>
 #include <iser/CArchiveTag.h>
 #include <i2d/CVector2d.h>
@@ -58,6 +59,15 @@ static const iser::CArchiveTag s_bottomTag("Bottom", "Rectangle bottom edge posi
 static const iser::CArchiveTag s_leftTag("Left", "Rectangle left edge position", iser::CArchiveTag::TT_LEAF);
 static const iser::CArchiveTag s_rightTag("Right", "Rectangle right edge position", iser::CArchiveTag::TT_LEAF);
 
+
+
+// public static methods
+
+
+QByteArray CRectangle::GetTypeName()
+{
+	return istd::CClassInfo::GetName<CRectangle>();
+}
 
 
 // public methods
@@ -724,6 +734,15 @@ bool CRectangle::GetInvTransformed(
 	}
 
 	return false;
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CRectangle::GetFactoryId() const
+{
+
+	return GetTypeName();
 }
 
 

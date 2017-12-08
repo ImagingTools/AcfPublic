@@ -48,6 +48,8 @@ class CLine2d;
 class CRectangle: public CObject2dBase
 {
 public:
+	static QByteArray GetTypeName();
+
 	CRectangle();
 	CRectangle(double left, double top, double width, double height);
 	CRectangle(const CVector2d& topLeft, const CVector2d& bottomRight);
@@ -318,6 +320,9 @@ public:
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
+
+	// reimplemented (iser::IObject)
+	virtual QByteArray GetFactoryId() const;
 	
 	// reimplemented (istd::IChangeable)
 	virtual int GetSupportedOperations() const;

@@ -26,6 +26,7 @@
 // ACF includes
 #include <istd/TDelPtr.h>
 #include <istd/CChangeNotifier.h>
+#include <istd/CClassInfo.h>
 #include <iser/IArchive.h>
 #include <iser/CArchiveTag.h>
 #include <i2d/CRectangle.h>
@@ -34,6 +35,17 @@
 namespace i2d
 {
 
+
+// public static methods
+
+
+QByteArray CPosition2d::GetTypeName()
+{
+	return istd::CClassInfo::GetName<CPosition2d>();
+}
+
+
+// public methods
 
 CPosition2d::CPosition2d()
 :	m_position(0, 0)
@@ -167,6 +179,15 @@ bool CPosition2d::GetInvTransformed(
 	resultPositionPtr->SetPosition(transPos);
 
 	return true;
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CPosition2d::GetFactoryId() const
+{
+
+	return GetTypeName();
 }
 
 
