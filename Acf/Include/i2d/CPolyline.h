@@ -39,10 +39,8 @@ namespace i2d
 */
 class CPolyline: public CPolygon
 {
-	typedef CPolygon BaseClass;
-
 public:
-	static QByteArray GetTypeName();
+	typedef CPolygon BaseClass;
 
 	CPolyline();
 
@@ -76,9 +74,6 @@ public:
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
-
-	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented istd::IChangeable
 	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);

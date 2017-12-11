@@ -42,10 +42,8 @@ class CPolygon;
 */
 class CCircle: public CPosition2d
 {
-	typedef CPosition2d BaseClass;
-
 public:
-	static QByteArray GetTypeName();
+	typedef CPosition2d BaseClass;
 
 	CCircle();
 	CCircle(double radius, const CVector2d& center);
@@ -115,9 +113,6 @@ public:
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
-
-	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented istd::IChangeable
 	virtual int GetSupportedOperations() const;

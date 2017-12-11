@@ -168,10 +168,8 @@ bool COcvEdgeExtractorComp::DoContourExtraction(
 		}
 
 		resultLine.SetClosed(true);
-
-		edgesContainerPtr->PushBack(resultLine);
 	}
-
+		
 	return true;
 }
 

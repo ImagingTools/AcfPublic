@@ -39,10 +39,8 @@ namespace i2d
 */
 class CLabel: public i2d::CPosition2d
 {
-	typedef i2d::CPosition2d BaseClass;
-
 public:
-	static QByteArray GetTypeName();
+	typedef i2d::CPosition2d BaseClass;
 
 	/**
 		Construct the label object with predefined parameters.
@@ -63,9 +61,6 @@ public:
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
-
-	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented istd::IChangeable
 	virtual int GetSupportedOperations() const;

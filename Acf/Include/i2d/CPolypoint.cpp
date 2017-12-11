@@ -28,22 +28,12 @@
 
 // ACF includes
 #include <istd/TDelPtr.h>
-#include <istd/CClassInfo.h>
 #include <i2d/CLine2d.h>
 #include <i2d/CAffineTransformation2d.h>
 
 
 namespace i2d
 {
-
-
-// public static methods
-
-
-QByteArray CPolypoint::GetTypeName()
-{
-	return istd::CClassInfo::GetName<CPolypoint>();
-}
 
 
 // public methods
@@ -263,15 +253,6 @@ bool CPolypoint::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.EndTag(isOldFormat? polygonTag: pointsTag);
 
 	return retVal;
-}
-
-
-// reimplemented (iser::IObject)
-
-QByteArray CPolypoint::GetFactoryId() const
-{
-
-	return GetTypeName();
 }
 
 

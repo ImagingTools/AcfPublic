@@ -62,7 +62,7 @@
                         <Data IsEnabled="true" Value="IACF"/>
                     </AttributeInfo>
                     <AttributeInfo Id="VersionNumber" Type="Integer" ExportId="">
-                        <Data IsEnabled="true" Value="806"/>
+                        <Data IsEnabled="true" Value="807"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
             </Data>

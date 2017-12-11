@@ -42,8 +42,6 @@ namespace i2d
 class CPolypoint: public CObject2dBase
 {
 public:
-	static QByteArray GetTypeName();
-
 	/**
 		Removes all nodes.
 	*/
@@ -120,17 +118,14 @@ public:
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
 
-	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const;
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IChangeable)
 	virtual int GetSupportedOperations() const;
 	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
 	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 	virtual bool IsEqual(const IChangeable& object) const;
-
-	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
 
 protected:
 	static const istd::IChangeable::ChangeSet s_clearAllNodesChange;

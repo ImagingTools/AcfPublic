@@ -39,8 +39,6 @@ namespace i2d
 class CPosition2d: public CObject2dBase
 {
 public:
-	static QByteArray GetTypeName();
-
 	CPosition2d();
 	CPosition2d(const CVector2d& center);
 
@@ -71,9 +69,6 @@ public:
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
 				double* errorFactorPtr = NULL) const;
-
-	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (istd::IChangeable)
 	virtual int GetSupportedOperations() const;

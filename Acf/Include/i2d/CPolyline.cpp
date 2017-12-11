@@ -26,7 +26,6 @@
 // ACF includes
 #include <istd/TDelPtr.h>
 #include <istd/CChangeNotifier.h>
-#include <istd/CClassInfo.h>
 
 
 namespace i2d
@@ -36,16 +35,6 @@ namespace i2d
 // static constants
 static const iser::CArchiveTag s_closedTag("Closed", "Closed", iser::CArchiveTag::TT_LEAF);
 
-
-// public static methods
-
-QByteArray CPolyline::GetTypeName()
-{
-	return istd::CClassInfo::GetName<CPolyline>();
-}
-
-
-// public methods
 
 void CPolyline::SetClosed(bool state)
 {
@@ -167,14 +156,6 @@ bool CPolyline::Serialize(iser::IArchive& archive)
 	}
 
 	return retVal;
-}
-
-
-// reimplemented (iser::IObject)
-
-QByteArray CPolyline::GetFactoryId() const {
-
-	return GetTypeName();
 }
 
 
