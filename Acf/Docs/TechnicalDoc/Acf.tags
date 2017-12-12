@@ -8243,6 +8243,13 @@
       <arglist>(const CVector2d &amp;position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>ab9e823aebadabe36bbd360623d6e2d3b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
@@ -8291,13 +8298,6 @@
       <anchor>a7d86f36783225e79676c6fc59d82b463</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QByteArray</type>
-      <name>GetFactoryId</name>
-      <anchorfile>classiser_1_1_i_object.html</anchorfile>
-      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="variable" protection="protected">
       <type>istd::CRange</type>
       <name>m_radiusRange</name>
@@ -8311,6 +8311,13 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>ac52dc2bacd2db9e64c8f164987e29ba2</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>a30ec1b7cd615c0fdac69a7c441bfb2c8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static const ChangeSet</type>
@@ -8801,6 +8808,13 @@
       <anchor>ac0866f1d0c873a1bf2013bc59a2a149b</anchor>
       <arglist>(const CLine2d &amp;line, i2d::CVector2d &amp;result1, i2d::CVector2d &amp;result2) const </arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a73d4cbdfb4fc0e4226fd0c38e84653da</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>double</type>
       <name>m_startAngle</name>
@@ -8821,6 +8835,13 @@
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
       <anchor>a62fefbfbe664cd46152b361336a9db23</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
+      <anchor>a17b81963c996b324a4f8c06b30d8b29e</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9064,6 +9085,13 @@
       <arglist>(int nodeIndex) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a520314c35cd34a919583f01dfad4ec11</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
@@ -9237,6 +9265,20 @@
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>add29cacdf51401c27d444511753efac0</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>af9c376ad86a983da98f94777b28ef8b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a004398bd3a0bd6878caf5934bc91ab1d</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static const istd::IChangeable::ChangeSet</type>
@@ -9416,6 +9458,13 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a57900ee09841e946d173e25687ba7d6e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_label.html</anchorfile>
@@ -9470,6 +9519,13 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>a9895f587143a792562037e83b3364288</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classi2d_1_1_c_label.html</anchorfile>
+      <anchor>a8ea02f96032d4b4c159a00be271a9287</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10625,6 +10681,13 @@
       <anchor>aa8b9b2eddb7170b1ba39f3b0aeedc007</anchor>
       <arglist>() const =0</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiser_1_1_i_object.html</anchorfile>
+      <anchor>abae3ddcb3be9fcd24ec21b87445e5d7e</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Serialize</name>
@@ -10917,6 +10980,13 @@
     <filename>classi2d_1_1_c_polygon.html</filename>
     <base>i2d::CPolypoint</base>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>ab9bfe1ea93b34aa74599b4bde167d00f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
@@ -11033,6 +11103,13 @@
     <filename>classi2d_1_1_c_position2d.html</filename>
     <base>i2d::CObject2dBase</base>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
+      <anchor>aba7e6284cea744314dac68cc90a2a27d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
@@ -11052,13 +11129,6 @@
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
       <anchor>a6bd001f163d333a7d3d0bfa7eac5d3ee</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>aba7e6284cea744314dac68cc90a2a27d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12177,6 +12247,20 @@
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>a6902c6e42cd2547b1540a9d67a2234ed</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
+      <anchor>aaa9e66e407475792d749c755f0523a12</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
@@ -12197,12 +12281,12 @@
       <anchor>a47acd20c0d15a18c4e68159b2bec777d</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>aaa9e66e407475792d749c755f0523a12</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a845c61d20449d8581b098e9ffe6e6ba6</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const i2d::CRectangle &amp;</type>
@@ -33734,97 +33818,6 @@
     <filename>classiimg_1_1_c_bitmap.html</filename>
     <base>iimg::CBitmapBase</base>
     <base virtualness="virtual">iimg::IQImageProvider</base>
-    <member kind="typedef">
-      <type>iimg::CBitmapBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>aea58008ac622a9c69f4061e86d12b170</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>i2d::CObject2dBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
-      <anchor>a6faf1fa0bbe546bae239452558d71e43</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>PixelFormat</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_UNKNOWN</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ead877d1825ea7c83cd83c377c4d8e4ba4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_MONO</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eaf49e4891287e4f4283902f7c20dc532d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_GRAY</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac69d6ee4375ead4b1381f7e2d4b32eb8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_RGB</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eae1e0393b1a6897adbf4f73afe1c6a93d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_RGBA</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea941311bdd09e1a76a60d1993929f3738</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_GRAY16</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_GRAY32</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_FLOAT32</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea954488c86a9130db252ced552e97f361</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_FLOAT64</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac1a692dabc73f496db90aad5e43720c7</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_USER</name>
-      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
-      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CBitmap</name>
@@ -33966,6 +33959,13 @@
       <arglist>(const istd::CIndex2d &amp;position) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
+      <anchor>a36b5596ff84450fdb224c43040866c9e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
@@ -34056,6 +34056,13 @@
       <anchor>a8e0cc2546902be76780c9424a350602b</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
+      <anchor>a313515741d69d22be95ca155dd497182</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QImage::Format</type>
       <name>CalcQtFormat</name>
@@ -34076,6 +34083,90 @@
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
       <anchor>ae542113e57fe5bbf2d5e7eaa37cf63c6</anchor>
       <arglist>(const QImage &amp;image)</arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CObject2dBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a6faf1fa0bbe546bae239452558d71e43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>PixelFormat</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_UNKNOWN</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ead877d1825ea7c83cd83c377c4d8e4ba4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_MONO</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eaf49e4891287e4f4283902f7c20dc532d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_GRAY</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac69d6ee4375ead4b1381f7e2d4b32eb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_RGB</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eae1e0393b1a6897adbf4f73afe1c6a93d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_RGBA</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea941311bdd09e1a76a60d1993929f3738</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_GRAY16</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_GRAY32</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea0e484bc2610a25401c4164ebce16a475</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_FLOAT32</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea954488c86a9130db252ced552e97f361</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_FLOAT64</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac1a692dabc73f496db90aad5e43720c7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_USER</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

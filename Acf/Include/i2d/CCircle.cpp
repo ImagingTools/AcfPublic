@@ -25,12 +25,13 @@
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
+#include <istd/TDelPtr.h>
+#include <istd/CClassInfo.h>
 #include <i2d/CAffine2d.h>
 #include <i2d/CRectangle.h>
 #include <i2d/CPolyline.h>
 #include <iser/IArchive.h>
 #include <iser/CArchiveTag.h>
-#include <istd/TDelPtr.h>
 
 
 namespace i2d
@@ -39,6 +40,15 @@ namespace i2d
 
 // static constants
 static const iser::CArchiveTag s_radiusTag("Radius", "Circle radius", iser::CArchiveTag::TT_LEAF);
+
+
+// public static methods
+
+
+QByteArray CCircle::GetTypeName()
+{
+	return istd::CClassInfo::GetName<CCircle>();
+}
 
 
 // public methods
@@ -354,6 +364,15 @@ bool CCircle::GetInvTransformed(
 	circlePtr->SetRadius(m_radius);
 
 	return circlePtr->InvTransform(transformation, mode, errorFactorPtr);
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CCircle::GetFactoryId() const
+{
+
+	return GetTypeName();
 }
 
 

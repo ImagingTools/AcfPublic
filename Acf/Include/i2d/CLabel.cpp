@@ -26,6 +26,7 @@
 // ACF includes
 #include <istd/CChangeNotifier.h>
 #include <istd/TDelPtr.h>
+#include <istd/CClassInfo.h>
 #include <iser/CArchiveTag.h>
 
 
@@ -35,6 +36,15 @@ namespace i2d
 
 // static constants
 static const iser::CArchiveTag s_textTag("Text", "Text of label", iser::CArchiveTag::TT_LEAF);
+
+
+
+// public static methods
+
+QByteArray CLabel::GetTypeName()
+{
+	return istd::CClassInfo::GetName<CLabel>();
+}
 
 
 // public methods
@@ -66,6 +76,14 @@ bool CLabel::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.EndTag(s_textTag);
 
 	return retVal;
+}
+
+
+// reimplemented (iser::IObject)
+
+QByteArray CLabel::GetFactoryId() const {
+
+	return GetTypeName();
 }
 
 
