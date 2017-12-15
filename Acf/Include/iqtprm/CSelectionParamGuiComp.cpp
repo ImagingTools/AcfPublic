@@ -41,23 +41,6 @@ CSelectionParamGuiComp::CSelectionParamGuiComp()
 
 // protected methods
 
-void CSelectionParamGuiComp::DoGuiRetranslate()
-{
-	UpdateBlocker updateBlocker(this);
-
-	BaseClass::OnGuiRetranslate();
-
-	if (m_infoLabelAttrPtr.IsValid()){
-		InfoLabel->setText(*m_infoLabelAttrPtr);
-	}
-
-	UpdateSelectorLabel();
-
-	UpdateDescriptionFrame();
-
-}
-
-
 // reimplemented (iqtgui::TGuiObserverWrap)
 
 void CSelectionParamGuiComp::OnGuiModelAttached()
@@ -74,8 +57,6 @@ void CSelectionParamGuiComp::OnGuiModelAttached()
 			}
 		}
 	}
-
-	DoGuiRetranslate();
 }
 
 
@@ -152,7 +133,17 @@ void CSelectionParamGuiComp::OnGuiShown()
 
 void CSelectionParamGuiComp::OnGuiRetranslate()
 {
-	DoGuiRetranslate();
+	BaseClass::OnGuiRetranslate();
+
+	UpdateBlocker updateBlocker(this);
+
+	if (m_infoLabelAttrPtr.IsValid()){
+		InfoLabel->setText(*m_infoLabelAttrPtr);
+	}
+
+	UpdateSelectorLabel();
+
+	UpdateDescriptionFrame();
 }
 
 

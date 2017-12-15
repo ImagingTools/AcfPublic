@@ -116,9 +116,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.h" />
-  </ItemGroup>
-  <ItemGroup>
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\qrc_AcfSlnLoc.cpp" />
   </ItemGroup>
@@ -143,15 +140,15 @@
     <None Include="..\Translations\AcfSln_ru_RU.qm" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.arxout">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.arxout;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">echo Add ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.h to project HEADERS&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo Add ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp to project GENERATED_SOURCES</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">echo, echo</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.h;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.arxout;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">echo Add ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.h to project HEADERS&#x000D;&#x000A;if errorlevel 1 goto VCEnd&#x000D;&#x000A;echo Add ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp to project GENERATED_SOURCES</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">echo, echo</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.h;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp;%(Outputs)</Outputs>
+    <CustomBuild Include="..\AcfSlnLoc.acc">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfSlnLoc.acc;..\..\..\..\Acf\Config\AcfConfig.awc;..\..\..\Config\AcfSlnConfig.awc;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfSlnLoc.acc -o ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp -config ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\Config\AcfSlnConfig.awc -conf_name DebugVC12 -v</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ARX-Compiler</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\AcfSlnLoc.acc;..\..\..\..\Acf\Config\AcfConfig.awc;..\..\..\Config\AcfSlnConfig.awc;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfSlnLoc.acc -o ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp -config ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\Config\AcfSlnConfig.awc -conf_name ReleaseVC12 -v</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ARX-Compiler</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

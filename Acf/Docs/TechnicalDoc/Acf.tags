@@ -58108,13 +58108,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>DoGuiRetranslate</name>
-      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
-      <anchor>af4804304d9815b3898205f2b24d97969</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>a56c87065e5e7a82af60141046247fc94</anchor>
