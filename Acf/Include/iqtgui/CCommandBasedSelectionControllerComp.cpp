@@ -39,6 +39,7 @@ const istd::IChangeable::ChangeSet s_commandsChangeSet(ibase::ICommandsProvider:
 CCommandBasedSelectionControllerComp::CCommandBasedSelectionControllerComp()
 	:m_commandsList("", 100, ibase::ICommand::CF_GLOBAL_MENU)
 {
+	EnableLocalization();
 }
 
 
@@ -51,6 +52,19 @@ const ibase::IHierarchicalCommand* CCommandBasedSelectionControllerComp::GetComm
 
 
 // protected methods
+
+// reimplemented (ibase::TLocalizableWrap)
+
+void CCommandBasedSelectionControllerComp::OnLanguageChanged()
+{
+	static const istd::IChangeable::ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+	istd::CChangeNotifier commandsNotifier(this, &commandsChangeSet);
+	Q_UNUSED(commandsNotifier);
+
+	m_mainMenuCommand.SetName(*m_rootMenuNameAttrPtr);
+	m_commandsList.SetVisuals(*m_menuNameAttrPtr, *m_menuNameAttrPtr, *m_menuDescriptionAttrPtr);
+}
+
 
 // reimpemented (imod::CSingleModelObserverBase)
 
@@ -76,8 +90,7 @@ void CCommandBasedSelectionControllerComp::OnComponentCreated()
 
 	BuildCommands();
 
-	m_mainMenuCommand.SetName(*m_rootMenuNameAttrPtr);
-	m_commandsList.SetVisuals(*m_menuNameAttrPtr, *m_menuNameAttrPtr, *m_menuDescriptionAttrPtr);
+	OnLanguageChanged();
 
 	m_rootMenuCommand.InsertChild(&m_mainMenuCommand);
 	m_mainMenuCommand.InsertChild(&m_commandsList);

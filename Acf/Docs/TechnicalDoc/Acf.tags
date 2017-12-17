@@ -4671,6 +4671,7 @@
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_t_localizable_wrap_8h" name="TLocalizableWrap.h" local="no" imported="no">ibase/TLocalizableWrap.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="no" imported="no">iprm/ISelectionParam.h</includes>
     <includes id="_i_icon_provider_8h" name="IIconProvider.h" local="no" imported="no">iqtgui/IIconProvider.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
@@ -49274,6 +49275,13 @@
       <anchor>adccb3305428d7d058282fe4cb54d8e47</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>af9bac4c7d8a92b4c9ffb3a934dced771</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>OnModelChanged</name>
@@ -49293,13 +49301,6 @@
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a5b024ab4b2bdcc1ac76c5148a94b8a5d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>ab387d3bc706d5720fdd23a3d0192a239</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -50733,6 +50734,13 @@
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>ab387d3bc706d5720fdd23a3d0192a239</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -52361,14 +52369,14 @@
   <compound kind="class">
     <name>iqtgui::CCommandBasedSelectionControllerComp</name>
     <filename>classiqtgui_1_1_c_command_based_selection_controller_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>TLocalizableWrap&lt; icomp::CComponentBase &gt;</base>
     <base protection="protected">TSingleModelObserverBase&lt; iprm::ISelectionParam &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
-      <anchor>a8e69ee49e5d5ed9be5f7ea0c6d7c79fb</anchor>
+      <anchor>a0ab4e43eefba8a4484897dfdbfd2792d</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -52391,6 +52399,13 @@
       <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
       <anchor>a9af515695dcccb6e4537f89c695cdacb</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnLanguageChanged</name>
+      <anchorfile>classiqtgui_1_1_c_command_based_selection_controller_comp.html</anchorfile>
+      <anchor>aae598ea226c7717416dc885717201fe8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -67549,6 +67564,13 @@
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a500fdff5123071a74315fd1a7976d83c</anchor>
       <arglist>(bool isFullScreen)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>RetranslateGui</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a5a73fffeb1a0661e335c2599cf242ca3</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CViewport &amp;</type>

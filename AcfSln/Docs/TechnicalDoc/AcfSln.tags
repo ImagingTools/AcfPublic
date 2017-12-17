@@ -30485,6 +30485,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>aafcf3b4b949e1f0112ea31a691458462</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a42dc658c6fe4765fff7d191bf6ffb6f5</anchor>

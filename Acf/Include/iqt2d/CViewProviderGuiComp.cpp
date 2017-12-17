@@ -159,6 +159,19 @@ void CViewProviderGuiComp::OnGuiDestroyed()
 }
 
 
+void CViewProviderGuiComp::OnGuiRetranslate()
+{
+	static const istd::IChangeable::ChangeSet commandsChangeSet(ibase::ICommandsProvider::CF_COMMANDS);
+	istd::CChangeNotifier commandsNotifier(this, &commandsChangeSet);
+	Q_UNUSED(commandsNotifier);
+
+	iview::CConsoleGui* consolePtr = GetQtWidget();
+	if (consolePtr != NULL){
+		consolePtr->RetranslateGui();
+	}
+}
+
+
 // reimplemented (imod::CMultiModelDispatcherBase)
 
 void CViewProviderGuiComp::OnModelChanged(int /*modelId*/, const istd::IChangeable::ChangeSet& /*changeSet*/)

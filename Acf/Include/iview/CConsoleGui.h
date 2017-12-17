@@ -89,7 +89,9 @@ public:
 	void SetShapeStatusInfo(IShapeStatusInfo* shapeStatusInfoPtr);
 
 	bool IsFullScreenMode() const;
-	void SetFullScreenMode(bool isFullScreen);	
+	void SetFullScreenMode(bool isFullScreen);
+
+	void RetranslateGui();
 
 	// reimplemented (iview::CConsoleBase)
 	virtual const CViewport& GetView() const;
