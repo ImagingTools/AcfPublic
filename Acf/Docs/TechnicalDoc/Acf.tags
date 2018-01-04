@@ -70629,6 +70629,41 @@
       <anchor>a3cdeb4c2e709e80b000c07f4c1e1f893</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>EditMode</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a66f68b7f9ea5d088c39b0ce4dab3404e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_NONE</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a66f68b7f9ea5d088c39b0ce4dab3404eab86ed030e596b074b0ded5532543840d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_BASIC</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a66f68b7f9ea5d088c39b0ce4dab3404ea2c7c60b5d3895c6c3cdd4ec7213530d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_LEFT</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a66f68b7f9ea5d088c39b0ce4dab3404ea1224cd672de2016c47cab946a8b31b17</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>EM_RIGHT</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a66f68b7f9ea5d088c39b0ce4dab3404ea368b9c4d23bee7c07af1b24d880f0359</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DrawCurve</name>
@@ -70642,6 +70677,34 @@
       <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
       <anchor>a6a6ab6ed262b555540fda9efcab944e7</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isAlwaysDraggable</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a98104d6dbdcccefd50e71479395352fb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_isOrientationVisible</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>afe1fa03588e5e94e11390ddf57bd3592</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_editMode</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a0b0bf54187af1415face590d23df1041</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_editedNodeIndex</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a7d23e45c95c913ab689c1659c8c39e0e</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
