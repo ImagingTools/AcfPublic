@@ -60,6 +60,7 @@ protected:
 
 	// reimplemented (iqtui::CGuiComponentBase)
 	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 };
 
 

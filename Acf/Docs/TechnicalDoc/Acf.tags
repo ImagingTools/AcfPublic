@@ -46693,6 +46693,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqt2d_1_1_c_image_view_comp.html</anchorfile>
+      <anchor>a93c2502b98b18d61ddf5b9cd76b7d279</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiModelShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>abb88b93f9501687206f5e602465d7a48</anchor>
@@ -46773,13 +46780,6 @@
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>ab3580750fd2f0dc661cc082648044594</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae6d3a0820a47c572289ddd3d07a7da51</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
