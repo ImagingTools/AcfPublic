@@ -100,6 +100,7 @@ public:
 	virtual imod::IModel* GetWorkStatusModel() const;
 	virtual void InvalidateSupplier();
 	virtual void EnsureWorkInitialized();
+	virtual void EnsureWorkFinished();
 	virtual void ClearWorkResults();
 	virtual const ilog::IMessageContainer* GetWorkMessages(int containerType) const;
 	virtual iprm::IParamsSet* GetModelParametersSet() const;
@@ -182,8 +183,8 @@ protected:
 	virtual void OnComponentCreated();
 	virtual void OnComponentDestroyed();
 
-protected:
-	StatusModel m_workStatus;
+	// abstract methods
+	virtual int ProcessWorkOutput() = 0;
 
 	typedef imod::TModelWrap<ilog::CMessageContainer> MessageContainer;
 	mutable MessageContainer m_messageContainers[MTC_LAST + 1];
@@ -243,6 +244,10 @@ private:
 	InputSuppliersMap m_inputSuppliersMap;
 
 	iprm::IParamsSet* m_paramsSetPtr;
+
+	StatusModel m_workStatus;
+	int m_lastWorkState;
+	bool m_isInputValid;
 
 	bool m_areParametersValid;
 

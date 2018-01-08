@@ -8393,10 +8393,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8439,6 +8439,13 @@
       <name>EnsureWorkInitialized</name>
       <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
       <anchor>ac9d1fbf8101955db8edca1f1392f3293</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a5a2f12d0dc4773ec438e2b7b6d1413ee</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -8558,13 +8565,6 @@
       <name>m_productPtr</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>StatusModel</type>
-      <name>m_workStatus</name>
-      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
-      <anchor>a989b1794443d4cd7bc7e23deaf82754b</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -8956,10 +8956,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -9371,10 +9371,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -14091,10 +14091,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -14771,10 +14771,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18031,11 +18031,11 @@
       <anchor>aa6aade048f067aab9c6579680be5ff2c</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
-      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
-      <anchor>af7066d9359298b7a7bec92b29bf0f734</anchor>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
+      <anchorfile>classiinsp_1_1_c_supplier_comp_base.html</anchorfile>
+      <anchor>a303cff090c00b53b1cdec3931a18974f</anchor>
       <arglist>()=0</arglist>
     </member>
   </compound>
@@ -18134,6 +18134,13 @@
       <name>EnsureWorkInitialized</name>
       <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
       <anchor>a97a77bd08359c882299150cf4515de03</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>EnsureWorkFinished</name>
+      <anchorfile>classiinsp_1_1_i_supplier.html</anchorfile>
+      <anchor>af7066d9359298b7a7bec92b29bf0f734</anchor>
       <arglist>()=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -18266,10 +18273,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18511,10 +18518,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19042,10 +19049,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19704,10 +19711,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20278,10 +20285,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20615,10 +20622,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -20817,10 +20824,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21496,10 +21503,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -21780,10 +21787,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22398,10 +22405,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22481,10 +22488,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -22550,10 +22557,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -23595,10 +23602,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -23711,10 +23718,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnsureWorkFinished</name>
+      <type>virtual int</type>
+      <name>ProcessWorkOutput</name>
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
-      <anchor>a6ebe530e75576c49516b27ce37944ea6</anchor>
+      <anchor>a05eeb021a10fef8682afeaff624323aa</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
