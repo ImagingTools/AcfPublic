@@ -109,8 +109,6 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 		}
 
 		if (info.state == AS_ATTACHED_UPDATING){
-			IObserver* observerPtr = findIter.key();
-
 			observerPtr->AfterUpdate(this, m_cumulatedChangeIds);
 		}
 
