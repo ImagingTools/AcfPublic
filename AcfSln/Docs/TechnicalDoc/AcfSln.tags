@@ -4014,7 +4014,7 @@
       <type>@</type>
       <name>QTSERVICE_STARTUP</name>
       <anchorfile>class_qt_service_sys_private.html</anchorfile>
-      <anchor>a2b309fedb8acfa79c0cfead9d499ff81a70a139c76d7516e5661626df0e341c21</anchor>
+      <anchor>a3b494cbdc486a6b6d91fced87b810099a70a139c76d7516e5661626df0e341c21</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -30264,7 +30264,7 @@
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp_base.html</anchorfile>
-      <anchor>a0826b1dc6a7362db434d747d51dc5838</anchor>
+      <anchor>a63f64fc02225bbfb8411be2cfa7db8ed</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -30308,11 +30308,25 @@
       <anchor>aaf567d81493ff1fd3b1e02461dd7f453af61786cd9fbf9e7ebf077cd13423cea3</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_SUPPLIER_RESULTS_START_ID</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>ae288af12dd511e3023d087c536771088aa8f41f8551299a8ee2c31229fe253c48</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_VISUAL_STATUS_START_ID</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>ae288af12dd511e3023d087c536771088ac669afbbf1368ea76bf7842755716cbf</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a28840ec49d7930bcf11fbf9e6033bd86</anchor>
+      <anchor>a5de0e7e329be3e6020a5a1e260c4b11a</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">

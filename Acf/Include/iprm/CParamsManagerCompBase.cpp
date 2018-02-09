@@ -269,7 +269,7 @@ int CParamsManagerCompBase::GetIndexOperationFlags(int index) const
 		retVal |= MF_SUPPORT_EDIT;
 
 		if (index < m_fixedParamSetsCompPtr.GetCount() && !*m_allowEditFixedAttrPtr){
-			retVal &= ~MF_SUPPORT_EDIT;		
+			retVal &= ~MF_SUPPORT_EDIT;
 		}
 	}
 
@@ -468,7 +468,7 @@ void CParamsManagerCompBase::EnsureParamsSetModelDetached(iprm::IParamsSet* para
 {
 	imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(paramsSetPtr);
 	if (modelPtr != NULL){
-		modelPtr->DetachAllObservers();				
+		modelPtr->DetachAllObservers();
 	}
 }
 
@@ -476,7 +476,7 @@ void CParamsManagerCompBase::EnsureParamsSetModelDetached(iprm::IParamsSet* para
 QString CParamsManagerCompBase::CalculateNewDefaultName() const
 {
 	QString defaultSetName = *m_defaultSetNameAttrPtr;
-	if (defaultSetName.contains("%1")){			
+	if (defaultSetName.contains("%1")){
 		QString tmpName;
 		for (int suffixIndex = 1; suffixIndex < 1000; ++suffixIndex){
 			tmpName = defaultSetName;

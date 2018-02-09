@@ -4237,9 +4237,10 @@
     <path>C:/Temp/Acf/Include/iqt2d/</path>
     <filename>_c_multi_bitmap_view_comp_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="no" imported="no">istd/TPointerVector.h</includes>
+    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <includes id="_t_single_model_observer_base_8h" name="TSingleModelObserverBase.h" local="no" imported="no">imod/TSingleModelObserverBase.h</includes>
-    <includes id="_i_information_provider_8h" name="IInformationProvider.h" local="no" imported="no">istd/IInformationProvider.h</includes>
+    <includes id="_c_selection_param_8h" name="CSelectionParam.h" local="no" imported="no">iprm/CSelectionParam.h</includes>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="no" imported="no">iqt2d/IViewExtender.h</includes>
@@ -34136,6 +34137,13 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>PF_RGB24</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea4c5e7557ec4b021dd0e478e1ff7f4015</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>PF_GRAY16</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39</anchor>
@@ -36655,6 +36663,13 @@
       <anchor>a1a6ba55008070d1b0dea497170005138</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
+      <anchor>a4336517652c10e6531a7189cb346ea3a</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CMessageContainer</name>
@@ -36717,13 +36732,6 @@
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
       <anchor>a10bdee6be0044da4682d55cbe4527083</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
-      <anchor>ac183f7730f07c39865ff4b97300b9aae</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -37000,6 +37008,13 @@
     <filename>classilog_1_1_c_message_container.html</filename>
     <base>THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</base>
     <base virtualness="virtual">ilog::IMessageConsumer</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ac183f7730f07c39865ff4b97300b9aae</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
@@ -47246,8 +47261,8 @@
       <type>virtual CSingleView *</type>
       <name>CreateView</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a56832537f36e4be1b89b810d38e9b639</anchor>
-      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+      <anchor>a36a80c00d54e1adddb76549895b10168</anchor>
+      <arglist>(QWidget *parentPtr, int id, const QString &amp;title, const QByteArray &amp;bitmapId)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -47307,6 +47322,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
+      <anchor>a5d3ee208e46d844951373876126df6ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a94242a0fa5d7badea7466d6dda97e797</anchor>
@@ -47318,13 +47340,6 @@
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
       <anchor>a7dab5727abe8a52b56bfe2040c54e240</anchor>
       <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type></type>
-      <name>I_MULTITEXTATTR</name>
-      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>a15972710eefa8f70f1d426f9561d9b46</anchor>
-      <arglist>(m_viewLabelPrefixesAttrPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -47338,13 +47353,6 @@
       <name>OnGuiModelHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
       <anchor>af9079aec3cd669b2bf0e0825a26d5d31</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aff6d896cdddc470303094516269eaecd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -47488,10 +47496,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_dynamicTitles</name>
+      <type>iprm::CSelectionParam</type>
+      <name>m_activeViewIndex</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp.html</anchorfile>
-      <anchor>ab5457379e1374d3e0c06b35bcafd66a4</anchor>
+      <anchor>a3bfe0cd911b7dcfc9bcaadde39f4b998</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -47580,8 +47588,8 @@
       <type></type>
       <name>CSingleView</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
-      <anchor>a47d5271d5e41ccfef4bde4df1e8ffb31</anchor>
-      <arglist>(QWidget *parentPtr, int id=-1, const QString &amp;title=&quot;&quot;)</arglist>
+      <anchor>a4f20fe44f6b1c0d3367bef4d4fc85e75</anchor>
+      <arglist>(QWidget *parentPtr, int id, const QString &amp;title, const QByteArray &amp;bitmapId)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -47672,6 +47680,13 @@
       <name>m_showStatusBackground</name>
       <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
       <anchor>a5713f5457568bb30ffcec446bf567849</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QByteArray</type>
+      <name>m_bitmapId</name>
+      <anchorfile>classiqt2d_1_1_c_multi_bitmap_view_comp_1_1_c_single_view.html</anchorfile>
+      <anchor>a80bf39539ef0245a067ee184653ef5d5</anchor>
       <arglist></arglist>
     </member>
   </compound>
