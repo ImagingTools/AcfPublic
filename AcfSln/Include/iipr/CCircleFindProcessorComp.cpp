@@ -103,15 +103,16 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 	extendedParamsSet.SetSlaveSet(paramsPtr);
 
 	i2d::CVector2d center;
+	int totalRaysCount = 0;
 
-	if (!AddAoiToRays(*aoiPtr, extendedParamsSet, image, *circleFinderParamsPtr, inRays, outRays, projectionLine, center)){
+	if (!AddAoiToRays(*aoiPtr, extendedParamsSet, image, *circleFinderParamsPtr, inRays, outRays, projectionLine, center, totalRaysCount)){
 		return TS_INVALID;
 	}
 
 	if (*m_searchForAnnulusAttrPtr){
 		istd::TDelPtr<AnnulusFeature> featurePtr(new AnnulusFeature());
 
-		bool isOk = CalculateAnnulus(center, inRays, outRays, *featurePtr);
+		bool isOk = CalculateAnnulus(center, inRays, outRays, totalRaysCount, *featurePtr);
 		AddIntermediateResults(inRays);
 		AddIntermediateResults(outRays);
 
@@ -148,6 +149,7 @@ int CCircleFindProcessorComp::DoExtractFeatures(
 					circleFinderParamsPtr->IsOutlierEliminationEnabled(),
 					circleFinderParamsPtr->GetMinOutlierDistance(),
 					usedRays,
+					totalRaysCount,
 					*featurePtr);
 
 		AddIntermediateResults(usedRays);
@@ -214,8 +216,10 @@ bool CCircleFindProcessorComp::AddAoiToRays(
 			Rays& inRays,
 			Rays& outRays,
 			i2d::CLine2d& projectionLine,
-			i2d::CVector2d& center)
+			i2d::CVector2d& center,
+			int& totalRaysCount)
 {
+	totalRaysCount = 0;
 	const iprm::CParamsSet* setPtr = dynamic_cast<const iprm::CParamsSet*>(&aoiObject);
 	if (setPtr != NULL){
 		int aoisCount = 0;
@@ -225,9 +229,13 @@ bool CCircleFindProcessorComp::AddAoiToRays(
 		for (int i = 0; i < paramsCount; ++i){
 			const iprm::CParamsSet::ParameterInfo* infoPtr = infos.GetAt(i);
 			if ((infoPtr != NULL) && infoPtr->parameterPtr.IsValid()){
-				if (!AddAoiToRays(*infoPtr->parameterPtr, params, image, circleFinderParams, inRays, outRays, projectionLine, center)){
+				int raysCount = 0;
+
+				if (!AddAoiToRays(*infoPtr->parameterPtr, params, image, circleFinderParams, inRays, outRays, projectionLine, center, raysCount)){
 					return false;
 				}
+
+				totalRaysCount += raysCount;
 
 				++aoisCount;
 			}
@@ -302,6 +310,8 @@ bool CCircleFindProcessorComp::AddAoiToRays(
 			AddProjectionResultsToRays(projectionLine, params, *caliperFeaturesProviderPtr, inRays, outRays);
 		}
 
+		totalRaysCount = stepsCount;
+
 		return true;
 	}
 
@@ -314,6 +324,7 @@ bool CCircleFindProcessorComp::CalculateCircle(
 			bool removeOutliers,
 			double minOutliersDistance,
 			Rays& rays,
+			int totalRaysCount,
 			CircleFeature& result)
 {
 	int raysCount = int(rays.size());
@@ -322,8 +333,6 @@ bool CCircleFindProcessorComp::CalculateCircle(
 	imath::CVarMatrix destVector;
 	matrix.SetSizes(istd::CIndex2d(3, raysCount));
 	destVector.SetSizes(istd::CIndex2d(1, raysCount));
-
-	double weightSum = 0;
 
 	int usedRaysCount = 0;
 
@@ -344,8 +353,6 @@ bool CCircleFindProcessorComp::CalculateCircle(
 
 			destVector.SetAt(istd::CIndex2d(0, i), position.GetLength2() * weight);
 
-			weightSum += weight;
-
 			++usedRaysCount;
 		}
 		else{
@@ -358,6 +365,7 @@ bool CCircleFindProcessorComp::CalculateCircle(
 
 	i2d::CVector2d position(0, 0);
 	double radius = 0;
+	double radiusError2Sum = 0;
 
 	bool doAgain;
 	do{
@@ -380,27 +388,30 @@ bool CCircleFindProcessorComp::CalculateCircle(
 		double relPosNorm = relX * relX + relY * relY;
 		radius = sqrt(relPosNorm - resultMatrix.GetAt(istd::CIndex2d(0, 2)));
 
-		if (removeOutliers){
-			double worseRadiusDiff = minOutliersDistance;
-			int worseIndex = -1;
+		double worseRadiusDiff = minOutliersDistance;
+		int worseIndex = -1;
 
-			for (int i = 0; i < raysCount; ++i){
-				Ray& ray = rays[i];
+		for (int i = 0; i < raysCount; ++i){
+			Ray& ray = rays[i];
 
-				if (ray.usedIndex >= 0){
-					Point& rayPoint = ray.points[ray.usedIndex];
+			if (ray.usedIndex >= 0){
+				Point& rayPoint = ray.points[ray.usedIndex];
 
-					double currentRadius = rayPoint.position.GetDistance(position);
+				double currentRadius = rayPoint.position.GetDistance(position);
 
-					double radiusDiff = qAbs(currentRadius - radius);
-					if (radiusDiff > worseRadiusDiff){
-						worseRadiusDiff = radiusDiff;
+				double radiusError2 = (currentRadius - radius) * (currentRadius - radius);
 
-						worseIndex = i;
-					}
+				if (radiusError2 > worseRadiusDiff){
+					worseRadiusDiff = radiusError2;
+
+					worseIndex = i;
 				}
-			}
 
+				radiusError2Sum += radiusError2;
+			}
+		}
+
+		if (removeOutliers){
 			if (worseIndex >= 0){
 				Ray& ray = rays[worseIndex];
 				Q_ASSERT(ray.usedIndex >= 0);
@@ -427,13 +438,8 @@ bool CCircleFindProcessorComp::CalculateCircle(
 					}
 				}
 
-				Point& usedRayPoint = ray.points[ray.usedIndex];
-				weightSum -= usedRayPoint.weight;
-
 				if (bestPointIndex >= 0){
 					Point& bestRayPoint = ray.points[bestPointIndex];
-
-					weightSum += bestRayPoint.weight;
 
 					// switch to another point in matrix
 					i2d::CVector2d bestPointPosition = bestRayPoint.position - center;
@@ -463,14 +469,20 @@ bool CCircleFindProcessorComp::CalculateCircle(
 
 	result.SetPosition(position);
 	result.SetRadius(radius);
-	result.SetWeight(weightSum / raysCount);
+	double circularity = qMax(0.0, 1 - radiusError2Sum / (0.25 * radius * radius * usedRaysCount));
+	result.SetWeight(circularity * usedRaysCount / totalRaysCount);
 	result.SetCalibration(m_resultCalibrationCompPtr.GetPtr());
 
 	return true;
 }
 
 
-bool CCircleFindProcessorComp::CalculateAnnulus(const i2d::CVector2d& center, Rays& inRays, Rays& outRays, AnnulusFeature& result)
+bool CCircleFindProcessorComp::CalculateAnnulus(
+			const i2d::CVector2d& center,
+			Rays& inRays,
+			Rays& outRays,
+			int /*totalRaysCount*/,
+			AnnulusFeature& result)
 {
 	int inRaysCount = int(inRays.size());
 	if (inRaysCount < 1){

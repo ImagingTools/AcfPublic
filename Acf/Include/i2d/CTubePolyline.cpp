@@ -1,0 +1,70 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+
+#include <i2d/CTubePolyline.h>
+
+
+namespace i2d
+{
+
+
+
+// reimplemented (i2d::IObject2d)
+
+bool CTubePolyline::Transform(
+			const ITransformation2d& transformation,
+			ITransformation2d::ExactnessMode mode,
+			double* errorFactorPt)
+{
+	int nodesCount = GetNodesCount();
+	if (nodesCount < 2){
+		return false;
+	}
+
+	for (int i = 0; i < nodesCount; ++i){
+		const i2d::CVector2d& knee = GetKneeVector(i);
+		const i2d::CVector2d& pos = GetNodePos(i);
+		const istd::CRange& range = GetTNodeData(i).GetTubeRange();
+
+		double newMin;
+		if (!transformation.GetDistance(pos, pos - knee * range.GetMinValue(), newMin)){
+			return false;
+		}
+
+		double newMax;
+		if (!transformation.GetDistance(pos, pos - knee * range.GetMaxValue(), newMax)){
+			return false;
+		}
+
+		double minSign = (range.GetMinValue() > 0) - (range.GetMinValue() < 0);
+		double maxSign = (range.GetMaxValue() > 0) - (range.GetMaxValue() < 0);
+		GetTNodeDataRef(i).SetTubeRange(istd::CRange(minSign*newMin, maxSign*newMax));
+	}
+
+	return BaseClass::Transform(transformation, mode, errorFactorPt);
+}
+
+
+} // namespace i2d
+
+

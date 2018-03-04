@@ -6602,8 +6602,8 @@
       <type>static bool</type>
       <name>DoCalculateBlobs</name>
       <anchorfile>classiblob_1_1_c_precise_blob_processor_comp.html</anchorfile>
-      <anchor>ac1a9095b280f25ab52c37184626ada13</anchor>
-      <arglist>(const istd::CRange &amp;relValueRange, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::CScanlineMask &amp;imageMask, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result, ilog::IMessageConsumer *resultConsumerPtr=NULL, ilog::IMessageConsumer *tempMessageConsumerPtr=NULL)</arglist>
+      <anchor>ab3319242d59835f639faa4bccb6642ab</anchor>
+      <arglist>(const istd::CRange &amp;valueRange, bool isRangeRelative, const iblob::IBlobFilterParams *filterParamsPtr, const iimg::CScanlineMask &amp;imageMask, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result, ilog::IMessageConsumer *resultConsumerPtr=NULL, ilog::IMessageConsumer *tempMessageConsumerPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -19524,22 +19524,22 @@
       <type>bool</type>
       <name>AddAoiToRays</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a00d7f8ade0f9ff1b5bf4e6160301b6ff</anchor>
-      <arglist>(const istd::IChangeable &amp;aoiObject, const iprm::IParamsSet &amp;params, const iimg::IBitmap &amp;image, const iipr::ICircleFinderParams &amp;circleFinderParams, Rays &amp;inRays, Rays &amp;outRays, i2d::CLine2d &amp;projectionLine, i2d::CVector2d &amp;center)</arglist>
+      <anchor>a1a64d3f57cc4ddfeebce5a7fd6b3f76e</anchor>
+      <arglist>(const istd::IChangeable &amp;aoiObject, const iprm::IParamsSet &amp;params, const iimg::IBitmap &amp;image, const iipr::ICircleFinderParams &amp;circleFinderParams, Rays &amp;inRays, Rays &amp;outRays, i2d::CLine2d &amp;projectionLine, i2d::CVector2d &amp;center, int &amp;totalRaysCount)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CalculateCircle</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a415967994d0019f6444814dd0bedca97</anchor>
-      <arglist>(const i2d::CVector2d &amp;center, bool removeOutliers, double minOutliersDistance, Rays &amp;rays, CircleFeature &amp;result)</arglist>
+      <anchor>a424a50fdc39eb21ef6735bbf39102ee1</anchor>
+      <arglist>(const i2d::CVector2d &amp;center, bool removeOutliers, double minOutliersDistance, Rays &amp;rays, int totalRaysCount, CircleFeature &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>CalculateAnnulus</name>
       <anchorfile>classiipr_1_1_c_circle_find_processor_comp.html</anchorfile>
-      <anchor>a6abdcec24fc49dce8060ad06b03c0f49</anchor>
-      <arglist>(const i2d::CVector2d &amp;center, Rays &amp;inRays, Rays &amp;outRays, AnnulusFeature &amp;result)</arglist>
+      <anchor>a4d0cb868c62ab13f8b7452e26c6422ed</anchor>
+      <arglist>(const i2d::CVector2d &amp;center, Rays &amp;inRays, Rays &amp;outRays, int totalRaysCount, AnnulusFeature &amp;result)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

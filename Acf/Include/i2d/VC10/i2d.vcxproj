@@ -151,6 +151,7 @@
     <ClCompile Include="..\CSpline.cpp" />
     <ClCompile Include="..\CSplineSegment.cpp" />
     <ClCompile Include="..\CTubeNode.cpp" />
+    <ClCompile Include="..\CTubePolyline.cpp" />
     <ClCompile Include="..\CTubePolylineComp.cpp" />
     <ClCompile Include="..\CVector2d.cpp" />
   </ItemGroup>

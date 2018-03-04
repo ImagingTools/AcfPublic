@@ -49,7 +49,8 @@ typedef icomp::TModelCompWrap<
 						iimg::IBitmap,
 						iimg::IQImageProvider,
 						iimg::IRasterImage,
-						iser::ISerializable> > Bitmap;
+						iser::ISerializable,
+						i2d::ICalibrationProvider> > Bitmap;
 
 typedef icomp::TModelCompWrap<
 			icomp::TMakeComponentWrap<

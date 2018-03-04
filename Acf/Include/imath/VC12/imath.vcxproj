@@ -141,6 +141,7 @@
     <ClInclude Include="..\IDoubleManip.h" />
     <ClInclude Include="..\IUnitInfo.h" />
     <ClInclude Include="..\TFastVector.h" />
+    <ClInclude Include="..\TFulcrumGrid.h" />
     <ClInclude Include="..\TFulcrumGridFunctionBase.h" />
     <ClInclude Include="..\TIMathFunction.h" />
     <ClInclude Include="..\TISampledFunction.h" />

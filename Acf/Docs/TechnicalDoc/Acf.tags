@@ -353,14 +353,8 @@
     <filename>_c_tube_polyline_8h</filename>
     <includes id="_t_data_node_polyline_8h" name="TDataNodePolyline.h" local="no" imported="no">i2d/TDataNodePolyline.h</includes>
     <includes id="_c_tube_node_8h" name="CTubeNode.h" local="no" imported="no">i2d/CTubeNode.h</includes>
+    <class kind="class">i2d::CTubePolyline</class>
     <namespace>i2d</namespace>
-    <member kind="typedef">
-      <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
-      <name>CTubePolyline</name>
-      <anchorfile>namespacei2d.html</anchorfile>
-      <anchor>af339c1831861ba94dc1d0996bc51a84b</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="file">
     <name>CTubePolylineComp.h</name>
@@ -1229,6 +1223,13 @@
     <includes id="icmm_8h" name="icmm.h" local="no" imported="no">icmm/icmm.h</includes>
     <class kind="class">icmm::TComposedColor</class>
     <namespace>icmm</namespace>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceicmm.html</anchorfile>
+      <anchor>aeb44e965d283858555c3447bf7f26fe4</anchor>
+      <arglist>(const TComposedColor&lt; Size &gt; &amp;color, uint seed=0)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>TComposedColorGradient.h</name>
@@ -3323,13 +3324,21 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>TFulcrumGrid.h</name>
+    <path>C:/Temp/Acf/Include/imath/</path>
+    <filename>_t_fulcrum_grid_8h</filename>
+    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="no" imported="no">istd/CChangeNotifier.h</includes>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="no" imported="no">iser/CArchiveTag.h</includes>
+    <class kind="class">imath::TFulcrumGrid</class>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
     <name>TFulcrumGridFunctionBase.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_t_fulcrum_grid_function_base_8h</filename>
-    <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="no" imported="no">istd/CChangeNotifier.h</includes>
     <includes id="_t_cached_update_manager_wrap_8h" name="TCachedUpdateManagerWrap.h" local="no" imported="no">istd/TCachedUpdateManagerWrap.h</includes>
-    <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
-    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="no" imported="no">iser/CArchiveTag.h</includes>
+    <includes id="_t_fulcrum_grid_8h" name="TFulcrumGrid.h" local="no" imported="no">imath/TFulcrumGrid.h</includes>
     <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="no" imported="no">imath/TIMathFunction.h</includes>
     <class kind="class">imath::TFulcrumGridFunctionBase</class>
     <namespace>imath</namespace>
@@ -5736,7 +5745,7 @@
     <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="no" imported="no">istd/CChangeNotifier.h</includes>
     <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="no" imported="no">istd/TOptDelPtr.h</includes>
     <class kind="class">istd::CEventBasedNotifier</class>
-    <class kind="class">istd::CAssyncNotifier</class>
+    <class kind="class">istd::CAsyncNotifier</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -7183,6 +7192,7 @@
     <class kind="class">i2d::CSpline</class>
     <class kind="class">i2d::CSplineSegment</class>
     <class kind="class">i2d::CTubeNode</class>
+    <class kind="class">i2d::CTubePolyline</class>
     <class kind="class">i2d::CTubePolylineComp</class>
     <class kind="class">i2d::CVector2d</class>
     <class kind="class">i2d::ICalibration2d</class>
@@ -7194,13 +7204,6 @@
     <class kind="class">i2d::ITransformation2d</class>
     <class kind="class">i2d::TDataNodePolyline</class>
     <class kind="class">i2d::TObject2dCompWrap</class>
-    <member kind="typedef">
-      <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
-      <name>CTubePolyline</name>
-      <anchorfile>namespacei2d.html</anchorfile>
-      <anchor>af339c1831861ba94dc1d0996bc51a84b</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type>uint</type>
       <name>qHash</name>
@@ -12620,6 +12623,102 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CTubePolyline</name>
+    <filename>classi2d_1_1_c_tube_polyline.html</filename>
+    <base>TDataNodePolyline&lt; CTubeNode &gt;</base>
+    <member kind="typedef">
+      <type>TDataNodePolyline&lt; CTubeNode &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline.html</anchorfile>
+      <anchor>a15ff629c2810248d9059640a78cb964e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>CDataNodePolylineBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a88d2a57fb675f2b98a3e83b23bb403ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_tube_polyline.html</anchorfile>
+      <anchor>a2fb6df288d88a17d92bf4af5173cf439</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>const CTubeNode &amp;</type>
+      <name>GetTNodeData</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a0d7d0eb5137140cead3e18ff32ddf1b3</anchor>
+      <arglist>(int nodeIndex) const</arglist>
+    </member>
+    <member kind="function">
+      <type>CTubeNode &amp;</type>
+      <name>GetTNodeDataRef</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a0d23fff4405c6aacff7eb990142d5f60</anchor>
+      <arglist>(int nodeIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetNodeData</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>ac486bd5a6e5e8c649d5edcfae460552c</anchor>
+      <arglist>(int nodeIndex) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable &amp;</type>
+      <name>GetNodeDataRef</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a4b94f12d4fa71b118285ee195d348f12</anchor>
+      <arglist>(int nodeIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a7649960d99c6638f722848dd9f5282fd</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetNodesCount</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>af09f0fa0ad2445dcb4d2ae975fb0d838</anchor>
+      <arglist>(int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>ab9c08b5954b53350f55517d9043adf11</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InsertNode</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a304572a8260cf331d878a211b1643e12</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveNode</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a1df706697750c63cad83f66011448d15</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a7f9ae310ba69af5674ffe2af74c106c4</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::CTubePolylineComp</name>
     <filename>classi2d_1_1_c_tube_polyline_comp.html</filename>
     <base>TObject2dCompWrap&lt; CTubePolyline &gt;</base>
@@ -12644,13 +12743,6 @@
       <anchor>af4791b7bcfeb29877dfb95f86bea181e</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>CDataNodePolylineBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a88d2a57fb675f2b98a3e83b23bb403ed</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
@@ -12664,55 +12756,6 @@
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
       <anchor>a1dc55887592940014ec9eb342dd65896</anchor>
       <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
-    </member>
-    <member kind="function">
-      <type>const NodeData &amp;</type>
-      <name>GetTNodeData</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a0d7d0eb5137140cead3e18ff32ddf1b3</anchor>
-      <arglist>(int nodeIndex) const </arglist>
-    </member>
-    <member kind="function">
-      <type>NodeData &amp;</type>
-      <name>GetTNodeDataRef</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a0d23fff4405c6aacff7eb990142d5f60</anchor>
-      <arglist>(int nodeIndex)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iser::ISerializable &amp;</type>
-      <name>GetNodeData</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>ac486bd5a6e5e8c649d5edcfae460552c</anchor>
-      <arglist>(int nodeIndex) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iser::ISerializable &amp;</type>
-      <name>GetNodeDataRef</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a4b94f12d4fa71b118285ee195d348f12</anchor>
-      <arglist>(int nodeIndex)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Clear</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a7649960d99c6638f722848dd9f5282fd</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>RemoveNode</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a1df706697750c63cad83f66011448d15</anchor>
-      <arglist>(int index)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a7f9ae310ba69af5674ffe2af74c106c4</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -13728,6 +13771,48 @@
     <filename>classi2d_1_1_t_data_node_polyline.html</filename>
     <templarg>NodeData</templarg>
     <base>i2d::CDataNodePolylineBase</base>
+    <member kind="typedef">
+      <type>CDataNodePolylineBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a88d2a57fb675f2b98a3e83b23bb403ed</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const NodeData &amp;</type>
+      <name>GetTNodeData</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a0d7d0eb5137140cead3e18ff32ddf1b3</anchor>
+      <arglist>(int nodeIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>NodeData &amp;</type>
+      <name>GetTNodeDataRef</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a0d23fff4405c6aacff7eb990142d5f60</anchor>
+      <arglist>(int nodeIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::ISerializable &amp;</type>
+      <name>GetNodeData</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>ac486bd5a6e5e8c649d5edcfae460552c</anchor>
+      <arglist>(int nodeIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::ISerializable &amp;</type>
+      <name>GetNodeDataRef</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a4b94f12d4fa71b118285ee195d348f12</anchor>
+      <arglist>(int nodeIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Clear</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a7649960d99c6638f722848dd9f5282fd</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNodesCount</name>
@@ -13748,6 +13833,20 @@
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
       <anchor>a304572a8260cf331d878a211b1643e12</anchor>
       <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveNode</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a1df706697750c63cad83f66011448d15</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
+      <anchor>a7f9ae310ba69af5674ffe2af74c106c4</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19001,6 +19100,13 @@
       <anchorfile>namespaceicmm.html</anchorfile>
       <anchor>a4dbeca8f12a8b30dc4deceaa036b22c4</anchor>
       <arglist>(const CFastColor &amp;color, uint seed=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint</type>
+      <name>qHash</name>
+      <anchorfile>namespaceicmm.html</anchorfile>
+      <anchor>aeb44e965d283858555c3447bf7f26fe4</anchor>
+      <arglist>(const TComposedColor&lt; Size &gt; &amp;color, uint seed=0)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -37857,6 +37963,7 @@
     <class kind="class">imath::IDoubleManip</class>
     <class kind="class">imath::IUnitInfo</class>
     <class kind="class">imath::TFastVector</class>
+    <class kind="class">imath::TFulcrumGrid</class>
     <class kind="class">imath::TFulcrumGridFunctionBase</class>
     <class kind="class">imath::TIMathFunction</class>
     <class kind="class">imath::TISampledFunction</class>
@@ -40084,60 +40191,208 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>imath::TFulcrumGridFunctionBase</name>
-    <filename>classimath_1_1_t_fulcrum_grid_function_base.html</filename>
-    <templarg>Argument</templarg>
-    <templarg>Result</templarg>
+    <name>imath::TFulcrumGrid</name>
+    <filename>classimath_1_1_t_fulcrum_grid.html</filename>
+    <templarg>Position</templarg>
     <templarg>Fulcrums</templarg>
-    <base>TCachedUpdateManagerWrap&lt; iser::ISerializable &gt;</base>
-    <base>imath::TIMathFunction</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a67e88b1337d62a4b62cc2c69e7b5bd12</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8c1d326bd2af43218a1da0e82d13f2f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>CF_SORT_LAYERS</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a67e88b1337d62a4b62cc2c69e7b5bd12a23848a43bdf21d2ce154568db66cceaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TCachedUpdateManagerWrap&lt; iser::ISerializable &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>af75bbc99a1913420c8d20e1f0c025923</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TIMathFunction&lt; Argument, Result &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a0a4cbbd3fee132a4868d64207c316d9a</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8c1d326bd2af43218a1da0e82d13f2f5a389f785b14ac6892a2881643b30addf4</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Fulcrums::ElementType</type>
       <name>FulcrumType</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>acf78a96c6dc3cda88de721ffda700d20</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ab026adc4036c28cf58f857c6a313e671</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Fulcrums::IndexType</type>
       <name>FulcrumIndex</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a022acfff6e2a99b1c8d4b2b1511ab6bf</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a76fb3781f90cc4e9e6212b513c373657</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>Fulcrums::SizesType</type>
       <name>FulcrumSizes</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a88906b64eadcf0fad41c0fa6abfc0417</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Position</type>
+      <name>PositionType</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ab7229339329046451db412e43c243ace</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a167ea6419d8ffd7c9d69545c133d6ec2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>FulcrumSizes</type>
+      <name>GetGridSize</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a3b64331cdd85045fb6e053b19ed35aa5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetDimensionsCount</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a6109b8ad1d80ddc37e0432f13628ed50</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetDimensionsCount</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a138b6ecf7a2214f1e0576b07800a5a6d</anchor>
+      <arglist>(int count)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>GetLayersCount</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a1ef1676d53ac8e3bc220adcf2e95bf1d</anchor>
+      <arglist>(int dimension) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLayersCount</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8b453f2f124fd1250e933762d8e8652d</anchor>
+      <arglist>(int dimension, int count)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetLayerPosition</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a9294a7f406172c8d9a4bdbf0a4c0855f</anchor>
+      <arglist>(int dimension, int layerIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLayerPosition</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a1f90205bd81aecdd8cea0c7590ac8003</anchor>
+      <arglist>(int dimension, int layerIndex, double position)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>GetFulcrumPosition</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a82e85aecf981bb381b5a2647bc368a7e</anchor>
+      <arglist>(const FulcrumIndex &amp;index, PositionType &amp;result) const </arglist>
+    </member>
+    <member kind="function">
+      <type>const FulcrumType &amp;</type>
+      <name>GetFulcrumAtIndex</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a7c724c39d0153599b7e558de17832396</anchor>
+      <arglist>(const FulcrumIndex &amp;index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetFulcrumAtIndex</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a1a75e6760e57da1d455b9e9fa263fbde</anchor>
+      <arglist>(const FulcrumIndex &amp;index, const FulcrumType &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>InsertLayer</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a241a817f228590c5177af84455232dec</anchor>
+      <arglist>(int dimension, double position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveLayer</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ac46c2a261587cd0546e40d5d835538c7</anchor>
+      <arglist>(int dimension, int layerIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a9dadd913e7b16e85c91313af6c28ae97</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SortFulcrums</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a92ada0ed26c370550001961ea2a71dc7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>FindLayerIndex</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ad4fee69bb180a523dd0c6bf055258953</anchor>
+      <arglist>(int dimension, double value) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Fulcrums::IndexType</type>
+      <name>FindIndices</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>aafc0346f431ae48603da08b9ccb1c06b</anchor>
+      <arglist>(const PositionType &amp;argument) const </arglist>
+    </member>
+    <member kind="variable" protection="protected" static="yes">
+      <type>static const ChangeSet</type>
+      <name>s_fulcrumPositionChange</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8a2096c03d731a05292f958f459cb59a</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imath::TFulcrumGridFunctionBase</name>
+    <filename>classimath_1_1_t_fulcrum_grid_function_base.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <templarg></templarg>
+    <base>TFulcrumGrid&lt; Argument, Fulcrums &gt;</base>
+    <base>TCachedUpdateManagerWrap&lt; iser::ISerializable &gt;</base>
+    <base>imath::TIMathFunction</base>
+    <member kind="typedef">
+      <type>TFulcrumGrid&lt; Argument, Fulcrums &gt;</type>
+      <name>BaseClass</name>
       <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a183c87176819e97c4ca6fcc72792e2fa</anchor>
+      <anchor>a105dbb3d60d848d2c48ed203df0b3630</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TCachedUpdateManagerWrap&lt; iser::ISerializable &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
+      <anchor>a933e95394b8d61b1286386282bd1d91b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TIMathFunction&lt; Argument, Result &gt;</type>
+      <name>BaseClass3</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
+      <anchor>aa112d8166db0c71fcc49daeb7138745b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -40147,6 +40402,41 @@
       <anchor>af258eb86f07f9abc969d2b99556a31d0</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8c1d326bd2af43218a1da0e82d13f2f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Fulcrums::ElementType</type>
+      <name>FulcrumType</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ab026adc4036c28cf58f857c6a313e671</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Fulcrums::IndexType</type>
+      <name>FulcrumIndex</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a76fb3781f90cc4e9e6212b513c373657</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Fulcrums::SizesType</type>
+      <name>FulcrumSizes</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a88906b64eadcf0fad41c0fa6abfc0417</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Argument</type>
+      <name>PositionType</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ab7229339329046451db412e43c243ace</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iser::ISerializable</type>
       <name>BaseClass</name>
@@ -40154,102 +40444,151 @@
       <anchor>a83bd228b1448c56dabdea35765185586</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CalculateCache</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
+      <anchor>a54888007452f695cbb8a79d578a53913</anchor>
+      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SortFulcrums</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a92ada0ed26c370550001961ea2a71dc7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>FindLayerIndex</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ad4fee69bb180a523dd0c6bf055258953</anchor>
+      <arglist>(int dimension, double value) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>Fulcrums::IndexType</type>
+      <name>FindIndices</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>aafc0346f431ae48603da08b9ccb1c06b</anchor>
+      <arglist>(const PositionType &amp;argument) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsureCacheValid</name>
+      <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
+      <anchor>ac8e99aa6f52c9852c9a8977a2b815397</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InvalidateCache</name>
+      <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
+      <anchor>a72178c4b3c87403a5956cd646d5604b7</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetCacheValid</name>
+      <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
+      <anchor>aa853fce4eab0ed12a5979b2573324ccb</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>Reset</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a5d1817f78e7767f4cd779941422ee989</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a167ea6419d8ffd7c9d69545c133d6ec2</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>FulcrumSizes</type>
       <name>GetGridSize</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a6137ac2b275693151ceef0503998a833</anchor>
-      <arglist>() const </arglist>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a3b64331cdd85045fb6e053b19ed35aa5</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetDimensionsCount</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>aaea06ae8ad72ecf309884cdba5f4836f</anchor>
-      <arglist>() const </arglist>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a6109b8ad1d80ddc37e0432f13628ed50</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SetDimensionsCount</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a2cea3625a316c1cb7c45a9e487d353ab</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a138b6ecf7a2214f1e0576b07800a5a6d</anchor>
       <arglist>(int count)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>GetLayersCount</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a5bb7757568ac6d53d6c0f666459b6293</anchor>
-      <arglist>(int dimension) const </arglist>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a1ef1676d53ac8e3bc220adcf2e95bf1d</anchor>
+      <arglist>(int dimension) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetLayersCount</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>aba0192158cf169f7af0b79819fc18c5d</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8b453f2f124fd1250e933762d8e8652d</anchor>
       <arglist>(int dimension, int count)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
       <name>GetLayerPosition</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a34f46e8a300c25e3a74a1e379729e562</anchor>
-      <arglist>(int dimension, int layerIndex) const </arglist>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a9294a7f406172c8d9a4bdbf0a4c0855f</anchor>
+      <arglist>(int dimension, int layerIndex) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetLayerPosition</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>ae7daea94cbdf12b809a319ed8cb7ef03</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a1f90205bd81aecdd8cea0c7590ac8003</anchor>
       <arglist>(int dimension, int layerIndex, double position)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>GetFulcrumPosition</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>ac184a338d47df9fbb685f745426c744e</anchor>
-      <arglist>(const FulcrumIndex &amp;index, ArgumentType &amp;result) const </arglist>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a82e85aecf981bb381b5a2647bc368a7e</anchor>
+      <arglist>(const FulcrumIndex &amp;index, PositionType &amp;result) const</arglist>
     </member>
     <member kind="function">
       <type>const FulcrumType &amp;</type>
       <name>GetFulcrumAtIndex</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a4be14f015160485fdf00ffa1de26ad1e</anchor>
-      <arglist>(const FulcrumIndex &amp;index) const </arglist>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a7c724c39d0153599b7e558de17832396</anchor>
+      <arglist>(const FulcrumIndex &amp;index) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetFulcrumAtIndex</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a27a686042021aae93f61ffd5762819af</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a1a75e6760e57da1d455b9e9fa263fbde</anchor>
       <arglist>(const FulcrumIndex &amp;index, const FulcrumType &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>int</type>
       <name>InsertLayer</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a23a7646fbc7cb6362a2345bc9dd75e3d</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a241a817f228590c5177af84455232dec</anchor>
       <arglist>(int dimension, double position)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveLayer</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>ab0c233030a8138ec441cbdfac25a6d6d</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>ac46c2a261587cd0546e40d5d835538c7</anchor>
       <arglist>(int dimension, int layerIndex)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a12224aa75a9fd2e65ce58d33006f8c4e</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a9dadd913e7b16e85c91313af6c28ae97</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function">
@@ -40273,60 +40612,11 @@
       <anchor>a817fecb579336994ccac3bb9b8bfc1ea</anchor>
       <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SortFulcrums</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>aab6201bd3c2be4a94f16325fd16eabc4</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>FindLayerIndex</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a6e0948b0b7c4cde73cfda32b361492ad</anchor>
-      <arglist>(int dimension, double value) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>Fulcrums::IndexType</type>
-      <name>FindIndices</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a8db89ca8a835ffbffbc0cf47f6d53c67</anchor>
-      <arglist>(const ArgumentType &amp;argument) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CalculateCache</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a54888007452f695cbb8a79d578a53913</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsureCacheValid</name>
-      <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>ac8e99aa6f52c9852c9a8977a2b815397</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>InvalidateCache</name>
-      <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>a72178c4b3c87403a5956cd646d5604b7</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetCacheValid</name>
-      <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>aa853fce4eab0ed12a5979b2573324ccb</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="variable" protection="protected" static="yes">
       <type>static const ChangeSet</type>
       <name>s_fulcrumPositionChange</name>
-      <anchorfile>classimath_1_1_t_fulcrum_grid_function_base.html</anchorfile>
-      <anchor>a84277f66c522e4629c72edf86de19b1f</anchor>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a8a2096c03d731a05292f958f459cb59a</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -59516,7 +59806,7 @@
     <class kind="class">istd::CClassInfo</class>
     <class kind="class">istd::CCrcCalculator</class>
     <class kind="class">istd::CEventBasedNotifier</class>
-    <class kind="class">istd::CAssyncNotifier</class>
+    <class kind="class">istd::CAsyncNotifier</class>
     <class kind="class">istd::CFastBinaryIndex</class>
     <class kind="class">istd::CGeneralTimeStamp</class>
     <class kind="class">istd::CIdManipBase</class>
@@ -60016,40 +60306,40 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>istd::CAssyncNotifier</name>
-    <filename>classistd_1_1_c_assync_notifier.html</filename>
+    <name>istd::CAsyncNotifier</name>
+    <filename>classistd_1_1_c_async_notifier.html</filename>
     <member kind="signal">
       <type>void</type>
       <name>EmitBeginChanges</name>
-      <anchorfile>classistd_1_1_c_assync_notifier.html</anchorfile>
-      <anchor>a97c5ad2650511122d241aa36a8718134</anchor>
+      <anchorfile>classistd_1_1_c_async_notifier.html</anchorfile>
+      <anchor>ac81ffa618efd61fbb403713cf306350e</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
-      <name>~CAssyncNotifier</name>
-      <anchorfile>classistd_1_1_c_assync_notifier.html</anchorfile>
-      <anchor>a52371263364ac813cdc9a5d07dd4a4f3</anchor>
+      <name>~CAsyncNotifier</name>
+      <anchorfile>classistd_1_1_c_async_notifier.html</anchorfile>
+      <anchor>a996ed2f1efac3679acadb1f40bb1e688</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
       <name>DoBeginChanges</name>
-      <anchorfile>classistd_1_1_c_assync_notifier.html</anchorfile>
-      <anchor>a6c6d9daf0918ffc6ea6609cff499d6cf</anchor>
+      <anchorfile>classistd_1_1_c_async_notifier.html</anchorfile>
+      <anchor>acdf5ed6004a66223b7d653606c9f4f82</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
-      <name>CAssyncNotifier</name>
-      <anchorfile>classistd_1_1_c_assync_notifier.html</anchorfile>
-      <anchor>a6d5069e227267d91b3c0a34f2992c782</anchor>
+      <name>CAsyncNotifier</name>
+      <anchorfile>classistd_1_1_c_async_notifier.html</anchorfile>
+      <anchor>a4563111a6be4c33d9b68376541a64ac6</anchor>
       <arglist>(istd::IChangeable *slavePtr, const IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="friend" protection="private">
       <type>friend class</type>
       <name>CEventBasedNotifier</name>
-      <anchorfile>classistd_1_1_c_assync_notifier.html</anchorfile>
+      <anchorfile>classistd_1_1_c_async_notifier.html</anchorfile>
       <anchor>a81738a7f244213e999195c97b3bf610a</anchor>
       <arglist></arglist>
     </member>
@@ -74378,6 +74668,7 @@
     <file>imath.h</file>
     <file>IUnitInfo.h</file>
     <file>TFastVector.h</file>
+    <file>TFulcrumGrid.h</file>
     <file>TFulcrumGridFunctionBase.h</file>
     <file>TIMathFunction.h</file>
     <file>TISampledFunction.h</file>
