@@ -58,6 +58,10 @@ const i2d::ICalibration2d* CSelectableCalibrationProviderComp::GetCalibration() 
 		}
 	}
 
+	if (m_defaultCalibrationProviderCompPtr.IsValid()){
+		return m_defaultCalibrationProviderCompPtr->GetCalibration();
+	}
+
 	return NULL;
 }
 

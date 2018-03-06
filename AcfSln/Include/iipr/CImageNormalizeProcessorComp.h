@@ -72,7 +72,7 @@ protected:
 	virtual bool ProcessImage(
 				const iprm::IParamsSet* paramsPtr,
 				const iimg::IBitmap& inputImage,
-				iimg::IBitmap& outputImage);
+				iimg::IBitmap& outputImage) const;
 
 private:
 	I_ATTR(QByteArray, m_adjustParamsIdAttrPtr);

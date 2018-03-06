@@ -399,9 +399,9 @@ bool CConvolutionProcessorComp::DoConvolutionFilter(
 // reimplemented (iipr::CImageProcessorCompBase)
 
 bool CConvolutionProcessorComp::ProcessImage(
-			const iprm::IParamsSet* paramsPtr, 
+			const iprm::IParamsSet* paramsPtr,
 			const iimg::IBitmap& inputImage,
-			iimg::IBitmap& outputImage)
+			iimg::IBitmap& outputImage) const
 {
 	iprm::TParamsPtr<IConvolutionKernel2d> filterParamsPtr(paramsPtr, m_kernelParamsIdAttrPtr, m_defaultKernelParamsCompPtr);	
 	if (!filterParamsPtr.IsValid()){
@@ -464,7 +464,7 @@ bool CConvolutionProcessorComp::ProcessImage(
 						inputImage,
 						tempMask,
 						tempImage,
-						this)){
+						const_cast<CConvolutionProcessorComp*>(this))){
 				return false;
 			}
 
@@ -477,7 +477,7 @@ bool CConvolutionProcessorComp::ProcessImage(
 						tempImage,
 						resultMask,
 						outputImage,
-						this)){
+						const_cast<CConvolutionProcessorComp*>(this))){
 				return false;
 			}
 
@@ -503,7 +503,7 @@ bool CConvolutionProcessorComp::ProcessImage(
 				inputImage,
 				resultMask,
 				outputImage,
-				this);
+				const_cast<CConvolutionProcessorComp*>(this));
 }
 
 

@@ -1932,7 +1932,7 @@
     <name>CRgbToGrayProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_rgb_to_gray_processor_comp_8h</filename>
-    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
     <class kind="class">iipr::CRgbToGrayProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -20097,8 +20097,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
-      <anchor>aaad9412b2bb29a1823a059aa2f9e9746</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a6fe3f60904842983cc321ce6662f1d8f</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
     <member kind="function" protection="protected">
       <type>BackgroundFillMode</type>
@@ -21298,8 +21298,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_image_copy_processor_comp.html</anchorfile>
-      <anchor>a483da8ccc116fed768f3cefb3706637e</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>abac299da2e72e67831e498ad563f6259</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21581,8 +21581,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_image_integral_processor_comp.html</anchorfile>
-      <anchor>aff37ca9267351a05c64bed12042de6d5</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a384284fd8869cf6947f76b49493ae063</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21702,8 +21702,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_image_normalize_processor_comp.html</anchorfile>
-      <anchor>a7ca838eb449c5d4a8a1d86c894d0f5c7</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a76ecf653d8c73df943cc59cc0ef9944e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21733,8 +21733,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a1c34b3884ba43425bffa882b73f1d789</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)=0</arglist>
+      <anchor>a84fc84af8082c9877344450be2874e65</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23933,8 +23933,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_rect_image_smooth_processor_comp.html</anchorfile>
-      <anchor>acc9b6174f983bb6a66dd7819f9e259be</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a124130094265208df419772e49193f6d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -23947,20 +23947,20 @@
   <compound kind="class">
     <name>iipr::CRgbToGrayProcessorComp</name>
     <filename>classiipr_1_1_c_rgb_to_gray_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
+    <base>iipr::CImageProcessorCompBase</base>
     <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
+      <type>iipr::CImageProcessorCompBase</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
-      <anchor>abc81ba5d137044297386268b28ec91be</anchor>
+      <anchor>afbd117de4526e18f57fc872acbe2f006</anchor>
       <arglist></arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
-      <anchor>aa01cec16835fea9beed32f2a3000525b</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+      <anchor>a82f256608b8761cd1c0aa4abc7f46dc9</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25270,8 +25270,8 @@
       <type>ArgumentType</type>
       <name>operator()</name>
       <anchorfile>classiipr_1_1_invert_function.html</anchorfile>
-      <anchor>ad7307eb5d5da732e236b67bc61f8bd87</anchor>
-      <arglist>(const ArgumentType &amp;value)</arglist>
+      <anchor>af9d7832928ac510701924b35817e8095</anchor>
+      <arglist>(const ArgumentType &amp;value) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25291,8 +25291,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_t_unary_transform_processor_comp.html</anchorfile>
-      <anchor>afcd51796755229db92d633938e44b4a0</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage)</arglist>
+      <anchor>a690a96a9936e2b06946971f1a94900a5</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30095,6 +30095,13 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>ae28c9e7a742d7e7cb0c8ac5eedd27807</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual const i2d::ICalibrationProvider *</type>
+      <name>ExtractCalibrationProvider</name>
+      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a2d74fd10578a88b0a3ac524aea78bb7c</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
