@@ -295,9 +295,7 @@ bool CPolypoint::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 
 		m_positions = polygonPtr->m_positions;
 
-		CObject2dBase::CopyFrom(object, mode);
-
-		return true;
+		return CObject2dBase::CopyFrom(object, mode);
 	}
 
 	return false;

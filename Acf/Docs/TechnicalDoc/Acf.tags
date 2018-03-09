@@ -9019,6 +9019,13 @@
       <anchor>ad3e0aad860b268c266c055ca3ad661dd</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>CPolypoint</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>aad1d78800dd716b44db6e3f2b59af503</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual const iser::ISerializable &amp;</type>
       <name>GetNodeData</name>
@@ -10985,6 +10992,13 @@
     <filename>classi2d_1_1_c_polygon.html</filename>
     <base>i2d::CPolypoint</base>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>aab373d069a4e8854c26831897ea6adae</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
@@ -10997,13 +11011,6 @@
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>a403658023d97353d4720ab74899ba2c4</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a4f70f2cc264c033ee6bb5d0c3394c188</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
@@ -11102,6 +11109,13 @@
     <name>i2d::CPolypoint</name>
     <filename>classi2d_1_1_c_polypoint.html</filename>
     <base>i2d::CObject2dBase</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a4f70f2cc264c033ee6bb5d0c3394c188</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>i2d::CPosition2d</name>
