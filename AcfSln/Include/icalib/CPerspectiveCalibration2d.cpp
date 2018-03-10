@@ -345,7 +345,7 @@ bool CPerspectiveCalibration2d::Serialize(iser::IArchive& archive)
 
 int CPerspectiveCalibration2d::GetSupportedOperations() const
 {
-	return SO_COPY | SO_CLONE | SO_COMPARE;
+	return SO_COPY | SO_CLONE | SO_COMPARE | SO_RESET;
 }
 
 

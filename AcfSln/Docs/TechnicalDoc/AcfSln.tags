@@ -6954,6 +6954,13 @@
       <arglist>(const i2d::ITransformation2d &amp;transformation) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>aa78c2e5f47ce4c76c08d45076f4aef49</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classicalib_1_1_c_affine_calibration2d.html</anchorfile>
@@ -6966,6 +6973,13 @@
       <anchorfile>classicalib_1_1_c_affine_calibration2d.html</anchorfile>
       <anchor>ab841273542d48d649499a54f3a92700b</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration2d.html</anchorfile>
+      <anchor>a8db4d62b1d289b111e02901942c17d86</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23573,6 +23587,7 @@
     <filename>classiipr_1_1_c_processed_bitmap_supplier_base.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
     <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -23593,6 +23608,13 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ae8ea8528ec8b69e26fa5a1605824d153</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a1c98406adbe92c7e0241020f4a1228a2</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iimg::IBitmap *</type>
@@ -23641,6 +23663,13 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
       <anchor>a159fab163e419f801fced883ab57facf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiipr_1_1_c_processed_bitmap_supplier_base.html</anchorfile>
+      <anchor>a00c00a491c10b04b7af05c4d9326fecd</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">

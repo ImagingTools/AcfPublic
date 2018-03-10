@@ -25,12 +25,11 @@
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
-
 #include <iser/IArchive.h>
 #include <iser/CArchiveTag.h>
-
 #include <i2d/CRectangle.h>
 #include <istd/TDelPtr.h>
+
 
 namespace i2d
 {
@@ -68,6 +67,15 @@ double CAnnulusSegment::GetBeginAngle() const
 
 void CAnnulusSegment::SetBeginAngle(double angle)
 {
+	// normalize angle to the range of [0..360)
+	while (angle >= I_2PI){
+		angle -= I_2PI;
+	}
+
+	while (angle < 0){
+		angle += I_2PI;
+	}
+
 	if (angle != m_angleRange.GetMinValue()){
 		istd::CChangeNotifier notifier(this);
 
@@ -84,6 +92,15 @@ double CAnnulusSegment::GetEndAngle() const
 
 void CAnnulusSegment::SetEndAngle(double angle)
 {
+	// normalize angle to the range of [0..360)
+	while (angle >= I_2PI){
+		angle -= I_2PI;
+	}
+
+	while (angle < 0){
+		angle += I_2PI;
+	}
+
 	if (angle != m_angleRange.GetMaxValue()){
 		istd::CChangeNotifier notifier(this);
 
