@@ -58,9 +58,6 @@ public:
 				const istd::IInformationProvider* messagePtr = NULL) const;
 	virtual void AddMessage(const MessagePtr& messagePtr);
 
-	// reimplemented (ilog::IMessageContainer)
-	virtual void ClearMessages();
-
 protected:
 	// reimplemented (ilog::CLogCompBase)
 	virtual void WriteMessageToLog(const MessagePtr& messagePtr);
