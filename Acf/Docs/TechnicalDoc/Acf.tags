@@ -36783,13 +36783,6 @@
       <anchor>a1a6ba55008070d1b0dea497170005138</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classilog_1_1_c_log_comp.html</anchorfile>
-      <anchor>a4336517652c10e6531a7189cb346ea3a</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CMessageContainer</name>
@@ -36852,6 +36845,13 @@
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
       <anchor>a10bdee6be0044da4682d55cbe4527083</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ClearMessages</name>
+      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
+      <anchor>ac183f7730f07c39865ff4b97300b9aae</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -37128,13 +37128,6 @@
     <filename>classilog_1_1_c_message_container.html</filename>
     <base>THierarchicalBase&lt; IHierarchicalMessageContainer &gt;</base>
     <base virtualness="virtual">ilog::IMessageConsumer</base>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>ClearMessages</name>
-      <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
-      <anchor>ac183f7730f07c39865ff4b97300b9aae</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMessageSupported</name>

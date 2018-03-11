@@ -76,34 +76,21 @@ QString CStreamLogCompBase::GenerateMessageText(const istd::IInformationProvider
 {
 	QString messageText;
 
-	if (*m_useTimeStampAttrPtr){
-		QString timeStampText;
-
-		if (m_timeFormatAttrPtr.IsValid()){
-			timeStampText = message.GetInformationTimeStamp().toString((*m_timeFormatAttrPtr).constData());
-		}
-		else{
-			timeStampText = message.GetInformationTimeStamp().toString();
-		}
-
-		messageText += "[" + timeStampText + "] ";
-	}
-
 	QString categoryCode;
 	if (*m_useCategoryAttrPtr){
 		switch (message.GetInformationCategory()){
 		case istd::IInformationProvider::IC_WARNING:
-			messageText += "Warning: ";
+			messageText += "warning: ";
 			categoryCode = "W";
 			break;
 
 		case istd::IInformationProvider::IC_ERROR:
-			messageText += "Error: ";
+			messageText += "error: ";
 			categoryCode = "E";
 			break;
 
 		case istd::IInformationProvider::IC_CRITICAL:
-			messageText += "Fatal error: ";
+			messageText += "fatal error: ";
 			categoryCode = "E!";
 			break;
 
@@ -119,6 +106,18 @@ QString CStreamLogCompBase::GenerateMessageText(const istd::IInformationProvider
 		messageText += categoryCode + codeText + ": ";
 	}
 
+	if (*m_useTimeStampAttrPtr){
+		QString timeStampText;
+
+		if (m_timeFormatAttrPtr.IsValid()){
+			timeStampText = message.GetInformationTimeStamp().toString((*m_timeFormatAttrPtr).constData());
+		}
+		else{
+			timeStampText = message.GetInformationTimeStamp().toString();
+		}
+
+		messageText += "[" + timeStampText + "] ";
+	}
 
 	messageText += message.GetInformationDescription();
 
