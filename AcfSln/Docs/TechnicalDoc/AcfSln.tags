@@ -1852,6 +1852,7 @@
     <filename>_c_pixel_manip_8h</filename>
     <class kind="class">iipr::CPixelManip</class>
     <class kind="class">iipr::CPixelManip::Rgba</class>
+    <class kind="class">iipr::CPixelManip::Rgb</class>
     <class kind="class">iipr::CPixelManip::GrayCropAccum32</class>
     <class kind="class">iipr::CPixelManip::RgbCropAccum32</class>
     <class kind="class">iipr::CPixelManip::RgbaCropAccum32</class>
@@ -22655,6 +22656,7 @@
     <name>iipr::CPixelManip</name>
     <filename>classiipr_1_1_c_pixel_manip.html</filename>
     <class kind="class">iipr::CPixelManip::GrayCropAccum32</class>
+    <class kind="class">iipr::CPixelManip::Rgb</class>
     <class kind="class">iipr::CPixelManip::Rgba</class>
     <class kind="class">iipr::CPixelManip::RgbaCropAccum32</class>
     <class kind="class">iipr::CPixelManip::RgbCropAccum32</class>
@@ -22881,6 +22883,45 @@
       <name>m_gray</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
       <anchor>a80e924548e6f7e3fa0c4d2e75d660ba6</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPixelManip::Rgb</name>
+    <filename>classiipr_1_1_c_pixel_manip_1_1_rgb.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Rgb</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb.html</anchorfile>
+      <anchor>a9ca446b56baeebc68365b4d11dcd08d1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>Rgb</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb.html</anchorfile>
+      <anchor>a6d10d13efba5d40cded44b2422d81b07</anchor>
+      <arglist>(quint8 r, quint8 g, quint8 b)</arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_r</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb.html</anchorfile>
+      <anchor>a6d3e7483a80a3aef340250dc09337145</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_g</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb.html</anchorfile>
+      <anchor>ab06f3fac378c3e2dd31acd5b614bd434</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>m_b</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb.html</anchorfile>
+      <anchor>a5cbe504cffd7751a981e15530744a6a0</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23152,6 +23193,13 @@
       <type></type>
       <name>RgbCropAccum32</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>aefeef683a84d226c17aa4da993dd0b55</anchor>
+      <arglist>(const Rgb &amp;value)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>RgbCropAccum32</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
       <anchor>ac29758b753bc7113a1883d7abd1bafc0</anchor>
       <arglist>(int value)</arglist>
     </member>
@@ -23370,6 +23418,13 @@
       <name>operator Rgba</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
       <anchor>a704f92f2c14ca0f0f01d619fa4bb9c17</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator Rgb</name>
+      <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
+      <anchor>ab5cae7040fbe1c712143df2ec8832497</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="variable" protection="protected">
