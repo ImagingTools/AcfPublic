@@ -44342,6 +44342,13 @@
       <anchor>acc40137ae80c8528c71b04fc3226a16e</anchor>
       <arglist>(int typeIndex=-1) const =0</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>ae6fa3282cbfe13eb389a02f9280e79c4</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::CParamsManagerCompBase::ParamSet</name>

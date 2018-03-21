@@ -201,10 +201,11 @@ bool CParamsManagerComp::Serialize(iser::IArchive& archive)
 		if (*m_serializeSelectionAttrPtr){
 			m_selectedIndex = selectedIndex;
 		}
-		else
+		else{
 			if (m_defaultSelectedIndexAttrPtr.IsValid()){
 				m_selectedIndex = *m_defaultSelectedIndexAttrPtr;
 			}
+		}
 	}
 
 	if (m_selectedIndex >= CParamsManagerComp::GetParamsSetsCount()){
@@ -313,12 +314,6 @@ void CParamsManagerComp::OnComponentCreated()
 		if (modelPtr != NULL){
 			modelPtr->AttachObserver(&m_updateBridge);
 		}
-	}
-
-	m_selectedIndex = -1;
-
-	if (m_defaultSelectedIndexAttrPtr.IsValid() && (*m_defaultSelectedIndexAttrPtr < fixedSetsCount)){
-		m_selectedIndex = *m_defaultSelectedIndexAttrPtr;
 	}
 
 	BaseClass::OnComponentCreated();

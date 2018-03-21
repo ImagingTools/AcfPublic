@@ -155,7 +155,7 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 		if (!isStoring){
 			if (!retVal){
 				return false;
-			}		
+			}
 
 			if (!EnsureParamExist(i, typeId, name, uuid, isEnabled)){
 				return false;
@@ -167,7 +167,7 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 			return false;
 		}
 
-		retVal = retVal && archive.BeginTag(s_valueTag);		
+		retVal = retVal && archive.BeginTag(s_valueTag);
 		retVal = retVal && paramsSetPtr->Serialize(archive);
 		retVal = retVal && archive.EndTag(s_valueTag);
 
@@ -185,8 +185,15 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 	retVal = retVal && archive.Process(selectedIndex);
 	retVal = retVal && archive.EndTag(s_selectedIndexTag);
 
-	if (*m_serializeSelectionAttrPtr && !archive.IsStoring()){
-		m_selectedIndex = selectedIndex;
+	if (!isStoring){
+		if (*m_serializeSelectionAttrPtr){
+			m_selectedIndex = selectedIndex;
+		}
+		else{
+			if (m_defaultSelectedIndexAttrPtr.IsValid()){
+				m_selectedIndex = *m_defaultSelectedIndexAttrPtr;
+			}
+		}
 	}
 
 	return retVal;
