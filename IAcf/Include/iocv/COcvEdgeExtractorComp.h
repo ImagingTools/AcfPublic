@@ -28,6 +28,7 @@
 #include <iprm/IOptionsList.h>
 #include <iprm/ISelectionParam.h>
 #include <iproc/TSyncProcessorCompBase.h>
+#include <imeas/INumericValue.h>
 #include <iedge/IEdgesExtractor.h>
 
 // OpenCV includes
@@ -56,6 +57,8 @@ public:
 		I_ASSIGN(m_defaultAoiCompPtr, "DefaultAoi", "Area of interest used if not specified in parameters", false, "DefaultAoi");
 		I_ASSIGN(m_approxModeParamIdAttrPtr, "ApproxModeParamId", "ID of contour approximation mode parameter in parameter set", false, "ApproxMode");
 		I_ASSIGN(m_defaultApproxModeCompPtr, "DefaultApproxMode", "Default contour approximation mode used if not specified in parameters", false, "DefaultApproxMode");
+		I_ASSIGN(m_reduceFactorParamIdAttrPtr, "ReduceFactorParamId", "ID of reduce factor parameter in parameter set", false, "ReduceFactor");
+		I_ASSIGN(m_defaultReduceFactorCompPtr, "DefaultReduceFactor", "Default reduce factor used if not specified in parameters", false, "DefaultReduceFactor");
 		I_ASSIGN(m_contourModeParamIdAttrPtr, "ContourModeParamId", "ID of contour mode parameter in parameter set", false, "ContourMode");
 		I_ASSIGN(m_defaultContourModeCompPtr, "DefaultContourMode", "Default contour mode used if not specified in parameters", false, "DefaultContourMode");
 	I_END_COMPONENT;
@@ -93,6 +96,9 @@ private:
 
 	I_ATTR(QByteArray, m_approxModeParamIdAttrPtr);
 	I_REF(iprm::ISelectionParam, m_defaultApproxModeCompPtr);
+
+	I_ATTR(QByteArray, m_reduceFactorParamIdAttrPtr);
+	I_REF(imeas::INumericValue, m_defaultReduceFactorCompPtr);
 
 	I_ATTR(QByteArray, m_contourModeParamIdAttrPtr);
 	I_REF(iprm::ISelectionParam, m_defaultContourModeCompPtr);
