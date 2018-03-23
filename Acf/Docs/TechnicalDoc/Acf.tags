@@ -40245,6 +40245,13 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>TFulcrumGrid</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>af29befc77c77c3c03b78ed900005d2a0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>Reset</name>
       <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
@@ -40497,6 +40504,13 @@
       <name>SetCacheValid</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
       <anchor>aa853fce4eab0ed12a5979b2573324ccb</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TFulcrumGrid</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>af29befc77c77c3c03b78ed900005d2a0</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
