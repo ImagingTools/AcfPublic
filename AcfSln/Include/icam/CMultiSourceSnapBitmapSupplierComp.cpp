@@ -86,7 +86,6 @@ bool CMultiSourceSnapBitmapSupplierComp::InitializeWork()
 
 int CMultiSourceSnapBitmapSupplierComp::ProduceObject(ProductType& result) const
 {
-	CMultiSourceSnapBitmapSupplierComp();
 	result.first.Reset();
 
 	if (!m_bitmapCompFact.IsValid()){
@@ -237,7 +236,7 @@ bool CMultiSourceSnapBitmapSupplierComp::CameraList::IsOptionEnabled(int index) 
 
 	return true;
 }
-		
+
 
 } // namespace icam
 

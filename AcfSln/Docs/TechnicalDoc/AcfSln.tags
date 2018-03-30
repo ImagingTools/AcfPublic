@@ -12175,6 +12175,13 @@
       <anchor>aa0992bd84925b9f59cac28e19d7b8925</anchor>
       <arglist>(int state)</arglist>
     </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_ShowStatisticsButton_clicked</name>
+      <anchorfile>classicmpstr_1_1_c_registry_tree_view_comp.html</anchorfile>
+      <anchor>a3004417a440da73e76d7ec04a8f065f3</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QTreeWidgetItem *</type>
       <name>AddRegistryElementItem</name>
