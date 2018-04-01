@@ -1454,6 +1454,7 @@
     <includes id="_i_features_provider_8h" name="IFeaturesProvider.h" local="no" imported="no">iipr/IFeaturesProvider.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <includes id="_c_general_data_sequence_8h" name="CGeneralDataSequence.h" local="no" imported="no">imeas/CGeneralDataSequence.h</includes>
+    <includes id="_c_data_sequence_statistics_8h" name="CDataSequenceStatistics.h" local="no" imported="no">imeas/CDataSequenceStatistics.h</includes>
     <class kind="class">iipr::CColorPatternComparatorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -19648,6 +19649,7 @@
     <base>TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</base>
     <base virtualness="virtual">iipr::IFeaturesProvider</base>
     <base virtualness="virtual">istd::IInformationProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</type>
       <name>BaseClass</name>
@@ -19745,6 +19747,13 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>ad5dadc45c41b0fe06b8bd9d8be8a89c0</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiipr_1_1_c_color_pattern_comparator_comp.html</anchorfile>
+      <anchor>aa873ff4b309d63ba6d2df5fd450f58db</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
