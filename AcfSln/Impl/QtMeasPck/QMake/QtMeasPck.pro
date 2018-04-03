@@ -1,5 +1,6 @@
 include(../../../../Acf/Config/QMake/ComponentConfig.pri)
 include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
+include(../../..//Config/QMake/QtCharts.pri)
 
 TARGET = QtMeasPck
 
