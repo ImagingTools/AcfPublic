@@ -16933,6 +16933,20 @@
     <filename>classihotfgui_1_1_c_directory_monitor_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ihotf::IDirectoryMonitor</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ProcessingFlags</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>ad431d0093357ea405aed0f330752049a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PF_MANUAL_FOLDER_OBSERVATION</name>
+      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
+      <anchor>ad431d0093357ea405aed0f330752049aa5fb9b2333f8484f2de81a4aafda9e349</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>

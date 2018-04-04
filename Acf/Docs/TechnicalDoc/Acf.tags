@@ -39665,6 +39665,20 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>ad8d37d7f9fef08e1d3921a0f1480acf3</anchor>
+      <arglist>(const TArray&lt; double, Dimensions &gt; &amp;value) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a77e201dca8c8abd8e10670960642dc18</anchor>
+      <arglist>(const TArray&lt; double, Dimensions &gt; &amp;value) const</arglist>
+    </member>
+    <member kind="function">
       <type>const double &amp;</type>
       <name>operator[]</name>
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
@@ -40349,6 +40363,20 @@
       <anchor>a9dadd913e7b16e85c91313af6c28ae97</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a23e5d6356979b261940b81a9ca407036</anchor>
+      <arglist>(const TFulcrumGrid&lt; Position, Fulcrums &gt; &amp;value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a536dee099f3a4cc435c9a1218d8df655</anchor>
+      <arglist>(const TFulcrumGrid&lt; Position, Fulcrums &gt; &amp;value) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SortFulcrums</name>
@@ -40610,6 +40638,20 @@
       <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
       <anchor>a9dadd913e7b16e85c91313af6c28ae97</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a23e5d6356979b261940b81a9ca407036</anchor>
+      <arglist>(const TFulcrumGrid&lt; Argument, Fulcrums &gt; &amp;value) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classimath_1_1_t_fulcrum_grid.html</anchorfile>
+      <anchor>a536dee099f3a4cc435c9a1218d8df655</anchor>
+      <arglist>(const TFulcrumGrid&lt; Argument, Fulcrums &gt; &amp;value) const</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -61651,6 +61693,20 @@
       <anchorfile>classistd_1_1_t_array.html</anchorfile>
       <anchor>a002e3977ee1ac8c7e4510ab8a0c7aa2a</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>ad8d37d7f9fef08e1d3921a0f1480acf3</anchor>
+      <arglist>(const TArray&lt; Element, Dimensions &gt; &amp;value) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classistd_1_1_t_array.html</anchorfile>
+      <anchor>a77e201dca8c8abd8e10670960642dc18</anchor>
+      <arglist>(const TArray&lt; Element, Dimensions &gt; &amp;value) const </arglist>
     </member>
     <member kind="function">
       <type>const Element &amp;</type>
