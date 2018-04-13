@@ -205,6 +205,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CParallelogramComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_parallelogram_comp_8h</filename>
+    <includes id="_t_object2d_comp_wrap_8h" name="TObject2dCompWrap.h" local="no" imported="no">i2d/TObject2dCompWrap.h</includes>
+    <includes id="_c_parallelogram_8h" name="CParallelogram.h" local="no" imported="no">i2d/CParallelogram.h</includes>
+    <class kind="class">i2d::CParallelogramComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>CPolygon.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_polygon_8h</filename>
@@ -7176,6 +7185,7 @@
     <class kind="class">i2d::COrientedCircle</class>
     <class kind="class">i2d::COrientedCircleComp</class>
     <class kind="class">i2d::CParallelogram</class>
+    <class kind="class">i2d::CParallelogramComp</class>
     <class kind="class">i2d::CPolygon</class>
     <class kind="class">i2d::CPolygonComp</class>
     <class kind="class">i2d::CPolyline</class>
@@ -10880,6 +10890,13 @@
     <name>i2d::CParallelogram</name>
     <filename>classi2d_1_1_c_parallelogram.html</filename>
     <base>i2d::CObject2dBase</base>
+    <member kind="function">
+      <type></type>
+      <name>CParallelogram</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a3b3f8d88444ab3faf1817932b29a8ad3</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CAffine2d &amp;</type>
       <name>GetTransform</name>
@@ -10891,7 +10908,7 @@
       <type>virtual void</type>
       <name>SetTransform</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a9e3f1096c89d8049c7b3ac314b1abf85</anchor>
+      <anchor>a171b77a0ca87e344db89f84c7e70c9f1</anchor>
       <arglist>(const i2d::CAffine2d &amp;transform)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -10907,6 +10924,69 @@
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
       <anchor>aa71979c553fc26b5e1d233f742032081</anchor>
       <arglist>(const i2d::CMatrix2d &amp;deform)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWidth</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>ae586ac5af630cf5300a70c7b6127ea2b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWidth</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a1d3f97ef4770a4e2bc24b03b198ef9aa</anchor>
+      <arglist>(double w)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetHeight</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a45e8e1caf47436aac76acb44d213318a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetHeight</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a1c512fc6dfd09c01a2de702d200921ba</anchor>
+      <arglist>(double h)</arglist>
+    </member>
+    <member kind="function">
+      <type>QVector&lt; i2d::CVector2d &gt;</type>
+      <name>GetNodes</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a790731adc3b1f0ce9513edb1bc280ad9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetRotation</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a296d5ab445385ead7ad836223352b994</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRotation</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a607fe00380cf1f791133e1bf8545054c</anchor>
+      <arglist>(double angle)</arglist>
+    </member>
+    <member kind="function">
+      <type>i2d::CVector2d</type>
+      <name>GetTranslation</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>aff387e75fc192374d81b485ccebab84c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTranslation</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>ae2501d65bfac9b215e881d40dd535315</anchor>
+      <arglist>(const i2d::CVector2d &amp;translation)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
@@ -10984,6 +11064,46 @@
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
       <anchor>a6cffb8f3bd3d584cb868d6899c499a7f</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
+      <anchor>a43487d332e8651fd0feca9503cba0d75</anchor>
+      <arglist>(const i2d::CMatrix2d &amp;deformMatrix) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::CParallelogramComp</name>
+    <filename>classi2d_1_1_c_parallelogram_comp.html</filename>
+    <base>TObject2dCompWrap&lt; i2d::CParallelogram &gt;</base>
+    <member kind="typedef">
+      <type>i2d::TObject2dCompWrap&lt; i2d::CParallelogram &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_parallelogram_comp.html</anchorfile>
+      <anchor>a553bfb333b66379b6dd41aed1fe626aa</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>a4e7dbee55ab86d2b0e51e17fa162fa3f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>i2d::CParallelogram</type>
+      <name>BaseClass2</name>
+      <anchorfile>classi2d_1_1_t_object2d_comp_wrap.html</anchorfile>
+      <anchor>af4791b7bcfeb29877dfb95f86bea181e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classi2d_1_1_c_parallelogram_comp.html</anchorfile>
+      <anchor>afe25228069569171a4ed31314f40ffe1</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74372,6 +74492,7 @@
     <file>COrientedCircle.h</file>
     <file>COrientedCircleComp.h</file>
     <file>CParallelogram.h</file>
+    <file>CParallelogramComp.h</file>
     <file>CPolygon.h</file>
     <file>CPolygonComp.h</file>
     <file>CPolyline.h</file>

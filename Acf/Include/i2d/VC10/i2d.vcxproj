@@ -136,6 +136,7 @@
     <ClCompile Include="..\COrientedCircle.cpp" />
     <ClCompile Include="..\COrientedCircleComp.cpp" />
     <ClCompile Include="..\CParallelogram.cpp" />
+    <ClCompile Include="..\CParallelogramComp.cpp" />
     <ClCompile Include="..\CPolygon.cpp" />
     <ClCompile Include="..\CPolygonComp.cpp" />
     <ClCompile Include="..\CPolyline.cpp" />
@@ -178,6 +179,7 @@
     <ClInclude Include="..\COrientedCircle.h" />
     <ClInclude Include="..\COrientedCircleComp.h" />
     <ClInclude Include="..\CParallelogram.h" />
+    <ClInclude Include="..\CParallelogramComp.h" />
     <ClInclude Include="..\CPolygon.h" />
     <ClInclude Include="..\CPolygonComp.h" />
     <ClInclude Include="..\CPolyline.h" />
