@@ -3447,6 +3447,17 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>TMultidimensionalPolynomial.h</name>
+    <path>C:/Temp/Acf/Include/imath/</path>
+    <filename>_t_multidimensional_polynomial_8h</filename>
+    <includes id="_t_array_8h" name="TArray.h" local="no" imported="no">istd/TArray.h</includes>
+    <includes id="_t_vector_8h" name="TVector.h" local="no" imported="no">imath/TVector.h</includes>
+    <includes id="_t_fulcrum_grid_function_base_8h" name="TFulcrumGridFunctionBase.h" local="no" imported="no">imath/TFulcrumGridFunctionBase.h</includes>
+    <includes id="_c_spline_segment_function_8h" name="CSplineSegmentFunction.h" local="no" imported="no">imath/CSplineSegmentFunction.h</includes>
+    <class kind="class">imath::TMultidimensionalPolynomial</class>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
     <name>TSplineGridFunctionBase.h</name>
     <path>C:/Temp/Acf/Include/imath/</path>
     <filename>_t_spline_grid_function_base_8h</filename>
@@ -38097,6 +38108,7 @@
     <class kind="class">imath::TIValueManip</class>
     <class kind="class">imath::TMathVectorWrap</class>
     <class kind="class">imath::TMatrix</class>
+    <class kind="class">imath::TMultidimensionalPolynomial</class>
     <class kind="class">imath::TSplineGridFunctionBase</class>
     <class kind="class">imath::TVector</class>
     <member kind="typedef">
@@ -41624,6 +41636,83 @@
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
       <anchor>a721047109bfa494e6afa618b01932ae8</anchor>
       <arglist>(const IndexType &amp;index)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imath::TMultidimensionalPolynomial</name>
+    <filename>classimath_1_1_t_multidimensional_polynomial.html</filename>
+    <templarg>Dimensions</templarg>
+    <templarg></templarg>
+    <base>TIMathFunction&lt; TVector&lt; Dimensions &gt;, Element &gt;</base>
+    <member kind="typedef">
+      <type>imath::TIMathFunction&lt; TVector&lt; Dimensions &gt;, Element &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a670ca3b5876f73271f436a5a75427eb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TArray&lt; Element, Dimensions &gt;</type>
+      <name>Coefficients</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a540231e843f95bc93cda4e6366b0ca6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>TVector&lt; Dimensions &gt;</type>
+      <name>ArgumentType</name>
+      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
+      <anchor>a841cc046852e3530a344e4a13e81a746</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Element</type>
+      <name>ResultType</name>
+      <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
+      <anchor>ace1c5a007a5285d3137785c9414e0297</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const Coefficients &amp;</type>
+      <name>GetCoefficients</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>aba9257dd27946e0635521269cb42a4db</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetCoefficients</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a1e458b656ffc5e4ef4e130d7f59a1d94</anchor>
+      <arglist>(const Coefficients &amp;coefficients)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>ab7b458fb7967cad337ac09f78e0add4b</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ResultType</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a7f518eb120a35cd7080398ea5ed83f9a</anchor>
+      <arglist>(const ArgumentType &amp;argument) const </arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static double</type>
+      <name>GetBaseFunctionValue</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a0e23c74575b681a46c814285dc74e0c4</anchor>
+      <arglist>(const ArgumentType &amp;argument, const istd::TIndex&lt; Dimensions &gt; &amp;coeffIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>CumulateRecursiveValueAt</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>afc0b75e66af61664234691417ad57b9e</anchor>
+      <arglist>(const ArgumentType &amp;argument, int dimension, typename istd::TIndex&lt; Dimensions &gt; &amp;index, ResultType &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74846,6 +74935,7 @@
     <file>TIValueManip.h</file>
     <file>TMathVectorWrap.h</file>
     <file>TMatrix.h</file>
+    <file>TMultidimensionalPolynomial.h</file>
     <file>TSplineGridFunctionBase.h</file>
     <file>TVector.h</file>
   </compound>

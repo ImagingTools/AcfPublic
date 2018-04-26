@@ -147,6 +147,7 @@
     <ClInclude Include="..\TIValueManip.h" />
     <ClInclude Include="..\TMathVectorWrap.h" />
     <ClInclude Include="..\TMatrix.h" />
+    <ClInclude Include="..\TMultidimensionalPolynomial.h" />
     <ClInclude Include="..\TSplineGridFunctionBase.h" />
     <ClInclude Include="..\TVector.h" />
     <ClInclude Include="..\imath.h" />
