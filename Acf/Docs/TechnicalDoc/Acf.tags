@@ -15773,7 +15773,7 @@
     <name>iattr::TAttribute</name>
     <filename>classiattr_1_1_t_attribute.html</filename>
     <templarg></templarg>
-    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
+    <base>TCopySerializedWrap&lt; iser::IObject &gt;</base>
     <member kind="enumeration">
       <type></type>
       <name>DefaultAttributeFlags</name>
@@ -15940,7 +15940,7 @@
     <name>iattr::TMultiAttribute</name>
     <filename>classiattr_1_1_t_multi_attribute.html</filename>
     <templarg>Value</templarg>
-    <base virtualness="virtual">TCopySerializedWrap&lt; iser::IObject &gt;</base>
+    <base>TCopySerializedWrap&lt; iser::IObject &gt;</base>
     <class kind="struct">iattr::TMultiAttribute::Wrap</class>
     <member kind="enumeration">
       <type></type>
@@ -35353,6 +35353,20 @@
       <anchor>a8464c7497eab5612744a4c5d338a5002</anchor>
       <arglist>(const CGeneralBitmap &amp;bitmap)</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>a38d7b97335f9e987fc38e7aa17038e13</anchor>
+      <arglist>(const CGeneralBitmap &amp;bitmap) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
+      <anchor>a5fafd3dbaac5ebbc8036db545ecd1425</anchor>
+      <arglist>(const CGeneralBitmap &amp;bitmap) const </arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateBitmap</name>
@@ -41673,6 +41687,20 @@
       <arglist></arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>TMultidimensionalPolynomial</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>aedbaffbedc58da86982e04241a2a9701</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMultidimensionalPolynomial</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a3c4a97a7838dbc0e5bb425a62dfb43bd</anchor>
+      <arglist>(const Coefficients &amp;coefficients)</arglist>
+    </member>
+    <member kind="function">
       <type>const Coefficients &amp;</type>
       <name>GetCoefficients</name>
       <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
@@ -41697,7 +41725,7 @@
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
-      <anchor>a7f518eb120a35cd7080398ea5ed83f9a</anchor>
+      <anchor>ad0ce861c670c8e4d43907d8667b6e753</anchor>
       <arglist>(const ArgumentType &amp;argument) const </arglist>
     </member>
     <member kind="function" static="yes">
