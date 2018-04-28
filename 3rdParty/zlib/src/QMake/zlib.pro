@@ -26,3 +26,7 @@ SOURCES -= $$_PRO_FILE_PWD_/../*.cpp
 
 
 DESTDIR = $$OUT_PWD/../../Lib/$$COMPILER_DIR
+
+win32-msvc*{
+    QMAKE_CXXFLAGS += /Zi /Fd$$DESTDIR/"$$TARGET".pdb
+}
