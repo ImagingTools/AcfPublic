@@ -71269,6 +71269,20 @@
       <anchor>a6a6ab6ed262b555540fda9efcab944e7</anchor>
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EnsureValidNodes</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a568f2b7eca54fbe12ff11826f31833c2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCurveTouched</name>
+      <anchorfile>classiview_1_1_c_tube_polyline_shape.html</anchorfile>
+      <anchor>a05d075de7643c5c9dc0554764d6c6671</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>bool</type>
       <name>m_isAlwaysDraggable</name>
