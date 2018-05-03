@@ -23,8 +23,19 @@
 #pragma once
 
 
+// Qt includes
+#include <QtCore/QPair>
+
+// ACF includes
+#include <istd/TDelPtr.h>
+#include <i2d/ICalibration2d.h>
+#include <i2d/ICalibrationProvider.h>
+#include <iimg/IBitmap.h>
+#include <iinsp/TSupplierCompWrap.h>
+
 // ACF-Solutions includes
-#include <icam/CCameraSnapSupplierCompBase.h>
+#include <icam/IBitmapAcquisition.h>
+#include <icam/CSnapBitmapSupplierCompBase.h>
 
 
 namespace icam
@@ -32,32 +43,31 @@ namespace icam
 
 
 /**
-	Generic implementation of the snap bitmap supplier.
-	Bitmap instance will be factorized using template argument
+	Basic implementation of bitmap supplier based on the camera snap.
 */
-template<typename Bitmap>
-class TSnapBitmapSupplierComp: public CCameraSnapSupplierCompBase
+class CCameraSnapSupplierCompBase: public CSnapBitmapSupplierCompBase
 {
 public:
-	typedef Bitmap BitmapType;
-	typedef CCameraSnapSupplierCompBase BaseClass;
+	typedef CSnapBitmapSupplierCompBase BaseClass;
 
-	I_BEGIN_COMPONENT(TSnapBitmapSupplierComp);
+	I_BEGIN_BASE_COMPONENT(CCameraSnapSupplierCompBase);
+		I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
+		I_ASSIGN(m_bitmapAcquisitionCompPtr, "BitmapAcquisition", "Bitmap acquisition object for image snap", true, "BitmapAcquisition");
 	I_END_COMPONENT;
 
 protected:
 	// reimplemented (CSnapBitmapSupplierCompBase)
-	virtual iimg::IBitmap* CreateBitmap() const;
+	virtual int DoSnap(const iprm::IParamsSet* snapParamsPtr, iimg::IBitmap& snapBitmap) const;
+
+	// reimplemented (iinsp::TSupplierCompWrap)
+	virtual bool InitializeWork();
+
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+
+private:
+	I_REF(IBitmapAcquisition, m_bitmapAcquisitionCompPtr);
 };
-
-
-// reimplemented (CSnapBitmapSupplierCompBase)
-
-template<typename Bitmap>
-iimg::IBitmap* TSnapBitmapSupplierComp<Bitmap>::CreateBitmap() const
-{
-	return new BitmapType;
-}
 
 
 } // namespace icam

@@ -20,10 +20,6 @@
 ********************************************************************************/
 
 
-#pragma once
-
-
-// ACF-Solutions includes
 #include <icam/CCameraSnapSupplierCompBase.h>
 
 
@@ -31,32 +27,46 @@ namespace icam
 {
 
 
-/**
-	Generic implementation of the snap bitmap supplier.
-	Bitmap instance will be factorized using template argument
-*/
-template<typename Bitmap>
-class TSnapBitmapSupplierComp: public CCameraSnapSupplierCompBase
-{
-public:
-	typedef Bitmap BitmapType;
-	typedef CCameraSnapSupplierCompBase BaseClass;
-
-	I_BEGIN_COMPONENT(TSnapBitmapSupplierComp);
-	I_END_COMPONENT;
-
-protected:
-	// reimplemented (CSnapBitmapSupplierCompBase)
-	virtual iimg::IBitmap* CreateBitmap() const;
-};
+// protected methods
 
 
 // reimplemented (CSnapBitmapSupplierCompBase)
 
-template<typename Bitmap>
-iimg::IBitmap* TSnapBitmapSupplierComp<Bitmap>::CreateBitmap() const
+int CCameraSnapSupplierCompBase::DoSnap(const iprm::IParamsSet* snapParamsPtr, iimg::IBitmap& snapBitmap) const
 {
-	return new BitmapType;
+	if (!m_bitmapAcquisitionCompPtr.IsValid()){
+		SendCriticalMessage(0, "Bad component architecture, 'BitmapAcquisition' component reference is not set");
+
+		return iproc::IProcessor::TS_INVALID;
+	}
+
+
+	return m_bitmapAcquisitionCompPtr->DoProcessing(snapParamsPtr, NULL, &snapBitmap);
+}
+
+
+// reimplemented (iinsp::TSupplierCompWrap)
+
+bool CCameraSnapSupplierCompBase::InitializeWork()
+{
+	if (m_bitmapAcquisitionCompPtr.IsValid()){
+		m_bitmapAcquisitionCompPtr->InitProcessor(GetModelParametersSet());
+
+		return true;
+	}
+
+	return false;
+}
+
+
+// reimplemented (icomp::CComponentBase)
+
+void CCameraSnapSupplierCompBase::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	// initialize components
+	m_bitmapAcquisitionCompPtr.EnsureInitialized();
 }
 
 

@@ -25,7 +25,7 @@
 
 
 // ACF-Solutions includes
-#include <icam/CSnapBitmapSupplierCompBase.h>
+#include <icam/CCameraSnapSupplierCompBase.h>
 
 
 namespace icam
@@ -35,10 +35,10 @@ namespace icam
 /**
 	Factory-based Snap Bitmap Supplier (not thread-safe). 
 */
-class CSnapBitmapSupplierComp: public CSnapBitmapSupplierCompBase
+class CSnapBitmapSupplierComp: public CCameraSnapSupplierCompBase
 {
 public:
-	typedef CSnapBitmapSupplierCompBase BaseClass;
+	typedef CCameraSnapSupplierCompBase BaseClass;
 
 	I_BEGIN_COMPONENT(CSnapBitmapSupplierComp);
 		I_ASSIGN(m_bitmapCompFact, "BitmapFactory", "Use to create bitmap object", true, "BitmapFactory");
