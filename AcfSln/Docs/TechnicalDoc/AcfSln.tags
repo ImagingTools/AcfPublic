@@ -3053,14 +3053,6 @@
     <namespace>iqtipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CChartBaseDataSequenceViewComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
-    <filename>_c_chart_base_data_sequence_view_comp_8h</filename>
-    <includes id="_i_data_sequence_8h" name="IDataSequence.h" local="no" imported="no">imeas/IDataSequence.h</includes>
-    <class kind="class">iqtmeas::CChartBaseDataSequenceViewComp</class>
-    <namespace>iqtmeas</namespace>
-  </compound>
-  <compound kind="file">
     <name>CDataSequenceSupplierResultsViewComp.h</name>
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>_c_data_sequence_supplier_results_view_comp_8h</filename>
@@ -32041,59 +32033,11 @@
   <compound kind="namespace">
     <name>iqtmeas</name>
     <filename>namespaceiqtmeas.html</filename>
-    <class kind="class">iqtmeas::CChartBaseDataSequenceViewComp</class>
     <class kind="class">iqtmeas::CDataSequenceSupplierResultsViewComp</class>
     <class kind="class">iqtmeas::CDataSequenceViewComp</class>
     <class kind="class">iqtmeas::CDataStatisticsGuiComp</class>
     <class kind="class">iqtmeas::CNumericParamsGuiComp</class>
     <class kind="class">iqtmeas::CNumericValueWidget</class>
-  </compound>
-  <compound kind="class">
-    <name>iqtmeas::CChartBaseDataSequenceViewComp</name>
-    <filename>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CChartBaseDataSequenceViewComp, imeas::IDataSequence &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CChartBaseDataSequenceViewComp, imeas::IDataSequence &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</anchorfile>
-      <anchor>a2b1159d977f51cf0b6f4da105e4bcf6e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CChartBaseDataSequenceViewComp</name>
-      <anchorfile>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</anchorfile>
-      <anchor>a6d05c515deb8a84c4f805215e8f5853a</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</anchorfile>
-      <anchor>ad8973ff052305a1846a65ca47c17d759</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</anchorfile>
-      <anchor>a52db928df5f6d455b98343884a9c9362</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</anchorfile>
-      <anchor>a19f3684310cfe9bcaa1b73f954483c1c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqtmeas_1_1_c_chart_base_data_sequence_view_comp.html</anchorfile>
-      <anchor>ae54877739fff07af0810fdd18582be58</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iqtmeas::CDataSequenceSupplierResultsViewComp</name>
@@ -35453,7 +35397,6 @@
     <name>Include/iqtmeas</name>
     <path>C:/Temp/AcfSln/Include/iqtmeas/</path>
     <filename>dir_2668d1904daa9fc9f571e054d25b2a5f.html</filename>
-    <file>CChartBaseDataSequenceViewComp.h</file>
     <file>CDataSequenceSupplierResultsViewComp.h</file>
     <file>CDataSequenceViewComp.h</file>
     <file>CDataStatisticsGuiComp.h</file>

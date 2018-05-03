@@ -36,7 +36,7 @@ namespace iqtgui
 
 
 /**
-	Standart component for displaying on "On About..." action.
+	Standard component for displaying on "On About..." action.
 */
 class CAboutWidgetGuiComp: public iqtgui::TDesignerGuiCompBase<Ui::CAboutWidgetGuiComp>
 {

@@ -116,7 +116,6 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\CChartBaseDataSequenceViewComp.cpp" />
     <ClCompile Include="..\CDataSequenceSupplierResultsViewComp.cpp" />
     <ClCompile Include="..\CDataSequenceViewComp.cpp" />
     <ClCompile Include="..\CDataStatisticsGuiComp.cpp" />
@@ -124,16 +123,6 @@
     <ClCompile Include="..\CNumericValueWidget.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\CChartBaseDataSequenceViewComp.h">
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CChartBaseDataSequenceViewComp.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/iqtmeas/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CChartBaseDataSequenceViewComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CChartBaseDataSequenceViewComp.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CChartBaseDataSequenceViewComp.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CChartBaseDataSequenceViewComp.cpp;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CChartBaseDataSequenceViewComp.h;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/iqtmeas/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CChartBaseDataSequenceViewComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CChartBaseDataSequenceViewComp.cpp</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CChartBaseDataSequenceViewComp.h</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CChartBaseDataSequenceViewComp.cpp;%(Outputs)</Outputs>
-    </CustomBuild>
     <ClInclude Include="..\CDataSequenceSupplierResultsViewComp.h" />
     <CustomBuild Include="..\CDataSequenceViewComp.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CDataSequenceViewComp.h;%(AdditionalInputs)</AdditionalInputs>
@@ -178,28 +167,15 @@
     <ClInclude Include="..\iqtmeas.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CChartBaseDataSequenceViewComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CDataSequenceViewComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CDataStatisticsGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CNumericParamsGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\moc_CNumericValueWidget.cpp" />
-    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CChartBaseDataSequenceViewComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CDataSequenceViewComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CDataStatisticsGuiComp.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CNumericValueWidget.h" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="..\CChartBaseDataSequenceViewComp.ui">
-      <FileType>Document</FileType>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CChartBaseDataSequenceViewComp.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CChartBaseDataSequenceViewComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CChartBaseDataSequenceViewComp.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CChartBaseDataSequenceViewComp.ui</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CChartBaseDataSequenceViewComp.h;%(Outputs)</Outputs>
-      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CChartBaseDataSequenceViewComp.ui;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CChartBaseDataSequenceViewComp.ui -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CChartBaseDataSequenceViewComp.h</Command>
-      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CChartBaseDataSequenceViewComp.ui</Message>
-      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iqtmeas\ui_CChartBaseDataSequenceViewComp.h;%(Outputs)</Outputs>
-    </CustomBuild>
     <CustomBuild Include="..\CDataSequenceViewComp.ui">
       <FileType>Document</FileType>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CDataSequenceViewComp.ui;%(AdditionalInputs)</AdditionalInputs>
