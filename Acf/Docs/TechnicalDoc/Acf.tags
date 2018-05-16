@@ -41673,6 +41673,13 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
+      <type>Coefficients::SizesType</type>
+      <name>CoeffGridSize</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a149c145d9437c4441fa883a1190bfdd0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
       <type>TVector&lt; Dimensions &gt;</type>
       <name>ArgumentType</name>
       <anchorfile>classimath_1_1_t_i_math_function.html</anchorfile>
@@ -41713,6 +41720,13 @@
       <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
       <anchor>a1e458b656ffc5e4ef4e130d7f59a1d94</anchor>
       <arglist>(const Coefficients &amp;coefficients)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>ApproximateCoefficientsFromFulcrums</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>ae413df36b2fa0747b87b18be553ff207</anchor>
+      <arglist>(const CoeffGridSize &amp;coeffGridSize, const ArgumentType *arguments, ResultType *destValues, int count)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
