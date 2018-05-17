@@ -41742,6 +41742,27 @@
       <anchor>ad0ce861c670c8e4d43907d8667b6e753</anchor>
       <arglist>(const ArgumentType &amp;argument) const </arglist>
     </member>
+    <member kind="function">
+      <type>TMultidimensionalPolynomial&lt; 1, double &gt;::ResultType</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a328abe30177fd062d1d6807b7a4e45a6</anchor>
+      <arglist>(const ArgumentType &amp;argument) const</arglist>
+    </member>
+    <member kind="function">
+      <type>TMultidimensionalPolynomial&lt; 2, double &gt;::ResultType</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a998ce6aeced3c5d230ce873de379a6d4</anchor>
+      <arglist>(const ArgumentType &amp;argument) const</arglist>
+    </member>
+    <member kind="function">
+      <type>TMultidimensionalPolynomial&lt; 3, double &gt;::ResultType</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_t_multidimensional_polynomial.html</anchorfile>
+      <anchor>a9b723f47f23b709a39b41fc6a61ad633</anchor>
+      <arglist>(const ArgumentType &amp;argument) const</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static double</type>
       <name>GetBaseFunctionValue</name>
