@@ -41,7 +41,9 @@ namespace imath
 	\param	Element		type of result value.
 */
 template <int Dimensions, class Element = double>
-class TMultidimensionalPolynomial: public imath::TIMathFunction<TVector<Dimensions>, Element>
+class TMultidimensionalPolynomial:
+			virtual public imath::TIMathFunction<TVector<Dimensions>, Element>,
+			virtual public iser::ISerializable
 {
 public:
 	typedef imath::TIMathFunction<TVector<Dimensions>, Element> BaseClass;
@@ -54,11 +56,14 @@ public:
 	const Coefficients& GetCoefficients() const;
 	void SetCoefficients(const Coefficients& coefficients);
 
-	bool ApproximateCoefficientsFromFulcrums(const CoeffGridSize& coeffGridSize, const ArgumentType* arguments, ResultType* destValues, int count);
+	bool ApproximateCoefficientsFromFulcrums(const CoeffGridSize& coeffGridSize, const ArgumentType* arguments, const ResultType* destValues, int count);
 
 	// reimplemented (imath::TIMathFunction)
 	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const;
 	virtual ResultType GetValueAt(const ArgumentType& argument) const;
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// static public methods
 	/**
@@ -82,7 +87,7 @@ protected:
 				ResultType& result) const;
 
 private:
-	istd::TArray<Element, Dimensions> m_coefficients;
+	Coefficients m_coefficients;
 };
 
 
@@ -119,7 +124,7 @@ template <int Dimensions, class Element>
 bool TMultidimensionalPolynomial<Dimensions, Element>::ApproximateCoefficientsFromFulcrums(
 			const CoeffGridSize& coeffGridSize,
 			const ArgumentType* arguments,
-			ResultType* destValues,
+			const ResultType* destValues,
 			int count)
 {
 	m_coefficients.SetSizes(coeffGridSize);
@@ -295,6 +300,54 @@ inline typename TMultidimensionalPolynomial<3, double>::ResultType TMultidimensi
 	}
 
 	return result;
+}
+
+
+// reimplemented (iser::ISerializable)
+
+template <int Dimensions, class Element>
+bool TMultidimensionalPolynomial<Dimensions, Element>::Serialize(iser::IArchive& archive)
+{
+	static const iser::CArchiveTag dimensionsTag("Dimensions", "Description of coefficient grid", iser::CArchiveTag::TT_GROUP);
+	static const iser::CArchiveTag coefficientsTag("Coefficients", "List of coefficients", iser::CArchiveTag::TT_GROUP);
+
+	bool retVal = true;
+
+	bool isStoring = archive.IsStoring();
+
+	istd::CChangeNotifier notifier(isStoring? NULL: this);
+
+	CoeffGridSize gridSize = m_coefficients.GetSizes();
+
+	retVal = retVal && archive.BeginTag(dimensionsTag);
+
+	for (int dimensionIndex = 0; dimensionIndex < Dimensions; ++dimensionIndex){
+		retVal = retVal && archive.Process(gridSize[dimensionIndex]);
+	}
+
+	retVal = retVal && archive.EndTag(dimensionsTag);
+
+	if (!retVal){
+		return false;
+	}
+
+	if (!isStoring){
+		m_coefficients.SetSizes(gridSize);
+	}
+
+	retVal = retVal && archive.BeginTag(coefficientsTag);
+
+	for (		typename Coefficients::Iterator iter = m_coefficients.Begin();
+				iter != m_coefficients.End();
+				++iter){
+		Element& coeff = *iter;
+
+		retVal = retVal && archive.Process(coeff);
+	}
+
+	retVal = retVal && archive.EndTag(coefficientsTag);
+
+	return retVal;
 }
 
 

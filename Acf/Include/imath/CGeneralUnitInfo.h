@@ -25,7 +25,7 @@
 
 
 // ACF includes
-#include <iser/IArchive.h>
+#include <iser/ISerializable.h>
 #include <imath/IUnitInfo.h>
 
 
@@ -36,7 +36,9 @@ namespace imath
 /**
 	General implementation of the IUnitInfo interface.
 */
-class CGeneralUnitInfo: virtual public IUnitInfo
+class CGeneralUnitInfo:
+			virtual public IUnitInfo,
+			virtual public iser::ISerializable
 {
 public:
 	CGeneralUnitInfo(
@@ -51,6 +53,7 @@ public:
 	void SetDisplayMultiplicationFactor(double factor);
 	void SetValueRange(const istd::CRange& range);
 
+	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);
 
 	//	reimplemented (imath::IUnitInfo)
