@@ -20,27 +20,35 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef i2d_IObject2dProvider_included
+#define i2d_IObject2dProvider_included
 
 
-namespace istd
+// ACF includes
+#include <istd/IChangeable.h>
+#include <i2d/IObject2d.h>
+
+
+namespace i2d
 {
+
 
 /**
-	Enumeration for reflecting the state of ACF's SVN repository.
+	Common interface for a provider, which delivers a 2D-object.
 */
-enum RepositoryState
+class IObject2dProvider: virtual public istd::IChangeable
 {
-	RS_ORIGINAL_VERSION =  4699,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	/**
+		Get access to 2D-object.
+	*/
+	virtual const IObject2d* GetObject2d() const = 0;
 };
 
 
-} // namespace istd
+} // namespace i2d
 
 
-#endif // !istd_AcfVersion_included
+#endif // !i2d_IObject2dProvider_included
 
 

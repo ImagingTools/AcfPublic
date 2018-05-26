@@ -436,6 +436,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>IObject2dProvider.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_i_object2d_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
+    <includes id="_i_object2d_8h" name="IObject2d.h" local="no" imported="no">i2d/IObject2d.h</includes>
+    <class kind="class">i2d::IObject2dProvider</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>IRectangleConstraints.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_i_rectangle_constraints_8h</filename>
@@ -7219,6 +7228,7 @@
     <class kind="class">i2d::ICalibrationProvider</class>
     <class kind="class">i2d::IMultiCalibrationProvider</class>
     <class kind="class">i2d::IObject2d</class>
+    <class kind="class">i2d::IObject2dProvider</class>
     <class kind="class">i2d::IRectangleConstraints</class>
     <class kind="class">i2d::ISceneController</class>
     <class kind="class">i2d::ITransformation2d</class>
@@ -13689,6 +13699,18 @@
       <anchorfile>classi2d_1_1_i_object2d.html</anchorfile>
       <anchor>ab77a3500838d3439a2cc8cfb679fc860</anchor>
       <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>i2d::IObject2dProvider</name>
+    <filename>classi2d_1_1_i_object2d_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IObject2d *</type>
+      <name>GetObject2d</name>
+      <anchorfile>classi2d_1_1_i_object2d_provider.html</anchorfile>
+      <anchor>ab4df5c7447971952d6b16c409b3ec7b1</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74691,6 +74713,7 @@
     <file>ICalibrationProvider.h</file>
     <file>IMultiCalibrationProvider.h</file>
     <file>IObject2d.h</file>
+    <file>IObject2dProvider.h</file>
     <file>IRectangleConstraints.h</file>
     <file>ISceneController.h</file>
     <file>ITransformation2d.h</file>
