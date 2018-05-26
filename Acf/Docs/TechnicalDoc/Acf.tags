@@ -177,6 +177,15 @@
     <namespace>i2d</namespace>
   </compound>
   <compound kind="file">
+    <name>CObject2dProxyComp.h</name>
+    <path>C:/Temp/Acf/Include/i2d/</path>
+    <filename>_c_object2d_proxy_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_object2d_provider_8h" name="IObject2dProvider.h" local="no" imported="no">i2d/IObject2dProvider.h</includes>
+    <class kind="class">i2d::CObject2dProxyComp</class>
+    <namespace>i2d</namespace>
+  </compound>
+  <compound kind="file">
     <name>COrientedCircle.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_c_oriented_circle_8h</filename>
@@ -7202,6 +7211,7 @@
     <class kind="class">i2d::CMatrix2d</class>
     <class kind="class">i2d::CObject2dBase</class>
     <class kind="class">i2d::CObject2dFactory</class>
+    <class kind="class">i2d::CObject2dProxyComp</class>
     <class kind="class">i2d::COrientedCircle</class>
     <class kind="class">i2d::COrientedCircleComp</class>
     <class kind="class">i2d::CParallelogram</class>
@@ -10786,6 +10796,117 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>i2d::CObject2dProxyComp</name>
+    <filename>classi2d_1_1_c_object2d_proxy_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::IObject2d</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a3363b71091615fa5f16a211c69d337f7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CVector2d</type>
+      <name>GetCenter</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>adfbaed456c27502d47e7ff522d5bf61a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>MoveCenterTo</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>aee96a1445fa6f88c570e5deb30739979</anchor>
+      <arglist>(const CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual CRectangle</type>
+      <name>GetBoundingBox</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>ac467198caf7d3d7000d9c659323a9e4a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetCalibration</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a13352324ba1eb8d820d569713fa0564a</anchor>
+      <arglist>(const ICalibration2d *calibrationPtr, bool releaseFlag=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Transform</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a1c241497cb00c29e77473821f2957150</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InvTransform</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>aba7ffded2868315ac4e598978feafe2a</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetTransformed</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a9aa0ac42ebb713c937b8df25556b0966</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvTransformed</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a7eeefe40e06e8d9ef0ef970daf71da86</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a1aabb89f8a73315a11b22791017e0f06</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a6bb24c83608a29abb34f5072f2b84cd5</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>ac3b87f04ddb2f63bc577ff3f40cb3ab9</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>a990a1273f2c61e12717594aa672d5462</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const i2d::IObject2d *</type>
+      <name>GetObject2d</name>
+      <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
+      <anchor>a47c70a792febaf55b9524598a8237c4b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
+      <anchor>a8a79eed0233a1ff69972975180f5210a</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::COrientedCircle</name>
     <filename>classi2d_1_1_c_oriented_circle.html</filename>
     <base>i2d::CCircle</base>
@@ -12720,13 +12841,6 @@
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
       <anchor>a0ddb620da9b2139299568e0a49730a6b</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>a990a1273f2c61e12717594aa672d5462</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16352,13 +16466,6 @@
       <anchorfile>classibase_1_1_c_application_info_comp.html</anchorfile>
       <anchor>a94128d9c2b6cd54d8107fc7e6a23b805</anchor>
       <arglist>(int versionId, quint32 versionNumber) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicomp_1_1_c_component_base.html</anchorfile>
-      <anchor>a8a79eed0233a1ff69972975180f5210a</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="enumeration">
       <type></type>
@@ -74686,6 +74793,7 @@
     <file>CMatrix2d.h</file>
     <file>CObject2dBase.h</file>
     <file>CObject2dFactory.h</file>
+    <file>CObject2dProxyComp.h</file>
     <file>COrientedCircle.h</file>
     <file>COrientedCircleComp.h</file>
     <file>CParallelogram.h</file>

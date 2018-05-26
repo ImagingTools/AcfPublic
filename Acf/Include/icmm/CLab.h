@@ -96,10 +96,7 @@ inline CLab::CLab(double l, double a, double b)
 
 
 inline CLab::CLab(const CLab& color)
-:	istd::IPolymorphic(),
-	istd::IChangeable(),
-	iser::ISerializable(),
-	BaseClass(color)
+:	BaseClass(color)
 {
 }
 
