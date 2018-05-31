@@ -67,6 +67,12 @@ CEdgeLine::CEdgeLine(const CEdgeLine& edgeLine)
 }
 
 
+CEdgeLine::~CEdgeLine()
+{
+	Clear();
+}
+
+
 void CEdgeLine::Clear()
 {
 	BeginChanges(GetAnyChange());

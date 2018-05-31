@@ -46,6 +46,8 @@ public:
 	CEdgeLine();
 	CEdgeLine(const CEdgeLine& edgeLine);
 
+	virtual ~CEdgeLine();
+
 	void Clear();
 
 	/**
