@@ -29742,13 +29742,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqtcam_1_1_c_snap_image_params_editor_comp.html</anchorfile>
-      <anchor>a840215fb5f3f29d328f04c4ce00da721</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_params_editor_comp.html</anchorfile>
       <anchor>a0128712047fa7ac040533fcbe1685474</anchor>

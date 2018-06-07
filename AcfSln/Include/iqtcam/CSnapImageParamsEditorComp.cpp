@@ -20,6 +20,28 @@
 ********************************************************************************/
 
 
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
 #include <iqtcam/CSnapImageParamsEditorComp.h>
 
 
@@ -41,18 +63,8 @@ namespace iqtcam
 
 
 CSnapImageParamsEditorComp::CSnapImageParamsEditorComp()
-:	m_paramsObserver(this),
-	m_intervalSnapAction(QIcon(":/Icons/AutoUpdate"), "", NULL),
-	m_snapOnChangesAction(QIcon(":/Icons/Reload"), "", NULL),
-	m_snapButtonMenu(NULL)
+:	m_paramsObserver(this)
 {
-	m_intervalSnapAction.setCheckable(true);
-	QObject::connect(&m_intervalSnapAction, SIGNAL(triggered(bool)), this, SLOT(OnIntervalSnap(bool)));
-	m_snapOnChangesAction.setCheckable(true);
-	QObject::connect(&m_snapOnChangesAction, SIGNAL(triggered(bool)), this, SLOT(OnSnapOnChanges(bool)));
-	m_snapButtonMenu.addAction(&m_intervalSnapAction);
-	m_snapButtonMenu.addAction(&m_snapOnChangesAction);
-
 	m_timer.setInterval(40);
 	QObject::connect(&m_timer, SIGNAL(timeout()), this, SLOT(OnTimerReady()));
 }
@@ -150,15 +162,6 @@ void CSnapImageParamsEditorComp::CreateShapes(int /*sceneId*/, Shapes& result)
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
-void CSnapImageParamsEditorComp::OnGuiRetranslate()
-{
-	BaseClass::OnGuiRetranslate();
-
-	m_intervalSnapAction.setText(tr("Interval snap"));
-	m_snapOnChangesAction.setText(tr("Snap on parameter changes"));
-}
-
-
 void CSnapImageParamsEditorComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
@@ -166,13 +169,15 @@ void CSnapImageParamsEditorComp::OnGuiCreated()
 	bool hasBitmap = m_bitmapCompPtr.IsValid();
 	bool hasSnap = m_bitmapAcquisitionCompPtr.IsValid();
 
-	SnapImageButton->setMenu(&m_snapButtonMenu);
+	QObject::connect(IntervalSnapButton, SIGNAL(toggled(bool)), this, SLOT(OnIntervalSnap(bool)));
+	QObject::connect(OnChangeSnapButton, SIGNAL(toggled(bool)), this, SLOT(OnSnapOnChanges(bool)));
 
 	SnapImageButton->setVisible(hasBitmap && hasSnap);
 	LoadImageButton->setVisible(hasBitmap && m_bitmapLoaderCompPtr.IsValid() && *m_allowBitmapLoadAttrPtr);
 	SaveImageButton->setVisible(hasBitmap && m_bitmapLoaderCompPtr.IsValid());
 	SaveImageButton->setVisible(hasBitmap && m_bitmapLoaderCompPtr.IsValid());
 	SaveImageButton->setEnabled(false);
+	OnChangeSnapButton->setVisible(m_allowSnapOnChangeAttrPtr.IsValid() && *m_allowSnapOnChangeAttrPtr);
 
 	ParamsGB->setVisible(m_paramsSetGuiCompPtr.IsValid() || m_paramsLoaderCompPtr.IsValid());
 	LoadParamsButton->setVisible(m_paramsLoaderCompPtr.IsValid());
@@ -195,8 +200,9 @@ void CSnapImageParamsEditorComp::OnGuiDestroyed()
 void CSnapImageParamsEditorComp::OnGuiHidden()
 {
 	m_timer.stop();
-	m_intervalSnapAction.setChecked(false);
-	m_snapOnChangesAction.setChecked(false);
+
+	IntervalSnapButton->setChecked(false);
+	OnChangeSnapButton->setChecked(false);
 
 	BaseClass::OnGuiHidden();
 }
@@ -256,8 +262,8 @@ void CSnapImageParamsEditorComp::OnComponentCreated()
 void CSnapImageParamsEditorComp::on_SnapImageButton_clicked()
 {
 	m_timer.stop();
-	m_intervalSnapAction.setChecked(false);
-	m_snapOnChangesAction.setChecked(false);
+	IntervalSnapButton->setChecked(false);
+	OnChangeSnapButton->setChecked(false);
 
 	if (SnapImageButton->isCheckable()){
 		SnapImageButton->setChecked(false);
@@ -329,7 +335,7 @@ void CSnapImageParamsEditorComp::on_SaveParamsButton_clicked()
 
 void CSnapImageParamsEditorComp::OnIntervalSnap(bool checked)
 {
-	m_snapOnChangesAction.setChecked(false);
+	OnChangeSnapButton->setChecked(false);
 
 	if (checked){
 		SnapImageButton->setCheckable(true);
@@ -359,7 +365,7 @@ void CSnapImageParamsEditorComp::OnSnapOnChanges(bool checked)
 		SnapImageButton->setCheckable(false);
 	}
 
-	m_intervalSnapAction.setChecked(false);
+	IntervalSnapButton->setChecked(false);
 }
 
 
@@ -384,7 +390,7 @@ CSnapImageParamsEditorComp::ParamsObserver::ParamsObserver(CSnapImageParamsEdito
 
 void CSnapImageParamsEditorComp::ParamsObserver::OnUpdate(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
-	if (m_parent.m_snapOnChangesAction.isChecked()){
+	if (m_parent.OnChangeSnapButton->isChecked()){
 		m_parent.SnapImage();
 	}
 }

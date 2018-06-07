@@ -22,6 +22,7 @@
 
 #include <i2d/CObject2dProxyComp.h>
 
+
 // ACF includes
 #include <i2d/CRectangle.h>
 
@@ -29,6 +30,8 @@
 namespace i2d
 {
 
+
+// public methods
 
 // reimplemented (i2d::IObject2d)
 
@@ -42,9 +45,11 @@ CVector2d CObject2dProxyComp::GetCenter() const
 	return CVector2d();
 }
 
-void CObject2dProxyComp::MoveCenterTo(const CVector2d& position)
+
+void CObject2dProxyComp::MoveCenterTo(const CVector2d& /*position*/)
 {
 }
+
 
 CRectangle CObject2dProxyComp::GetBoundingBox() const
 {
@@ -56,25 +61,29 @@ CRectangle CObject2dProxyComp::GetBoundingBox() const
 	return CRectangle(0, 0, 0, 0);
 }
 
-void CObject2dProxyComp::SetCalibration(const ICalibration2d* calibrationPtr, bool releaseFlag)
+
+void CObject2dProxyComp::SetCalibration(const ICalibration2d* /*calibrationPtr*/, bool /*releaseFlag*/)
 {
 }
+
 
 bool CObject2dProxyComp::Transform(
-			const ITransformation2d& transformation,
-			ITransformation2d::ExactnessMode mode,
-			double* errorFactorPtr)
+			const ITransformation2d& /*transformation*/,
+			ITransformation2d::ExactnessMode /*mode*/,
+			double* /*errorFactorPtr*/)
 {
 	return false;
 }
 
+
 bool CObject2dProxyComp::InvTransform(
-			const ITransformation2d& transformation,
-			ITransformation2d::ExactnessMode mode,
-			double* errorFactorPtr)
+			const ITransformation2d& /*transformation*/,
+			ITransformation2d::ExactnessMode /*mode*/,
+			double* /*errorFactorPtr*/)
 {
 	return false;
 }
+
 
 bool CObject2dProxyComp::GetTransformed(
 			const ITransformation2d& transformation,
@@ -90,6 +99,7 @@ bool CObject2dProxyComp::GetTransformed(
 	return false;
 }
 
+
 bool CObject2dProxyComp::GetInvTransformed(
 			const ITransformation2d& transformation,
 			IObject2d& result,
@@ -104,6 +114,7 @@ bool CObject2dProxyComp::GetInvTransformed(
 	return false;
 }
 
+
 // reimplemented (i2d::IClibrationProvider)
 
 const ICalibration2d* CObject2dProxyComp::GetCalibration() const
@@ -115,6 +126,7 @@ const ICalibration2d* CObject2dProxyComp::GetCalibration() const
 
 	return NULL;
 }
+
 
 // reimplemented (iser::ISerializable)
 
@@ -149,6 +161,6 @@ const i2d::IObject2d* CObject2dProxyComp::GetObject2d() const
 }
 
 
-} // namespace icalib
+} // namespace i2d
 
 
