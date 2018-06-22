@@ -22718,8 +22718,15 @@
       <type>virtual bool</type>
       <name>FindPerspCalib</name>
       <anchorfile>classiipr_1_1_c_persp_calib_finder.html</anchorfile>
-      <anchor>a99f999ff7d65925669124b2cff63a773</anchor>
-      <arglist>(const i2d::CVector2d *nominalPositionsPtr, const i2d::CVector2d *foundPositionsPtr, int positionsCount, icalib::CPerspectiveCalibration2d &amp;results, bool allowPerspective=true, bool allowRotation=true, bool allowScale=true, bool allowAnisotropic=true, bool allowTranslation=true) const </arglist>
+      <anchor>a2b228dd0e6f1a4d7930e72eab72ecb16</anchor>
+      <arglist>(const i2d::CVector2d *nominalPositionsPtr, const i2d::CVector2d *foundPositionsPtr, int positionsCount, icalib::CPerspectiveCalibration2d &amp;result, bool allowPerspective=true, bool allowRotation=true, bool allowScale=true, bool allowAnisotropic=true, bool allowTranslation=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>FindPerspCalibWithCorrection</name>
+      <anchorfile>classiipr_1_1_c_persp_calib_finder.html</anchorfile>
+      <anchor>accd29a9366377c5cbdb6a54068df5a13</anchor>
+      <arglist>(const i2d::CVector2d *nominalPositionsPtr, const i2d::CVector2d *foundPositionsPtr, int positionsCount, const i2d::CVector2d &amp;opticalCenter, icalib::CPerspectiveCalibration2d &amp;result, double &amp;lensCorrFactor, bool allowPerspective=true, bool allowRotation=true, bool allowScale=true, bool allowAnisotropic=true, bool allowTranslation=true) const </arglist>
     </member>
   </compound>
   <compound kind="class">
