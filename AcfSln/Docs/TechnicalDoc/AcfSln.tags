@@ -21465,15 +21465,15 @@
       <type>static bool</type>
       <name>CropImage</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
-      <anchor>a9d27d55bdd3781ead3aa14ff6e4a7b1f</anchor>
-      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, int interpolationMode=IM_LINEAR, int orientationMode=OM_SIMPLE, ilog::IMessageConsumer *resultConsumerPtr=NULL)</arglist>
+      <anchor>a8632d3ed41a9c6690a9cbcdc8335ebd1</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, int cellSize, const iimg::IBitmap &amp;inputBitmap, iimg::IBitmap &amp;outputBitmap, istd::CIndex2d *outputImageSizePtr=NULL, int interpolationMode=IM_LINEAR, int orientationMode=OM_SIMPLE, ilog::IMessageConsumer *resultConsumerPtr=NULL)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>CalcCalibration</name>
       <anchorfile>classiipr_1_1_c_image_crop_decalibrate_processor_comp.html</anchorfile>
-      <anchor>a3e817d6942c4fb19052e6ec01fe99211</anchor>
-      <arglist>(const i2d::CRectangle &amp;sourceAoi, icalib::CAffineCalibration2d &amp;outputCalib, int orientationMode=OM_SIMPLE)</arglist>
+      <anchor>a7f9a4a67ea1bc771f7fc6667df97c96c</anchor>
+      <arglist>(const i2d::CRectangle &amp;sourceAoi, icalib::CAffineCalibration2d &amp;outputCalib, istd::CIndex2d *outputImageSizePtr=NULL, int orientationMode=OM_SIMPLE)</arglist>
     </member>
     <member kind="function" protection="protected" static="yes">
       <type>static bool</type>
