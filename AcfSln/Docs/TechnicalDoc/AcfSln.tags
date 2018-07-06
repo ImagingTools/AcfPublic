@@ -22914,17 +22914,17 @@
       <arglist>(double value)</arglist>
     </member>
     <member kind="function">
-      <type>GrayCropAccum32</type>
-      <name>operator/</name>
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator/=</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
-      <anchor>ae1d1aa0da64e75c120baca49466bacb4</anchor>
+      <anchor>a857229ac3979e84d727deef126767ce0</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="function">
-      <type>GrayCropAccum32</type>
-      <name>operator/</name>
+      <type>GrayCropAccum32 &amp;</type>
+      <name>operator/=</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_gray_crop_accum32.html</anchorfile>
-      <anchor>a0b4c3fba0de0dfcfae43fac5b34955e7</anchor>
+      <anchor>a14374a68e499ca8dd3a24df48f98c224</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function">
@@ -23225,17 +23225,17 @@
       <arglist>(double value)</arglist>
     </member>
     <member kind="function">
-      <type>RgbaCropAccum32</type>
-      <name>operator/</name>
+      <type>RgbaCropAccum32 &amp;</type>
+      <name>operator/=</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba_crop_accum32.html</anchorfile>
-      <anchor>a0566a141cb7788d24c1dd0bc36de9bb9</anchor>
+      <anchor>a740c1b2d2fc8571834ec54853d89a7d3</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="function">
-      <type>RgbaCropAccum32</type>
-      <name>operator/</name>
+      <type>RgbaCropAccum32 &amp;</type>
+      <name>operator/=</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba_crop_accum32.html</anchorfile>
-      <anchor>a5094032ba8813220736109309389acce</anchor>
+      <anchor>a81763d371a284e96206bba813433650c</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function">
@@ -23442,17 +23442,17 @@
       <arglist>(double value)</arglist>
     </member>
     <member kind="function">
-      <type>RgbCropAccum32</type>
-      <name>operator/</name>
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator/=</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
-      <anchor>a021c073358f93936b7a847cfa26862f1</anchor>
+      <anchor>a8dffdb909d75808038ba97009124b404</anchor>
       <arglist>(int value)</arglist>
     </member>
     <member kind="function">
-      <type>RgbCropAccum32</type>
-      <name>operator/</name>
+      <type>RgbCropAccum32 &amp;</type>
+      <name>operator/=</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgb_crop_accum32.html</anchorfile>
-      <anchor>aeedeb164d19988520f78d76771f3e687</anchor>
+      <anchor>a2d26004106d6ca09298101f96862a155</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="function">
