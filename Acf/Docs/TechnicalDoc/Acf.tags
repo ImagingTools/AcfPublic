@@ -4377,6 +4377,7 @@
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="no" imported="no">iqt2d/IViewProvider.h</includes>
     <includes id="_i_view_extender_8h" name="IViewExtender.h" local="no" imported="no">iqt2d/IViewExtender.h</includes>
+    <includes id="_t_restorable_gui_wrap_8h" name="TRestorableGuiWrap.h" local="no" imported="no">iqtgui/TRestorableGuiWrap.h</includes>
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -49511,13 +49512,13 @@
   <compound kind="class">
     <name>iqt2d::CSceneConnectorGuiComp</name>
     <filename>classiqt2d_1_1_c_scene_connector_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSceneConnectorGuiComp, QWidget &gt;</base>
+    <base>TRestorableGuiWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneConnectorGuiComp, QWidget &gt; &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneConnectorGuiComp, QWidget &gt;</type>
+      <type>iqtgui::TRestorableGuiWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSceneConnectorGuiComp, QWidget &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
-      <anchor>a95c4409ea6ec80ac1b9a230e1ed43fae</anchor>
+      <anchor>a0914aee1bbb63b75469242c22eae1508</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -49554,6 +49555,20 @@
       <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
       <anchor>af5f62bd73fe6c203ef35b9f1aae3d552</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRestoreSettings</name>
+      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>ab7fc90cce4869a2dec9154e6b23ab5f7</anchor>
+      <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSaveSettings</name>
+      <anchorfile>classiqt2d_1_1_c_scene_connector_gui_comp.html</anchorfile>
+      <anchor>a33db24ea3928d39b03db21c8be224e55</anchor>
+      <arglist>(QSettings &amp;settings) const </arglist>
     </member>
   </compound>
   <compound kind="class">
