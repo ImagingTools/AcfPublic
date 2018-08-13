@@ -85,6 +85,8 @@ public:
 
 	CMultiPageGuiCompBase();
 
+	iprm::ISelectionParam& GetPageModelRef();
+
 	/**
 		Get the number of the pages in the UI container.
 	*/
@@ -171,6 +173,7 @@ private:
 
 		// reimplemented (iprm::ISelectionParam)
 		virtual bool SetSelectedOptionIndex(int index);
+		virtual ISelectionParam* GetSubselection(int index) const;
 
 		// reimplemented (iprm::IOptionsList)
 		virtual int GetOptionsFlags() const;

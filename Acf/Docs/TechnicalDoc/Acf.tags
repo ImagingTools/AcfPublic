@@ -53667,6 +53667,13 @@
       <anchor>a800938c522827eef7c1bd0be448888f0</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>iprm::ISelectionParam &amp;</type>
+      <name>GetPageModelRef</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a73a2b4458b2296b1d1f8ff3fae92ca40</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>QWidget *</type>
       <name>GetPageContainerWidget</name>
