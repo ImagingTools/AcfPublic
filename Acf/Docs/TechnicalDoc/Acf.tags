@@ -9136,6 +9136,55 @@
       <anchor>a466e90b8ab72643c744604a75eb5c696</anchor>
       <arglist>(int nodeIndex) const </arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentNodes</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a54b7dc398f4d4856bda49714781bdd43</anchor>
+      <arglist>(double atPositionNormalized, i2d::CVector2d &amp;previous, i2d::CVector2d &amp;next, double &amp;alpha) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentNodes</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>ae969a316669cc1794ed7592f41efce17</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, i2d::CVector2d &amp;previous, i2d::CVector2d &amp;next) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentNodeIndices</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a2937a836e662c04b7241bcd96431633d</anchor>
+      <arglist>(double position, int &amp;previousIndex, int &amp;nextIndex, double &amp;alpha) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentNodeIndices</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>ab0f52122e002a62f7e662d8fa0e7f8d2</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, int &amp;previousIndex, int &amp;nextIndex) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentLine</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a5b9fd414a7ce75e579482af78c53a035</anchor>
+      <arglist>(double position, i2d::CLine2d &amp;line, double &amp;alpha) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentLine</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>a5f3667b71bcb36299ddbaf4832e28377</anchor>
+      <arglist>(const i2d::CVector2d &amp;position, i2d::CLine2d &amp;line) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetInterpolatedPosition</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>af12d7b350a74687e7b15acf7364827cc</anchor>
+      <arglist>(double position, i2d::CVector2d &amp;output) const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
