@@ -4607,6 +4607,7 @@
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="no" imported="no">idoc/IUndoManager.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="no" imported="no">idoc/IDocumentManager.h</includes>
+    <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="no" imported="no">iqtgui/IDropConsumer.h</includes>
     <includes id="_c_simple_main_window_gui_comp_8h" name="CSimpleMainWindowGuiComp.h" local="no" imported="no">iqtgui/CSimpleMainWindowGuiComp.h</includes>
     <class kind="class">iqtdoc::CMainWindowGuiCompBase</class>
     <class kind="class">iqtdoc::CMainWindowGuiComp</class>
