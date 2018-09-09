@@ -4498,6 +4498,7 @@
     <filename>_t_view_extender_comp_base_8h</filename>
     <includes id="_t_pointer_vector_8h" name="TPointerVector.h" local="no" imported="no">istd/TPointerVector.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="no" imported="no">i2d/ICalibration2d.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_shape_view_8h" name="IShapeView.h" local="no" imported="no">iview/IShapeView.h</includes>
     <includes id="_c_shape_base_8h" name="CShapeBase.h" local="no" imported="no">iview/CShapeBase.h</includes>
     <includes id="_c_calibrated_view_base_8h" name="CCalibratedViewBase.h" local="no" imported="no">iview/CCalibratedViewBase.h</includes>
