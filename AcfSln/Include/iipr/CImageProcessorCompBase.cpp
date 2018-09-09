@@ -60,7 +60,7 @@ CImageProcessorCompBase::AoiMode CImageProcessorCompBase::GetAoiMode(const iprm:
 	return AoiMode(*m_aoiModeAttrPtr);
 }
 
-	
+
 // reimplemented (iproc::IProcessor)
 
 int CImageProcessorCompBase::DoProcessing(
