@@ -9386,6 +9386,13 @@
     <member kind="function" static="yes">
       <type>static QByteArray</type>
       <name>GetTypeName</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ae496f76d1598924ba08d10cee751e1ed</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>a004398bd3a0bd6878caf5934bc91ab1d</anchor>
       <arglist>()</arglist>
@@ -11320,8 +11327,8 @@
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>ab9bfe1ea93b34aa74599b4bde167d00f</anchor>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a39c6b518d7370347566ac998fb35b97a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -11428,6 +11435,13 @@
     <name>i2d::CPolypoint</name>
     <filename>classi2d_1_1_c_polypoint.html</filename>
     <base>i2d::CObject2dBase</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>ab9bfe1ea93b34aa74599b4bde167d00f</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
