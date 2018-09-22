@@ -35,7 +35,7 @@
 #include <istd/CChangeNotifier.h>
 #include <iqt/CSignalBlocker.h>
 
-// QSF includes
+
 #include <iblobgui/CBlobFilterGui.h>
 
 

@@ -798,6 +798,264 @@
     <namespace>icmpstr</namespace>
   </compound>
   <compound kind="file">
+    <name>CCommonVersionInfo.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_common_version_info_8h</filename>
+    <class kind="class">icomm::CCommonVersionInfo</class>
+    <class kind="struct">icomm::CCommonVersionInfo::VersionIdElement</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHeartbeatAnswer.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_heartbeat_answer_8h</filename>
+    <includes id="_i_server_info_8h" name="IServerInfo.h" local="no" imported="no">icomm/IServerInfo.h</includes>
+    <includes id="_i_station_state_8h" name="IStationState.h" local="no" imported="no">icomm/IStationState.h</includes>
+    <includes id="_c_heartbeat_question_8h" name="CHeartbeatQuestion.h" local="no" imported="no">icomm/CHeartbeatQuestion.h</includes>
+    <class kind="class">icomm::CHeartbeatAnswer</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CHeartbeatQuestion.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_heartbeat_question_8h</filename>
+    <class kind="class">icomm::CHeartbeatQuestion</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRequestHeader.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_request_header_8h</filename>
+    <class kind="class">icomm::CRequestHeader</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CRequestsManagerBase.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_requests_manager_base_8h</filename>
+    <includes id="_i_requests_manager_8h" name="IRequestsManager.h" local="no" imported="no">icomm/IRequestsManager.h</includes>
+    <includes id="_i_request_8h" name="IRequest.h" local="no" imported="no">icomm/IRequest.h</includes>
+    <class kind="class">icomm::CRequestsManagerBase</class>
+    <class kind="struct">icomm::CRequestsManagerBase::RequestData</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CResponseHeader.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_response_header_8h</filename>
+    <class kind="class">icomm::CResponseHeader</class>
+    <namespace>icomm</namespace>
+    <member kind="function">
+      <type>inline::icomm::CResponseHeader::ResponseFlags</type>
+      <name>operator|</name>
+      <anchorfile>_c_response_header_8h.html</anchorfile>
+      <anchor>a53ecf7727e0f7e6c5b22afc0f5cfe417</anchor>
+      <arglist>(::icomm::CResponseHeader::ResponseFlags flag1,::icomm::CResponseHeader::ResponseFlags flag2)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>CResponsesManagerBase.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_responses_manager_base_8h</filename>
+    <includes id="_i_responses_manager_8h" name="IResponsesManager.h" local="no" imported="no">icomm/IResponsesManager.h</includes>
+    <includes id="_i_response_8h" name="IResponse.h" local="no" imported="no">icomm/IResponse.h</includes>
+    <class kind="class">icomm::CResponsesManagerBase</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTcpClientsManagerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_tcp_clients_manager_comp_8h</filename>
+    <includes id="_i_response_8h" name="IResponse.h" local="no" imported="no">icomm/IResponse.h</includes>
+    <includes id="_i_station_state_8h" name="IStationState.h" local="no" imported="no">icomm/IStationState.h</includes>
+    <class kind="class">icomm::CTcpClientsManagerComp</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTcpClientStatus.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_tcp_client_status_8h</filename>
+    <includes id="_i_client_status_8h" name="IClientStatus.h" local="no" imported="no">icomm/IClientStatus.h</includes>
+    <includes id="_t_pop_cumulator_base_8h" name="TPopCumulatorBase.h" local="no" imported="no">icomm/TPopCumulatorBase.h</includes>
+    <includes id="_c_responses_manager_base_8h" name="CResponsesManagerBase.h" local="no" imported="no">icomm/CResponsesManagerBase.h</includes>
+    <includes id="_c_tcp_message_header_8h" name="CTcpMessageHeader.h" local="no" imported="no">icomm/CTcpMessageHeader.h</includes>
+    <includes id="_c_common_version_info_8h" name="CCommonVersionInfo.h" local="no" imported="no">icomm/CCommonVersionInfo.h</includes>
+    <class kind="class">icomm::CTcpClientStatus</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTcpMessageHeader.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_tcp_message_header_8h</filename>
+    <class kind="class">icomm::CTcpMessageHeader</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTcpRequestsManagerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_tcp_requests_manager_comp_8h</filename>
+    <includes id="_i_host_connection_8h" name="IHostConnection.h" local="no" imported="no">icomm/IHostConnection.h</includes>
+    <includes id="_t_pop_cumulator_base_8h" name="TPopCumulatorBase.h" local="no" imported="no">icomm/TPopCumulatorBase.h</includes>
+    <includes id="_c_requests_manager_base_8h" name="CRequestsManagerBase.h" local="no" imported="no">icomm/CRequestsManagerBase.h</includes>
+    <includes id="_c_tcp_message_header_8h" name="CTcpMessageHeader.h" local="no" imported="no">icomm/CTcpMessageHeader.h</includes>
+    <includes id="_c_common_version_info_8h" name="CCommonVersionInfo.h" local="no" imported="no">icomm/CCommonVersionInfo.h</includes>
+    <class kind="class">icomm::CTcpRequestsManagerComp</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTcpStreamComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_tcp_stream_comp_8h</filename>
+    <includes id="_i_binary_stream_8h" name="IBinaryStream.h" local="no" imported="no">icomm/IBinaryStream.h</includes>
+    <includes id="_i_host_connection_8h" name="IHostConnection.h" local="no" imported="no">icomm/IHostConnection.h</includes>
+    <class kind="class">icomm::CTcpStreamComp</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUdpServersManagerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_udp_servers_manager_comp_8h</filename>
+    <includes id="_i_heartbeat_servers_manager_8h" name="IHeartbeatServersManager.h" local="no" imported="no">icomm/IHeartbeatServersManager.h</includes>
+    <class kind="class">icomm::CUdpServersManagerComp</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUdpStreamComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_udp_stream_comp_8h</filename>
+    <includes id="_i_binary_stream_8h" name="IBinaryStream.h" local="no" imported="no">icomm/IBinaryStream.h</includes>
+    <class kind="class">icomm::CUdpStreamComp</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUserRequest.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_user_request_8h</filename>
+    <includes id="_i_request_8h" name="IRequest.h" local="no" imported="no">icomm/IRequest.h</includes>
+    <class kind="class">icomm::CUserRequest</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CUserResponse.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_c_user_response_8h</filename>
+    <includes id="_i_response_8h" name="IResponse.h" local="no" imported="no">icomm/IResponse.h</includes>
+    <class kind="class">icomm::CUserResponse</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IArchiveEx.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_archive_ex_8h</filename>
+    <class kind="class">icomm::IArchiveEx</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IBinaryStream.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_binary_stream_8h</filename>
+    <class kind="class">icomm::IBinaryStream</class>
+    <class kind="class">icomm::IBinaryStream::Handler</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IClientStatus.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_client_status_8h</filename>
+    <class kind="class">icomm::IClientStatus</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IHeartbeatServersManager.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_heartbeat_servers_manager_8h</filename>
+    <includes id="_i_servers_manager_8h" name="IServersManager.h" local="no" imported="no">icomm/IServersManager.h</includes>
+    <includes id="_c_heartbeat_answer_8h" name="CHeartbeatAnswer.h" local="no" imported="no">icomm/CHeartbeatAnswer.h</includes>
+    <class kind="class">icomm::IHeartbeatServersManager</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IHostConnection.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_host_connection_8h</filename>
+    <class kind="class">icomm::IHostConnection</class>
+    <class kind="class">icomm::IHostConnection::Handler</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IMemoryCommunication.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_memory_communication_8h</filename>
+    <class kind="class">icomm::IMemoryCommunication</class>
+    <class kind="class">icomm::IMemoryCommunication::Handler</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IRequest.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_request_8h</filename>
+    <class kind="class">icomm::IRequest</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IRequestsManager.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_requests_manager_8h</filename>
+    <class kind="class">icomm::IRequestsManager</class>
+    <class kind="struct">icomm::IRequestsManager::RequestInfo</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IResponse.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_response_8h</filename>
+    <class kind="class">icomm::IResponse</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IResponsesManager.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_responses_manager_8h</filename>
+    <class kind="class">icomm::IResponsesManager</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IServerInfo.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_server_info_8h</filename>
+    <class kind="class">icomm::IServerInfo</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IServersManager.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_servers_manager_8h</filename>
+    <includes id="_i_server_info_8h" name="IServerInfo.h" local="no" imported="no">icomm/IServerInfo.h</includes>
+    <class kind="class">icomm::IServersManager</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IStationState.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_i_station_state_8h</filename>
+    <class kind="class">icomm::IStationState</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TPopCumulatorBase.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_t_pop_cumulator_base_8h</filename>
+    <class kind="class">icomm::TPopCumulatorBase</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TPushCumulatorBase.h</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>_t_push_cumulator_base_8h</filename>
+    <class kind="class">icomm::TPushCumulatorBase</class>
+    <namespace>icomm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CRenderedDocumentPreviewGeneratorComp.h</name>
     <path>C:/Temp/AcfSln/Include/idocproc/</path>
     <filename>_c_rendered_document_preview_generator_comp_8h</filename>
@@ -13927,6 +14185,2273 @@
       <anchorfile>classicmpstr_1_1_t_shape_base.html</anchorfile>
       <anchor>a153b4a35041c83a6f4df18387f7bb263</anchor>
       <arglist>(QGraphicsItem::GraphicsItemChange change, const QVariant &amp;value)</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
+    <name>icomm</name>
+    <filename>namespaceicomm.html</filename>
+    <class kind="class">icomm::CCommonVersionInfo</class>
+    <class kind="class">icomm::CHeartbeatAnswer</class>
+    <class kind="class">icomm::CHeartbeatQuestion</class>
+    <class kind="class">icomm::CRequestHeader</class>
+    <class kind="class">icomm::CRequestsManagerBase</class>
+    <class kind="class">icomm::CResponseHeader</class>
+    <class kind="class">icomm::CResponsesManagerBase</class>
+    <class kind="class">icomm::CTcpClientsManagerComp</class>
+    <class kind="class">icomm::CTcpClientStatus</class>
+    <class kind="class">icomm::CTcpMessageHeader</class>
+    <class kind="class">icomm::CTcpRequestsManagerComp</class>
+    <class kind="class">icomm::CTcpStreamComp</class>
+    <class kind="class">icomm::CUdpServersManagerComp</class>
+    <class kind="class">icomm::CUdpStreamComp</class>
+    <class kind="class">icomm::CUserRequest</class>
+    <class kind="class">icomm::CUserResponse</class>
+    <class kind="class">icomm::IArchiveEx</class>
+    <class kind="class">icomm::IBinaryStream</class>
+    <class kind="class">icomm::IClientStatus</class>
+    <class kind="class">icomm::IHeartbeatServersManager</class>
+    <class kind="class">icomm::IHostConnection</class>
+    <class kind="class">icomm::IMemoryCommunication</class>
+    <class kind="class">icomm::IRequest</class>
+    <class kind="class">icomm::IRequestsManager</class>
+    <class kind="class">icomm::IResponse</class>
+    <class kind="class">icomm::IResponsesManager</class>
+    <class kind="class">icomm::IServerInfo</class>
+    <class kind="class">icomm::IServersManager</class>
+    <class kind="class">icomm::IStationState</class>
+    <class kind="class">icomm::TPopCumulatorBase</class>
+    <class kind="class">icomm::TPushCumulatorBase</class>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CCommonVersionInfo</name>
+    <filename>classicomm_1_1_c_common_version_info.html</filename>
+    <base virtualness="virtual">iser::IVersionInfo</base>
+    <class kind="struct">icomm::CCommonVersionInfo::VersionIdElement</class>
+    <member kind="function">
+      <type></type>
+      <name>CCommonVersionInfo</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>aec56823c93060b94ee1dfd8cf4e70a50</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMasterVersionInfo</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>a32e4e87db07c8ac53f25f315056c0e62</anchor>
+      <arglist>(const iser::IVersionInfo *versionInfoPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>a980a9b3fafdc9e69d3dc56a57ce18dcf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>MergeVersions</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>a18d29017621163b47a1629d3bf7ddb07</anchor>
+      <arglist>(const iser::IVersionInfo &amp;versionInfo)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual VersionIds</type>
+      <name>GetVersionIds</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>ad65aba4aac78b4a5901ec26c008a37e1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetVersionNumber</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>ad03b4782e32e7cdaf1d558124877fbcf</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetVersionIdDescription</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>ac32eed0d7de9f80a2da6a8e4d87b8c0d</anchor>
+      <arglist>(int versionId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetEncodedVersionName</name>
+      <anchorfile>classicomm_1_1_c_common_version_info.html</anchorfile>
+      <anchor>a3f66bdfd1bed6484b6cf961201052d7f</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>icomm::CCommonVersionInfo::VersionIdElement</name>
+    <filename>structicomm_1_1_c_common_version_info_1_1_version_id_element.html</filename>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>versionNumber</name>
+      <anchorfile>structicomm_1_1_c_common_version_info_1_1_version_id_element.html</anchorfile>
+      <anchor>a2d812a0eca8efe16d67f654ba9ec340b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>description</name>
+      <anchorfile>structicomm_1_1_c_common_version_info_1_1_version_id_element.html</anchorfile>
+      <anchor>aeac3973e8f6e75c9636b612d36465423</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CHeartbeatAnswer</name>
+    <filename>classicomm_1_1_c_heartbeat_answer.html</filename>
+    <base>icomm::CHeartbeatQuestion</base>
+    <base virtualness="virtual">icomm::IServerInfo</base>
+    <base virtualness="virtual">icomm::IStationState</base>
+    <member kind="typedef">
+      <type>icomm::CHeartbeatQuestion</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a11d5babb678ca0289e0126b50c1c9d7f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>State</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>ac419a48e5994bedd6a586c3eb521ea2a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>S_UNKNOWN</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>ac419a48e5994bedd6a586c3eb521ea2aa23d43a8e4fd7bccbeb95fc9ba6ba6b2d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>S_INIT</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>ac419a48e5994bedd6a586c3eb521ea2aa6e1457f1e4c834f26a444d59199a3287</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>S_READY</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>ac419a48e5994bedd6a586c3eb521ea2aace5127743f21ab50e9fbd3194798842b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>S_LOGGED</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>ac419a48e5994bedd6a586c3eb521ea2aa69e4d2a91cf04f0737b9956fd3973f42</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHeartbeatAnswer</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a928ee38c4befab10ffcbb6f34e67a8b3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHeartbeatAnswer</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>af88cb01b53f8e1f148a5c98a82317844</anchor>
+      <arglist>(const CHeartbeatQuestion &amp;question)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHeartbeatAnswer</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>af2fa1269a9da64bb22cc7fdce65f804e</anchor>
+      <arglist>(const CHeartbeatAnswer &amp;answer)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetComputerName</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>aa758a37f2536a4ef115edfacc838129c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetComputerName</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a29fa09e5fcc85e437199428b0949d1e1</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>quint32</type>
+      <name>GetVersion</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a4a319762778a96c3a43afe9ed1bdce6f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetVersion</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>ad4e0bfea299767f16a85f1f51ea83ba7</anchor>
+      <arglist>(quint32 version)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetStationState</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>abc78c8808854a084c3c52909a7272136</anchor>
+      <arglist>(State state)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLoggedUser</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a92dcba6d98bfaf95be7d5c3b3210cc55</anchor>
+      <arglist>(const QString &amp;userName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLoggedComputer</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>adbb881a26ed428d3d812124c8dc2467a</anchor>
+      <arglist>(const QString &amp;computerName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetLoggedIp</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a2d607c080e32d5732b07481a6c2b4954</anchor>
+      <arglist>(const QByteArray &amp;ip)</arglist>
+    </member>
+    <member kind="function">
+      <type>CHeartbeatAnswer &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>ad1228273e9308bc3a70a2ca78f328fb8</anchor>
+      <arglist>(const CHeartbeatAnswer &amp;answer)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a82698384a2565fb1bfc95c7366e64a9a</anchor>
+      <arglist>(const CHeartbeatAnswer &amp;question)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>addba4a3b878e342dcaf7d30cda1d98fa</anchor>
+      <arglist>(const CHeartbeatAnswer &amp;question)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetApplicationAttribute</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a94427b7ae1fbd3a64599acf59d8357b5</anchor>
+      <arglist>(int attributeId, bool allowTranslation=true) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetMainVersionId</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>aba946a32165b0a0b94a659cd64cacbe1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IVersionInfo &amp;</type>
+      <name>GetVersionInfo</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a8ae87d0ce983ac4112ce121501a54d5a</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual State</type>
+      <name>GetStationState</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>add726adb6abccf368ede0b77b7ba479d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetLoggedUser</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>af01dd9e317f42ac639d42fb6f10d466d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetLoggedComputer</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a532f83d67f642767d2a5bfde83fa2ef7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QByteArray &amp;</type>
+      <name>GetLoggedIp</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a95af81c96b411a65bb7bbfaa9ad12b66</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetName</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a4d368a019a123227d0b89591bdbbe3f2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetName</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a54cdb4a5546067c13543454200d5fbd9</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a2de1d5036524a185c0c6c257fa98c50b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetDescription</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a576149b9550c5496d331ac60f76d2c92</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDescription</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a3f0af529af344298123af9a4c8739f59</anchor>
+      <arglist>(const QString &amp;description)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_answer.html</anchorfile>
+      <anchor>a99e5fbc68d60c555c7245c2dad07978d</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHeartbeatQuestion</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>adca97aac23817ae666976ff31856ff74</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHeartbeatQuestion</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>acfe44fc6907dd6e46b9fc42413dfe779</anchor>
+      <arglist>(quint32 questionId, const QString &amp;applicationName, const QString &amp;applicationType)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetApplicationName</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>a63568fb304aab21693faa18a8e687392</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetApplicationName</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>a7004529ef9421c8718050dc9af8ae4cb</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetApplicationType</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>a97c37da14fcb79ed4f69a8f7bf126070</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetApplicationType</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>a773bcc6f780cdd985f247f11ddec0016</anchor>
+      <arglist>(const QString &amp;appType)</arglist>
+    </member>
+    <member kind="function">
+      <type>quint32</type>
+      <name>GetQuestionId</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>a5c13fb73b22c1be547d5ad0bb0c3d8d9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetQuestionId</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>acdbac4c44e106f675108035cd2f05ce6</anchor>
+      <arglist>(quint32 questionId)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>a269212c44ec86b978e45fb9e12daae0b</anchor>
+      <arglist>(const CHeartbeatQuestion &amp;question)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator!=</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>af08f96deaffa10e0cd52276249b940a0</anchor>
+      <arglist>(const CHeartbeatQuestion &amp;question)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CHeartbeatQuestion</name>
+    <filename>classicomm_1_1_c_heartbeat_question.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomm_1_1_c_heartbeat_question.html</anchorfile>
+      <anchor>abc9e754e068428ef5088a794ac156479</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CRequestHeader</name>
+    <filename>classicomm_1_1_c_request_header.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>CRequestHeader</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>aff3b9fbbac2b06681545fda474096fa5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CRequestHeader</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>a76d5c776c8cd6d5a71851b3c934f3457</anchor>
+      <arglist>(const QByteArray &amp;command, const QByteArray &amp;requestId=QByteArray())</arglist>
+    </member>
+    <member kind="function">
+      <type>const QByteArray &amp;</type>
+      <name>GetCommand</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>aea39ae25c63595c8c13972bf1f3d5458</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetCommand</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>a5582e0cbcf3f350f587431a5b9a59ad1</anchor>
+      <arglist>(const QByteArray &amp;command)</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetRequestId</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>ab1b060d17504cd31a15f4976806885d8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRequestId</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>a1e1d1719574caec180d23c9a86af084f</anchor>
+      <arglist>(const QByteArray &amp;requestId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomm_1_1_c_request_header.html</anchorfile>
+      <anchor>ab476f1de8ca05e6fd911935e5fb66b93</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CRequestsManagerBase</name>
+    <filename>classicomm_1_1_c_requests_manager_base.html</filename>
+    <base>icomm::IRequestsManager</base>
+    <class kind="struct">icomm::CRequestsManagerBase::RequestData</class>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>abd128cc87a2dea1e0812993f97da3df3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>OnReceived</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>a9ec45737409a4c4dbd0bac8bc13dde74</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>AddRequest</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>a557f95d615c8cdf40daebb71235b030c</anchor>
+      <arglist>(IRequest *requestPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual RequestState</type>
+      <name>WaitRequestFinished</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>a22760d26644f66932802af27c00af649</anchor>
+      <arglist>(const QByteArray &amp;requestId=QByteArray(), bool killOnTimeout=true, RequestInfo *requestInfoPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Flush</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>aaa9ffdb70d258d30b02ffdbf7b9a5be8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsRequestsManagerActive</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>afaa612c85ca3c40c5eb916e260617062</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>DispatchMessagesQueue</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>a6ab1ecf53c505e2a81ea98c7a88f0602</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; QByteArray, RequestData &gt;</type>
+      <name>RequestsMap</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>a9c2acb4dbe2b4daffbd53ceb62cf3529</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual iser::IArchive *</type>
+      <name>CreateSendArchive</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>a12c039f8c650c276f1547517ad4763f2</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveSendArchive</name>
+      <anchorfile>classicomm_1_1_c_requests_manager_base.html</anchorfile>
+      <anchor>ac5a2ef5c7d857f4d534865da5d3d901e</anchor>
+      <arglist>(iser::IArchive &amp;archive, bool wasError=false)=0</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>RequestState</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>aef0a3d5bda469227281e1120d2ccce64</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RS_NONE</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>aef0a3d5bda469227281e1120d2ccce64a7eb117fd42af7649ae44b164f4bc1295</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RS_WAIT</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>aef0a3d5bda469227281e1120d2ccce64a5f51191cdc3ffa7e0f8842c631c56776</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RS_OK</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>aef0a3d5bda469227281e1120d2ccce64a5cbe012808eb5a0b9fe6df6579597b14</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RS_FAILED</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>aef0a3d5bda469227281e1120d2ccce64aed2a143203202227f931664fa14d7018</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RS_DAMAGED</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>aef0a3d5bda469227281e1120d2ccce64a4b8fd315f4bb7c16011dbf1cfaef7933</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; RequestInfo &gt;</type>
+      <name>RequestsInfos</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>a25ecb9748e20314808f6a0606c3a566f</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>icomm::CRequestsManagerBase::RequestData</name>
+    <filename>structicomm_1_1_c_requests_manager_base_1_1_request_data.html</filename>
+    <member kind="variable">
+      <type>RequestState</type>
+      <name>state</name>
+      <anchorfile>structicomm_1_1_c_requests_manager_base_1_1_request_data.html</anchorfile>
+      <anchor>a8396ab1034776289e363eaed2215db01</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>errorMessage</name>
+      <anchorfile>structicomm_1_1_c_requests_manager_base_1_1_request_data.html</anchorfile>
+      <anchor>a75f4f99724c937e8bade5c3c5e3bd615</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>double</type>
+      <name>validityTime</name>
+      <anchorfile>structicomm_1_1_c_requests_manager_base_1_1_request_data.html</anchorfile>
+      <anchor>a99d5729b601a958f02c0937e606633c4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; IRequest &gt;</type>
+      <name>requestPtr</name>
+      <anchorfile>structicomm_1_1_c_requests_manager_base_1_1_request_data.html</anchorfile>
+      <anchor>ab6ae51bbfe3de08692f27574c1133b42</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CResponseHeader</name>
+    <filename>classicomm_1_1_c_response_header.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>ResponseFlags</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>ae4eecc3b1c71efdf293cdfe6711d1f68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RF_INVALID</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>ae4eecc3b1c71efdf293cdfe6711d1f68adb682fd46897ab85c4319fd530fc0a8f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RF_ERROR</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>ae4eecc3b1c71efdf293cdfe6711d1f68a524297f05cd48896553542a10b0a5125</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RF_SERIALIZED</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>ae4eecc3b1c71efdf293cdfe6711d1f68a66cdd886ffdb0dc71716d5b547deec5f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>RF_KEEP_ALIVE</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>ae4eecc3b1c71efdf293cdfe6711d1f68aed5bea1cd5c4d974a29fb18c64796fb0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ErrorType</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a80afa2ecbda05255e5521a1dbca280d0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_NONE</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a80afa2ecbda05255e5521a1dbca280d0a556a75d2d8978d9e5184984a3fa0c298</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_OPERATION</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a80afa2ecbda05255e5521a1dbca280d0ad0f8f87ac0714581f2908c83a904b027</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_REQUEST_COMM</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a80afa2ecbda05255e5521a1dbca280d0a3967db4d5fb836ae2ccc57f8be025ab6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_RESPONSE_COMM</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a80afa2ecbda05255e5521a1dbca280d0a8731e293fa632da668d8fa9476ceed6a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ET_USER</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a80afa2ecbda05255e5521a1dbca280d0a324964d9e39ab483b0c6ce86e376f910</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CResponseHeader</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a17c56ca70d64fc6e92bf37883839bf04</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetOk</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a7bf8946e5c0db22be4fb2bd81e42384c</anchor>
+      <arglist>(const CRequestHeader &amp;request)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetError</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a1fb7a60e030d86e614fe2a8ee9057bc2</anchor>
+      <arglist>(ErrorType errorType, const CRequestHeader &amp;request, const QString &amp;errorMessage, bool serialized)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetToKeepAliveMessage</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a298467297e94c986d3f0f19389395d4a</anchor>
+      <arglist>(const CRequestHeader &amp;request)</arglist>
+    </member>
+    <member kind="function">
+      <type>QByteArray</type>
+      <name>GetRequestId</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a8de8148c5feee7b400df99c73fdb760c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetRequestId</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>aac1208d78502f17c744e93f39c54b4da</anchor>
+      <arglist>(const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function">
+      <type>ResponseFlags</type>
+      <name>GetResponseFlags</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a2d15555e1341b044c2624d84f3cab3c3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>ErrorType</type>
+      <name>GetErrorType</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>aa00c0c8437a1fe150ea6a7dff3b9f0bf</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const QString &amp;</type>
+      <name>GetErrorMessage</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>ae2c6084fb91da1357cd362aec2013bb3</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomm_1_1_c_response_header.html</anchorfile>
+      <anchor>a6935f52b32a359041e01c8bd0d968ca4</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CResponsesManagerBase</name>
+    <filename>classicomm_1_1_c_responses_manager_base.html</filename>
+    <base>icomm::IResponsesManager</base>
+    <member kind="function">
+      <type></type>
+      <name>~CResponsesManagerBase</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>a5c2eb20a760775aef336bba8af1873a4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Reset</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>ac36e459c5f14a8d93a368afd2ccb82bf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnReceived</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>ae9bab4d87b8e00f647ff62f9e6f7946a</anchor>
+      <arglist>(iser::IArchive &amp;request, iser::IArchive &amp;answer)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ConnectProvider</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>a870727201bcfa218e38f3535069e3163</anchor>
+      <arglist>(IResponse *providerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DisconnectProvider</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>a3b338870377914eedceac01d5cf38e86</anchor>
+      <arglist>(IResponse *providerPtr)</arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; QByteArray, IResponse * &gt;</type>
+      <name>ProvidersMap</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>a4ea7a0029d4d541c66c4c88895b5f37e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SendAndClear</name>
+      <anchorfile>classicomm_1_1_c_responses_manager_base.html</anchorfile>
+      <anchor>a0d24d5eeb6e75d3b846e8cea3dd5f097</anchor>
+      <arglist>(iser::IArchive &amp;answer)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CTcpClientsManagerComp</name>
+    <filename>classicomm_1_1_c_tcp_clients_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_tcp_clients_manager_comp.html</anchorfile>
+      <anchor>ae82aa4e5d687aad7f939e4808c423cdc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnNewConnection</name>
+      <anchorfile>classicomm_1_1_c_tcp_clients_manager_comp.html</anchorfile>
+      <anchor>aeba381760c44ceae71db76c9921979df</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnHeartbeatRead</name>
+      <anchorfile>classicomm_1_1_c_tcp_clients_manager_comp.html</anchorfile>
+      <anchor>a8177de479da50b0ce81e72a8412f63a9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTcpClientsManagerComp</name>
+      <anchorfile>classicomm_1_1_c_tcp_clients_manager_comp.html</anchorfile>
+      <anchor>a5b4448e8d5009d2bebc4ecf20c7e8b3c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicomm_1_1_c_tcp_clients_manager_comp.html</anchorfile>
+      <anchor>adbedf41550c8c016dd3f237546ef6eda</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CTcpClientStatus</name>
+    <filename>classicomm_1_1_c_tcp_client_status.html</filename>
+    <base>icomm::CResponsesManagerBase</base>
+    <base>TPopCumulatorBase&lt; CTcpMessageHeader &gt;</base>
+    <base virtualness="virtual">icomm::IClientStatus</base>
+    <member kind="typedef">
+      <type>icomm::CResponsesManagerBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a4f7cf18dd1e49fde3a5f12c5316f6f8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomm::TPopCumulatorBase&lt; CTcpMessageHeader &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>ad64ddd6e86b79868729961ef39dc3c3b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnReadyRead</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a24993dedd367c034dc7df9225c704725</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTcpClientStatus</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a9d6b08506c1528f9bef635a8e17e38d8</anchor>
+      <arglist>(QTcpSocket *socketPtr, const ibase::IApplicationInfo *applicationInfoPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ReadToBuffer</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>ac206a8ded5405370f8ea591910f89ffc</anchor>
+      <arglist>(quint8 *bufferPtr, int bytes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual quint32</type>
+      <name>CalculateMessageSize</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a10d947cad65e61a69c371d8b6be53411</anchor>
+      <arglist>(const CTcpMessageHeader &amp;header)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessMessage</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a426d32978994f7410a20a904184bae9e</anchor>
+      <arglist>(const CTcpMessageHeader &amp;header, const quint8 *dataPtr, int length)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetClientComputerName</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a01f544338f4cf901dd88a3aa2b842d15</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QByteArray &amp;</type>
+      <name>GetClientComputerAddress</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a8bc9eeac4ab3d10f8f8fe1e89ca65223</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iser::IVersionInfo &amp;</type>
+      <name>GetClientVersionInfo</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>acd37039d3a368604781394e3ebd1c717</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TPopCumulatorBase</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a50d8fbe8985bfbfb81d79c676b081b8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetBuffer</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a81eb2c7c9369f4f7712d1df7f671d3ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ForceRead</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>adb0c52cdb33bba45c5c6e661e1aac443</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendAndClear</name>
+      <anchorfile>classicomm_1_1_c_tcp_client_status.html</anchorfile>
+      <anchor>a320caf205fed62971584f3a51aec5bd8</anchor>
+      <arglist>(iser::IArchive &amp;answer)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>CTcpMessageHeader</type>
+      <name>m_header</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a4e4d5d469399c9e02cd2e356bf6094e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>quint32</type>
+      <name>m_messageSize</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a90ed1b9e9bb196261eff3c3d26dd4ce9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_loadedBytes</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>aea9a52e139e6c0657d1161be1800ea1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CTcpMessageHeader</name>
+    <filename>classicomm_1_1_c_tcp_message_header.html</filename>
+    <member kind="enumeration">
+      <type></type>
+      <name>ClientCommand</name>
+      <anchorfile>classicomm_1_1_c_tcp_message_header.html</anchorfile>
+      <anchor>adee4127de845bce26e6d385c73a6484a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CC_VERSION_COMMAND</name>
+      <anchorfile>classicomm_1_1_c_tcp_message_header.html</anchorfile>
+      <anchor>adee4127de845bce26e6d385c73a6484aa09ee7afac2600972aee2e1fc56233d73</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CC_REQUEST_COMMAND</name>
+      <anchorfile>classicomm_1_1_c_tcp_message_header.html</anchorfile>
+      <anchor>adee4127de845bce26e6d385c73a6484aadc179b127f2a4135ba09f1d40b787266</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CC_RESPONSE_COMMAND</name>
+      <anchorfile>classicomm_1_1_c_tcp_message_header.html</anchorfile>
+      <anchor>adee4127de845bce26e6d385c73a6484aa916eb3e4e97a816ad46a05787d07eeea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>command</name>
+      <anchorfile>classicomm_1_1_c_tcp_message_header.html</anchorfile>
+      <anchor>a56fb00006fc350260b6a93a92cf742a1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint32</type>
+      <name>size</name>
+      <anchorfile>classicomm_1_1_c_tcp_message_header.html</anchorfile>
+      <anchor>ac6b919818b913fdc5eb4817b7f34ff16</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CTcpRequestsManagerComp</name>
+    <filename>classicomm_1_1_c_tcp_requests_manager_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>icomm::IHostConnection</base>
+    <base>TPopCumulatorBase&lt; CTcpMessageHeader &gt;</base>
+    <base>icomm::CRequestsManagerBase</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a2d9825ea340f8b606e20abd20af8a52d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_WRONG_SIZE</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a2d9825ea340f8b606e20abd20af8a52da9515209201786054c4123f6be465d3e9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a633a91338606d558343e937d3fd06146</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomm::CRequestsManagerBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a9e46d18e28e22e558c85cfe8b4de0c59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icomm::TPopCumulatorBase&lt; CTcpMessageHeader &gt;</type>
+      <name>BaseClass3</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a6bc30e957326005c4265dc8d7d1009b0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnReadyRead</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a56781856c5f025c970e87fb08e1c5ec3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnSocketConnected</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a3132ae7c222f46aef7c173cee147bf0a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnSocketDisconnected</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a5a0e56c2c4a84e69800df70e31954015</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnSocketError</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>abe33603c8f6b6adaf7f5f9915240e24f</anchor>
+      <arglist>(QAbstractSocket::SocketError socketError)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTcpRequestsManagerComp</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a22828513b71b42e3a45952fc7e99dd74</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iser::IArchive *</type>
+      <name>CreateSendArchive</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>adba3026ebb368a82593de981089176d2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveSendArchive</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a67197b3d995e385500825f909c7c77ee</anchor>
+      <arglist>(iser::IArchive &amp;archive, bool wasError=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsRequestsManagerActive</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a17fa67174d545d79a982d4dcab92a4d2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DispatchMessagesQueue</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>af764fcdd23e74625a25862aa54f6feb6</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ReadToBuffer</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a4e63e602a9b7debfc167f8631a075ff6</anchor>
+      <arglist>(quint8 *bufferPtr, int bytes)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual quint32</type>
+      <name>CalculateMessageSize</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>ae79595b3f668c274df75d53e26e3cd93</anchor>
+      <arglist>(const CTcpMessageHeader &amp;header)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessMessage</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a20416c49a4d16475006d3a3a3c02f681</anchor>
+      <arglist>(const CTcpMessageHeader &amp;header, const quint8 *dataPtr, int length)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectToHost</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a2138ef53b415246f850ed6fa4286e8da</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DisconnectFromHost</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>accad49d181048d31fa7735b6811641f1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsHostConnected</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>ac60f9c282bc55d78949fc6da76049d67</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WaitHostConnected</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a28f72bb7c621881c46d6fed36c5faf1b</anchor>
+      <arglist>(double maxTime, bool disconnectOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a5b91071874f618f770ddcf307d594cc4</anchor>
+      <arglist>(Handler *handlerPtr, bool allowOtherThread=false)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>ada2fa9ebf74de80ca7bc3e0aa2ecc260</anchor>
+      <arglist>(Handler *handlerPtr)</arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>CallCode</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a752619ca9353c94b116f27bf4f6a06df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>CC_ON_CONNECTED</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a752619ca9353c94b116f27bf4f6a06dfa60f105d9a776ffda3bc9cc2fd5db091b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>CC_ON_DISCONNECTED</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a752619ca9353c94b116f27bf4f6a06dfaa82e7d331b0cb54f087cff2a6e886d51</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>CC_ON_ERROR</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a752619ca9353c94b116f27bf4f6a06dfa02cdc127cce7267ba583b9bce81af0fc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a2169b07250945f70b0dfeba4b921e0c0</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CTcpStreamComp</name>
+    <filename>classicomm_1_1_c_tcp_stream_comp.html</filename>
+    <base>TRuntimeStatusHanderCompWrap&lt; ilog::CLoggerComponentBase &gt;</base>
+    <base>TSingleModelObserverBase&lt; iprm::IParamsSet &gt;</base>
+    <base>icomm::IBinaryStream</base>
+    <base>icomm::IHostConnection</base>
+    <member kind="typedef">
+      <type>ibase::TRuntimeStatusHanderCompWrap&lt; ilog::CLoggerComponentBase &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>aa7b0b6a0d161c98c0cfa941919306c33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a92643129002e873d3a5de0c2fd7ce1ea</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTcpStreamComp</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a13fd47bbc255d7331cb9e89d2194dfd9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendData</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a6a538515269e71e53b06b69b5a98e8a8</anchor>
+      <arglist>(const void *data, int size, void *userContextPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadData</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a5f39d4b1caa78a94d5b1ffd2395c4829</anchor>
+      <arglist>(void *data, int &amp;size)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>aa411f98543a975e232348a783a13ffb8</anchor>
+      <arglist>(icomm::IBinaryStream::Handler *handlerPtr, bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>ab7b0756887ea040ebdf181aa51dec7cc</anchor>
+      <arglist>(icomm::IBinaryStream::Handler *handlerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectToHost</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>ad1c233bd4baa2f3907ff53c737629e45</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DisconnectFromHost</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a3d906ed3bf31e7193d2955ba202cf84e</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsHostConnected</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a0a9a489416b691696123378bf0d43d21</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>WaitHostConnected</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>acc986be31708ba8626df3be7f85c09a7</anchor>
+      <arglist>(double maxTime, bool disconnectOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>af787930405ca8f117cc20f29bbb37201</anchor>
+      <arglist>(icomm::IHostConnection::Handler *handlerPtr, bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a7bf39ec7f8f3bda9d1f7e754b8869bce</anchor>
+      <arglist>(icomm::IHostConnection::Handler *handlerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSystemStarted</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a5c568f0f6e0a26bdbe35dbe4dc5233f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSystemShutdown</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a89109056194c0c535b111eee540cfcda</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>adc04a4e99280b2612da9972577afd14a</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a7a202f67c337282ef2ae7e605e4153df</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a4e6a578e38311d6313e407832a06c78a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>run</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>a1c47aae631d0decd50d40b95b4a66512</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CUdpServersManagerComp</name>
+    <filename>classicomm_1_1_c_udp_servers_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>icomm::IHeartbeatServersManager</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>acbfd4f84718e25a4455472c194fdedcc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; icomm::CHeartbeatAnswer &gt;</type>
+      <name>FoundServers</name>
+      <anchorfile>classicomm_1_1_i_heartbeat_servers_manager.html</anchorfile>
+      <anchor>a0a4b2158cf25e987e8039e747e471dc3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnHeartbeatRead</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a050f94e608970f8c4d2051cb9c200db0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnTimerTick</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a413be8aa34e3b9d73d9ffd2c785cfefe</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnHostInfoFound</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>ae6a259cbcf8e04f714284515380acb0a</anchor>
+      <arglist>(const QHostInfo &amp;info)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CUdpServersManagerComp</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>aab4c756b3bd77cf5dab71c9a87312e87</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>FindServers</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a087a834c64339b2a3fc8c917ba19d0f4</anchor>
+      <arglist>(FoundServers &amp;result)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual icomm::CHeartbeatAnswer &amp;</type>
+      <name>GetServerInfoImpl</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a27b0d6e13f2d6089f80a27f8639e8b96</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>CreateServerInfo</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a25e32809e30efea473d7b8009035f5b2</anchor>
+      <arglist>(int index=-1, int copyFromIndex=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveServerInfo</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a7a12af9f929d7868e31fddc5f18e6068</anchor>
+      <arglist>(int index)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetServersCount</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a8f978f923a7f6d9db3b60d9df9719974</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const icomm::IServerInfo &amp;</type>
+      <name>GetServerInfo</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a0324e9da97c1f0c4e38f9afe9f2d6016</anchor>
+      <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a9ba21ca457cd10aaf9ee194ff26905b9</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a6f8f19bb0c2591d9e8afcc08e62354a5</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicomm_1_1_c_udp_servers_manager_comp.html</anchorfile>
+      <anchor>a0bd5797a247bd5616993f5e6cfe2f4a7</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CUdpStreamComp</name>
+    <filename>classicomm_1_1_c_udp_stream_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>TSingleModelObserverBase&lt; iprm::IParamsSet &gt;</base>
+    <base>icomm::IBinaryStream</base>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>aed40df26b565af92939cba97095940b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::TSingleModelObserverBase&lt; iprm::IParamsSet &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a144585cf6aae84caeb80d9620993c2f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CUdpStreamComp</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a8328677f81e0bacfde64a33ddf81d60b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QDateTime</type>
+      <name>GetPacketTime</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a5dc8092ac0c4f298843154889f4aaab2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SendData</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a1fdb1cfd8f2338ca973918e7548eb16c</anchor>
+      <arglist>(const void *data, int size, void *userContextPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadData</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a8d86c45cc2029578e166e29762e1a7a2</anchor>
+      <arglist>(void *data, int &amp;size)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a10c05cc867df6ec092850fcb21cadb7b</anchor>
+      <arglist>(icomm::IBinaryStream::Handler *handlerPtr, bool)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>abb62e6324d1d9890daa07a8e8917b0b3</anchor>
+      <arglist>(icomm::IBinaryStream::Handler *handlerPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>a94ddbaae74d57c4aafdcc9a1e4638d3f</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicomm_1_1_c_udp_stream_comp.html</anchorfile>
+      <anchor>ad756af4c70dbee14af27d6283483bdd9</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CUserRequest</name>
+    <filename>classicomm_1_1_c_user_request.html</filename>
+    <base>icomm::IRequest</base>
+    <member kind="function">
+      <type></type>
+      <name>CUserRequest</name>
+      <anchorfile>classicomm_1_1_c_user_request.html</anchorfile>
+      <anchor>ad15b0c3edd8ff2cd16ee4508f90927d5</anchor>
+      <arglist>(const QByteArray &amp;command, ISerializable *slavePtr, double timeout=3)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimeOut</name>
+      <anchorfile>classicomm_1_1_c_user_request.html</anchorfile>
+      <anchor>a7839a31102c4f5d3529d74051eb4feb0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetCommand</name>
+      <anchorfile>classicomm_1_1_c_user_request.html</anchorfile>
+      <anchor>a66db77851df12f83885d52b1df8ecb06</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>ExtractMessage</name>
+      <anchorfile>classicomm_1_1_c_user_request.html</anchorfile>
+      <anchor>a072095122cb89244c35dff883fcae6bf</anchor>
+      <arglist>(const CResponseHeader &amp;header) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicomm_1_1_c_user_request.html</anchorfile>
+      <anchor>a1201ee30be602ef1398c1d49a51d26b9</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::CUserResponse</name>
+    <filename>classicomm_1_1_c_user_response.html</filename>
+    <base>icomm::IResponse</base>
+    <member kind="function">
+      <type></type>
+      <name>CUserResponse</name>
+      <anchorfile>classicomm_1_1_c_user_response.html</anchorfile>
+      <anchor>a121ce3a346e34655ebbcfe0f6b9aa1f7</anchor>
+      <arglist>(const QByteArray &amp;command, iser::ISerializable *slavePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetCommand</name>
+      <anchorfile>classicomm_1_1_c_user_response.html</anchorfile>
+      <anchor>af2e3a8cccda303ec665cb98bc19338d4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DoResponse</name>
+      <anchorfile>classicomm_1_1_c_user_response.html</anchorfile>
+      <anchor>afb9dbe7befa7e5d6d1a5e3167aecb3fc</anchor>
+      <arglist>(iser::IArchive &amp;request, iser::IArchive &amp;response)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classicomm_1_1_c_user_response.html</anchorfile>
+      <anchor>ae0a2f3cabda07ad039e06652a7268e94</anchor>
+      <arglist>(IResponsesManager *managerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classicomm_1_1_c_user_response.html</anchorfile>
+      <anchor>a976abb6449a2539c72e65730ce423ff0</anchor>
+      <arglist>(IResponsesManager *managerPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IArchiveEx</name>
+    <filename>classicomm_1_1_i_archive_ex.html</filename>
+    <base virtualness="virtual">iser::IArchive</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>Clear</name>
+      <anchorfile>classicomm_1_1_i_archive_ex.html</anchorfile>
+      <anchor>ab0b00d3ba4114adbacf261c5729d32fc</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual long</type>
+      <name>GetArchivePosition</name>
+      <anchorfile>classicomm_1_1_i_archive_ex.html</anchorfile>
+      <anchor>ab7826aa65af4439f3a1361bf0e7ab480</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetArchivePosition</name>
+      <anchorfile>classicomm_1_1_i_archive_ex.html</anchorfile>
+      <anchor>ae777e6c8d24449486e7718e7eb43ca02</anchor>
+      <arglist>(long position)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IBinaryStream</name>
+    <filename>classicomm_1_1_i_binary_stream.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <class kind="class">icomm::IBinaryStream::Handler</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SendData</name>
+      <anchorfile>classicomm_1_1_i_binary_stream.html</anchorfile>
+      <anchor>a2d7f986602d173b5c94e56c03b58f458</anchor>
+      <arglist>(const void *data, int size, void *userContextPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ReadData</name>
+      <anchorfile>classicomm_1_1_i_binary_stream.html</anchorfile>
+      <anchor>aa4a7cef6dbe7b076fc51e8ff1ddf36be</anchor>
+      <arglist>(void *data, int &amp;size)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_i_binary_stream.html</anchorfile>
+      <anchor>a20c70aa2e199f3e7640a27dd5c775edf</anchor>
+      <arglist>(Handler *handlerPtr, bool allowOtherThread=false)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_i_binary_stream.html</anchorfile>
+      <anchor>acb3b4b30d63c0822bac9ef3e70ed98c7</anchor>
+      <arglist>(Handler *handlerPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IBinaryStream::Handler</name>
+    <filename>classicomm_1_1_i_binary_stream_1_1_handler.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnDataReceived</name>
+      <anchorfile>classicomm_1_1_i_binary_stream_1_1_handler.html</anchorfile>
+      <anchor>ab6c0efcd82d432669f28218c5b4ca91d</anchor>
+      <arglist>(IBinaryStream &amp;stream)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnDataSent</name>
+      <anchorfile>classicomm_1_1_i_binary_stream_1_1_handler.html</anchorfile>
+      <anchor>a4df40910d439d26d361946750bd15807</anchor>
+      <arglist>(IBinaryStream &amp;stream, void *userContextPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IClientStatus</name>
+    <filename>classicomm_1_1_i_client_status.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QString &amp;</type>
+      <name>GetClientComputerName</name>
+      <anchorfile>classicomm_1_1_i_client_status.html</anchorfile>
+      <anchor>ade0e813ae4de137f0059c1afaa2b50c5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QByteArray &amp;</type>
+      <name>GetClientComputerAddress</name>
+      <anchorfile>classicomm_1_1_i_client_status.html</anchorfile>
+      <anchor>a7815ac37db62275cba7d9f95dc1bed34</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iser::IVersionInfo &amp;</type>
+      <name>GetClientVersionInfo</name>
+      <anchorfile>classicomm_1_1_i_client_status.html</anchorfile>
+      <anchor>a5b6c8c54ce7d62e149cc6b8af85206d5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IHeartbeatServersManager</name>
+    <filename>classicomm_1_1_i_heartbeat_servers_manager.html</filename>
+    <base>icomm::IServersManager</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>FindServers</name>
+      <anchorfile>classicomm_1_1_i_heartbeat_servers_manager.html</anchorfile>
+      <anchor>adbb8142d96057854616e5799979e2418</anchor>
+      <arglist>(FoundServers &amp;result)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual CHeartbeatAnswer &amp;</type>
+      <name>GetServerInfoImpl</name>
+      <anchorfile>classicomm_1_1_i_heartbeat_servers_manager.html</anchorfile>
+      <anchor>a67c5faf7595de0c88107893fed3e918d</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>CreateServerInfo</name>
+      <anchorfile>classicomm_1_1_i_heartbeat_servers_manager.html</anchorfile>
+      <anchor>addcab1341a9346379bcc5a5dfeaa4361</anchor>
+      <arglist>(int index=-1, int copyFromIndex=-1)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveServerInfo</name>
+      <anchorfile>classicomm_1_1_i_heartbeat_servers_manager.html</anchorfile>
+      <anchor>a0496c4e6775088a40f3cd7493c6e934d</anchor>
+      <arglist>(int index)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetServersCount</name>
+      <anchorfile>classicomm_1_1_i_servers_manager.html</anchorfile>
+      <anchor>a6c37bda44ad16d2a9296c22bb3a92099</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const IServerInfo &amp;</type>
+      <name>GetServerInfo</name>
+      <anchorfile>classicomm_1_1_i_servers_manager.html</anchorfile>
+      <anchor>a7bf7918b75387a6356cdd53451bc9c01</anchor>
+      <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IHostConnection</name>
+    <filename>classicomm_1_1_i_host_connection.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <class kind="class">icomm::IHostConnection::Handler</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ConnectToHost</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>aecdd93b9cbee4cdce79b76f72e045d5d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr=NULL)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>DisconnectFromHost</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>a15a7a5425883d8d010cc5a0111a309f2</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsHostConnected</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>a677e268da664f0665e2d18dd5c706931</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>WaitHostConnected</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>aa5646c0a0101f951df5a9089f2b496da</anchor>
+      <arglist>(double maxTime, bool disconnectOnTimeout=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>a210806f52acdf134ac2c97a57489b319</anchor>
+      <arglist>(Handler *handlerPtr, bool allowOtherThread=false)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>af4eb2e76a60ec1c019128594944d9a12</anchor>
+      <arglist>(Handler *handlerPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IHostConnection::Handler</name>
+    <filename>classicomm_1_1_i_host_connection_1_1_handler.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnAttached</name>
+      <anchorfile>classicomm_1_1_i_host_connection_1_1_handler.html</anchorfile>
+      <anchor>a58a001fdd1099ff83ff9d1e205326152</anchor>
+      <arglist>(icomm::IHostConnection &amp;connection)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnDetached</name>
+      <anchorfile>classicomm_1_1_i_host_connection_1_1_handler.html</anchorfile>
+      <anchor>a109b3bc6ea8ea86ff725f05f1d60d7ce</anchor>
+      <arglist>(icomm::IHostConnection &amp;connection)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnError</name>
+      <anchorfile>classicomm_1_1_i_host_connection_1_1_handler.html</anchorfile>
+      <anchor>ae2aaa9ef36cbe6b97df585e2b54491fd</anchor>
+      <arglist>(icomm::IHostConnection &amp;connection, QString errorMessage)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnStateChanged</name>
+      <anchorfile>classicomm_1_1_i_host_connection_1_1_handler.html</anchorfile>
+      <anchor>a03952016b57f9d4f526006092e2716b0</anchor>
+      <arglist>(icomm::IHostConnection &amp;connection, QAbstractSocket::SocketState newState)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IMemoryCommunication</name>
+    <filename>classicomm_1_1_i_memory_communication.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <class kind="class">icomm::IMemoryCommunication::Handler</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetInputBlockSize</name>
+      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
+      <anchor>a37bec14d19b713eecf7e723164a51a8d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>GetOutputBlockSize</name>
+      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
+      <anchor>a0148d75a9d7f127b1f225781646840d3</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>GetInputBlock</name>
+      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
+      <anchor>a6c5299738d29124a3e3dcbd324ad7678</anchor>
+      <arglist>(int offset, int size, void *dataPtr) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetOutputBlock</name>
+      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
+      <anchor>a122bc773ef2b274ef2ca9c2351750fe4</anchor>
+      <arglist>(int offset, int size, const void *dataPtr, bool doSend=true)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RegisterEventHandler</name>
+      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
+      <anchor>a483bce31a054bf2de2588688fe7f40b1</anchor>
+      <arglist>(Handler *handlerPtr, bool allowOtherThread=false)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>UnregisterEventHandler</name>
+      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
+      <anchor>a2ca397886d569d08cdee5fa264e05b8f</anchor>
+      <arglist>(Handler *handlerPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IMemoryCommunication::Handler</name>
+    <filename>classicomm_1_1_i_memory_communication_1_1_handler.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>OnInputBlockChanged</name>
+      <anchorfile>classicomm_1_1_i_memory_communication_1_1_handler.html</anchorfile>
+      <anchor>a99a819784468d314ac4845bd69b4aa1e</anchor>
+      <arglist>(IMemoryCommunication &amp;communication, int firstByte, int bytesCount)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IRequest</name>
+    <filename>classicomm_1_1_i_request.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetTimeOut</name>
+      <anchorfile>classicomm_1_1_i_request.html</anchorfile>
+      <anchor>ae491cc38dddbb6d0ccfed912f78fe575</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetCommand</name>
+      <anchorfile>classicomm_1_1_i_request.html</anchorfile>
+      <anchor>a17090a1e1dadf9f53f2e0ec934311e29</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>ExtractMessage</name>
+      <anchorfile>classicomm_1_1_i_request.html</anchorfile>
+      <anchor>aea891e13dd22a3b63fa3f29336999715</anchor>
+      <arglist>(const CResponseHeader &amp;header) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IRequestsManager</name>
+    <filename>classicomm_1_1_i_requests_manager.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <class kind="struct">icomm::IRequestsManager::RequestInfo</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>AddRequest</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>a1faf435c1dc23d1f3b8a974a9eb25337</anchor>
+      <arglist>(IRequest *requestPtr)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual RequestState</type>
+      <name>WaitRequestFinished</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>a1a984a0af6f1559015ec798eaf2e0ade</anchor>
+      <arglist>(const QByteArray &amp;requestId=QByteArray(), bool killOnTimeout=true, RequestInfo *requestInfoPtr=NULL) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>Flush</name>
+      <anchorfile>classicomm_1_1_i_requests_manager.html</anchorfile>
+      <anchor>a9675bdd6d4b0161754797a5bc5cfdcbe</anchor>
+      <arglist>()=0</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>icomm::IRequestsManager::RequestInfo</name>
+    <filename>structicomm_1_1_i_requests_manager_1_1_request_info.html</filename>
+    <member kind="variable">
+      <type>RequestState</type>
+      <name>state</name>
+      <anchorfile>structicomm_1_1_i_requests_manager_1_1_request_info.html</anchorfile>
+      <anchor>a223282a7a8f4ee59a5e8fe624c41e9af</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>errorMessage</name>
+      <anchorfile>structicomm_1_1_i_requests_manager_1_1_request_info.html</anchorfile>
+      <anchor>a85915d925a63521607dafeb337b062bd</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IResponse</name>
+    <filename>classicomm_1_1_i_response.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetCommand</name>
+      <anchorfile>classicomm_1_1_i_response.html</anchorfile>
+      <anchor>ac13936dffacb38a0c3659a9f6742a551</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>DoResponse</name>
+      <anchorfile>classicomm_1_1_i_response.html</anchorfile>
+      <anchor>af1beec3a00fbe78d0bb5103ec3b62e0d</anchor>
+      <arglist>(iser::IArchive &amp;request, iser::IArchive &amp;response)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>OnAttached</name>
+      <anchorfile>classicomm_1_1_i_response.html</anchorfile>
+      <anchor>aed382823afd3c650e6d8b206952305e1</anchor>
+      <arglist>(IResponsesManager *managerPtr)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>OnDetached</name>
+      <anchorfile>classicomm_1_1_i_response.html</anchorfile>
+      <anchor>a4b300187d40275c211438cfae3bece46</anchor>
+      <arglist>(IResponsesManager *managerPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IResponsesManager</name>
+    <filename>classicomm_1_1_i_responses_manager.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ConnectProvider</name>
+      <anchorfile>classicomm_1_1_i_responses_manager.html</anchorfile>
+      <anchor>a27ece39dbc922076d50e3d80628309fd</anchor>
+      <arglist>(IResponse *providerPtr)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>DisconnectProvider</name>
+      <anchorfile>classicomm_1_1_i_responses_manager.html</anchorfile>
+      <anchor>a9a15f4620980bc5a5a57b84fe8d0647e</anchor>
+      <arglist>(IResponse *providerPtr)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IServerInfo</name>
+    <filename>classicomm_1_1_i_server_info.html</filename>
+    <base virtualness="virtual">ibase::IApplicationInfo</base>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IServersManager</name>
+    <filename>classicomm_1_1_i_servers_manager.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+  </compound>
+  <compound kind="class">
+    <name>icomm::IStationState</name>
+    <filename>classicomm_1_1_i_station_state.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual State</type>
+      <name>GetStationState</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>ad9531edd4612b155e2b836793dd4b602</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QString &amp;</type>
+      <name>GetLoggedUser</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>a3e99e694fde5edf35dbe8398ea370be4</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QString &amp;</type>
+      <name>GetLoggedComputer</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>a2962368276d6dc3d55948450a79fe364</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const QByteArray &amp;</type>
+      <name>GetLoggedIp</name>
+      <anchorfile>classicomm_1_1_i_station_state.html</anchorfile>
+      <anchor>a749694aed6bc603d67f61dfbe4a6954d</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::TPopCumulatorBase</name>
+    <filename>classicomm_1_1_t_pop_cumulator_base.html</filename>
+    <templarg>Header</templarg>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function">
+      <type></type>
+      <name>TPopCumulatorBase</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a50d8fbe8985bfbfb81d79c676b081b8f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetBuffer</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a81eb2c7c9369f4f7712d1df7f671d3ff</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ForceRead</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>adb0c52cdb33bba45c5c6e661e1aac443</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual int</type>
+      <name>ReadToBuffer</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a709ecad7233dd4ca62d22d0eb1ed0faf</anchor>
+      <arglist>(quint8 *bufferPtr, int bytes)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual quint32</type>
+      <name>CalculateMessageSize</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a95fda2cac3ea684a29739e2784778e42</anchor>
+      <arglist>(const Header &amp;header)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ProcessMessage</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a022fd064c15e54af0eaa7042402505d7</anchor>
+      <arglist>(const Header &amp;header, const quint8 *dataPtr, int length)=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Header</type>
+      <name>m_header</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a4e4d5d469399c9e02cd2e356bf6094e2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>quint32</type>
+      <name>m_messageSize</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>a90ed1b9e9bb196261eff3c3d26dd4ce9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_loadedBytes</name>
+      <anchorfile>classicomm_1_1_t_pop_cumulator_base.html</anchorfile>
+      <anchor>aea9a52e139e6c0657d1161be1800ea1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icomm::TPushCumulatorBase</name>
+    <filename>classicomm_1_1_t_push_cumulator_base.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function">
+      <type></type>
+      <name>TPushCumulatorBase</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>a9b1562ff8b276298344b62c6178a08fa</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetBuffer</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>ac74ada1dc277a7dffb56aed7c590e000</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AppendData</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>af6ebb0da37acc6799f4d1b5b6dafcd69</anchor>
+      <arglist>(const quint8 *dataPtr, int length)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual quint32</type>
+      <name>CalculateMessageSize</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>a4bdaf69d28d1fa2b9e0f9d17b71f79e3</anchor>
+      <arglist>(const Header &amp;header)=0</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ProcessMessage</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>a56f42d8a93857880c0c08046a1bebb9d</anchor>
+      <arglist>(const Header &amp;header, const quint8 *dataPtr, int length)=0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>Header</type>
+      <name>m_header</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>a5ebca596d4a5faccfad4729dd63aea94</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>quint32</type>
+      <name>m_messageSize</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>aa9bba023c148d2f655ec05f938b346e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>int</type>
+      <name>m_loadedBytes</name>
+      <anchorfile>classicomm_1_1_t_push_cumulator_base.html</anchorfile>
+      <anchor>aa3770884e9da09c7ee82034531b633da</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -35020,6 +37545,42 @@
     <file>TShapeBase.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/icomm</name>
+    <path>C:/Temp/AcfSln/Include/icomm/</path>
+    <filename>dir_1f035c4d1bfb90511ef58a7aa165b8d9.html</filename>
+    <file>CCommonVersionInfo.h</file>
+    <file>CHeartbeatAnswer.h</file>
+    <file>CHeartbeatQuestion.h</file>
+    <file>CRequestHeader.h</file>
+    <file>CRequestsManagerBase.h</file>
+    <file>CResponseHeader.h</file>
+    <file>CResponsesManagerBase.h</file>
+    <file>CTcpClientsManagerComp.h</file>
+    <file>CTcpClientStatus.h</file>
+    <file>CTcpMessageHeader.h</file>
+    <file>CTcpRequestsManagerComp.h</file>
+    <file>CTcpStreamComp.h</file>
+    <file>CUdpServersManagerComp.h</file>
+    <file>CUdpStreamComp.h</file>
+    <file>CUserRequest.h</file>
+    <file>CUserResponse.h</file>
+    <file>IArchiveEx.h</file>
+    <file>IBinaryStream.h</file>
+    <file>IClientStatus.h</file>
+    <file>IHeartbeatServersManager.h</file>
+    <file>IHostConnection.h</file>
+    <file>IMemoryCommunication.h</file>
+    <file>IRequest.h</file>
+    <file>IRequestsManager.h</file>
+    <file>IResponse.h</file>
+    <file>IResponsesManager.h</file>
+    <file>IServerInfo.h</file>
+    <file>IServersManager.h</file>
+    <file>IStationState.h</file>
+    <file>TPopCumulatorBase.h</file>
+    <file>TPushCumulatorBase.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/idocproc</name>
     <path>C:/Temp/AcfSln/Include/idocproc/</path>
     <filename>dir_dd6e29a3219fe8cd5ed282d0d72d5b87.html</filename>
@@ -35278,6 +37839,7 @@
     <dir>Include/icalibgui</dir>
     <dir>Include/icam</dir>
     <dir>Include/icmpstr</dir>
+    <dir>Include/icomm</dir>
     <dir>Include/idocproc</dir>
     <dir>Include/iedge</dir>
     <dir>Include/iedgegui</dir>

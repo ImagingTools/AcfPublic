@@ -1029,6 +1029,15 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>TRuntimeStatusHanderCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/ibase/</path>
+    <filename>_t_runtime_status_hander_comp_wrap_8h</filename>
+    <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="no" imported="no">ibase/IRuntimeStatusProvider.h</includes>
+    <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <class kind="class">ibase::TRuntimeStatusHanderCompWrap</class>
+    <namespace>ibase</namespace>
+  </compound>
+  <compound kind="file">
     <name>TSerializableContainer.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_serializable_container_8h</filename>
@@ -16362,6 +16371,7 @@
     <class kind="class">ibase::TModelObserverCompBaseWrap</class>
     <class kind="class">ibase::TModelObserverCompWrap</class>
     <class kind="class">ibase::TMsbWord</class>
+    <class kind="class">ibase::TRuntimeStatusHanderCompWrap</class>
     <class kind="class">ibase::TSerializableContainer</class>
     <class kind="class">ibase::TVersionInfoBase</class>
     <member kind="typedef">
@@ -19331,6 +19341,88 @@
       <anchorfile>classibase_1_1_t_msb_word.html</anchorfile>
       <anchor>aea7ba38fe39dec635fbc401e2b71dfdc</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ibase::TRuntimeStatusHanderCompWrap</name>
+    <filename>classibase_1_1_t_runtime_status_hander_comp_wrap.html</filename>
+    <templarg>ComponentClass</templarg>
+    <member kind="enumeration">
+      <type></type>
+      <name>ModelId</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>ab8dc8fa8f818fe7b1b20bdda40db50a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_RUNTIME_STATUS</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>ab8dc8fa8f818fe7b1b20bdda40db50a6a92c464a9a8dce86011b96fe1e2b7509d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MI_LAST</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>ab8dc8fa8f818fe7b1b20bdda40db50a6ac3d715f94fe35d6f45f13484a0e60e44</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ComponentClass</type>
+      <name>BaseClass</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>a0623826c99396b81245de0866716873f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TRuntimeStatusHanderCompWrap</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>a3ed7be28b20ae7504c7a959cb5d0c0c1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSystemStarting</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>af5a2f7c3548ec9c855f338b1427ecc60</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSystemStarted</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>a722973a10a1630405460c1b2c4573737</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSystemShutdown</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>a3d6cc432151719ab20d5132f47aed124</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>a334b8ac7175048d3f1426d0d1010bc81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>adfb7d75d3f97ee889c5e818e1e091cb7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>RuntimeStatusObserver</type>
+      <name>m_statusObserver</name>
+      <anchorfile>classibase_1_1_t_runtime_status_hander_comp_wrap.html</anchorfile>
+      <anchor>a5e28634cbeb8c1cab97a9708d60f24ea</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74982,6 +75074,7 @@
     <file>TMakeModelObserverCompWrap.h</file>
     <file>TModelObserverCompWrap.h</file>
     <file>TMsbWord.h</file>
+    <file>TRuntimeStatusHanderCompWrap.h</file>
     <file>TSerializableContainer.h</file>
     <file>TVersionInfoBase.h</file>
   </compound>

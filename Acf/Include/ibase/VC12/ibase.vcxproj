@@ -167,6 +167,7 @@
     <ClInclude Include="..\TMakeModelObserverCompWrap.h" />
     <ClInclude Include="..\TModelObserverCompWrap.h" />
     <ClInclude Include="..\TMsbWord.h" />
+    <ClInclude Include="..\TRuntimeStatusHanderCompWrap.h" />
     <ClInclude Include="..\TSerializableContainer.h" />
     <ClInclude Include="..\TVersionInfoBase.h" />
     <ClInclude Include="..\ibase.h" />
