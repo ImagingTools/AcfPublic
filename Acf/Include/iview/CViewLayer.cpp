@@ -60,12 +60,6 @@ CViewLayer::~CViewLayer()
 }
 
 
-CViewLayer::Shapes CViewLayer::GetAllShapes() const
-{
-	return m_shapes.keys();
-}
-
-
 // reimplemented (iview::IViewLayer)
 
 void CViewLayer::OnConnectView(IShapeView* viewPtr)
@@ -119,6 +113,12 @@ bool CViewLayer::ConnectShape(IShape* shapePtr)
 int CViewLayer::GetShapesCount() const
 {
 	return int(m_shapes.size());
+}
+
+
+QList<iview::IShape*> CViewLayer::GetShapes() const
+{
+	return m_shapes.keys();
 }
 
 

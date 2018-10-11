@@ -73,8 +73,15 @@ public:
 		/**
 			Calibration layer.
 		*/
-		LT_CALIBRATION
+		LT_CALIBRATION,
+
+		/**
+			Tools layer.
+		*/
+		LT_TOOLS
 	};
+
+	typedef QList<IShape*> Shapes;
 
 	/**
 		Called after layer is connected to view.
@@ -109,6 +116,11 @@ public:
 		Get count of all shapes on this layer.
 	*/
 	virtual int GetShapesCount() const = 0;
+
+	/**
+		Get all shapes on this layer.
+	*/
+	virtual Shapes GetShapes() const = 0;
 	
 	/**
 		Send update to all shapes after view changes.

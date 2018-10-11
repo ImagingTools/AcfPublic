@@ -105,6 +105,7 @@ void CConsoleBase::SetGridInMm(bool state)
 
 	if (state != view.IsGridInMm()){
 		view.SetGridInMm(state);
+
 		UpdateButtonsState();
 	}
 }
@@ -116,6 +117,7 @@ void CConsoleBase::SetButtonsPanelVisible(bool state)
 {
 	if (state != m_isButtonsPanelVisible){
 		m_isButtonsPanelVisible = state;
+
 		UpdateComponentsPosition();
 	}
 }
@@ -220,6 +222,24 @@ void CConsoleBase::SetMmButtonVisible(bool state)
 }
 
 
+bool CConsoleBase::IsDistanceButtonVisible() const
+{
+	return m_isDistanceButtonVisible;
+}
+
+
+void CConsoleBase::SetDistanceButtonVisible(bool state)
+{
+	if (state != m_isDistanceButtonVisible){
+		m_isDistanceButtonVisible = state;
+
+		UpdateComponentsPosition();
+
+		UpdateCommands();
+	}
+}
+
+
 void CConsoleBase::UpdateView()
 {
 	CViewport& view = GetViewRef();
@@ -252,13 +272,14 @@ void CConsoleBase::Init()
 	m_areUserModeButtonsVisible = false;
 	m_isScrollbarsButtonVisible = true;
 	m_isGridButtonVisible = true;
-	m_isRulerButtonVisible = true;
+	m_isRulerButtonVisible = false;
 	m_isRulerVisible = false;
 	m_isMmButtonVisible = true;
 	m_isBkActive = false;
 	m_isZoomToFit = false;
 	m_fitMode = FM_BOTH;
 	m_isFullScreenAllowed = true;
+	m_isDistanceButtonVisible = false;
 }
 
 
@@ -284,6 +305,22 @@ bool CConsoleBase::IsGridVisible() const
 bool CConsoleBase::IsRulerVisible() const
 {
 	return m_isRulerVisible;
+}
+
+
+bool CConsoleBase::IsDistanceToolActive() const
+{
+	const CViewport& view = GetView();
+
+	return view.IsDistanceToolActive();
+}
+
+
+void CConsoleBase::SetDistanceToolActive(bool state)
+{
+	CViewport& view = GetViewRef();
+
+	view.SetDistanceToolActive(state);
 }
 
 
@@ -356,6 +393,7 @@ bool CConsoleBase::IsRulerButtonVisible() const
 {
 	return m_isRulerButtonVisible;
 }
+
 
 bool CConsoleBase::IsMmButtonVisible() const
 {

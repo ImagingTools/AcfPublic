@@ -128,6 +128,7 @@
     <ClCompile Include="..\CColorSchemaComp.cpp" />
     <ClCompile Include="..\CConsoleBase.cpp" />
     <ClCompile Include="..\CConsoleGui.cpp" />
+    <ClCompile Include="..\CDistanceToolShape.cpp" />
     <ClCompile Include="..\CDrawBuffer.cpp" />
     <ClCompile Include="..\CImageShape.cpp" />
     <ClCompile Include="..\CInteractiveShapeBase.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="..\CShapeStatusInfoComp.cpp" />
     <ClCompile Include="..\CSimpleShapeFactoryComp.cpp" />
     <ClCompile Include="..\CSplineShape.cpp" />
+    <ClCompile Include="..\CToolsViewLayer.cpp" />
     <ClCompile Include="..\CTubePolylineShape.cpp" />
     <ClCompile Include="..\CViewBase.cpp" />
     <ClCompile Include="..\CViewLayer.cpp" />
@@ -175,6 +177,7 @@
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CConsoleGui.h</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\iview\moc_CConsoleGui.cpp;%(Outputs)</Outputs>
     </CustomBuild>
+    <ClInclude Include="..\CDistanceToolShape.h" />
     <ClInclude Include="..\CDrawBuffer.h" />
     <ClInclude Include="..\CImageShape.h" />
     <ClInclude Include="..\CInteractiveShapeBase.h" />
@@ -204,6 +207,7 @@
     <ClInclude Include="..\CShapeStatusInfoComp.h" />
     <ClInclude Include="..\CSimpleShapeFactoryComp.h" />
     <ClInclude Include="..\CSplineShape.h" />
+    <ClInclude Include="..\CToolsViewLayer.h" />
     <ClInclude Include="..\CTubePolylineShape.h" />
     <ClInclude Include="..\CViewBase.h" />
     <ClInclude Include="..\CViewLayer.h" />
@@ -230,6 +234,7 @@
     <ClInclude Include="..\IShapeObserver.h" />
     <ClInclude Include="..\IShapeStatusInfo.h" />
     <ClInclude Include="..\IShapeView.h" />
+    <ClInclude Include="..\IToolsLayerInfo.h" />
     <ClInclude Include="..\ITouchable.h" />
     <ClInclude Include="..\IViewEventObserver.h" />
     <ClInclude Include="..\IViewLayer.h" />

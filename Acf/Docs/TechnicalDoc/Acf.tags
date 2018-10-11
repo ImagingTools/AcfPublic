@@ -1032,8 +1032,10 @@
     <name>TRuntimeStatusHanderCompWrap.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_runtime_status_hander_comp_wrap_8h</filename>
+    <includes id="_i_model_8h" name="IModel.h" local="no" imported="no">imod/IModel.h</includes>
     <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="no" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <class kind="class">ibase::TRuntimeStatusHanderCompWrap</class>
     <namespace>ibase</namespace>
   </compound>
@@ -4421,6 +4423,7 @@
     <includes id="_i_color_schema_8h" name="IColorSchema.h" local="no" imported="no">iview/IColorSchema.h</includes>
     <includes id="_c_console_gui_8h" name="CConsoleGui.h" local="no" imported="no">iview/CConsoleGui.h</includes>
     <includes id="_i_view_provider_8h" name="IViewProvider.h" local="no" imported="no">iqt2d/IViewProvider.h</includes>
+    <class kind="class">iqt2d::CViewProviderGuiCompAttr</class>
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <namespace>iqt2d</namespace>
   </compound>
@@ -6296,9 +6299,11 @@
     <includes id="_c_rect_8h" name="CRect.h" local="no" imported="no">i2d/CRect.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="no" imported="no">i2d/ICalibration2d.h</includes>
     <includes id="_i_visual_calibration_info_8h" name="IVisualCalibrationInfo.h" local="no" imported="no">iview/IVisualCalibrationInfo.h</includes>
+    <includes id="_i_tools_layer_info_8h" name="IToolsLayerInfo.h" local="no" imported="no">iview/IToolsLayerInfo.h</includes>
     <includes id="_c_view_base_8h" name="CViewBase.h" local="no" imported="no">iview/CViewBase.h</includes>
     <includes id="_c_draw_buffer_8h" name="CDrawBuffer.h" local="no" imported="no">iview/CDrawBuffer.h</includes>
     <includes id="_c_color_schema_8h" name="CColorSchema.h" local="no" imported="no">iview/CColorSchema.h</includes>
+    <includes id="_c_tools_view_layer_8h" name="CToolsViewLayer.h" local="no" imported="no">iview/CToolsViewLayer.h</includes>
     <class kind="class">iview::CCalibratedViewBase</class>
     <namespace>iview</namespace>
   </compound>
@@ -6368,6 +6373,15 @@
     <includes id="_c_viewport_8h" name="CViewport.h" local="no" imported="no">iview/CViewport.h</includes>
     <includes id="_i_shape_status_info_8h" name="IShapeStatusInfo.h" local="no" imported="no">iview/IShapeStatusInfo.h</includes>
     <class kind="class">iview::CConsoleGui</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CDistanceToolShape.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_distance_tool_shape_8h</filename>
+    <includes id="_c_shape_base_8h" name="CShapeBase.h" local="no" imported="no">iview/CShapeBase.h</includes>
+    <includes id="_i_interactive_shape_8h" name="IInteractiveShape.h" local="no" imported="no">iview/IInteractiveShape.h</includes>
+    <class kind="class">iview::CDistanceToolShape</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -6560,6 +6574,15 @@
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
+    <name>CToolsViewLayer.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_c_tools_view_layer_8h</filename>
+    <includes id="_i_selectable_layer_8h" name="ISelectableLayer.h" local="no" imported="no">iview/ISelectableLayer.h</includes>
+    <includes id="_c_view_layer_8h" name="CViewLayer.h" local="no" imported="no">iview/CViewLayer.h</includes>
+    <class kind="class">iview::CToolsViewLayer</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTubePolylineShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_tube_polyline_shape_8h</filename>
@@ -6733,6 +6756,14 @@
     <includes id="_i_selectable_8h" name="ISelectable.h" local="no" imported="no">iview/ISelectable.h</includes>
     <includes id="_i_selectable_layer_8h" name="ISelectableLayer.h" local="no" imported="no">iview/ISelectableLayer.h</includes>
     <class kind="class">iview::IShapeView</class>
+    <namespace>iview</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IToolsLayerInfo.h</name>
+    <path>C:/Temp/Acf/Include/iview/</path>
+    <filename>_i_tools_layer_info_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">iview::IToolsLayerInfo</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -46881,6 +46912,7 @@
     <class kind="class">iqt2d::CSceneConnectorGuiComp</class>
     <class kind="class">iqt2d::CSelectableSceneExtenderComp</class>
     <class kind="class">iqt2d::CTubePolylineParamsGuiComp</class>
+    <class kind="class">iqt2d::CViewProviderGuiCompAttr</class>
     <class kind="class">iqt2d::CViewProviderGuiComp</class>
     <class kind="class">iqt2d::IViewExtender</class>
     <class kind="class">iqt2d::IViewProvider</class>
@@ -49003,6 +49035,20 @@
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>SetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae9b0ae24d495d8896782dd82ece18a60</anchor>
+      <arglist>(const QVariant &amp;variant, double &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QVariant</type>
+      <name>GetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a38d5ca616c1b64161b85d94edc6bf660</anchor>
+      <arglist>(double value, int round=2)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>QAction</type>
       <name>m_flipHorizontalAction</name>
@@ -49287,6 +49333,20 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>SetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae9b0ae24d495d8896782dd82ece18a60</anchor>
+      <arglist>(const QVariant &amp;variant, double &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QVariant</type>
+      <name>GetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a38d5ca616c1b64161b85d94edc6bf660</anchor>
+      <arglist>(double value, int round=2)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction</type>
@@ -50082,6 +50142,20 @@
       <anchor>acc6c593478085f58d4626c404b398d4f</anchor>
       <arglist>(i2d::CTubePolyline *objectPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>SetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae9b0ae24d495d8896782dd82ece18a60</anchor>
+      <arglist>(const QVariant &amp;variant, double &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QVariant</type>
+      <name>GetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a38d5ca616c1b64161b85d94edc6bf660</anchor>
+      <arglist>(double value, int round=2)</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>QAction</type>
       <name>m_flipHorizontalAction</name>
@@ -50119,59 +50193,49 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iqt2d::CViewProviderGuiComp</name>
-    <filename>classiqt2d_1_1_c_view_provider_gui_comp.html</filename>
+    <name>iqt2d::CViewProviderGuiCompAttr</name>
+    <filename>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</filename>
     <base>TGuiComponentBase&lt; iview::CConsoleGui &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <base virtualness="virtual">iqt2d::IViewProvider</base>
-    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="enumeration">
       <type></type>
       <name>BackgroundMode</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>ac7121dfbb7f404a509abd1544e6d00a8</anchor>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</anchorfile>
+      <anchor>ac3290252616401e1b091b0b4370d2054</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>BM_NORMAL</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a69b501d98510e7545a604fdc68442692</anchor>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</anchorfile>
+      <anchor>ac3290252616401e1b091b0b4370d2054ad66914faf0cd3688576631c35b80eaed</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>BM_COLOR_SCHEMA</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a0a506ff08897fb82aefa5121ea7061a6</anchor>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</anchorfile>
+      <anchor>ac3290252616401e1b091b0b4370d2054ad4dce3bc06681bbe06412f71bda4cdf9</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>BM_CHECKERBOARD</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a76204479eb7829b9e93bf6c37954566b</anchor>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</anchorfile>
+      <anchor>ac3290252616401e1b091b0b4370d2054a8d3f6d91b371ebfb8f46f41760374abc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>BM_DOT_GRID</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>ac7121dfbb7f404a509abd1544e6d00a8a49b58379e771807749e79f6867000bbd</anchor>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</anchorfile>
+      <anchor>ac3290252616401e1b091b0b4370d2054a554bba7af2a97ad56283b4d2df8cc219</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; iview::CConsoleGui &gt;</type>
       <name>BaseClass</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a8b23d37e2179b3996b6ad136f47f81ed</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>imod::CMultiModelDispatcherBase</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a4627941fbe791699d2c1e0f940b3986f</anchor>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp_attr.html</anchorfile>
+      <anchor>a92b453a5109e1da2a92d38dfc5c37134</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -50179,6 +50243,63 @@
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a71d48e5e9425438c80e0d95aa88fa782</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TGuiComponentBase</name>
+      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
+      <anchor>a1f5e57c7009a5942c96a2ddb7b8fb57c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual iview::CConsoleGui *</type>
+      <name>GetQtWidget</name>
+      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
+      <anchor>a3db7c383e14f4f5c9605cebd90c44e1a</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>CreateQtWidget</name>
+      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
+      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
+      <arglist>(QWidget *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>ab387d3bc706d5720fdd23a3d0192a239</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>ab66ecf3d13faa48018f89d871bd32ae3</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqt2d::CViewProviderGuiComp</name>
+    <filename>classiqt2d_1_1_c_view_provider_gui_comp.html</filename>
+    <base>iqt2d::CViewProviderGuiCompAttr</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base virtualness="virtual">iqt2d::IViewProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>CViewProviderGuiCompAttr</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a7808a41a241a48cd8644d6f4f794ed53</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a4627941fbe791699d2c1e0f940b3986f</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -50201,27 +50322,6 @@
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>adc78fdfd1b381f0da35436a3257afa52</anchor>
       <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TGuiComponentBase</name>
-      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>a1f5e57c7009a5942c96a2ddb7b8fb57c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual iview::CConsoleGui *</type>
-      <name>GetQtWidget</name>
-      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>a3db7c383e14f4f5c9605cebd90c44e1a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QWidget *</type>
-      <name>CreateQtWidget</name>
-      <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
-      <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
-      <arglist>(QWidget *parentPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -50638,6 +50738,20 @@
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
       <anchor>a5715370ed94fe45f1ff07aa542d042af</anchor>
       <arglist>(imod::IModel *modelPtr) const</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static bool</type>
+      <name>SetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>ae9b0ae24d495d8896782dd82ece18a60</anchor>
+      <arglist>(const QVariant &amp;variant, double &amp;result)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static QVariant</type>
+      <name>GetValue</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp.html</anchorfile>
+      <anchor>a38d5ca616c1b64161b85d94edc6bf660</anchor>
+      <arglist>(double value, int round=2)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction</type>
@@ -51696,20 +51810,6 @@
       <anchorfile>classiqtgui_1_1_t_gui_component_base.html</anchorfile>
       <anchor>a395cae67d0bc56a71332359d863138c7</anchor>
       <arglist>(QWidget *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>ab387d3bc706d5720fdd23a3d0192a239</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>ab66ecf3d13faa48018f89d871bd32ae3</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -65211,6 +65311,7 @@
     <class kind="class">iview::CColorSchemaComp</class>
     <class kind="class">iview::CConsoleBase</class>
     <class kind="class">iview::CConsoleGui</class>
+    <class kind="class">iview::CDistanceToolShape</class>
     <class kind="class">iview::CDrawBuffer</class>
     <class kind="class">iview::CImageShape</class>
     <class kind="class">iview::CInteractiveShapeBase</class>
@@ -65231,6 +65332,7 @@
     <class kind="class">iview::CShapeStatusInfoComp</class>
     <class kind="class">iview::CSimpleShapeFactoryComp</class>
     <class kind="class">iview::CSplineShape</class>
+    <class kind="class">iview::CToolsViewLayer</class>
     <class kind="class">iview::CTubePolylineShape</class>
     <class kind="class">iview::CViewBase</class>
     <class kind="class">iview::CViewLayer</class>
@@ -65248,6 +65350,7 @@
     <class kind="class">iview::IShapeObserver</class>
     <class kind="class">iview::IShapeStatusInfo</class>
     <class kind="class">iview::IShapeView</class>
+    <class kind="class">iview::IToolsLayerInfo</class>
     <class kind="class">iview::ITouchable</class>
     <class kind="class">iview::IViewEventObserver</class>
     <class kind="class">iview::IViewLayer</class>
@@ -66116,6 +66219,7 @@
     <base>iview::CViewBase</base>
     <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">iview::IVisualCalibrationInfo</base>
+    <base virtualness="virtual">iview::IToolsLayerInfo</base>
     <member kind="typedef">
       <type>CViewBase</type>
       <name>BaseClass</name>
@@ -66382,6 +66486,20 @@
       <anchor>a5578ebbb9acb7f193715a0122a44ec78</anchor>
       <arglist>(iview::IShape *shapePtr)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDistanceToolActive</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>afec7f75fc35717a6e774b96aa08c5d7f</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ConnectToolShape</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a4ff61f1eb9376a6d9d266803282c448f</anchor>
+      <arglist>(iview::IShape *shapePtr)</arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>SetMinGridDistance</name>
@@ -66401,6 +66519,13 @@
       <name>GetCalibrationLayer</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
       <anchor>a3957c2b9787df64fbaa07e2892c10737</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const iview::IViewLayer &amp;</type>
+      <name>GetToolsLayer</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a80d0c1434792193dbec45b3c5b928442</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function">
@@ -66534,6 +66659,13 @@
       <name>IsGridInMm</name>
       <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
       <anchor>accb843682981aae29e3a57de5ee6ba71</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsDistanceToolActive</name>
+      <anchorfile>classiview_1_1_c_calibrated_view_base.html</anchorfile>
+      <anchor>a1f8737de8044cfdf6d7dbbd1f85d9e45</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -68034,6 +68166,20 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>IsDistanceToolActive</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>adef0b2e3d63d69f2ca5e4bddee417fae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDistanceToolActive</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>aa829d9127e86c76d40cc757fcfcdfd5e</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>IsGridInMm</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>ad97a7eef0ab89c7446d884bbb9c34cc9</anchor>
@@ -68198,6 +68344,20 @@
       <name>SetMmButtonVisible</name>
       <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
       <anchor>aa055148071b926cda010bd0ee50cf006</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsDistanceButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>ab8b000ced71bb5431ff4a4ebc17d68cd</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDistanceButtonVisible</name>
+      <anchorfile>classiview_1_1_c_console_base.html</anchorfile>
+      <anchor>a4a7f2758cd3a1a3f2bdc58d6d84f19bb</anchor>
       <arglist>(bool state=true)</arglist>
     </member>
     <member kind="function">
@@ -68446,6 +68606,13 @@
     </member>
     <member kind="slot">
       <type>void</type>
+      <name>OnActivateDistanceTool</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a213fe71ad4ff6a8491cc0d1b43577952</anchor>
+      <arglist>(bool state)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
       <name>OnShowGridInMm</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>aecff87db4954c911e60b392903bc302c</anchor>
@@ -68670,6 +68837,13 @@
     </member>
     <member kind="property">
       <type>bool</type>
+      <name>DistanceToolActive</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a47a45389a6c5c050bb9b8d83d9ad3a77</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="property">
+      <type>bool</type>
       <name>GridInMm</name>
       <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
       <anchor>a9eb9fe1de0fc2718210cea290b24666d</anchor>
@@ -68761,6 +68935,103 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CDistanceToolShape</name>
+    <filename>classiview_1_1_c_distance_tool_shape.html</filename>
+    <base>iview::CShapeBase</base>
+    <base virtualness="virtual">iview::IInteractiveShape</base>
+    <member kind="typedef">
+      <type>CShapeBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a712ee59ac84d6fcbbe8b35dd3fc4a288</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CDistanceToolShape</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a8e98f475899da8682e3cb98fd6fa4881</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a29416f9ee5e50fdf23646bd106fc1f2f</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseMove</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>acb75b6e5c9f5c124850f43cec2d0955f</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsSelected</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a310481561b16be23ed284291d5dc735e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetSelected</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>af72093f9d07a1df6fed58657fb498015</anchor>
+      <arglist>(bool selectFlag=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelAttached</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a793037dc71736c83550fdc6d0d8894aa</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a11e6be144232175b4803a40952f99b9a</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnModelDetached</name>
+      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
+      <anchor>a4b3a1a50976aa300fea50a50d7c587aa</anchor>
+      <arglist>(imod::IModel *modelPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>ae5f5e1ba815397af64edfdaa8f3c3302</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawLabel</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>acc5adab5d196f688d3df322953c3ae76</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>aab5d1938eb5195e6d7a8878eeead1600</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>a5cc067753537e991f2ac0ab05332ec56</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CDrawBuffer</name>
     <filename>classiview_1_1_c_draw_buffer.html</filename>
     <member kind="typedef">
@@ -68845,13 +69116,6 @@
       <anchor>abbd64a8e5fc7e01eb0d36b551c34dbb0</anchor>
       <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OnModelDetached</name>
-      <anchorfile>classiview_1_1_c_shape_base.html</anchorfile>
-      <anchor>a4b3a1a50976aa300fea50a50d7c587aa</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iview::CInteractiveShapeBase</name>
@@ -68914,13 +69178,6 @@
       <anchor>abe517059d3a1f089244fa991bf7867ad</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>QList&lt; IShape * &gt;</type>
-      <name>Shapes</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a5b9d7572031b7f5b4ab5540f3034d222</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="enumeration">
       <type></type>
       <name>LayerType</name>
@@ -68961,6 +69218,20 @@
       <name>LT_CALIBRATION</name>
       <anchorfile>classiview_1_1_i_view_layer.html</anchorfile>
       <anchor>ab844c082e493b088ae3b3afc42b98240acc7ed10e9ace7a0b656ddd7bcbe10f50</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>LT_TOOLS</name>
+      <anchorfile>classiview_1_1_i_view_layer.html</anchorfile>
+      <anchor>ab844c082e493b088ae3b3afc42b98240ae6dd5f6f0ab2957003bca2fd424cd26a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QList&lt; IShape * &gt;</type>
+      <name>Shapes</name>
+      <anchorfile>classiview_1_1_i_view_layer.html</anchorfile>
+      <anchor>a632e10e1694074d9e38c84c3b6cce3a7</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -69208,13 +69479,6 @@
       <anchor>a4d55d73d39cdb264deca9a8a2c667c3d</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>Shapes</type>
-      <name>GetAllShapes</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>aaf797ca5b3c2b0f285355a58820b0102</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnConnectView</name>
@@ -69234,6 +69498,13 @@
       <name>GetViewPtr</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
       <anchor>a02abb00a90a8c340b8d2a39f05a34c7f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual Shapes</type>
+      <name>GetShapes</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>ae981fa526606b155a3d69e88a2b006ae</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -71498,6 +71769,229 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iview::CToolsViewLayer</name>
+    <filename>classiview_1_1_c_tools_view_layer.html</filename>
+    <base>iview::CViewLayer</base>
+    <base virtualness="virtual">iview::ISelectableLayer</base>
+    <member kind="typedef">
+      <type>CViewLayer</type>
+      <name>BaseClass</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>ab0c4ba5decd732ce4c1810df370acc5a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectInteractiveShape</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>aa66cbc490982249e7110751934066626</anchor>
+      <arglist>(IInteractiveShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetUnselectedShapesCount</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a9534e5dbc6feb0cf8ea6469773047111</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawFocusedShape</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>acd163c29f3ec929039fca05e64f8bf8b</anchor>
+      <arglist>(QPainter &amp;drawContext)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnMouseButton</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>aeda9e44e8a781e173f0583de227c1dc3</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnFocusedMouseButton</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>ad3bdcfccdcb0c0f212eed1dbe04c4c2e</anchor>
+      <arglist>(istd::CIndex2d position, Qt::MouseButton buttonType, bool downFlag)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnFocusedMouseMove</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a4afae47371b21b368ed6729c34251c0d</anchor>
+      <arglist>(istd::CIndex2d position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a7e53d91e8cb8fe164caf4dab1084d710</anchor>
+      <arglist>(istd::CIndex2d position, IInteractiveShape **shapePtrPtr=NULL) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSelectedShapesCount</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a5634754456dd2e5d2bf4fa0991353b4c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InsertSelectedShapes</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>ac5eed9e42457cb628c34f520d7ac6963</anchor>
+      <arglist>(SelectedShapes &amp;result) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DeselectAllShapes</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a1dd0b5b63164ea91147cd4bbf6de651a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetKeysState</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>aed1442f8857485da626d1e9645e3181f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetEditMode</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a7493e17caa2a7d319ec63efc7398c3e2</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnShapeFocused</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a700fe7b4e4da22fae63658a715cf89c2</anchor>
+      <arglist>(IInteractiveShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnShapeDefocused</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>ab6912e5723deed2dce258c5e33172244</anchor>
+      <arglist>(IInteractiveShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnShapeSelected</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a214a0dfc461872fad1ef20ee5a2f89ca</anchor>
+      <arglist>(IInteractiveShape &amp;shape, bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual TouchState</type>
+      <name>IsTouched</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a4e84a0ce34e3ad8ab33c7170ba746588</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeginDrag</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a8180379d2cfdf48da7beeac1a3286914</anchor>
+      <arglist>(const istd::CIndex2d &amp;reference)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetDragPosition</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a837ac0a2fba7472e050aad38ce2b5127</anchor>
+      <arglist>(const istd::CIndex2d &amp;position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EndDrag</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a9b26fe20e2813d6f4ea2235ec4b3eaf8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsDraggable</name>
+      <anchorfile>classiview_1_1_c_tools_view_layer.html</anchorfile>
+      <anchor>a1559b5e681c8cbb6fa5777e5cfb7eb49</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsShapeConnected</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a7f5c8c8d0adbe3487f05d50ffa3067a2</anchor>
+      <arglist>(IShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectShape</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a3cbcf38daa6f85f76a5c211163e5a4e6</anchor>
+      <arglist>(IShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetShapesCount</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a3abfc020b19d1e99e10cb49465e6cbaa</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DisconnectAllShapes</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>ad96cf8f79417736da534819606a3a8b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>DrawShapes</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>abc886d86377e7f159ed1d920a3b9fda5</anchor>
+      <arglist>(QPainter &amp;drawContext)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnChangeShape</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a532144bd89dd58f963832b02cf45544e</anchor>
+      <arglist>(IShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>DisconnectShape</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>af03e78892b6fe667f317d4327674d195</anchor>
+      <arglist>(IShape *shapePtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetShapeDescriptionAt</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a8ffa85b23ef3f07eb2ab715db248fcb1</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>RecalcAllShapes</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a154fd818e9d6d8746051b66d38eaf703</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual i2d::CRect</type>
+      <name>CalcBoundingBox</name>
+      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
+      <anchor>a039fae3102f4f70204a944109c468c56</anchor>
+      <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CTubePolylineShape</name>
     <filename>classiview_1_1_c_tube_polyline_shape.html</filename>
     <base>iview::CPolylineShape</base>
@@ -71717,81 +72211,11 @@
     <filename>classiview_1_1_c_view_layer.html</filename>
     <base virtualness="virtual">iview::IViewLayer</base>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsShapeConnected</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a7f5c8c8d0adbe3487f05d50ffa3067a2</anchor>
-      <arglist>(IShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ConnectShape</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a3cbcf38daa6f85f76a5c211163e5a4e6</anchor>
-      <arglist>(IShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetShapesCount</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a3abfc020b19d1e99e10cb49465e6cbaa</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DisconnectAllShapes</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>ad96cf8f79417736da534819606a3a8b6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>DrawShapes</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>abc886d86377e7f159ed1d920a3b9fda5</anchor>
-      <arglist>(QPainter &amp;drawContext)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnChangeShape</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a532144bd89dd58f963832b02cf45544e</anchor>
-      <arglist>(IShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>DisconnectShape</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>af03e78892b6fe667f317d4327674d195</anchor>
-      <arglist>(IShape *shapePtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual TouchState</type>
       <name>IsTouched</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
       <anchor>a32124f6efba43a84928f736fdc85f62d</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetShapeDescriptionAt</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a8ffa85b23ef3f07eb2ab715db248fcb1</anchor>
-      <arglist>(istd::CIndex2d position) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>RecalcAllShapes</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a154fd818e9d6d8746051b66d38eaf703</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual i2d::CRect</type>
-      <name>CalcBoundingBox</name>
-      <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a039fae3102f4f70204a944109c468c56</anchor>
-      <arglist>() const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -72487,6 +72911,13 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual Shapes</type>
+      <name>GetShapes</name>
+      <anchorfile>classiview_1_1_i_view_layer.html</anchorfile>
+      <anchor>a9ddfdc4dbf3ace4148c03d613c617ecf</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>UpdateAllShapes</name>
       <anchorfile>classiview_1_1_i_view_layer.html</anchorfile>
@@ -72695,6 +73126,18 @@
       <anchorfile>classiview_1_1_i_shape_view.html</anchorfile>
       <anchor>aa9c92248a4a0bce37929e9364af548d7</anchor>
       <arglist>(const IViewLayer &amp;layer, const i2d::CRect &amp;prevArea, const i2d::CRect &amp;newArea)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::IToolsLayerInfo</name>
+    <filename>classiview_1_1_i_tools_layer_info.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsDistanceToolActive</name>
+      <anchorfile>classiview_1_1_i_tools_layer_info.html</anchorfile>
+      <anchor>a091208636322eb22b1a0943b82f7a3a2</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75690,6 +76133,7 @@
     <file>CColorSchemaComp.h</file>
     <file>CConsoleBase.h</file>
     <file>CConsoleGui.h</file>
+    <file>CDistanceToolShape.h</file>
     <file>CDrawBuffer.h</file>
     <file>CImageShape.h</file>
     <file>CInteractiveShapeBase.h</file>
@@ -75710,6 +76154,7 @@
     <file>CShapeStatusInfoComp.h</file>
     <file>CSimpleShapeFactoryComp.h</file>
     <file>CSplineShape.h</file>
+    <file>CToolsViewLayer.h</file>
     <file>CTubePolylineShape.h</file>
     <file>CViewBase.h</file>
     <file>CViewLayer.h</file>
@@ -75727,6 +76172,7 @@
     <file>IShapeObserver.h</file>
     <file>IShapeStatusInfo.h</file>
     <file>IShapeView.h</file>
+    <file>IToolsLayerInfo.h</file>
     <file>ITouchable.h</file>
     <file>iview.h</file>
     <file>IViewEventObserver.h</file>
