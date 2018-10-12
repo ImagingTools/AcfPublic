@@ -101,7 +101,6 @@ bool CLabelShape::OnMouseButton(istd::CIndex2d position, Qt::MouseButton buttonT
 }
 
 
-
 bool CLabelShape::OnMouseMove(istd::CIndex2d position)
 {
 	imod::IModel* modelPtr = GetObservedModel();
@@ -133,7 +132,6 @@ bool CLabelShape::OnMouseMove(istd::CIndex2d position)
 
 	return false;
 }
-
 
 
 // reimplemented (iview::IVisualizable)

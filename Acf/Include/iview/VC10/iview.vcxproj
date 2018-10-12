@@ -232,6 +232,7 @@
     <ClInclude Include="..\IShapeObserver.h" />
     <ClInclude Include="..\IShapeStatusInfo.h" />
     <ClInclude Include="..\IShapeView.h" />
+    <ClInclude Include="..\ITextLabelParams.h" />
     <ClInclude Include="..\IToolsLayerInfo.h" />
     <ClInclude Include="..\ITouchable.h" />
     <ClInclude Include="..\IViewEventObserver.h" />

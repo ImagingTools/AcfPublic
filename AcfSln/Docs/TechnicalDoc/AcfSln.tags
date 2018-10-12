@@ -4282,7 +4282,7 @@
       <type>@</type>
       <name>QTSERVICE_STARTUP</name>
       <anchorfile>class_qt_service_sys_private.html</anchorfile>
-      <anchor>a3b494cbdc486a6b6d91fced87b810099a70a139c76d7516e5661626df0e341c21</anchor>
+      <anchor>a2b309fedb8acfa79c0cfead9d499ff81a70a139c76d7516e5661626df0e341c21</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -8862,13 +8862,6 @@
     <name>icam::CCalibratedCameraComp</name>
     <filename>classicam_1_1_c_calibrated_camera_comp.html</filename>
     <base>icam::CCameraDelegatorComp</base>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>RESOLUTION_PATTERN</name>
-      <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
-      <anchor>a1c57ad6fe472f6483b765dc8ffe15b10afcf6f9045007c54caaa550be7d4ac4c9</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>icam::CCameraDelegatorComp</type>
       <name>BaseClass</name>
@@ -8957,15 +8950,15 @@
       <type>static bool</type>
       <name>ReadImageResolution</name>
       <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
-      <anchor>a80beb178bbc1ae07a2411a8244bdb23d</anchor>
-      <arglist>(const iimg::IBitmap &amp;bitmap, double &amp;resolution)</arglist>
+      <anchor>a7acb8e574487aff1f7e4d24204e45f91</anchor>
+      <arglist>(const iimg::IBitmap &amp;bitmap, double &amp;resolutionX, double &amp;resolutionY)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>WriteImageResolution</name>
       <anchorfile>classicam_1_1_c_calibrated_camera_comp.html</anchorfile>
-      <anchor>a243a67bc3b3553d40414676fb4b099a5</anchor>
-      <arglist>(iimg::IBitmap &amp;bitmap, double resolution)</arglist>
+      <anchor>a66811e8360d91e21b6df0374219d339b</anchor>
+      <arglist>(iimg::IBitmap &amp;bitmap, double resolutionX, double resolutionY)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iprm::IParamsSet *</type>
@@ -11938,14 +11931,14 @@
       <type>@</type>
       <name>SIDE_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a85b56976b7f1f6dbe1b8d932aaa83c84aef8e9470aa7f146aa93268980192b5bb</anchor>
+      <anchor>ae4545d9b49a6256e86a61a5e7b5468eeaef8e9470aa7f146aa93268980192b5bb</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
       <type>@</type>
       <name>SHADOW_OFFSET</name>
       <anchorfile>classicmpstr_1_1_c_registry_element_shape.html</anchorfile>
-      <anchor>a85b56976b7f1f6dbe1b8d932aaa83c84abc25da06cff09b155ba1cb7b96603cd1</anchor>
+      <anchor>ae4545d9b49a6256e86a61a5e7b5468eeabc25da06cff09b155ba1cb7b96603cd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
@@ -26645,8 +26638,8 @@
       <type>virtual bool</type>
       <name>ProcessImage</name>
       <anchorfile>classiipr_1_1_c_rgb_to_gray_processor_comp.html</anchorfile>
-      <anchor>a82f256608b8761cd1c0aa4abc7f46dc9</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const override</arglist>
+      <anchor>a3f10669570d803f1accd90d4c9878a76</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33005,14 +32998,14 @@
       <type>@</type>
       <name>MI_SUPPLIER_RESULTS_START_ID</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ae288af12dd511e3023d087c536771088aa8f41f8551299a8ee2c31229fe253c48</anchor>
+      <anchor>ace6c8949f1f7aba1b6c8ea4ca09bdcd6aa8f41f8551299a8ee2c31229fe253c48</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
       <name>MI_VISUAL_STATUS_START_ID</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ae288af12dd511e3023d087c536771088ac669afbbf1368ea76bf7842755716cbf</anchor>
+      <anchor>ace6c8949f1f7aba1b6c8ea4ca09bdcd6ac669afbbf1368ea76bf7842755716cbf</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -33217,11 +33210,19 @@
     <filename>classiqtinsp_1_1_c_message_based_view_extender_comp.html</filename>
     <base>TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</base>
     <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <base protection="private">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtinsp::TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
       <anchor>abeac0b53d825551f6992f8f2deeafc33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>ae8639807ce9202189ed270ff5a7493b9</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -33272,6 +33273,13 @@
       <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
       <anchor>a0b6ae9a2f5bc862e60a54f4b8d628d43</anchor>
       <arglist>(const istd::IInformationProvider &amp;message) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a0d86163564a5e9b4935576caa890591a</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
