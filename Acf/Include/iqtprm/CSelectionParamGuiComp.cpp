@@ -26,6 +26,7 @@
 #include <QtCore/QtGlobal>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QListView>
 #else
 #include <QtGui/QButtonGroup>
 #endif
@@ -297,7 +298,8 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 		}
 		else{
 			switchBoxPtr = new QComboBox(SelectionFrame);
-			switchBoxPtr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+			switchBoxPtr->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);			
+			switchBoxPtr->setView(new QListView()); // Qt bug workaround to set up the style from css
 
 			if (*m_useCompleterAttrPtr){
 				switchBoxPtr->setEditable(true);
