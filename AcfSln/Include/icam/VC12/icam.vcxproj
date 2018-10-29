@@ -120,6 +120,7 @@
     <ClCompile Include="..\CBitmapSupplierMultiplexerComp.cpp" />
     <ClCompile Include="..\CCalibratedCameraComp.cpp" />
     <ClCompile Include="..\CCameraDelegatorComp.cpp" />
+    <ClCompile Include="..\CCameraMultiplexerComp.cpp" />
     <ClCompile Include="..\CCameraSnapSupplierCompBase.cpp" />
     <ClCompile Include="..\CExposureParamsComp.cpp" />
     <ClCompile Include="..\CMemoryAcquisitionComp.cpp" />
@@ -136,6 +137,7 @@
     <ClInclude Include="..\CBitmapSupplierMultiplexerComp.h" />
     <ClInclude Include="..\CCalibratedCameraComp.h" />
     <ClInclude Include="..\CCameraDelegatorComp.h" />
+    <ClInclude Include="..\CCameraMultiplexerComp.h" />
     <ClInclude Include="..\CCameraSnapSupplierCompBase.h" />
     <ClInclude Include="..\CExposureParamsComp.h" />
     <ClInclude Include="..\CMemoryAcquisitionComp.h" />

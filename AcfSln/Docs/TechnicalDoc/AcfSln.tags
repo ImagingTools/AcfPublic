@@ -391,6 +391,14 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CCameraMultiplexerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_camera_multiplexer_comp_8h</filename>
+    <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="no" imported="no">icam/IBitmapAcquisition.h</includes>
+    <class kind="class">icam::CCameraMultiplexerComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCameraSnapSupplierCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_camera_snap_supplier_comp_base_8h</filename>
@@ -8443,6 +8451,7 @@
     <class kind="class">icam::CBitmapSupplierMultiplexerComp</class>
     <class kind="class">icam::CCalibratedCameraComp</class>
     <class kind="class">icam::CCameraDelegatorComp</class>
+    <class kind="class">icam::CCameraMultiplexerComp</class>
     <class kind="class">icam::CCameraSnapSupplierCompBase</class>
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
@@ -8986,6 +8995,96 @@
       <anchorfile>classicam_1_1_c_camera_delegator_comp.html</anchorfile>
       <anchor>abbec32b705b72834aff73bea16fd6303</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CCameraMultiplexerComp</name>
+    <filename>classicam_1_1_c_camera_multiplexer_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">icam::IBitmapAcquisition</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>a1a00c30f04c5f6f29e6aa6bb26ffaee7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CCameraMultiplexerComp</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>a7588c2f80910057048981332bb8dbf6d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>a85f0e34c0d61f847d978990bb1ad2253</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>ae915630c30539f6e8153873658e1afeb</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>adf9b61a3d5e2482382f2699bab5cee8d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>ae1a54829bbd11301a6530d1bec8885ea</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>ab814b2306ae7716f09f531bf52b6d1ed</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>ac93d13b0f986b34bc813905536c7278c</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>ae0e1f0fce81a28a914fa53e1213db7c5</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>a7b77bf8897c8c1341746eb5f68250c90</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>a9bf4905f423dac2ccecf0e4796321f4d</anchor>
+      <arglist>(int taskId=-1) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classicam_1_1_c_camera_multiplexer_comp.html</anchorfile>
+      <anchor>a1041417e2ecec00420c259a52276b7d1</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18808,18 +18907,32 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetPoolingIntervall</name>
+      <type>virtual WorkingMode</type>
+      <name>GetWorkingMode</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>a64fe092838e0a615bf93dc812ee2db97</anchor>
+      <anchor>ac58c23a1fe1b942f6eba3a8f164dfe4a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>SetPoolingIntervall</name>
+      <name>SetWorkingMode</name>
       <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
-      <anchor>aeaa913eed21c280b7d78cd61e6535be2</anchor>
-      <arglist>(double poolingIntervall)</arglist>
+      <anchor>a1de18c52e83826aad0257dc21065356c</anchor>
+      <arglist>(WorkingMode workginMode)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPollingInterval</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a2253da99c89ffb1430f70aa8f3dad0b8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPollingInterval</name>
+      <anchorfile>classihotf_1_1_c_directory_monitor_params.html</anchorfile>
+      <anchor>a7f3b027068db18b4eff94b7241f5d8c8</anchor>
+      <arglist>(double pollingInterval)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -18933,6 +19046,20 @@
       <anchor>a38cce0210993ced774ca260a9882c66e</anchor>
       <arglist>(FileTimeStampMode, FTM_MODIFIED, FTM_CREATED)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>ae938e6df2ee98c74680a1bc25c7cd195</anchor>
+      <arglist>(WorkingMode, WM_AUTO, WM_MANUAL_POLLING)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetWorkingMode</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a775247174b63ac0dc7880059e59c8b90</anchor>
+      <arglist>(WorkingMode workginMode)=0</arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>ObserveItems</name>
@@ -19029,6 +19156,27 @@
       <name>FTM_CREATED</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
       <anchor>a87fa704f30a6395232c541fa5216c313a7ed24a94e9d10bf86f464cf3f208d556</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>WorkingMode</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>ae019174e4ba20d656847204ad1c88730</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_AUTO</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>ae019174e4ba20d656847204ad1c88730a0998cb36c700bc6c62227f23f33f19fe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>WM_MANUAL_POLLING</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>ae019174e4ba20d656847204ad1c88730a10fea6a9e4c7e329103d541523f45414</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -19260,18 +19408,25 @@
     <filename>classihotf_1_1_i_directory_monitor_params.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
-      <type>virtual double</type>
-      <name>GetPoolingIntervall</name>
+      <type>virtual WorkingMode</type>
+      <name>GetWorkingMode</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a3d9ef3d25883b96e28a5cdfca13532db</anchor>
+      <anchor>a6a525c8caf1326ee53925cf511eef833</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetPollingInterval</name>
+      <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
+      <anchor>a6c1f6481fe9f06de1376ac1fe9fa087c</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
-      <name>SetPoolingIntervall</name>
+      <name>SetPollingInterval</name>
       <anchorfile>classihotf_1_1_i_directory_monitor_params.html</anchorfile>
-      <anchor>a9a36c4a7bb84ffe0d6d084adc5377515</anchor>
-      <arglist>(double poolingIntervall)=0</arglist>
+      <anchor>ab17cc6591520604b973bc8ec47bf3896</anchor>
+      <arglist>(double pollingInterval)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -19483,20 +19638,6 @@
     <filename>classihotfgui_1_1_c_directory_monitor_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ihotf::IDirectoryMonitor</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>ProcessingFlags</name>
-      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>ad431d0093357ea405aed0f330752049a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>PF_MANUAL_FOLDER_OBSERVATION</name>
-      <anchorfile>classihotfgui_1_1_c_directory_monitor_comp.html</anchorfile>
-      <anchor>ad431d0093357ea405aed0f330752049aa5fb9b2333f8484f2de81a4aafda9e349</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -19630,9 +19771,9 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>on_PoolingIntervallSpin_valueChanged</name>
+      <name>on_PollingIntervalSpin_valueChanged</name>
       <anchorfile>classihotfgui_1_1_c_directory_monitor_params_gui.html</anchorfile>
-      <anchor>ac1a96248c548a7c53a4a1c725f8c5c57</anchor>
+      <anchor>a318d0cb5c34c7b9ba8914f1022491633</anchor>
       <arglist>(double value)</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -30388,9 +30529,9 @@
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
-      <name>GetFrameIntervall</name>
+      <name>GetFrameInterval</name>
       <anchorfile>classimm_1_1_i_video_info.html</anchorfile>
-      <anchor>a0042c9e46b917928773ff908100feccb</anchor>
+      <anchor>ac07e3a82e0582d3b8e3938ed12b08c95</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -35081,9 +35222,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetFrameIntervall</name>
+      <name>GetFrameInterval</name>
       <anchorfile>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</anchorfile>
-      <anchor>a3c32d956979c2da76bf53decddf7592d</anchor>
+      <anchor>ac52052d37e7cdf4fb69b541c210d4580</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -37498,6 +37639,7 @@
     <file>CBitmapSupplierMultiplexerComp.h</file>
     <file>CCalibratedCameraComp.h</file>
     <file>CCameraDelegatorComp.h</file>
+    <file>CCameraMultiplexerComp.h</file>
     <file>CCameraSnapSupplierCompBase.h</file>
     <file>CExposureParamsComp.h</file>
     <file>CMemoryAcquisitionComp.h</file>

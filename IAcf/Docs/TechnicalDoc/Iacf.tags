@@ -772,9 +772,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetFrameIntervall</name>
+      <name>GetFrameInterval</name>
       <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a98311e080fb4d94dc9b5ab10d09f7ff3</anchor>
+      <anchor>aede99503fd19420c6e8adf96395d3cbb</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1390,9 +1390,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetFrameIntervall</name>
+      <name>GetFrameInterval</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a74ae882672ee6121a3bdb201cc914049</anchor>
+      <anchor>a58c658a45e2fd2f54271ce4d66422021</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1555,9 +1555,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetFrameIntervall</name>
+      <name>GetFrameInterval</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a0d9c1cc3f6f85809795273f5403f464d</anchor>
+      <anchor>a7ca5b59a2326c351a8b3edf7a0a1d24d</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1734,9 +1734,9 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
-      <name>GetFrameIntervall</name>
+      <name>GetFrameInterval</name>
       <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>adecd685f3c6d293a45fb8e7c24c89bd0</anchor>
+      <anchor>ac4a0951a0455e14ac31651554dc3c7b9</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

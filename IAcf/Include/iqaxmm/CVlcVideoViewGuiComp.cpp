@@ -228,7 +228,7 @@ int CVlcVideoViewGuiComp::GetFramesCount() const
 }
 
 
-double CVlcVideoViewGuiComp::GetFrameIntervall() const
+double CVlcVideoViewGuiComp::GetFrameInterval() const
 {
 	return 1.0 / *m_framesPerSecondAttrPtr;
 }

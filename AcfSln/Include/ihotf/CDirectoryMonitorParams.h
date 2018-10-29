@@ -45,8 +45,10 @@ public:
 	CDirectoryMonitorParams();
 
 	// reimüplemented (ihotf::IDirectoryMonitorParams)
-	virtual double GetPoolingIntervall() const;
-	virtual void SetPoolingIntervall(double poolingIntervall);
+	virtual WorkingMode GetWorkingMode() const;
+	virtual void SetWorkingMode(WorkingMode workginMode);
+	virtual double GetPollingInterval() const;
+	virtual void SetPollingInterval(double pollingInterval);
 	virtual int GetMinLastModificationTimeDifference() const;
 	virtual void SetMinLastModificationTimeDifference(int minLastModificationTimeDifference);
 	virtual int GetObservedItemTypes() const;
@@ -66,7 +68,8 @@ public:
 	virtual bool Serialize(iser::IArchive& archive);
 
 private:
-	double m_poolingIntervall;
+	WorkingMode m_workingMode;
+	double m_pollingInterval;
 	int m_observedItemTypes;
 	int m_observedChanges;
 	int m_minLastModificationTimeDifference;
