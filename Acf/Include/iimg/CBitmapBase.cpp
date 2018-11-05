@@ -262,6 +262,9 @@ bool CBitmapBase::Serialize(iser::IArchive& archive)
 				return false;
 			}
 		}
+		else{
+			ResetImage();
+		}
 	}
 
 	retVal = retVal && archive.BeginTag(dataTag);
