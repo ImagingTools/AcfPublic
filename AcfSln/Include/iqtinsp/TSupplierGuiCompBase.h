@@ -455,7 +455,7 @@ void TSupplierGuiCompBase<UI>::UpdateVisualStatus()
 
 		case iinsp::ISupplier::WS_FAILED:
 			statusText = QObject::tr("Processing not possible");
-			statusIcon = QIcon(":/Icons/Error");
+			statusIcon = QIcon(":/Icons/StateCritical");
 			break;
 
 		default:

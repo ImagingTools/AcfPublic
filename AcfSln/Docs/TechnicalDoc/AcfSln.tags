@@ -2064,6 +2064,7 @@
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_morphological_processor_comp_8h</filename>
     <includes id="_c_image_region_processor_comp_base_8h" name="CImageRegionProcessorCompBase.h" local="no" imported="no">iipr/CImageRegionProcessorCompBase.h</includes>
+    <class kind="class">iipr::CMorphologicalProcessorAttr</class>
     <class kind="class">iipr::CMorphologicalProcessorComp</class>
     <namespace>iipr</namespace>
   </compound>
@@ -21094,6 +21095,7 @@
     <class kind="class">iipr::CImageRegionProcessorCompBase</class>
     <class kind="class">iipr::CLensCorrFindSupplierComp</class>
     <class kind="class">iipr::CLineProjectionProcessorComp</class>
+    <class kind="class">iipr::CMorphologicalProcessorAttr</class>
     <class kind="class">iipr::CMorphologicalProcessorComp</class>
     <class kind="class">iipr::CMultiBitmapCacheComp</class>
     <class kind="class">iipr::CMultiLineProjectionSupplierComp</class>
@@ -24885,9 +24887,21 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CMorphologicalProcessorAttr</name>
+    <filename>classiipr_1_1_c_morphological_processor_attr.html</filename>
+    <base>iipr::CImageRegionProcessorCompBase</base>
+    <member kind="typedef">
+      <type>CImageRegionProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_morphological_processor_attr.html</anchorfile>
+      <anchor>a8d4678a2a8a0b9b370e83dcfffd52a37</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CMorphologicalProcessorComp</name>
     <filename>classiipr_1_1_c_morphological_processor_comp.html</filename>
-    <base>iipr::CImageRegionProcessorCompBase</base>
+    <base>iipr::CMorphologicalProcessorAttr</base>
     <member kind="enumeration">
       <type></type>
       <name>ProcessingMode</name>
@@ -24994,10 +25008,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>CImageRegionProcessorCompBase</type>
+      <type>CMorphologicalProcessorAttr</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_morphological_processor_comp.html</anchorfile>
-      <anchor>a1b0ae65faf74008c2b943ad9d59b3789</anchor>
+      <anchor>aa1b020ff99647bf526836681a3798507</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -31804,6 +31818,13 @@
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
       <anchor>aca2baa38ae82c628f5570fe6caae274c</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a706b776264c100b91fb0d6a28b8a0a01</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
