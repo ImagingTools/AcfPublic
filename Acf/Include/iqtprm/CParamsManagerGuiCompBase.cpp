@@ -505,7 +505,10 @@ void CParamsManagerGuiCompBase::UpdateParamsView(int selectedIndex)
 		}
 	}
 
-	if (modelPtr != m_lastConnectedModelPtr){
+	bool reattachParams = 
+				(modelPtr != m_lastConnectedModelPtr) ||
+				(m_lastObserverPtr && !(m_lastObserverPtr->IsModelAttached(modelPtr)));
+	if (reattachParams){
 		EnsureParamsGuiDetached();
 
 		if (modelPtr != NULL){
@@ -522,7 +525,6 @@ void CParamsManagerGuiCompBase::UpdateParamsView(int selectedIndex)
 				}
 			}
 		}
-
 	}
 
 	RemoveButton->setEnabled(selectedIndex >= 0);

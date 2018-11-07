@@ -138,6 +138,14 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvMorphologicalProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_morphological_processor_comp_8h</filename>
+    <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
+    <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvResamplingProcessorComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_resampling_processor_comp_8h</filename>
@@ -926,6 +934,8 @@
     <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <class kind="class">iocv::COcvImage</class>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
+    <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
+    <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
     <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
@@ -1264,6 +1274,44 @@
       <anchorfile>classiocv_1_1_c_ocv_median_processor_comp.html</anchorfile>
       <anchor>aa6b3f5a4ce1c022c49bc2cc80512651d</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvMorphologicalProcessorAttr</name>
+    <filename>classiocv_1_1_c_ocv_morphological_processor_attr.html</filename>
+    <base>iipr::CImageRegionProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iipr::CImageRegionProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_morphological_processor_attr.html</anchorfile>
+      <anchor>a155862785455ed802607a42919b30817</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvMorphologicalProcessorComp</name>
+    <filename>classiocv_1_1_c_ocv_morphological_processor_comp.html</filename>
+    <base>iocv::COcvMorphologicalProcessorAttr</base>
+    <member kind="typedef">
+      <type>COcvMorphologicalProcessorAttr</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_morphological_processor_comp.html</anchorfile>
+      <anchor>af174775985a945b8e8123c4d08181fa0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImageRegion</name>
+      <anchorfile>classiocv_1_1_c_ocv_morphological_processor_comp.html</anchorfile>
+      <anchor>afe6795ef129cdc1100cde947d6aa3f43</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiocv_1_1_c_ocv_morphological_processor_comp.html</anchorfile>
+      <anchor>afc589a413b57cf6bf5acf1ed1dd24ea5</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2520,6 +2568,7 @@
     <file>COcvEdgeExtractorComp.h</file>
     <file>COcvImage.h</file>
     <file>COcvMedianProcessorComp.h</file>
+    <file>COcvMorphologicalProcessorComp.h</file>
     <file>COcvResamplingProcessorComp.h</file>
     <file>COcvVideoControllerComp.h</file>
     <file>iocv.h</file>

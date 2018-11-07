@@ -641,7 +641,7 @@ CMorphologicalProcessorComp::ProcessingMode  CMorphologicalProcessorComp::GetPro
 	}
 
 	if (mode < PM_FIRST || mode > PM_LAST){
-		mode = PM_EROSION;
+		mode = m_processingModeIndexMap.contains(0) ? m_processingModeIndexMap[0] : PM_FIRST;
 	}
 
 	return ProcessingMode(mode);
@@ -661,7 +661,7 @@ CMorphologicalProcessorComp::KernelType CMorphologicalProcessorComp::GetKernelTy
 	}
 
 	if (formType < KT_FIRST || formType > KT_LAST){
-		formType  = KT_FIRST;
+		formType  = m_filterFormIndexMap.contains(0) ? m_filterFormIndexMap[0] :  KT_FIRST;
 	}
 
 	return KernelType(formType);

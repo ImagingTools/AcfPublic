@@ -80,6 +80,11 @@ I_EXPORT_COMPONENT(
 			"OpenCV-based adaptive binaraization",
 			"Threshold Binarization Segmentation");
 
+I_EXPORT_COMPONENT(
+			OpenCvMorphologicalProcessor, 
+			"Morphological processor based on OpenCV",
+			"Morphology Filter");
+
 
 } // namespace OpenCvPck
 
