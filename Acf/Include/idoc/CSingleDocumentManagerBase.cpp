@@ -204,7 +204,8 @@ bool CSingleDocumentManagerBase::OpenDocument(
 			istd::IChangeable** documentPtr,
 			FileToTypeMap* loadedMapPtr,
 			bool beQuiet,
-			bool* ignoredPtr)
+			bool* ignoredPtr,
+			ibase::IProgressManager* progressManagerPtr)
 {
 	if (ignoredPtr != NULL){
 		*ignoredPtr = false;
@@ -227,7 +228,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 
 	if (!fileName.isEmpty()){
 		QByteArray documentTypeId;
-		if (OpenSingleDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr)){
+		if (OpenSingleDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr, progressManagerPtr)){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
 			}
@@ -250,7 +251,8 @@ bool CSingleDocumentManagerBase::SaveDocument(
 			bool requestFileName,
 			FileToTypeMap* savedMapPtr,
 			bool beQuiet,
-			bool* ignoredPtr)
+			bool* ignoredPtr,
+			ibase::IProgressManager* progressManagerPtr)
 {
 	if (ignoredPtr != NULL){
 		*ignoredPtr = false;
@@ -287,7 +289,7 @@ bool CSingleDocumentManagerBase::SaveDocument(
 		return false;
 	}
 
-	int saveState = loaderPtr->SaveToFile(*m_documentPtr, filePath);
+	int saveState = loaderPtr->SaveToFile(*m_documentPtr, filePath, progressManagerPtr);
 	if (saveState == ifile::IFilePersistence::OS_OK){
 		if ((m_filePath != filePath) || m_isDirty){
 			istd::CChangeNotifier notifier(this);
@@ -391,7 +393,8 @@ bool CSingleDocumentManagerBase::OpenSingleDocument(
 			const QByteArray& viewTypeId,
 			QByteArray& documentTypeId,
 			bool beQuiet,
-			bool* ignoredPtr)
+			bool* ignoredPtr,
+			ibase::IProgressManager* progressManagerPtr)
 {
 	if (ignoredPtr != NULL){
 		*ignoredPtr = false;
@@ -449,7 +452,7 @@ bool CSingleDocumentManagerBase::OpenSingleDocument(
 
 			ifile::IFilePersistence* loaderPtr = documentTemplatePtr->GetFileLoader(documentTypeId);
 			if (loaderPtr != NULL){
-				int loadState = loaderPtr->LoadFromFile(*m_documentPtr, filePath);
+				int loadState = loaderPtr->LoadFromFile(*m_documentPtr, filePath, progressManagerPtr);
 				if (loadState == ifile::IFilePersistence::OS_OK){
 					m_filePath = filePath;
 
@@ -608,7 +611,7 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 		retVal = retVal && archive.EndTag(viewTypeIdTag);
 
 		if (retVal && !filePath.isEmpty()){
-			OpenSingleDocument(filePath, true, viewTypeId, documentTypeId, true, NULL);
+			OpenSingleDocument(filePath, true, viewTypeId, documentTypeId, true, NULL, NULL);
 		}
 	}
 

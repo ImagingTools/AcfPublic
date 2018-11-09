@@ -37,6 +37,12 @@
 #include <idoc/IDocumentTypesInfo.h>
 
 
+namespace ibase
+{
+	class IProgressManager;
+}
+
+
 namespace idoc
 {
 
@@ -181,7 +187,8 @@ public:
 				istd::IChangeable** documentPtr = NULL,
 				FileToTypeMap* loadedMapPtr = NULL,
 				bool beQuiet = false,
-				bool* ignoredPtr = NULL) = 0;
+				bool* ignoredPtr = NULL,
+				ibase::IProgressManager* progressManagerPtr = NULL) = 0;
 
 	/**
 		Save document.
@@ -196,7 +203,8 @@ public:
 				bool requestFileName = false,
 				FileToTypeMap* savedMapPtr = NULL,
 				bool beQuiet = false,
-				bool* ignoredPtr = NULL) = 0;
+				bool* ignoredPtr = NULL,
+				ibase::IProgressManager* progressManagerPtr = NULL) = 0;
 
 	/**
 		Ask user (optional) and save all dirty (changed) documents.

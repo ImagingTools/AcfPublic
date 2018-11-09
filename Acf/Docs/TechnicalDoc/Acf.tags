@@ -2105,6 +2105,7 @@
     <includes id="_i_document_types_info_8h" name="IDocumentTypesInfo.h" local="no" imported="no">idoc/IDocumentTypesInfo.h</includes>
     <class kind="class">idoc::IDocumentManager</class>
     <class kind="struct">idoc::IDocumentManager::DocumentInfo</class>
+    <namespace>ibase</namespace>
     <namespace>idoc</namespace>
   </compound>
   <compound kind="file">
@@ -4618,10 +4619,12 @@
     <includes id="_i_application_8h" name="IApplication.h" local="no" imported="no">ibase/IApplication.h</includes>
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="no" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_c_delegated_progress_manager_8h" name="CDelegatedProgressManager.h" local="no" imported="no">ibase/CDelegatedProgressManager.h</includes>
     <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="no" imported="no">idoc/IUndoManager.h</includes>
     <includes id="_i_document_manager_8h" name="IDocumentManager.h" local="no" imported="no">idoc/IDocumentManager.h</includes>
     <includes id="_i_drop_consumer_8h" name="IDropConsumer.h" local="no" imported="no">iqtgui/IDropConsumer.h</includes>
     <includes id="_c_simple_main_window_gui_comp_8h" name="CSimpleMainWindowGuiComp.h" local="no" imported="no">iqtgui/CSimpleMainWindowGuiComp.h</includes>
+    <includes id="_c_gui_component_dialog_8h" name="CGuiComponentDialog.h" local="no" imported="no">iqtgui/CGuiComponentDialog.h</includes>
     <class kind="class">iqtdoc::CMainWindowGuiCompBase</class>
     <class kind="class">iqtdoc::CMainWindowGuiComp</class>
     <namespace>iqtdoc</namespace>
@@ -27784,15 +27787,15 @@
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>af00b72a50b8496a3fd65016ce57c2fb3</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+      <anchor>a1960aa2e87b2ae389efb370a6f82dba9</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>ac5a4445ba49c7d73bdd0399ae8ae37ab</anchor>
-      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+      <anchor>a946e8baff846ea0ec59ae0647ec0e407</anchor>
+      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -27910,8 +27913,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenSingleDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>adbff4d56f0f2c3e01ed8e22dbe17039e</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
+      <anchor>a66e515610cfccda2686f4dc30f1dc4aa</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr, ibase::IProgressManager *progressManagerPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -28859,15 +28862,15 @@
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>abbb1df12e3a0b756079aa9a20d45ee71</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+      <anchor>a0dcaa25e4ad3028bcd8affe565988f78</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>a1608b4568230e118a495787fcb31820e</anchor>
-      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+      <anchor>ad602fdeeb5bf5dd4d55346db76740a5c</anchor>
+      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -28894,8 +28897,8 @@
       <type>virtual bool</type>
       <name>OpenSingleDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
-      <anchor>aa4f03c5f3cb5be560e067b06cfc4f57d</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
+      <anchor>a5b1aef966c2c371273f0f89d6abe9a99</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr, ibase::IProgressManager *progressManagerPtr)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -29523,15 +29526,15 @@
       <type>virtual bool</type>
       <name>OpenDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a52cb7b7a949a15e282b60ff1be1fa7c0</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
+      <anchor>a64ccbaa508eaea979a2f1d9402df35d0</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL, const QString *fileNamePtr=NULL, bool createView=true, const QByteArray &amp;viewTypeId=&quot;&quot;, istd::IChangeable **documentPtr=NULL, FileToTypeMap *loadedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SaveDocument</name>
       <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
-      <anchor>a55293b6c42d7dfbbb3380f2094755bd1</anchor>
-      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)=0</arglist>
+      <anchor>a432ec56f067ca028492f53d2a6f33b34</anchor>
+      <arglist>(int documentIndex=-1, bool requestFileName=false, FileToTypeMap *savedMapPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL, ibase::IProgressManager *progressManagerPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -52302,13 +52305,6 @@
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
-      <name>OnOpenDocument</name>
-      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a5bdf243d1f2b70895d513140a9f6b205</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL)</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
       <name>OnQuit</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>a9bc132d90eb92bfd20e297fa35faef51</anchor>
@@ -52346,8 +52342,15 @@
       <type>virtual bool</type>
       <name>OpenFile</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aed908aac6493c723b66830d21498630f</anchor>
-      <arglist>(const QString &amp;fileName)</arglist>
+      <anchor>a1ccdfeba756fca0c7c2ae34f56535a6a</anchor>
+      <arglist>(const QString &amp;fileName, const QByteArray *documentTypeIdPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SaveActiveDocument</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>afb097ff630629ad2c1cd14cf2ac6c842</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -52459,6 +52462,13 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
       <anchor>aedfd809588364a895120243984adf2e4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>a845cfdf0201639524f85eef67b7c2226</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -52667,8 +52677,8 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenSingleDocument</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a2838b54f95150de5618e769e67beccac</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr)</arglist>
+      <anchor>a24a2819218fc5d2225dc42801bc3180a</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr, ibase::IProgressManager *progressManagerPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>

@@ -38,7 +38,6 @@
 #include <iprm/IOptionsList.h>
 #include <iprm/TParamsPtr.h>
 #include <iprm/CParamsSet.h>
-#include <iqtgui/CGuiComponentDialog.h>
 
 
 namespace iqtprm
