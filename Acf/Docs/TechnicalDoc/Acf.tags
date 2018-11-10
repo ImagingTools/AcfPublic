@@ -4683,6 +4683,20 @@
     <namespace>iqtdoc</namespace>
   </compound>
   <compound kind="file">
+    <name>CUndoManagerCommandsProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/iqtdoc/</path>
+    <filename>_c_undo_manager_commands_provider_comp_8h</filename>
+    <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
+    <includes id="_i_command_8h" name="ICommand.h" local="no" imported="no">ibase/ICommand.h</includes>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="no" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <includes id="_i_undo_manager_8h" name="IUndoManager.h" local="no" imported="no">idoc/IUndoManager.h</includes>
+    <includes id="_i_model_8h" name="IModel.h" local="no" imported="no">imod/IModel.h</includes>
+    <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtdoc::CUndoManagerCommandsProviderComp</class>
+    <namespace>iqtdoc</namespace>
+  </compound>
+  <compound kind="file">
     <name>iqtdoc.h</name>
     <path>C:/Temp/Acf/Include/iqtdoc/</path>
     <filename>iqtdoc_8h</filename>
@@ -51235,6 +51249,7 @@
     <class kind="class">iqtdoc::CSingleDocumentWorkspaceGuiComp</class>
     <class kind="class">iqtdoc::CSingletonDocApplicationComp</class>
     <class kind="class">iqtdoc::CStaticHelpFileProviderComp</class>
+    <class kind="class">iqtdoc::CUndoManagerCommandsProviderComp</class>
     <class kind="class">iqtdoc::TQtDocumentManagerWrap</class>
   </compound>
   <compound kind="class">
@@ -53187,6 +53202,55 @@
       <anchorfile>classiqtdoc_1_1_c_static_help_file_provider_comp.html</anchorfile>
       <anchor>af38ad32af9b6cadcef6c3f22ff0c6c9d</anchor>
       <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtdoc::CUndoManagerCommandsProviderComp</name>
+    <filename>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</anchorfile>
+      <anchor>a3cc06ed3d3cdbc028e54707255af42ff</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CUndoManagerCommandsProviderComp</name>
+      <anchorfile>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</anchorfile>
+      <anchor>a6d4f0ddda47799eac7eb9c67471dfa83</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</anchorfile>
+      <anchor>a601b6b5c48e3ad5b70e4bda34dd37dbe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</anchorfile>
+      <anchor>a22b4cda7857047e237b4b9dc3d85f4a2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</anchorfile>
+      <anchor>a10c58cadcb8c61889f5036f35b9e1549</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtdoc_1_1_c_undo_manager_commands_provider_comp.html</anchorfile>
+      <anchor>a8744e9c67bb6695d4cfca50af6a2823b</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -76002,6 +76066,7 @@
     <file>CSingleDocumentWorkspaceGuiComp.h</file>
     <file>CSingletonDocApplicationComp.h</file>
     <file>CStaticHelpFileProviderComp.h</file>
+    <file>CUndoManagerCommandsProviderComp.h</file>
     <file>iqtdoc.h</file>
     <file>TQtDocumentManagerWrap.h</file>
   </compound>

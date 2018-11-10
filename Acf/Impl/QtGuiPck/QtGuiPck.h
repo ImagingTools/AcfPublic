@@ -57,7 +57,6 @@
 #include <iqtgui/CCommandsMultiplexerComp.h>
 #include <iqtgui/CProcessStartCommandComp.h>
 
-
 // ParamGuiPck
 #include <iqtprm/CFileNameParamGuiComp.h>
 #include <iqtprm/CComposedParamsSetGuiComp.h>
@@ -91,6 +90,7 @@
 #include <iqtdoc/CExtendedDocumentTemplateComp.h>
 #include <iqtdoc/CStaticHelpFileProviderComp.h>
 #include <iqtdoc/CDoxygenHelpFileProviderComp.h>
+#include <iqtdoc/CUndoManagerCommandsProviderComp.h>
 
 // LogGuiPck
 #include <iloggui/CLogGuiComp.h>
@@ -165,6 +165,7 @@ typedef ibase::TModelObserverCompWrap<iqtdoc::CDocumentMetaInfoEditorComp> Docum
 typedef iqtdoc::CExtendedDocumentTemplateComp ExtendedDocumentTemplate;
 typedef iqtdoc::CStaticHelpFileProviderComp StaticHelpFileProvider;
 typedef iqtdoc::CDoxygenHelpFileProviderComp DoxygenHelpFileProvider;
+typedef iqtdoc::CUndoManagerCommandsProviderComp UndoManagerCommandsProvider;
 
 typedef iloggui::CLogGuiComp LogGui;
 typedef iloggui::CTextLogGuiComp TextLogGui;

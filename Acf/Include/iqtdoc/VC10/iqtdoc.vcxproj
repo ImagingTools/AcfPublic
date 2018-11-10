@@ -126,6 +126,7 @@
     <ClCompile Include="..\CSingleDocumentWorkspaceGuiComp.cpp" />
     <ClCompile Include="..\CSingletonDocApplicationComp.cpp" />
     <ClCompile Include="..\CStaticHelpFileProviderComp.cpp" />
+    <ClCompile Include="..\CUndoManagerCommandsProviderComp.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CDocumentImportExportCommandComp.h">
@@ -194,6 +195,16 @@
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CSingletonDocApplicationComp.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <ClInclude Include="..\CStaticHelpFileProviderComp.h" />
+    <CustomBuild Include="..\CUndoManagerCommandsProviderComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CUndoManagerCommandsProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iqtdoc/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CUndoManagerCommandsProviderComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CUndoManagerCommandsProviderComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CUndoManagerCommandsProviderComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CUndoManagerCommandsProviderComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CUndoManagerCommandsProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iqtdoc/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CUndoManagerCommandsProviderComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CUndoManagerCommandsProviderComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CUndoManagerCommandsProviderComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CUndoManagerCommandsProviderComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\TQtDocumentManagerWrap.h" />
     <ClInclude Include="..\iqtdoc.h" />
   </ItemGroup>
@@ -204,6 +215,7 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CMultiDocumentWorkspaceGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CSingleDocumentWorkspaceGuiComp.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CSingletonDocApplicationComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iqtdoc\moc_CUndoManagerCommandsProviderComp.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
