@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the ACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #ifndef istd_CVarIndex_included
 #define istd_CVarIndex_included
 
@@ -42,7 +20,8 @@ class CVarIndex
 {
 public:
 	typedef int IndexType;
-	typedef QVector<int>::iterator Iterator;
+	typedef QVector<int> Elements;
+	typedef Elements::iterator Iterator;
 
 	/**
 		Default constructor without member initialization.
@@ -60,10 +39,25 @@ public:
 	CVarIndex(const CVarIndex& index);
 
 	/**
+		Construct index from std::vector.
+	*/
+	CVarIndex(const std::vector<IndexType>& values);
+
+	/**
+		Construct index from QVector.
+	*/
+	CVarIndex(const Elements& values);
+
+	/**
 		Convert fixed-size index to this object.
 	*/
 	template <int Dimensions>
 	CVarIndex(const TIndex<Dimensions> index);
+
+	std::vector<int> ToStdVector() const
+	{
+		return m_elements.toStdVector();
+	}
 
 	/**
 		Check if tihs index is valid.
@@ -182,6 +176,11 @@ public:
 	int GetMinDimensionsCount() const;
 
 	/**
+		Get the index expanded by another index.
+	*/
+	istd::CVarIndex GetExpanded(const istd::CVarIndex& other) const;
+
+	/**
 		Get begin value of element access iterator.
 		Please refer to general description of ACF iterators, STL iterators or Qt iterators concept.
 	*/
@@ -215,7 +214,7 @@ public:
 	friend uint qHash(const CVarIndex& index, uint seed);
 
 private:
-	QVector<int> m_elements;
+	Elements m_elements;
 };
 
 
@@ -312,6 +311,16 @@ inline int CVarIndex::GetMinDimensionsCount() const
 	}
 
 	return 0;
+}
+
+
+inline istd::CVarIndex CVarIndex::GetExpanded(const istd::CVarIndex& other) const
+{
+	istd::CVarIndex retVal(*this);
+
+	retVal.m_elements += other.m_elements;
+
+	return retVal;
 }
 
 
