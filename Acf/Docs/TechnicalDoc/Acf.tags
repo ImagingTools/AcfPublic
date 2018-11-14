@@ -61723,10 +61723,17 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; int &gt;::iterator</type>
+      <type>QVector&lt; int &gt;</type>
+      <name>Elements</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>a38f77e2c277bac59c622d393d5f823c9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>Elements::iterator</type>
       <name>Iterator</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
-      <anchor>a214068ec741e23f9a31c672463a10c15</anchor>
+      <anchor>a72adde7f598e6052815bce2360a1a838</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -61754,8 +61761,29 @@
       <type></type>
       <name>CVarIndex</name>
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>a03dc972cd29a2bb2ce9756c5e5a2c474</anchor>
+      <arglist>(const std::vector&lt; IndexType &gt; &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVarIndex</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>a360d4965761c1eb0b4067d20a399b991</anchor>
+      <arglist>(const Elements &amp;values)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVarIndex</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
       <anchor>afcc8601a6d30282143467074e98b96f9</anchor>
       <arglist>(const TIndex&lt; Dimensions &gt; index)</arglist>
+    </member>
+    <member kind="function">
+      <type>std::vector&lt; int &gt;</type>
+      <name>ToStdVector</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>a0200c606e692272da2f93a35cf4ad4a4</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -61889,6 +61917,13 @@
       <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
       <anchor>af2605dafa7e5d1f1c015a8515c661500</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::CVarIndex</type>
+      <name>GetExpanded</name>
+      <anchorfile>classistd_1_1_c_var_index.html</anchorfile>
+      <anchor>a3ba4cc4ba69bdd8929f27a11ddf5f62a</anchor>
+      <arglist>(const istd::CVarIndex &amp;other) const </arglist>
     </member>
     <member kind="function">
       <type>Iterator</type>
