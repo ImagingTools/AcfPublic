@@ -33128,6 +33128,7 @@
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
     <base>TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumeration">
       <type></type>
       <name>DataRole</name>
@@ -33170,6 +33171,27 @@
       <anchor>ace6c8949f1f7aba1b6c8ea4ca09bdcd6ac669afbbf1368ea76bf7842755716cbf</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>CommandGroups</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a6b65ec1ced759c328c0fdc073bb8f5c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CG_TASK</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a6b65ec1ced759c328c0fdc073bb8f5c5ae12ecaa96c038952c98c81cbcde626dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CG_EDIT</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a6b65ec1ced759c328c0fdc073bb8f5c5a814e24ac4d61747da12a52f6405859ea</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>iqtgui::TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</type>
       <name>BaseClass</name>
@@ -33190,6 +33212,13 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a78984eb4157ca41fefa1a24af00cf62e</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a35991bce8410f82c4138739cf44e5fc1</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
