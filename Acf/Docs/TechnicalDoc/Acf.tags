@@ -15656,6 +15656,13 @@
       <arglist>(const QByteArray &amp;attributeId, iser::IObject *attributePtr, bool releaseFlag)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveAttribute</name>
+      <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
+      <anchor>a4f82796adc86e6117dee77d209ec0de7</anchor>
+      <arglist>(const QByteArray &amp;attributeId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual AttributeIds</type>
       <name>GetAttributeIds</name>
       <anchorfile>classiattr_1_1_c_attributes_manager.html</anchorfile>
@@ -15952,6 +15959,13 @@
       <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
       <anchor>a9cb73abe8d949c35416f997068980823</anchor>
       <arglist>(const QByteArray &amp;attributeId, iser::IObject *attributePtr, bool releaseFlag)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveAttribute</name>
+      <anchorfile>classiattr_1_1_i_attributes_manager.html</anchorfile>
+      <anchor>a968cc9d009bd42a5b6b6654e7d2d87b0</anchor>
+      <arglist>(const QByteArray &amp;attributeId)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual AttributeIds</type>
