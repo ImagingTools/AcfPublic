@@ -3148,6 +3148,7 @@
     <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
     <includes id="_t_result_shape_creator_wrap_8h" name="TResultShapeCreatorWrap.h" local="no" imported="no">iqtinsp/TResultShapeCreatorWrap.h</includes>
     <class kind="class">iqtinsp::CMessageBasedViewExtenderComp</class>
+    <class kind="struct">iqtinsp::CMessageBasedViewExtenderComp::Shape</class>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
@@ -33402,6 +33403,7 @@
     <base>TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</base>
     <base virtualness="virtual">iqt2d::IViewExtender</base>
     <base protection="private">imod::CMultiModelDispatcherBase</base>
+    <class kind="struct">iqtinsp::CMessageBasedViewExtenderComp::Shape</class>
     <member kind="typedef">
       <type>iqtinsp::TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</type>
       <name>BaseClass</name>
@@ -33458,6 +33460,34 @@
       <anchor>a83f4947f3bbe9e818e62d04d8a011287</anchor>
       <arglist>(const iview::IShapeFactory *shapeFactoryPtr, const istd::IChangeable *objectPtr, const istd::IInformationProvider *infoPtr, bool connectToModel=true) const</arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TSmartPtr&lt; iview::IShape &gt;</type>
+      <name>ShapePtr</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>aebbebf8225fbef4294d9a4fef4a48fcf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QList&lt; Shape &gt;</type>
+      <name>ShapeList</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a677379b7cf5921d3fb50b9a3f9f856a6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; iqt2d::IViewProvider *, ShapeList &gt;</type>
+      <name>ShapesMap</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>ac9f7dfc4926688f5e6b38aa7417fee8e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QMap&lt; iqt2d::IViewProvider *, ilog::IMessageContainer::Messages &gt;</type>
+      <name>MessagesMap</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a385ad105b36d01098e62a52a2619bfd5</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMessageAccepted</name>
@@ -33471,6 +33501,38 @@
       <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
       <anchor>a0d86163564a5e9b4935576caa890591a</anchor>
       <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ShapesMap</type>
+      <name>m_shapes</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>ad026a299bdd6205e44d51c1e348c5108</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>MessagesMap</type>
+      <name>m_shapeMessages</name>
+      <anchorfile>classiqtinsp_1_1_c_message_based_view_extender_comp.html</anchorfile>
+      <anchor>a2282cd4a9560b424d6cceb4ed8eddb91</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iqtinsp::CMessageBasedViewExtenderComp::Shape</name>
+    <filename>structiqtinsp_1_1_c_message_based_view_extender_comp_1_1_shape.html</filename>
+    <member kind="variable">
+      <type>ShapePtr</type>
+      <name>shapePtr</name>
+      <anchorfile>structiqtinsp_1_1_c_message_based_view_extender_comp_1_1_shape.html</anchorfile>
+      <anchor>a79907f8b4a60dfb1cf9ba5a3f5148458</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>messageIndex</name>
+      <anchorfile>structiqtinsp_1_1_c_message_based_view_extender_comp_1_1_shape.html</anchorfile>
+      <anchor>adcc98389fb2a3bba56885564b5d1ebc3</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
