@@ -408,7 +408,7 @@ void CComposedParamsSetGuiComp::OnGuiModelAttached()
 				if (addSpacer){
 					QLayout* panelLayoutPtr = panelPtr->layout();
 					if (panelLayoutPtr != NULL){
-						QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
+						QSpacerItem* spacerPtr = new QSpacerItem(0, 0, QSizePolicy::Maximum, QSizePolicy::Maximum);
 						panelLayoutPtr->addItem(spacerPtr);
 					}
 				}

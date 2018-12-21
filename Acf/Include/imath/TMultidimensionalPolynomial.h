@@ -127,6 +127,10 @@ bool TMultidimensionalPolynomial<Dimensions, Element>::ApproximateCoefficientsFr
 			const ResultType* destValues,
 			int count)
 {
+	if (count < coeffGridSize.GetProductVolume()){
+		return false;
+	}
+
 	m_coefficients.SetSizes(coeffGridSize);
 
 	if (coeffGridSize.IsSizeEmpty()){
@@ -135,8 +139,6 @@ bool TMultidimensionalPolynomial<Dimensions, Element>::ApproximateCoefficientsFr
 
 	imath::CVarMatrix valueMatrix(istd::CIndex2d(coeffGridSize.GetProductVolume(), count));
 	imath::CVarMatrix destValueVector(istd::CIndex2d(1, count));
-
-	typedef imath::TMultidimensionalPolynomial<2, double> Polynomial;
 
 	for (int matrixRow = 0; matrixRow < count; ++matrixRow){
 		const ArgumentType& argument = arguments[matrixRow];
@@ -153,9 +155,7 @@ bool TMultidimensionalPolynomial<Dimensions, Element>::ApproximateCoefficientsFr
 		destValueVector.SetAt(istd::CIndex2d(0, matrixRow), measValue);
 	}
 
-	imath::CVarMatrix resultMatrix = imath::CVarMatrix(istd::CIndex2d(coeffGridSize.GetProductVolume(), 1));
-	resultMatrix.Clear();
-
+	imath::CVarMatrix resultMatrix;
 	if (!valueMatrix.GetSolvedLSP(destValueVector, resultMatrix)){
 		return false;
 	}
