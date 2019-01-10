@@ -3,11 +3,11 @@
 
 	<!--
 		There are many Products and many Platforms,
-		so BUILD_WIN_QT_PATH and BuildTool_MSBuild_DefaultVersion have to be defined
+		so QT_LOCAL_INSTALLATION_WIN_PATH and BuildTool_MSBuild_DefaultVersion have to be defined
 		in ...\ExtraBuildSettings\BuildConfigurationSettings
 		for example:
 			BuildTool_MSBuild_DefaultVersion = 2017
-			BUILD_WIN_QT_PATH = C:\Qt\5.12.0
+			QT_LOCAL_INSTALLATION_WIN_PATH = C:\Qt\5.12.0
 		then QTDIR variable will be:
 			x86: C:\Qt\5.12.0\msvc2017
 			x64: C:\Qt\5.12.0\msvc2017_64
@@ -22,9 +22,6 @@
 	</Targets>
 
 	<Dependencies>
-		<Dependency>
-			<Module Name="QtLibraries"/>
-		</Dependency>
 		<Dependency IfTarget="AcfSln">
 			<Module Name="AcfPublic" Target="Acf"/>
 		</Dependency>
@@ -47,13 +44,13 @@
 				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" ShadowBuildFolder="$BUILD_MODULE_TEMP_FOLDER/Acf/Build/QMake/"/>
 				<Build IfArchitecture="x86">
 					<NMake Makefile="Acf/Build/QMake/Makefile" WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
-						<EnvironmentVariable Name="QTDIR" Value="$(BUILD_WIN_QT_PATH)\msvc$(BuildTool_MSBuild_DefaultVersion)" IsReplaceValueWithBuildConfigSettings="True"/>
+						<EnvironmentVariable Name="QTDIR" Value="$QT_LOCAL_INSTALLATION_WIN_PATH\msvc$(BuildTool_MSBuild_DefaultVersion)" IsReplaceValueWithBuildConfigSettings="True"/>
 						<EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
 					</NMake>
 				</Build>
 				<Build IfArchitecture="x64">
 					<NMake Makefile="Acf/Build/QMake/Makefile" WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
-						<EnvironmentVariable Name="QTDIR" Value="$(BUILD_WIN_QT_PATH)\msvc$(BuildTool_MSBuild_DefaultVersion)_64" IsReplaceValueWithBuildConfigSettings="True"/>
+						<EnvironmentVariable Name="QTDIR" Value="$QT_LOCAL_INSTALLATION_WIN_PATH\msvc$(BuildTool_MSBuild_DefaultVersion)_64" IsReplaceValueWithBuildConfigSettings="True"/>
 						<EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
 					</NMake>
 				</Build>
@@ -76,14 +73,14 @@
 				<QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" ShadowBuildFolder="$BUILD_MODULE_TEMP_FOLDER/AcfSln/Build/QMake/"/>
 				<Build IfArchitecture="x86">
 					<NMake Makefile="AcfSln/Build/QMake/Makefile" WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
-						<EnvironmentVariable Name="QTDIR" Value="$(BUILD_WIN_QT_PATH)\msvc$(BuildTool_MSBuild_DefaultVersion)" IsReplaceValueWithBuildConfigSettings="True"/>
+						<EnvironmentVariable Name="QTDIR" Value="$QT_LOCAL_INSTALLATION_WIN_PATH\msvc$(BuildTool_MSBuild_DefaultVersion)" IsReplaceValueWithBuildConfigSettings="True"/>
 						<EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
 						<EnvironmentVariable Name="ACFSLNDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/AcfSln"/>
 					</NMake>/>
 				</Build>
 				<Build IfArchitecture="x64">
 					<NMake Makefile="AcfSln/Build/QMake/Makefile"  WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
-						<EnvironmentVariable Name="QTDIR" Value="$(BUILD_WIN_QT_PATH)\msvc$(BuildTool_MSBuild_DefaultVersion)_64" IsReplaceValueWithBuildConfigSettings="True"/>
+						<EnvironmentVariable Name="QTDIR" Value="$QT_LOCAL_INSTALLATION_WIN_PATH\msvc$(BuildTool_MSBuild_DefaultVersion)_64" IsReplaceValueWithBuildConfigSettings="True"/>
 						<EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
 						<EnvironmentVariable Name="ACFSLNDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/AcfSln"/>
 					</NMake>/>
