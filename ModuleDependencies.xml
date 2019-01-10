@@ -43,7 +43,7 @@
 				<QMakeToMakefile Project="Acf/Build/QMake/AcfAll.pro" ShadowBuildFolder="$BUILD_MODULE_TEMP_FOLDER/Acf/Build/QMake/"/>
 				<Build>
 					<NMake Makefile="Acf/Build/QMake/Makefile" WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
-						<EnvironmentVariable Name="QTDIR" Value="$BUILD_WIN_QT_PATH"/>
+						<EnvironmentVariable Name="QTDIR" Value="$(BUILD_WIN_QT_PATH)" IsReplaceValueWithBuildConfigSettings="True"/>
 						<EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
 					</NMake>
 				</Build>
@@ -66,7 +66,7 @@
 				<QMakeToMakefile Project="AcfSln/Build/QMake/AcfSlnAll.pro" ShadowBuildFolder="$BUILD_MODULE_TEMP_FOLDER/AcfSln/Build/QMake/"/>
 				<Build>
 					<NMake Makefile="AcfSln/Build/QMake/Makefile"  WorkingDirectory="$BUILD_MODULE_TEMP_FOLDER/">
-						<EnvironmentVariable Name="QTDIR" Value="$BUILD_WIN_QT_PATH"/>
+						<EnvironmentVariable Name="QTDIR" Value="$(BUILD_WIN_QT_PATH)" IsReplaceValueWithBuildConfigSettings="True"/>
 						<EnvironmentVariable Name="ACFDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/Acf"/>
 						<EnvironmentVariable Name="ACFSLNDIR_BUILD" Value="$BUILD_MODULE_TEMP_FOLDER/AcfSln"/>
 					</NMake>/>
