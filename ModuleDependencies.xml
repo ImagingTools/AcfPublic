@@ -19,7 +19,7 @@
 
 	<Dependencies>
 		<Dependency>
-			<Module Name="QtLibraries"/>
+			<!--Module Name="QtLibraries"/-->
 		</Dependency>
 		<Dependency IfTarget="AcfSln">
 			<Module Name="AcfPublic" Target="Acf"/>
