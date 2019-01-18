@@ -17137,8 +17137,8 @@
       <type>virtual bool</type>
       <name>SerializeItem</name>
       <anchorfile>classiedge_1_1_c_edge_line_container.html</anchorfile>
-      <anchor>a30993da2c79f5d6ac579572b96c19f54</anchor>
-      <arglist>(CEdgeLine &amp;item, iser::IArchive &amp;archive)</arglist>
+      <anchor>ae66f8250f36fe1bb280e402231095844</anchor>
+      <arglist>(CEdgeLine &amp;item, iser::IArchive &amp;archive, iser::CArchiveTag *parentTagPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20576,6 +20576,13 @@
       <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
       <anchor>a64425f71d60d22b20096a538161e6ae6</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</anchorfile>
+      <anchor>a7e80582d81a2585a7a7c5ee256eb7f44</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">

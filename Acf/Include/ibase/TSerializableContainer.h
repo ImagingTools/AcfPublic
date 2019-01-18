@@ -54,7 +54,7 @@ protected:
 	/**
 		Serialize a single item in the container.
 	*/
-	virtual bool SerializeItem(ItemClass& item, iser::IArchive& archive) = 0;
+	virtual bool SerializeItem(ItemClass& item, iser::IArchive& archive, iser::CArchiveTag* parentTagPtr = NULL) = 0;
 };
 
 

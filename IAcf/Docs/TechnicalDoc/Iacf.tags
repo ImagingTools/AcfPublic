@@ -1251,6 +1251,13 @@
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
+      <name>ConvertFromBitmap</name>
+      <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
+      <anchor>a7c0ba55251f25aee81bf3b74be10095f</anchor>
+      <arglist>(const iimg::IBitmap &amp;bitmap, cv::Mat &amp;outputImage)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
       <name>ConvertToBitmap</name>
       <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
       <anchor>ad6c2d977e345f6ca8429abcbae26fc01</anchor>

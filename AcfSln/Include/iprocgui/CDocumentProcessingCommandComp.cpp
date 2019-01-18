@@ -48,7 +48,7 @@ void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeabl
 
 	istd::CChangeNotifier changePtr(m_outputDataCompPtr.GetPtr());
 
-    istd::CGeneralTimeStamp timer;
+	istd::CGeneralTimeStamp timer;
 
 	int retVal = m_processorCompPtr->DoProcessing(
 				m_paramsSetCompPtr.GetPtr(),
@@ -62,9 +62,9 @@ void CDocumentProcessingCommandComp::DoDocumentProcessing(const istd::IChangeabl
 		return;
 	}
 
-    double processingTime = timer.GetElapsed();
+	double processingTime = timer.GetElapsed();
 
-    SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(processingTime * 1000, 2, 'f', 2), "Document processing manager");
+	SendInfoMessage(0, QObject::tr("Processing time: %1 ms").arg(processingTime * 1000, 2, 'f', 2), "Document processing manager");
 
 	changePtr.Reset();
 

@@ -51,6 +51,8 @@ CParamsManagerGuiCompBase::CParamsManagerGuiCompBase()
 				iprm::IParamsManager::CF_SET_NAME_CHANGED,
 				CF_INIT_EDITOR);
 	SetObservedIds(changeMask);
+
+	QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
 }
 
 
@@ -680,7 +682,6 @@ void CParamsManagerGuiCompBase::OnGuiModelAttached()
 				}
 
 				AddButton->setMenu(&m_startVariableMenus);
-				QObject::connect(&m_startVariableMenus, SIGNAL(triggered(QAction*)), this, SLOT(OnAddMenuOptionClicked(QAction*)));
 			}
 		}
 	}

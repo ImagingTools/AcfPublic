@@ -175,11 +175,16 @@ IParamsSet* CParamsManagerCompBase::GetParamsSet(int index) const
 		return m_fixedParamSetsCompPtr[index];
 	}
 
-	if (m_elementIndexParamIdAttrPtr.IsValid() || m_elementNameParamIdAttrPtr.IsValid() || m_elementDescriptionParamIdAttrPtr.IsValid()){
-		return const_cast<ParamSet*>(m_paramSets[index - fixedSetsCount].GetPtr());
+	if (
+		m_elementIndexParamIdAttrPtr.IsValid() ||
+		m_elementUuidParamIdAttrPtr.IsValid() ||
+		m_elementNameParamIdAttrPtr.IsValid() ||
+		m_elementDescriptionParamIdAttrPtr.IsValid()
+	){
+		return m_paramSets[index - fixedSetsCount].GetPtr();
 	}
 	else{
-		return const_cast<IParamsSet*>(m_paramSets[index - fixedSetsCount]->paramSetPtr.GetPtr());
+		return m_paramSets[index - fixedSetsCount]->paramSetPtr.GetPtr();
 	}
 }
 
@@ -544,7 +549,8 @@ void CParamsManagerCompBase::OnComponentCreated()
 CParamsManagerCompBase::ParamSet::ParamSet()
 :	isEnabled(true),
 	parentPtr(NULL),
-	updateBridge(this)
+	updateBridge(this),
+	uuidParam(*this)
 {
 }
 
@@ -560,6 +566,10 @@ IParamsSet::Ids CParamsManagerCompBase::ParamSet::GetParamIds(bool editableOnly)
 	if (!editableOnly){
 		if ((parentPtr != NULL) && parentPtr->m_elementIndexParamIdAttrPtr.IsValid()){
 			ids += *(parentPtr->m_elementIndexParamIdAttrPtr);
+		}
+
+		if ((parentPtr != NULL) && parentPtr->m_elementUuidParamIdAttrPtr.IsValid()){
+			ids += *(parentPtr->m_elementUuidParamIdAttrPtr);
 		}
 
 		if ((parentPtr != NULL) && parentPtr->m_elementNameParamIdAttrPtr.IsValid()){
@@ -581,6 +591,10 @@ const iser::ISerializable* CParamsManagerCompBase::ParamSet::GetParameter(const 
 
 	if ((parentPtr != NULL) && parentPtr->m_elementIndexParamIdAttrPtr.IsValid() && (id == *(parentPtr->m_elementIndexParamIdAttrPtr))){
 		return this;
+	}
+
+	if ((parentPtr != NULL) && parentPtr->m_elementUuidParamIdAttrPtr.IsValid() && (id == *(parentPtr->m_elementUuidParamIdAttrPtr))){
+		return &uuidParam;
 	}
 
 	if ((parentPtr != NULL) && parentPtr->m_elementNameParamIdAttrPtr.IsValid() && (id == *(parentPtr->m_elementNameParamIdAttrPtr))){
@@ -658,7 +672,6 @@ bool CParamsManagerCompBase::ParamSet::IsNameFixed() const
 {
 	return true;
 }
-
 
 // reimplemented (iser::IObject)
 

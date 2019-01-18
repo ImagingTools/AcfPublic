@@ -3819,6 +3819,7 @@
     <class kind="class">iprm::CParamsManagerCompBaseAttr</class>
     <class kind="class">iprm::CParamsManagerCompBase</class>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
+    <class kind="class">iprm::CParamsManagerCompBase::ParamSet::UuidParam</class>
     <class kind="class">iprm::CParamsManagerCompBase::SelectedParams</class>
     <namespace>iprm</namespace>
   </compound>
@@ -19171,8 +19172,8 @@
       <type>virtual bool</type>
       <name>SerializeItem</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>af4fc0747949fd4452aad4bfeb3288d0f</anchor>
-      <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive)</arglist>
+      <anchor>a48ff506f5897a40dd1955590bcf3dec2</anchor>
+      <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive, iser::CArchiveTag *parentTagPtr=NULL)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TIFactory&lt; InterfaceClass &gt; *</type>
@@ -19522,8 +19523,8 @@
       <type>virtual bool</type>
       <name>SerializeItem</name>
       <anchorfile>classibase_1_1_t_serializable_container.html</anchorfile>
-      <anchor>a1b6c981daac279a481a6f0855ae7ba25</anchor>
-      <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive)=0</arglist>
+      <anchor>a44b09bbba94fa5a33d4c9dcfb439eac3</anchor>
+      <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive, iser::CArchiveTag *parentTagPtr=NULL)=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44863,13 +44864,6 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a52ddd155230d8509ab8dd4a2b11e0f92</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetOptionOperationFlags</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
@@ -44917,6 +44911,20 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>a42fe4fbbb887c65ea01fc9556dde1ebc</anchor>
       <arglist>(int optionIndex, const QString &amp;optionDescription)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a52ddd155230d8509ab8dd4a2b11e0f92</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>aaf799714f43b24b38144e8b28ec22a29</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -45058,6 +45066,7 @@
     <base virtualness="virtual">iprm::IParamsSet</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <base virtualness="virtual">iprm::INameParam</base>
+    <class kind="class">iprm::CParamsManagerCompBase::ParamSet::UuidParam</class>
     <member kind="function">
       <type></type>
       <name>ParamSet</name>
@@ -45192,11 +45201,58 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>UuidParam</type>
+      <name>uuidParam</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
+      <anchor>aedf1aad147ded3ae3f18bf286378f241</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>imod::CModelUpdateBridge</type>
       <name>updateBridge</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
       <anchor>adcdc28d3b5c4c086f3420680c1d3b47b</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CParamsManagerCompBase::ParamSet::UuidParam</name>
+    <filename>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</filename>
+    <base virtualness="virtual">iprm::INameParam</base>
+    <member kind="function">
+      <type></type>
+      <name>UuidParam</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
+      <anchor>aacf6aa07d8981745ee657377f935067e</anchor>
+      <arglist>(const ParamSet &amp;parent)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
+      <anchor>a0bba74cf32c064e2d6ac56352d9c23c7</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
+      <anchor>aff08f94a6824c0629d9f05964745f958</anchor>
+      <arglist>(const QString &amp;)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
+      <anchor>a72163f2c7e0988392e0f8063df73e07e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
+      <anchor>aff27a91f325671de899d62035eacfa69</anchor>
+      <arglist>(iser::IArchive &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -71216,6 +71272,13 @@
       <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
       <anchor>a2f5ee8ce32c72e587869b8c1452d10e5</anchor>
       <arglist>(QPainter &amp;drawContext, const QPen &amp;rightPen, const QBrush &amp;rightBrush, const QPen &amp;leftPen, const QBrush &amp;leftBrush, const i2d::CLine2d &amp;segmentLine, double scale)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static void</type>
+      <name>DrawOrientationMarker</name>
+      <anchorfile>classiview_1_1_c_polyline_shape.html</anchorfile>
+      <anchor>ac9674e2bcd024f41ef63aff4135824bf</anchor>
+      <arglist>(QPainter &amp;drawContext, const i2d::CVector2d &amp;point, const i2d::CVector2d &amp;direction, double maxWidth, const iview::IColorSchema &amp;colorSchema)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
