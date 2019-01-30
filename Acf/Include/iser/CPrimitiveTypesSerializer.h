@@ -174,7 +174,7 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 		if (!archive.IsStoring()){
 			// TODO: check if the readed value is in range of the enum values!
 			enumValue = EnumType(value);
-		}		
+		}
 	}
 
 	return retVal;
@@ -247,7 +247,7 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 		if (!archive.IsStoring()){
 			// TODO: check if the readed value is in range of the enum values!
 			enumValue = EnumType(value);
-		}		
+		}
 	}
 
 	return retVal;
