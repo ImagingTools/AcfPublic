@@ -25,7 +25,6 @@
 
 
 // ACF includes
-#include <iimg/IBitmap.h>
 #include <iimg/IMultiBitmapProvider.h>
 
 
