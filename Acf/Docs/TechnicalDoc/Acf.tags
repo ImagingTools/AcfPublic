@@ -60301,6 +60301,13 @@
   <compound kind="class">
     <name>iser::CPrimitiveTypesSerializer</name>
     <filename>classiser_1_1_c_primitive_types_serializer.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>SerializeContainer</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a04a4bcc8c39061ec1c3a5aef4d7b5716</anchor>
+      <arglist>(iser::IArchive &amp;archive, ContainerType &amp;container, const QByteArray &amp;containerTagName, const QByteArray &amp;elementTagName)</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>SerializeRange</name>
@@ -60363,6 +60370,13 @@
       <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
       <anchor>a1fa97e9a5a69450c1786566d3efeaadc</anchor>
       <arglist>(iser::IArchive &amp;archive, QStringList &amp;stringList, const QByteArray &amp;containerTagName=&quot;Elements&quot;, const QByteArray &amp;elementTagName=&quot;Element&quot;)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeContainer</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a4725b2c4272f41ea13a1d78418047f1c</anchor>
+      <arglist>(iser::IArchive &amp;archive, ContainterType &amp;container, const QByteArray &amp;containerTagName, const QByteArray &amp;elementTagName)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
