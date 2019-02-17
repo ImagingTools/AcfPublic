@@ -69,8 +69,8 @@ protected Q_SLOTS:
 private:
 	enum ListColumn
 	{
-        LC_NAME_COLUMN,
-        LC_GROUP
+		LC_NAME_COLUMN,
+		LC_GROUP
 	};
 
 	class CUserManagerItemDelegate: public QItemDelegate

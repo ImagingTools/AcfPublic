@@ -5564,6 +5564,7 @@
     <includes id="_t_ranges_8h" name="TRanges.h" local="no" imported="no">istd/TRanges.h</includes>
     <includes id="_t_index_8h" name="TIndex.h" local="no" imported="no">istd/TIndex.h</includes>
     <includes id="_i_archive_8h" name="IArchive.h" local="no" imported="no">iser/IArchive.h</includes>
+    <includes id="_c_archive_tag_8h" name="CArchiveTag.h" local="no" imported="no">iser/CArchiveTag.h</includes>
     <class kind="class">iser::CPrimitiveTypesSerializer</class>
     <namespace>iser</namespace>
     <member kind="define">
@@ -44468,6 +44469,13 @@
       <arglist>(int index, const QString &amp;description)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetParamsSetEnabled</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>af76fbe272e5689849a51facf49a8472c</anchor>
+      <arglist>(int index, bool enable)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
       <name>GetSelectionConstraints</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
@@ -44661,6 +44669,13 @@
       <name>m_updateBridge</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
       <anchor>aa9050fd0460e27ae96e024c4dcbe3266</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QMap&lt; int, bool &gt;</type>
+      <name>m_isFixedParamsSetEnable</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>aebe33b6a23755d6515ec36e3c35688d0</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -45155,6 +45170,13 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
       <anchor>a2fe68873772d7f948b337642e8ee7b0d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
+      <anchor>aa5476a53a6b6840e36710ffb4af06059</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="variable">
       <type>istd::TDelPtr&lt; IParamsSet &gt;</type>
@@ -45796,6 +45818,13 @@
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>ac2a35d4d7ba334ccf1935cd1924f6756</anchor>
       <arglist>(int index, const QString &amp;description)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetParamsSetEnabled</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>a7d95ebacef112a53f6f35cc83c0a355f</anchor>
+      <arglist>(int index, bool enable)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

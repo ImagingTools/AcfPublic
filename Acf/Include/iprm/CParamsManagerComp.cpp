@@ -321,7 +321,7 @@ bool CParamsManagerComp::CopyFrom(const istd::IChangeable& object, istd::IChange
 	
 	if (selectedIndex > paramsCount){
 		if (m_defaultSelectedIndexAttrPtr.IsValid()){
-				selectedIndex = *m_defaultSelectedIndexAttrPtr;
+			selectedIndex = *m_defaultSelectedIndexAttrPtr;
 		}
 		else{
 			selectedIndex = -1;
