@@ -2885,6 +2885,7 @@
     <path>C:/Temp/Acf/Include/iimg/</path>
     <filename>_i_multi_page_bitmap_controller_8h</filename>
     <includes id="_i_multi_bitmap_provider_8h" name="IMultiBitmapProvider.h" local="no" imported="no">iimg/IMultiBitmapProvider.h</includes>
+    <includes id="_i_document_meta_info_8h" name="IDocumentMetaInfo.h" local="no" imported="no">idoc/IDocumentMetaInfo.h</includes>
     <class kind="class">iimg::IMultiPageBitmapController</class>
     <namespace>iimg</namespace>
   </compound>
@@ -35803,15 +35804,15 @@
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
-      <anchor>ad16c65bd2cd1aab00f705f5936448caa</anchor>
-      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size)</arglist>
+      <anchor>aa9dbf89e602668def703f3fb3d5f95bc</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, const idoc::IDocumentMetaInfo *metaInfoPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
       <anchorfile>classiimg_1_1_c_multi_page_bitmap_base.html</anchorfile>
-      <anchor>a89238340ec3b7de47c2f57b8d2e44042</anchor>
-      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)</arglist>
+      <anchor>aac5fea6167cb2d496fa48e5631ccad59</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, const idoc::IDocumentMetaInfo *metaInfoPtr=NULL)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -36643,15 +36644,15 @@
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
       <anchorfile>classiimg_1_1_i_multi_page_bitmap_controller.html</anchorfile>
-      <anchor>a70492ad8e6ee3d010d9147f5644a7b27</anchor>
-      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size)=0</arglist>
+      <anchor>a6459da8c112e1d86f2ff2fde321b8b23</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, const idoc::IDocumentMetaInfo *metaInfoPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual iimg::IBitmap *</type>
       <name>InsertBitmap</name>
       <anchorfile>classiimg_1_1_i_multi_page_bitmap_controller.html</anchorfile>
-      <anchor>af06b82749d488a84d41f8d3cf4ac203e</anchor>
-      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0)=0</arglist>
+      <anchor>a0def29b665633fbe106aa2249da7a413</anchor>
+      <arglist>(iimg::IBitmap::PixelFormat pixelFormat, const istd::CIndex2d &amp;size, void *dataPtr, bool releaseFlag, int linesDifference=0, const idoc::IDocumentMetaInfo *metaInfoPtr=NULL)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>

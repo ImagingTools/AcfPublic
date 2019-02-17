@@ -33,8 +33,8 @@
 #include <idoc/IMultiPageDocumentProvider.h>
 
 // ACF-Solutions includes
+#include <iproc/IProcessor.h>
 #include <iinsp/TSupplierCompWrap.h>
-#include <icam/IBitmapAcquisition.h>
 #include <imeas/INumericConstraints.h>
 #include <imeas/CSimpleNumericValue.h>
 
@@ -76,7 +76,7 @@ protected:
 
 private:
 	I_FACT(iimg::IMultiBitmapProvider, m_bitmapCompFact);
-	I_REF(IBitmapAcquisition, m_bitmapAcquisitionCompPtr);
+	I_REF(iproc::IProcessor, m_bitmapAcquisitionCompPtr);
 };
 
 

@@ -483,8 +483,8 @@
     <name>CSnapMultiPageBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_snap_multi_page_bitmap_supplier_comp_8h</filename>
+    <includes id="_i_processor_8h" name="IProcessor.h" local="no" imported="no">iproc/IProcessor.h</includes>
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
-    <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="no" imported="no">icam/IBitmapAcquisition.h</includes>
     <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
     <includes id="_c_simple_numeric_value_8h" name="CSimpleNumericValue.h" local="no" imported="no">imeas/CSimpleNumericValue.h</includes>
     <class kind="class">icam::CSnapMultiPageBitmapSupplierComp</class>
@@ -3166,6 +3166,17 @@
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
+    <name>TCommonSupplierGuiCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
+    <filename>_t_common_supplier_gui_comp_base_8h</filename>
+    <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
+    <includes id="iqtinsp_8h" name="iqtinsp.h" local="no" imported="no">iqtinsp/iqtinsp.h</includes>
+    <class kind="class">iqtinsp::TCommonSupplierGuiCompBase</class>
+    <class kind="class">iqtinsp::TCommonSupplierGuiCompBase::ParamsObserver</class>
+    <class kind="class">iqtinsp::TCommonSupplierGuiCompBase::StatusObserver</class>
+    <namespace>iqtinsp</namespace>
+  </compound>
+  <compound kind="file">
     <name>TResultShapeCreatorWrap.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_t_result_shape_creator_wrap_8h</filename>
@@ -3176,11 +3187,8 @@
     <name>TSupplierGuiCompBase.h</name>
     <path>C:/Temp/AcfSln/Include/iqtinsp/</path>
     <filename>_t_supplier_gui_comp_base_8h</filename>
-    <includes id="_i_supplier_8h" name="ISupplier.h" local="no" imported="no">iinsp/ISupplier.h</includes>
-    <includes id="iqtinsp_8h" name="iqtinsp.h" local="no" imported="no">iqtinsp/iqtinsp.h</includes>
+    <includes id="_t_common_supplier_gui_comp_base_8h" name="TCommonSupplierGuiCompBase.h" local="no" imported="no">iqtinsp/TCommonSupplierGuiCompBase.h</includes>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
-    <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
-    <class kind="class">iqtinsp::TSupplierGuiCompBase::StatusObserver</class>
     <namespace>iqtinsp</namespace>
   </compound>
   <compound kind="file">
@@ -32839,6 +32847,7 @@
     <class kind="class">iqtinsp::CInspectionTaskGuiComp</class>
     <class kind="class">iqtinsp::CMessageBasedViewExtenderComp</class>
     <class kind="class">iqtinsp::CTeachableParamsDecoratorGuiComp</class>
+    <class kind="class">iqtinsp::TCommonSupplierGuiCompBase</class>
     <class kind="class">iqtinsp::TResultShapeCreatorWrap</class>
     <class kind="class">iqtinsp::TSupplierGuiCompBase</class>
   </compound>
@@ -32855,10 +32864,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt; &gt;</type>
+      <type>iqt2d::TViewExtenderCompBase&lt; iqtinsp::TCommonSupplierGuiCompBase&lt; UI &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a266ef30cf8b6d969d4e17b00815bbed8</anchor>
+      <anchor>a0be123b22371664ef4176440559c576d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -32903,55 +32912,6 @@
       <anchor>a884d71139e7a4e7efaea8e78c5709cf6</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>AreParamsEditable</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a020d721aaf66a36c0d340864d8bea47b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsLoadParamsSupported</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aea701c54202a8fbdf43d0f063326f9ed</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>IsSaveParamsSupported</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a8d550ad5b96b0d4f12130c0e75475cf2</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>LoadParams</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a24ec13414dddde866d2c293c8b917139</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SaveParams</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a70c4c0dc555181af71339d04bc4df75f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>DoTest</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a4df738a7ae3cf14de8a9d06e21aab6cc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateVisualStatus</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ae28c9e7a742d7e7cb0c8ac5eedd27807</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const i2d::ICalibrationProvider *</type>
       <name>ExtractCalibrationProvider</name>
@@ -32961,9 +32921,9 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
+      <name>BeforeSupplierGuiUpdated</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a4a0eb2b9c3f3e5da91e159ca43b56414</anchor>
+      <anchor>a42c966daf8ac4a333f957a3ffb56e569</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -32972,13 +32932,6 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>a276b1a59d013532b7e958e54362661b7</anchor>
       <arglist>(int sceneId, Shapes &amp;result)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>AfterUpdate</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aad703ad8d4e771d7c7c5df7c589ad7d3</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -33000,27 +32953,6 @@
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
       <anchor>afc5fc2701ff188ba3d4bc902f01b3e61</anchor>
       <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>BaseClass::Shapes</type>
-      <name>Shapes</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a08dda0963b1db7fc42882a059039e299</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>ParamsObserver</type>
-      <name>m_paramsObserver</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>acae5b307680abde64cf369ff3b4bb3ce</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>StatusObserver</type>
-      <name>m_statusObserver</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aa8fff01ba54a48dbbc62dacb08163727</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33639,6 +33571,171 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtinsp::TCommonSupplierGuiCompBase</name>
+    <filename>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</filename>
+    <templarg></templarg>
+    <base>TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt;</base>
+    <class kind="class">iqtinsp::TCommonSupplierGuiCompBase::ParamsObserver</class>
+    <class kind="class">iqtinsp::TCommonSupplierGuiCompBase::StatusObserver</class>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>abad39d84983a8e6a07ff428fa80d091a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TCommonSupplierGuiCompBase</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>aeef8c7f070af3e7225c952523ba71c12</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>AreParamsEditable</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ad00fe5289ee90c06ada479e4bcb9d843</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsLoadParamsSupported</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a3e8d4842c5eb55425ab57b4336a6a469</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>IsSaveParamsSupported</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a15caaf33c833b04d2c8ab6987e42ff9e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>LoadParams</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ac38800a50a22582206914e1f2a68724d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SaveParams</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ab4b77133bcbc8c215293b40ac3d34c5c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>DoTest</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>aa7afd36fdadaae2f0c9983d30fe6dd9c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateVisualStatus</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>aae569aa2e71d2a0e00208c28bdcd22fc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSupplierParamsChanged</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a17b47336a91398225f8f1c47dcda7a45</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeSupplierGuiUpdated</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a26bb3c3c989ca6df9fd5725893f93eef</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelAttached</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a30cdcbc76b4194ab96eafceedb914d55</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>ad2026f61c4abe84b203a80297cbcd587</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterUpdate</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a798870a10c3dfa08ce1e259da7caa636</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
+      <type>virtual QWidget *</type>
+      <name>GetParamsWidget</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>adb1fb7b78f6d296fac39dea6d7d54ea4</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ParamsObserver</type>
+      <name>m_paramsObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>a2e65c4920347daa5aa946c3e9e2cf08b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>StatusObserver</type>
+      <name>m_statusObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</anchorfile>
+      <anchor>aa126dc031f915c12e1e09975fd43a1b9</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtinsp::TCommonSupplierGuiCompBase::ParamsObserver</name>
+    <filename>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>ParamsObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
+      <anchor>a83bc3bf4ebff48a545afc5cf76a50b1f</anchor>
+      <arglist>(TCommonSupplierGuiCompBase *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
+      <anchor>a8db5091783f174ac30f396b2bffe0b11</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtinsp::TCommonSupplierGuiCompBase::StatusObserver</name>
+    <filename>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_status_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="function">
+      <type></type>
+      <name>StatusObserver</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_status_observer.html</anchorfile>
+      <anchor>a608916a8d33aa8dbe48be0c911efd5a0</anchor>
+      <arglist>(TCommonSupplierGuiCompBase *parentPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_status_observer.html</anchorfile>
+      <anchor>a3f591cc8f0d93805fff247f294408f59</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtinsp::TResultShapeCreatorWrap</name>
     <filename>classiqtinsp_1_1_t_result_shape_creator_wrap.html</filename>
     <templarg>Base</templarg>
@@ -33661,68 +33758,7 @@
     <name>iqtinsp::TSupplierGuiCompBase</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
     <templarg>UI</templarg>
-    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt; &gt;</base>
-    <class kind="class">iqtinsp::TSupplierGuiCompBase::ParamsObserver</class>
-    <class kind="class">iqtinsp::TSupplierGuiCompBase::StatusObserver</class>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSupplierParamsChanged</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a9f7b683a6033cf4c7aadb7616cb74865</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelAttached</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>aa67b84250fc442cdc5180b8420cff05c</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual QWidget *</type>
-      <name>GetParamsWidget</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>ace7d12078a7f5179df5dd3dfcbfef591</anchor>
-      <arglist>() const =0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtinsp::TSupplierGuiCompBase::ParamsObserver</name>
-    <filename>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
-    <member kind="function">
-      <type></type>
-      <name>ParamsObserver</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
-      <anchor>af2e97c7fe66f95348bcaa3ad1c8765ec</anchor>
-      <arglist>(TSupplierGuiCompBase *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_params_observer.html</anchorfile>
-      <anchor>a5493fde27936d7901c3501f42af6ebf9</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtinsp::TSupplierGuiCompBase::StatusObserver</name>
-    <filename>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_status_observer.html</filename>
-    <base>imod::CSingleModelObserverBase</base>
-    <member kind="function">
-      <type></type>
-      <name>StatusObserver</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_status_observer.html</anchorfile>
-      <anchor>a2d975f01f569cfc0050bd1b69c8711bc</anchor>
-      <arglist>(TSupplierGuiCompBase *parentPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnUpdate</name>
-      <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base_1_1_status_observer.html</anchorfile>
-      <anchor>a92494648c3bb3fa6837e92028852174c</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
+    <base>TViewExtenderCompBase&lt; iqtinsp::TCommonSupplierGuiCompBase&lt; UI &gt; &gt;</base>
   </compound>
   <compound kind="namespace">
     <name>iqtipr</name>
@@ -38214,6 +38250,7 @@
     <file>CMessageBasedViewExtenderComp.h</file>
     <file>CTeachableParamsDecoratorGuiComp.h</file>
     <file>iqtinsp.h</file>
+    <file>TCommonSupplierGuiCompBase.h</file>
     <file>TResultShapeCreatorWrap.h</file>
     <file>TSupplierGuiCompBase.h</file>
   </compound>
