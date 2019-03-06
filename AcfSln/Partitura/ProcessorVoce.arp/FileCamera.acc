@@ -2,9 +2,9 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4562" Description="ACF"/>
-            <Version Id="1" Number="1916" Description="ACF-Solutions"/>
-            <Version Id="1023" Number="329217" Description="Qt Framework"/>
+            <Version Id="0" Number="4756" Description="ACF"/>
+            <Version Id="1" Number="2030" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="330497" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
     <Description>File camera definition</Description>
@@ -36,13 +36,16 @@
                             </Values>
                         </Data>
                     </AttributeInfo>
+                    <AttributeInfo Id="TypeId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="FileCamera"/>
+                    </AttributeInfo>
                 </AttributeInfoMap>
             </Data>
         </Element>
         <Element Id="FileCamera" PackageId="QtCameraPck" ComponentId="FileAcquisition">
             <Data IsEnabled="true" Flags="0">
                 <AttributeInfoMap>
-                    <AttributeInfo Id="BitmapLoader" Type="Reference" ExportId="">
+                    <AttributeInfo Id="BitmapLoader" Type="Reference" ExportId="BitmapLoader">
                         <Data IsEnabled="true" Value="BitmapLoader"/>
                     </AttributeInfo>
                     <AttributeInfo Id="DefaultDir" Type="String" ExportId="DefaultDir">

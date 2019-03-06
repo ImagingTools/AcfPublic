@@ -36,7 +36,7 @@ namespace istd
 	Generic interface for a factory.
 */
 template <class Interface>
-class TIFactory: virtual public IFactoryInfo  
+class TIFactory: virtual public IFactoryInfo
 {
 public:
 	typedef Interface InterfaceType;

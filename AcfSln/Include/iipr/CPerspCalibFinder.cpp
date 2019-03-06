@@ -42,7 +42,9 @@ bool CPerspCalibFinder::FindPerspCalib(
 			bool allowAnisotropic,
 			bool allowTranslation) const
 {
-	if (allowPerspective && allowRotation && allowScale && allowAnisotropic && allowTranslation && (positionsCount >= 4)){	// try perspective transformation
+	int degsOfFreedom = positionsCount * 2;
+
+	if (allowPerspective && allowRotation && allowScale && allowAnisotropic && allowTranslation && (degsOfFreedom >= 8)){	// try perspective transformation
 		// |   u_i     v_i      1       0       0       0   -u_i*x_i  -v_i*x_i  | |r_0_0  r_0_1  r_0_2  r_1_0  r_1_1  r_1_2  r_2_0  r_2_1|^T = |x_i|
 		// |    0       0       0      u_i     v_i      1   -u_i*y_i  -v_i*y_i  | |r_0_0  r_0_1  r_0_2  r_1_0  r_1_1  r_1_2  r_2_0  r_2_1|^T = |y_i|
 		//
@@ -54,8 +56,8 @@ bool CPerspCalibFinder::FindPerspCalib(
 		//			R = | r_1_0  r_1_1  r_1_2 |, is matrix representation of perspective function.
 		//			    | r_2_0  r_2_1    1   |
 
-		imath::CVarMatrix A(istd::CIndex2d(8, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+		imath::CVarMatrix A(istd::CIndex2d(8, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -97,7 +99,7 @@ bool CPerspCalibFinder::FindPerspCalib(
 		}
 	}
 
-	if (allowRotation && allowScale && allowAnisotropic && allowTranslation && (positionsCount >= 3)){	// try affine transformation
+	if (allowRotation && allowScale && allowAnisotropic && allowTranslation && (degsOfFreedom >= 6)){	// try affine transformation
 		// |   u_i     v_i      1       0       0       0   | |r_0_0  r_0_1  r_0_2  r_1_0  r_1_1  r_1_2|^T = |x_i|
 		// |    0       0       0      u_i     v_i      1   | |r_0_0  r_0_1  r_0_2  r_1_0  r_1_1  r_1_2|^T = |y_i|
 		//
@@ -109,8 +111,8 @@ bool CPerspCalibFinder::FindPerspCalib(
 		//			R = | r_1_0  r_1_1  r_1_2 |, is matrix representation of affine function.
 		//			    |   0      0      1   |
 
-		imath::CVarMatrix A(istd::CIndex2d(6, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+		imath::CVarMatrix A(istd::CIndex2d(6, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -147,7 +149,7 @@ bool CPerspCalibFinder::FindPerspCalib(
 		}
 	}
 
-	if (allowRotation && allowScale && allowTranslation && (positionsCount >= 2)){	// try affine transformation
+	if (allowRotation && allowScale && allowTranslation && (degsOfFreedom >= 4)){	// try affine transformation
 		// |   u_i      1     -v_i      0   | | d_x   r_0_2   d_y    r_1_2|^T = |x_i|
 		// |   v_i      0      u_i      1   | | d_x   r_0_2   d_y    r_1_2|^T = |y_i|
 		//
@@ -159,8 +161,8 @@ bool CPerspCalibFinder::FindPerspCalib(
 		//			R = |  d_y    d_x   r_1_2 |, is matrix representation of affine function.
 		//			    |   0      0      1   |
 
-		imath::CVarMatrix A(istd::CIndex2d(4, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+		imath::CVarMatrix A(istd::CIndex2d(4, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -193,7 +195,7 @@ bool CPerspCalibFinder::FindPerspCalib(
 		}
 	}
 
-	if (allowScale && allowTranslation && allowAnisotropic && (positionsCount >= 2)){	// try anisotropic scaling transformation
+	if (allowScale && allowTranslation && allowAnisotropic && (degsOfFreedom >= 4)){	// try anisotropic scaling transformation
 		// |   u_i     0      1      0   | |s_x  s_y  r_0_2  r_1_2|^T = |x_i|
 		// |    0     v_i     0      1   | |s_x  s_y  r_0_2  r_1_2|^T = |y_i|
 		//
@@ -205,8 +207,8 @@ bool CPerspCalibFinder::FindPerspCalib(
 		//			R = |   0     s_y   r_1_2 |, is matrix representation of scaling function with translation.
 		//			    |   0      0      1   |
 
-		imath::CVarMatrix A(istd::CIndex2d(4, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+		imath::CVarMatrix A(istd::CIndex2d(4, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -239,7 +241,7 @@ bool CPerspCalibFinder::FindPerspCalib(
 		}
 	}
 
-	if (allowScale && allowTranslation && (positionsCount >= 2)){	// try isotropic scaling transformation
+	if (allowScale && allowTranslation && (degsOfFreedom >= 3)){	// try isotropic scaling transformation
 		// |   u_i     1      0   | |s  r_0_2  r_1_2|^T = |x_i|
 		// |   v_i     0      1   | |s  r_0_2  r_1_2|^T = |y_i|
 		//
@@ -251,8 +253,8 @@ bool CPerspCalibFinder::FindPerspCalib(
 		//			R = |   0      s    r_1_2 |, is matrix representation of scaling function with translation.
 		//			    |   0      0      1   |
 
-		imath::CVarMatrix A(istd::CIndex2d(3, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+		imath::CVarMatrix A(istd::CIndex2d(3, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -283,7 +285,7 @@ bool CPerspCalibFinder::FindPerspCalib(
 		}
 	}
 
-	if (allowTranslation && (positionsCount >= 1)){	// try translation function
+	if (allowTranslation && (degsOfFreedom >= 2)){	// try translation function
 		i2d::CVector2d cummTranslation(0, 0);
 
 		for (int i = 0; i < positionsCount; ++i){
@@ -316,11 +318,13 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 			bool allowAnisotropic,
 			bool allowTranslation) const
 {
+	int degsOfFreedom = positionsCount * 2;
+
 	lensCorrFactor = 0;
 
-	if (allowPerspective && allowRotation && allowScale && allowAnisotropic && allowTranslation && (positionsCount >= 5)){	// try perspective transformation
-		imath::CVarMatrix A(istd::CIndex2d(9, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+	if (allowPerspective && allowRotation && allowScale && allowAnisotropic && allowTranslation && (degsOfFreedom >= 9)){	// try perspective transformation
+		imath::CVarMatrix A(istd::CIndex2d(9, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -369,9 +373,9 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 		}
 	}
 
-	if (allowRotation && allowScale && allowAnisotropic && allowTranslation && (positionsCount >= 4)){	// try affine transformation
-		imath::CVarMatrix A(istd::CIndex2d(7, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+	if (allowRotation && allowScale && allowAnisotropic && allowTranslation && (degsOfFreedom >= 7)){	// try affine transformation
+		imath::CVarMatrix A(istd::CIndex2d(7, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -415,9 +419,9 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 		}
 	}
 
-	if (allowRotation && allowScale && allowTranslation && (positionsCount >= 3)){	// try affine transformation
-		imath::CVarMatrix A(istd::CIndex2d(5, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+	if (allowRotation && allowScale && allowTranslation && (degsOfFreedom >= 5)){	// try affine transformation
+		imath::CVarMatrix A(istd::CIndex2d(5, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -457,9 +461,9 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 		}
 	}
 
-	if (allowScale && allowTranslation && allowAnisotropic && (positionsCount >= 3)){	// try anisotropic scaling transformation
-		imath::CVarMatrix A(istd::CIndex2d(5, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+	if (allowScale && allowTranslation && allowAnisotropic && (degsOfFreedom >= 5)){	// try anisotropic scaling transformation
+		imath::CVarMatrix A(istd::CIndex2d(5, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -499,9 +503,9 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 		}
 	}
 
-	if (allowScale && allowTranslation && (positionsCount >= 3)){	// try isotropic scaling transformation
-		imath::CVarMatrix A(istd::CIndex2d(4, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+	if (allowScale && allowTranslation && (degsOfFreedom >= 4)){	// try isotropic scaling transformation
+		imath::CVarMatrix A(istd::CIndex2d(4, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -539,9 +543,9 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 		}
 	}
 
-	if (allowTranslation && (positionsCount >= 2)){	// try translation function
-		imath::CVarMatrix A(istd::CIndex2d(3, positionsCount * 2));
-		imath::CVarMatrix x(istd::CIndex2d(1, positionsCount * 2));
+	if (allowTranslation && (degsOfFreedom >= 3)){	// try translation function
+		imath::CVarMatrix A(istd::CIndex2d(3, degsOfFreedom));
+		imath::CVarMatrix x(istd::CIndex2d(1, degsOfFreedom));
 
 		for (int i = 0; i < positionsCount; ++i){
 			const i2d::CVector2d& nomPos = nominalPositionsPtr[i];
@@ -553,12 +557,12 @@ bool CPerspCalibFinder::FindPerspCalibWithCorrection(
 			A.SetAt(istd::CIndex2d(0, i * 2 + 0), 1);
 			A.SetAt(istd::CIndex2d(1, i * 2 + 0), 0);
 			A.SetAt(istd::CIndex2d(2, i * 2 + 0), foundDiffVector.GetX() * foundDist);
-			x.SetAt(istd::CIndex2d(0, i * 2 + 0), foundPos.GetX());
+			x.SetAt(istd::CIndex2d(0, i * 2 + 0), foundPos.GetX() - nomPos.GetX());
 
 			A.SetAt(istd::CIndex2d(0, i * 2 + 1), 0);
 			A.SetAt(istd::CIndex2d(1, i * 2 + 1), 1);
 			A.SetAt(istd::CIndex2d(2, i * 2 + 1), foundDiffVector.GetY() * foundDist);
-			x.SetAt(istd::CIndex2d(0, i * 2 + 1), foundPos.GetY());
+			x.SetAt(istd::CIndex2d(0, i * 2 + 1), foundPos.GetY() - nomPos.GetY());
 		}
 
 		imath::CVarMatrix res(istd::CIndex2d(1, 3));

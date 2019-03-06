@@ -2971,6 +2971,38 @@
     <namespace>iqproc</namespace>
   </compound>
   <compound kind="file">
+    <name>CProductionHistoryComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iprod/</path>
+    <filename>_c_production_history_comp_8h</filename>
+    <includes id="_i_production_history_controller_8h" name="IProductionHistoryController.h" local="no" imported="no">iprod/IProductionHistoryController.h</includes>
+    <class kind="class">iprod::CProductionHistoryComp</class>
+    <namespace>iprod</namespace>
+  </compound>
+  <compound kind="file">
+    <name>iprod.h</name>
+    <path>C:/Temp/AcfSln/Include/iprod/</path>
+    <filename>iprod_8h</filename>
+    <namespace>iprod</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IProductionHistory.h</name>
+    <path>C:/Temp/AcfSln/Include/iprod/</path>
+    <filename>_i_production_history_8h</filename>
+    <class kind="class">iprod::IProductionHistory</class>
+    <class kind="struct">iprod::IProductionHistory::ProcessingInfo</class>
+    <class kind="struct">iprod::IProductionHistory::PartInfo</class>
+    <class kind="struct">iprod::IProductionHistory::ObjectInfo</class>
+    <namespace>iprod</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IProductionHistoryController.h</name>
+    <path>C:/Temp/AcfSln/Include/iprod/</path>
+    <filename>_i_production_history_controller_8h</filename>
+    <includes id="_i_production_history_8h" name="IProductionHistory.h" local="no" imported="no">iprod/IProductionHistory.h</includes>
+    <class kind="class">iprod::IProductionHistoryController</class>
+    <namespace>iprod</namespace>
+  </compound>
+  <compound kind="file">
     <name>CChangePasswordDialog.h</name>
     <path>C:/Temp/AcfSln/Include/iqtauth/</path>
     <filename>_c_change_password_dialog_8h</filename>
@@ -31479,6 +31511,325 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>iprod</name>
+    <filename>namespaceiprod.html</filename>
+    <class kind="class">iprod::CProductionHistoryComp</class>
+    <class kind="class">iprod::IProductionHistory</class>
+    <class kind="class">iprod::IProductionHistoryController</class>
+  </compound>
+  <compound kind="class">
+    <name>iprod::CProductionHistoryComp</name>
+    <filename>classiprod_1_1_c_production_history_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprod::IProductionHistoryController</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>aacfcede8980b1e31b11ed9d6a992bd66</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QList&lt; ObjectInfo &gt;</type>
+      <name>ObjectInfoList</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>ad458379b28bc8f2e8e6d75ff1e98e330</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CProductionHistoryComp</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>ab38a9d53dba35690f0cb1d2288eb8a45</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetPartsInfoList</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>ac3c71dd9792064e533155f298612d014</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual PartInfo</type>
+      <name>GetPartInfo</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>abaa540371cedf4b6de37e2ee11f399f3</anchor>
+      <arglist>(const QByteArray &amp;productionPartId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetResultInfoList</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a8193128e12a48e42761f647ed77f799b</anchor>
+      <arglist>(const QByteArray &amp;productionPartId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ObjectInfoList</type>
+      <name>GetInputObjectInfoList</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a940ae6256ffdeb90f0145ef07b92815a</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ObjectInfoList</type>
+      <name>GetResultObjectInfoList</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a26f193d65834c96cecc09ce28bd98175</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ProcessingInfo</type>
+      <name>GetPartProcessingInfo</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a27e01bdbc2ac733709622aeb2c9acaa2</anchor>
+      <arglist>(const QByteArray &amp;productionPartId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ProcessingInfo</type>
+      <name>GetResultInfo</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a93edf2efa423ca25bb51b2d2ec2266b5</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetInspectionResultsFilePath</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>aea0acc4065a47425b7950f543cbd233d</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QByteArray &amp;inputObjectId=QByteArray()) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>InsertNewProductionPart</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a0aa931a22d4e73ada77807bd811e3003</anchor>
+      <arglist>(const QString &amp;partName, const QString &amp;serialNumber=QString(), istd::IInformationProvider::InformationCategory=istd::IInformationProvider::IC_NONE, const QDateTime &amp;productionTime=QDateTime())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>InsertNewInspectionResult</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a0c9f8c4befc378df452aa36029286b34</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QString &amp;inspectionName, istd::IInformationProvider::InformationCategory status=istd::IInformationProvider::IC_NONE)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>InsertInspectionResultPath</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>ae6ebeca809b66f8f7c361a6f52225f51</anchor>
+      <arglist>(const QString &amp;filePath, const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QByteArray &amp;objectTypeId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>InsertInputObjectPath</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a21e7c945fc2ece0b32b58cb6bef5e8f6</anchor>
+      <arglist>(const QString &amp;filePath, const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QByteArray &amp;objectTypeId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveProductionPart</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>ad3f4c97c6cd5ace3475f98247e9b0fbf</anchor>
+      <arglist>(const QByteArray &amp;productionPartId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>ac2122a5200b2ea6ffb47843cab432a6c</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>ae51fee50c3565d3786f50dfc05d86cc7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>a63eeae78c4bd96420268a79914e36fc6</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprod::IProductionHistory</name>
+    <filename>classiprod_1_1_i_production_history.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <class kind="struct">iprod::IProductionHistory::ObjectInfo</class>
+    <class kind="struct">iprod::IProductionHistory::PartInfo</class>
+    <class kind="struct">iprod::IProductionHistory::ProcessingInfo</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetPartsInfoList</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>abf126f4b2e5f2bf8e630ef0059af281b</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual PartInfo</type>
+      <name>GetPartInfo</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a29a946ccb2f5953c92771bcd6bf957c3</anchor>
+      <arglist>(const QByteArray &amp;productionPartId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual const iprm::IOptionsList &amp;</type>
+      <name>GetResultInfoList</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a41b77d2c94f8bb2cfdd6c3547474261c</anchor>
+      <arglist>(const QByteArray &amp;productionPartId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ObjectInfoList</type>
+      <name>GetInputObjectInfoList</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>ab60f531e0a2d10fe1b945b6da5bcf965</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ObjectInfoList</type>
+      <name>GetResultObjectInfoList</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>ab721cc3fd3c94b14f2b81f41bef1d6f0</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ProcessingInfo</type>
+      <name>GetPartProcessingInfo</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a6988068649767e3ad75d80203a803a44</anchor>
+      <arglist>(const QByteArray &amp;productionPartId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual ProcessingInfo</type>
+      <name>GetResultInfo</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a4287ef6acbc9aa0c6aa449ba291969e4</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetInspectionResultsFilePath</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a232ea491740c7db9cb0a9c290a70d67e</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QByteArray &amp;outputObjectId) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iprod::IProductionHistory::ObjectInfo</name>
+    <filename>structiprod_1_1_i_production_history_1_1_object_info.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ObjectInfo</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_object_info.html</anchorfile>
+      <anchor>a1e4970311fcfb6b9d7cc4e5786e896e2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>uuid</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_object_info.html</anchorfile>
+      <anchor>a84f5132885f67f5c4a3bd1cdcc7df44b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>filePath</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_object_info.html</anchorfile>
+      <anchor>a56d91d1cdc10e61f691ea50d0c8587e8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>typeId</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_object_info.html</anchorfile>
+      <anchor>a1102818b796f1d895504f255e3f55f1d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iprod::IProductionHistory::PartInfo</name>
+    <filename>structiprod_1_1_i_production_history_1_1_part_info.html</filename>
+    <member kind="variable">
+      <type>QString</type>
+      <name>serialNumber</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_part_info.html</anchorfile>
+      <anchor>af030cc650eba20b733de80e84a0e43df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>name</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_part_info.html</anchorfile>
+      <anchor>aa91674eae2069347ed6385e1c5a3cf2d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iprod::IProductionHistory::ProcessingInfo</name>
+    <filename>structiprod_1_1_i_production_history_1_1_processing_info.html</filename>
+    <member kind="variable">
+      <type>istd::IInformationProvider::InformationCategory</type>
+      <name>status</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_processing_info.html</anchorfile>
+      <anchor>af216362a72b3b35417c0b78e582277f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QDateTime</type>
+      <name>time</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_processing_info.html</anchorfile>
+      <anchor>a7263ac1b5db8994ff0b794a8b9d45368</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprod::IProductionHistoryController</name>
+    <filename>classiprod_1_1_i_production_history_controller.html</filename>
+    <base virtualness="virtual">iprod::IProductionHistory</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>InsertNewProductionPart</name>
+      <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
+      <anchor>af95843f329ad4c931894ca1341504860</anchor>
+      <arglist>(const QString &amp;partName, const QString &amp;serialNumber=QString(), istd::IInformationProvider::InformationCategory=istd::IInformationProvider::IC_NONE, const QDateTime &amp;productionTime=QDateTime())=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>InsertNewInspectionResult</name>
+      <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
+      <anchor>a40a8726502fda40c3e3c4e2fc56ca213</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;inspectionId, const QString &amp;inspectionName, istd::IInformationProvider::InformationCategory status=istd::IInformationProvider::IC_NONE)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>InsertInspectionResultPath</name>
+      <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
+      <anchor>a066e4374930ca3597ad8110441c94ece</anchor>
+      <arglist>(const QString &amp;filePath, const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QByteArray &amp;objectTypeId)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>InsertInputObjectPath</name>
+      <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
+      <anchor>a801113986967831fad49315f86c0b1dc</anchor>
+      <arglist>(const QString &amp;filePath, const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QByteArray &amp;objectTypeId)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveProductionPart</name>
+      <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
+      <anchor>a991bcdcea449bde5f446ab55a9a1ffb1</anchor>
+      <arglist>(const QByteArray &amp;productionPartId)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>iqproc</name>
     <filename>namespaceiqproc.html</filename>
   </compound>
@@ -38164,6 +38515,7 @@
     <dir>Include/imm</dir>
     <dir>Include/iproc</dir>
     <dir>Include/iprocgui</dir>
+    <dir>Include/iprod</dir>
     <dir>Include/iqtauth</dir>
     <dir>Include/iqtcam</dir>
     <dir>Include/iqtex</dir>
@@ -38207,6 +38559,15 @@
     <file>CProcessorCommandComp.h</file>
     <file>CProcessorControlGuiComp.h</file>
     <file>iprocgui.h</file>
+  </compound>
+  <compound kind="dir">
+    <name>Include/iprod</name>
+    <path>C:/Temp/AcfSln/Include/iprod/</path>
+    <filename>dir_19d49e84a631bd609cbb999e7f09de4e.html</filename>
+    <file>CProductionHistoryComp.h</file>
+    <file>iprod.h</file>
+    <file>IProductionHistory.h</file>
+    <file>IProductionHistoryController.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iqtauth</name>

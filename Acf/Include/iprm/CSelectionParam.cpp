@@ -246,12 +246,11 @@ bool CSelectionParam::CopyFrom(const istd::IChangeable& object, CompatibilityMod
 		switch (mode)
 		{
 		case CM_WITHOUT_REFS:
-			{
-				if (m_selectedOptionIndex != optionIndex){
-					return SetSelectedOptionIndex(optionIndex);
-				}
-				return true;
+			if (m_selectedOptionIndex != optionIndex){
+				return SetSelectedOptionIndex(optionIndex);
 			}
+			break;
+
 		case CM_WITH_REFS:
 			{
 				const iprm::IOptionsList* constraintsPtr = NULL;
