@@ -27011,10 +27011,10 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual InformationCategory</type>
+      <type>virtual istd::IInformationProvider::InformationCategory</type>
       <name>GetInformationCategory</name>
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
-      <anchor>a05d44a5285bc3cc4b8a503b654cef86e</anchor>
+      <anchor>aba74e5190912fa19418240bd277f4b8a</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -27044,6 +27044,13 @@
       <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
       <anchor>a0ecdec28083a1373063a83a32154e7f6</anchor>
       <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual istd::IInformationProvider::InformationCategory</type>
+      <name>EvaluateResults</name>
+      <anchorfile>classiipr_1_1_c_search_based_features_supplier_comp.html</anchorfile>
+      <anchor>a38bee68d0438761df4797bed650b77d0</anchor>
+      <arglist>(int featuresCount, int nominalModelsCount, QString &amp;searchResultText) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
