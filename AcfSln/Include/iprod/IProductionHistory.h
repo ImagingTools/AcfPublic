@@ -45,6 +45,11 @@ class IProductionHistory: virtual public istd::IChangeable
 public:
 	struct ProcessingInfo
 	{
+		ProcessingInfo()
+			:status(istd::IInformationProvider::IC_NONE)
+		{
+		}
+
 		istd::IInformationProvider::InformationCategory status;
 		QDateTime time;
 	};
@@ -55,7 +60,9 @@ public:
 	struct PartInfo
 	{
 		QString serialNumber;
-		QString name;
+		QString productName;
+		QByteArray productId;
+		ProcessingInfo processingInfo;
 	};
 
 	/**
@@ -86,6 +93,23 @@ public:
 
 	typedef QList<ObjectInfo> ObjectInfoList;
 
+	/**
+		Description of a single inspection result.
+	*/
+	struct ResultInfo
+	{
+		ResultInfo()
+		{
+			uuid = QUuid::createUuid().toByteArray();
+		}
+
+		QByteArray uuid;
+		QString name;
+		QByteArray inspectionId;
+		ObjectInfoList inputObjects;
+		ObjectInfoList outputObjects;
+		ProcessingInfo processingInfo;
+	};
 
 	/**
 		Get the list of the produced parts.
@@ -105,30 +129,7 @@ public:
 	/**
 		Get the list of the input objects for the given part-ID and inspection-ID.
 	*/
-	virtual ObjectInfoList GetInputObjectInfoList(const QByteArray& productionPartId, const QByteArray& resultId) const = 0;
-
-	/**
-		Get the list of the result objects for the given part-ID and inspection-ID.
-	*/
-	virtual ObjectInfoList GetResultObjectInfoList(const QByteArray& productionPartId, const QByteArray& resultId) const = 0;
-
-	/**
-		Get production info for the given part.
-	*/
-	virtual ProcessingInfo GetPartProcessingInfo(const QByteArray& productionPartId) const = 0;
-
-	/**
-		Get processing info of the result.
-	*/
-	virtual ProcessingInfo GetResultInfo(const QByteArray& productionPartId, const QByteArray& resultId) const = 0;
-
-	/**
-		Get the file path to the inspection-related output.
-	*/
-	virtual QString GetInspectionResultsFilePath(
-				const QByteArray& productionPartId,
-				const QByteArray& resultId,
-				const QByteArray& outputObjectId) const = 0;
+	virtual ResultInfo GetResultInfo(const QByteArray& productionPartId, const QByteArray& resultId) const = 0;
 };
 
 

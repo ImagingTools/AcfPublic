@@ -36,8 +36,9 @@ namespace iprod
 static const iser::CArchiveTag s_partsTag("Items", "List of history items", iser::CArchiveTag::TT_MULTIPLE);
 static const iser::CArchiveTag s_partTag("Item", "Single item", iser::CArchiveTag::TT_GROUP);
 static const iser::CArchiveTag s_partUuidTag("Uuid", "UUID of the part", iser::CArchiveTag::TT_LEAF);
-static const iser::CArchiveTag s_partSerialTag("SerialNuber", "Serial number of the part", iser::CArchiveTag::TT_LEAF);
-static const iser::CArchiveTag s_partNameTag("Name", "Name of the part", iser::CArchiveTag::TT_LEAF);
+static const iser::CArchiveTag s_partSerialTag("SerialNumber", "Serial number of the part", iser::CArchiveTag::TT_LEAF);
+static const iser::CArchiveTag s_productNameTag("ProductName", "Product name of the part", iser::CArchiveTag::TT_LEAF);
+static const iser::CArchiveTag s_productIdTag("ProductId", "Product id of the part", iser::CArchiveTag::TT_LEAF);
 static const iser::CArchiveTag s_partTimeStampTag("Time", "Time of the part production", iser::CArchiveTag::TT_LEAF);
 static const iser::CArchiveTag s_partStatusTag("Status", "Status of the part production", iser::CArchiveTag::TT_LEAF);
 
@@ -82,8 +83,11 @@ IProductionHistory::PartInfo CProductionHistoryComp::GetPartInfo(const QByteArra
 		const HistoryItem& item = m_historyItems[i];
 
 		if (item.uuid == productionPartId){
-			retVal.name = item.name;
 			retVal.serialNumber = item.serialNumber;
+			retVal.productName = item.productName;
+			retVal.productId = item.productId;
+			retVal.processingInfo.status = item.status;
+			retVal.processingInfo.time = item.timestamp;
 
 			break;
 		}
@@ -93,7 +97,7 @@ IProductionHistory::PartInfo CProductionHistoryComp::GetPartInfo(const QByteArra
 }
 
 
-IProductionHistory::ObjectInfoList CProductionHistoryComp::GetInputObjectInfoList(const QByteArray& productionPartId, const QByteArray& resultId) const
+IProductionHistory::ResultInfo CProductionHistoryComp::GetResultInfo(const QByteArray& productionPartId, const QByteArray& resultId) const
 {
 	for (int i = 0; i < m_historyItems.count(); ++i){
 		const HistoryItem& item = m_historyItems[i];
@@ -103,114 +107,21 @@ IProductionHistory::ObjectInfoList CProductionHistoryComp::GetInputObjectInfoLis
 				const ResultInfo& resultInfo = item.resultInfoList[resultIndex];
 
 				if (resultInfo.uuid == resultId){
-					return resultInfo.inputObjects;
+					return resultInfo;
 				}
 			}
 		}
 	}
 
-	return ObjectInfoList();
+	return ResultInfo();
 }
 
 
-IProductionHistory::ObjectInfoList CProductionHistoryComp::GetResultObjectInfoList(const QByteArray & productionPartId, const QByteArray & resultId) const
-{
-	for (int i = 0; i < m_historyItems.count(); ++i){
-		const HistoryItem& item = m_historyItems[i];
-
-		if (item.uuid == productionPartId){
-			for (int resultIndex = 0; resultIndex < item.resultInfoList.count(); ++resultIndex){
-				const ResultInfo& resultInfo = item.resultInfoList[resultIndex];
-
-				if (resultInfo.uuid == resultId){
-					return resultInfo.outputObjects;
-				}
-			}
-		}
-	}
-
-	return ObjectInfoList();
-}
-
-
-IProductionHistory::ProcessingInfo CProductionHistoryComp::GetPartProcessingInfo(const QByteArray& productionPartId) const
-{
-	ProcessingInfo retVal;
-
-	for (int i = 0; i < m_historyItems.count(); ++i){
-		const HistoryItem& item = m_historyItems[i];
-
-		if (item.uuid == productionPartId){
-			retVal.status = item.status;
-			retVal.time = item.timestamp;
-			break;
-		}
-	}
-
-	return retVal;
-}
-
-
-IProductionHistory::ProcessingInfo CProductionHistoryComp::GetResultInfo(const QByteArray& productionPartId, const QByteArray& resultId) const
-{
-	ProcessingInfo retVal;
-
-	for (int i = 0; i < m_historyItems.count(); ++i){
-		const HistoryItem& item = m_historyItems[i];
-
-		if (item.uuid == productionPartId){
-			for (int resultIndex = 0; resultIndex < item.resultInfoList.count(); ++resultIndex){
-				const ResultInfo& resultInfo = item.resultInfoList[resultIndex];
-
-				if (resultInfo.uuid == resultId){
-					retVal.status = resultInfo.status;
-					retVal.time = item.timestamp;
-
-					return retVal;
-				}
-			}
-		}
-	}
-
-	return retVal;
-}
-
-
-QString CProductionHistoryComp::GetInspectionResultsFilePath(
-			const QByteArray& productionPartId,
-			const QByteArray& resultId,
-			const QByteArray& outputObjectId) const
-{
-	for (int i = 0; i < m_historyItems.count(); ++i){
-		const HistoryItem& item = m_historyItems[i];
-
-		if (item.uuid == productionPartId){
-			for (int resultIndex = 0; resultIndex < item.resultInfoList.count(); ++resultIndex){
-				const ResultInfo& resultInfo = item.resultInfoList[resultIndex];
-
-				if (resultInfo.uuid == resultId){
-					if (!outputObjectId.isEmpty()){
-						for (int outputIndex = 0; outputIndex < resultInfo.outputObjects.count(); ++outputIndex){
-							const ObjectInfo& outputObject = resultInfo.outputObjects[outputIndex];
-							if (outputObject.uuid == outputObjectId){
-								return outputObject.filePath;
-							}
-						}
-					}
-					else if(!resultInfo.outputObjects.isEmpty()){
-						return resultInfo.outputObjects[0].filePath;
-					}
-				}
-			}
-		}
-	}
-
-	return QString();
-}
-
+// reimplemented (IProductionHistoryController)
 
 QByteArray CProductionHistoryComp::InsertNewProductionPart(
-			const QString& partName,
+			const QString& productName,
+			const QByteArray& productId,
 			const QString& serialNumber,
 			istd::IInformationProvider::InformationCategory status,
 			const QDateTime& productionTime)
@@ -218,7 +129,8 @@ QByteArray CProductionHistoryComp::InsertNewProductionPart(
 	istd::CChangeNotifier changeNotifier(this);
 	
 	HistoryItem newItem;
-	newItem.name = partName;
+	newItem.productName = productName;
+	newItem.productId = productId;
 	newItem.serialNumber = serialNumber;
 	newItem.timestamp = productionTime.isValid() ? productionTime : QDateTime::currentDateTime();
 	newItem.status = status;
@@ -245,8 +157,9 @@ QByteArray CProductionHistoryComp::InsertNewInspectionResult(
 
 			newResult.inspectionId = inspectionId;
 			newResult.name = inspectionName;
-			newResult.status = status;
-			
+			newResult.processingInfo.status = status;
+			newResult.processingInfo.time = QDateTime::currentDateTime();
+
 			item.resultInfoList.push_back(newResult);
 
 			return newResult.uuid;
@@ -370,9 +283,13 @@ bool CProductionHistoryComp::Serialize(iser::IArchive& archive)
 		retVal = retVal && archive.Process(part.uuid);
 		retVal = retVal && archive.EndTag(s_partUuidTag);
 
-		retVal = retVal && archive.BeginTag(s_partNameTag);
-		retVal = retVal && archive.Process(part.name);
-		retVal = retVal && archive.EndTag(s_partNameTag);
+		retVal = retVal && archive.BeginTag(s_productNameTag);
+		retVal = retVal && archive.Process(part.productName);
+		retVal = retVal && archive.EndTag(s_productNameTag);
+
+		retVal = retVal && archive.BeginTag(s_productIdTag);
+		retVal = retVal && archive.Process(part.productId);
+		retVal = retVal && archive.EndTag(s_productIdTag);
 
 		retVal = retVal && archive.BeginTag(s_partSerialTag);
 		retVal = retVal && archive.Process(part.serialNumber);
@@ -456,13 +373,23 @@ bool CProductionHistoryComp::SerializeResultInfoList(iser::IArchive& archive, Re
 		retVal = retVal && archive.Process(resultInfo.name);
 		retVal = retVal && archive.EndTag(s_inspectionNameTag);
 
-		static const iser::CArchiveTag s_inspectionStatusTag("Status", "Processing status of the inspection", iser::CArchiveTag::TT_LEAF, &s_resultInfoTag);
+		static const iser::CArchiveTag s_processingInfoTag("ProcessingInfo", "Processing status of the inspection", iser::CArchiveTag::TT_GROUP, &s_resultInfoTag);
+		retVal = retVal && archive.BeginTag(s_processingInfoTag);
+
+		static const iser::CArchiveTag s_inspectionStatusTag("Status", "Processing status of the inspection", iser::CArchiveTag::TT_LEAF, &s_processingInfoTag);
 		retVal = retVal && archive.BeginTag(s_inspectionStatusTag);
 		retVal = retVal && iser::CPrimitiveTypesSerializer::SerializeEnum<
 					istd::IInformationProvider::InformationCategory,
 					istd::IInformationProvider::ToString,
-					istd::IInformationProvider::FromString>(archive, resultInfo.status);
+					istd::IInformationProvider::FromString>(archive, resultInfo.processingInfo.status);
 		retVal = retVal && archive.EndTag(s_inspectionStatusTag);
+
+		static const iser::CArchiveTag s_inspectionTimeTag("Time", "Processing time of the inspection", iser::CArchiveTag::TT_LEAF, &s_processingInfoTag);
+		retVal = retVal && archive.BeginTag(s_inspectionTimeTag);
+		retVal = retVal && iser::CPrimitiveTypesSerializer::SerializeDateTime(archive, resultInfo.processingInfo.time);
+		retVal = retVal && archive.EndTag(s_inspectionTimeTag);
+
+		retVal = retVal && archive.EndTag(s_processingInfoTag);
 
 		static const iser::CArchiveTag inputObjectListTag("InputObjects", "List of input objects", iser::CArchiveTag::TT_GROUP, &s_resultInfoTag);
 		retVal = retVal && archive.BeginTag(inputObjectListTag);
@@ -603,7 +530,7 @@ int CProductionHistoryComp::PartList::GetOptionsCount() const
 
 QString CProductionHistoryComp::PartList::GetOptionName(int index) const
 {
-	return m_parentPtr->m_historyItems[index].name;
+	return m_parentPtr->m_historyItems[index].productName;
 }
 
 
