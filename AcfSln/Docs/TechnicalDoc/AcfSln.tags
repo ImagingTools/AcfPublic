@@ -18423,6 +18423,13 @@
       <anchor>ac0037c8f1d0a8dc62dc0d05b75424fe8</anchor>
       <arglist>(const QString &amp;inputFileName, const QString &amp;outputDirectoryPath, const ifileproc::IFileNamingParams *fileNamingParamsPtr) const </arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>CalculateNewFileName</name>
+      <anchorfile>classifileproc_1_1_c_file_naming_comp.html</anchorfile>
+      <anchor>a1ae7fa030f32f7fd671ad71717f486f9</anchor>
+      <arglist>(const QString &amp;inputFilePath, const QString &amp;outputDirectoryPath, const QString &amp;prefix, const QString &amp;suffix, const QString &amp;fileExtension, IFileNamingParams::OverwriteStrategy overwriteStrategy)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>ifileproc::CFileNamingParams</name>
