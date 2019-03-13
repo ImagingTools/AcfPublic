@@ -129,6 +129,7 @@
     <ClCompile Include="..\CParamsManagerComp.cpp" />
     <ClCompile Include="..\CParamsManagerCompBase.cpp" />
     <ClCompile Include="..\CParamsSet.cpp" />
+    <ClCompile Include="..\CParamsSetDelegatorComp.cpp" />
     <ClCompile Include="..\CSelectableParamsSetComp.cpp" />
     <ClCompile Include="..\CSelectionConstraintsComp.cpp" />
     <ClCompile Include="..\CSelectionParam.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="..\CParamsManagerComp.h" />
     <ClInclude Include="..\CParamsManagerCompBase.h" />
     <ClInclude Include="..\CParamsSet.h" />
+    <ClInclude Include="..\CParamsSetDelegatorComp.h" />
     <ClInclude Include="..\CSelectableParamsSetComp.h" />
     <ClInclude Include="..\CSelectionConstraintsComp.h" />
     <ClInclude Include="..\CSelectionParam.h" />
