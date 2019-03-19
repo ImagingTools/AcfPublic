@@ -58,6 +58,9 @@ public:
 	virtual void RemoveItemsFromScene(iqt2d::IViewProvider* providerPtr);
 
 protected:
+	using BaseClass::GetObservedObject;
+	typedef typename BaseClass::Shapes Shapes;
+
 	/**
 		Extract calibration provider from the observed object.
 	*/
