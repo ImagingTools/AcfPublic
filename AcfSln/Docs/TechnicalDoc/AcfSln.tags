@@ -288,6 +288,13 @@
     <namespace>icalib</namespace>
   </compound>
   <compound kind="file">
+    <name>CPointGrid.h</name>
+    <path>C:/Temp/AcfSln/Include/icalib/</path>
+    <filename>_c_point_grid_8h</filename>
+    <class kind="class">icalib::CPointGrid</class>
+    <namespace>icalib</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSimpleLensCorrection.h</name>
     <path>C:/Temp/AcfSln/Include/icalib/</path>
     <filename>_c_simple_lens_correction_8h</filename>
@@ -2132,6 +2139,15 @@
     <class kind="class">iipr::CPixelManip::GrayCropAccum32</class>
     <class kind="class">iipr::CPixelManip::RgbCropAccum32</class>
     <class kind="class">iipr::CPixelManip::RgbaCropAccum32</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPointGridFeature.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_point_grid_feature_8h</filename>
+    <includes id="_c_point_grid_8h" name="CPointGrid.h" local="no" imported="no">icalib/CPointGrid.h</includes>
+    <includes id="_t_weighted_feature_wrap_8h" name="TWeightedFeatureWrap.h" local="no" imported="no">iipr/TWeightedFeatureWrap.h</includes>
+    <class kind="class">iipr::CPointGridFeature</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -7179,6 +7195,7 @@
     <class kind="class">icalib::CNoneCalibration2d</class>
     <class kind="class">icalib::CPerspectiveCalibration2d</class>
     <class kind="class">icalib::CPerspectiveCalibration2dComp</class>
+    <class kind="class">icalib::CPointGrid</class>
     <class kind="class">icalib::CSimpleLensCorrection</class>
     <class kind="class">icalib::CSimpleLensCorrectionComp</class>
     <class kind="class">icalib::CStaticCalibrationProviderComp</class>
@@ -7908,6 +7925,40 @@
       <anchorfile>classicalib_1_1_c_perspective_calibration2d_comp.html</anchorfile>
       <anchor>aa0f15afab11e1a0b80242a2bcdbee408</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icalib::CPointGrid</name>
+    <filename>classicalib_1_1_c_point_grid.html</filename>
+    <base>TArray&lt; i2d::CVector2d, 2 &gt;</base>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="typedef">
+      <type>istd::TArray&lt; i2d::CVector2d, 2 &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
+      <anchor>a376b9d0407bc035c7c352c3aefcfce22</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
+      <anchor>a80dc8057ab14cc3da8d9886eae529806</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
+      <anchor>a115c76db04bb9a0b0dfaaae44a2c851b</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
+      <anchor>a8090ba0ddb673d1031bfe23b965cb9e7</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21160,6 +21211,7 @@
     <class kind="class">iipr::CObjectFeature</class>
     <class kind="class">iipr::CPerspCalibFinder</class>
     <class kind="class">iipr::CPixelManip</class>
+    <class kind="class">iipr::CPointGridFeature</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
     <class kind="class">iipr::CProcessedAcquisitionComp</class>
     <class kind="class">iipr::CProcessedBitmapSupplierBase</class>
@@ -26269,6 +26321,102 @@
     <templarg>Shift</templarg>
     <templarg>DoCropMin</templarg>
     <templarg>DoCropMax</templarg>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPointGridFeature</name>
+    <filename>classiipr_1_1_c_point_grid_feature.html</filename>
+    <base>TWeightedFeatureWrap&lt; icalib::CPointGrid &gt;</base>
+    <member kind="typedef">
+      <type>TWeightedFeatureWrap&lt; icalib::CPointGrid &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_point_grid_feature.html</anchorfile>
+      <anchor>a91cacfdc7ee8fdb9e188c56655ccde99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imeas::CSimpleNumericValue</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a942a2ec0b1e221f063e1add3ebc43705</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icalib::CPointGrid</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>acd13265a487dd486ecc37a58e1007ba2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPointGridFeature</name>
+      <anchorfile>classiipr_1_1_c_point_grid_feature.html</anchorfile>
+      <anchor>a361f4ca5c99474b392305853a5c7c213</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsValueTypeSupported</name>
+      <anchorfile>classiipr_1_1_c_point_grid_feature.html</anchorfile>
+      <anchor>a8b31ad78b5f85e003ebd45aaca27cc1c</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual imath::CVarVector</type>
+      <name>GetComponentValue</name>
+      <anchorfile>classiipr_1_1_c_point_grid_feature.html</anchorfile>
+      <anchor>a6bf1240de7e02d235103d05a8fa0ac90</anchor>
+      <arglist>(ValueTypeId valueTypeId) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiipr_1_1_c_point_grid_feature.html</anchorfile>
+      <anchor>a57c4d6d1b7e14b440adf601bbc767a8f</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TWeightedFeatureWrap</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a5b9c8031e18165d0b5c85f7838814a84</anchor>
+      <arglist>(double weight=1.0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a670784cb0eb876758dd5b47eaa40395f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWeight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>aef12a2739f789cde29f56b01944cda48</anchor>
+      <arglist>(double weight)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a97ae2b01e85ae32c589aa154cee0e9e4</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a662e0f1751f6b0bbf85b9138528b1488</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_weight</name>
+      <anchorfile>classiipr_1_1_t_weighted_feature_wrap.html</anchorfile>
+      <anchor>a48120fa2978f81cf33d685fddc69bab9</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CPositionFromImageSupplierComp</name>
@@ -38170,6 +38318,7 @@
     <file>CNoneCalibration2d.h</file>
     <file>CPerspectiveCalibration2d.h</file>
     <file>CPerspectiveCalibration2dComp.h</file>
+    <file>CPointGrid.h</file>
     <file>CSimpleLensCorrection.h</file>
     <file>CSimpleLensCorrectionComp.h</file>
     <file>CStaticCalibrationProviderComp.h</file>
@@ -38443,6 +38592,7 @@
     <file>CObjectFeature.h</file>
     <file>CPerspCalibFinder.h</file>
     <file>CPixelManip.h</file>
+    <file>CPointGridFeature.h</file>
     <file>CPositionFromImageSupplierComp.h</file>
     <file>CProcessedAcquisitionComp.h</file>
     <file>CProcessedBitmapSupplierComp.h</file>

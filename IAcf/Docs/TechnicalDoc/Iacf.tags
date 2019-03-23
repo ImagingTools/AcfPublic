@@ -131,6 +131,21 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvIntrinsicCameraCalibration.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_intrinsic_camera_calibration_8h</filename>
+    <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COcvIntrinsicCameraCalibrationSupplierComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_intrinsic_camera_calibration_supplier_comp_8h</filename>
+    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
+    <class kind="class">iocv::COcvIntrinsicCameraCalibrationSupplierComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvMedianProcessorComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_median_processor_comp_8h</filename>
@@ -146,10 +161,24 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvPointGridExtractorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_point_grid_extractor_comp_8h</filename>
+    <class kind="class">iocv::COcvPointGridExtractorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvResamplingProcessorComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_resampling_processor_comp_8h</filename>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
+    <name>COcvUndistortImageProcessorComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_ocv_undistort_image_processor_comp_8h</filename>
+    <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
@@ -933,10 +962,14 @@
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <class kind="class">iocv::COcvImage</class>
+    <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
+    <class kind="class">iocv::COcvIntrinsicCameraCalibrationSupplierComp</class>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
     <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
     <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
+    <class kind="class">iocv::COcvPointGridExtractorComp</class>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
+    <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
     <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
   <compound kind="class">
@@ -1235,20 +1268,6 @@
     <name>iocv::COcvImage</name>
     <filename>classiocv_1_1_c_ocv_image.html</filename>
     <base protection="private" virtualness="virtual">iimg::CBitmapBase</base>
-    <member kind="function">
-      <type></type>
-      <name>COcvImage</name>
-      <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
-      <anchor>ac04fe227e70b681d25489809260f4aa1</anchor>
-      <arglist>(const IplImage &amp;image)</arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>ConvertToBitmap</name>
-      <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
-      <anchor>a048bc2b81b42c38bf0d314cf570138da</anchor>
-      <arglist>(const IplImage &amp;image, iimg::IBitmap &amp;outputBitmap)</arglist>
-    </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>ConvertFromBitmap</name>
@@ -1262,6 +1281,234 @@
       <anchorfile>classiocv_1_1_c_ocv_image.html</anchorfile>
       <anchor>ad6c2d977e345f6ca8429abcbae26fc01</anchor>
       <arglist>(const cv::Mat &amp;image, iimg::IBitmap &amp;outputBitmap)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvIntrinsicCameraCalibration</name>
+    <filename>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
+    <member kind="typedef">
+      <type>cv::Matx33d</type>
+      <name>CameraMatrix</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>aa72e7c4de36dbcc000c9deedb94ce891</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>cv::Matx&lt; double, 5, 1 &gt;</type>
+      <name>DistorsionCoeff</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>ab237929cc44aa645a8be06f22701797b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>COcvIntrinsicCameraCalibration</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a3a7fbac4a33765ad39fc5577bab632c4</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>const CameraMatrix &amp;</type>
+      <name>GetCameraMatrix</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>adc8caec5fe0a97627572a3f9b5693033</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetCameraMatrix</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>ab2dd462bce55f9bc812378279b717126</anchor>
+      <arglist>(const CameraMatrix &amp;cameraMatrix)</arglist>
+    </member>
+    <member kind="function">
+      <type>const DistorsionCoeff &amp;</type>
+      <name>GetDistorsion</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a1c71692c22fb1be0048bc570836ddeae</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDistorsion</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>acf6bb3ab403281e894dfc42221ba20d8</anchor>
+      <arglist>(const DistorsionCoeff &amp;distorsionCoeff)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>ae283d394b19aa5585a8351b181a08709</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a53e535b66dc6c6933313e2f97af9938b</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetArgumentUnitInfo</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>ab45d49c1b9d0b00b52105e5f691358ee</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetResultUnitInfo</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>aea72c03463e2761cc647c05c9efdf9dd</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>CreateCombinedCalibration</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a5583d3de6e0a9324265c37b6073f8bba</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>aa2884cb8932c3538ce41a6aefdac3b1b</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>adc44e133d7080ffcc8af08976383419b</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a6cd9cc8fc5250909283ffa13e0d3a141</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a0a5835b593315f2b2d3e9b9711f47458</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>adf42ac25e82088fda0d4736158e80b37</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a6d3e2a91a6bd77a9ba5993ad8a53e0d4</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a482ac5a64783fe93a456e52a0dbf7056</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a01e1ff3e2a5298a92896a73df7c720d9</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a538f2a719fe5924159ffd82e161895d6</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>af4f3db4e9e55ab0ddc604f2153ac45a5</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a9ed7343a0c245ecbf1eb9b10ba1920b9</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a01c84cbe7d367272dfd7adebf177016a</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a48aa9416de9c5eccbbc0bd692b2eeaa7</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a02875188b977f5e4c3c1034c657cba95</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>ac3c51fb49def30e858e29e347309849a</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
+      <anchor>a2185039d0aebb5cfb77f3b1e898388ce</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvIntrinsicCameraCalibrationSupplierComp</name>
+    <filename>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; COcvIntrinsicCameraCalibration &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iinsp::TSupplierCompWrap&lt; COcvIntrinsicCameraCalibration &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
+      <anchor>a4f1cddabbe2670104b57f0e51bffbe6c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
+      <anchor>abb774607d4525855679246d6e29ec133</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
+      <anchor>a559c446314e2c3671d95f8ac0cb6e2d1</anchor>
+      <arglist>(ProductType &amp;result) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1322,6 +1569,53 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iocv::COcvPointGridExtractorComp</name>
+    <filename>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>Pattern</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>a451ab3e9d60812ab2660516349647c16</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_CHESSBOARD</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>a451ab3e9d60812ab2660516349647c16a454af1a9e9f6bb3c0a6b92d05c890dfd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PT_CIRCLES_GRID</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>a451ab3e9d60812ab2660516349647c16aa9b3fe0781c8486ac9ee555462b9a9b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>aecc00988e485a0c137fe426424a81cb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoExtractFeatures</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>aee4d7c4bbd5f1cbb3912fa9cae296fcc</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>ae03712e5a34c59e3f880eec8cf0ad263</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iocv::COcvResamplingProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_resampling_processor_comp.html</filename>
     <base>iproc::TSyncProcessorCompBase</base>
@@ -1338,6 +1632,25 @@
       <anchorfile>classiocv_1_1_c_ocv_resampling_processor_comp.html</anchorfile>
       <anchor>afc010ec23450b29e1face2393dafd867</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvUndistortImageProcessorComp</name>
+    <filename>classiocv_1_1_c_ocv_undistort_image_processor_comp.html</filename>
+    <base>iipr::CImageProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iipr::CImageProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_undistort_image_processor_comp.html</anchorfile>
+      <anchor>a0ef529427582ace963509a3292a5585b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ProcessImage</name>
+      <anchorfile>classiocv_1_1_c_ocv_undistort_image_processor_comp.html</anchorfile>
+      <anchor>ab57393db0164a8db90efb762b76862eb</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2574,9 +2887,13 @@
     <file>COcvBlobProcessorComp.h</file>
     <file>COcvEdgeExtractorComp.h</file>
     <file>COcvImage.h</file>
+    <file>COcvIntrinsicCameraCalibration.h</file>
+    <file>COcvIntrinsicCameraCalibrationSupplierComp.h</file>
     <file>COcvMedianProcessorComp.h</file>
     <file>COcvMorphologicalProcessorComp.h</file>
+    <file>COcvPointGridExtractorComp.h</file>
     <file>COcvResamplingProcessorComp.h</file>
+    <file>COcvUndistortImageProcessorComp.h</file>
     <file>COcvVideoControllerComp.h</file>
     <file>iocv.h</file>
   </compound>

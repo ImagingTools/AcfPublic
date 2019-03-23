@@ -200,8 +200,13 @@ bool CVisualRegistryEditorComp::TryOpenComponent(const CVisualRegistryElement& r
 }
 
 
-// reimplemented (ibase::ICommandsProvider)
+void CVisualRegistryEditorComp::SetAcceptedMimeTypes(const QStringList& mimeTypes)
+{
+	m_acceptedMimeTypes = mimeTypes;
+}
 
+
+// reimplemented (ibase::ICommandsProvider)
 
 const ibase::IHierarchicalCommand* CVisualRegistryEditorComp::GetCommands() const
 {
@@ -209,11 +214,7 @@ const ibase::IHierarchicalCommand* CVisualRegistryEditorComp::GetCommands() cons
 }
 
 
-void CVisualRegistryEditorComp::SetAcceptedMimeTypes(const QStringList& mimeTypes)
-{
-	m_acceptedMimeTypes = mimeTypes;
-}
-
+// reimplemented (iqtgui::IDropConsumer)
 
 QStringList CVisualRegistryEditorComp::GetAcceptedMimeIds() const
 {

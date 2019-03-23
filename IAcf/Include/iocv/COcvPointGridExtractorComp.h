@@ -1,0 +1,78 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the IACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#pragma once
+
+// ACF-Solutions includes
+#include <iproc/TSyncProcessorCompBase.h>
+#include <iipr/IImageToFeatureProcessor.h>
+
+
+namespace iocv
+{
+
+
+class COcvPointGridExtractorComp: public iproc::TSyncProcessorCompBase<iipr::IImageToFeatureProcessor>
+{
+public:
+	typedef iproc::TSyncProcessorCompBase<iipr::IImageToFeatureProcessor> BaseClass;
+
+	I_BEGIN_COMPONENT(COcvPointGridExtractorComp);
+		I_ASSIGN(m_resultConsumerCompPtr, "ResultConsumer", "Consumer of result messages with geometrical layout", false, "ResultConsumer");
+		I_ASSIGN(m_defaultGridSizeCompPtr, "GridSize", "Component that provides of grid size. Two numbers for horizontal (first) and verical (second) directions.", false, "GridSize");
+		I_ASSIGN(m_defaultPatternTypeAttrPtr, "PatternType", "Type of pattern which uses to look for points.\n0 : Chessboard\n1: Circles grid", false, 0);
+		I_ASSIGN(m_gridSizeParamIdAttrPtr, "GridSizeParamId", "Param id of grid size values in paramset. Two numbers for horizontal (first) and verical (second) directions.", false, "GridSize");
+		I_ASSIGN(m_patternTypeParamIdAttrPtr, "PatternTypeParamId", "Param id of pattern type in paramset.\n0 : Chessboard\n1: Circles grid", false, "PatternType");
+	I_END_COMPONENT;
+
+	enum Pattern
+	{
+		PT_CHESSBOARD = 0,
+		PT_CIRCLES_GRID
+	};
+
+	// reimplemented (iipr::IImageToFeatureProcessor)
+	virtual int DoExtractFeatures(
+				const iprm::IParamsSet* paramsPtr,
+				const iimg::IBitmap& image,
+				iipr::IFeaturesConsumer& results,
+				ibase::IProgressManager* progressManagerPtr = NULL);
+
+	// reimplemented (iproc::IProcessor)
+	virtual int DoProcessing(
+				const iprm::IParamsSet* paramsPtr,
+				const istd::IPolymorphic* inputPtr,
+				istd::IChangeable* outputPtr,
+				ibase::IProgressManager* progressManagerPtr = NULL);
+
+private:
+	I_REF(ilog::IMessageConsumer, m_resultConsumerCompPtr);
+	I_REF(imeas::INumericValue, m_defaultGridSizeCompPtr);
+	I_ATTR(int, m_defaultPatternTypeAttrPtr);
+	I_ATTR(QByteArray, m_gridSizeParamIdAttrPtr);
+	I_ATTR(QByteArray, m_patternTypeParamIdAttrPtr);
+};
+
+
+} // namespace iocv
+
+

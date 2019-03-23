@@ -122,6 +122,7 @@
     <ClCompile Include="..\CNoneCalibration2d.cpp" />
     <ClCompile Include="..\CPerspectiveCalibration2d.cpp" />
     <ClCompile Include="..\CPerspectiveCalibration2dComp.cpp" />
+    <ClCompile Include="..\CPointGrid.cpp" />
     <ClCompile Include="..\CSimpleLensCorrection.cpp" />
     <ClCompile Include="..\CSimpleLensCorrectionComp.cpp" />
     <ClCompile Include="..\CStaticCalibrationProviderComp.cpp" />
@@ -133,6 +134,7 @@
     <ClInclude Include="..\CNoneCalibration2d.h" />
     <ClInclude Include="..\CPerspectiveCalibration2d.h" />
     <ClInclude Include="..\CPerspectiveCalibration2dComp.h" />
+    <ClInclude Include="..\CPointGrid.h" />
     <ClInclude Include="..\CSimpleLensCorrection.h" />
     <ClInclude Include="..\CSimpleLensCorrectionComp.h" />
     <ClInclude Include="..\CStaticCalibrationProviderComp.h" />

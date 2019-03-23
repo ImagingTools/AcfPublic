@@ -170,6 +170,7 @@
     <ClCompile Include="..\CMultiPointPosCorrSupplierComp.cpp" />
     <ClCompile Include="..\CObjectFeature.cpp" />
     <ClCompile Include="..\CPerspCalibFinder.cpp" />
+    <ClCompile Include="..\CPointGridFeature.cpp" />
     <ClCompile Include="..\CPositionFromImageSupplierComp.cpp" />
     <ClCompile Include="..\CProcessedAcquisitionComp.cpp" />
     <ClCompile Include="..\CProcessedBitmapSupplierComp.cpp" />
@@ -245,6 +246,7 @@
     <ClInclude Include="..\CObjectFeature.h" />
     <ClInclude Include="..\CPerspCalibFinder.h" />
     <ClInclude Include="..\CPixelManip.h" />
+    <ClInclude Include="..\CPointGridFeature.h" />
     <ClInclude Include="..\CPositionFromImageSupplierComp.h" />
     <ClInclude Include="..\CProcessedAcquisitionComp.h" />
     <ClInclude Include="..\CProcessedBitmapSupplierComp.h" />
