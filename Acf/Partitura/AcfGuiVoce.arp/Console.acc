@@ -2,14 +2,19 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4709" Description="ACF"/>
-            <Version Id="1" Number="1995" Description="ACF-Solutions"/>
-            <Version Id="1023" Number="330496" Description="Qt Framework"/>
+            <Version Id="0" Number="4688" Description="ACF"/>
+            <Version Id="1" Number="1981" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="329218" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
     <Description>2D-Console with tool bar and status info</Description>
     <Keywords>&quot;View Display Scene Console Viewport&quot;</Keywords>
     <ElementsList>
+        <Element Id="AffineCalibration2d" PackageId="CalibrationPck" ComponentId="AffineCalibration2d">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
         <Element Id="CommandsToolBar" PackageId="QtGuiPck" ComponentId="CommandsToolBar">
             <Data IsEnabled="true" Flags="0">
                 <AttributeInfoMap>
@@ -18,6 +23,15 @@
                     </AttributeInfo>
                     <AttributeInfo Id="IconSize" Type="Integer" ExportId="IconSize">
                         <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="DistanceToolShape" PackageId="QtViewPck" ComponentId="DistanceToolShape">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DefaultModel" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Line"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
             </Data>
@@ -35,6 +49,20 @@
                         <Data IsEnabled="true" Value="ViewProvider"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="GeneralCalibrationShape" PackageId="CalibrationGuiPck" ComponentId="GeneralCalibrationShape">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DefaultModel" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="AffineCalibration2d"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Line" PackageId="BasePck" ComponentId="Line">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
             </Data>
         </Element>
         <Element Id="ShapeInfoGui" PackageId="QtViewPck" ComponentId="ShapeInfoGui">
@@ -61,7 +89,7 @@
                         <Data IsEnabled="false"/>
                     </AttributeInfo>
                     <AttributeInfo Id="CalibrationShape" Type="Reference" ExportId="CalibrationShape">
-                        <Data IsEnabled="false"/>
+                        <Data IsEnabled="true" Value="GeneralCalibrationShape"/>
                     </AttributeInfo>
                     <AttributeInfo Id="ColorSchema" Type="Reference" ExportId="ColorSchema">
                         <Data IsEnabled="false"/>
@@ -71,6 +99,9 @@
                     </AttributeInfo>
                     <AttributeInfo Id="DefaultStatusText" Type="Text" ExportId="DefaultStatusText">
                         <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DistanceShape" Type="Reference" ExportId="DistanceShape">
+                        <Data IsEnabled="true" Value="DistanceToolShape"/>
                     </AttributeInfo>
                     <AttributeInfo Id="FitMode" Type="Integer" ExportId="FitMode">
                         <Data IsEnabled="false"/>
@@ -107,7 +138,5 @@
         <Interface InterfaceId="iqt2d::IViewProvider" ComponentId="ViewProvider"/>
         <Interface InterfaceId="iqtgui::IGuiObject" ComponentId="ExtendedConsoleGui"/>
     </ExportedInterfaces>
-    <ExportedComponents>
-        <Component ExportedId="VisualStatus" ComponentId="ExtendedConsoleGui/VisualStatus"/>
-    </ExportedComponents>
+    <ExportedComponents/>
 </Acf>
