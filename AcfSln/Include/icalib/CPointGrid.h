@@ -39,6 +39,9 @@ class CPointGrid:
 {
 public:
 	typedef istd::TArray<i2d::CVector2d, 2> BaseClass;
+	typedef BaseClass::Elements Elements;
+
+	const Elements& GetElements() const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive) override;

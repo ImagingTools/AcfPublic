@@ -1695,6 +1695,15 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CCheckerboardPointGridExtractorComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_checkerboard_point_grid_extractor_comp_8h</filename>
+    <includes id="_t_sync_processor_comp_base_8h" name="TSyncProcessorCompBase.h" local="no" imported="no">iproc/TSyncProcessorCompBase.h</includes>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <class kind="class">iipr::CCheckerboardPointGridExtractorComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCircleFinderParams.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_circle_finder_params_8h</filename>
@@ -2127,6 +2136,16 @@
     <filename>_c_persp_calib_finder_8h</filename>
     <includes id="_c_perspective_calibration2d_8h" name="CPerspectiveCalibration2d.h" local="no" imported="no">icalib/CPerspectiveCalibration2d.h</includes>
     <class kind="class">iipr::CPerspCalibFinder</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CPerspectiveCalibrationSupplierComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_perspective_calibration_supplier_comp_8h</filename>
+    <includes id="_i_image_to_feature_processor_8h" name="IImageToFeatureProcessor.h" local="no" imported="no">iipr/IImageToFeatureProcessor.h</includes>
+    <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
+    <includes id="_c_perspective_calibration2d_8h" name="CPerspectiveCalibration2d.h" local="no" imported="no">icalib/CPerspectiveCalibration2d.h</includes>
+    <class kind="class">iipr::CPerspectiveCalibrationSupplierComp</class>
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
@@ -7938,6 +7957,20 @@
       <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
       <anchor>a376b9d0407bc035c7c352c3aefcfce22</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>BaseClass::Elements</type>
+      <name>Elements</name>
+      <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
+      <anchor>a3303bf2551abb87ae7f2a9d31ff0abb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>const Elements &amp;</type>
+      <name>GetElements</name>
+      <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
+      <anchor>a8627edfc6b3d566fef3957c3edb71e82</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -21165,6 +21198,7 @@
     <class kind="class">iipr::CCaliperParamsComp</class>
     <class kind="class">iipr::CCheckboardCalibSupplierComp</class>
     <class kind="class">iipr::CCheckerboardPatternGeneratorComp</class>
+    <class kind="class">iipr::CCheckerboardPointGridExtractorComp</class>
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
@@ -21210,6 +21244,7 @@
     <class kind="class">iipr::CMultiPointPosCorrSupplierComp</class>
     <class kind="class">iipr::CObjectFeature</class>
     <class kind="class">iipr::CPerspCalibFinder</class>
+    <class kind="class">iipr::CPerspectiveCalibrationSupplierComp</class>
     <class kind="class">iipr::CPixelManip</class>
     <class kind="class">iipr::CPointGridFeature</class>
     <class kind="class">iipr::CPositionFromImageSupplierComp</class>
@@ -22081,6 +22116,32 @@
       <anchorfile>classiipr_1_1_c_checkerboard_pattern_generator_comp.html</anchorfile>
       <anchor>a078096462628b27442212269a398eb30</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CCheckerboardPointGridExtractorComp</name>
+    <filename>classiipr_1_1_c_checkerboard_point_grid_extractor_comp.html</filename>
+    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <member kind="typedef">
+      <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_checkerboard_point_grid_extractor_comp.html</anchorfile>
+      <anchor>accdbe8e7caeb94f7e0ebe05e6923f548</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoExtractFeatures</name>
+      <anchorfile>classiipr_1_1_c_checkerboard_point_grid_extractor_comp.html</anchorfile>
+      <anchor>aacb616e518dac4aef3df6cf63642d3da</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;image, IFeaturesConsumer &amp;results, ibase::IProgressManager *progressManagerPtr=NULL) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_checkerboard_point_grid_extractor_comp.html</anchorfile>
+      <anchor>ad45a1aaf1bb00c3e7a85ce51528f07a2</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25508,6 +25569,40 @@
       <anchorfile>classiipr_1_1_c_persp_calib_finder.html</anchorfile>
       <anchor>accd29a9366377c5cbdb6a54068df5a13</anchor>
       <arglist>(const i2d::CVector2d *nominalPositionsPtr, const i2d::CVector2d *foundPositionsPtr, int positionsCount, const i2d::CVector2d &amp;opticalCenter, icalib::CPerspectiveCalibration2d &amp;result, double &amp;lensCorrFactor, bool allowPerspective=true, bool allowRotation=true, bool allowScale=true, bool allowAnisotropic=true, bool allowTranslation=true) const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CPerspectiveCalibrationSupplierComp</name>
+    <filename>classiipr_1_1_c_perspective_calibration_supplier_comp.html</filename>
+    <base>TSupplierCompWrap&lt; icalib::CPerspectiveCalibration2d &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iinsp::TSupplierCompWrap&lt; icalib::CPerspectiveCalibration2d &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_perspective_calibration_supplier_comp.html</anchorfile>
+      <anchor>a9a73378e6ce9d86b11178a241366aaf2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiipr_1_1_c_perspective_calibration_supplier_comp.html</anchorfile>
+      <anchor>ab0033b6d88938e85bc86930c92cd780c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CalculateCalibration</name>
+      <anchorfile>classiipr_1_1_c_perspective_calibration_supplier_comp.html</anchorfile>
+      <anchor>a46d4ca309ca99a109ea13b6613f4d689</anchor>
+      <arglist>(const iimg::IBitmap &amp;image, icalib::CPerspectiveCalibration2d &amp;result) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiipr_1_1_c_perspective_calibration_supplier_comp.html</anchorfile>
+      <anchor>a7014d07d3273912834dc779d59e2b3cf</anchor>
+      <arglist>(ProductType &amp;result) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38547,6 +38642,7 @@
     <file>CCaliperParamsComp.h</file>
     <file>CCheckboardCalibSupplierComp.h</file>
     <file>CCheckerboardPatternGeneratorComp.h</file>
+    <file>CCheckerboardPointGridExtractorComp.h</file>
     <file>CCircleFinderParams.h</file>
     <file>CCircleFinderParamsComp.h</file>
     <file>CCircleFindProcessorComp.h</file>
@@ -38591,6 +38687,7 @@
     <file>CMultiPointPosCorrSupplierComp.h</file>
     <file>CObjectFeature.h</file>
     <file>CPerspCalibFinder.h</file>
+    <file>CPerspectiveCalibrationSupplierComp.h</file>
     <file>CPixelManip.h</file>
     <file>CPointGridFeature.h</file>
     <file>CPositionFromImageSupplierComp.h</file>

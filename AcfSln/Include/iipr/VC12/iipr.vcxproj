@@ -126,6 +126,7 @@
     <ClCompile Include="..\CCaliperParamsComp.cpp" />
     <ClCompile Include="..\CCheckboardCalibSupplierComp.cpp" />
     <ClCompile Include="..\CCheckerboardPatternGeneratorComp.cpp" />
+    <ClCompile Include="..\CCheckerboardPointGridExtractorComp.cpp" />
     <ClCompile Include="..\CCircleFindProcessorComp.cpp" />
     <ClCompile Include="..\CCircleFinderParams.cpp" />
     <ClCompile Include="..\CCircleFinderParamsComp.cpp" />
@@ -170,6 +171,7 @@
     <ClCompile Include="..\CMultiPointPosCorrSupplierComp.cpp" />
     <ClCompile Include="..\CObjectFeature.cpp" />
     <ClCompile Include="..\CPerspCalibFinder.cpp" />
+    <ClCompile Include="..\CPerspectiveCalibrationSupplierComp.cpp" />
     <ClCompile Include="..\CPointGridFeature.cpp" />
     <ClCompile Include="..\CPositionFromImageSupplierComp.cpp" />
     <ClCompile Include="..\CProcessedAcquisitionComp.cpp" />
@@ -201,6 +203,7 @@
     <ClInclude Include="..\CCaliperParamsComp.h" />
     <ClInclude Include="..\CCheckboardCalibSupplierComp.h" />
     <ClInclude Include="..\CCheckerboardPatternGeneratorComp.h" />
+    <ClInclude Include="..\CCheckerboardPointGridExtractorComp.h" />
     <ClInclude Include="..\CCircleFindProcessorComp.h" />
     <ClInclude Include="..\CCircleFinderParams.h" />
     <ClInclude Include="..\CCircleFinderParamsComp.h" />
@@ -245,6 +248,7 @@
     <ClInclude Include="..\CMultiPointPosCorrSupplierComp.h" />
     <ClInclude Include="..\CObjectFeature.h" />
     <ClInclude Include="..\CPerspCalibFinder.h" />
+    <ClInclude Include="..\CPerspectiveCalibrationSupplierComp.h" />
     <ClInclude Include="..\CPixelManip.h" />
     <ClInclude Include="..\CPointGridFeature.h" />
     <ClInclude Include="..\CPositionFromImageSupplierComp.h" />

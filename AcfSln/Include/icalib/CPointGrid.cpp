@@ -34,6 +34,12 @@ namespace icalib
 {
 
 
+const CPointGrid::Elements& CPointGrid::GetElements() const
+{
+	return m_elements;
+}
+
+
 // reimplemented (iser::ISerializable)
 
 bool CPointGrid::Serialize(iser::IArchive& archive)
