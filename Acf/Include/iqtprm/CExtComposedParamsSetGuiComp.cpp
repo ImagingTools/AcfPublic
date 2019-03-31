@@ -304,10 +304,6 @@ void CExtComposedParamsSetGuiComp::OnGuiModelDetached()
 
 	iqt::CSignalBlocker blocker(GetPageContainerWidget());
 
-	ResetPages();
-
-	m_connectedEditorsMap.clear();
-
 	int elementsCount = qMin(m_observersCompPtr.GetCount(), m_idsAttrPtr.GetCount());
 	for (int i = 0; i < elementsCount; ++i){
 		const QByteArray& paramId = m_idsAttrPtr[i];
@@ -325,6 +321,10 @@ void CExtComposedParamsSetGuiComp::OnGuiModelDetached()
 			}
 		}
 	}
+
+	m_connectedEditorsMap.clear();
+
+	ResetPages();
 
 	BaseClass::OnGuiModelDetached();
 }
