@@ -3480,6 +3480,7 @@
     <includes id="_t_array_8h" name="TArray.h" local="no" imported="no">istd/TArray.h</includes>
     <includes id="_t_vector_8h" name="TVector.h" local="no" imported="no">imath/TVector.h</includes>
     <includes id="_t_fulcrum_grid_function_base_8h" name="TFulcrumGridFunctionBase.h" local="no" imported="no">imath/TFulcrumGridFunctionBase.h</includes>
+    <includes id="_c_var_matrix_8h" name="CVarMatrix.h" local="no" imported="no">imath/CVarMatrix.h</includes>
     <includes id="_c_spline_segment_function_8h" name="CSplineSegmentFunction.h" local="no" imported="no">imath/CSplineSegmentFunction.h</includes>
     <class kind="class">imath::TMultidimensionalPolynomial</class>
     <namespace>imath</namespace>
