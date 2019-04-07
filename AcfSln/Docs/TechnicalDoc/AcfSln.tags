@@ -31834,15 +31834,15 @@
       <type>virtual QByteArray</type>
       <name>InsertNewProductionPart</name>
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>a528d2a5ef80bb7d3f873c31da93730a7</anchor>
-      <arglist>(const QString &amp;productName, const QByteArray &amp;productId, const QString &amp;serialNumber=QString(), istd::IInformationProvider::InformationCategory=istd::IInformationProvider::IC_NONE, const QDateTime &amp;productionTime=QDateTime())</arglist>
+      <anchor>a5afab4ec5c5e109c61be614f893ef3d7</anchor>
+      <arglist>(const QString &amp;productName, const QByteArray &amp;productId, const QString &amp;serialNumber, istd::IInformationProvider::InformationCategory, const QDateTime &amp;productionTime)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>InsertNewInspectionResult</name>
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>a0c9f8c4befc378df452aa36029286b34</anchor>
-      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QString &amp;inspectionName, istd::IInformationProvider::InformationCategory status=istd::IInformationProvider::IC_NONE)</arglist>
+      <anchor>a1113b38a526e73a2b225eadb5b647526</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId, const QString &amp;inspectionName, istd::IInformationProvider::InformationCategory status, const QDateTime &amp;resultTime)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
@@ -32074,15 +32074,15 @@
       <type>virtual QByteArray</type>
       <name>InsertNewProductionPart</name>
       <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
-      <anchor>a2ce1c5b607366d1b19908b3b346e94e9</anchor>
-      <arglist>(const QString &amp;productName, const QByteArray &amp;productId, const QString &amp;serialNumber=QString(), istd::IInformationProvider::InformationCategory=istd::IInformationProvider::IC_NONE, const QDateTime &amp;productionTime=QDateTime())=0</arglist>
+      <anchor>a75c0450297dbbc48524967334e110f77</anchor>
+      <arglist>(const QString &amp;productName, const QByteArray &amp;productId, const QString &amp;serialNumber, istd::IInformationProvider::InformationCategory partStatus, const QDateTime &amp;productionTime)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
       <name>InsertNewInspectionResult</name>
       <anchorfile>classiprod_1_1_i_production_history_controller.html</anchorfile>
-      <anchor>a40a8726502fda40c3e3c4e2fc56ca213</anchor>
-      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;inspectionId, const QString &amp;inspectionName, istd::IInformationProvider::InformationCategory status=istd::IInformationProvider::IC_NONE)=0</arglist>
+      <anchor>a57c4cb33fa25dfd32893babec343c259</anchor>
+      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;inspectionId, const QString &amp;inspectionName, istd::IInformationProvider::InformationCategory status, const QDateTime &amp;resultTime)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
