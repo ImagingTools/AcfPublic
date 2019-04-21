@@ -34799,6 +34799,13 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>PF_XYZ32</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea5da2e3a373c291666119296689886d4a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>PF_USER</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>

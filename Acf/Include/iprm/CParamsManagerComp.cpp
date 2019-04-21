@@ -283,12 +283,6 @@ bool CParamsManagerComp::Serialize(iser::IArchive& archive)
 
 // reimplemented (istd::IChangeable)
 
-int CParamsManagerComp::GetSupportedOperations() const
-{
-    return SO_COPY | SO_COMPARE;
-}
-
-
 bool CParamsManagerComp::CopyFrom(const istd::IChangeable& object, istd::IChangeable::CompatibilityMode mode)
 {
 	const CParamsManagerComp* sourcePtr = dynamic_cast<const CParamsManagerComp*>(&object);
@@ -337,51 +331,6 @@ bool CParamsManagerComp::CopyFrom(const istd::IChangeable& object, istd::IChange
 	m_selectedIndex = selectedIndex;
 
 	return true;
-}
-
-
-bool CParamsManagerComp::IsEqual(const IChangeable& object) const
-{
-    const CParamsManagerComp* objectPtr = dynamic_cast<const CParamsManagerComp*>(&object);
-    if (objectPtr == NULL){
-        return false;
-    }
-
-    if (GetParamsSetsCount() != objectPtr->GetParamsSetsCount()){
-        return false;
-    }
-
-    if (GetSelectedOptionIndex() != objectPtr->GetSelectedOptionIndex()){
-        return false;
-    }
-
-    int paramsCount = GetParamsSetsCount();
-
-    for (int i = 0; i < paramsCount; ++i){
-        IParamsSet* paramsSetPtr = GetParamsSet(i);
-
-        const IParamsSet* objectParamSetPtr = objectPtr->GetParamsSet(i);
-
-        if ((paramsSetPtr != nullptr && objectParamSetPtr == nullptr) || (paramsSetPtr == nullptr && objectParamSetPtr != nullptr)){
-            return false;
-        }
-
-        if (paramsSetPtr != nullptr && objectParamSetPtr != nullptr){
-            if (paramsSetPtr->IsEqual(*objectParamSetPtr) == false){
-                return false;
-            }
-        }
-
-        if (GetParamsSetName(i) != objectPtr->GetParamsSetName(i)){
-            return false;
-        }
-
-        if (IsOptionEnabled(i) != objectPtr->IsOptionEnabled(i)){
-            return false;
-        }
-    }
-
-    return true;
 }
 
 
