@@ -31778,14 +31778,13 @@
   <compound kind="class">
     <name>iprod::CProductionHistoryComp</name>
     <filename>classiprod_1_1_c_production_history_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iprod::IProductionHistoryController</base>
-    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>aacfcede8980b1e31b11ed9d6a992bd66</anchor>
+      <anchor>a69a6032dda98be4322372d4a241b2fe8</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -31864,13 +31863,6 @@
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
       <anchor>ad3f4c97c6cd5ace3475f98247e9b0fbf</anchor>
       <arglist>(const QByteArray &amp;productionPartId)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>ac2122a5200b2ea6ffb47843cab432a6c</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
