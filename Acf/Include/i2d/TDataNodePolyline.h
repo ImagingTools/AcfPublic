@@ -28,8 +28,9 @@
 #include <vector>
 
 // ACF includes
-#include <i2d/CDataNodePolylineBase.h>
 #include <istd/CChangeNotifier.h>
+#include <istd/CChangeGroup.h>
+#include <i2d/CDataNodePolylineBase.h>
 
 
 namespace i2d
@@ -191,6 +192,8 @@ bool TDataNodePolyline<NodeData>::RemoveNode(int index)
 template<class NodeData>
 bool TDataNodePolyline<NodeData>::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 {
+	istd::CChangeGroup changeGroup(this);
+
 	Clear();
 
 	const TDataNodePolyline<NodeData>* polygonPtr = dynamic_cast<const TDataNodePolyline<NodeData>*>(&object);

@@ -1891,6 +1891,13 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CGeometryMessage.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_geometry_message_8h</filename>
+    <class kind="class">iipr::CGeometryMessage</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CGrayToRgbProcessorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_gray_to_rgb_processor_comp_8h</filename>
@@ -21217,6 +21224,7 @@
     <class kind="class">iipr::CFastGaussianProcessorComp</class>
     <class kind="class">iipr::CFeaturesContainer</class>
     <class kind="class">iipr::CFeatureToImageMapperProcessorComp</class>
+    <class kind="class">iipr::CGeometryMessage</class>
     <class kind="class">iipr::CGrayToRgbProcessorComp</class>
     <class kind="class">iipr::CHoughLineFinderComp</class>
     <class kind="class">iipr::CHoughLineFromPosFinderComp</class>
@@ -23858,8 +23866,8 @@
       <type>virtual void</type>
       <name>ResetFeatures</name>
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
-      <anchor>a614767b01248f27acb51b5966c3deb95</anchor>
-      <arglist>()</arglist>
+      <anchor>a92290d2b4ec3e836a96f577b4e588647</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -23881,6 +23889,13 @@
       <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
       <anchor>afd9d8e2847c4399310cc5dd6583b9deb</anchor>
       <arglist>(int index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiipr_1_1_c_features_container.html</anchorfile>
+      <anchor>a78a114fec822989233e666e25382e38b</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23985,6 +24000,32 @@
       <anchorfile>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</anchorfile>
       <anchor>a4c008f6b71e0917ca53da1ed4ba387fa</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iipr::CGeometryMessage</name>
+    <filename>classiipr_1_1_c_geometry_message.html</filename>
+    <base>ilog::CExtMessage</base>
+    <member kind="typedef">
+      <type>ilog::CExtMessage</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
+      <anchor>ad407d89a0d2d1d54f1cae8e4f4d20418</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CGeometryMessage</name>
+      <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
+      <anchor>a624e7bd57392990db460ac9f461c0e97</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CGeometryMessage</name>
+      <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
+      <anchor>a8cc23dd783a954dc9d0ec7ebf4c0545b</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38653,6 +38694,7 @@
     <file>CFastGaussianProcessorComp.h</file>
     <file>CFeaturesContainer.h</file>
     <file>CFeatureToImageMapperProcessorComp.h</file>
+    <file>CGeometryMessage.h</file>
     <file>CGrayToRgbProcessorComp.h</file>
     <file>CHoughLineFinderComp.h</file>
     <file>CHoughLineFromPosFinderComp.h</file>

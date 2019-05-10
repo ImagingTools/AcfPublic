@@ -1510,6 +1510,13 @@
       <anchor>a559c446314e2c3671d95f8ac0cb6e2d1</anchor>
       <arglist>(ProductType &amp;result) const override</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static InteraceType *</type>
+      <name>ExtractCalibration</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
+      <anchor>a50120aae80035b1c14e9a1dbc8ca8b8a</anchor>
+      <arglist>(COcvIntrinsicCameraCalibrationSupplierComp &amp;parent)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iocv::COcvMedianProcessorComp</name>

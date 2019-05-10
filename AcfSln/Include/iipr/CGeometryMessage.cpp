@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,27 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <iipr/CGeometryMessage.h>
 
 
-namespace istd
+namespace iipr
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+// public methods
+
+CGeometryMessage::CGeometryMessage()
+	:BaseClass(&s_factory)
 {
-	RS_ORIGINAL_VERSION =  4782,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+}
 
 
-} // namespace istd
+CGeometryMessage::CGeometryMessage(
+			istd::IInformationProvider::InformationCategory category,
+			int id,
+			const QString& text,
+			const QString& source,
+			int flags,
+			const QDateTime* timeStampPtr)
+	:BaseClass(category, id, text, source, flags, timeStampPtr, &s_factory)
+{
+}
 
 
-#endif // !istd_AcfVersion_included
+// private static members
+
+i2d::CObject2dFactory CGeometryMessage::s_factory;
+
+
+} // namespace iipr
 
 

@@ -481,6 +481,8 @@ void CProductionHistoryComp::ReadHistoryItems()
 
 		m_historyItems.push_back(historyItem);
 	}
+
+	std::sort(m_historyItems.begin(), m_historyItems.end());
 }
 
 
@@ -515,6 +517,12 @@ CProductionHistoryComp::HistoryItem::HistoryItem()
 	:status(istd::IInformationProvider::IC_NONE)
 {
 	uuid = QUuid::createUuid().toByteArray();
+}
+
+
+bool CProductionHistoryComp::HistoryItem::operator < (const HistoryItem& other) const
+{
+	return timestamp < other.timestamp;
 }
 
 

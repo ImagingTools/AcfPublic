@@ -484,8 +484,9 @@
     <name>TDataNodePolyline.h</name>
     <path>C:/Temp/Acf/Include/i2d/</path>
     <filename>_t_data_node_polyline_8h</filename>
-    <includes id="_c_data_node_polyline_base_8h" name="CDataNodePolylineBase.h" local="no" imported="no">i2d/CDataNodePolylineBase.h</includes>
     <includes id="_c_change_notifier_8h" name="CChangeNotifier.h" local="no" imported="no">istd/CChangeNotifier.h</includes>
+    <includes id="_c_change_group_8h" name="CChangeGroup.h" local="no" imported="no">istd/CChangeGroup.h</includes>
+    <includes id="_c_data_node_polyline_base_8h" name="CDataNodePolylineBase.h" local="no" imported="no">i2d/CDataNodePolylineBase.h</includes>
     <class kind="class">i2d::TDataNodePolyline</class>
     <namespace>i2d</namespace>
   </compound>

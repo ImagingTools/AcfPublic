@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-
 #pragma once
+
 
 // ACF includes
 #include <i2d/ICalibrationProvider.h>
@@ -35,7 +35,6 @@
 
 namespace iipr
 {
-
 
 
 class CPerspectiveCalibrationSupplierComp:
@@ -52,6 +51,8 @@ public:
 		I_ASSIGN(m_pointGridTransformation, "PointGridTransformation", "Provides of 2D transformation of point grid in 2D coortinate space", false, "PointGridTransformation");
 		I_ASSIGN(m_cellSizeParamId, "CellSizeParamsId", "ID of point grid cell size in parameter set (type imeas::INumericValue): cell size in logical units", false, "CellSizeParam");
 		I_ASSIGN(m_defaultCellSizeAttrPtr, "DefaultCellSize", "Default size of single cell (in logical units) if no checkboard parameters specified", true, 10);
+		I_ASSIGN(m_invertXAttrPtr, "InvertX", "Invert x direction", false, false);
+		I_ASSIGN(m_invertYAttrPtr, "InvertY", "Invert y direction", false, false);
 	I_END_COMPONENT;
 
 	// reimplemented (i2d::ICalibrationProvider)
@@ -69,7 +70,8 @@ private:
 	I_REF(i2d::ICalibrationProvider, m_pointGridTransformation);
 	I_ATTR(QByteArray, m_cellSizeParamId);
 	I_ATTR(double, m_defaultCellSizeAttrPtr);
-
+	I_ATTR(bool, m_invertXAttrPtr);
+	I_ATTR(bool, m_invertYAttrPtr);
 };
 
 

@@ -129,7 +129,7 @@ private:
 };
 
 
-} // namespace iipr
+} // namespace iocv
 
 
 

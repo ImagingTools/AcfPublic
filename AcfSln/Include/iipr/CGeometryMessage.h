@@ -2,7 +2,7 @@
 **
 **	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
 **
-**	This file is part of the ACF Toolkit.
+**	This file is part of the ACF-Solutions Toolkit.
 **
 **	This file may be used under the terms of the GNU Lesser
 **	General Public License version 2.1 as published by the Free Software
@@ -20,27 +20,43 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#ifndef iipr_CGeometryMessage_included
+#define iipr_CGeometryMessage_included
 
 
-namespace istd
+// ACF includes
+#include <ilog/CExtMessage.h>
+#include <i2d/CObject2dFactory.h>
+
+
+namespace iipr
 {
+
 
 /**
-	Enumeration for reflecting the state of ACF's SVN repository.
+	Message implementation for transport of 2D-objects.
 */
-enum RepositoryState
+class CGeometryMessage: public ilog::CExtMessage
 {
-	RS_ORIGINAL_VERSION =  4782,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	typedef ilog::CExtMessage BaseClass;
+
+	CGeometryMessage();
+	CGeometryMessage(istd::IInformationProvider::InformationCategory category,
+				int id,
+				const QString& text,
+				const QString& source,
+				int flags = 0,
+				const QDateTime* timeStampPtr = NULL);
+
+private:
+	static i2d::CObject2dFactory s_factory;
 };
 
 
-} // namespace istd
+} // namespace iipr
 
 
-#endif // !istd_AcfVersion_included
+#endif // !iipr_CGeometryMessage_included
 
 

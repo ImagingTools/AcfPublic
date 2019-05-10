@@ -45,7 +45,7 @@ CCameraMultiplexerComp::CCameraMultiplexerComp()
 
 istd::CIndex2d CCameraMultiplexerComp::GetBitmapSize(const iprm::IParamsSet* paramsPtr) const
 {
-	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr);
+	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr());
 	const IBitmapAcquisition* camera = GetSelectedCamera();
 
 	if (camera != NULL){
@@ -60,7 +60,7 @@ istd::CIndex2d CCameraMultiplexerComp::GetBitmapSize(const iprm::IParamsSet* par
 
 int CCameraMultiplexerComp::GetProcessorState(const iprm::IParamsSet* paramsPtr) const
 {
-	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr);
+	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr());
 	const IBitmapAcquisition* camera = GetSelectedCamera();
 
 	if (camera != NULL){
@@ -76,7 +76,7 @@ bool CCameraMultiplexerComp::AreParamsAccepted(
 			const istd::IPolymorphic* inputPtr,
 			const istd::IChangeable* outputPtr) const
 {
-	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr);
+	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr());
 	const IBitmapAcquisition* camera = GetSelectedCamera();
 
 	if (camera != NULL){
@@ -93,7 +93,7 @@ int CCameraMultiplexerComp::DoProcessing(
 			istd::IChangeable* outputPtr,
 			ibase::IProgressManager* progressManagerPtr)
 {
-	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr);
+	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr());
 	IBitmapAcquisition* camera = GetSelectedCamera();
 
 	if (camera != NULL){
@@ -110,7 +110,7 @@ int CCameraMultiplexerComp::BeginTask(
 			istd::IChangeable* outputPtr,
 			ibase::IProgressManager* progressManagerPtr)
 {
-	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr);
+	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr());
 	IBitmapAcquisition* camera = GetSelectedCamera();
 
 	if (camera != NULL){
@@ -172,7 +172,7 @@ int CCameraMultiplexerComp::GetTaskState(int taskId) const
 
 void CCameraMultiplexerComp::InitProcessor(const iprm::IParamsSet* paramsPtr)
 {
-	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr);
+	const iprm::IParamsSet* workingParamsPtr = GetWorkingParamsSet(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr());
 	IBitmapAcquisition* camera = GetSelectedCamera();
 
 	if (camera != NULL){
@@ -194,9 +194,9 @@ int CCameraMultiplexerComp::GetSelectedIndex() const
 }
 
 
-const iprm::IParamsSet* CCameraMultiplexerComp::GetWorkingParamsSet(const iprm::IParamsSet* inputParamsPtr) const
+const iprm::IParamsSet* CCameraMultiplexerComp::GetWorkingParamsSet(const iprm::IParamsSet* paramsPtr) const
 {
-	iprm::TParamsPtr<iprm::IParamsManager> cameraParamsManagerPtr(inputParamsPtr, *m_cameraManagerParamIdAttrPtr);
+	iprm::TParamsPtr<iprm::IParamsManager> cameraParamsManagerPtr(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr(), *m_cameraManagerParamIdAttrPtr);
 	if (cameraParamsManagerPtr.IsValid()){
 		int selectedCameraIndex = GetSelectedIndex();
 		return cameraParamsManagerPtr->GetParamsSet(selectedCameraIndex);
