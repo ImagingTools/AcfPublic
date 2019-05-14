@@ -43,6 +43,11 @@ namespace iprod
 class IProductionHistory: virtual public istd::IChangeable
 {
 public:
+	enum ChangeFlags
+	{
+		CF_NEW_OBJECT = 0x123456
+	};
+
 	struct ProcessingInfo
 	{
 		ProcessingInfo()

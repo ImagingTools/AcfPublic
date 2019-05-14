@@ -31828,6 +31828,20 @@
       <anchor>a69a6032dda98be4322372d4a241b2fe8</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a3d7b3b67f04819411db750d62ccbe590</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_NEW_OBJECT</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a3d7b3b67f04819411db750d62ccbe590aa8d4b7ef3f289ff09e427571c4f7e65c</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>QList&lt; ObjectInfo &gt;</type>
       <name>ObjectInfoList</name>
