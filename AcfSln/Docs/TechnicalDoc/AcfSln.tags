@@ -3718,10 +3718,25 @@
     <namespace>iweb</namespace>
   </compound>
   <compound kind="file">
+    <name>CWebServerStatus.h</name>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
+    <filename>_c_web_server_status_8h</filename>
+    <includes id="_i_web_server_status_8h" name="IWebServerStatus.h" local="no" imported="no">iweb/IWebServerStatus.h</includes>
+    <class kind="class">iweb::CWebServerStatus</class>
+    <namespace>iweb</namespace>
+  </compound>
+  <compound kind="file">
     <name>iweb.h</name>
     <path>C:/Temp/AcfSln/Include/iweb/</path>
     <filename>iweb_8h</filename>
-    <namespace>iwiz</namespace>
+    <namespace>iweb</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IWebServerStatus.h</name>
+    <path>C:/Temp/AcfSln/Include/iweb/</path>
+    <filename>_i_web_server_status_8h</filename>
+    <class kind="class">iweb::IWebServerStatus</class>
+    <namespace>iweb</namespace>
   </compound>
   <compound kind="file">
     <name>CComposedStateControllerComp.h</name>
@@ -37389,6 +37404,8 @@
     <name>iweb</name>
     <filename>namespaceiweb.html</filename>
     <class kind="class">iweb::CCgiManager</class>
+    <class kind="class">iweb::CWebServerStatus</class>
+    <class kind="class">iweb::IWebServerStatus</class>
   </compound>
   <compound kind="class">
     <name>iweb::CCgiManager</name>
@@ -37896,6 +37913,128 @@
       <anchorfile>classiweb_1_1_c_cgi_manager.html</anchorfile>
       <anchor>a61fe1dc0f635c0bae5ed07262bb39cb5</anchor>
       <arglist>(const QString &amp;query, const QString &amp;pairSeparator=&quot;&amp;&quot;)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iweb::CWebServerStatus</name>
+    <filename>classiweb_1_1_c_web_server_status.html</filename>
+    <base virtualness="virtual">iweb::IWebServerStatus</base>
+    <member kind="function">
+      <type></type>
+      <name>CWebServerStatus</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>a35ca8255f34fed0f0b8b8e397cf9c27f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ServerStatus</type>
+      <name>GetServerStatus</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>aefd9ab985c0178d09a943e0491b93042</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetServerStatus</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>a51d04f3c9bcc727a013eeabe3be283b6</anchor>
+      <arglist>(ServerStatus status)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>a401b20ca98a7207c24e404de6388f04c</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>a15372c7e2fe82543dd3ed391c41bceb1</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>aca33768d61a79451114aa9135ef35bf2</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>a5ce64e2f91f346d4abfd6691050ab800</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
+      <anchor>ae0791309123a1af40fb0f0382674b645</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_DECLARE_ENUM</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>a9db9b943c862b87d628d548c6f3fc272</anchor>
+      <arglist>(ServerStatus, SS_NONE, SS_STARTING, SS_READY, SS_MAINTENANCE)</arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ServerStatus</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>a83a0f2742dae388af4a47fd0b2921853</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SS_NONE</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>a83a0f2742dae388af4a47fd0b2921853a8fcf3c298c080c5ca80ef518c89e5b5b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SS_STARTING</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>a83a0f2742dae388af4a47fd0b2921853a509a6d0926aca1ff90d8188cf43efc0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SS_READY</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>a83a0f2742dae388af4a47fd0b2921853a114035d466ca06735034a50245658617</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SS_MAINTENANCE</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>a83a0f2742dae388af4a47fd0b2921853a86b70223152415f898f705a2672c322d</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iweb::IWebServerStatus</name>
+    <filename>classiweb_1_1_i_web_server_status.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual ServerStatus</type>
+      <name>GetServerStatus</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>afe69330ffe2e620db5d43a2be3dc3a85</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetServerStatus</name>
+      <anchorfile>classiweb_1_1_i_web_server_status.html</anchorfile>
+      <anchor>ad91823c959d0fbf559510c8b3f8b70af</anchor>
+      <arglist>(ServerStatus status)=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -39039,7 +39178,9 @@
     <path>C:/Temp/AcfSln/Include/iweb/</path>
     <filename>dir_3b55590aa0ae0f87f2d4ce3a62dc55c7.html</filename>
     <file>CCgiManager.h</file>
+    <file>CWebServerStatus.h</file>
     <file>iweb.h</file>
+    <file>IWebServerStatus.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iwiz</name>

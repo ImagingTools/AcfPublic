@@ -81,6 +81,9 @@ iproc.file = ../../Include/iproc/QMake/iproc.pro
 SUBDIRS += iprocgui
 iprocgui.file = ../../Include/iprocgui/QMake/iprocgui.pro
 
+SUBDIRS += iweb
+iweb.file = ../../Include/iweb/QMake/iweb.pro
+
 SUBDIRS += iwiz
 iwiz.file = ../../Include/iwiz/QMake/iwiz.pro
 
@@ -173,6 +176,10 @@ AcfSlnLoc.file = ../../Impl/AcfSlnLoc/QMake/AcfSlnLoc.pro
 	SUBDIRS += SignalPck
 	SignalPck.file = ../../Impl/SignalPck/QMake/SignalPck.pro
 	SignalPck.depends = isig
+
+	SUBDIRS += WebPck
+	WebPck.file = ../../Impl/WebPck/QMake/WebPck.pro
+	WebPck.depends = iwiz iproc
 
 	SUBDIRS += WizardPck
 	WizardPck.file = ../../Impl/WizardPck/QMake/WizardPck.pro
