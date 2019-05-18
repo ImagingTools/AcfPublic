@@ -39869,6 +39869,20 @@
     </member>
     <member kind="function">
       <type>double</type>
+      <name>GetElementAt</name>
+      <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
+      <anchor>ae5136404d00ad0384871b983bedb4b11</anchor>
+      <arglist>(int x, int y) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double &amp;</type>
+      <name>GetElementRef</name>
+      <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
+      <anchor>aa9b0399ed604d37561e478b5800f92b3</anchor>
+      <arglist>(int x, int y)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
       <name>GetMaxElement</name>
       <anchorfile>classimath_1_1_c_var_matrix.html</anchorfile>
       <anchor>ac62211d2404d5d63138db4385ad3984c</anchor>
