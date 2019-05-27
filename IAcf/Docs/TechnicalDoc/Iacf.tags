@@ -96,6 +96,23 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>CLensDistorsionCalibration.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_lens_distorsion_calibration_8h</filename>
+    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
+    <class kind="class">iocv::CLensDistorsionCalibration</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CLensDistorsionCalibrationProviderComp.h</name>
+    <path>C:/Temp/Iacf/Include/iocv/</path>
+    <filename>_c_lens_distorsion_calibration_provider_comp_8h</filename>
+    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
+    <includes id="_c_lens_distorsion_calibration_8h" name="CLensDistorsionCalibration.h" local="no" imported="no">iocv/CLensDistorsionCalibration.h</includes>
+    <class kind="class">iocv::CLensDistorsionCalibrationProviderComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_acquisition_comp_8h</filename>
@@ -957,6 +974,8 @@
     <filename>namespaceiocv.html</filename>
     <class kind="class">iocv::CCorrSearchProcessorComp</class>
     <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
+    <class kind="class">iocv::CLensDistorsionCalibration</class>
+    <class kind="class">iocv::CLensDistorsionCalibrationProviderComp</class>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
@@ -1136,6 +1155,199 @@
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
       <anchor>a2b3f45b578fb54e59589139fb2c84c71</anchor>
       <arglist>(const iimg::IBitmap &amp;image, const iimg::IBitmap &amp;modelImage, const i2d::CRect &amp;aoi, const istd::CRange &amp;scaleRange, double scaleStep, const istd::CRange &amp;angleRange, double angleStep, int minDistance, int levels, const istd::CRange &amp;cannyEdgeThreshold, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::CLensDistorsionCalibration</name>
+    <filename>classiocv_1_1_c_lens_distorsion_calibration.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
+    <member kind="function">
+      <type></type>
+      <name>CLensDistorsionCalibration</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a71d579207a99ec9547f3cf1346ca0665</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLensDistorsionCalibration</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a60b01f74c9302f31aa4a5da22f03804c</anchor>
+      <arglist>(const COcvIntrinsicCameraCalibration &amp;calibration)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetArgumentArea</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a9470f4b95c5bee04ad411dfd899a4fc1</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::CRectangle *</type>
+      <name>GetResultArea</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a4e75bb49cf10a64fd7bb6f16d3b2d868</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetArgumentUnitInfo</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a6ddb5f851430568bc4fbad190b130a09</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const imath::IUnitInfo *</type>
+      <name>GetResultUnitInfo</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a377b7bd7403b41c81291f821459a195b</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ICalibration2d *</type>
+      <name>CreateCombinedCalibration</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a25770f27d6b1670a4147c039b9caf321</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTransformationFlags</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a86491280b7ddbd874f1a6b57626ca79c</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetDistance</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a192fea152a70b774f2e79dd3b6b5dae3</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetPositionAt</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a76ef801b7c0ef4b2b17fbba906ec00bc</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvPositionAt</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a0f200626549b435d7a1d8767114f7aaa</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalTransform</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>ac6913a4c34a906b4f28c786f52e49701</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetLocalInvTransform</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a35d0069ac77da19a11208a11b2929f4e</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a33f971f244ba953b630eba97f90b8e2e</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetInvValueAt</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>ae3a4c0bd3fa6263f8288f38356e6c57d</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a62a78f16d32f11d4b3307b27f904c708</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual i2d::CVector2d</type>
+      <name>GetValueAt</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a7bdd70d95304a0c11429feb46ee93da2</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>ac1c1faabb85344f3a1a0dacf84520a95</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>ab9eeb2e4c6428e1b56d8e0c9e5ec4e7b</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a1da5252a2d4e0a0ecee2a12083964bcb</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a88c717632681e0309c4789a2e30ef365</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a4ca02aae38fa0c287b683c41a7bd3215</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
+      <anchor>a17a1fc608a61b62307e2a365716d91e8</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::CLensDistorsionCalibrationProviderComp</name>
+    <filename>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</filename>
+    <base>TSupplierCompWrap&lt; CLensDistorsionCalibration &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>iinsp::TSupplierCompWrap&lt; CLensDistorsionCalibration &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</anchorfile>
+      <anchor>a28be7b37e78f2a243a75390a3aba32cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</anchorfile>
+      <anchor>a2a251745ef164450cde6ad3565003b72</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int</type>
+      <name>ProduceObject</name>
+      <anchorfile>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</anchorfile>
+      <anchor>a6455e69d855c03aaae03fa47d27af7e6</anchor>
+      <arglist>(ProductType &amp;result) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2889,6 +3101,8 @@
     <filename>dir_ef2d50ad1eb08c82cfa91c345faf6524.html</filename>
     <file>CCorrSearchProcessorComp.h</file>
     <file>CHoughBasedSearchProcessorComp.h</file>
+    <file>CLensDistorsionCalibration.h</file>
+    <file>CLensDistorsionCalibrationProviderComp.h</file>
     <file>COcvAcquisitionComp.h</file>
     <file>COcvAdaptiveBinarizationComp.h</file>
     <file>COcvBlobProcessorComp.h</file>

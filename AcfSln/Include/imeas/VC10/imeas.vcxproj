@@ -161,6 +161,8 @@
     <ClInclude Include="..\INumericValue.h" />
     <ClInclude Include="..\ISampleAcquisition.h" />
     <ClInclude Include="..\TDiscreteDataSequence.h" />
+    <ClInclude Include="..\TMeasurementMessage.h" />
+    <ClInclude Include="..\TMeasurementValue.h" />
     <ClInclude Include="..\imeas.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

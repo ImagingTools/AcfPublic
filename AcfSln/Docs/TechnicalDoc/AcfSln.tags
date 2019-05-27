@@ -2823,6 +2823,21 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>TMeasurementMessage.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_t_measurement_message_8h</filename>
+    <includes id="_t_measurement_value_8h" name="TMeasurementValue.h" local="no" imported="no">imeas/TMeasurementValue.h</includes>
+    <class kind="class">imeas::TMeasurementMessage</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMeasurementValue.h</name>
+    <path>C:/Temp/AcfSln/Include/imeas/</path>
+    <filename>_t_measurement_value_8h</filename>
+    <class kind="class">imeas::TMeasurementValue</class>
+    <namespace>imeas</namespace>
+  </compound>
+  <compound kind="file">
     <name>IMediaController.h</name>
     <path>C:/Temp/AcfSln/Include/imm/</path>
     <filename>_i_media_controller_8h</filename>
@@ -24042,6 +24057,20 @@
       <anchor>a8cc23dd783a954dc9d0ec7ebf4c0545b</anchor>
       <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetFactoryId</name>
+      <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
+      <anchor>af3de24f8e2bdd582df959a8fdfa36e32</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QByteArray</type>
+      <name>GetTypeName</name>
+      <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
+      <anchor>a89e2155e7c45185abe8d21f7d5cb00b5</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CGrayToRgbProcessorComp</name>
@@ -28600,6 +28629,8 @@
     <class kind="class">imeas::INumericValue</class>
     <class kind="class">imeas::ISampleAcquisition</class>
     <class kind="class">imeas::TDiscreteDataSequence</class>
+    <class kind="class">imeas::TMeasurementMessage</class>
+    <class kind="class">imeas::TMeasurementValue</class>
     <member kind="typedef">
       <type>TDiscreteDataSequence&lt; quint8 &gt;</type>
       <name>CSimpleSamplesSequence8</name>
@@ -30729,6 +30760,158 @@
       <anchorfile>classimeas_1_1_t_discrete_data_sequence.html</anchorfile>
       <anchor>a263bc6f83841516c121dd465b337e6e9</anchor>
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::TMeasurementMessage</name>
+    <filename>classimeas_1_1_t_measurement_message.html</filename>
+    <templarg></templarg>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>BaseMessageType</type>
+      <name>BaseClass</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a7e23c9b5f0c64f948e9c6956eacee6e4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMeasurementMessage</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a024fce4e4d2ce92a3daaf51990ee253d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMeasurementMessage</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a1d17b624f73389a09bd053c2c1f813f7</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, const QString &amp;text, const QString &amp;source, int flags=0, const QDateTime *timeStampPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMeasurement</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a68aed581762e3ba75bd8bd79081ecf50</anchor>
+      <arglist>(const TMeasurementValue&lt; ValueType &gt; &amp;measurement)</arglist>
+    </member>
+    <member kind="function">
+      <type>TMeasurementValue&lt; ValueType &gt;</type>
+      <name>GetMeasurement</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a4f6eba03bc6242d34076bdf29f8556fe</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const TMeasurementValue&lt; ValueType &gt; &amp;</type>
+      <name>GetMeasurementRef</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a2469dd8a425b87ece18bcb0bf6d6fab0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a07fd12347850b932788ead73363f6676</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>aeed0053408d203f6a8883f29310d94cc</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_STRICT) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
+      <anchor>a86a6f74f170bca1937f28fb210a0df3d</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>imeas::TMeasurementValue</name>
+    <filename>classimeas_1_1_t_measurement_value.html</filename>
+    <templarg>ValueType</templarg>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function">
+      <type></type>
+      <name>TMeasurementValue</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a09e53d89dc61db4f3ae6c79be7af3fc1</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TMeasurementValue</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>ab69bcb9c66ced89352c9326e6606309c</anchor>
+      <arglist>(const ValueType &amp;measuredValue, const istd::TRange&lt; ValueType &gt; &amp;warningRange, const istd::TRange&lt; ValueType &gt; &amp;errorRange)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetErrorRange</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a5129789f6acfadf383534cca8dffe2e7</anchor>
+      <arglist>(const istd::TRange&lt; ValueType &gt; &amp;errorRange)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWarningRange</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>af855c86fb0bc73129faa72d806a6aabd</anchor>
+      <arglist>(const istd::TRange&lt; ValueType &gt; &amp;warningRange)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetMeasuredValue</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>adb4e7b139408b7c6896b0e44c2f07c39</anchor>
+      <arglist>(const ValueType &amp;measuredValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>istd::TRange&lt; ValueType &gt;</type>
+      <name>GetErrorRange</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a5f177b70ef569ae1a42be4031333e0ef</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>istd::TRange&lt; ValueType &gt;</type>
+      <name>GetWarningRange</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a959ac88df96152e55582369aa858ad5f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const ValueType &amp;</type>
+      <name>GetMeasuredValue</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a23bdce16040a3a7a9faa7052002013af</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a897710a651c8921053818f7e3e7ed6e3</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a0b41126c6c7ffc923e0671ba06b31cae</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_STRICT) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
+      <anchor>a3dd04e2e84bfe35aa5113df2108c8ae2</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -38954,6 +39137,8 @@
     <file>INumericValue.h</file>
     <file>ISampleAcquisition.h</file>
     <file>TDiscreteDataSequence.h</file>
+    <file>TMeasurementMessage.h</file>
+    <file>TMeasurementValue.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/imm</name>
