@@ -3041,6 +3041,23 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CStandardStreamBridge.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_standard_stream_bridge_8h</filename>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
+    <class kind="class">ilog::CStandardStreamBridge</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CStandardStreamBridgeComp.h</name>
+    <path>C:/Temp/Acf/Include/ilog/</path>
+    <filename>_c_standard_stream_bridge_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_standard_stream_bridge_8h" name="CStandardStreamBridge.h" local="no" imported="no">ilog/CStandardStreamBridge.h</includes>
+    <class kind="class">ilog::CStandardStreamBridgeComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
     <name>CStreamLogCompBase.h</name>
     <path>C:/Temp/Acf/Include/ilog/</path>
     <filename>_c_stream_log_comp_base_8h</filename>
@@ -18210,6 +18227,20 @@
       <name>GI_USER</name>
       <anchorfile>classibase_1_1_i_command.html</anchorfile>
       <anchor>a26494fdbf1628bd01667228ab6b57f14afab015b6dc1413c8f83c7d3a592720e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ChangeFlags</name>
+      <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
+      <anchor>ab89bcb427bf0eb7b22140db9dfcaaab8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>CF_ENABLED</name>
+      <anchorfile>classiprm_1_1_i_enableable_param.html</anchorfile>
+      <anchor>ab89bcb427bf0eb7b22140db9dfcaaab8ad1510e62e2c5bce5c72aef8863ec76ab</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -36863,6 +36894,8 @@
     <class kind="class">ilog::CLoggerBase</class>
     <class kind="class">ilog::CMessage</class>
     <class kind="class">ilog::CMessageContainer</class>
+    <class kind="class">ilog::CStandardStreamBridge</class>
+    <class kind="class">ilog::CStandardStreamBridgeComp</class>
     <class kind="class">ilog::CStreamLogCompBase</class>
     <class kind="class">ilog::ILoggable</class>
     <class kind="class">ilog::IMessageConsumer</class>
@@ -37670,6 +37703,71 @@
       <anchorfile>classilog_1_1_c_message_container.html</anchorfile>
       <anchor>a904ec92930019f51d8c1731f35794ddf</anchor>
       <arglist>(const IMessageConsumer::MessagePtr &amp;messagePtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CStandardStreamBridge</name>
+    <filename>classilog_1_1_c_standard_stream_bridge.html</filename>
+    <member kind="typedef">
+      <type>std::basic_streambuf&lt; char &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge.html</anchorfile>
+      <anchor>ac92911657db0b59c3c369db0620a5376</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CStandardStreamBridge</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge.html</anchorfile>
+      <anchor>a21783050e29b5eddd93e9c9c96aac3d5</anchor>
+      <arglist>(std::ostream &amp;stream, ilog::IMessageConsumer &amp;messageConsumer, istd::IInformationProvider::InformationCategory informationSeverity)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CStandardStreamBridge</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge.html</anchorfile>
+      <anchor>aa09fa5a7d0225356476877c987b61fb3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual std::streamsize</type>
+      <name>xsputn</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge.html</anchorfile>
+      <anchor>acd138b63cc6729286902d561f6dc2dbc</anchor>
+      <arglist>(const char *data, std::streamsize bufferSize)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual int_type</type>
+      <name>overflow</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge.html</anchorfile>
+      <anchor>ad7e7bdd78abcc419b8797e069f60b9aa</anchor>
+      <arglist>(int_type v)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilog::CStandardStreamBridgeComp</name>
+    <filename>classilog_1_1_c_standard_stream_bridge_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge_comp.html</anchorfile>
+      <anchor>a9bcaf18f2979ea29feb525a5b95a4dcb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge_comp.html</anchorfile>
+      <anchor>a421acf89d5b370860293e2615d545c9c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_c_standard_stream_bridge_comp.html</anchorfile>
+      <anchor>a7f6bcb2472d21566fa572c648ae6291c</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -76120,6 +76218,8 @@
     <file>CLoggerBase.h</file>
     <file>CMessage.h</file>
     <file>CMessageContainer.h</file>
+    <file>CStandardStreamBridge.h</file>
+    <file>CStandardStreamBridgeComp.h</file>
     <file>CStreamLogCompBase.h</file>
     <file>ilog.h</file>
     <file>ILoggable.h</file>

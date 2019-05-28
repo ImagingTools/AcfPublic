@@ -123,6 +123,8 @@
     <ClCompile Include="..\CLoggerBase.cpp" />
     <ClCompile Include="..\CMessage.cpp" />
     <ClCompile Include="..\CMessageContainer.cpp" />
+    <ClCompile Include="..\CStandardStreamBridge.cpp" />
+    <ClCompile Include="..\CStandardStreamBridgeComp.cpp" />
     <ClCompile Include="..\CStreamLogCompBase.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -142,6 +144,8 @@
     <ClInclude Include="..\CLoggerBase.h" />
     <ClInclude Include="..\CMessage.h" />
     <ClInclude Include="..\CMessageContainer.h" />
+    <ClInclude Include="..\CStandardStreamBridge.h" />
+    <ClInclude Include="..\CStandardStreamBridgeComp.h" />
     <ClInclude Include="..\CStreamLogCompBase.h" />
     <ClInclude Include="..\ILoggable.h" />
     <ClInclude Include="..\IMessageConsumer.h" />
