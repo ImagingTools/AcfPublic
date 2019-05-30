@@ -69,6 +69,11 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 
 	bool isStoring = archive.IsStoring();
 
+	QByteArray selectedId;
+	if (m_selectedIndex >= 0){
+		selectedId = GetOptionId(m_selectedIndex);
+	}
+
 	istd::CChangeNotifier notifier(isStoring? NULL: this, &GetAllChanges());
 	Q_UNUSED(notifier);
 
@@ -83,8 +88,6 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 
 			m_paramSets.removeLast();
 		}
-
-		m_selectedIndex = -1;
 	}
 
 	int paramsCount = GetParamsSetsCount();
@@ -198,8 +201,11 @@ bool CMultiParamsManagerComp::Serialize(iser::IArchive& archive)
 			m_selectedIndex = selectedIndex;
 		}
 		else{
-			if (m_defaultSelectedIndexAttrPtr.IsValid()){
-				m_selectedIndex = *m_defaultSelectedIndexAttrPtr;
+			if (!selectedId.isEmpty()){
+				m_selectedIndex = FindOptionIndexById(selectedId, *this);
+			}
+			else{
+				m_selectedIndex = -1;
 			}
 		}
 	}

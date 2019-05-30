@@ -3835,8 +3835,8 @@
     <includes id="_c_name_param_8h" name="CNameParam.h" local="no" imported="no">iprm/CNameParam.h</includes>
     <class kind="class">iprm::CParamsManagerCompBaseAttr</class>
     <class kind="class">iprm::CParamsManagerCompBase</class>
+    <class kind="class">iprm::CParamsManagerCompBase::UuidParam</class>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
-    <class kind="class">iprm::CParamsManagerCompBase::ParamSet::UuidParam</class>
     <class kind="class">iprm::CParamsManagerCompBase::SelectedParams</class>
     <namespace>iprm</namespace>
   </compound>
@@ -3942,6 +3942,13 @@
     <includes id="iprm_8h" name="iprm.h" local="no" imported="no">iprm/iprm.h</includes>
     <class kind="class">iprm::IOptionsList</class>
     <namespace>iprm</namespace>
+    <member kind="function">
+      <type>int</type>
+      <name>FindOptionIndexById</name>
+      <anchorfile>namespaceiprm.html</anchorfile>
+      <anchor>a2b60452cadce356742389317f7e5aa64</anchor>
+      <arglist>(const QByteArray &amp;id, const iprm::IOptionsList &amp;list)</arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>IOptionsManager.h</name>
@@ -43913,6 +43920,13 @@
     <class kind="class">iprm::ISelectionParam</class>
     <class kind="class">iprm::IVariableParam</class>
     <class kind="class">iprm::TParamsPtr</class>
+    <member kind="function">
+      <type>int</type>
+      <name>FindOptionIndexById</name>
+      <anchorfile>namespaceiprm.html</anchorfile>
+      <anchor>a2b60452cadce356742389317f7e5aa64</anchor>
+      <arglist>(const QByteArray &amp;id, const iprm::IOptionsList &amp;list)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::CComposedParamsSetComp</name>
@@ -44567,6 +44581,13 @@
       <arglist>(int index=-1) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetIndexOperationFlags</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
+      <anchor>a5ce42efda5d29cd3b4a711947bf1221b</anchor>
+      <arglist>(int index, int flags)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetParamsSetsCount</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
@@ -44600,13 +44621,6 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
       <anchor>ae8b1ed35d2b5f5c7eb8b5ca8cae66122</anchor>
       <arglist>(int index, const QString &amp;description)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetParamsSetEnabled</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
-      <anchor>af76fbe272e5689849a51facf49a8472c</anchor>
-      <arglist>(int index, bool enable)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IOptionsList *</type>
@@ -44805,10 +44819,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>QMap&lt; int, bool &gt;</type>
-      <name>m_isFixedParamsSetEnable</name>
+      <type>QMap&lt; int, int &gt;</type>
+      <name>m_fixedParamsSetFlagsMap</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base.html</anchorfile>
-      <anchor>aebe33b6a23755d6515ec36e3c35688d0</anchor>
+      <anchor>aa11c534a698288d49e9be6e75897af62</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -45121,6 +45135,7 @@
     <base virtualness="virtual">iprm::IOptionsManager</base>
     <class kind="class">iprm::CParamsManagerCompBase::ParamSet</class>
     <class kind="class">iprm::CParamsManagerCompBase::SelectedParams</class>
+    <class kind="class">iprm::CParamsManagerCompBase::UuidParam</class>
     <member kind="function" virtualness="pure">
       <type>virtual const IOptionsList *</type>
       <name>GetParamsTypeConstraints</name>
@@ -45212,7 +45227,6 @@
     <base virtualness="virtual">iprm::IParamsSet</base>
     <base virtualness="virtual">iprm::ISelectionParam</base>
     <base virtualness="virtual">iprm::INameParam</base>
-    <class kind="class">iprm::CParamsManagerCompBase::ParamSet::UuidParam</class>
     <member kind="function">
       <type></type>
       <name>ParamSet</name>
@@ -45347,6 +45361,13 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
+      <type>int</type>
+      <name>userFlags</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
+      <anchor>ad758dd3dbba9fe03ed072266003fb015</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
       <type>CParamsManagerCompBase *</type>
       <name>parentPtr</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
@@ -45366,46 +45387,6 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set.html</anchorfile>
       <anchor>adcdc28d3b5c4c086f3420680c1d3b47b</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iprm::CParamsManagerCompBase::ParamSet::UuidParam</name>
-    <filename>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</filename>
-    <base virtualness="virtual">iprm::INameParam</base>
-    <member kind="function">
-      <type></type>
-      <name>UuidParam</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
-      <anchor>aacf6aa07d8981745ee657377f935067e</anchor>
-      <arglist>(const ParamSet &amp;parent)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const QString &amp;</type>
-      <name>GetName</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
-      <anchor>a0bba74cf32c064e2d6ac56352d9c23c7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetName</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
-      <anchor>aff08f94a6824c0629d9f05964745f958</anchor>
-      <arglist>(const QString &amp;)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsNameFixed</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
-      <anchor>a72163f2c7e0988392e0f8063df73e07e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Serialize</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_param_set_1_1_uuid_param.html</anchorfile>
-      <anchor>aff27a91f325671de899d62035eacfa69</anchor>
-      <arglist>(iser::IArchive &amp;)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45460,6 +45441,46 @@
       <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_selected_params.html</anchorfile>
       <anchor>adf749241421140a1b1d6a41cfd43f993</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CParamsManagerCompBase::UuidParam</name>
+    <filename>classiprm_1_1_c_params_manager_comp_base_1_1_uuid_param.html</filename>
+    <base virtualness="virtual">iprm::INameParam</base>
+    <member kind="function">
+      <type></type>
+      <name>UuidParam</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_uuid_param.html</anchorfile>
+      <anchor>a957a3e38d3cfcb26323aa14fc61692ac</anchor>
+      <arglist>(const ParamSet &amp;parent)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const QString &amp;</type>
+      <name>GetName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_uuid_param.html</anchorfile>
+      <anchor>a79f39821b18e1f62b51420a8304d8ff1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetName</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_uuid_param.html</anchorfile>
+      <anchor>a29b93606dea683044b9f1e13aeb2e234</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsNameFixed</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_uuid_param.html</anchorfile>
+      <anchor>a1b561b6b87c63cbc80512feabbd3ea37</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp_base_1_1_uuid_param.html</anchorfile>
+      <anchor>aed792269c2d3ea6bd17a7bf22a31fb3a</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45960,6 +45981,13 @@
       <arglist>(int index=-1) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>SetIndexOperationFlags</name>
+      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
+      <anchor>a804663f520ed0127125800d370a3b7c6</anchor>
+      <arglist>(int index, int flags)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetParamsSetsCount</name>
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
@@ -46028,13 +46056,6 @@
       <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
       <anchor>ac2a35d4d7ba334ccf1935cd1924f6756</anchor>
       <arglist>(int index, const QString &amp;description)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetParamsSetEnabled</name>
-      <anchorfile>classiprm_1_1_i_params_manager.html</anchorfile>
-      <anchor>a7d95ebacef112a53f6f35cc83c0a355f</anchor>
-      <arglist>(int index, bool enable)=0</arglist>
     </member>
   </compound>
   <compound kind="class">

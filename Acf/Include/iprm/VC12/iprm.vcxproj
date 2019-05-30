@@ -135,6 +135,7 @@
     <ClCompile Include="..\CSelectionParam.cpp" />
     <ClCompile Include="..\CSelectionParamComp.cpp" />
     <ClCompile Include="..\CVariableParamComp.cpp" />
+    <ClCompile Include="..\IOptionsList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CComposedParamsSetComp.h" />
