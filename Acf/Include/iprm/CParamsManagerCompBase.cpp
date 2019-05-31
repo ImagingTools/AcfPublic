@@ -653,7 +653,8 @@ CParamsManagerCompBase::ParamSet::ParamSet()
 :	isEnabled(true),
 	parentPtr(NULL),
 	updateBridge(this),
-	uuidParam(*this)
+	uuidParam(*this),
+	userFlags(0)
 {
 }
 
