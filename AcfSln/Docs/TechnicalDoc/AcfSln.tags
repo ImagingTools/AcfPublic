@@ -27439,15 +27439,8 @@
       <type></type>
       <name>CSearchFeature</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a902d1291621ed76d0e038d200f7dd383</anchor>
-      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale, bool negativeModel=false, int index=-1, const QByteArray &amp;objectId=QByteArray())</arglist>
-    </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetIndex</name>
-      <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a1b9b60d3ee8b06a83b64ddab6a369bce</anchor>
-      <arglist>() const </arglist>
+      <anchor>adfd0a12f408fac618d12f555063c7fef</anchor>
+      <arglist>(double weight, const i2d::CVector2d &amp;position, double angle, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0), bool negativeModel=false, const QByteArray &amp;objectId=QByteArray())</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
