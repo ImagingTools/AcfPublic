@@ -51,12 +51,13 @@ public:
 	struct ProcessingInfo
 	{
 		ProcessingInfo()
-			:status(istd::IInformationProvider::IC_NONE)
+			:status(istd::IInformationProvider::IC_NONE),
+			time(0)
 		{
 		}
 
 		istd::IInformationProvider::InformationCategory status;
-		QDateTime time;
+		qint64 time; // seconds since epoch
 	};
 
 	/**

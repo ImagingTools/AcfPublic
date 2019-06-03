@@ -32244,10 +32244,10 @@
       <arglist></arglist>
     </member>
     <member kind="variable">
-      <type>QDateTime</type>
+      <type>qint64</type>
       <name>time</name>
       <anchorfile>structiprod_1_1_i_production_history_1_1_processing_info.html</anchorfile>
-      <anchor>a7263ac1b5db8994ff0b794a8b9d45368</anchor>
+      <anchor>af79ba74243db36974d8c2c4f21aab762</anchor>
       <arglist></arglist>
     </member>
   </compound>
