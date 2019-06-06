@@ -136,6 +136,7 @@ private:
 
 private Q_SLOTS:
 	void OnQuit();
+	void OnEventLoopStarted();
 
 protected:
 	I_REF(IGuiObject, m_mainGuiCompPtr);
