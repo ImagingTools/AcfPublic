@@ -3047,9 +3047,9 @@
     <filename>_i_production_history_8h</filename>
     <class kind="class">iprod::IProductionHistory</class>
     <class kind="struct">iprod::IProductionHistory::ProcessingInfo</class>
-    <class kind="struct">iprod::IProductionHistory::PartInfo</class>
     <class kind="struct">iprod::IProductionHistory::ObjectInfo</class>
     <class kind="struct">iprod::IProductionHistory::ResultInfo</class>
+    <class kind="struct">iprod::IProductionHistory::PartInfo</class>
     <namespace>iprod</namespace>
   </compound>
   <compound kind="file">
@@ -32040,6 +32040,13 @@
       <anchor>ad458379b28bc8f2e8e6d75ff1e98e330</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>QList&lt; ResultInfo &gt;</type>
+      <name>ResultInfoList</name>
+      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
+      <anchor>a7a275788399e8fd0bd25efdd0cb9e921</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CProductionHistoryComp</name>
@@ -32047,33 +32054,26 @@
       <anchor>ab38a9d53dba35690f0cb1d2288eb8a45</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::IOptionsList &amp;</type>
-      <name>GetPartsInfoList</name>
+    <member kind="function">
+      <type>QList&lt; QByteArray &gt;</type>
+      <name>GetPartInfoIds</name>
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>ac3c71dd9792064e533155f298612d014</anchor>
+      <anchor>adae2d21c715eb51e1795500e415e0641</anchor>
       <arglist>() const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual PartInfo</type>
+    <member kind="function">
+      <type>PartInfo</type>
       <name>GetPartInfo</name>
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>abaa540371cedf4b6de37e2ee11f399f3</anchor>
-      <arglist>(const QByteArray &amp;productionPartId) const </arglist>
+      <anchor>a44a40021cdae647893fa7072c92b9202</anchor>
+      <arglist>(const QByteArray &amp;partId) const </arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const iprm::IOptionsList &amp;</type>
-      <name>GetResultInfoList</name>
-      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>a8193128e12a48e42761f647ed77f799b</anchor>
-      <arglist>(const QByteArray &amp;productionPartId) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual ResultInfo</type>
+    <member kind="function">
+      <type>ResultInfo</type>
       <name>GetResultInfo</name>
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
-      <anchor>a923aa05e720a655b0454566195957ce6</anchor>
-      <arglist>(const QByteArray &amp;productionPartId, const QByteArray &amp;resultId) const </arglist>
+      <anchor>a614865ebe2763b51b11725ef87fdc65f</anchor>
+      <arglist>(const QByteArray &amp;partId, const QByteArray &amp;resultId) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
@@ -32134,10 +32134,10 @@
     <class kind="struct">iprod::IProductionHistory::ProcessingInfo</class>
     <class kind="struct">iprod::IProductionHistory::ResultInfo</class>
     <member kind="function" virtualness="pure">
-      <type>virtual const iprm::IOptionsList &amp;</type>
-      <name>GetPartsInfoList</name>
+      <type>virtual QList&lt; QByteArray &gt;</type>
+      <name>GetPartInfoIds</name>
       <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
-      <anchor>abf126f4b2e5f2bf8e630ef0059af281b</anchor>
+      <anchor>a4103a670746bd07ba724334138fa2a32</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -32145,13 +32145,6 @@
       <name>GetPartInfo</name>
       <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
       <anchor>a29a946ccb2f5953c92771bcd6bf957c3</anchor>
-      <arglist>(const QByteArray &amp;productionPartId) const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual const iprm::IOptionsList &amp;</type>
-      <name>GetResultInfoList</name>
-      <anchorfile>classiprod_1_1_i_production_history.html</anchorfile>
-      <anchor>a41b77d2c94f8bb2cfdd6c3547474261c</anchor>
       <arglist>(const QByteArray &amp;productionPartId) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
@@ -32197,6 +32190,20 @@
   <compound kind="struct">
     <name>iprod::IProductionHistory::PartInfo</name>
     <filename>structiprod_1_1_i_production_history_1_1_part_info.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>PartInfo</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_part_info.html</anchorfile>
+      <anchor>ae07c72981cc08c8987bdfbb3c93b5725</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>uuid</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_part_info.html</anchorfile>
+      <anchor>a173c92d59ab48a605b791b5e70b91d55</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="variable">
       <type>QString</type>
       <name>serialNumber</name>
@@ -32223,6 +32230,13 @@
       <name>processingInfo</name>
       <anchorfile>structiprod_1_1_i_production_history_1_1_part_info.html</anchorfile>
       <anchor>af5ba934f83c48eb2f251da211c136836</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>ResultInfoList</type>
+      <name>results</name>
+      <anchorfile>structiprod_1_1_i_production_history_1_1_part_info.html</anchorfile>
+      <anchor>ae90c2d90bf8175a2fc52c7d3e7f63b72</anchor>
       <arglist></arglist>
     </member>
   </compound>

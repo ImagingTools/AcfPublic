@@ -25,10 +25,13 @@
 
 
 // ACF includes
-#include <imod/TModelWrap.h>
 #include <ilog/TLoggerCompWrap.h>
 #include <ifile/IFileNameParam.h>
 #include <iprod/IProductionHistoryController.h>
+
+// Qt includes
+#include <QtCore/QReadWriteLock>
+#include <QtCore/QFutureWatcher>
 
 
 namespace iprod
@@ -36,9 +39,12 @@ namespace iprod
 
 
 class CProductionHistoryComp:
+			public QObject,
 			public ilog::CLoggerComponentBase,
 			virtual public IProductionHistoryController
 {
+	Q_OBJECT
+
 public:
 	typedef ilog::CLoggerComponentBase BaseClass;
 
@@ -47,15 +53,16 @@ public:
 		I_REGISTER_INTERFACE(IProductionHistoryController);
 		I_ASSIGN(m_productionHistoryFolderCompPtr, "RepositoryFolder", "Folder containing production history items", false, "RepositoryFolder");
 		I_ASSIGN(m_versionInfoCompPtr, "VersionInfo", "Version info", false, "VersionInfo");
+		I_ASSIGN(m_doNotLoadHistoryAttrPtr, "DoNotLoadHistory", "Do not load history from disk", false, false);
 	I_END_COMPONENT;
 
 	CProductionHistoryComp();
 
 	// reimplemented (IProductionHistory)
-	virtual const iprm::IOptionsList& GetPartsInfoList() const;
-	virtual PartInfo GetPartInfo(const QByteArray& productionPartId) const;
-	virtual const iprm::IOptionsList& GetResultInfoList(const QByteArray& productionPartId) const;
-	virtual ResultInfo GetResultInfo(const QByteArray& productionPartId, const QByteArray& resultId) const;
+	QList<QByteArray> GetPartInfoIds() const;
+	PartInfo GetPartInfo(const QByteArray& partId) const;
+	ResultInfo GetResultInfo(const QByteArray& partId, const QByteArray& resultId) const;
+
 
 	// reimplemented (IProductionHistoryController)
 	virtual QByteArray InsertNewProductionPart(
@@ -88,72 +95,35 @@ protected:
 	virtual void OnComponentDestroyed();
 
 private:
-	typedef QList<ResultInfo> ResultInfoList;
-
-	struct HistoryItem: virtual public iprm::IOptionsList
-	{
-		HistoryItem();
-
-		// reimplemented (iprm::IOptionsList)
-		virtual int GetOptionsFlags() const;
-		virtual int GetOptionsCount() const;
-		virtual QString GetOptionName(int index) const;
-		virtual QString GetOptionDescription(int index) const;
-		virtual QByteArray GetOptionId(int index) const;
-		virtual bool IsOptionEnabled(int index) const;
-
-		QString productName;
-		QString serialNumber;
-		QByteArray productId;
-		QByteArray uuid;
-		qint64 timestamp; // seconds since epoch
-		istd::IInformationProvider::InformationCategory status;
-		ResultInfoList resultInfoList;
-	};
-
-	typedef QList<HistoryItem> HistoryItems;
-	typedef QMap<QByteArray, int> HistoryItemsById;
-
-	/**
-		List of produced parts.
-	*/
-	class PartList: virtual public iprm::IOptionsList
-	{
-	public:
-		PartList();
-		void SetParent(const CProductionHistoryComp* parentPtr);
-
-		// reimplemented (iprm::IOptionsList)
-		virtual int GetOptionsFlags() const;
-		virtual int GetOptionsCount() const;
-		virtual QString GetOptionName(int index) const;
-		virtual QString GetOptionDescription(int index) const;
-		virtual QByteArray GetOptionId(int index) const;
-		virtual bool IsOptionEnabled(int index) const;
-
-	private:
-		const CProductionHistoryComp* m_parentPtr;
-	};
+	typedef QMap<QByteArray, PartInfo> HistoryItems;
 
 private:
-	bool SerializeResultInfoList(iser::IArchive& archive, ResultInfoList& resultInfoList) const;
-	bool SerializeObjectList(iser::IArchive& archive, ObjectInfoList& objectInfoList) const;
-	bool SerializeHistoryItem(iser::IArchive& archive, HistoryItem& historyItem) const;
+	bool SerializePartInfo(iser::IArchive& archive, PartInfo& partInfo) const;
+	bool SerializeResults(iser::IArchive& archive, ResultInfoList& resultInfoList) const;
+	bool SerializeObjects(iser::IArchive& archive, ObjectInfoList& objectInfoList) const;
+
 	void ReadHistoryItems();
-	void SaveRepositoryItem(const HistoryItem& historyItem) const;
-	QString GetItemPath(const HistoryItem& historyItem) const;
+
+	void SaveRepositoryItem(const PartInfo& partInfo) const;
+	QString GetItemPath(const PartInfo& partInfo) const;
+	QByteArray InsertResultObject(const QString& filePath, const QByteArray& partId, const QByteArray& resultId, const QByteArray& objectTypeId, bool input);
+
+private slots:
+	void OnHistoryReadFinished();
 
 private:
-	typedef imod::TModelWrap<PartList> PartListModel;
-	PartListModel m_partList;
-
 	HistoryItems m_historyItems;
-	HistoryItemsById m_historyItemsById;
+	HistoryItems m_historyItemsToLoad;
+
+	mutable QReadWriteLock m_historyItemsLock;
+
+	QFutureWatcher<void> m_historyReaderWatcher;
 
 	const istd::IChangeable::ChangeSet m_newObjectChangeSet;
 
 	I_REF(ifile::IFileNameParam, m_productionHistoryFolderCompPtr);
 	I_REF(iser::IVersionInfo, m_versionInfoCompPtr);
+	I_ATTR(bool, m_doNotLoadHistoryAttrPtr);
 };
 
 
