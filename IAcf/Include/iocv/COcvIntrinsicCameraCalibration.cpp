@@ -247,7 +247,9 @@ bool COcvIntrinsicCameraCalibration::Serialize(iser::IArchive& archive)
 		}
 	}
 
+	retVal = retVal && archive.BeginTag(s_cameraMatrixTag);
 	retVal = retVal && cameraMatrix.Serialize(archive);
+	retVal = retVal && archive.EndTag(s_cameraMatrixTag);
 
 	retVal = retVal && archive.BeginTag(s_distosionCoeffTag);
 	retVal = retVal && distorsionCoeff.Serialize(archive);
