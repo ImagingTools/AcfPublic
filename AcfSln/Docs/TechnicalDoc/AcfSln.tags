@@ -3032,6 +3032,7 @@
     <path>C:/Temp/AcfSln/Include/iprod/</path>
     <filename>_c_production_history_comp_8h</filename>
     <includes id="_i_production_history_controller_8h" name="IProductionHistoryController.h" local="no" imported="no">iprod/IProductionHistoryController.h</includes>
+    <class kind="class">iprod::CHistoryReader</class>
     <class kind="class">iprod::CProductionHistoryComp</class>
     <namespace>iprod</namespace>
   </compound>
@@ -32003,9 +32004,63 @@
   <compound kind="namespace">
     <name>iprod</name>
     <filename>namespaceiprod.html</filename>
+    <class kind="class">iprod::CHistoryReader</class>
     <class kind="class">iprod::CProductionHistoryComp</class>
     <class kind="class">iprod::IProductionHistory</class>
     <class kind="class">iprod::IProductionHistoryController</class>
+  </compound>
+  <compound kind="class">
+    <name>iprod::CHistoryReader</name>
+    <filename>classiprod_1_1_c_history_reader.html</filename>
+    <member kind="typedef">
+      <type>QVector&lt; iprod::IProductionHistory::PartInfo &gt;</type>
+      <name>History</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>a6e24dd791d3390dbc4c5141f516d372a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>HistoryChunkReady</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>adf5533e6d880903123522761827aea95</anchor>
+      <arglist>(bool lastChunk)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CHistoryReader</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>a10387c1002454dc187c771189793a8fa</anchor>
+      <arglist>(QObject *parentPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetHistoryPath</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>a97db8099c41d56a28c5b0f59060bb00a</anchor>
+      <arglist>(const QString &amp;historyPath)</arglist>
+    </member>
+    <member kind="function">
+      <type>const History &amp;</type>
+      <name>GetHistory</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>a76bd37e5f458d9471e56d11aaa77a0a9</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const QStringList &amp;</type>
+      <name>GetErrors</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>a82944aae3c7f7196502376800bd940d5</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>run</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>a14cdac589ca76398cb22dacd50987047</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprod::CProductionHistoryComp</name>
@@ -32123,6 +32178,13 @@
       <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
       <anchor>a63eeae78c4bd96420268a79914e36fc6</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="friend">
+      <type>friend class</type>
+      <name>CHistoryReader</name>
+      <anchorfile>classiprod_1_1_c_production_history_comp.html</anchorfile>
+      <anchor>abb811f2f8d8134bfcdb44fbb0f5a5909</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
