@@ -32013,10 +32013,17 @@
     <name>iprod::CHistoryReader</name>
     <filename>classiprod_1_1_c_history_reader.html</filename>
     <member kind="typedef">
-      <type>QVector&lt; iprod::IProductionHistory::PartInfo &gt;</type>
+      <type>QQueue&lt; iprod::IProductionHistory::PartInfo &gt;</type>
       <name>History</name>
       <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
-      <anchor>a6e24dd791d3390dbc4c5141f516d372a</anchor>
+      <anchor>aa055c4cd13e6988561e386bd5e63cdd2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QVector&lt; iprod::IProductionHistory::PartInfo &gt;</type>
+      <name>HistoryChunk</name>
+      <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
+      <anchor>abd12f5bfc788939ccb556b039f95e7f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -32030,8 +32037,8 @@
       <type></type>
       <name>CHistoryReader</name>
       <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
-      <anchor>a10387c1002454dc187c771189793a8fa</anchor>
-      <arglist>(QObject *parentPtr)</arglist>
+      <anchor>acc6b9abc75635116df9183631ad7cc8e</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -32041,11 +32048,11 @@
       <arglist>(const QString &amp;historyPath)</arglist>
     </member>
     <member kind="function">
-      <type>const History &amp;</type>
-      <name>GetHistory</name>
+      <type>const HistoryChunk &amp;</type>
+      <name>GetHistoryChunk</name>
       <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
-      <anchor>a76bd37e5f458d9471e56d11aaa77a0a9</anchor>
-      <arglist>() const </arglist>
+      <anchor>a596db239c6595fd3f83abb843f280b45</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>const QStringList &amp;</type>

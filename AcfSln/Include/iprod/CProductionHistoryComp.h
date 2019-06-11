@@ -31,6 +31,7 @@
 
 // Qt includes
 #include <QtCore/QReadWriteLock>
+#include <QtCore/QQueue>
 #include <QtCore/QThread>
 
 
@@ -43,12 +44,12 @@ class CHistoryReader: public QThread
 	Q_OBJECT
 
 public:
-	typedef QVector<iprod::IProductionHistory::PartInfo> History;
+	typedef QQueue<iprod::IProductionHistory::PartInfo> History;
+	typedef QVector<iprod::IProductionHistory::PartInfo> HistoryChunk;
 
-	CHistoryReader(QObject* parentPtr);
-
+	CHistoryReader();
 	void SetHistoryPath(const QString& historyPath);
-	const History& GetHistory() const;
+	const HistoryChunk& GetHistoryChunk();
 	const QStringList& GetErrors() const;
 
 signals:
@@ -59,10 +60,13 @@ protected:
 	void run();
 
 private:
-	static const int s_historyChunkSize = 500;
-	QVector<iprod::IProductionHistory::PartInfo> m_history;
-	QStringList m_errors;
+	mutable QMutex m_historyMutex;
+	History m_history;
+	HistoryChunk m_historyChunk;
 	QString m_historyPath;
+	QStringList m_errors;
+
+	static const int s_historyChunkSize = 500;
 };
 
 
@@ -143,7 +147,7 @@ private:
 
 	mutable QReadWriteLock m_historyItemsLock;
 
-	CHistoryReader* m_historyReaderPtr;
+	istd::TDelPtr<CHistoryReader> m_historyReaderPtr;
 
 	const istd::IChangeable::ChangeSet m_newObjectChangeSet;
 
