@@ -53806,6 +53806,13 @@
       <anchor>a763cf0805c7681fd0c016f4253234d8f</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>InitializeComponents</name>
+      <anchorfile>classiqtgui_1_1_c_application_comp_base.html</anchorfile>
+      <anchor>ac8cb06d29828eb9d3f9decb288b3888b</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>

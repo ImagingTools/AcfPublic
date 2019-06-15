@@ -87,6 +87,7 @@ protected:
 	void HideSplashScreen();
 	void InitializeComponentApplication();
 	void ApplyStyleSheet();
+	void InitializeComponents();
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
