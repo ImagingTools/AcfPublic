@@ -15635,6 +15635,13 @@
       <arglist>(const CTcpMessageHeader &amp;header, const quint8 *dataPtr, int length)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetHostUrl</name>
+      <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
+      <anchor>a3e8ba1227c5ff478e5706c4ddb50e7c0</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ConnectToHost</name>
       <anchorfile>classicomm_1_1_c_tcp_requests_manager_comp.html</anchorfile>
@@ -15767,6 +15774,13 @@
       <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
       <anchor>ab7b0756887ea040ebdf181aa51dec7cc</anchor>
       <arglist>(icomm::IBinaryStream::Handler *handlerPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetHostUrl</name>
+      <anchorfile>classicomm_1_1_c_tcp_stream_comp.html</anchorfile>
+      <anchor>aec2d4b70e18a5f47a58ad8dbb173c3db</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -16276,8 +16290,15 @@
   <compound kind="class">
     <name>icomm::IHostConnection</name>
     <filename>classicomm_1_1_i_host_connection.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <class kind="class">icomm::IHostConnection::Handler</class>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetHostUrl</name>
+      <anchorfile>classicomm_1_1_i_host_connection.html</anchorfile>
+      <anchor>a53595d9bf02bb57239d931fef3fbfc08</anchor>
+      <arglist>() const =0</arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>ConnectToHost</name>
