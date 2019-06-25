@@ -102,6 +102,7 @@ protected:
 
 private Q_SLOTS:
 	void OnFilterChanged();
+	void OnNewDirLoaded(const QString& path);
 	void OnSelectionChanged(const QItemSelection& selected, const QItemSelection& deselected);
 	void OnDoubleClicked(const QModelIndex& index);
 

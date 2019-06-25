@@ -156,6 +156,11 @@ void CFileSystemExplorerGuiComp::OnGuiCreated()
 
 	FileTree->setModel(&m_fileSystemModel);
 
+	connect(&m_fileSystemModel,
+		SIGNAL(directoryLoaded(const QString&)),
+		this,
+		SLOT(OnNewDirLoaded(const QString&)));
+
 	UpdateFileRoot();
 
 	QItemSelectionModel* selectionModelPtr = FileTree->selectionModel();
@@ -242,6 +247,12 @@ void CFileSystemExplorerGuiComp::OnFilterChanged()
 	}
 
 	m_fileSystemModel.setNameFilters(fileFilters);
+}
+
+
+void CFileSystemExplorerGuiComp::OnNewDirLoaded(const QString& /*path*/)
+{
+	UpdateFileRoot();
 }
 
 
