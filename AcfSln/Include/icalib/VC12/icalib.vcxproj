@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="..\CAffineCalibration2d.cpp" />
     <ClCompile Include="..\CAffineCalibration2dComp.cpp" />
+    <ClCompile Include="..\CAffineCalibrationProviderComp.cpp" />
     <ClCompile Include="..\CCalibration2dProxyComp.cpp" />
     <ClCompile Include="..\CNoneCalibration2d.cpp" />
     <ClCompile Include="..\CPerspectiveCalibration2d.cpp" />
@@ -130,6 +131,7 @@
   <ItemGroup>
     <ClInclude Include="..\CAffineCalibration2d.h" />
     <ClInclude Include="..\CAffineCalibration2dComp.h" />
+    <ClInclude Include="..\CAffineCalibrationProviderComp.h" />
     <ClInclude Include="..\CCalibration2dProxyComp.h" />
     <ClInclude Include="..\CNoneCalibration2d.h" />
     <ClInclude Include="..\CPerspectiveCalibration2d.h" />

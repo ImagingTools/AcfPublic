@@ -259,6 +259,15 @@
     <namespace>icalib</namespace>
   </compound>
   <compound kind="file">
+    <name>CAffineCalibrationProviderComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icalib/</path>
+    <filename>_c_affine_calibration_provider_comp_8h</filename>
+    <includes id="_c_affine_calibration2d_8h" name="CAffineCalibration2d.h" local="no" imported="no">icalib/CAffineCalibration2d.h</includes>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
+    <class kind="class">icalib::CAffineCalibrationProviderComp</class>
+    <namespace>icalib</namespace>
+  </compound>
+  <compound kind="file">
     <name>CCalibration2dProxyComp.h</name>
     <path>C:/Temp/AcfSln/Include/icalib/</path>
     <filename>_c_calibration2d_proxy_comp_8h</filename>
@@ -7248,6 +7257,7 @@
     <filename>namespaceicalib.html</filename>
     <class kind="class">icalib::CAffineCalibration2d</class>
     <class kind="class">icalib::CAffineCalibration2dComp</class>
+    <class kind="class">icalib::CAffineCalibrationProviderComp</class>
     <class kind="class">icalib::CCalibration2dProxyComp</class>
     <class kind="class">icalib::CNoneCalibration2d</class>
     <class kind="class">icalib::CPerspectiveCalibration2d</class>
@@ -7407,6 +7417,83 @@
       <anchorfile>classicalib_1_1_c_affine_calibration2d_comp.html</anchorfile>
       <anchor>aec307deeabe228fe09df5d858b4cd8a7</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icalib::CAffineCalibrationProviderComp</name>
+    <filename>classicalib_1_1_c_affine_calibration_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base>i2d::ICalibrationProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a36b4ca6e5d12b7607a252ada955bee13</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CMultiModelDispatcherBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a3a04f66eb8d586556f9686d0db77d939</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>aad6bc49356f7af641a63bea4305eb963</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>ModelId</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a4f6b6a91aa4b8439d3e36c5328d1bac3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>MI_ROTATION</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a4f6b6a91aa4b8439d3e36c5328d1bac3ab97d0b19adf36e27fcdd96255a85a4f1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>MI_SCALE</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a4f6b6a91aa4b8439d3e36c5328d1bac3a0a88dc993d05e150e82f56176ac57607</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>MI_TRANSLATION</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a4f6b6a91aa4b8439d3e36c5328d1bac3a48011253df8dcd6bd6b0f8c7135cb8dc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a71875797a108cfee6260e86269d44f56</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>aff040d5956b34f1bd3c352415b6c76d9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classicalib_1_1_c_affine_calibration_provider_comp.html</anchorfile>
+      <anchor>a6145db4764a2842f4ca16c437cb65fa3</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38875,6 +38962,7 @@
     <filename>dir_cb55906c441f89390c81c0d68c23317c.html</filename>
     <file>CAffineCalibration2d.h</file>
     <file>CAffineCalibration2dComp.h</file>
+    <file>CAffineCalibrationProviderComp.h</file>
     <file>CCalibration2dProxyComp.h</file>
     <file>CNoneCalibration2d.h</file>
     <file>CPerspectiveCalibration2d.h</file>
