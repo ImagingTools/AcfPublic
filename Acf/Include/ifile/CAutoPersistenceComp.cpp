@@ -389,6 +389,8 @@ bool CAutoPersistenceComp::TryStartIntervalStore()
 
 bool CAutoPersistenceComp::LockFile(const QString& filePath, bool store) const
 {
+	QMutexLocker lock(&m_mutex);
+
 #if QT_VERSION >= 0x050000
 	QFileInfo fileInfo(filePath);
 	bool lockRequired = !filePath.isEmpty();
@@ -426,6 +428,8 @@ bool CAutoPersistenceComp::LockFile(const QString& filePath, bool store) const
 
 void CAutoPersistenceComp::UnlockFile() const
 {
+	QMutexLocker lock(&m_mutex);
+
 #if QT_VERSION >= 0x050000
 	if (m_lockFilePtr.IsValid()){
 		m_lockFilePtr->unlock();

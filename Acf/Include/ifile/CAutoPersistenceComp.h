@@ -29,6 +29,7 @@
 #include <QtCore/QTimer>
 #include <QtCore/QFuture>
 #include <QtCore/QFileSystemWatcher>
+#include <QtCore/QMutex>
 
 // ACF includes
 #include <istd/IChangeable.h>
@@ -264,6 +265,7 @@ private:
 #if QT_VERSION >= 0x050000
 	mutable istd::TDelPtr<QLockFile> m_lockFilePtr;
 #endif
+	mutable QMutex m_mutex;
 };
 
 
