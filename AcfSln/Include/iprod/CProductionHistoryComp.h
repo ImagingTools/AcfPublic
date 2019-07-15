@@ -66,7 +66,7 @@ private:
 	QString m_historyPath;
 	QStringList m_errors;
 
-	static const int s_historyChunkSize = 500;
+	static const int s_historyChunkSize;
 };
 
 
