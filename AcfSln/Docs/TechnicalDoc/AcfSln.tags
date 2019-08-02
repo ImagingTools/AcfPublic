@@ -6457,8 +6457,8 @@
       <type></type>
       <name>CBlobFeature</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a09b759f9203f1770e4919069a4a696ba</anchor>
-      <arglist>(double area, double perimeter, const i2d::CVector2d &amp;position, double angle=0.0)</arglist>
+      <anchor>a63e4d5d14136d3669530431d854920b1</anchor>
+      <arglist>(double area, double perimeter, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0), const i2d::CPolygon &amp;contour=i2d::CPolygon())</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -6486,6 +6486,13 @@
       <name>GetArea</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
       <anchor>aa825b9f2f3875d5412d01e921686ff5b</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>const i2d::CPolygon &amp;</type>
+      <name>GetContour</name>
+      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
+      <anchor>a0b54aeb339e00bef48931200b9c24761</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">

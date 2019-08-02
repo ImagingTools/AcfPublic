@@ -115,10 +115,10 @@ bool CComposedParamsSetComp::CopyFrom(const IChangeable& object, CompatibilityMo
 {
 	// Copy all fixed parameters from external parameter set
 	const iprm::IParamsSet* objectParamsSetPtr = dynamic_cast<const iprm::IParamsSet*>(&object);
-
 	if (objectParamsSetPtr == NULL){
 		return false;
 	}
+
 	int setsCount = qMin(m_parametersCompPtr.GetCount(), m_parametersIdAttrPtr.GetCount());
 
 	for (int i = 0; i < setsCount; ++i){
@@ -139,41 +139,39 @@ bool CComposedParamsSetComp::CopyFrom(const IChangeable& object, CompatibilityMo
 bool CComposedParamsSetComp::IsEqual(const IChangeable& object) const
 {
 	const iprm::CComposedParamsSetComp* objectParamsSetPtr = dynamic_cast<const iprm::CComposedParamsSetComp*>(&object);
-
 	if (objectParamsSetPtr == NULL){
 		return false;
 	}
 
-    if (m_parametersCompPtr.GetCount() != objectParamsSetPtr->m_parametersCompPtr.GetCount()){
-        return false;
-    }
+	if (m_parametersCompPtr.GetCount() != objectParamsSetPtr->m_parametersCompPtr.GetCount()){
+		return false;
+	}
 
-    if (m_parametersIdAttrPtr.GetCount() != objectParamsSetPtr->m_parametersIdAttrPtr.GetCount()){
-        return false;
-    }
+	if (m_parametersIdAttrPtr.GetCount() != objectParamsSetPtr->m_parametersIdAttrPtr.GetCount()){
+		return false;
+	}
 
-    int setsCount = qMin(m_parametersCompPtr.GetCount(), m_parametersIdAttrPtr.GetCount());
+	int setsCount = qMin(m_parametersCompPtr.GetCount(), m_parametersIdAttrPtr.GetCount());
+	for (int i = 0; i < setsCount; ++i){
+		if (m_parametersIdAttrPtr[i] != objectParamsSetPtr->m_parametersIdAttrPtr[i]){
+			return false;
+		}
 
-    for (int i = 0; i < setsCount; ++i){
-        if (m_parametersIdAttrPtr[i] != objectParamsSetPtr->m_parametersIdAttrPtr[i]){
-            return false;
-        }
+		iser::ISerializable* paramPtr = m_parametersCompPtr[i];
+		const iser::ISerializable* objectParamPtr = objectParamsSetPtr->m_parametersCompPtr[i];
 
-        iser::ISerializable* paramPtr = m_parametersCompPtr[i];
-        const iser::ISerializable* objectParamPtr = objectParamsSetPtr->m_parametersCompPtr[i];
+		if ((paramPtr != NULL && objectParamPtr == NULL) || (paramPtr == NULL && objectParamPtr != NULL)){
+			return false;
+		}
 
-        if ((paramPtr != nullptr && objectParamPtr == nullptr) || (paramPtr == nullptr && objectParamPtr != nullptr)){
-            return false;
-        }
+		if ((paramPtr != NULL) && (objectParamPtr != NULL)){
+			if (!paramPtr->IsEqual(*objectParamPtr)){
+				return false;
+			}
+		}
+	}
 
-        if (paramPtr != nullptr && objectParamPtr != nullptr){
-            if (paramPtr->IsEqual(*objectParamPtr) == false){
-                return false;
-            }
-        }
-    }
-
-    return true;
+	return true;
 }
 
 

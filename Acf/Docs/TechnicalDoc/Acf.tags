@@ -9320,6 +9320,20 @@
       <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>CPolygon</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>ac0f798f30f4f94536c86848e62ad6703</anchor>
+      <arglist>(const QPolygonF &amp;qpolygon=QPolygonF())</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>operator QPolygonF</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>abba70a4e6bf9a79b0c83c504017d9a63</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>Contains</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -9361,6 +9375,20 @@
       <anchor>a3b34ee87958101bc2572acdeb0d8fd1b</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetArea</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>a6c747c7cd9d3ae21655a9458857ed825</anchor>
+      <arglist>(bool oriented=false) const </arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetPerimeter</name>
+      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
+      <anchor>abf958e0513b4ab5fdd644d60fbc7bb6e</anchor>
+      <arglist>() const </arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Clear</name>
@@ -9380,6 +9408,13 @@
       <name>GetNodesCount</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>ae36a84e90f1d704825a04594c660660d</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsEmpty</name>
+      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
+      <anchor>a76ae351c796290f048841080911f36c8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -35435,6 +35470,20 @@
       <anchor>a99b6c32efe101e940b4452e4a0fea984</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>a1b8493292762e97589b846beaa45d2d1</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
+      <anchor>a99bcced9f9d4f9906d52c432742e760f</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>int</type>
       <name>CalcIndexFromId</name>
@@ -44033,11 +44082,25 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
+      <anchor>a73ea3905683c2df61c61c7664b2fcf5f</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
       <anchor>a4272e33fd4c4b4a1b570289eb4d04d77</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
+      <anchor>ac3281fa641094e6e8166524000971337</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -45080,11 +45143,25 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a66163febd92fa2ba922107c584c9edd8</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>aaf799714f43b24b38144e8b28ec22a29</anchor>
       <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
+      <anchor>a2a0527ec8710ec4a339968f894440ebb</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
