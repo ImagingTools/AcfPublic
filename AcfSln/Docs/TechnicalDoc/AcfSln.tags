@@ -24584,6 +24584,13 @@
       <anchor>a6bf8d65d09539e687544fea3accca651</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>CalculateHistogram</name>
+      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
+      <anchor>ace2e3c7f3c3107147364fc01a0553f5a</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr, QString &amp;errorString)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
