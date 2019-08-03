@@ -5013,6 +5013,22 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
+    <name>CProgressDialog.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_progress_dialog_8h</filename>
+    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="no" imported="no">ibase/IProgressManager.h</includes>
+    <class kind="class">iqtgui::CProgressDialog</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CProgressGuiBridge.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_c_progress_gui_bridge_8h</filename>
+    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="no" imported="no">ibase/IProgressManager.h</includes>
+    <class kind="class">iqtgui::CProgressGuiBridge</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
     <name>CProgressManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_progress_manager_gui_comp_8h</filename>
@@ -53747,6 +53763,8 @@
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
     <class kind="class">iqtgui::CProcessStartCommandComp</class>
+    <class kind="class">iqtgui::CProgressDialog</class>
+    <class kind="class">iqtgui::CProgressGuiBridge</class>
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiCompBase</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
@@ -55791,6 +55809,100 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_process_start_command_comp.html</anchorfile>
       <anchor>a7f2953fec9f9cbf75d9d0ee575ba8413</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CProgressDialog</name>
+    <filename>classiqtgui_1_1_c_progress_dialog.html</filename>
+    <base virtualness="virtual">ibase::IProgressManager</base>
+    <member kind="typedef">
+      <type>QProgressDialog</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
+      <anchor>a07d29516a270a72ae35a92a9b2b637d3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CProgressDialog</name>
+      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
+      <anchor>a008e70d25e47b6b64e4ef277191d62a7</anchor>
+      <arglist>(QWidget *parentWidget=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginProgressSession</name>
+      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
+      <anchor>a46e89411b3986790d1c28b3616b18cd8</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EndProgressSession</name>
+      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
+      <anchor>a69f6dcc3c77637291c1f5c528b24106b</anchor>
+      <arglist>(int sessionId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnProgress</name>
+      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
+      <anchor>a0176542bf389438810741a91d034adbf</anchor>
+      <arglist>(int sessionId, double currentProgress) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCanceled</name>
+      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
+      <anchor>a36b1beeaacb383c120f921a4b861544e</anchor>
+      <arglist>(int sessionId) const override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CProgressGuiBridge</name>
+    <filename>classiqtgui_1_1_c_progress_gui_bridge.html</filename>
+    <base virtualness="virtual">ibase::IProgressManager</base>
+    <member kind="function">
+      <type></type>
+      <name>CProgressGuiBridge</name>
+      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
+      <anchor>a44cea5d921e66d19762f058844d1fa20</anchor>
+      <arglist>(QProgressBar *progressWidget, QAbstractButton *cancelButton=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginProgressSession</name>
+      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
+      <anchor>a6c5f925d61b45ef3c537da49138ea82d</anchor>
+      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>EndProgressSession</name>
+      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
+      <anchor>ad1296ff146d8ffa4a4591e3e20ab6f55</anchor>
+      <arglist>(int sessionId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnProgress</name>
+      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
+      <anchor>a57ead945d2ea8fcad3ec004a1df55f16</anchor>
+      <arglist>(int sessionId, double currentProgress) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsCanceled</name>
+      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
+      <anchor>a4edd9c8381891e37cc22be36dd1f83c5</anchor>
+      <arglist>(int sessionId) const override</arglist>
+    </member>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>OnCancelButtonClicked</name>
+      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
+      <anchor>a4963dc287022d0a96cca6e8d573c0c7b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -76569,6 +76681,8 @@
     <file>CModelEditorGuiComp.h</file>
     <file>CMultiPageGuiCompBase.h</file>
     <file>CProcessStartCommandComp.h</file>
+    <file>CProgressDialog.h</file>
+    <file>CProgressGuiBridge.h</file>
     <file>CProgressManagerGuiComp.h</file>
     <file>CSimpleMainWindowGuiComp.h</file>
     <file>CSplashScreenGuiComp.h</file>
