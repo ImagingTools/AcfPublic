@@ -130,6 +130,7 @@
     <ClCompile Include="..\CCircleFindProcessorComp.cpp" />
     <ClCompile Include="..\CCircleFinderParams.cpp" />
     <ClCompile Include="..\CCircleFinderParamsComp.cpp" />
+    <ClCompile Include="..\CColorBalanceProcessorComp.cpp" />
     <ClCompile Include="..\CColorPatternComparatorComp.cpp" />
     <ClCompile Include="..\CColorPatternControllerComp.cpp" />
     <ClCompile Include="..\CConvolutionKernel2d.cpp" />
@@ -208,6 +209,7 @@
     <ClInclude Include="..\CCircleFindProcessorComp.h" />
     <ClInclude Include="..\CCircleFinderParams.h" />
     <ClInclude Include="..\CCircleFinderParamsComp.h" />
+    <ClInclude Include="..\CColorBalanceProcessorComp.h" />
     <ClInclude Include="..\CColorPatternComparatorComp.h" />
     <ClInclude Include="..\CColorPatternControllerComp.h" />
     <ClInclude Include="..\CConvolutionKernel2d.h" />
