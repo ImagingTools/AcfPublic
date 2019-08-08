@@ -5013,22 +5013,6 @@
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
-    <name>CProgressDialog.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_progress_dialog_8h</filename>
-    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="no" imported="no">ibase/IProgressManager.h</includes>
-    <class kind="class">iqtgui::CProgressDialog</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CProgressGuiBridge.h</name>
-    <path>C:/Temp/Acf/Include/iqtgui/</path>
-    <filename>_c_progress_gui_bridge_8h</filename>
-    <includes id="_i_progress_manager_8h" name="IProgressManager.h" local="no" imported="no">ibase/IProgressManager.h</includes>
-    <class kind="class">iqtgui::CProgressGuiBridge</class>
-    <namespace>iqtgui</namespace>
-  </compound>
-  <compound kind="file">
     <name>CProgressManagerGuiComp.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_c_progress_manager_gui_comp_8h</filename>
@@ -9336,20 +9320,6 @@
       <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function">
-      <type></type>
-      <name>CPolygon</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>ac0f798f30f4f94536c86848e62ad6703</anchor>
-      <arglist>(const QPolygonF &amp;qpolygon=QPolygonF())</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>operator QPolygonF</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>abba70a4e6bf9a79b0c83c504017d9a63</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
       <type>bool</type>
       <name>Contains</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
@@ -9391,20 +9361,6 @@
       <anchor>a3b34ee87958101bc2572acdeb0d8fd1b</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetArea</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a6c747c7cd9d3ae21655a9458857ed825</anchor>
-      <arglist>(bool oriented=false) const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetPerimeter</name>
-      <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>abf958e0513b4ab5fdd644d60fbc7bb6e</anchor>
-      <arglist>() const </arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Clear</name>
@@ -9424,13 +9380,6 @@
       <name>GetNodesCount</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
       <anchor>ae36a84e90f1d704825a04594c660660d</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsEmpty</name>
-      <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a76ae351c796290f048841080911f36c8</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -35486,20 +35435,6 @@
       <anchor>a99b6c32efe101e940b4452e4a0fea984</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>a1b8493292762e97589b846beaa45d2d1</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiprm_1_1_c_options_manager.html</anchorfile>
-      <anchor>a99bcced9f9d4f9906d52c432742e760f</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
     <member kind="function" protection="protected">
       <type>int</type>
       <name>CalcIndexFromId</name>
@@ -44098,25 +44033,11 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
-      <anchor>a73ea3905683c2df61c61c7664b2fcf5f</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
       <anchor>a4272e33fd4c4b4a1b570289eb4d04d77</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEqual</name>
-      <anchorfile>classiprm_1_1_c_composed_params_set_comp.html</anchorfile>
-      <anchor>ac3281fa641094e6e8166524000971337</anchor>
-      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function">
       <type></type>
@@ -45159,25 +45080,11 @@
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a66163febd92fa2ba922107c584c9edd8</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
       <anchor>aaf799714f43b24b38144e8b28ec22a29</anchor>
       <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsEqual</name>
-      <anchorfile>classiprm_1_1_c_params_manager_comp.html</anchorfile>
-      <anchor>a2a0527ec8710ec4a339968f894440ebb</anchor>
-      <arglist>(const IChangeable &amp;object) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -53763,8 +53670,6 @@
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
     <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
     <class kind="class">iqtgui::CProcessStartCommandComp</class>
-    <class kind="class">iqtgui::CProgressDialog</class>
-    <class kind="class">iqtgui::CProgressGuiBridge</class>
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiCompBase</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
@@ -55809,100 +55714,6 @@
       <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_process_start_command_comp.html</anchorfile>
       <anchor>a7f2953fec9f9cbf75d9d0ee575ba8413</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CProgressDialog</name>
-    <filename>classiqtgui_1_1_c_progress_dialog.html</filename>
-    <base virtualness="virtual">ibase::IProgressManager</base>
-    <member kind="typedef">
-      <type>QProgressDialog</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
-      <anchor>a07d29516a270a72ae35a92a9b2b637d3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CProgressDialog</name>
-      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
-      <anchor>a008e70d25e47b6b64e4ef277191d62a7</anchor>
-      <arglist>(QWidget *parentWidget=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginProgressSession</name>
-      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
-      <anchor>a46e89411b3986790d1c28b3616b18cd8</anchor>
-      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EndProgressSession</name>
-      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
-      <anchor>a69f6dcc3c77637291c1f5c528b24106b</anchor>
-      <arglist>(int sessionId)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnProgress</name>
-      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
-      <anchor>a0176542bf389438810741a91d034adbf</anchor>
-      <arglist>(int sessionId, double currentProgress) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsCanceled</name>
-      <anchorfile>classiqtgui_1_1_c_progress_dialog.html</anchorfile>
-      <anchor>a36b1beeaacb383c120f921a4b861544e</anchor>
-      <arglist>(int sessionId) const override</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqtgui::CProgressGuiBridge</name>
-    <filename>classiqtgui_1_1_c_progress_gui_bridge.html</filename>
-    <base virtualness="virtual">ibase::IProgressManager</base>
-    <member kind="function">
-      <type></type>
-      <name>CProgressGuiBridge</name>
-      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
-      <anchor>a44cea5d921e66d19762f058844d1fa20</anchor>
-      <arglist>(QProgressBar *progressWidget, QAbstractButton *cancelButton=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginProgressSession</name>
-      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
-      <anchor>a6c5f925d61b45ef3c537da49138ea82d</anchor>
-      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EndProgressSession</name>
-      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
-      <anchor>ad1296ff146d8ffa4a4591e3e20ab6f55</anchor>
-      <arglist>(int sessionId)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnProgress</name>
-      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
-      <anchor>a57ead945d2ea8fcad3ec004a1df55f16</anchor>
-      <arglist>(int sessionId, double currentProgress) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsCanceled</name>
-      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
-      <anchor>a4edd9c8381891e37cc22be36dd1f83c5</anchor>
-      <arglist>(int sessionId) const override</arglist>
-    </member>
-    <member kind="slot" protection="protected">
-      <type>void</type>
-      <name>OnCancelButtonClicked</name>
-      <anchorfile>classiqtgui_1_1_c_progress_gui_bridge.html</anchorfile>
-      <anchor>a4963dc287022d0a96cca6e8d573c0c7b</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -76681,8 +76492,6 @@
     <file>CModelEditorGuiComp.h</file>
     <file>CMultiPageGuiCompBase.h</file>
     <file>CProcessStartCommandComp.h</file>
-    <file>CProgressDialog.h</file>
-    <file>CProgressGuiBridge.h</file>
     <file>CProgressManagerGuiComp.h</file>
     <file>CSimpleMainWindowGuiComp.h</file>
     <file>CSplashScreenGuiComp.h</file>

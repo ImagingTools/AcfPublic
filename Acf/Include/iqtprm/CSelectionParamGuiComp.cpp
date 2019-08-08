@@ -329,7 +329,9 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 		iqt::CSignalBlocker blocker(switchBoxPtr);
 		Q_UNUSED(blocker);
 
-		switchBoxPtr->clear();
+		while (switchBoxPtr->count() > 0){
+			switchBoxPtr->removeItem(0);
+		}
 
 		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
 		if (constraintsPtr != NULL){

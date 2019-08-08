@@ -37,6 +37,8 @@
 #include <i2d/CPolygon.h>
 #include <ilog/CExtMessage.h>
 #include <iimg/CBitmap.h>
+
+// ACF-Solutions includes
 #include <iedge/CEdgeLineContainer.h>
 
 
@@ -79,18 +81,17 @@ bool COcvEdgeExtractorComp::DoContourExtraction(
 
 	// Filter out masked points:
 	if (aoiPtr.IsValid()){
-		iimg::CScanlineMask invertedMask;
-		invertedMask.SetCalibration(bitmap.GetCalibration());
+		iimg::CScanlineMask mask;
+		mask.SetCalibration(bitmap.GetCalibration());
 
 		i2d::CRect clipArea(size);
-		if (!invertedMask.CreateFromGeometry(*aoiPtr, &clipArea)) {
+		if (!mask.CreateFromGeometry(*aoiPtr, &clipArea)){
 			SendErrorMessage(0, QObject::tr("AOI type is not supported"));
 
 			return false;
 		}
 
-		iimg::CScanlineMask mask;
-		invertedMask.GetInverted(clipArea, mask);
+		mask.Invert(clipArea);
 
 		iimg::CBitmap maskedBitmap;
 		maskedBitmap.CopyFrom(bitmap);

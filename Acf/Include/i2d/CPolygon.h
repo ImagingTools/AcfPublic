@@ -24,9 +24,6 @@
 #define i2d_CPolygon_included
 
 
-// Qt includes
-#include <QtGui/QPolygonF>
-
 // ACF includes
 #include <i2d/CPolypoint.h>
 
@@ -44,10 +41,6 @@ public:
 	typedef CPolypoint BaseClass;
 
 	static QByteArray GetTypeName();
-
-	CPolygon(const QPolygonF& qpolygon = QPolygonF());
-
-	operator QPolygonF() const;
 
 	/**
 		Check if the polygon contains a given point.
@@ -75,16 +68,6 @@ public:
 		Reverses nodes order.
 	*/
 	virtual void ReverseNodes();
-
-	/**
-		Get area of the polygon.
-	*/
-	double GetArea(bool oriented = false) const;
-
-	/**
-		Get perimeter of the polygon.
-	*/
-	double GetPerimeter() const;
 
 	// reimplemented (istd::IChangeable)
 	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
