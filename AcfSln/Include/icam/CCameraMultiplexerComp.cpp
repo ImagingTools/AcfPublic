@@ -199,10 +199,7 @@ const iprm::IParamsSet* CCameraMultiplexerComp::GetWorkingParamsSet(const iprm::
 	iprm::TParamsPtr<iprm::IParamsManager> cameraParamsManagerPtr(paramsPtr != NULL ? paramsPtr : m_parameterSetCompPtr.GetPtr(), *m_cameraManagerParamIdAttrPtr);
 	if (cameraParamsManagerPtr.IsValid()){
 		int selectedCameraIndex = GetSelectedIndex();
-		if ((selectedCameraIndex >= 0) && (selectedCameraIndex < cameraParamsManagerPtr->GetParamsSetsCount())){
-			return cameraParamsManagerPtr->GetParamsSet(selectedCameraIndex);
-		}
-
+		return cameraParamsManagerPtr->GetParamsSet(selectedCameraIndex);
 	}
 
 	return NULL;

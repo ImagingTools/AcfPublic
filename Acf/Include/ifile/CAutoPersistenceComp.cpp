@@ -249,7 +249,7 @@ void CAutoPersistenceComp::OnModelChanged(int modelId, const istd::IChangeable::
 		case MI_FILEPATH:
 		{
 			if (*m_reloadOnFileChangeAttrPtr){
-				if (!m_fileWatcher.files().isEmpty()){
+				if (m_fileWatcher.files().isEmpty() == false){
 					m_fileWatcher.removePaths(m_fileWatcher.files());
 				}
 			}
@@ -363,7 +363,7 @@ void CAutoPersistenceComp::OnFileContentsChanged(const QString& path)
 
 			QFile::remove(tempFileName);
 
-			if (!m_fileWatcher.files().isEmpty()){
+			if (m_fileWatcher.files().isEmpty() == false){
 				m_fileWatcher.removePaths(m_fileWatcher.files());
 			}
 			m_fileWatcher.addPath(path);

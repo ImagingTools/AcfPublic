@@ -192,14 +192,6 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
-    <name>COcvSubdiv2d.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_subdiv2d_8h</filename>
-    <class kind="class">iocv::COcvSubdiv2d</class>
-    <class kind="struct">iocv::COcvSubdiv2d::Triangle</class>
-    <namespace>iocv</namespace>
-  </compound>
-  <compound kind="file">
     <name>COcvUndistortImageProcessorComp.h</name>
     <path>C:/Temp/Iacf/Include/iocv/</path>
     <filename>_c_ocv_undistort_image_processor_comp_8h</filename>
@@ -996,7 +988,6 @@
     <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
     <class kind="class">iocv::COcvPointGridExtractorComp</class>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
-    <class kind="class">iocv::COcvSubdiv2d</class>
     <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
     <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
@@ -1860,50 +1851,6 @@
       <anchorfile>classiocv_1_1_c_ocv_resampling_processor_comp.html</anchorfile>
       <anchor>afc010ec23450b29e1face2393dafd867</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iocv::COcvSubdiv2d</name>
-    <filename>classiocv_1_1_c_ocv_subdiv2d.html</filename>
-    <class kind="struct">iocv::COcvSubdiv2d::Triangle</class>
-    <member kind="function">
-      <type>void</type>
-      <name>GetTrianglesIndices</name>
-      <anchorfile>classiocv_1_1_c_ocv_subdiv2d.html</anchorfile>
-      <anchor>aa7a0e8af60b44722b93e617a6c25a9f5</anchor>
-      <arglist>(std::vector&lt; Triangle &gt; &amp;triangleList) const </arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iocv::COcvSubdiv2d::Triangle</name>
-    <filename>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Triangle</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>a07ec1fde5bd5ab2b26fd2cb4281f484d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>a</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>a6b633b0153e7b4dd0be5123583c1f0c1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>b</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>ad2dd72980d907cfe1b50f53e585e4382</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>c</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>a270c23482470f40584964315ac99f8ce</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3167,7 +3114,6 @@
     <file>COcvMorphologicalProcessorComp.h</file>
     <file>COcvPointGridExtractorComp.h</file>
     <file>COcvResamplingProcessorComp.h</file>
-    <file>COcvSubdiv2d.h</file>
     <file>COcvUndistortImageProcessorComp.h</file>
     <file>COcvVideoControllerComp.h</file>
     <file>iocv.h</file>

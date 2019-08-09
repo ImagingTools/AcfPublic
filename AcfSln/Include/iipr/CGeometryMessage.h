@@ -41,8 +41,6 @@ class CGeometryMessage: public ilog::CExtMessage
 public:
 	typedef ilog::CExtMessage BaseClass;
 
-	static QByteArray GetTypeName();
-
 	CGeometryMessage();
 	CGeometryMessage(istd::IInformationProvider::InformationCategory category,
 				int id,
@@ -54,8 +52,7 @@ public:
 	// reimplemented (iser::IObject)
 	virtual QByteArray GetFactoryId() const override;
 
-	// reimplemented (iser::IChangeable)
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
+	static QByteArray GetTypeName();
 
 private:
 	static i2d::CObject2dFactory s_factory;

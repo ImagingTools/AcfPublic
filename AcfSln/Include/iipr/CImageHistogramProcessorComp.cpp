@@ -54,43 +54,51 @@ namespace iipr
 static const imath::CGeneralUnitInfo s_channelUnitInfo(imath::IUnitInfo::UT_TECHNICAL);
 
 
-bool CImageHistogramProcessorComp::CalculateHistogram(
+// protected methods
+
+// reimplemented (CImageRegionProcessorCompBase)
+
+bool CImageHistogramProcessorComp::ProcessImageRegion(
 			const iimg::IBitmap& inputBitmap,
+			const iprm::IParamsSet* /*paramsPtr*/,
 			const i2d::IObject2d* aoiPtr,
-			istd::IChangeable* outputPtr,
-			QString& errorString)
+			istd::IChangeable* outputPtr) const
 {
 	imeas::IDiscreteDataSequence* histogramPtr = dynamic_cast<imeas::IDiscreteDataSequence*>(outputPtr);
 	if (histogramPtr == NULL){
-		errorString = QCoreApplication::tr("Bad output type");
 		return false;
 	}
 
 	if (inputBitmap.IsEmpty()){
 		histogramPtr->ResetSequence();
+
 		return true;
 	}
 
+
 	int componentsBitCount = inputBitmap.GetComponentBitsCount();
 	if (componentsBitCount != 8){
-		errorString = QCoreApplication::tr("Only 8-bit images are supported");
+		SendWarningMessage(0, "Only 8-bit images are supported");
+
 		return false;
 	}
 
 	ibase::CSize inputBitmapSize(inputBitmap.GetImageSize());
 	i2d::CRectangle realArea = i2d::CRectangle(inputBitmapSize);
 
-	const i2d::IObject2d* usedAoiPtr = (aoiPtr != NULL) ? aoiPtr : &realArea;
+	const i2d::IObject2d* usedAoiPtr = (aoiPtr != NULL)? aoiPtr: &realArea;
 
 	iimg::CScanlineMask bitmapRegion;
 	i2d::CRect clipArea(inputBitmap.GetImageSize());
 	if (!bitmapRegion.CreateFromGeometry(*usedAoiPtr, &clipArea)){
-		errorString = QCoreApplication::tr("Cannot create the region");
+		SendWarningMessage(0, "Cannot create the region");
+
 		return false;
 	}
 
 	if (bitmapRegion.IsBitmapRegionEmpty()){
-		errorString = QCoreApplication::tr("Cannot process an empty region");
+		SendWarningMessage(0, "Cannot process an empty region");
+	
 		return false;
 	}
 
@@ -119,15 +127,12 @@ bool CImageHistogramProcessorComp::CalculateHistogram(
 			usedColorComponents = 4;
 			channelNames << QCoreApplication::tr("Alpha") << QCoreApplication::tr("Red") << QCoreApplication::tr("Green") << QCoreApplication::tr("Blue");
 			break;
-
-		default:
-			errorString = QCoreApplication::tr("Image format not supported");
-			return false;
 	}
 
 	int histogramSize = 256 * usedColorComponents;
 
-	quint32* histogramDataBufferPtr = new quint32[histogramSize];
+	istd::TDelPtr<quint32, istd::ArrayAccessor<quint32> > histogramDataPtr(new quint32[histogramSize]);
+	quint32* histogramDataBufferPtr = histogramDataPtr.GetPtr();
 
 	std::memset(histogramDataBufferPtr, 0, histogramSize * sizeof(quint32));
 	int pixelCount = 0;
@@ -143,9 +148,9 @@ bool CImageHistogramProcessorComp::CalculateHistogram(
 
 		rangesPtr->GetAsList(clipArea.GetHorizontalRange(), rangesList);
 
-		for (istd::CIntRanges::RangeList::ConstIterator iter = rangesList.begin();
-			iter != rangesList.end();
-			++iter){
+		for (		istd::CIntRanges::RangeList::ConstIterator iter = rangesList.begin();
+					iter != rangesList.end();
+					++iter){
 			const istd::CIntRange& pixelRange = *iter;
 
 			int rangeStart = qMax(pixelRange.GetMinValue(), 0);
@@ -191,43 +196,18 @@ bool CImageHistogramProcessorComp::CalculateHistogram(
 		sequenceInfoPtr->InsertValueInfo(channelName, channelName, channelName.toUtf8(), s_channelUnitInfo);
 	}
 
+	istd::CChangeNotifier notifier(histogramPtr);
+	Q_UNUSED(notifier);
+
 	return histogramPtr->CreateDiscreteSequenceWithInfo(
-				istd::TSmartPtr<const imeas::IDataSequenceInfo>(sequenceInfoPtr),
-				256,
-				histogramDataBufferPtr,
-				true,
-				0,
-				0,
-				sizeof(quint32) * 8,
-				usedColorComponents);
-}
-
-
-// protected methods
-
-// reimplemented (CImageRegionProcessorCompBase)
-
-bool CImageHistogramProcessorComp::ProcessImageRegion(
-			const iimg::IBitmap& inputBitmap,
-			const iprm::IParamsSet* /*paramsPtr*/,
-			const i2d::IObject2d* aoiPtr,
-			istd::IChangeable* outputPtr) const
-{
-	QString errorString;
-
-	if (CalculateHistogram(inputBitmap, aoiPtr, outputPtr, errorString)){
-		istd::CChangeNotifier notifier(outputPtr);
-		Q_UNUSED(notifier);
-
-		return true;
-	}
-	else{
-		if (errorString.size()){
-			SendErrorMessage(0, errorString);
-		}
-
-		return false;
-	}
+					istd::TSmartPtr<const imeas::IDataSequenceInfo>(sequenceInfoPtr),
+					256,
+					histogramDataPtr.PopPtr(),
+					true,
+					0,
+					0,
+					sizeof(quint32) * 8,
+					usedColorComponents);
 }
 
 

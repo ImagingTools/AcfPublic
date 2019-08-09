@@ -23,6 +23,12 @@
 #include <iocv/COcvBlobProcessorComp.h>
 
 
+// OpenCV includes
+#include <opencv2/features2d/features2d.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/imgproc/types_c.h>
+#include <opencv2/opencv.hpp>
+
 // ACF includes
 #include <istd/CChangeGroup.h>
 #include <iimg/CBitmapBase.h>
@@ -31,6 +37,8 @@
 #include <i2d/CPolygon.h>
 #include <ilog/CExtMessage.h>
 #include <iimg/CBitmap.h>
+
+// ACF-Solutions includes
 #include <iblob/CBlobFeature.h>
 
 
@@ -113,7 +121,7 @@ bool COcvBlobProcessorComp::CalculateBlobs(
 
 	// Get contours from the binary image:
 	std::vector<std::vector<cv::Point> > contours;
-	findContours(tmpBinaryImage, contours, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE);
+	findContours(tmpBinaryImage, contours, CV_RETR_LIST, CV_CHAIN_APPROX_NONE);
 
 	// Get found blobs:
 	int blobsCount = 0;
@@ -121,86 +129,48 @@ bool COcvBlobProcessorComp::CalculateBlobs(
 	istd::TDelPtr<ilog::CExtMessage> blobMessagePtr;
 	if (m_resultConsumerCompPtr.IsValid()){
 		blobMessagePtr.SetPtr(new ilog::CExtMessage(
-					istd::IInformationProvider::IC_INFO,
-					MI_FOUND_BLOB,
-					"",
-					"OpenCV Blob Detector"));
+			istd::IInformationProvider::IC_INFO,
+			MI_FOUND_BLOB,
+			"",
+			"OpenCV Blob Detector"));
 	}
 
-	const i2d::ICalibration2d* calibrationPtr = m_calibrationProviderCompPtr.IsValid() ? m_calibrationProviderCompPtr->GetCalibration() : NULL;
-
 	for (int contourIndex = 0; contourIndex < int(contours.size()); contourIndex++){
-		cv::Mat points(contours[contourIndex]);
-		cv::Moments moms = cv::moments(points);
+		cv::Moments moms = cv::moments(cv::Mat(contours[contourIndex]));
 
-		const double orientedArea = cv::contourArea(points, true);
-		const double areaPixels = qAbs(orientedArea);
-		if (qFuzzyCompare(areaPixels, 0.0)){
+		double area = moms.m00;
+		if (qFuzzyCompare(area, 0.0)){
 			continue;
 		}
 
-		cv::RotatedRect rotatedRect = cv::minAreaRect(points);
-		float angle = qDegreesToRadians(rotatedRect.angle);
-
-		double perimeter = cv::arcLength(points, true);
+		double perimeter = cv::arcLength(cv::Mat(contours[contourIndex]), true);
 
 		cv::Point2d location = cv::Point2d(moms.m10 / moms.m00, moms.m01 / moms.m00);
 		double circularity = 0.0;
 		
 		if (perimeter > 0){
-			circularity = 4 * I_PI * areaPixels / (perimeter * perimeter);
+			circularity = 4 * I_PI * area / (perimeter * perimeter);
 		}
 
 		bool passedByFilter = true;
 
 		if (filterParamsPtr != NULL){
-			passedByFilter = IsBlobAcceptedByFilter(*filterParamsPtr, areaPixels, perimeter, circularity);
-		}
-
-		if (m_getNegativeBlobsPolygonCompPtr.IsValid()){
-			const bool isNegative = m_getNegativeBlobsPolygonCompPtr->IsEnabled();
-
-			passedByFilter = passedByFilter && isNegative == (orientedArea > 0);
+			passedByFilter = IsBlobAcceptedByFilter(*filterParamsPtr, area, perimeter, circularity);
 		}
 
 		if (passedByFilter){
 			blobsCount++;
 
-			i2d::CVector2d position(location.x, location.y);
-			i2d::CPolygon polygon;
-			polygon.SetCalibration(calibrationPtr);
+			i2d::CVector2d position = i2d::CVector2d(location.x, location.y);
 
-			for (const cv::Point2f& p : contours[contourIndex]){
-				i2d::CVector2d v(p.x, p.y);
-
-				if (calibrationPtr != NULL){
-					i2d::CVector2d mm;
-					if (calibrationPtr->GetInvPositionAt(v, mm)){
-						v = mm;
-					}
-				}
-
-				polygon.InsertNode(v);
-			}
-
-			iblob::CBlobFeature* blobFeaturePtr = new iblob::CBlobFeature(areaPixels, perimeter, position, angle, i2d::CVector2d(1, 1), polygon);
+			iblob::CBlobFeature* blobFeaturePtr = new iblob::CBlobFeature(area, perimeter, position);
 			result.AddFeature(blobFeaturePtr);
 
-			blobFeaturePtr->SetObjectId(QByteArray::number(contourIndex));
-			blobFeaturePtr->SetWeight(1.0);
-
 			if (blobMessagePtr.IsValid()){
-				double metricArea = blobFeaturePtr->GetArea();
-				i2d::CPolygon* blobMessagePolygonPtr = new imod::TModelWrap<i2d::CPolygon>();
-				blobMessagePolygonPtr->CopyFrom(polygon, istd::IChangeable::CM_CONVERT);
-				blobMessagePtr->InsertAttachedObject(
-							blobMessagePolygonPtr,
-							QObject::tr("Blob %1, Position: (%2, %3), Area: %4 px (%5 mm)")
-										.arg(blobsCount)
-										.arg(position.GetX()).arg(position.GetY())
-										.arg(areaPixels)
-										.arg(metricArea)
-				);
+				i2d::CCircle* blobMessageCirclePtr = new imod::TModelWrap<i2d::CCircle>();
+				blobMessageCirclePtr->SetPosition(position);
+				blobMessageCirclePtr->SetRadius(qSqrt(area / I_PI));
+				blobMessagePtr->InsertAttachedObject(blobMessageCirclePtr, QObject::tr("Blob %1, Pos.: (%2; %3), Area: %4").arg(blobsCount).arg(position.GetX()).arg(position.GetY()).arg(area));
 			}
 		}
 	}
