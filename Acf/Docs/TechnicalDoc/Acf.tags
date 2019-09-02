@@ -10784,8 +10784,8 @@
       <type>void</type>
       <name>GetColumnVector</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>acbe04611eddc9ab71e058d2843d41b1d</anchor>
-      <arglist>(int columnIndex, TVector&lt; Height, double &gt; &amp;result)</arglist>
+      <anchor>ab6151276ebea9749939ee38bd8dc493c</anchor>
+      <arglist>(int columnIndex, TVector&lt; Height, double &gt; &amp;result) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -14866,8 +14866,8 @@
       <type>void</type>
       <name>GetColumnVector</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>acbe04611eddc9ab71e058d2843d41b1d</anchor>
-      <arglist>(int columnIndex, TVector&lt; Height, double &gt; &amp;result)</arglist>
+      <anchor>ab6151276ebea9749939ee38bd8dc493c</anchor>
+      <arglist>(int columnIndex, TVector&lt; Height, double &gt; &amp;result) const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -42113,8 +42113,8 @@
       <type>void</type>
       <name>GetColumnVector</name>
       <anchorfile>classimath_1_1_t_matrix.html</anchorfile>
-      <anchor>acbe04611eddc9ab71e058d2843d41b1d</anchor>
-      <arglist>(int columnIndex, TVector&lt; Height, Element &gt; &amp;result)</arglist>
+      <anchor>ab6151276ebea9749939ee38bd8dc493c</anchor>
+      <arglist>(int columnIndex, TVector&lt; Height, Element &gt; &amp;result) const </arglist>
     </member>
     <member kind="function">
       <type>void</type>
