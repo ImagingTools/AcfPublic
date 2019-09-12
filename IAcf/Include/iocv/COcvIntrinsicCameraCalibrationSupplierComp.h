@@ -28,6 +28,7 @@
 #include <iimg/IBitmapProvider.h>
 #include <iipr/IImageToFeatureProcessor.h>
 
+
 // IACF includes
 #include <iocv/COcvIntrinsicCameraCalibration.h>
 
@@ -47,8 +48,7 @@ public:
 		I_REGISTER_SUBELEMENT(ResultCalibration);
 		I_REGISTER_SUBELEMENT_INTERFACE(ResultCalibration, COcvIntrinsicCameraCalibration, ExtractCalibration);
 		I_REGISTER_SUBELEMENT_INTERFACE(ResultCalibration, i2d::ICalibration2d, ExtractCalibration);
-		I_REGISTER_SUBELEMENT_INTERFACE(ResultCalibration, iser::ISerializable, ExtractCalibration);
-		I_REGISTER_INTERFACE(i2d::ICalibrationProvider);
+		I_REGISTER_INTERFACE(i2d::ICalibration2d);
 		I_ASSIGN(m_bitmapProviderCompPtr, "BitmapProvider", "Provide input image", true, "BitmapProvider");
 		I_ASSIGN(m_pointGridExtractorCompPtr, "PointGridExtractor", "Extractor of the point grid on image", true, "PointGridExtractor");
 		I_ASSIGN(m_cellSizeParamId, "CellSizeParamsId", "ID of point grid cell size in parameter set (type imeas::INumericValue): cell size in logical units", false, "CellSize");
@@ -70,6 +70,7 @@ protected:
 	{
 		return parent.m_productPtr.IsValid() ? parent.m_productPtr.GetPtr() : NULL;
 	}
+
 
 private:
 	I_REF(iimg::IBitmapProvider, m_bitmapProviderCompPtr);

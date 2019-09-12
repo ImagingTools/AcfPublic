@@ -2,9 +2,9 @@
 <Acf>
     <AcfHeader>
         <VersionInfos>
-            <Version Id="0" Number="4790" Description="ACF"/>
-            <Version Id="1" Number="2079" Description="ACF-Solutions"/>
-            <Version Id="1023" Number="331008" Description="Qt Framework"/>
+            <Version Id="0" Number="4783" Description="ACF"/>
+            <Version Id="1" Number="2068" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="330496" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
     <Description>Task UI for adaptive binarization based on OpenCV</Description>
@@ -19,15 +19,6 @@
                 </AttributeInfoMap>
             </Data>
         </Element>
-        <Element Id="Invert" PackageId="QtGuiPck" ComponentId="EnableableParamGui">
-            <Data IsEnabled="true" Flags="0">
-                <AttributeInfoMap>
-                    <AttributeInfo Id="Label" Type="Text" ExportId="">
-                        <Data IsEnabled="true" Value="Invert Content"/>
-                    </AttributeInfo>
-                </AttributeInfoMap>
-            </Data>
-        </Element>
         <Element Id="Params" PackageId="QtGuiPck" ComponentId="ComposedParamsSetGui">
             <Data IsEnabled="true" Flags="0">
                 <AttributeInfoMap>
@@ -36,7 +27,6 @@
                             <Values>
                                 <Value>FilterSize</Value>
                                 <Value>SegmentationOffset</Value>
-                                <Value>Invert</Value>
                             </Values>
                         </Data>
                     </AttributeInfo>
@@ -45,7 +35,14 @@
                             <Values>
                                 <Value>FilterSize</Value>
                                 <Value>SegmentationOffset</Value>
-                                <Value>Invert</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Names" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Filter Size</Value>
+                                <Value>Segmentation Offset</Value>
                             </Values>
                         </Data>
                     </AttributeInfo>

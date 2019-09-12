@@ -105,21 +105,10 @@ void CImageShape::AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::C
 	if (m_colorTransformationPtr != NULL){
 		QImage image = providerPtr->GetQImage().copy();
 		SetLookupTableToImage(image, *m_colorTransformationPtr);
-		if (!image.isNull()){
-			m_pixmap = QPixmap::fromImage(image, Qt::AutoColor);
-		}
-		else{
-			m_pixmap = QPixmap();
-		}
+		m_pixmap = QPixmap::fromImage(image, Qt::AutoColor);
 	}
 	else{
-		const QImage& image = providerPtr->GetQImage();
-		if (!image.isNull()) {
-			m_pixmap = QPixmap::fromImage(image, Qt::AutoColor);
-		}
-		else{
-			m_pixmap = QPixmap();
-		}
+		m_pixmap = QPixmap::fromImage(providerPtr->GetQImage(), Qt::AutoColor);
 	}
 
 	BaseClass::AfterUpdate(modelPtr, changeSet);

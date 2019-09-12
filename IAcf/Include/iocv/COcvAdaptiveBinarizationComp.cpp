@@ -28,7 +28,8 @@
 #include <ibase/CSize.h>
 #include <iprm/TParamsPtr.h>
 #include <iimg/IBitmap.h>
-#include <iprm/IEnableableParam.h>
+
+// ACF-Solitions includes
 #include <imeas/INumericValue.h>
 
 // OpenCV includes
@@ -92,11 +93,6 @@ int COcvAdaptiveBinarizationComp::DoProcessing(
 		return TS_INVALID;
 	}
 
-	bool invert = false;
-	iprm::TParamsPtr<iprm::IEnableableParam> invertPrm(paramsPtr, "Invert");
-	if (invertPrm.IsValid())
-		invert = invertPrm->IsEnabled();
-
 	int imageWidth = inputBitmapSize.GetX();
 	int imageHeight = inputBitmapSize.GetY();
 
@@ -122,12 +118,7 @@ int COcvAdaptiveBinarizationComp::DoProcessing(
 		segmentationOffset = 255 * segmentationOffsetParamPtr->GetValues()[0];
 	}
 
-	cv::adaptiveThreshold(input, output, 
-				255, 
-				cv::ADAPTIVE_THRESH_GAUSSIAN_C, 
-				invert ? cv::THRESH_BINARY_INV : cv::THRESH_BINARY,
-				kernelSize, 
-				segmentationOffset);
+	cv::adaptiveThreshold(input, output, 255, cv::ADAPTIVE_THRESH_GAUSSIAN_C, cv::THRESH_BINARY, kernelSize, segmentationOffset);
 
 	return TS_OK;
 }

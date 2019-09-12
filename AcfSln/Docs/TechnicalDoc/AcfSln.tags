@@ -1744,15 +1744,6 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
-    <name>CColorBalanceProcessorComp.h</name>
-    <path>C:/Temp/AcfSln/Include/iipr/</path>
-    <filename>_c_color_balance_processor_comp_8h</filename>
-    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
-    <includes id="_c_image_processor_comp_base_8h" name="CImageProcessorCompBase.h" local="no" imported="no">iipr/CImageProcessorCompBase.h</includes>
-    <class kind="class">iipr::CColorBalanceProcessorComp</class>
-    <namespace>iipr</namespace>
-  </compound>
-  <compound kind="file">
     <name>CColorPatternComparatorComp.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_color_pattern_comparator_comp_8h</filename>
@@ -6466,8 +6457,8 @@
       <type></type>
       <name>CBlobFeature</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a63e4d5d14136d3669530431d854920b1</anchor>
-      <arglist>(double area, double perimeter, const i2d::CVector2d &amp;position, double angle=0.0, const i2d::CVector2d &amp;scale=i2d::CVector2d(1.0, 1.0), const i2d::CPolygon &amp;contour=i2d::CPolygon())</arglist>
+      <anchor>a09b759f9203f1770e4919069a4a696ba</anchor>
+      <arglist>(double area, double perimeter, const i2d::CVector2d &amp;position, double angle=0.0)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
@@ -6495,13 +6486,6 @@
       <name>GetArea</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
       <anchor>aa825b9f2f3875d5412d01e921686ff5b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>const i2d::CPolygon &amp;</type>
-      <name>GetContour</name>
-      <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
-      <anchor>a0b54aeb339e00bef48931200b9c24761</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -16491,25 +16475,11 @@
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetInputBlockSize</name>
-      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
-      <anchor>a4e327639f5920faa489ae2b4cde1b68e</anchor>
-      <arglist>(int size)=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetOutputBlockSize</name>
       <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
       <anchor>a0148d75a9d7f127b1f225781646840d3</anchor>
       <arglist>() const =0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>SetOutputBlockSize</name>
-      <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
-      <anchor>a87c4ea1cbda080cbbcd06e7ee33f7626</anchor>
-      <arglist>(int size)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -21378,7 +21348,6 @@
     <class kind="class">iipr::CCircleFinderParams</class>
     <class kind="class">iipr::CCircleFinderParamsComp</class>
     <class kind="class">iipr::CCircleFindProcessorComp</class>
-    <class kind="class">iipr::CColorBalanceProcessorComp</class>
     <class kind="class">iipr::CColorPatternComparatorComp</class>
     <class kind="class">iipr::CColorPatternControllerComp</class>
     <class kind="class">iipr::CConvolutionKernel2d</class>
@@ -22706,116 +22675,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>iipr::CColorBalanceProcessorComp</name>
-    <filename>classiipr_1_1_c_color_balance_processor_comp.html</filename>
-    <base>iipr::CImageProcessorCompBase</base>
-    <member kind="typedef">
-      <type>iipr::CImageProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_color_balance_processor_comp.html</anchorfile>
-      <anchor>a2271fb64e64c616e906875692a242f33</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>AoiMode</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a06fbbbbd08c4fb742be83adc05a01572</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AM_INPUT_PIXELS</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a06fbbbbd08c4fb742be83adc05a01572a0406749811fc213835240067af1cad33</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>AM_OUTPUT_PIXELS</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a06fbbbbd08c4fb742be83adc05a01572a3df7273523ee9fb566d018b14793e275</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumeration">
-      <type></type>
-      <name>BackgroundFillMode</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a1fbd0d84af7e8d811613f756fb6ff062</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BFM_NONE</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a1fbd0d84af7e8d811613f756fb6ff062ad7a1b8d148bc8b03ac8b7f8ed8dc816c</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BFM_RESET</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a1fbd0d84af7e8d811613f756fb6ff062aa328c5d7e592df4d5c16af146321b0f9</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BFM_UNCHANGED</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a1fbd0d84af7e8d811613f756fb6ff062aabd5dd34f4c149164ffe31b8e17a0e4f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>BFM_INPUT</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a1fbd0d84af7e8d811613f756fb6ff062aab31d9b2f1665872a4b7dd9ce1bd8511</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>iproc::CSyncProcessorCompBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a4f0faf686d5922e785d6c1bbb79ced8b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ProcessImage</name>
-      <anchorfile>classiipr_1_1_c_color_balance_processor_comp.html</anchorfile>
-      <anchor>abc2382f2d5cef12cab63f2afa41b0185</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>BackgroundFillMode</type>
-      <name>GetBackgroundMode</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>ae6e90ed9be68cd4e1597ea9ed83e2f6b</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>iimg::IBitmap::PixelFormat</type>
-      <name>GetOutputPixelFormat</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>ae907ce5446659bf67ba4b85f562e354d</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>AoiMode</type>
-      <name>GetAoiMode</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a4534aa330d381bffd52e4a2af100ca30</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
-      <anchor>a5c47a52b01a6dd05800b16d66374657e</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>iipr::CColorPatternComparatorComp</name>
     <filename>classiipr_1_1_c_color_pattern_comparator_comp.html</filename>
     <base>TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</base>
@@ -23226,6 +23085,69 @@
       <anchor>a77f6d76d039ef56ba969f0c1a137d651</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>AoiMode</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a06fbbbbd08c4fb742be83adc05a01572</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AM_INPUT_PIXELS</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a06fbbbbd08c4fb742be83adc05a01572a0406749811fc213835240067af1cad33</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>AM_OUTPUT_PIXELS</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a06fbbbbd08c4fb742be83adc05a01572a3df7273523ee9fb566d018b14793e275</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>BackgroundFillMode</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a1fbd0d84af7e8d811613f756fb6ff062</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BFM_NONE</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a1fbd0d84af7e8d811613f756fb6ff062ad7a1b8d148bc8b03ac8b7f8ed8dc816c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BFM_RESET</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a1fbd0d84af7e8d811613f756fb6ff062aa328c5d7e592df4d5c16af146321b0f9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BFM_UNCHANGED</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a1fbd0d84af7e8d811613f756fb6ff062aabd5dd34f4c149164ffe31b8e17a0e4f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>BFM_INPUT</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a1fbd0d84af7e8d811613f756fb6ff062aab31d9b2f1665872a4b7dd9ce1bd8511</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a4f0faf686d5922e785d6c1bbb79ced8b</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>DoConvolutionFilter</name>
@@ -23239,6 +23161,34 @@
       <anchorfile>classiipr_1_1_c_convolution_processor_comp.html</anchorfile>
       <anchor>a6fe3f60904842983cc321ce6662f1d8f</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;inputImage, iimg::IBitmap &amp;outputImage) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>BackgroundFillMode</type>
+      <name>GetBackgroundMode</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>ae6e90ed9be68cd4e1597ea9ed83e2f6b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>iimg::IBitmap::PixelFormat</type>
+      <name>GetOutputPixelFormat</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>ae907ce5446659bf67ba4b85f562e354d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>AoiMode</type>
+      <name>GetAoiMode</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a4534aa330d381bffd52e4a2af100ca30</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiipr_1_1_c_image_processor_comp_base.html</anchorfile>
+      <anchor>a5c47a52b01a6dd05800b16d66374657e</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24223,13 +24173,6 @@
       <anchor>af3de24f8e2bdd582df959a8fdfa36e32</anchor>
       <arglist>() const override</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
-      <name>CloneMe</name>
-      <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
-      <anchor>a1aebc222889de5e10120f2827a8386af</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const </arglist>
-    </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
       <name>GetTypeName</name>
@@ -24626,13 +24569,6 @@
       <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
       <anchor>a6bf8d65d09539e687544fea3accca651</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>CalculateHistogram</name>
-      <anchorfile>classiipr_1_1_c_image_histogram_processor_comp.html</anchorfile>
-      <anchor>ace2e3c7f3c3107147364fc01a0553f5a</anchor>
-      <arglist>(const iimg::IBitmap &amp;inputBitmap, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr, QString &amp;errorString)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -39264,7 +39200,6 @@
     <file>CCircleFinderParams.h</file>
     <file>CCircleFinderParamsComp.h</file>
     <file>CCircleFindProcessorComp.h</file>
-    <file>CColorBalanceProcessorComp.h</file>
     <file>CColorPatternComparatorComp.h</file>
     <file>CColorPatternControllerComp.h</file>
     <file>CConvolutionKernel2d.h</file>
