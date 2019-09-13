@@ -360,18 +360,17 @@ bool CParamsManagerComp::IsEqual(const IChangeable& object) const
 	}
 
 	int paramsCount = GetParamsSetsCount();
-
 	for (int i = 0; i < paramsCount; ++i) {
 		IParamsSet* paramsSetPtr = GetParamsSet(i);
 
 		const IParamsSet* objectParamSetPtr = objectPtr->GetParamsSet(i);
 
-		if ((paramsSetPtr != nullptr && objectParamSetPtr == nullptr) || (paramsSetPtr == nullptr && objectParamSetPtr != nullptr)){
+		if ((paramsSetPtr != NULL && objectParamSetPtr == NULL) || (paramsSetPtr == NULL && objectParamSetPtr != NULL)){
 			return false;
 		}
 
-		if (paramsSetPtr != nullptr && objectParamSetPtr != nullptr){
-			if (paramsSetPtr->IsEqual(*objectParamSetPtr) == false){
+		if (paramsSetPtr != NULL && objectParamSetPtr != NULL){
+			if (!paramsSetPtr->IsEqual(*objectParamSetPtr)){
 				return false;
 			}
 		}
