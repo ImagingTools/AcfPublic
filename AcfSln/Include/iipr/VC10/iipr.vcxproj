@@ -184,6 +184,7 @@
     <ClCompile Include="..\CRingPatternGeneratorComp.cpp" />
     <ClCompile Include="..\CRingPatternGeneratorParamsComp.cpp" />
     <ClCompile Include="..\CSearchBasedFeaturesSupplierComp.cpp" />
+    <ClCompile Include="..\CSearchConstraintsComp.cpp" />
     <ClCompile Include="..\CSearchFeature.cpp" />
     <ClCompile Include="..\CSearchParams.cpp" />
     <ClCompile Include="..\CSearchParamsComp.cpp" />
@@ -264,6 +265,7 @@
     <ClInclude Include="..\CRingPatternGeneratorComp.h" />
     <ClInclude Include="..\CRingPatternGeneratorParamsComp.h" />
     <ClInclude Include="..\CSearchBasedFeaturesSupplierComp.h" />
+    <ClInclude Include="..\CSearchConstraintsComp.h" />
     <ClInclude Include="..\CSearchFeature.h" />
     <ClInclude Include="..\CSearchParams.h" />
     <ClInclude Include="..\CSearchParamsComp.h" />

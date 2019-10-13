@@ -2303,6 +2303,16 @@
     <namespace>iipr</namespace>
   </compound>
   <compound kind="file">
+    <name>CSearchConstraintsComp.h</name>
+    <path>C:/Temp/AcfSln/Include/iipr/</path>
+    <filename>_c_search_constraints_comp_8h</filename>
+    <includes id="_i_search_constraints_8h" name="ISearchConstraints.h" local="no" imported="no">iipr/ISearchConstraints.h</includes>
+    <includes id="_i_numeric_value_8h" name="INumericValue.h" local="no" imported="no">imeas/INumericValue.h</includes>
+    <includes id="_i_numeric_constraints_8h" name="INumericConstraints.h" local="no" imported="no">imeas/INumericConstraints.h</includes>
+    <class kind="class">iipr::CSearchConstraintsComp</class>
+    <namespace>iipr</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSearchFeature.h</name>
     <path>C:/Temp/AcfSln/Include/iipr/</path>
     <filename>_c_search_feature_8h</filename>
@@ -21437,6 +21447,7 @@
     <class kind="class">iipr::CRingPatternGeneratorComp</class>
     <class kind="class">iipr::CRingPatternGeneratorParamsComp</class>
     <class kind="class">iipr::CSearchBasedFeaturesSupplierComp</class>
+    <class kind="class">iipr::CSearchConstraintsComp</class>
     <class kind="class">iipr::CSearchFeature</class>
     <class kind="class">iipr::CSearchParams</class>
     <class kind="class">iipr::CSearchParamsComp</class>
@@ -27591,6 +27602,103 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iipr::CSearchConstraintsComp</name>
+    <filename>classiipr_1_1_c_search_constraints_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iipr::ISearchConstraints</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiipr_1_1_c_search_constraints_comp.html</anchorfile>
+      <anchor>af7af9cda1e9d3a5453a2ee378314faec</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>SearchSupportedFlags</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_NONE</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78ad774ccfdcde86d8b8abbff8a93102ef8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_TRANSLATION</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78a09ea702ffe6622f70ebf647c8a487b87</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_ROTATION</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78a95a0eede6ce0944898d46f11563efec5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_SCALING</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78af24bf9f0d3375d28887c956b00c1cfc1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_MULTIPLE_RESULTS</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78ae292d8c5c2645b961e4009d72fdc954b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>SSF_SCORE_THRESHOLD</name>
+      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
+      <anchor>abc55d471ab230dff8a7a4be1e2a62f78aafcd76d57db1acd3c5124242f61b1f6e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSearchSupportedFlags</name>
+      <anchorfile>classiipr_1_1_c_search_constraints_comp.html</anchorfile>
+      <anchor>a3f441c5c23bd19914c13b628114df71e</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetRotationRangeConstraints</name>
+      <anchorfile>classiipr_1_1_c_search_constraints_comp.html</anchorfile>
+      <anchor>a8ea103fc1e2d93fdd253e2cf6d2a4405</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CRange &amp;</type>
+      <name>GetScaleRangeConstraints</name>
+      <anchorfile>classiipr_1_1_c_search_constraints_comp.html</anchorfile>
+      <anchor>a6f16ab81bc6ad76a30ba7e8394704e27</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const istd::CIntRange &amp;</type>
+      <name>GetResultsCountConstraints</name>
+      <anchorfile>classiipr_1_1_c_search_constraints_comp.html</anchorfile>
+      <anchor>a98dfe86259dfe147c5bcf554c059dc24</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_search_constraints_comp.html</anchorfile>
+      <anchor>abe0a1ad3603d76f873ac310769fc9058</anchor>
+      <arglist>() override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iipr::CSearchFeature</name>
     <filename>classiipr_1_1_c_search_feature.html</filename>
     <base>iipr::CObjectFeature</base>
@@ -28447,55 +28555,6 @@
     <name>iipr::ISearchConstraints</name>
     <filename>classiipr_1_1_i_search_constraints.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>SearchSupportedFlags</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SSF_NONE</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78ad774ccfdcde86d8b8abbff8a93102ef8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SSF_TRANSLATION</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78a09ea702ffe6622f70ebf647c8a487b87</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SSF_ROTATION</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78a95a0eede6ce0944898d46f11563efec5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SSF_SCALING</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78af24bf9f0d3375d28887c956b00c1cfc1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SSF_MULTIPLE_RESULTS</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78ae292d8c5c2645b961e4009d72fdc954b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>SSF_SCORE_THRESHOLD</name>
-      <anchorfile>classiipr_1_1_i_search_constraints.html</anchorfile>
-      <anchor>abc55d471ab230dff8a7a4be1e2a62f78aafcd76d57db1acd3c5124242f61b1f6e</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSearchSupportedFlags</name>
@@ -39321,6 +39380,7 @@
     <file>CRingPatternGeneratorComp.h</file>
     <file>CRingPatternGeneratorParamsComp.h</file>
     <file>CSearchBasedFeaturesSupplierComp.h</file>
+    <file>CSearchConstraintsComp.h</file>
     <file>CSearchFeature.h</file>
     <file>CSearchParams.h</file>
     <file>CSearchParamsComp.h</file>

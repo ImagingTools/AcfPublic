@@ -118,6 +118,7 @@
     <ClCompile Include="..\CEnableableParam.cpp" />
     <ClCompile Include="..\CEnableableParamComp.cpp" />
     <ClCompile Include="..\CFilteredOptionsListComp.cpp" />
+    <ClCompile Include="..\CIdParam.cpp" />
     <ClCompile Include="..\CManagerParamsSetShadowerComp.cpp" />
     <ClCompile Include="..\CMultiParamsManagerComp.cpp" />
     <ClCompile Include="..\CNameParam.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="..\CEnableableParam.h" />
     <ClInclude Include="..\CEnableableParamComp.h" />
     <ClInclude Include="..\CFilteredOptionsListComp.h" />
+    <ClInclude Include="..\CIdParam.h" />
     <ClInclude Include="..\CManagerParamsSetShadowerComp.h" />
     <ClInclude Include="..\CMultiParamsManagerComp.h" />
     <ClInclude Include="..\CNameParam.h" />
@@ -156,6 +158,7 @@
     <ClInclude Include="..\CSelectionParamComp.h" />
     <ClInclude Include="..\CVariableParamComp.h" />
     <ClInclude Include="..\IEnableableParam.h" />
+    <ClInclude Include="..\IIdParam.h" />
     <ClInclude Include="..\INameParam.h" />
     <ClInclude Include="..\IOptionsList.h" />
     <ClInclude Include="..\IOptionsManager.h" />
