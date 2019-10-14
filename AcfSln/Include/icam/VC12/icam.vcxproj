@@ -117,6 +117,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\CAcquisitionConstraintsComp.cpp" />
+    <ClCompile Include="..\CBitmapJoinerCompBase.cpp" />
     <ClCompile Include="..\CBitmapSupplierMultiplexerComp.cpp" />
     <ClCompile Include="..\CCalibratedCameraComp.cpp" />
     <ClCompile Include="..\CCameraDelegatorComp.cpp" />
@@ -125,6 +126,7 @@
     <ClCompile Include="..\CExposureParamsComp.cpp" />
     <ClCompile Include="..\CMemoryAcquisitionComp.cpp" />
     <ClCompile Include="..\CMultiCameraBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CMultiCameraJoinerComp.cpp" />
     <ClCompile Include="..\CMultiSourceSnapBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CSelectableBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CSelectionParamCameraComp.cpp" />
@@ -134,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\CAcquisitionConstraintsComp.h" />
+    <ClInclude Include="..\CBitmapJoinerCompBase.h" />
     <ClInclude Include="..\CBitmapSupplierMultiplexerComp.h" />
     <ClInclude Include="..\CCalibratedCameraComp.h" />
     <ClInclude Include="..\CCameraDelegatorComp.h" />
@@ -142,6 +145,7 @@
     <ClInclude Include="..\CExposureParamsComp.h" />
     <ClInclude Include="..\CMemoryAcquisitionComp.h" />
     <ClInclude Include="..\CMultiCameraBitmapSupplierComp.h" />
+    <ClInclude Include="..\CMultiCameraJoinerComp.h" />
     <ClInclude Include="..\CMultiSourceSnapBitmapSupplierComp.h" />
     <ClInclude Include="..\CSelectableBitmapSupplierComp.h" />
     <ClInclude Include="..\CSelectionParamCameraComp.h" />

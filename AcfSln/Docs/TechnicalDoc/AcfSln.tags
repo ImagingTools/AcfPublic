@@ -382,6 +382,14 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CBitmapJoinerCompBase.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_bitmap_joiner_comp_base_8h</filename>
+    <class kind="class">icam::CBitmapJoinerCompBase</class>
+    <class kind="struct">icam::CBitmapJoinerCompBase::ImageInfo</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBitmapSupplierMultiplexerComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_bitmap_supplier_multiplexer_comp_8h</filename>
@@ -449,6 +457,16 @@
     <includes id="_t_supplier_comp_wrap_8h" name="TSupplierCompWrap.h" local="no" imported="no">iinsp/TSupplierCompWrap.h</includes>
     <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="no" imported="no">icam/IBitmapAcquisition.h</includes>
     <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMultiCameraJoinerComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_multi_camera_joiner_comp_8h</filename>
+    <includes id="_t_sync_processor_wrap_8h" name="TSyncProcessorWrap.h" local="no" imported="no">iproc/TSyncProcessorWrap.h</includes>
+    <includes id="_i_bitmap_acquisition_8h" name="IBitmapAcquisition.h" local="no" imported="no">icam/IBitmapAcquisition.h</includes>
+    <includes id="_c_bitmap_joiner_comp_base_8h" name="CBitmapJoinerCompBase.h" local="no" imported="no">icam/CBitmapJoinerCompBase.h</includes>
+    <class kind="class">icam::CMultiCameraJoinerComp</class>
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
@@ -8726,6 +8744,7 @@
     <name>icam</name>
     <filename>namespaceicam.html</filename>
     <class kind="class">icam::CAcquisitionConstraintsComp</class>
+    <class kind="class">icam::CBitmapJoinerCompBase</class>
     <class kind="class">icam::CBitmapSupplierMultiplexerComp</class>
     <class kind="class">icam::CCalibratedCameraComp</class>
     <class kind="class">icam::CCameraDelegatorComp</class>
@@ -8734,6 +8753,7 @@
     <class kind="class">icam::CExposureParamsComp</class>
     <class kind="class">icam::CMemoryAcquisitionComp</class>
     <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
+    <class kind="class">icam::CMultiCameraJoinerComp</class>
     <class kind="class">icam::CMultiSourceSnapBitmapSupplierComp</class>
     <class kind="class">icam::CSelectableBitmapSupplierComp</class>
     <class kind="class">icam::CSelectionParamCameraComp</class>
@@ -8786,6 +8806,86 @@
       <anchorfile>classicam_1_1_c_acquisition_constraints_comp.html</anchorfile>
       <anchor>aebf55b5b888b444663e6cf0e25edf9e1</anchor>
       <arglist>() const </arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CBitmapJoinerCompBase</name>
+    <filename>classicam_1_1_c_bitmap_joiner_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <class kind="struct">icam::CBitmapJoinerCompBase::ImageInfo</class>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>a143c9c72182d9e8aab1ca3f232c6844c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef" protection="protected">
+      <type>QVector&lt; ImageInfo &gt;</type>
+      <name>ImageList</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>a74e33b9d7f99bfe6a9eaf3679894e584</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>PrepareSnapResult</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>af86499f134332397ad481753b6b0b743</anchor>
+      <arglist>(int imageCount, istd::IChangeable *outputPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>FinalizeSnapResult</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>a9a642df48d2e459a101b97c90cfa7e73</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>const iimg::IBitmap *</type>
+      <name>GetResultBitmap</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>a50448e1f13f1b08129689bcc6815c90e</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>a59006bdb14f6eb305a0dae77d499f982</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>ImageList</type>
+      <name>m_snapList</name>
+      <anchorfile>classicam_1_1_c_bitmap_joiner_comp_base.html</anchorfile>
+      <anchor>a64d322e4ccc43e62d853795c13e71c66</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>icam::CBitmapJoinerCompBase::ImageInfo</name>
+    <filename>structicam_1_1_c_bitmap_joiner_comp_base_1_1_image_info.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ImageInfo</name>
+      <anchorfile>structicam_1_1_c_bitmap_joiner_comp_base_1_1_image_info.html</anchorfile>
+      <anchor>a056ae977313e1d4958b140720a9f90a0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>isSnapOk</name>
+      <anchorfile>structicam_1_1_c_bitmap_joiner_comp_base_1_1_image_info.html</anchorfile>
+      <anchor>a429d50d93ff5884a278f3f9c2d3552df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>istd::TDelPtr&lt; iimg::IBitmap &gt;</type>
+      <name>bitmapPtr</name>
+      <anchorfile>structicam_1_1_c_bitmap_joiner_comp_base_1_1_image_info.html</anchorfile>
+      <anchor>a63ffd168aeadfb64220709d39436f3c3</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9738,6 +9838,103 @@
       <anchorfile>classiinsp_1_1_t_supplier_comp_wrap.html</anchorfile>
       <anchor>a360c6a15a94f643e698dbe83fd75dd7d</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CMultiCameraJoinerComp</name>
+    <filename>classicam_1_1_c_multi_camera_joiner_comp.html</filename>
+    <base>icam::CBitmapJoinerCompBase</base>
+    <base>TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
+    <member kind="typedef">
+      <type>icam::CBitmapJoinerCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_multi_camera_joiner_comp.html</anchorfile>
+      <anchor>a600563cc4b5abd8bd23be99e9e3d0715</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>icam::IBitmapAcquisition</type>
+      <name>BaseClass</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classicam_1_1_c_multi_camera_joiner_comp.html</anchorfile>
+      <anchor>afe77a8c575e5881f1f404786ce0f0dd3</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classicam_1_1_c_multi_camera_joiner_comp.html</anchorfile>
+      <anchor>a121521e9a4fa1fdfc88f95672063954d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classicam_1_1_c_multi_camera_joiner_comp.html</anchorfile>
+      <anchor>acfdb6fc95adf4b0288255a78fd61062c</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TSyncProcessorWrap</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
+      <arglist>(int taskId=-1) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26870,13 +27067,6 @@
       <anchor>aeb82b61f5619c5cfd1cfdefe18320b2d</anchor>
       <arglist></arglist>
     </member>
-    <member kind="typedef">
-      <type>icam::IBitmapAcquisition</type>
-      <name>BaseClass</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a3b21fc424b686e6bcf4537b75d89adf3</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
@@ -26890,62 +27080,6 @@
       <anchorfile>classiipr_1_1_c_processed_acquisition_comp.html</anchorfile>
       <anchor>a091c75e055017e50953a49462a557bc1</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSyncProcessorWrap</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a33b9338307557966bc5e0f87e375de37</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessorState</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>adc1704c346843a8bcaf57e055e902b71</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AreParamsAccepted</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>ae97572f44492b12a88117a22db51483d</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a06c427a3f188b18011a3c842be354183</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>WaitTaskFinished</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a5e249d7e56f018e4e4f3ce872f1d622d</anchor>
-      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CancelTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a0a5cd08f5800f4d01eeae041dd5a5aa7</anchor>
-      <arglist>(int taskId=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetReadyTask</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>a7644b6e2edc8e32f3e4a9987a2a97ab9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTaskState</name>
-      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
-      <anchor>aeea1cf5b8c422a59cb9c76550cb83a81</anchor>
-      <arglist>(int taskId=-1) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -39111,6 +39245,7 @@
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>dir_f2296beff96c253567dc2b95d81f611c.html</filename>
     <file>CAcquisitionConstraintsComp.h</file>
+    <file>CBitmapJoinerCompBase.h</file>
     <file>CBitmapSupplierMultiplexerComp.h</file>
     <file>CCalibratedCameraComp.h</file>
     <file>CCameraDelegatorComp.h</file>
@@ -39119,6 +39254,7 @@
     <file>CExposureParamsComp.h</file>
     <file>CMemoryAcquisitionComp.h</file>
     <file>CMultiCameraBitmapSupplierComp.h</file>
+    <file>CMultiCameraJoinerComp.h</file>
     <file>CMultiSourceSnapBitmapSupplierComp.h</file>
     <file>CSelectableBitmapSupplierComp.h</file>
     <file>CSelectionParamCameraComp.h</file>
