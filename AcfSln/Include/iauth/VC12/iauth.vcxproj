@@ -134,6 +134,7 @@
     <ClInclude Include="..\IPasswordChanger.h" />
     <ClInclude Include="..\IRightsProvider.h" />
     <ClInclude Include="..\IUsersManager.h" />
+    <ClInclude Include="..\TLoginStatusHandlerCompWrap.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />

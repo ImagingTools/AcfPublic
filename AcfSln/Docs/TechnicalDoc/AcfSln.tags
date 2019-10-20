@@ -130,6 +130,14 @@
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
+    <name>TLoginStatusHandlerCompWrap.h</name>
+    <path>C:/Temp/AcfSln/Include/iauth/</path>
+    <filename>_t_login_status_handler_comp_wrap_8h</filename>
+    <includes id="_i_login_8h" name="ILogin.h" local="no" imported="no">iauth/ILogin.h</includes>
+    <class kind="class">iauth::TLoginStatusHandlerCompWrap</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
     <name>CBarcode.h</name>
     <path>C:/Temp/AcfSln/Include/ibarcode/</path>
     <filename>_c_barcode_8h</filename>
@@ -5296,6 +5304,7 @@
     <class kind="class">iauth::IPasswordChanger</class>
     <class kind="class">iauth::IRightsProvider</class>
     <class kind="class">iauth::IUsersManager</class>
+    <class kind="class">iauth::TLoginStatusHandlerCompWrap</class>
   </compound>
   <compound kind="class">
     <name>iauth::CRightsBasedEnablerComp</name>
@@ -5879,6 +5888,68 @@
       <anchorfile>classiauth_1_1_i_users_manager.html</anchorfile>
       <anchor>ae35796766dd076c20eee154754deafed</anchor>
       <arglist>(int groupIndex) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::TLoginStatusHandlerCompWrap</name>
+    <filename>classiauth_1_1_t_login_status_handler_comp_wrap.html</filename>
+    <templarg></templarg>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <member kind="typedef">
+      <type>BaseComponent</type>
+      <name>BaseClass</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>a7f4231f45f3b40bb510865d64e42779c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>ModelId</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>a24afbf75492206987bc9c52418b7deb8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <type>@</type>
+      <name>MI_LOGIN</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>a24afbf75492206987bc9c52418b7deb8a4cde4c9a4de4d2d87240c1d044769296</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnLogin</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>a4494b0edb6ff3131a4868890c0184560</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnLogout</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>a11921561474180bc40358921a5ffce00</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>aa1a3554b8fbdf8faf9897baab3c5430a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>a0257c6148b3654ff45017afcac272be0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnModelChanged</name>
+      <anchorfile>classiauth_1_1_t_login_status_handler_comp_wrap.html</anchorfile>
+      <anchor>aa83c30331ba60eecd7481ab0bf05e422</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -39183,6 +39254,7 @@
     <file>IPasswordChanger.h</file>
     <file>IRightsProvider.h</file>
     <file>IUsersManager.h</file>
+    <file>TLoginStatusHandlerCompWrap.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/ibarcode</name>
