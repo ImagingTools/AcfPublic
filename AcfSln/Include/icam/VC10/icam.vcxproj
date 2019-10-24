@@ -126,6 +126,7 @@
     <ClCompile Include="..\CMultiCameraBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CMultiCameraJoinerComp.cpp" />
     <ClCompile Include="..\CMultiSourceSnapBitmapSupplierComp.cpp" />
+    <ClCompile Include="..\CProcessedCameraComp.cpp" />
     <ClCompile Include="..\CSelectableBitmapSupplierComp.cpp" />
     <ClCompile Include="..\CSelectionParamCameraComp.cpp" />
     <ClCompile Include="..\CSnapBitmapSupplierComp.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="..\CMultiCameraBitmapSupplierComp.h" />
     <ClInclude Include="..\CMultiCameraJoinerComp.h" />
     <ClInclude Include="..\CMultiSourceSnapBitmapSupplierComp.h" />
+    <ClInclude Include="..\CProcessedCameraComp.h" />
     <ClInclude Include="..\CSelectableBitmapSupplierComp.h" />
     <ClInclude Include="..\CSelectionParamCameraComp.h" />
     <ClInclude Include="..\CSnapBitmapSupplierComp.h" />

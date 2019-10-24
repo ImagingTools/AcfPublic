@@ -487,6 +487,14 @@
     <namespace>icam</namespace>
   </compound>
   <compound kind="file">
+    <name>CProcessedCameraComp.h</name>
+    <path>C:/Temp/AcfSln/Include/icam/</path>
+    <filename>_c_processed_camera_comp_8h</filename>
+    <includes id="_c_camera_delegator_comp_8h" name="CCameraDelegatorComp.h" local="no" imported="no">icam/CCameraDelegatorComp.h</includes>
+    <class kind="class">icam::CProcessedCameraComp</class>
+    <namespace>icam</namespace>
+  </compound>
+  <compound kind="file">
     <name>CSelectableBitmapSupplierComp.h</name>
     <path>C:/Temp/AcfSln/Include/icam/</path>
     <filename>_c_selectable_bitmap_supplier_comp_8h</filename>
@@ -8826,6 +8834,7 @@
     <class kind="class">icam::CMultiCameraBitmapSupplierComp</class>
     <class kind="class">icam::CMultiCameraJoinerComp</class>
     <class kind="class">icam::CMultiSourceSnapBitmapSupplierComp</class>
+    <class kind="class">icam::CProcessedCameraComp</class>
     <class kind="class">icam::CSelectableBitmapSupplierComp</class>
     <class kind="class">icam::CSelectionParamCameraComp</class>
     <class kind="class">icam::CSnapBitmapSupplierComp</class>
@@ -10053,6 +10062,32 @@
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
       <anchor>a516bd50c77fcf844cbeda46ecc524600</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icam::CProcessedCameraComp</name>
+    <filename>classicam_1_1_c_processed_camera_comp.html</filename>
+    <base>icam::CCameraDelegatorComp</base>
+    <member kind="typedef">
+      <type>icam::CCameraDelegatorComp</type>
+      <name>BaseClass</name>
+      <anchorfile>classicam_1_1_c_processed_camera_comp.html</anchorfile>
+      <anchor>acdd089121511bc598533b1b8dc1c816e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classicam_1_1_c_processed_camera_comp.html</anchorfile>
+      <anchor>aa37a87b6d9c26609d4fb53b12b68a330</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classicam_1_1_c_processed_camera_comp.html</anchorfile>
+      <anchor>a2522f37d8a4da28e2a6db97af1cf0aab</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -39328,6 +39363,7 @@
     <file>CMultiCameraBitmapSupplierComp.h</file>
     <file>CMultiCameraJoinerComp.h</file>
     <file>CMultiSourceSnapBitmapSupplierComp.h</file>
+    <file>CProcessedCameraComp.h</file>
     <file>CSelectableBitmapSupplierComp.h</file>
     <file>CSelectionParamCameraComp.h</file>
     <file>CSnapBitmapSupplierComp.h</file>
