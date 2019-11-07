@@ -39,7 +39,7 @@ namespace istd
 /**
 	Base interface providing info about factorisable objects.
 */
-class IFactoryInfo: virtual public istd::IPolymorphic  
+class IFactoryInfo: virtual public istd::IPolymorphic
 {
 public:
 	typedef QSet<QByteArray> KeyList;

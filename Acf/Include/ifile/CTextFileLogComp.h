@@ -26,6 +26,7 @@
 
 // Qt includes
 #include <QtCore/QFile>
+#include <QtCore/QMutex>
 #include <QtCore/QTextStream>
 
 // ACF includes

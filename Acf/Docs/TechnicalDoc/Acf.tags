@@ -6316,16 +6316,13 @@
     <filename>_t_smart_ptr_8h</filename>
     <includes id="_t_trans_ptr_8h" name="TTransPtr.h" local="no" imported="no">istd/TTransPtr.h</includes>
     <class kind="class">istd::TSmartPtr</class>
-    <class kind="class">istd::TSmartPtr::RefCounter</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
     <name>TTransPtr.h</name>
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_trans_ptr_8h</filename>
-    <includes id="_t_pointer_base_8h" name="TPointerBase.h" local="no" imported="no">istd/TPointerBase.h</includes>
     <class kind="class">istd::TTransPtr</class>
-    <class kind="class">istd::TTransPtr::RefCountBase</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -65542,92 +65539,41 @@
     <name>istd::TSmartPtr</name>
     <filename>classistd_1_1_t_smart_ptr.html</filename>
     <templarg>Type</templarg>
-    <templarg>Accessor</templarg>
     <base>istd::TTransPtr</base>
-    <class kind="class">istd::TSmartPtr::RefCounter</class>
-    <member kind="typedef">
-      <type>TTransPtr&lt; Type &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a0fc03a11876099ede83927a987e07a37</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>BaseClass::RefCountBase</type>
-      <name>RefCountBase</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>aaf62f8825ef2ed32fee3f8bbde0c4f29</anchor>
-      <arglist></arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>TSmartPtr</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>ada6a140464ea30e1052ae19df2224617</anchor>
+      <anchor>a6cccd1559fa59c004409412841429bf9</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TSmartPtr</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a35f1f6ffb94e8d95ab92b8c8623de455</anchor>
+      <anchor>af7f25d8d6b1b68e550ee5a641326663a</anchor>
       <arglist>(Type *pointer)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>TSmartPtr</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a26f7021ddaa12ee3ea764fb98b0c3afb</anchor>
-      <arglist>(const TTransPtr&lt; Type &gt; &amp;pointer)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TSmartPtr</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a97da2b809f24636e23da19022577a0d6</anchor>
-      <arglist>(const TSmartPtr &amp;pointer)</arglist>
+      <anchor>a2069bdb7cce89cfbf3c476d15768dcce</anchor>
+      <arglist>(const TTransPtr&lt; Type &gt; &amp;trans)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
       <name>SetPtr</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>afbd01bec42db0afe38a3aca936f2b358</anchor>
+      <anchor>ad515ada402ea16b234312a407c0082be</anchor>
       <arglist>(Type *pointer)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>SetCastedOrRemove</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>accf7ef1b8873d4e1af461bb0f4005bb4</anchor>
+      <anchor>ae2f00bd23dce1f31929c72b659147a33</anchor>
       <arglist>(SourceType *pointer)</arglist>
-    </member>
-    <member kind="function">
-      <type>TSmartPtr &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a7bd1b22c0b70bec2057075e76008877b</anchor>
-      <arglist>(const TTransPtr&lt; Type &gt; &amp;pointer)</arglist>
-    </member>
-    <member kind="function">
-      <type>TSmartPtr &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
-      <anchor>a5dda1d2164a27bc539f6e87c9419e581</anchor>
-      <arglist>(const TSmartPtr &amp;pointer)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TTransPtr</name>
-      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>aeb7c7e8c6b357085786f5e4c29553848</anchor>
-      <arglist>(const TTransPtr &amp;pointer)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~TTransPtr</name>
-      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>a6c74e3d7f215631bccb9e0e3a8225ff4</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
@@ -65672,13 +65618,6 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function">
-      <type>TTransPtr &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>a12ba9177b0c9931eea3a0b53b7d63d4b</anchor>
-      <arglist>(const TTransPtr &amp;pointer)</arglist>
-    </member>
-    <member kind="function">
       <type>Type &amp;</type>
       <name>operator*</name>
       <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
@@ -65692,6 +65631,13 @@
       <anchor>a476647d54d809c1ce339fe10d85b2184</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="variable">
+      <type>QSharedPointer&lt; Type &gt;</type>
+      <name>m_impl</name>
+      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
+      <anchor>aac088c51c9e46acbfe6eab9e0fd6e61f</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected">
       <type></type>
       <name>TTransPtr</name>
@@ -65699,106 +65645,11 @@
       <anchor>ac28e3078693dd9f3f7d0dc8288b5b13e</anchor>
       <arglist>()</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Detach</name>
-      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>afacf60454ad11ebcc52ecde7d7ab58be</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>RefCountBase *</type>
-      <name>GetInternalCounter</name>
-      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>a2a4201d4498d60dc9eb96d5f5483caec</anchor>
-      <arglist>(const TTransPtr &amp;pointer) const </arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>RefCountBase *</type>
-      <name>m_counterPtr</name>
-      <anchorfile>classistd_1_1_t_trans_ptr.html</anchorfile>
-      <anchor>af297e094fc023d962072d174952307b1</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>istd::TSmartPtr::RefCounter</name>
-    <filename>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</filename>
-    <base>istd::TTransPtr::RefCountBase</base>
-    <member kind="typedef">
-      <type>RefCountBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
-      <anchor>ac4fcb25887285a53a5c9277704c03006</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>TPointerBase&lt; Type &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</anchorfile>
-      <anchor>a2d06dc2c571804b1d750ca27af63263f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>RefCounter</name>
-      <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
-      <anchor>a96ebd3e13fb4935ba9fb64022b847666</anchor>
-      <arglist>(Type *pointer)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnAttached</name>
-      <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
-      <anchor>aa7e37e15232345a6d51373706bfb51ac</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnDetached</name>
-      <anchorfile>classistd_1_1_t_smart_ptr_1_1_ref_counter.html</anchorfile>
-      <anchor>a9cdc9f0d0c07d6338f9a8763490eab10</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>RefCountBase</name>
-      <anchorfile>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</anchorfile>
-      <anchor>a2c807993381b564d3a03d036070fc8ff</anchor>
-      <arglist>(Type *pointer)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~RefCountBase</name>
-      <anchorfile>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</anchorfile>
-      <anchor>a94d5a0c8691756aaa72b0a231b51e3f4</anchor>
-      <arglist>()</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>istd::TTransPtr</name>
     <filename>classistd_1_1_t_trans_ptr.html</filename>
     <templarg>Type</templarg>
-    <class kind="class">istd::TTransPtr::RefCountBase</class>
-  </compound>
-  <compound kind="class">
-    <name>istd::TTransPtr::RefCountBase</name>
-    <filename>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</filename>
-    <base>istd::TPointerBase</base>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnAttached</name>
-      <anchorfile>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</anchorfile>
-      <anchor>acf654338b83564f53669dfef077a6c2f</anchor>
-      <arglist>()=0</arglist>
-    </member>
-    <member kind="function" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnDetached</name>
-      <anchorfile>classistd_1_1_t_trans_ptr_1_1_ref_count_base.html</anchorfile>
-      <anchor>a403b58ca565882b2f39462ffc1ecb785</anchor>
-      <arglist>()=0</arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>istd::TVarArray</name>
