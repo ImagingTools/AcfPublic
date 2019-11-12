@@ -32491,10 +32491,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QVector&lt; iprod::IProductionHistory::PartInfo &gt;</type>
+      <type>std::vector&lt; iprod::IProductionHistory::PartInfo &gt;</type>
       <name>HistoryChunk</name>
       <anchorfile>classiprod_1_1_c_history_reader.html</anchorfile>
-      <anchor>abd12f5bfc788939ccb556b039f95e7f5</anchor>
+      <anchor>a8c1c8c717bfab1a12c14693ff01f8901</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
