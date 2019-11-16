@@ -1,6 +1,6 @@
-include(../../../../Acf/Config/QMake/StaticConfig.pri)
-
 TARGET = icbox
+
+include(../../../../Acf/Config/QMake/StaticConfig.pri)
 
 INCLUDEPATH += ../..
 INCLUDEPATH += "$(CBIOSDIR)/include"

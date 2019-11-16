@@ -1,7 +1,7 @@
+TARGET = WinPck
+
 include(../../../../Acf/Config/QMake/ComponentConfig.pri)
 include(../../../../Acf/Config/QMake/AcfStd.pri)
-
-TARGET = WinPck
 
 INCLUDEPATH += ../../../../AcfSln/Include
 

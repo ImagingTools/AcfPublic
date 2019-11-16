@@ -1,9 +1,9 @@
+TARGET = QaxPck
+
 include(../../../../Acf/Config/QMake/ComponentConfig.pri)
 include(../../../../Acf/Config/QMake/QtBaseConfig.pri)
 include(../../../../Acf/Config/QMake/AcfStd.pri)
 include(../../../../Acf/Config/QMake/AcfQt.pri)
-
-TARGET = QaxPck
 
 QT += multimedia axcontainer
 
@@ -13,9 +13,9 @@ INCLUDEPATH += ../../../../AcfSln/Include
 LIBS += -L../../../Lib/$$COMPILER_DIR -liqaxmm
 
 CONFIG(debug, debug|release){
-        LIBS += -lQt5AxContainerd -lQt5AxBased
+	LIBS += -lQt5AxContainerd -lQt5AxBased
 }
 CONFIG(release, debug|release){
-        LIBS += -lQt5AxContainer -lQt5AxBase
+	LIBS += -lQt5AxContainer -lQt5AxBase
 }
 

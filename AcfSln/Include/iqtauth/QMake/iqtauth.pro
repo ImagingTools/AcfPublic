@@ -6,3 +6,4 @@ include(../../../../Acf/Config/QMake/QtGuiBaseConfig.pri)
 INCLUDEPATH += ../..
 
 FORMS += $$_PRO_FILE_PWD_/../*.ui
+

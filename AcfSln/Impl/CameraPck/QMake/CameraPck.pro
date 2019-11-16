@@ -7,3 +7,4 @@ LIBS += -L../../../Lib/$$COMPILER_DIR -licam -liproc -liinsp -licalib
 
 include(../../../../Acf/Config/QMake/AcfQt.pri)
 include(../../../../Acf/Config/QMake/AcfStd.pri)
+
