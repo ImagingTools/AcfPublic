@@ -69267,6 +69267,13 @@
       <anchor>a147f2bc5a7ad412367a10d2eb0fb5c72</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>OnStopFullScreen</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a2bbdc403c03d22e6f4da7f4904ad754d</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="signal">
       <type>bool</type>
       <name>selectionChanged</name>
