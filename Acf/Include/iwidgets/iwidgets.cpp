@@ -42,6 +42,10 @@ namespace iwidgets
 
 void ClearLayout(QLayout* layout)
 {
+	if (layout == nullptr){
+		return;
+	}
+
 	while (QLayoutItem* item = layout->takeAt(0)){
 		QWidget* widgetPtr = item->widget();
 		if (widgetPtr != NULL) {
