@@ -176,6 +176,7 @@ else{
 *-clang* | *-llvm*{
 	CONFIG += c++11
 	COMPILER_NAME = Clang
+	DEFINES += INCLUDE_MM_MALLOC
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-variable
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-overloaded-virtual
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-format-security

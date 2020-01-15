@@ -16,7 +16,9 @@ CONFIG += link_prl
 !win32-msvc*{
 	CONFIG += plugin no_plugin_name_prefix
 	QMAKE_CFLAGS += -fPIC
-	QMAKE_EXTENSION_SHLIB = arp
+	!linux{
+		QMAKE_EXTENSION_SHLIB = arp
+	}
 }
 else{
 	CONFIG += dll
