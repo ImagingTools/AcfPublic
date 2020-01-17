@@ -176,7 +176,7 @@ else{
 *-clang* | *-llvm*{
 	CONFIG += c++11
 	COMPILER_NAME = Clang
-	DEFINES += INCLUDE_MM_MALLOC
+	DEFINES += COMPILER_NAME_CLANG
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-unused-variable
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-overloaded-virtual
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-format-security
@@ -187,12 +187,14 @@ else{
 	QMAKE_CXXFLAGS += /openmp
 	LIBS += -lgomp
 	COMPILER_NAME = GCC
+	DEFINES += COMPILER_NAME_GCC
 }
 
 *-g++*{
 	QMAKE_CXXFLAGS += -fpermissive
 	QMAKE_CFLAGS_RELEASE = -Ofast
 	COMPILER_NAME = GCC
+	DEFINES += COMPILER_NAME_GPP
 }
 
 # MinGW compiler used under Windows instead of GCC
