@@ -122,6 +122,8 @@
     <ClCompile Include="..\CFocusDecorator.cpp" />
     <ClCompile Include="..\CHierarchicalHeaderView.cpp" />
     <ClCompile Include="..\CItemDelegate.cpp" />
+    <ClCompile Include="..\CMiniWidgetDelegate.cpp" />
+    <ClCompile Include="..\CMiniWidgetPage.cpp" />
     <ClCompile Include="..\CMultiPageWidget.cpp" />
     <ClCompile Include="..\CSimpleGuiContainerDelegate.cpp" />
     <ClCompile Include="..\CSplitterDelegate.cpp" />
@@ -195,6 +197,17 @@
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CHierarchicalHeaderView.cpp;%(Outputs)</Outputs>
     </CustomBuild>
     <ClInclude Include="..\CItemDelegate.h" />
+    <ClInclude Include="..\CMiniWidgetDelegate.h" />
+    <CustomBuild Include="..\CMiniWidgetPage.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CMiniWidgetPage.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iwidgets/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CMiniWidgetPage.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMiniWidgetPage.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CMiniWidgetPage.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMiniWidgetPage.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CMiniWidgetPage.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iwidgets/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CMiniWidgetPage.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMiniWidgetPage.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CMiniWidgetPage.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMiniWidgetPage.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <CustomBuild Include="..\CMultiPageWidget.h">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CMultiPageWidget.h;%(AdditionalInputs)</AdditionalInputs>
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iwidgets/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CMultiPageWidget.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMultiPageWidget.cpp</Command>
@@ -223,9 +236,11 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CExtLineEdit.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CFocusDecorator.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CHierarchicalHeaderView.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMiniWidgetPage.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMultiPageWidget.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CCollapsiblePage.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CDoubleRangeSpinEdit.h" />
+    <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CMiniWidgetPage.h" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\CCollapsiblePage.ui">
@@ -249,6 +264,17 @@
       <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CDoubleRangeSpinEdit.ui -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CDoubleRangeSpinEdit.h</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CDoubleRangeSpinEdit.ui</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CDoubleRangeSpinEdit.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CMiniWidgetPage.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CMiniWidgetPage.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CMiniWidgetPage.ui -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CMiniWidgetPage.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">UIC ..\CMiniWidgetPage.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CMiniWidgetPage.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CMiniWidgetPage.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\uic.exe ..\CMiniWidgetPage.ui -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CMiniWidgetPage.h</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">UIC ..\CMiniWidgetPage.ui</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CMiniWidgetPage.h;%(Outputs)</Outputs>
     </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

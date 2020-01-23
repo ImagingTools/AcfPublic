@@ -48,7 +48,7 @@ public:
 				double scaleFactor = 1.0,
 				double offset = 0.0,
 				const istd::CRange& range = istd::CRange(
-							std::numeric_limits<double>::min(),
+							-std::numeric_limits<double>::max(),
 							std::numeric_limits<double>::max()));
 
 	const istd::CRange& GetRange() const;

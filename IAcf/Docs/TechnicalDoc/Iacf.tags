@@ -1717,6 +1717,13 @@
       <anchor>a4f1cddabbe2670104b57f0e51bffbe6c</anchor>
       <arglist></arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>COcvIntrinsicCameraCalibrationSupplierComp</name>
+      <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
+      <anchor>ab8d3ca000a0676e7cc9347ebea781ab9</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>

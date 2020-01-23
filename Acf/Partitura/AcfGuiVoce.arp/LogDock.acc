@@ -95,7 +95,7 @@
                     <AttributeInfo Id="FileExtensions" Type="String[]" ExportId="">
                         <Data IsEnabled="true">
                             <Values>
-                                <Value>alog</Value>
+                                <Value>log</Value>
                             </Values>
                         </Data>
                     </AttributeInfo>

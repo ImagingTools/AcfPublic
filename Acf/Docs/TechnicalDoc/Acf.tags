@@ -6342,6 +6342,38 @@
     </member>
   </compound>
   <compound kind="file">
+    <name>CStandardTestExecutor.h</name>
+    <path>C:/Temp/Acf/Include/itest/</path>
+    <filename>_c_standard_test_executor_8h</filename>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
+    <includes id="_i_test_executor_8h" name="ITestExecutor.h" local="no" imported="no">itest/ITestExecutor.h</includes>
+    <class kind="class">itest::CStandardTestExecutor</class>
+    <class kind="class">itest::CStandardTestExecutor::TestRegistrator</class>
+    <namespace>itest</namespace>
+    <member kind="define">
+      <type>#define</type>
+      <name>I_ADD_TEST</name>
+      <anchorfile>_c_standard_test_executor_8h.html</anchorfile>
+      <anchor>a7a88270091bbeff3fe97af98b08e1581</anchor>
+      <arglist>(className)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>itest.h</name>
+    <path>C:/Temp/Acf/Include/itest/</path>
+    <filename>itest_8h</filename>
+    <includes id="istd_8h" name="istd.h" local="no" imported="no">istd/istd.h</includes>
+    <namespace>itest</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ITestExecutor.h</name>
+    <path>C:/Temp/Acf/Include/itest/</path>
+    <filename>_i_test_executor_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">itest::ITestExecutor</class>
+    <namespace>itest</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAffineTransformation2dShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_affine_transformation2d_shape_8h</filename>
@@ -6991,6 +7023,21 @@
     <filename>_c_item_delegate_8h</filename>
     <includes id="iwidgets_8h" name="iwidgets.h" local="no" imported="no">iwidgets/iwidgets.h</includes>
     <class kind="class">iwidgets::CItemDelegate</class>
+    <namespace>iwidgets</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMiniWidgetDelegate.h</name>
+    <path>C:/Temp/Acf/Include/iwidgets/</path>
+    <filename>_c_mini_widget_delegate_8h</filename>
+    <includes id="_i_multi_page_widget_delegate_8h" name="IMultiPageWidgetDelegate.h" local="no" imported="no">iwidgets/IMultiPageWidgetDelegate.h</includes>
+    <class kind="class">iwidgets::CMiniWidgetDelegate</class>
+    <namespace>iwidgets</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CMiniWidgetPage.h</name>
+    <path>C:/Temp/Acf/Include/iwidgets/</path>
+    <filename>_c_mini_widget_page_8h</filename>
+    <class kind="class">iwidgets::CMiniWidgetPage</class>
     <namespace>iwidgets</namespace>
   </compound>
   <compound kind="file">
@@ -38929,8 +38976,8 @@
       <type></type>
       <name>CComplexDoubleManip</name>
       <anchorfile>classimath_1_1_c_complex_double_manip.html</anchorfile>
-      <anchor>a260f1a3b19d6d03629841888fdccdfdb</anchor>
-      <arglist>(int precision=1, RoundingType roundingType=RT_NORMAL, double scaleFactor=1.0, double offset=0.0, const istd::CRange &amp;range=istd::CRange(std::numeric_limits&lt; double &gt;::min(), std::numeric_limits&lt; double &gt;::max()))</arglist>
+      <anchor>aae3dd8440d8579f8e2f84a2abce27b97</anchor>
+      <arglist>(int precision=1, RoundingType roundingType=RT_NORMAL, double scaleFactor=1.0, double offset=0.0, const istd::CRange &amp;range=istd::CRange(-std::numeric_limits&lt; double &gt;::max(), std::numeric_limits&lt; double &gt;::max()))</arglist>
     </member>
     <member kind="function">
       <type>const istd::CRange &amp;</type>
@@ -51411,6 +51458,13 @@
       <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
       <anchor>ad659f5c5c78de884a46d4d08bab1fd95</anchor>
       <arglist>(const QModelIndex &amp;index) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>removeRows</name>
+      <anchorfile>classiqt2d_1_1_t_polygon_based_params_gui_comp_1_1_table_model.html</anchorfile>
+      <anchor>ae8d45406f435574acdb485f8b63e9a61</anchor>
+      <arglist>(int row, int count, const QModelIndex &amp;parent=QModelIndex()) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -65922,6 +65976,49 @@
     </member>
   </compound>
   <compound kind="namespace">
+    <name>itest</name>
+    <filename>namespaceitest.html</filename>
+    <class kind="class">itest::CStandardTestExecutor</class>
+    <class kind="class">itest::ITestExecutor</class>
+  </compound>
+  <compound kind="class">
+    <name>itest::CStandardTestExecutor</name>
+    <filename>classitest_1_1_c_standard_test_executor.html</filename>
+    <base virtualness="virtual">itest::ITestExecutor</base>
+    <class kind="class">itest::CStandardTestExecutor::TestRegistrator</class>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>RunTests</name>
+      <anchorfile>classitest_1_1_c_standard_test_executor.html</anchorfile>
+      <anchor>ae036bc18ddd56ca7d55cd8bf67304857</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>itest::CStandardTestExecutor::TestRegistrator</name>
+    <filename>classitest_1_1_c_standard_test_executor_1_1_test_registrator.html</filename>
+    <templarg></templarg>
+    <member kind="function">
+      <type></type>
+      <name>TestRegistrator</name>
+      <anchorfile>classitest_1_1_c_standard_test_executor_1_1_test_registrator.html</anchorfile>
+      <anchor>aecbdf072e027caa93ce600bf53fc2849</anchor>
+      <arglist>(const QString &amp;name)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>itest::ITestExecutor</name>
+    <filename>classitest_1_1_i_test_executor.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual int</type>
+      <name>RunTests</name>
+      <anchorfile>classitest_1_1_i_test_executor.html</anchorfile>
+      <anchor>a32fee91eb38bacba7bbbae55a248f936</anchor>
+      <arglist>(int argc, char *argv[])=0</arglist>
+    </member>
+  </compound>
+  <compound kind="namespace">
     <name>iview</name>
     <filename>namespaceiview.html</filename>
     <class kind="class">iview::CAffineTransformation2dShape</class>
@@ -71175,6 +71272,13 @@
       <arglist>(istd::CIndex2d position) const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetShapeDescriptionAt</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>a6b3f0408778639b90fa42803fef67b17</anchor>
+      <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Draw</name>
       <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
@@ -73975,6 +74079,8 @@
     <class kind="class">iwidgets::CFocusDecorator</class>
     <class kind="class">iwidgets::CHierarchicalHeaderView</class>
     <class kind="class">iwidgets::CItemDelegate</class>
+    <class kind="class">iwidgets::CMiniWidgetDelegate</class>
+    <class kind="class">iwidgets::CMiniWidgetPage</class>
     <class kind="class">iwidgets::CMultiPageWidget</class>
     <class kind="class">iwidgets::CSimpleGuiContainerDelegate</class>
     <class kind="class">iwidgets::CSplitterDelegate</class>
@@ -74706,6 +74812,225 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iwidgets::CMiniWidgetDelegate</name>
+    <filename>classiwidgets_1_1_c_mini_widget_delegate.html</filename>
+    <base virtualness="virtual">iwidgets::IMultiPageWidgetDelegate</base>
+    <member kind="function">
+      <type></type>
+      <name>CMiniWidgetDelegate</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a66cbe93eb2b3b2b5e6451ba17453dbf7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>CreateContainerWidget</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>ae698cd5e4eebd1367786d204c5d98089</anchor>
+      <arglist>(QWidget *parentWidgetPtr, int containerGuiFlags=CGF_NONE, int orientation=Qt::Horizontal)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ConnectPageIndexListener</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a539e9852bfd29cf4110ac1e110943a07</anchor>
+      <arglist>(QWidget &amp;containerWidget, QObject *receiverPtr, const char *receiverSlotName)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageHeaderPosition</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a20cff5b61fba19bdfad92e455e8cce8b</anchor>
+      <arglist>(QWidget &amp;containerWidget, PageHeaderPosition pageHeaderPosition)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>InsertPage</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a5a7274c1785fb5c9ba8781f43cccf0f1</anchor>
+      <arglist>(QWidget &amp;containerWidget, QWidget *pageWidgetPtr, const QString &amp;pageTitle, int pageIndex=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemovePage</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>ae7679c9831a1238dfedbcd1e7378e7ba</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetPages</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>ab5b46db69920ae900bff849a4c388180</anchor>
+      <arglist>(QWidget &amp;containerWidget)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPagesCount</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>afbbdca2d0c71fcdc7fc4df784b4e1df6</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QWidget *</type>
+      <name>GetPageWidgetPtr</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a6160115dc21f20538ed9b86aeb0acdd2</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentPage</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>add98a4e15a349d7ab505913ad87e8b6b</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPage</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a5c19b159cf4077022049eecaf0ea3217</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageTitle</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>aab21b0cf03a1909ef1180c8431ac8940</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageTitle</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>aaa922bc5588f6e3993e131f654742ef3</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageTitle)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetPageIcon</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>ab4f977e89996ab8fb9e83adf68877467</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageIcon</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>af13ab8860c417fea23a0a178f0f414cf</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QIcon &amp;pageIcon)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPageToolTip</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>afa31fbdf42f26a576bd697ee36159c9e</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetPageToolTip</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>ab16ea275c6733a4d7c11238344c4e2d3</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, const QString &amp;pageToolTip)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageEnabled</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a74f5d0ef5096c1db58748f642315267b</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageEnabled</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a95e7d9f89a051d106344c8d1ae2f790a</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageEnabled=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPageVisible</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a86397bbda4361da5bfbb45ce043c0eb2</anchor>
+      <arglist>(const QWidget &amp;containerWidget, int pageIndex) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageVisible</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a3b18ace06557d81e9adcb4ea012a4a09</anchor>
+      <arglist>(QWidget &amp;containerWidget, int pageIndex, bool isPageVisible=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QSize</type>
+      <name>GetPageIconSize</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>a72f1cf7faa9aa57f6a7488564b9f7e6d</anchor>
+      <arglist>(const QWidget &amp;containerWidget) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPageIconSize</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_delegate.html</anchorfile>
+      <anchor>aacf97ec0d1da8818a1c688f142e92a43</anchor>
+      <arglist>(QWidget &amp;containerWidget, const QSize &amp;pageIconSize)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iwidgets::CMiniWidgetPage</name>
+    <filename>classiwidgets_1_1_c_mini_widget_page.html</filename>
+    <member kind="typedef">
+      <type>QWidget</type>
+      <name>BaseClass</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>a8a53f33c1ee5fb56006e1c3a56a2b084</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>PostUpdatePalette</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>aad53dc0f6f668769e9e0b3e0b0c2dc39</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMiniWidgetPage</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>a694c49cac30694cccc9501ca8d81247d</anchor>
+      <arglist>(QWidget *parentPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetTitle</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>acbc55a2a814d37b244f01c7bacf0b16a</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetWidget</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>a6420aeb205760ce1d429097140002fc9</anchor>
+      <arglist>(QWidget *pageWidgetPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIconSize</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>a1bd3fa78e145bd8dd4ca075d83f29bf8</anchor>
+      <arglist>(const QSize &amp;size)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetIcon</name>
+      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
+      <anchor>adddf85c45e83cd2ea03f70bbc128620e</anchor>
+      <arglist>(const QIcon &amp;icon)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iwidgets::CMultiPageWidget</name>
     <filename>classiwidgets_1_1_c_multi_page_widget.html</filename>
     <member kind="enumeration">
@@ -74755,6 +75080,13 @@
       <name>DT_COLLAPSIBLE_GROUPS</name>
       <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
       <anchor>ad2aa91adf114f2eabde7621025aac910a66c4cdc83e64f6e6dab88dc652144f98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>DT_MINI_WIDGETS</name>
+      <anchorfile>classiwidgets_1_1_c_multi_page_widget.html</anchorfile>
+      <anchor>ad2aa91adf114f2eabde7621025aac910ad430fd735fd4aaf5891a13f24af40d65</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -76508,6 +76840,7 @@
     <dir>Include/iqtprm</dir>
     <dir>Include/iser</dir>
     <dir>Include/istd</dir>
+    <dir>Include/itest</dir>
     <dir>Include/iview</dir>
     <dir>Include/iwidgets</dir>
     <file>ACF.h</file>
@@ -76802,6 +77135,14 @@
     <file>TVarArray.h</file>
   </compound>
   <compound kind="dir">
+    <name>Include/itest</name>
+    <path>C:/Temp/Acf/Include/itest/</path>
+    <filename>dir_a1325203bae8c83fc8b1d702de692fe1.html</filename>
+    <file>CStandardTestExecutor.h</file>
+    <file>itest.h</file>
+    <file>ITestExecutor.h</file>
+  </compound>
+  <compound kind="dir">
     <name>Include/iview</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>dir_469edc36c7a4f4fa5f32aa52cb540a7d.html</filename>
@@ -76879,6 +77220,8 @@
     <file>CFocusDecorator.h</file>
     <file>CHierarchicalHeaderView.h</file>
     <file>CItemDelegate.h</file>
+    <file>CMiniWidgetDelegate.h</file>
+    <file>CMiniWidgetPage.h</file>
     <file>CMultiPageWidget.h</file>
     <file>CSimpleGuiContainerDelegate.h</file>
     <file>CSplitterDelegate.h</file>

@@ -49,6 +49,7 @@
 #include <iwidgets/CSimpleGuiContainerDelegate.h>
 #include <iwidgets/CStackWidgetDelegate.h>
 #include <iwidgets/CCollapsibleGroupWidgetDelegate.h>
+#include <iwidgets/CMiniWidgetDelegate.h>
 
 
 namespace iwidgets
@@ -75,6 +76,7 @@ CMultiPageWidget::CMultiPageWidget(
 	RegisterMultiPageWidgetDelegate<CSplitterDelegate>(DT_SPLITTER);
 	RegisterMultiPageWidgetDelegate<CStackWidgetDelegate>(DT_STACK);
 	RegisterMultiPageWidgetDelegate<CCollapsibleGroupWidgetDelegate>(DT_COLLAPSIBLE_GROUPS);
+	RegisterMultiPageWidgetDelegate<CMiniWidgetDelegate>(DT_MINI_WIDGETS);
 
 	CreateContainerGui();
 }

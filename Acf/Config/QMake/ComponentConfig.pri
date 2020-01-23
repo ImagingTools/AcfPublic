@@ -16,9 +16,7 @@ CONFIG += link_prl
 !win32-msvc*{
 	CONFIG += plugin no_plugin_name_prefix
 	QMAKE_CFLAGS += -fPIC
-        linux{
-            QMAKE_POST_LINK += mv $$DESTDIR/$${TARGET}.so $$DESTDIR/$${TARGET}.arp
-        }
+	QMAKE_EXTENSION_SHLIB = arp
 }
 else{
 	CONFIG += dll

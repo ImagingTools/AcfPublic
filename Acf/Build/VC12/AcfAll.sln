@@ -50,6 +50,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iqtprm", "..\..\Include\iqt
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ipackage", "..\..\Include\ipackage\VC12\ipackage.vcxproj", "{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "itest", "..\..\Include\itest\VC12\itest.vcxproj", "{F31D1531-2AC5-392F-B099-A882D8013157}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BasePck", "..\..\Impl\BasePck\VC12\BasePck.vcxproj", "{CDC5947E-3600-386D-9B48-4EA9D4C10589}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2EE5153E-E259-32CB-A21C-E154E2BEEE31} = {2EE5153E-E259-32CB-A21C-E154E2BEEE31}
@@ -412,6 +414,10 @@ Global
 		{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}.Debug|Win32.Build.0 = Debug|Win32
 		{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}.Release|Win32.ActiveCfg = Release|Win32
 		{0B2A6FCA-9AD0-31BB-8D05-2186413FC5AE}.Release|Win32.Build.0 = Release|Win32
+		{F31D1531-2AC5-392F-B099-A882D8013157}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F31D1531-2AC5-392F-B099-A882D8013157}.Debug|Win32.Build.0 = Debug|Win32
+		{F31D1531-2AC5-392F-B099-A882D8013157}.Release|Win32.ActiveCfg = Release|Win32
+		{F31D1531-2AC5-392F-B099-A882D8013157}.Release|Win32.Build.0 = Release|Win32
 		{CDC5947E-3600-386D-9B48-4EA9D4C10589}.Debug|Win32.ActiveCfg = Debug|Win32
 		{CDC5947E-3600-386D-9B48-4EA9D4C10589}.Debug|Win32.Build.0 = Debug|Win32
 		{CDC5947E-3600-386D-9B48-4EA9D4C10589}.Release|Win32.ActiveCfg = Release|Win32

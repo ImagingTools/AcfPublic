@@ -201,6 +201,7 @@ bool CPolygonShape::OnMouseMove(istd::CIndex2d position)
 			return true;
 		}
 	}
+
 	return false;
 }
 
@@ -329,6 +330,20 @@ ITouchable::TouchState CPolygonShape::IsTouched(istd::CIndex2d position) const
 	}
 
 	return TS_NONE;
+}
+
+
+QString CPolygonShape::GetShapeDescriptionAt(istd::CIndex2d position) const
+{
+	QString result = BaseClass::GetShapeDescriptionAt(position);
+
+	if (GetEditMode() == ISelectable::EM_REMOVE) {
+		if (IsTouched(position) == TS_TICKER) {
+			return QObject::tr("Left click: remove selected node");
+		}
+	}
+
+	return result;
 }
 
 
