@@ -29543,6 +29543,27 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
+      <name>MIT_CREATOR_VERSION</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa5dbbd92cdd02102bb0947f480c36cb61</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MIT_DOCUMENT_VERSION</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa3116952064c2c879c0a7922ef41c1a74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>MIT_CONTENT_CHECKSUM</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a7dad62c05a2974976650722db5891a0aa7f76fecf661029669a4faa14760c2b5e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
       <name>MIT_USER</name>
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
       <anchor>a7dad62c05a2974976650722db5891a0aaec57564004dc04e9464f01cb90c3c715</anchor>
