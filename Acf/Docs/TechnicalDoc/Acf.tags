@@ -52425,6 +52425,13 @@
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
+      <anchor>a29d97a7639d327e00428c751fabb55f8</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
       <anchor>a60fe9c9243713f42a819015d9d91cf9f</anchor>
