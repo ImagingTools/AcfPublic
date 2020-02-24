@@ -75015,13 +75015,6 @@
       <anchor>a8a53f33c1ee5fb56006e1c3a56a2b084</anchor>
       <arglist></arglist>
     </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>PostUpdatePalette</name>
-      <anchorfile>classiwidgets_1_1_c_mini_widget_page.html</anchorfile>
-      <anchor>aad53dc0f6f668769e9e0b3e0b0c2dc39</anchor>
-      <arglist>()</arglist>
-    </member>
     <member kind="function">
       <type></type>
       <name>CMiniWidgetPage</name>
