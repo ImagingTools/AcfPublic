@@ -138,6 +138,7 @@
     <ClCompile Include="..\CSimpleXmlFileReadArchive.cpp" />
     <ClCompile Include="..\CSimpleXmlFileWriteArchive.cpp" />
     <ClCompile Include="..\CSystemLocationComp.cpp" />
+    <ClCompile Include="..\CTempFileManagerComp.cpp" />
     <ClCompile Include="..\CTextFileLogComp.cpp" />
     <ClCompile Include="..\CTextFileLogStreamerComp.cpp" />
     <ClCompile Include="..\CTimeStampFileNameParamComp.cpp" />
@@ -192,6 +193,7 @@
     <ClInclude Include="..\CSimpleXmlFileReadArchive.h" />
     <ClInclude Include="..\CSimpleXmlFileWriteArchive.h" />
     <ClInclude Include="..\CSystemLocationComp.h" />
+    <ClInclude Include="..\CTempFileManagerComp.h" />
     <ClInclude Include="..\CTextFileLogComp.h" />
     <ClInclude Include="..\CTextFileLogStreamerComp.h" />
     <ClInclude Include="..\CTimeStampFileNameParamComp.h" />
@@ -207,6 +209,7 @@
     <ClInclude Include="..\IFileSystemInfoProvider.h" />
     <ClInclude Include="..\IFileTypeInfo.h" />
     <ClInclude Include="..\IRelativeFilePath.h" />
+    <ClInclude Include="..\ITempFileManager.h" />
     <ClInclude Include="..\TFileSerializerComp.h" />
     <ClInclude Include="..\TXmlFileSerializerComp.h" />
     <ClInclude Include="..\ifile.h" />

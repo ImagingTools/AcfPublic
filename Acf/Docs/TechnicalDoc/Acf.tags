@@ -2446,6 +2446,16 @@
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
+    <name>CTempFileManagerComp.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_c_temp_file_manager_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
+    <includes id="_i_temp_file_manager_8h" name="ITempFileManager.h" local="no" imported="no">ifile/ITempFileManager.h</includes>
+    <class kind="class">ifile::CTempFileManagerComp</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
     <name>CTextFileLogComp.h</name>
     <path>C:/Temp/Acf/Include/ifile/</path>
     <filename>_c_text_file_log_comp_8h</filename>
@@ -2594,6 +2604,15 @@
     <filename>_i_relative_file_path_8h</filename>
     <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">ifile::IRelativeFilePath</class>
+    <namespace>ifile</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ITempFileManager.h</name>
+    <path>C:/Temp/Acf/Include/ifile/</path>
+    <filename>_i_temp_file_manager_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="ifile_8h" name="ifile.h" local="no" imported="no">ifile/ifile.h</includes>
+    <class kind="class">ifile::ITempFileManager</class>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -30376,6 +30395,7 @@
     <class kind="class">ifile::CSimpleXmlFileReadArchive</class>
     <class kind="class">ifile::CSimpleXmlFileWriteArchive</class>
     <class kind="class">ifile::CSystemLocationComp</class>
+    <class kind="class">ifile::CTempFileManagerComp</class>
     <class kind="class">ifile::CTextFileLogComp</class>
     <class kind="class">ifile::CTextFileLogStreamerComp</class>
     <class kind="class">ifile::CTimeStampFileNameParamComp</class>
@@ -30391,6 +30411,7 @@
     <class kind="class">ifile::IFileSystemInfoProvider</class>
     <class kind="class">ifile::IFileTypeInfo</class>
     <class kind="class">ifile::IRelativeFilePath</class>
+    <class kind="class">ifile::ITempFileManager</class>
     <class kind="class">ifile::TFileSerializerComp</class>
     <class kind="class">ifile::TXmlFileSerializerComp</class>
   </compound>
@@ -32865,6 +32886,61 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ifile::CTempFileManagerComp</name>
+    <filename>classifile_1_1_c_temp_file_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::ITempFileManager</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>abe6c5588baba71665fae57fa4d0ba2df</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>BeginSession</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>ac1dfe63de83aa7babf5d11e6c11c2bdf</anchor>
+      <arglist>(const QString &amp;subPath=QString(), const QByteArray &amp;proposedSessionId=QByteArray())</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>AddFileItem</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>a3dcd75212475c14babc1bb9c9eb6cd86</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>a03aa78653670f5af438d2e7e094d46f8</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>RemoveFileItem</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>a20eb971b72abe9e7c369c46c207525ea</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>FinishSession</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>a79866ea33bf2d2ed2962c1ec1b5bf952</anchor>
+      <arglist>(const QByteArray &amp;sessionId)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>ResetAllSessions</name>
+      <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
+      <anchor>a1f735c68455bfedbbe3b6c28f1f9c858</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ifile::CTextFileLogComp</name>
     <filename>classifile_1_1_c_text_file_log_comp.html</filename>
     <base>ilog::CStreamLogCompBase</base>
@@ -33421,6 +33497,53 @@
       <anchorfile>classifile_1_1_i_relative_file_path.html</anchorfile>
       <anchor>a87137986acb8bd7fe0254b4b5e7438eb</anchor>
       <arglist>() const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ifile::ITempFileManager</name>
+    <filename>classifile_1_1_i_temp_file_manager.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>BeginSession</name>
+      <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
+      <anchor>af7185326090db71ead77ce51d9170da1</anchor>
+      <arglist>(const QString &amp;subPath=QString(), const QByteArray &amp;proposedSessionId=QByteArray())=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>AddFileItem</name>
+      <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
+      <anchor>ab2de0f0bce5c38ab6b7f73ea5ea0d895</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QString &amp;fileName)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetPath</name>
+      <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
+      <anchor>aa4b441516a5fe7f789ceba42e7e324dd</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>RemoveFileItem</name>
+      <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
+      <anchor>ac0cd0730199b409bab9c44f2e2126442</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>FinishSession</name>
+      <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
+      <anchor>a1127b53b2816eb9ab781c9067d0e13a9</anchor>
+      <arglist>(const QByteArray &amp;sessionId)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>ResetAllSessions</name>
+      <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
+      <anchor>a69c89ce919aed15ea1a0188878fdddcc</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -76695,6 +76818,7 @@
     <file>CSimpleXmlFileReadArchive.h</file>
     <file>CSimpleXmlFileWriteArchive.h</file>
     <file>CSystemLocationComp.h</file>
+    <file>CTempFileManagerComp.h</file>
     <file>CTextFileLogComp.h</file>
     <file>CTextFileLogStreamerComp.h</file>
     <file>CTimeStampFileNameParamComp.h</file>
@@ -76711,6 +76835,7 @@
     <file>IFileSystemInfoProvider.h</file>
     <file>IFileTypeInfo.h</file>
     <file>IRelativeFilePath.h</file>
+    <file>ITempFileManager.h</file>
     <file>TFileSerializerComp.h</file>
     <file>TXmlFileSerializerComp.h</file>
   </compound>
