@@ -201,11 +201,11 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 	}
 
 	if (*m_useVerticalSpacerAttrPtr){
-		QLayout* layoutPtr = m_guiContainerPtr->layout();
-		if (layoutPtr != NULL){
+		QLayout* vsLayoutPtr = m_guiContainerPtr->layout();
+		if (vsLayoutPtr != NULL){
 			QSpacerItem* verticalSpacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-			layoutPtr->addItem(verticalSpacer);
+			vsLayoutPtr->addItem(verticalSpacer);
 		}
 	}
 

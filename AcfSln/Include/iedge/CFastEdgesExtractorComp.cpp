@@ -698,11 +698,11 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
 
 				nodeElementPtr->isExtracted = true;
 
-				CEdgeNode node(
+				CEdgeNode n(
 							nodeElementPtr->position,
 							nodeElementPtr->derivative.GetLength() * weightScale);
 
-				resultLine.GetNodeRef(index++) = node;
+				resultLine.GetNodeRef(index++) = n;
 			}
 		}
 	}
@@ -740,11 +740,11 @@ void CFastEdgesExtractorComp::InternalContainer::ExtractLines(
 
 				nodeElementPtr->isExtracted = true;
 
-				CEdgeNode node(
+				CEdgeNode n(
 							nodeElementPtr->position,
 							nodeElementPtr->derivative.GetLength() * weightScale);
 
-				resultLine.GetNodeRef(index++) = node;
+				resultLine.GetNodeRef(index++) = n;
 
 				nodeElementPtr = nodeElementPtr->nextPtr;
 			} while (nodeElementPtr != &node);

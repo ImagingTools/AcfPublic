@@ -142,19 +142,19 @@ int CRenderedObjectFileLoaderComp::LoadFromFile(
 				previewGenerationParams.SetEditableParameter("PreviewRect", &previewRect);
 
 				if (previewGeneratorPtr->DoProcessing(&previewGenerationParams, dataObjectPtr, bitmapPtr)){
-					FileInfo fileInfo;
-					fileInfo.fileTimeStamp = fileTimeStamp;
+					FileInfo fInfo;
+					fInfo.fileTimeStamp = fileTimeStamp;
 
 					istd::TSmartPtr<iimg::CBitmap> cachedBitmapPtr(new iimg::CBitmap);
 
 					if (cachedBitmapPtr->CopyFrom(*bitmapPtr)){
-						fileInfo.fileBitmapPtr = cachedBitmapPtr;
+						fInfo.fileBitmapPtr = cachedBitmapPtr;
 
 						if (m_maxCacheSizeAttrPtr.IsValid() && (int(m_previewCache.size()) >= *m_maxCacheSizeAttrPtr)){
 							m_previewCache.erase(m_previewCache.begin());
 						}
 
-						m_previewCache[filePath] = fileInfo;
+						m_previewCache[filePath] = fInfo;
 					}
 
 					return OS_OK;

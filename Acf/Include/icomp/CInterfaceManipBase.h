@@ -50,13 +50,12 @@ protected:
 
 
 // protected template methods
-
 template <class Interface>
 Interface* CInterfaceManipBase::ExtractInterface(IComponent* componentPtr, const QByteArray& subId)
 {
-	if (componentPtr != NULL){
-		static istd::CClassInfo info = istd::CClassInfo::GetInfo<Interface>();
-
+	const istd::CClassInfo info = istd::CClassInfo::GetInfo<Interface>();
+	Q_ASSERT(info.IsValid());
+	if (info.IsValid() && (componentPtr != NULL)){
 		return static_cast<Interface*>(componentPtr->GetInterface(info, subId));
 	}
 	else{

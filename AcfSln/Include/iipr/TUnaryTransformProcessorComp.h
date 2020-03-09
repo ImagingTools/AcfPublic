@@ -40,7 +40,11 @@ namespace iipr
 	
 
 template <typename ArgumentType>
+#if _MSC_VER < 1900
 class InvertFunction: public std::unary_function<ArgumentType, ArgumentType>
+#else
+class InvertFunction
+#endif
 {
 public:
 	InvertFunction()
