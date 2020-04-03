@@ -221,7 +221,9 @@ bool CPrimitiveTypesSerializer::SerializeIntRanges(iser::IArchive& archive, istd
 bool CPrimitiveTypesSerializer::SerializeDateTime(iser::IArchive& archive, QDateTime& dateTime)
 {
 	if (archive.IsStoring()){
-		QString dateTimeString = dateTime.toString(s_timeFormat);
+		QString dateTimeString = dateTime.toString(Qt::ISODateWithMs);
+
+//		QString dateTimeString = dateTime.toString(s_timeFormat);
 
 		return archive.Process(dateTimeString);
 	}
@@ -229,7 +231,16 @@ bool CPrimitiveTypesSerializer::SerializeDateTime(iser::IArchive& archive, QDate
 		QString dateTimeString;
 
 		if (archive.Process(dateTimeString)){
-			dateTime = QDateTime::fromString(dateTimeString, s_timeFormat);
+			if (dateTimeString.contains("T")) //Check whether this string is an ISO-String
+			{
+				dateTime = QDateTime::fromString(dateTimeString, Qt::ISODateWithMs);
+			}
+			else
+			{
+				dateTime = QDateTime::fromString(dateTimeString, s_timeFormat);
+			}
+			QString result = dateTime.toString(Qt::ISODateWithMs);
+
 
 			return true;
 		}
