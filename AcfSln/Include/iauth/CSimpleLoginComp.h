@@ -26,6 +26,7 @@
 
 // ACF includes
 #include <icomp/CComponentBase.h>
+#include <ilog/IMessageConsumer.h>
 #include <imod/TModelWrap.h>
 #include <iser/ISerializable.h>
 #include <iser/CArchiveTag.h>
@@ -57,6 +58,9 @@ public:
 		I_ASSIGN_MULTI_0(m_defaultUsersAttrPtr, "DefaultUsers", "DefaultUsers", false);
 		I_ASSIGN_MULTI_0(m_defaultUserPasswordsAttrPtr, "DefaultUserPasswords", "DefaultUserPasswords", false);
 		I_ASSIGN_MULTI_0(m_defaultUserLevelsAttrPtr, "DefaultUserLevels", "DefaultUserLevels", false);
+		I_ASSIGN(m_loginMessageIdAttrPtr, "LoginMessageId", "Login Message-ID", true, 0);
+		I_ASSIGN(m_logoutMessageIdAttrPtr, "LogoutMessageId", "Logout Message-ID", true, 0);
+		I_ASSIGN(m_messageConsumerCompPtr, "MessageConsumer", "Message consumer", false, "");
 	I_END_COMPONENT;
 
 	CSimpleLoginComp();
@@ -88,6 +92,10 @@ private:
 	I_MULTIATTR(QString, m_defaultUsersAttrPtr);
 	I_MULTIATTR(QString, m_defaultUserPasswordsAttrPtr);
 	I_MULTIATTR(int, m_defaultUserLevelsAttrPtr);
+
+	I_ATTR(int, m_loginMessageIdAttrPtr);
+	I_ATTR(int, m_logoutMessageIdAttrPtr);
+	I_REF(ilog::IMessageConsumer, m_messageConsumerCompPtr);
 
 	typedef QVector<CUser> Users;
 	Users m_users;
