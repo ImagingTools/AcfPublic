@@ -55,7 +55,7 @@ public:
 	using ArgumentType = typename BaseClass::ArgumentType;
 	using ResultType = typename BaseClass::ResultType;
 #endif
-
+ 
 	TMultidimensionalPolynomial();
 	explicit TMultidimensionalPolynomial(const Coefficients& coefficients);
 

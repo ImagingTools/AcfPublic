@@ -45,6 +45,8 @@
 // ACF includes
 #include <imod/IModel.h>
 #include <imod/IObserver.h>
+#include <iprm/IParameterStateProvider.h>
+#include <iprm/IEnableableParam.h>
 #include <iqt/CSignalBlocker.h>
 #include <iview/IShapeView.h>
 #include <iqt2d/IViewProvider.h>
@@ -82,6 +84,24 @@ void CComposedParamsSetGuiComp::UpdateEditor(const istd::IChangeable::ChangeSet&
 				m_connectedEditorsMap[editorPtr] = true;
 
 				editorPtr->UpdateEditor(changeSet);
+			}
+		}
+	}
+
+	const iprm::IParamsSet* paramsSetPtr = GetObservedObject();
+	Q_ASSERT(paramsSetPtr != NULL);
+
+	const iprm::IParameterStateProvider* stateProviderPtr = CompCastPtr<iprm::IParameterStateProvider>(paramsSetPtr);
+	if (stateProviderPtr != NULL){
+		const QList<QByteArray>& observedIds = GetIds();
+		const QList<imod::IModelEditor*> editors = GetModelEditors();
+
+		Q_ASSERT(observedIds.size() == editors.size());
+
+		for (int i = 0; i < observedIds.size(); ++i){
+			bool editState = stateProviderPtr->GetState(*paramsSetPtr, observedIds[i], iprm::IParameterStateProvider::ST_EDIT);
+			if (editors[i] != NULL){
+				editors[i]->SetReadOnly(!editState);
 			}
 		}
 	}
@@ -201,11 +221,11 @@ void CComposedParamsSetGuiComp::OnGuiCreated()
 	}
 
 	if (*m_useVerticalSpacerAttrPtr){
-		QLayout* vsLayoutPtr = m_guiContainerPtr->layout();
-		if (vsLayoutPtr != NULL){
+		QLayout* containerLayoutPtr = m_guiContainerPtr->layout();
+		if (containerLayoutPtr != NULL){
 			QSpacerItem* verticalSpacer = new QSpacerItem(0, 0, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-			vsLayoutPtr->addItem(verticalSpacer);
+			containerLayoutPtr->addItem(verticalSpacer);
 		}
 	}
 
@@ -555,6 +575,33 @@ void CComposedParamsSetGuiComp::UpdateModel() const
 	}
 }
 
+QList<imod::IModelEditor*> CComposedParamsSetGuiComp::GetModelEditors() const
+{
+	QList<imod::IModelEditor*> result;
+	if (!m_editorsCompPtr.IsValid()){
+		return result;
+	}
+
+	for (int i = 0, size = m_editorsCompPtr.GetCount(); i < size; ++i){
+		result.append(m_editorsCompPtr[i]);
+	}
+
+	return result;
+}
+
+QList<QByteArray> CComposedParamsSetGuiComp::GetIds() const
+{
+	QList<QByteArray> result;
+	if (!m_idsAttrPtr.IsValid()){
+		return result;
+	}
+
+	for (int i = 0, size = m_idsAttrPtr.GetCount(); i < size; ++i){
+		result.append(m_idsAttrPtr[i]);
+	}
+
+	return result;
+}
 
 // protected slots
 

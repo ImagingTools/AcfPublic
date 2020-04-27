@@ -431,6 +431,7 @@ CSystem::FileDriveInfo CSystem::GetFileDriveInfo(const QString& fileDrivePath)
 	QStorageInfo storageInfo(fileDrivePath);
 	fileDriveInfo.totalBytes = storageInfo.bytesTotal();
 	fileDriveInfo.freeBytes = storageInfo.bytesFree();
+	fileDriveInfo.isValid = storageInfo.isValid();
 #else
 	// TODO: Remove this code after switching to Qt 5.5,
 	// use QStorageInfo instead of this implementation!
@@ -440,6 +441,7 @@ CSystem::FileDriveInfo CSystem::GetFileDriveInfo(const QString& fileDrivePath)
 		if (isOk){
 			fileDriveInfo.freeBytes = lpFreeBytesAvailable.QuadPart;
 			fileDriveInfo.totalBytes = lpTotalNumberOfBytes.QuadPart;
+			fileDriveInfo.isValid = isOk;
 		}
 	#else
 		Q_UNUSED(fileDrivePath);

@@ -127,6 +127,7 @@
     <ClCompile Include="..\CNameParamComp.cpp" />
     <ClCompile Include="..\COptionsManager.cpp" />
     <ClCompile Include="..\COptionsManagerComp.cpp" />
+    <ClCompile Include="..\CParameterStateProviderComp.cpp" />
     <ClCompile Include="..\CParamsManagerComp.cpp" />
     <ClCompile Include="..\CParamsManagerCompBase.cpp" />
     <ClCompile Include="..\CParamsSet.cpp" />
@@ -150,6 +151,7 @@
     <ClInclude Include="..\CNameParamComp.h" />
     <ClInclude Include="..\COptionsManager.h" />
     <ClInclude Include="..\COptionsManagerComp.h" />
+    <ClInclude Include="..\CParameterStateProviderComp.h" />
     <ClInclude Include="..\CParamsManagerComp.h" />
     <ClInclude Include="..\CParamsManagerCompBase.h" />
     <ClInclude Include="..\CParamsSet.h" />
@@ -164,6 +166,7 @@
     <ClInclude Include="..\INameParam.h" />
     <ClInclude Include="..\IOptionsList.h" />
     <ClInclude Include="..\IOptionsManager.h" />
+    <ClInclude Include="..\IParameterStateProvider.h" />
     <ClInclude Include="..\IParamsManager.h" />
     <ClInclude Include="..\IParamsSet.h" />
     <ClInclude Include="..\IParamsSetValidator.h" />

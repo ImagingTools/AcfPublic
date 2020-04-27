@@ -23,6 +23,10 @@
 #include <iqtgui/CHierarchicalCommand.h>
 
 
+// ACF includes
+#include <istd/TDelPtr.h>
+
+
 namespace iqtgui
 {
 
@@ -229,6 +233,18 @@ bool CHierarchicalCommand::CopyFrom(const istd::IChangeable& object, Compatibili
 
 	return false;
 }
+
+
+istd::IChangeable* CHierarchicalCommand::CloneMe(istd::IChangeable::CompatibilityMode mode) const
+{
+	istd::TDelPtr<CHierarchicalCommand> clonedPtr(new CHierarchicalCommand);
+	if (clonedPtr->CopyFrom(*this, mode)){
+		return clonedPtr.PopPtr();
+	}
+
+	return NULL;
+}
+
 
 
 bool CHierarchicalCommand::IsEqual(const istd::IChangeable& object) const

@@ -179,11 +179,11 @@ i2d::CRect CSplineShape::CalcBoundingBox() const
 			boundingBox.Union(sp);
 
 			for (int i = 1; i < segmentCount; ++i){
-				const i2d::CSplineSegment& splineSegment = splinePtr->GetSplineSegment(i);
+				const i2d::CSplineSegment& segment = splinePtr->GetSplineSegment(i);
 
-				sp = GetScreenPosition(splineSegment.GetBezierPointBegin()).ToIndex2d();
+				sp = GetScreenPosition(segment.GetBezierPointBegin()).ToIndex2d();
 				boundingBox.Union(sp);
-				sp = GetScreenPosition(splineSegment.GetBezierPointEnd()).ToIndex2d();
+				sp = GetScreenPosition(segment.GetBezierPointEnd()).ToIndex2d();
 				boundingBox.Union(sp);
 			}
 

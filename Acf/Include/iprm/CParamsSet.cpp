@@ -219,41 +219,41 @@ bool CParamsSet::Serialize(iser::IArchive& archive)
 	else{
 		int paramsCount = 0;
 
-		if (archive.BeginMultiTag((frameworkVersion > 3815) ? parametersTag : paramsSetTag, parameterTag, paramsCount)){
+		retVal = retVal && archive.BeginMultiTag((frameworkVersion > 3815)? parametersTag: paramsSetTag, parameterTag, paramsCount);
 
-			istd::CChangeGroup changeGroup(this);
-			Q_UNUSED(changeGroup);
+		if (!retVal){
+			return false;
+		}
 
-			for (int i = 0; i < paramsCount; ++i){
-				retVal = retVal && archive.BeginTag(parameterTag);
+		istd::CChangeGroup changeGroup(this);
+		Q_UNUSED(changeGroup);
 
-				QByteArray id;
-				retVal = retVal && archive.BeginTag(parameterIdTag);
-				retVal = retVal && archive.Process(id);
-				retVal = retVal && archive.EndTag(parameterIdTag);
+		for (int i = 0; i < paramsCount; ++i){
+			retVal = retVal && archive.BeginTag(parameterTag);
 
-				if (!retVal){
-					return false;
-				}
+			QByteArray id;
+			retVal = retVal && archive.BeginTag(parameterIdTag);
+			retVal = retVal && archive.Process(id);
+			retVal = retVal && archive.EndTag(parameterIdTag);
 
-				retVal = retVal && archive.BeginTag(parameterValueTag);
-				const ParameterInfo* parameterInfoPtr = FindParameterInfo(id);
-				if (parameterInfoPtr != NULL){
-					retVal = retVal && parameterInfoPtr->parameterPtr->Serialize(archive);
-				}
-				else if (!archive.IsTagSkippingSupported()){
-					return false;
-				}
-				retVal = retVal && archive.EndTag(parameterValueTag);
-
-				retVal = retVal && archive.EndTag(parameterTag);
+			if (!retVal){
+				return false;
 			}
 
-			retVal = retVal && archive.EndTag((frameworkVersion > 3815) ? parametersTag : paramsSetTag);
+			retVal = retVal && archive.BeginTag(parameterValueTag);
+			const ParameterInfo* parameterInfoPtr = FindParameterInfo(id);
+			if (parameterInfoPtr != NULL){
+				retVal = retVal && parameterInfoPtr->parameterPtr->Serialize(archive);
+			}
+			else if (!archive.IsTagSkippingSupported()){
+				return false;
+			}
+			retVal = retVal && archive.EndTag(parameterValueTag);
+
+			retVal = retVal && archive.EndTag(parameterTag);
 		}
-		else {
-			retVal = archive.IsTagSkippingSupported();
-		}
+
+		retVal = retVal && archive.EndTag((frameworkVersion > 3815)? parametersTag: paramsSetTag);
 	}
 
 	return retVal;

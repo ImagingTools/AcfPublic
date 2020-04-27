@@ -447,9 +447,10 @@ void CParamsManagerGuiCompBase::UpdateComboBox()
 	ParamsComboBox->clear();
 
 	int selectedIndex = -1;
+	int setsCount = 0;
 	iprm::IParamsManager* objectPtr = GetObservedObject();
 	if (objectPtr != NULL){
-		int setsCount = objectPtr->GetParamsSetsCount();
+		setsCount = objectPtr->GetParamsSetsCount();
 
 		const iprm::IOptionsList* paramsListPtr = objectPtr->GetSelectionConstraints();
 		selectedIndex = objectPtr->GetSelectedOptionIndex();

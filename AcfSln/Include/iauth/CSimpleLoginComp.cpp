@@ -26,7 +26,6 @@
 // ACF includes
 #include <istd/CChangeNotifier.h>
 #include <iser/IArchive.h>
-#include <ilog/CMessage.h>
 
 
 namespace iauth
@@ -110,16 +109,6 @@ bool CSimpleLoginComp::Login(const QString& userName, const QString& password)
 
 			m_loggedUserIndex = userIndex;
 
-			if (m_messageConsumerCompPtr.IsValid()){
-				ilog::IMessageConsumer::MessagePtr messagePtr(
-							new ilog::CMessage(
-										istd::IInformationProvider::IC_INFO,
-										*m_loginMessageIdAttrPtr,
-										userName,
-										"SimpleLogin"));
-				m_messageConsumerCompPtr->AddMessage(messagePtr);
-			}
-
 			return true;
 		}
 	}
@@ -133,14 +122,6 @@ bool CSimpleLoginComp::Logout()
 	if (m_loggedUserIndex >= 0){
 		istd::CChangeNotifier notifier(this, &s_logoutChangeSet);
 		Q_UNUSED(notifier);
-
-		ilog::IMessageConsumer::MessagePtr messagePtr(
-					new ilog::CMessage(
-								istd::IInformationProvider::IC_INFO,
-								*m_logoutMessageIdAttrPtr,
-								m_users[m_loggedUserIndex].GetUserName(),
-								"SimpleLogin"));
-		m_messageConsumerCompPtr->AddMessage(messagePtr);
 
 		m_loggedUserIndex = -1;
 

@@ -3838,6 +3838,15 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CParameterStateProviderComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_parameter_state_provider_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_parameter_state_provider_8h" name="IParameterStateProvider.h" local="no" imported="no">iprm/IParameterStateProvider.h</includes>
+    <class kind="class">iprm::CParameterStateProviderComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CParamsManagerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_params_manager_comp_8h</filename>
@@ -3992,6 +4001,14 @@
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
     <includes id="_i_selection_param_8h" name="ISelectionParam.h" local="no" imported="no">iprm/ISelectionParam.h</includes>
     <class kind="class">iprm::IOptionsManager</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>IParameterStateProvider.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_parameter_state_provider_8h</filename>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
+    <class kind="class">iprm::IParameterStateProvider</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -5950,6 +5967,7 @@
     <filename>_c_system_8h</filename>
     <class kind="class">istd::CSystem</class>
     <class kind="struct">istd::CSystem::FileDriveInfo</class>
+    <class kind="struct">istd::CSystem::FileDriveDescriptor</class>
     <namespace>istd</namespace>
   </compound>
   <compound kind="file">
@@ -44184,6 +44202,7 @@
     <class kind="class">iprm::CNameParamComp</class>
     <class kind="class">iprm::COptionsManager</class>
     <class kind="class">iprm::COptionsManagerComp</class>
+    <class kind="class">iprm::CParameterStateProviderComp</class>
     <class kind="class">iprm::CParamsManagerComp</class>
     <class kind="class">iprm::CParamsManagerCompBaseAttr</class>
     <class kind="class">iprm::CParamsManagerCompBase</class>
@@ -44199,6 +44218,7 @@
     <class kind="class">iprm::INameParam</class>
     <class kind="class">iprm::IOptionsList</class>
     <class kind="class">iprm::IOptionsManager</class>
+    <class kind="class">iprm::IParameterStateProvider</class>
     <class kind="class">iprm::IParamsManager</class>
     <class kind="class">iprm::IParamsSet</class>
     <class kind="class">iprm::IParamsSetValidator</class>
@@ -44496,6 +44516,13 @@
       <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
       <anchor>a9114bf9d87186c8de47b0ebbfc02cc3b</anchor>
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiprm_1_1_c_enableable_param.html</anchorfile>
+      <anchor>a55ec420a244c5c7cb9b3c3e6e928bbe4</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45363,6 +45390,68 @@
       <anchorfile>classiprm_1_1_c_options_manager_comp.html</anchorfile>
       <anchor>a71c04ecbc8e54e7a56548d8ac7de979a</anchor>
       <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CParameterStateProviderComp</name>
+    <filename>classiprm_1_1_c_parameter_state_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IParameterStateProvider</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_parameter_state_provider_comp.html</anchorfile>
+      <anchor>a2ce5f82a58b7c6403b2ef7aed1a63bc8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>StateType</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>a49d7f31172e892a1287c094e8287330a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>ST_EDIT</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>a49d7f31172e892a1287c094e8287330aa90ca361532aa6a12b5b6281a129bbb99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>ParameterState</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_UNKNOWN</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91a8c33bc3b23c4da8d6638062d377ea770</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_TRUE</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91ac2bc3c347586f640edc80c27ed573cc9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <type>@</type>
+      <name>PS_FALSE</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91a047d89538e94c2931289621a5860c33c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ParameterState</type>
+      <name>GetState</name>
+      <anchorfile>classiprm_1_1_c_parameter_state_provider_comp.html</anchorfile>
+      <anchor>a18364dd4a7a5a7fe97670d307b78e89e</anchor>
+      <arglist>(const iprm::IParamsSet &amp;paramSet, const QByteArray &amp;parameterId, StateType stateType) const </arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46367,6 +46456,18 @@
       <anchorfile>classiprm_1_1_i_selection_param.html</anchorfile>
       <anchor>a65122ebc0e6fe3d5c654e63b6be39fdd</anchor>
       <arglist>(int index) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::IParameterStateProvider</name>
+    <filename>classiprm_1_1_i_parameter_state_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual ParameterState</type>
+      <name>GetState</name>
+      <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
+      <anchor>a8fe5e681199efb5a3ab3b7f16e868ebb</anchor>
+      <arglist>(const iprm::IParamsSet &amp;paramSet, const QByteArray &amp;parameterId, StateType stateType) const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -55658,6 +55759,13 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a22e8fc5a385e3d0740c451033bd9a4c2</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
@@ -58412,6 +58520,20 @@
       <name>UpdateModel</name>
       <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
       <anchor>a0f896902971f6c4d4eb8407756c877de</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QList&lt; imod::IModelEditor * &gt;</type>
+      <name>GetModelEditors</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a1b51e11740378e7775bb663c129d9846</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>QList&lt; QByteArray &gt;</type>
+      <name>GetIds</name>
+      <anchorfile>classiqtprm_1_1_c_composed_params_set_gui_comp.html</anchorfile>
+      <anchor>a91304867418fd45ada84c4a90b172369</anchor>
       <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -62404,6 +62526,7 @@
   <compound kind="class">
     <name>istd::CSystem</name>
     <filename>classistd_1_1_c_system.html</filename>
+    <class kind="struct">istd::CSystem::FileDriveDescriptor</class>
     <class kind="struct">istd::CSystem::FileDriveInfo</class>
     <member kind="typedef">
       <type>QMap&lt; QString, QString &gt;</type>
@@ -62540,6 +62663,38 @@
     </member>
   </compound>
   <compound kind="struct">
+    <name>istd::CSystem::FileDriveDescriptor</name>
+    <filename>structistd_1_1_c_system_1_1_file_drive_descriptor.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_descriptor.html</anchorfile>
+      <anchor>a4fea637a78d2a80a735d437fc424569d</anchor>
+      <arglist>(const FileDriveDescriptor &amp;driveInfo) const </arglist>
+    </member>
+    <member kind="variable">
+      <type>FileDriveInfo</type>
+      <name>info</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_descriptor.html</anchorfile>
+      <anchor>a09b03a6b60a8b51cc9a81c51d6439dd9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QString</type>
+      <name>name</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_descriptor.html</anchorfile>
+      <anchor>a4dffea1b2be269ce7dc41b0932519e1f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>QByteArray</type>
+      <name>id</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_descriptor.html</anchorfile>
+      <anchor>a63835e0887d9a2680dac32ca54856ca7</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
     <name>istd::CSystem::FileDriveInfo</name>
     <filename>structistd_1_1_c_system_1_1_file_drive_info.html</filename>
     <member kind="function">
@@ -62568,6 +62723,13 @@
       <name>freeBytes</name>
       <anchorfile>structistd_1_1_c_system_1_1_file_drive_info.html</anchorfile>
       <anchor>a2043752d01146b5cc291274e9fb141ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>bool</type>
+      <name>isValid</name>
+      <anchorfile>structistd_1_1_c_system_1_1_file_drive_info.html</anchorfile>
+      <anchor>a916c4a837805720a391382ffc45ba20c</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -77016,6 +77178,7 @@
     <file>CNameParamComp.h</file>
     <file>COptionsManager.h</file>
     <file>COptionsManagerComp.h</file>
+    <file>CParameterStateProviderComp.h</file>
     <file>CParamsManagerComp.h</file>
     <file>CParamsManagerCompBase.h</file>
     <file>CParamsSet.h</file>
@@ -77030,6 +77193,7 @@
     <file>INameParam.h</file>
     <file>IOptionsList.h</file>
     <file>IOptionsManager.h</file>
+    <file>IParameterStateProvider.h</file>
     <file>IParamsManager.h</file>
     <file>IParamsSet.h</file>
     <file>IParamsSetValidator.h</file>
