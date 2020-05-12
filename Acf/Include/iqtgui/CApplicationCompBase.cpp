@@ -134,6 +134,9 @@ bool CApplicationCompBase::TryShowSplashScreen()
 #else
 		m_applicationPtr->processEvents(QEventLoop::ExcludeUserInputEvents);
 #endif
+		QEventLoop loop;
+		QTimer::singleShot(*m_splashTimeAttrPtr, &loop, &QEventLoop::quit);
+		loop.exec();
 
 		return true;
 	}
