@@ -25,12 +25,10 @@
 
 // Qt includes
 #include <QtCore/QString>
-#include <QtCore/QTextStream>
-#include <QtCore/QFile>
-#ifdef Q_OS_LINUX
 #include <QtCore/QTimer>
 #include <QtCore/QEventLoop>
-#endif
+#include <QtCore/QTextStream>
+#include <QtCore/QFile>
 #include <QtGui/QIcon>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QStyle>
