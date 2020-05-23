@@ -148,8 +148,13 @@ I_EXPORT_COMPONENT(
 
 I_EXPORT_COMPONENT(
 			NameParam,
-			"Name parameter",
+			"Name parameter (deprecated)",
 			"Name Parameter" IM_CATEGORY(I_DATA_MODEL));
+
+I_EXPORT_COMPONENT(
+			TextParam,
+			"Text parameter",
+			"Text Parameter" IM_CATEGORY(I_DATA_MODEL));
 
 I_EXPORT_COMPONENT(
 			MultiParamsManager,

@@ -20,15 +20,12 @@
 ********************************************************************************/
 
 
-#ifndef iprm_INameParam_included
-#define iprm_INameParam_included
+#ifndef iprm_CTextParam_included
+#define iprm_CTextParam_included
 
-
-// Qt includes
-#include <QtCore/QString>
 
 // ACF includes
-#include <iser/ISerializable.h>
+#include <iprm/ITextParam.h>
 
 
 namespace iprm
@@ -36,39 +33,31 @@ namespace iprm
 
 
 /**
-	Interface for a object containing simple text.
-	\todo Rename it to ITextParam
+	Implementation of the text value over iprm::ITextParam interface.
 */
-#pragma deprecated(INameParam)
-class INameParam: virtual public iser::ISerializable
+class CTextParam: virtual public ITextParam
 {
 public:
-	/**
-		Data model change notification flags.
-	*/
-	enum ChangeFlags
-	{
-		CF_RENAME = 0x15345e0
-	};
+	// reimplemented (iprm::INameParam)
+	virtual const QString& GetText() const override;
+	virtual void SetText(const QString& text) override;
+	virtual bool IsReadonly() const override;
 
-	/**
-		Get the object name.
-	*/
-	virtual const QString& GetName() const = 0;
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
 
-	/**
-		Set the object name.
-	*/
-	virtual void SetName(const QString& name) = 0;
+	// reimplemented (istd::IChangeable)
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+	virtual istd::IChangeable* CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const;
 
-	/**
-		Return \c true, if the name setting is enabled.
-	*/
-	virtual bool IsNameFixed() const = 0;
+protected:
+	QString m_text;
 };
 
 
 } // namespace iprm
 
 
-#endif // !iprm_INameParam_included
+#endif // !iprm_CTextParam_included
+
+

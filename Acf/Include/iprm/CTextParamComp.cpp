@@ -20,55 +20,45 @@
 ********************************************************************************/
 
 
-#ifndef iprm_INameParam_included
-#define iprm_INameParam_included
-
-
-// Qt includes
-#include <QtCore/QString>
-
-// ACF includes
-#include <iser/ISerializable.h>
+#include <iprm/CTextParamComp.h>
 
 
 namespace iprm
 {
 
 
-/**
-	Interface for a object containing simple text.
-	\todo Rename it to ITextParam
-*/
-#pragma deprecated(INameParam)
-class INameParam: virtual public iser::ISerializable
+// public methods
+
+// reimplemented (iprm::INameParam)
+
+void CTextParamComp::SetText(const QString& name)
 {
-public:
-	/**
-		Data model change notification flags.
-	*/
-	enum ChangeFlags
-	{
-		CF_RENAME = 0x15345e0
-	};
+	if (!*m_isReadonlyAttrPtr){
+		BaseClass2::SetText(name);
+	}
+}
 
-	/**
-		Get the object name.
-	*/
-	virtual const QString& GetName() const = 0;
 
-	/**
-		Set the object name.
-	*/
-	virtual void SetName(const QString& name) = 0;
+bool CTextParamComp::IsReadonly() const
+{
+	return *m_isReadonlyAttrPtr;
+}
 
-	/**
-		Return \c true, if the name setting is enabled.
-	*/
-	virtual bool IsNameFixed() const = 0;
-};
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CTextParamComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	if (m_defaultTextAttrPtr.IsValid()){
+		BaseClass2::SetText(*m_defaultTextAttrPtr);
+	}
+}
 
 
 } // namespace iprm
 
 
-#endif // !iprm_INameParam_included

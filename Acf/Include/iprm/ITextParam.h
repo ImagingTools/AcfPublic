@@ -20,8 +20,8 @@
 ********************************************************************************/
 
 
-#ifndef iprm_INameParam_included
-#define iprm_INameParam_included
+#ifndef iprm_ITextParam_included
+#define iprm_ITextParam_included
 
 
 // Qt includes
@@ -37,38 +37,28 @@ namespace iprm
 
 /**
 	Interface for a object containing simple text.
-	\todo Rename it to ITextParam
 */
-#pragma deprecated(INameParam)
-class INameParam: virtual public iser::ISerializable
+class ITextParam: virtual public iser::ISerializable
 {
 public:
 	/**
-		Data model change notification flags.
+		Get the text.
 	*/
-	enum ChangeFlags
-	{
-		CF_RENAME = 0x15345e0
-	};
+	virtual const QString& GetText() const = 0;
 
 	/**
-		Get the object name.
+		Set the text.
 	*/
-	virtual const QString& GetName() const = 0;
+	virtual void SetText(const QString& text) = 0;
 
 	/**
-		Set the object name.
+		Return \c true, if the text is readonly.
 	*/
-	virtual void SetName(const QString& name) = 0;
-
-	/**
-		Return \c true, if the name setting is enabled.
-	*/
-	virtual bool IsNameFixed() const = 0;
+	virtual bool IsReadonly() const = 0;
 };
 
 
 } // namespace iprm
 
 
-#endif // !iprm_INameParam_included
+#endif // !iprm_ITextParam_included

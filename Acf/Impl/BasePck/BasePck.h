@@ -63,6 +63,7 @@
 #include <iprm/CManagerParamsSetShadowerComp.h>
 #include <iprm/CSelectionConstraintsComp.h>
 #include <iprm/CNameParamComp.h>
+#include <iprm/CTextParamComp.h>
 #include <iprm/CMultiParamsManagerComp.h>
 #include <iprm/COptionsManagerComp.h>
 #include <iprm/CFilteredOptionsListComp.h>
@@ -117,7 +118,8 @@ typedef icomp::TModelCompWrap<iprm::CEnableableParamComp> EnableableParam;
 typedef icomp::TModelCompWrap<iprm::CSelectionParamComp> SelectionParam;
 typedef iprm::CManagerParamsSetShadowerComp ManagerParamsSetShadower;
 typedef icomp::TModelCompWrap<iprm::CSelectionConstraintsComp> SelectionConstraints;
-typedef icomp::TModelCompWrap<iprm::CNameParamComp> NameParam;
+typedef icomp::TModelCompWrap<iprm::CNameParamComp> NameParam;//deprecated
+typedef icomp::TModelCompWrap<iprm::CTextParamComp> TextParam;
 typedef icomp::TModelCompWrap<iprm::CMultiParamsManagerComp> MultiParamsManager;
 typedef icomp::TModelCompWrap<iprm::COptionsManagerComp> OptionsManager;
 typedef icomp::TModelCompWrap<iprm::CFilteredOptionsListComp> FilteredOptionsList;

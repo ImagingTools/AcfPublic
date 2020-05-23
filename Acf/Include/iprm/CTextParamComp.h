@@ -20,14 +20,14 @@
 ********************************************************************************/
 
 
-#ifndef iprm_CNameParamComp_included
-#define iprm_CNameParamComp_included
+#ifndef iprm_CTextParamComp_included
+#define iprm_CTextParamComp_included
 
 
 // ACF includes
 #include <icomp/CComponentBase.h>
 
-#include <iprm/CNameParam.h>
+#include <iprm/CTextParam.h>
 
 
 namespace iprm
@@ -37,40 +37,39 @@ namespace iprm
 /**
 	Component for automatic creation of the Universally Unique Identifier (UUID)
 */
-#pragma deprecated(CNameParamComp)
-class CNameParamComp:
+class CTextParamComp:
 			public icomp::CComponentBase,
-			public iprm::CNameParam
+			public iprm::CTextParam
 {
 public:
 	typedef icomp::CComponentBase BaseClass;
-	typedef iprm::CNameParam BaseClass2;
+	typedef iprm::CTextParam BaseClass2;
 
-	I_BEGIN_COMPONENT(CNameParamComp);
-		I_REGISTER_INTERFACE(iprm::INameParam);
+	I_BEGIN_COMPONENT(CTextParamComp);
+		I_REGISTER_INTERFACE(iprm::ITextParam);
 		I_REGISTER_INTERFACE(iser::ISerializable);
 		I_REGISTER_INTERFACE(istd::IChangeable);
-		I_ASSIGN(m_defaultNameAttrPtr, "DefaultName", "Default name", false, "");
-		I_ASSIGN(m_isNameFixedAttrPtr, "IsNameFixed", "When enabled, the name is fixed and cannot be changed during run tume", true, false);
+		I_ASSIGN(m_defaultTextAttrPtr, "DefaultText", "Default text", false, "");
+		I_ASSIGN(m_isReadonlyAttrPtr, "IsReadonly", "When enabled, the text is fixed and cannot be changed during run tume", true, false);
 	I_END_COMPONENT;
 
 	// reimplemented (iprm::INameParam)
-	virtual void SetName(const QString& name);
-	virtual bool IsNameFixed() const;
+	virtual void SetText(const QString& name) override;
+	virtual bool IsReadonly() const override;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();
 
 private:
-	I_TEXTATTR(m_defaultNameAttrPtr);
-	I_ATTR(bool, m_isNameFixedAttrPtr);
+	I_TEXTATTR(m_defaultTextAttrPtr);
+	I_ATTR(bool, m_isReadonlyAttrPtr);
 };
 
 
 } // namespace iprm
 
 
-#endif // !iprm_CNameParamComp_included
+#endif // !iprm_CTextParamComp_included
 
 
