@@ -63,12 +63,13 @@
 #include <iprm/CManagerParamsSetShadowerComp.h>
 #include <iprm/CSelectionConstraintsComp.h>
 #include <iprm/CNameParamComp.h>
-#include <iprm/CTextParamComp.h>
 #include <iprm/CMultiParamsManagerComp.h>
 #include <iprm/COptionsManagerComp.h>
 #include <iprm/CFilteredOptionsListComp.h>
 #include <iprm/CParamsSetDelegatorComp.h>
 #include <iprm/CParameterStateProviderComp.h>
+#include <iprm/CTextParamComp.h>
+#include <iprm/CIdParam.h>
 
 #include <i2d/CPosition2dComp.h>
 #include <i2d/CRectangleComp.h>
@@ -118,13 +119,16 @@ typedef icomp::TModelCompWrap<iprm::CEnableableParamComp> EnableableParam;
 typedef icomp::TModelCompWrap<iprm::CSelectionParamComp> SelectionParam;
 typedef iprm::CManagerParamsSetShadowerComp ManagerParamsSetShadower;
 typedef icomp::TModelCompWrap<iprm::CSelectionConstraintsComp> SelectionConstraints;
-typedef icomp::TModelCompWrap<iprm::CNameParamComp> NameParam;//deprecated
-typedef icomp::TModelCompWrap<iprm::CTextParamComp> TextParam;
+typedef icomp::TModelCompWrap<iprm::CNameParamComp> NameParam;
 typedef icomp::TModelCompWrap<iprm::CMultiParamsManagerComp> MultiParamsManager;
 typedef icomp::TModelCompWrap<iprm::COptionsManagerComp> OptionsManager;
 typedef icomp::TModelCompWrap<iprm::CFilteredOptionsListComp> FilteredOptionsList;
 typedef icomp::TModelCompWrap<iprm::CParamsSetDelegatorComp> ParamsSetDelegator;
 typedef iprm::CParameterStateProviderComp ParameterStateProvider;
+typedef icomp::TModelCompWrap<iprm::CTextParamComp> TextParam;
+typedef icomp::TModelCompWrap<
+			icomp::TMakeComponentWrap<
+							iprm::CIdParam, iprm::IIdParam, iser::ISerializable> > IdParam;
 
 typedef idoc::CSingleDocumentTemplateComp SingleDocumentTemplate;
 typedef idoc::CCompositeDocumentTemplateComp CompositeDocumentTemplate;

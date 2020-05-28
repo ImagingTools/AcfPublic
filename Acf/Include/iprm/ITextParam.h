@@ -44,7 +44,7 @@ public:
 	/**
 		Get the text.
 	*/
-	virtual const QString& GetText() const = 0;
+	virtual QString GetText() const = 0;
 
 	/**
 		Set the text.
@@ -54,7 +54,7 @@ public:
 	/**
 		Return \c true, if the text is readonly.
 	*/
-	virtual bool IsReadonly() const = 0;
+	virtual bool IsReadOnly() const = 0;
 };
 
 

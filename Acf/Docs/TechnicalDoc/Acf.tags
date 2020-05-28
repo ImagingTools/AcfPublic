@@ -1409,6 +1409,13 @@
       <arglist>(istd::IPolymorphic *objectPtr)</arglist>
     </member>
     <member kind="function">
+      <type>Dest *</type>
+      <name>QueryInterface</name>
+      <anchorfile>_c_component_base_8h.html</anchorfile>
+      <anchor>a971ce0cced8a50cd1bf69d487bd999e6</anchor>
+      <arglist>(istd::IPolymorphic *objectPtr, const QByteArray &amp;componentId=QByteArray())</arglist>
+    </member>
+    <member kind="function">
       <type>const Dest *</type>
       <name>CompCastPtr</name>
       <anchorfile>_c_component_base_8h.html</anchorfile>
@@ -3945,6 +3952,23 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CTextParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_text_param_8h</filename>
+    <includes id="_i_text_param_8h" name="ITextParam.h" local="no" imported="no">iprm/ITextParam.h</includes>
+    <class kind="class">iprm::CTextParam</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CTextParamComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_text_param_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_text_param_8h" name="CTextParam.h" local="no" imported="no">iprm/CTextParam.h</includes>
+    <class kind="class">iprm::CTextParamComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CVariableParamComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_variable_param_comp_8h</filename>
@@ -4052,6 +4076,14 @@
     <filename>_i_selection_param_8h</filename>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
     <class kind="class">iprm::ISelectionParam</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
+    <name>ITextParam.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_i_text_param_8h</filename>
+    <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
+    <class kind="class">iprm::ITextParam</class>
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
@@ -44212,6 +44244,8 @@
     <class kind="class">iprm::CSelectionConstraintsComp</class>
     <class kind="class">iprm::CSelectionParam</class>
     <class kind="class">iprm::CSelectionParamComp</class>
+    <class kind="class">iprm::CTextParam</class>
+    <class kind="class">iprm::CTextParamComp</class>
     <class kind="class">iprm::CVariableParamComp</class>
     <class kind="class">iprm::IEnableableParam</class>
     <class kind="class">iprm::IIdParam</class>
@@ -44223,6 +44257,7 @@
     <class kind="class">iprm::IParamsSet</class>
     <class kind="class">iprm::IParamsSetValidator</class>
     <class kind="class">iprm::ISelectionParam</class>
+    <class kind="class">iprm::ITextParam</class>
     <class kind="class">iprm::IVariableParam</class>
     <class kind="class">iprm::TParamsPtr</class>
     <member kind="function">
@@ -45434,16 +45469,16 @@
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>PS_TRUE</name>
+      <name>PS_ON</name>
       <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
-      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91ac2bc3c347586f640edc80c27ed573cc9</anchor>
+      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91a9b3b37082bdd7d29811fc011b62bfe7d</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
       <type>@</type>
-      <name>PS_FALSE</name>
+      <name>PS_OFF</name>
       <anchorfile>classiprm_1_1_i_parameter_state_provider.html</anchorfile>
-      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91a047d89538e94c2931289621a5860c33c</anchor>
+      <anchor>ae3a4392ec3de4f8e9f8f1ad90ffd0a91a04144a7b1c05782aabd684c77fd6a716</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -46322,6 +46357,122 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iprm::CTextParam</name>
+    <filename>classiprm_1_1_c_text_param.html</filename>
+    <base virtualness="virtual">iprm::ITextParam</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetText</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>ac0662114bd3e8fc9bcaf0bb379388c64</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>aeaa4ca90ca8dc319d50a5b9244892258</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsReadOnly</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>ace825b4149724cace33d0418c99357a4</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Serialize</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>a6f8cca537e19bcae3e182ef5a7f1dbf0</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>ae8bc480cac8dcb5fb1fa56566c4adb55</anchor>
+      <arglist>() const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>a01f54a80bc7d8a0eee81f4e153d7140a</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsEqual</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>a840ac6e19f95294284ac1a2bcab8e4d5</anchor>
+      <arglist>(const IChangeable &amp;object) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::IChangeable *</type>
+      <name>CloneMe</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>affc66e94bcb104a387e334e90dc16808</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const </arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ResetData</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>a0363413cdb7b150e161c2fb995f0a241</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_text</name>
+      <anchorfile>classiprm_1_1_c_text_param.html</anchorfile>
+      <anchor>a84fa9249950006312f1204d374ed9bcb</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CTextParamComp</name>
+    <filename>classiprm_1_1_c_text_param_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iprm::CTextParam</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_text_param_comp.html</anchorfile>
+      <anchor>a9a44677f42c70807ceb8127e7690cbb0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iprm::CTextParam</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiprm_1_1_c_text_param_comp.html</anchorfile>
+      <anchor>a3ef8660557d82a745f758068abf76825</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classiprm_1_1_c_text_param_comp.html</anchorfile>
+      <anchor>a241181732e573359867e3c52ec9f5af7</anchor>
+      <arglist>(const QString &amp;name) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsReadOnly</name>
+      <anchorfile>classiprm_1_1_c_text_param_comp.html</anchorfile>
+      <anchor>adc77bea8ab2715508ad4489a10d0868e</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_text_param_comp.html</anchorfile>
+      <anchor>aa3aef071cdee087ce70813bd1bf0ff43</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iprm::CVariableParamComp</name>
     <filename>classiprm_1_1_c_variable_param_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -46615,6 +46766,32 @@
     <name>iprm::ISelectionParam</name>
     <filename>classiprm_1_1_i_selection_param.html</filename>
     <base virtualness="virtual">iser::ISerializable</base>
+  </compound>
+  <compound kind="class">
+    <name>iprm::ITextParam</name>
+    <filename>classiprm_1_1_i_text_param.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QString</type>
+      <name>GetText</name>
+      <anchorfile>classiprm_1_1_i_text_param.html</anchorfile>
+      <anchor>aa09c6bc9fb6d6a7433f9d383d22e35b5</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classiprm_1_1_i_text_param.html</anchorfile>
+      <anchor>aad9f819bf3ba8fc7a8dca0f0cee23244</anchor>
+      <arglist>(const QString &amp;text)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>IsReadOnly</name>
+      <anchorfile>classiprm_1_1_i_text_param.html</anchorfile>
+      <anchor>a2cf37741af857be61ef83595010da32e</anchor>
+      <arglist>() const =0</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iprm::IVariableParam</name>
@@ -77187,6 +77364,8 @@
     <file>CSelectionConstraintsComp.h</file>
     <file>CSelectionParam.h</file>
     <file>CSelectionParamComp.h</file>
+    <file>CTextParam.h</file>
+    <file>CTextParamComp.h</file>
     <file>CVariableParamComp.h</file>
     <file>IEnableableParam.h</file>
     <file>IIdParam.h</file>
@@ -77199,6 +77378,7 @@
     <file>IParamsSetValidator.h</file>
     <file>iprm.h</file>
     <file>ISelectionParam.h</file>
+    <file>ITextParam.h</file>
     <file>IVariableParam.h</file>
     <file>TParamsPtr.h</file>
   </compound>

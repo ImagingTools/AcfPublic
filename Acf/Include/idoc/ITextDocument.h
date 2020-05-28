@@ -24,8 +24,10 @@
 #define idoc_ITextDocument_included
 
 
+// Qt includes
 #include <QtCore/QString>
 
+// ACF includes
 #include <iser/ISerializable.h>
 
 

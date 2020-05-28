@@ -34,10 +34,9 @@ namespace iprm
 {
 
 
+// reimplemented (iprm::ITextParam)
 
-// reimplemented (iprm::INameParam)
-
-const QString& CTextParam::GetText() const
+QString CTextParam::GetText() const
 {
 	return m_text;
 }
@@ -54,7 +53,7 @@ void CTextParam::SetText(const QString& text)
 }
 
 
-bool CTextParam::IsReadonly() const
+bool CTextParam::IsReadOnly() const
 {
 	return false;
 }
@@ -64,20 +63,26 @@ bool CTextParam::IsReadonly() const
 
 bool CTextParam::Serialize(iser::IArchive& archive)
 {
-	static iser::CArchiveTag nameTag("Name", "Object name", iser::CArchiveTag::TT_LEAF);
+	static iser::CArchiveTag textTag("Text", "Text", iser::CArchiveTag::TT_LEAF);
 
 	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this);
 	Q_UNUSED(notifier);
 
-	bool retVal = archive.BeginTag(nameTag);
+	bool retVal = archive.BeginTag(textTag);
 	retVal = retVal && archive.Process(m_text);
-	retVal = retVal && archive.EndTag(nameTag);
+	retVal = retVal && archive.EndTag(textTag);
 
 	return retVal;
 }
 
 
 // reimplemented (istd::IChangeable)
+
+int CTextParam::GetSupportedOperations() const
+{
+	return SO_CLONE | SO_COPY | SO_COMPARE | SO_RESET;
+}
+
 
 bool CTextParam::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 {
@@ -92,6 +97,17 @@ bool CTextParam::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 }
 
 
+bool CTextParam::IsEqual(const IChangeable& object) const
+{
+	const ITextParam* sourcePtr = dynamic_cast<const ITextParam*>(&object);
+	if (sourcePtr != NULL){
+		return (m_text == sourcePtr->GetText());
+	}
+
+	return false;
+}
+
+
 istd::IChangeable* CTextParam::CloneMe(istd::IChangeable::CompatibilityMode mode) const
 {
 	istd::TDelPtr<CTextParam> clonePtr(new CTextParam);
@@ -100,6 +116,18 @@ istd::IChangeable* CTextParam::CloneMe(istd::IChangeable::CompatibilityMode mode
 	}
 
 	return NULL;
+}
+
+
+bool CTextParam::ResetData(CompatibilityMode /*mode*/)
+{
+	if (!m_text.isEmpty()){
+		istd::CChangeNotifier changeNotifier(this);
+
+		m_text.clear();
+	}
+
+	return true;
 }
 
 

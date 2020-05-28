@@ -136,6 +136,8 @@
     <ClCompile Include="..\CSelectionConstraintsComp.cpp" />
     <ClCompile Include="..\CSelectionParam.cpp" />
     <ClCompile Include="..\CSelectionParamComp.cpp" />
+    <ClCompile Include="..\CTextParam.cpp" />
+    <ClCompile Include="..\CTextParamComp.cpp" />
     <ClCompile Include="..\CVariableParamComp.cpp" />
     <ClCompile Include="..\IOptionsList.cpp" />
   </ItemGroup>
@@ -160,6 +162,8 @@
     <ClInclude Include="..\CSelectionConstraintsComp.h" />
     <ClInclude Include="..\CSelectionParam.h" />
     <ClInclude Include="..\CSelectionParamComp.h" />
+    <ClInclude Include="..\CTextParam.h" />
+    <ClInclude Include="..\CTextParamComp.h" />
     <ClInclude Include="..\CVariableParamComp.h" />
     <ClInclude Include="..\IEnableableParam.h" />
     <ClInclude Include="..\IIdParam.h" />
@@ -171,6 +175,7 @@
     <ClInclude Include="..\IParamsSet.h" />
     <ClInclude Include="..\IParamsSetValidator.h" />
     <ClInclude Include="..\ISelectionParam.h" />
+    <ClInclude Include="..\ITextParam.h" />
     <ClInclude Include="..\IVariableParam.h" />
     <ClInclude Include="..\TParamsPtr.h" />
     <ClInclude Include="..\iprm.h" />

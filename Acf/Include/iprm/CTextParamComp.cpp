@@ -39,7 +39,7 @@ void CTextParamComp::SetText(const QString& name)
 }
 
 
-bool CTextParamComp::IsReadonly() const
+bool CTextParamComp::IsReadOnly() const
 {
 	return *m_isReadonlyAttrPtr;
 }

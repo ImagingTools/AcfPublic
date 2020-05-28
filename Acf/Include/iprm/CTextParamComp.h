@@ -26,7 +26,6 @@
 
 // ACF includes
 #include <icomp/CComponentBase.h>
-
 #include <iprm/CTextParam.h>
 
 
@@ -50,12 +49,12 @@ public:
 		I_REGISTER_INTERFACE(iser::ISerializable);
 		I_REGISTER_INTERFACE(istd::IChangeable);
 		I_ASSIGN(m_defaultTextAttrPtr, "DefaultText", "Default text", false, "");
-		I_ASSIGN(m_isReadonlyAttrPtr, "IsReadonly", "When enabled, the text is fixed and cannot be changed during run tume", true, false);
+		I_ASSIGN(m_isReadonlyAttrPtr, "IsReadOnly", "When enabled, the text is fixed and cannot be changed during run tume", true, false);
 	I_END_COMPONENT;
 
 	// reimplemented (iprm::INameParam)
 	virtual void SetText(const QString& name) override;
-	virtual bool IsReadonly() const override;
+	virtual bool IsReadOnly() const override;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
