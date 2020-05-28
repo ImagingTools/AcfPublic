@@ -37,7 +37,6 @@ namespace iprm
 /**
 	Component for automatic creation of the Universally Unique Identifier (UUID)
 */
-#pragma deprecated(CNameParamComp)
 class CNameParamComp:
 			public icomp::CComponentBase,
 			public iprm::CNameParam

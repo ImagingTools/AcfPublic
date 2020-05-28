@@ -39,7 +39,6 @@ namespace iprm
 	Interface for a object containing simple text.
 	\todo Rename it to ITextParam
 */
-#pragma deprecated(INameParam)
 class INameParam: virtual public iser::ISerializable
 {
 public:

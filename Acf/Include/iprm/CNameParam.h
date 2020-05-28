@@ -35,7 +35,6 @@ namespace iprm
 /**
 	Implementation of a named object over iprm::INameParam interface.
 */
-#pragma deprecated(CNameParam)
 class CNameParam: virtual public INameParam
 {
 public:
