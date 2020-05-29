@@ -3787,6 +3787,15 @@
     <namespace>iprm</namespace>
   </compound>
   <compound kind="file">
+    <name>CIdParamComp.h</name>
+    <path>C:/Temp/Acf/Include/iprm/</path>
+    <filename>_c_id_param_comp_8h</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_c_id_param_8h" name="CIdParam.h" local="no" imported="no">iprm/CIdParam.h</includes>
+    <class kind="class">iprm::CIdParamComp</class>
+    <namespace>iprm</namespace>
+  </compound>
+  <compound kind="file">
     <name>CManagerParamsSetShadowerComp.h</name>
     <path>C:/Temp/Acf/Include/iprm/</path>
     <filename>_c_manager_params_set_shadower_comp_8h</filename>
@@ -44228,6 +44237,7 @@
     <class kind="class">iprm::CEnableableParamComp</class>
     <class kind="class">iprm::CFilteredOptionsListComp</class>
     <class kind="class">iprm::CIdParam</class>
+    <class kind="class">iprm::CIdParamComp</class>
     <class kind="class">iprm::CManagerParamsSetShadowerComp</class>
     <class kind="class">iprm::CMultiParamsManagerComp</class>
     <class kind="class">iprm::CNameParam</class>
@@ -44708,6 +44718,33 @@
       <anchorfile>classiprm_1_1_c_id_param.html</anchorfile>
       <anchor>a680da6175daed2a7482c66b94c6b835e</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iprm::CIdParamComp</name>
+    <filename>classiprm_1_1_c_id_param_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iprm::CIdParam</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiprm_1_1_c_id_param_comp.html</anchorfile>
+      <anchor>ac6c4899408ed46ae9b9350e67bfe8dc3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iprm::CIdParam</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiprm_1_1_c_id_param_comp.html</anchorfile>
+      <anchor>aecbf38b372dbe6f8d659a11e98d0d25a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiprm_1_1_c_id_param_comp.html</anchorfile>
+      <anchor>ab09e12a506f1e353be965da8d086b48b</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -77349,6 +77386,7 @@
     <file>CEnableableParamComp.h</file>
     <file>CFilteredOptionsListComp.h</file>
     <file>CIdParam.h</file>
+    <file>CIdParamComp.h</file>
     <file>CManagerParamsSetShadowerComp.h</file>
     <file>CMultiParamsManagerComp.h</file>
     <file>CNameParam.h</file>
