@@ -6804,6 +6804,7 @@
     <includes id="_i_view_layer_8h" name="IViewLayer.h" local="no" imported="no">iview/IViewLayer.h</includes>
     <includes id="_i_shape_8h" name="IShape.h" local="no" imported="no">iview/IShape.h</includes>
     <class kind="class">iview::CViewLayer</class>
+    <class kind="struct">iview::CViewLayer::ShapeWithBoundingBox</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -70830,39 +70831,39 @@
       <arglist>(const i2d::CRect &amp;prevArea, const i2d::CRect &amp;newArea)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>ShapeMap</type>
+      <type>ShapeList</type>
       <name>m_activeShapes</name>
       <anchorfile>classiview_1_1_c_interactive_view_layer.html</anchorfile>
-      <anchor>a203bf65cfbc47e5ff74313b63f94a463</anchor>
+      <anchor>afb54a956602a6d0c50f15cac9b6eb02e</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>ShapeMap</type>
+      <type>ShapeList</type>
       <name>m_shapes</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a0baa5022922aa9d9d67bdf013999ebe8</anchor>
+      <anchor>a9ac05acbb4a173fcdef77f339bf9aadc</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; IShape *, i2d::CRect &gt;</type>
-      <name>ShapeMap</name>
+      <type>QVector&lt; ShapeWithBoundingBox &gt;</type>
+      <name>ShapeList</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a1f77c84e66d743796e0d4b22daef7f01</anchor>
+      <anchor>a10804614e20152617f52ab4c9deabcf4</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>OnChangeShapeElement</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a0f84bdef4fcfb1bc6596d0cd94b9bb45</anchor>
-      <arglist>(ShapeMap::Iterator elementIter)</arglist>
+      <anchor>a360ad879c71ccfaaf3c1ece128f612c2</anchor>
+      <arglist>(ShapeList::Iterator elementIter)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>DisconnectShapeElement</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
-      <anchor>a9970d035ce8041a64032c5f1f8882f35</anchor>
-      <arglist>(ShapeMap &amp;map, ShapeMap::iterator iter)</arglist>
+      <anchor>a9ddcec70d1f228869225480f0a4325d9</anchor>
+      <arglist>(ShapeList &amp;map, ShapeList::iterator iter)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -73484,12 +73485,45 @@
     <name>iview::CViewLayer</name>
     <filename>classiview_1_1_c_view_layer.html</filename>
     <base virtualness="virtual">iview::IViewLayer</base>
+    <class kind="struct">iview::CViewLayer::ShapeWithBoundingBox</class>
     <member kind="function" virtualness="virtual">
       <type>virtual TouchState</type>
       <name>IsTouched</name>
       <anchorfile>classiview_1_1_c_view_layer.html</anchorfile>
       <anchor>a32124f6efba43a84928f736fdc85f62d</anchor>
       <arglist>(istd::CIndex2d position) const </arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>iview::CViewLayer::ShapeWithBoundingBox</name>
+    <filename>structiview_1_1_c_view_layer_1_1_shape_with_bounding_box.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>ShapeWithBoundingBox</name>
+      <anchorfile>structiview_1_1_c_view_layer_1_1_shape_with_bounding_box.html</anchorfile>
+      <anchor>a9e43aff140f7187890806856952967e3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>ShapeWithBoundingBox</name>
+      <anchorfile>structiview_1_1_c_view_layer_1_1_shape_with_bounding_box.html</anchorfile>
+      <anchor>a2c316f8a139f09932f626b63d795d08b</anchor>
+      <arglist>(IShape *shapePtr, const i2d::CRect &amp;box)</arglist>
+    </member>
+    <member kind="variable">
+      <type>IShape *</type>
+      <name>shapePtr</name>
+      <anchorfile>structiview_1_1_c_view_layer_1_1_shape_with_bounding_box.html</anchorfile>
+      <anchor>aa35cacf20a3f1bdf2ad3e06bb5bf9cfe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>i2d::CRect</type>
+      <name>box</name>
+      <anchorfile>structiview_1_1_c_view_layer_1_1_shape_with_bounding_box.html</anchorfile>
+      <anchor>ac60c0a9ea5c32d44ab3fd22b431de100</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
