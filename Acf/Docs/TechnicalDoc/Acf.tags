@@ -5090,6 +5090,7 @@
     <includes id="_i_multi_visual_status_provider_8h" name="IMultiVisualStatusProvider.h" local="no" imported="no">iqtgui/IMultiVisualStatusProvider.h</includes>
     <includes id="_c_gui_component_base_8h" name="CGuiComponentBase.h" local="no" imported="no">iqtgui/CGuiComponentBase.h</includes>
     <includes id="_c_multi_page_widget_8h" name="CMultiPageWidget.h" local="no" imported="no">iwidgets/CMultiPageWidget.h</includes>
+    <class kind="class">iqtgui::CMultiPageGuiCompAttr</class>
     <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -54398,6 +54399,7 @@
     <class kind="class">iqtgui::CImagePropertyGuiComp</class>
     <class kind="class">iqtgui::CModelDialogGuiComp</class>
     <class kind="class">iqtgui::CModelEditorGuiComp</class>
+    <class kind="class">iqtgui::CMultiPageGuiCompAttr</class>
     <class kind="class">iqtgui::CMultiPageGuiCompBase</class>
     <class kind="class">iqtgui::CProcessStartCommandComp</class>
     <class kind="class">iqtgui::CProgressDialog</class>
@@ -54999,10 +55001,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>iqtgui::CGuiComponentBase</type>
+      <type>CMultiPageGuiCompAttr</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>ab23ebf7f99a4c2f1ae2e86877b635b20</anchor>
+      <anchor>a71df02a5858d97f4ac18377b99442842</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -55010,6 +55012,13 @@
       <name>BaseClass2</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>a08b5e789e141a54f216e8d01a2c67b41</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>iqtgui::CGuiComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_attr.html</anchorfile>
+      <anchor>a386e0b1bfee48be09a61647548957387</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -55232,8 +55241,8 @@
     <member kind="function" protection="protected">
       <type></type>
       <name>I_MULTITEXTATTR</name>
-      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
-      <anchor>aeabfeb92945256eb64481c4ade137a0b</anchor>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_attr.html</anchorfile>
+      <anchor>ab89bc55a565ca907f4ea32ac02c4c962</anchor>
       <arglist>(m_pageNamesAttrPtr)</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
@@ -56403,9 +56412,14 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CMultiPageGuiCompAttr</name>
+    <filename>classiqtgui_1_1_c_multi_page_gui_comp_attr.html</filename>
+    <base>iqtgui::CGuiComponentBase</base>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CMultiPageGuiCompBase</name>
     <filename>classiqtgui_1_1_c_multi_page_gui_comp_base.html</filename>
-    <base>iqtgui::CGuiComponentBase</base>
+    <base>iqtgui::CMultiPageGuiCompAttr</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
