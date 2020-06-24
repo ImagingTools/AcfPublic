@@ -302,13 +302,10 @@ void CGuiApplicationComp::ShowWindow()
 			m_mainWidgetPtr->showMaximized();
 #endif
 #if QT_VERSION >= 0x050500
-#if defined (Q_OS_WIN)
 			windowHandle = m_mainWidgetPtr->windowHandle();
 			if (windowHandle != NULL){
-
 				QWindowsWindowFunctions::setHasBorderInFullScreen(windowHandle, usedFullscreenBorder);
 			}
-#endif
 #endif
 			m_mainWidgetPtr->showFullScreen();
 			break;
