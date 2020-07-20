@@ -28170,6 +28170,13 @@
       <anchor>a796bc7f6296a7450696cb48050978ad2</anchor>
       <arglist>() const </arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classiipr_1_1_c_search_params_comp.html</anchorfile>
+      <anchor>aa617f317c9d5aae3b9aad693a336b992</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iipr::CSelectableCalibrationProviderComp</name>

@@ -27,6 +27,8 @@ namespace iipr
 {
 
 
+// public methods
+
 // reimplemented (iipr::ISearchParams)
 
 const ISearchConstraints* CSearchParamsComp::GetSearchConstraints() const
@@ -39,5 +41,18 @@ const ISearchConstraints* CSearchParamsComp::GetSearchConstraints() const
 }
 
 
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CSearchParamsComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	SetNominalModelsCount(*m_defaultModelOccuranceAttrPtr);
+}
+
+
 } // namespace iipr
+
 

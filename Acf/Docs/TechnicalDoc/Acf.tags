@@ -72095,6 +72095,20 @@
       <anchor>acc5586bf5e4568e6149c8a9ab57032f0</anchor>
       <arglist>(const i2d::CVector2d &amp;center, const i2d::CVector2d &amp;isPos, const i2d::CVector2d &amp;shouldPos)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet &amp;</type>
+      <name>GetMoveChangeSet</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>abf9fcdf830257fbef7ec8aef15081564</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static const istd::IChangeable::ChangeSet &amp;</type>
+      <name>GetMoveAllChangeSet</name>
+      <anchorfile>classiview_1_1_c_polygon_shape.html</anchorfile>
+      <anchor>af2339fd126198450f52af3487bf24386</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="variable" protection="protected">
       <type>int</type>
       <name>m_referenceIndex</name>
