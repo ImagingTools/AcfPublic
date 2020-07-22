@@ -135,6 +135,17 @@ istd::IPolymorphic* CMultiDocumentManagerBase::GetActiveView() const
 }
 
 
+void CMultiDocumentManagerBase::SetActiveView(istd::IPolymorphic* viewPtr)
+{
+	if (m_activeViewPtr != viewPtr){
+		istd::CChangeNotifier notifier(this, &s_activateViewChangeSet);
+		Q_UNUSED(notifier);
+
+		m_activeViewPtr = viewPtr;
+	}
+}
+
+
 istd::IChangeable* CMultiDocumentManagerBase::GetDocumentFromView(const istd::IPolymorphic& view, DocumentInfo* documentInfoPtr) const
 {
 	const SingleDocumentData* infoPtr = GetDocumentInfoFromView(view);
@@ -543,17 +554,6 @@ bool CMultiDocumentManagerBase::CloseView(istd::IPolymorphic* viewPtr, bool beQu
 
 
 // protected methods
-
-void CMultiDocumentManagerBase::SetActiveView(istd::IPolymorphic* viewPtr)
-{
-	if (m_activeViewPtr != viewPtr){
-		istd::CChangeNotifier notifier(this, &s_activateViewChangeSet);
-		Q_UNUSED(notifier);
-
-		m_activeViewPtr = viewPtr;
-	}
-}
-
 
 istd::IChangeable* CMultiDocumentManagerBase::OpenSingleDocument(
 			const QString& filePath,

@@ -95,6 +95,9 @@ public:
 
 	CMultiDocumentWorkspaceGuiComp();
 
+	// reimplemented (idoc::IDocumentManager)
+	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
+
 	// reimplemented (ibase::ICommandsProvider)
 	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
@@ -142,7 +145,6 @@ protected:
 				bool beQuiet,
 				bool* ignoredPtr,
 				ibase::IProgressManager* progressManagerPtr);
-	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
 
 	// reimplemented (QObject)
 	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);

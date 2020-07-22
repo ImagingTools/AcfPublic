@@ -130,6 +130,11 @@ public:
 	virtual istd::IPolymorphic* GetActiveView() const = 0;
 
 	/**
+		Indicate that some view is active now.
+	*/
+	virtual void SetActiveView(istd::IPolymorphic* viewPtr) = 0;
+
+	/**
 		Return the document assigned to view. 
 		\param	view			view object.
 		\param	documentInfoPtr	optional return value describing some additional informations about document.
