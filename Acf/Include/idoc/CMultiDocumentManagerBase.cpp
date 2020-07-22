@@ -135,6 +135,17 @@ istd::IPolymorphic* CMultiDocumentManagerBase::GetActiveView() const
 }
 
 
+void CMultiDocumentManagerBase::SetActiveView(istd::IPolymorphic* viewPtr)
+{
+	if (m_activeViewPtr != viewPtr){
+		istd::CChangeNotifier notifier(this, &s_activateViewChangeSet);
+		Q_UNUSED(notifier);
+
+		m_activeViewPtr = viewPtr;
+	}
+}
+
+
 istd::IChangeable* CMultiDocumentManagerBase::GetDocumentFromView(const istd::IPolymorphic& view, DocumentInfo* documentInfoPtr) const
 {
 	const SingleDocumentData* infoPtr = GetDocumentInfoFromView(view);
@@ -375,6 +386,8 @@ bool CMultiDocumentManagerBase::SaveDocument(
 			savedMapPtr->operator[](filePath) = infoPtr->documentTypeId;
 		}
 
+		OnDocumentSaved();
+
 		return true;
 	}
 	else if ((saveState == ifile::IFilePersistence::OS_CANCELED) && (ignoredPtr != NULL)){
@@ -541,17 +554,6 @@ bool CMultiDocumentManagerBase::CloseView(istd::IPolymorphic* viewPtr, bool beQu
 
 
 // protected methods
-
-void CMultiDocumentManagerBase::SetActiveView(istd::IPolymorphic* viewPtr)
-{
-	if (m_activeViewPtr != viewPtr){
-		istd::CChangeNotifier notifier(this, &s_activateViewChangeSet);
-		Q_UNUSED(notifier);
-
-		m_activeViewPtr = viewPtr;
-	}
-}
-
 
 istd::IChangeable* CMultiDocumentManagerBase::OpenSingleDocument(
 			const QString& filePath,
@@ -928,6 +930,11 @@ bool CMultiDocumentManagerBase::SerializeOpenDocumentList(iser::IArchive& archiv
 	retVal = retVal && archive.EndTag(s_openDocumentsListTag);
 
 	return retVal;
+}
+
+
+void CMultiDocumentManagerBase::OnDocumentSaved()
+{
 }
 
 

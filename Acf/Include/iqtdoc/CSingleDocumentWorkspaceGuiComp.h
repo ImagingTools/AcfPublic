@@ -80,6 +80,9 @@ public:
 
 	CSingleDocumentWorkspaceGuiComp();
 
+	// reimplemented (idoc::IDocumentManager)
+	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
+
 	// reimplemented (iqtgui::IGuiObject)
 	virtual void OnTryClose(bool* ignoredPtr = NULL);
 

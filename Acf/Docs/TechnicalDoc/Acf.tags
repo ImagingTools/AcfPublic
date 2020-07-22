@@ -28042,6 +28042,13 @@
       <arglist>() const </arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetActiveView</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a2fb120bb06cfa29955a270bf9825d672</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>GetDocumentFromView</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
@@ -28189,13 +28196,6 @@
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetActiveView</name>
-      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
-      <anchor>a2fb120bb06cfa29955a270bf9825d672</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>OpenSingleDocument</name>
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
@@ -28299,6 +28299,13 @@
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
       <anchor>a4a6a52c74faee2a76a92f4d88783472d</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnDocumentSaved</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>ad17b9585eb3c07039db791ed25f9eef8</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const idoc::IDocumentTemplate *</type>
@@ -29178,6 +29185,13 @@
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
       <anchor>a185208af8b34f365f5bdbc9e1e8e2952</anchor>
       <arglist>(istd::IPolymorphic *viewPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>SetActiveView</name>
+      <anchorfile>classidoc_1_1_i_document_manager.html</anchorfile>
+      <anchor>a4483a43bbcfcaa8dfbd8e304760be6ef</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr)=0</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -53687,6 +53701,13 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetActiveView</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a3dc37b89d22078bc13bd2c51be10e2cc</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
@@ -53783,13 +53804,6 @@
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
       <anchor>a24a2819218fc5d2225dc42801bc3180a</anchor>
       <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr, ibase::IProgressManager *progressManagerPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetActiveView</name>
-      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a3dc37b89d22078bc13bd2c51be10e2cc</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -53998,6 +54012,13 @@
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
       <anchor>a18c1cc0feba931cca59200e75253db9c</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetActiveView</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a778ec972d0767c55d73f66a0547814ce</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>

@@ -64,6 +64,7 @@ public:
 	virtual int GetViewsCount(int documentIndex) const;
 	virtual istd::IPolymorphic* GetViewFromIndex(int documentIndex, int viewIndex) const;
 	virtual istd::IPolymorphic* GetActiveView() const;
+	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
 	virtual istd::IChangeable* GetDocumentFromView(const istd::IPolymorphic& view, DocumentInfo* documentInfoPtr = NULL) const;
 	virtual istd::IPolymorphic* AddViewToDocument(const istd::IChangeable& document, const QByteArray& viewTypeId = QByteArray());
 	virtual QByteArray GetDocumentTypeId(const istd::IChangeable& document) const;
@@ -128,11 +129,6 @@ protected:
 		// reimplemented (imod::CMultiModelDispatcherBase)
 		virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 	};
-
-	/**
-		Indicate that some view is active now.
-	*/
-	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
 
 	/**
 		Open single document using its file path.
@@ -227,6 +223,11 @@ protected:
 		Serializes open documents information
 	*/
 	bool SerializeOpenDocumentList(iser::IArchive& archive);
+
+	/**
+		Execute after document saved
+	*/
+	virtual void OnDocumentSaved();
 
 private:
 	typedef istd::TPointerVector<SingleDocumentData> DocumentInfos;
