@@ -84,11 +84,6 @@ int CTmplBasedDocumentManagerBase::GetAllowedOperationFlags(const istd::IPolymor
 }
 
 
-void CTmplBasedDocumentManagerBase::SetActiveView(istd::IPolymorphic* /*viewPtr*/)
-{
-}
-
-
 // reimplemented (idoc::IDocumentTypesInfo)
 
 bool CTmplBasedDocumentManagerBase::IsFeatureSupported(int featureFlags, const QByteArray& documentTypeId) const
