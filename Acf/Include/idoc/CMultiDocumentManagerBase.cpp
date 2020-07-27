@@ -386,8 +386,6 @@ bool CMultiDocumentManagerBase::SaveDocument(
 			savedMapPtr->operator[](filePath) = infoPtr->documentTypeId;
 		}
 
-		OnDocumentSaved();
-
 		return true;
 	}
 	else if ((saveState == ifile::IFilePersistence::OS_CANCELED) && (ignoredPtr != NULL)){
@@ -930,11 +928,6 @@ bool CMultiDocumentManagerBase::SerializeOpenDocumentList(iser::IArchive& archiv
 	retVal = retVal && archive.EndTag(s_openDocumentsListTag);
 
 	return retVal;
-}
-
-
-void CMultiDocumentManagerBase::OnDocumentSaved()
-{
 }
 
 

@@ -224,11 +224,6 @@ protected:
 	*/
 	bool SerializeOpenDocumentList(iser::IArchive& archive);
 
-	/**
-		Execute after document saved
-	*/
-	virtual void OnDocumentSaved();
-
 private:
 	typedef istd::TPointerVector<SingleDocumentData> DocumentInfos;
 
