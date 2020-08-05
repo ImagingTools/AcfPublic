@@ -106,27 +106,18 @@ ModelInterface* TSingleModelObserverBase<ModelInterface>::GetObjectPtr() const
 template <class ModelInterface>
 bool TSingleModelObserverBase<ModelInterface>::AttachOrSetObject(ModelInterface* objectPtr)
 {
-	if (m_observedObjectPtr != objectPtr){
-		imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(objectPtr);
-		if (modelPtr == NULL){
-			BaseClass::EnsureModelDetached();
+	EnsureModelDetached();
 
-			return false;
-		}
+	imod::IModel* modelPtr = dynamic_cast<imod::IModel*>(objectPtr);
 
-		if (!modelPtr->IsAttached(this)){
-			BaseClass::EnsureModelDetached();
-			Q_ASSERT(m_observedObjectPtr == NULL);
-
-			if (!modelPtr->AttachObserver(this)){
-				return false;
-			}
-		}
-
-		m_observedObjectPtr = objectPtr;	// it could be necessary to ensure right pointer when observed object use multiple inheritance of single interface
+	bool retVal = false;
+	if ((modelPtr != NULL) && modelPtr->AttachObserver(this)){
+		retVal = true;
 	}
 
-	return true;
+	m_observedObjectPtr = objectPtr;
+
+	return retVal;
 }
 
 
@@ -136,9 +127,11 @@ template <class ModelInterface>
 bool TSingleModelObserverBase<ModelInterface>::OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask)
 {
 	m_observedObjectPtr = CastFromModel(modelPtr);
+
 	I_IF_DEBUG(
 		if (m_observedObjectPtr == NULL){
 			QString exptectedObjectInterface = typeid(ModelInterface).name();
+
 			qDebug("Data model interface is not supported by this observer. Expected interface is: %s", qPrintable(exptectedObjectInterface));
 		}
 	)
@@ -147,7 +140,7 @@ bool TSingleModelObserverBase<ModelInterface>::OnModelAttached(imod::IModel* mod
 		return true;
 	}
 
-	m_observedObjectPtr = NULL;
+	BaseClass::EnsureModelDetached();
 
 	return false;
 }
