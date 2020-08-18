@@ -59522,6 +59522,13 @@
       <anchor>aec383c549596204952c3d24760f62ddb</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnParameterSelectionChanged</name>
+      <anchorfile>classiqtprm_1_1_c_params_manager_gui_comp_base.html</anchorfile>
+      <anchor>a7c6a47b1447e58f778d04141efdc7b28</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>UpdateActions</name>
