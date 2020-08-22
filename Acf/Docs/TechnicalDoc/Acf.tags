@@ -6947,7 +6947,6 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_i_shape_status_info_8h</filename>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
-    <includes id="_c_vector2d_8h" name="CVector2d.h" local="no" imported="no">i2d/CVector2d.h</includes>
     <class kind="class">iview::IShapeStatusInfo</class>
     <namespace>iview</namespace>
   </compound>
@@ -70334,12 +70333,12 @@
       <anchor>a4b3a1a50976aa300fea50a50d7c587aa</anchor>
       <arglist>(imod::IModel *modelPtr)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Draw</name>
+    <member kind="function" protection="protected">
+      <type>const i2d::ICalibration2d *</type>
+      <name>GetCalibration</name>
       <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
-      <anchor>ae5f5e1ba815397af64edfdaa8f3c3302</anchor>
-      <arglist>(QPainter &amp;drawContext) const </arglist>
+      <anchor>a5cc067753537e991f2ac0ab05332ec56</anchor>
+      <arglist>() const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -70349,17 +70348,17 @@
       <arglist>(QPainter &amp;drawContext) const </arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Draw</name>
+      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
+      <anchor>ae5f5e1ba815397af64edfdaa8f3c3302</anchor>
+      <arglist>(QPainter &amp;drawContext) const </arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CRect</type>
       <name>CalcBoundingBox</name>
       <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
       <anchor>aab5d1938eb5195e6d7a8878eeead1600</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>const i2d::ICalibration2d *</type>
-      <name>GetCalibration</name>
-      <anchorfile>classiview_1_1_c_distance_tool_shape.html</anchorfile>
-      <anchor>a5cc067753537e991f2ac0ab05332ec56</anchor>
       <arglist>() const </arglist>
     </member>
   </compound>
@@ -72997,41 +72996,6 @@
       <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
       <anchor>af48bf4890526fc28daaac1425c47cb9f</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CShapeStatusInfoComp</name>
-      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
-      <anchor>ac23ad5e7f69a4fff83bf85d663a4ec5d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetLogicalPosition</name>
-      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
-      <anchor>a2034bb5b056cea0f01a5012fe84727bb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetLogicalPosition</name>
-      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
-      <anchor>a64c0354a340b92edbe808a39a78c5a1e</anchor>
-      <arglist>(const i2d::CVector2d &amp;logicalPosition)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual i2d::CVector2d</type>
-      <name>GetPixelPosition</name>
-      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
-      <anchor>a0975034216406e44a75a1c81d09e6901</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetPixelPosition</name>
-      <anchorfile>classiview_1_1_c_shape_status_info_comp.html</anchorfile>
-      <anchor>afa147f09799aea2ee110b9b60b6b1ad1</anchor>
-      <arglist>(const i2d::CVector2d &amp;pixelPosition)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>

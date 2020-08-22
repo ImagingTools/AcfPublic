@@ -32,7 +32,9 @@ namespace iview
 {
 
 
-class CDistanceToolShape: public CShapeBase, virtual public iview::IInteractiveShape
+class CDistanceToolShape:
+			public CShapeBase,
+			virtual public iview::IInteractiveShape
 {
 public:
 	typedef CShapeBase BaseClass;
@@ -54,15 +56,16 @@ public:
 	virtual TouchState IsTouched(istd::CIndex2d position) const;
 
 protected:
-	// reimplemented (iview::IVisualizable)
-	virtual void Draw(QPainter& drawContext) const;
+	const i2d::ICalibration2d* GetCalibration() const;
 
 	virtual void DrawLabel(QPainter& drawContext) const;
+
+	// reimplemented (iview::IVisualizable)
+	virtual void Draw(QPainter& drawContext) const;
 
 	// reimplemented (iview::CShapeBase)
 	virtual i2d::CRect CalcBoundingBox() const;
 
-	const i2d::ICalibration2d* GetCalibration() const;
 private:
 	enum MeasureState
 	{
@@ -75,6 +78,7 @@ private:
 	void BeginDrag();
 	void EndDrag();
 
+private:
 	istd::CIndex2d m_screenPos;
 	MeasureState m_measureState;
 	int m_dragNodeIndex;
