@@ -351,6 +351,10 @@ void CMultiPageGuiCompBase::OnTryClose(bool* ignoredPtr)
 		int pageCount = GetPagesCount();
 		for (int i = 0; i < pageCount; i++){
 			GetPageGuiComponent(i)->OnTryClose(ignoredPtr);
+			if (ignoredPtr != nullptr && *ignoredPtr == true){
+				SetCurrentPage(i);
+				return;
+			}
 		}
 	}
 }
