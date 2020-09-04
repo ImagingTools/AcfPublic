@@ -345,6 +345,17 @@ void CMultiPageGuiCompBase::OnGuiRetranslate()
 }
 
 
+void CMultiPageGuiCompBase::OnTryClose(bool* ignoredPtr)
+{
+	if (ignoredPtr != nullptr){
+		int pageCount = GetPagesCount();
+		for (int i = 0; i < pageCount; i++){
+			GetPageGuiComponent(i)->OnTryClose(ignoredPtr);
+		}
+	}
+}
+
+
 // reimplemented (icomp::CComponentBase)
 
 void CMultiPageGuiCompBase::OnComponentCreated()
