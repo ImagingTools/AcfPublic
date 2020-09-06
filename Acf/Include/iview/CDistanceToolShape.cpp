@@ -226,7 +226,6 @@ const i2d::ICalibration2d* CDistanceToolShape::GetCalibration() const
 	}
 
 	const i2d::ICalibration2d* calibrationPtr = linePtr->GetCalibration();
-
 	if (calibrationPtr != NULL){
 		return calibrationPtr;
 	}
@@ -391,6 +390,7 @@ bool CDistanceToolShape::IsDistanceToolActive() const
 
 	return false;
 }
+
 
 void CDistanceToolShape::BeginDrag()
 {

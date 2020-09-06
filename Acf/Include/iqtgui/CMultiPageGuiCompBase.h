@@ -56,6 +56,7 @@ public:
 		I_ASSIGN(m_insertSpacerAttrPtr, "InsertSpacer", "If enabled, insert spacer after the last page widget", false, false);
 		I_ASSIGN(m_lazyPagesInitializationAttrPtr, "LazyPagesInitialization", "If enabled, CreateGui for a page will be called only when this page will be selected", true, false);
 		I_ASSIGN(m_supressPageTitleAttrPtr, "SupressPageTitle", "Supress page title on the container widget", true, false);
+		I_ASSIGN(m_defaultPageIndexAttrPtr, "DefaultStartPageIndex", "Index of the start page", true, 0);
 	I_END_COMPONENT;
 
 protected:
@@ -67,6 +68,7 @@ protected:
 	I_ATTR(bool, m_insertSpacerAttrPtr);
 	I_ATTR(bool, m_lazyPagesInitializationAttrPtr);
 	I_ATTR(bool, m_supressPageTitleAttrPtr);
+	I_ATTR(int, m_defaultPageIndexAttrPtr);
 };
 
 
@@ -166,7 +168,7 @@ protected:
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();
 	virtual void OnGuiRetranslate();
-	virtual void OnTryClose(bool* ignoredPtr = nullptr);
+	virtual void OnTryClose(bool* ignoredPtr = NULL);
 
 	// reimplemented (icomp::CComponentBase)
 	virtual void OnComponentCreated();

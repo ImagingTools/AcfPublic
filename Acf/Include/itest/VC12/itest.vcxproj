@@ -121,6 +121,7 @@
   <ItemGroup>
     <ClInclude Include="..\CStandardTestExecutor.h" />
     <ClInclude Include="..\ITestExecutor.h" />
+    <ClInclude Include="..\ITestInstance.h" />
     <ClInclude Include="..\itest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

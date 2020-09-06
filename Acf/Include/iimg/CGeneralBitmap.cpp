@@ -214,7 +214,7 @@ int CGeneralBitmap::GetSupportedOperations() const
 }
 
 
-bool CGeneralBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
+bool CGeneralBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
 {
 	const IBitmap* bitmapPtr = dynamic_cast<const IBitmap*>(&object);
 	if (bitmapPtr != NULL){
@@ -236,7 +236,7 @@ bool CGeneralBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode
 				std::memcpy(GetLinePtr(y), bitmapPtr->GetLinePtr(y), lineBytesCount);
 			}
 
-			return true;
+			return BaseClass::CopyFrom(object, mode);
 		}
 	}
 

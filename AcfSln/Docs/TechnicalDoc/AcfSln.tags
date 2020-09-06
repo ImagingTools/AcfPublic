@@ -26469,9 +26469,9 @@
     </member>
     <member kind="variable">
       <type>quint8</type>
-      <name>m_b</name>
+      <name>m_r</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
-      <anchor>a0d5d14db1f13df7b448101975e1d6ddf</anchor>
+      <anchor>a46c6bdf40d69f5f4875976ba65e92070</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -26483,9 +26483,9 @@
     </member>
     <member kind="variable">
       <type>quint8</type>
-      <name>m_r</name>
+      <name>m_b</name>
       <anchorfile>classiipr_1_1_c_pixel_manip_1_1_rgba.html</anchorfile>
-      <anchor>a46c6bdf40d69f5f4875976ba65e92070</anchor>
+      <anchor>a0d5d14db1f13df7b448101975e1d6ddf</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable">
@@ -34579,13 +34579,6 @@
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
       <anchor>a5de0e7e329be3e6020a5a1e260c4b11a</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>DoAutoTest</name>
-      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a2a04d3e528fc60d0d35bd6e8f0e5c283</anchor>
-      <arglist>()</arglist>
     </member>
     <member kind="function">
       <type></type>

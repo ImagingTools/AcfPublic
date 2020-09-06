@@ -6462,6 +6462,14 @@
     <namespace>itest</namespace>
   </compound>
   <compound kind="file">
+    <name>ITestInstance.h</name>
+    <path>C:/Temp/Acf/Include/itest/</path>
+    <filename>_i_test_instance_8h</filename>
+    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
+    <class kind="class">itest::ITestInstance</class>
+    <namespace>itest</namespace>
+  </compound>
+  <compound kind="file">
     <name>CAffineTransformation2dShape.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_affine_transformation2d_shape_8h</filename>
@@ -55262,6 +55270,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnTryClose</name>
+      <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
+      <anchor>a0335c08f9035d1c973f5530ca7237ae7</anchor>
+      <arglist>(bool *ignoredPtr=NULL)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_c_multi_page_gui_comp_base.html</anchorfile>
       <anchor>a71ac7cb8d3797735e7125dad5ede38d1</anchor>
@@ -66579,6 +66594,7 @@
     <filename>namespaceitest.html</filename>
     <class kind="class">itest::CStandardTestExecutor</class>
     <class kind="class">itest::ITestExecutor</class>
+    <class kind="class">itest::ITestInstance</class>
   </compound>
   <compound kind="class">
     <name>itest::CStandardTestExecutor</name>
@@ -66615,6 +66631,18 @@
       <anchorfile>classitest_1_1_i_test_executor.html</anchorfile>
       <anchor>a32fee91eb38bacba7bbbae55a248f936</anchor>
       <arglist>(int argc, char *argv[])=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>itest::ITestInstance</name>
+    <filename>classitest_1_1_i_test_instance.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual QStringList</type>
+      <name>Run</name>
+      <anchorfile>classitest_1_1_i_test_instance.html</anchorfile>
+      <anchor>a34e980c2f883e7c8532bdd7667f39193</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="namespace">
@@ -77754,6 +77782,7 @@
     <file>CStandardTestExecutor.h</file>
     <file>itest.h</file>
     <file>ITestExecutor.h</file>
+    <file>ITestInstance.h</file>
   </compound>
   <compound kind="dir">
     <name>Include/iview</name>

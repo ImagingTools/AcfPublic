@@ -119,9 +119,8 @@ bool ConvertXyToRgb(const IBitmap& inputBitmap, CBitmap& outputBitmap)
 			const float* inputLinePtr = (const float*)inputBitmap.GetLinePtr(j);
 
 			for (int i = 0; i < size.GetX(); ++i) {
-				const int k = i * 3;
-				float x = inputLinePtr[k];
-				float y = inputLinePtr[k + 1];
+				float x = inputLinePtr[i * 2];
+				float y = inputLinePtr[i * 2 + 1];
 
 				if (!qIsNaN(x)) {
 					if (x < minX) {
@@ -151,14 +150,12 @@ bool ConvertXyToRgb(const IBitmap& inputBitmap, CBitmap& outputBitmap)
 				quint8* outputLinePtr = (quint8*)outputBitmap.GetLinePtr(j);
 
 				for (int i = 0; i < size.GetX(); ++i) {
-					const int k = i * 3;
-					const int l = i * 2;
-					float x = inputLinePtr[l];
-					float y = inputLinePtr[l + 1];
+					float x = inputLinePtr[i * 2];
+					float y = inputLinePtr[i * 2 + 1];
 
-					outputLinePtr[k] = quint8(255 * (x - minX) / (maxX - minX));
-					outputLinePtr[k + 1] = quint8(255 * (y - minY) / (maxY - minY));
-					outputLinePtr[k + 2] = 0;
+					outputLinePtr[i * 3] = quint8(255 * (x - minX) / (maxX - minX));
+					outputLinePtr[i * 3 + 1] = quint8(255 * (y - minY) / (maxY - minY));
+					outputLinePtr[i * 3 + 2] = 0;
 				}
 			}
 		}
@@ -531,7 +528,7 @@ int CBitmap::GetSupportedOperations() const
 }
 
 
-bool CBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
+bool CBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const iimg::IBitmap* sourcePtr = dynamic_cast<const IBitmap*>(&object);
 	if (sourcePtr != NULL){
@@ -583,7 +580,7 @@ bool CBitmap::CopyFrom(const istd::IChangeable& object, CompatibilityMode mode)
 				return true;
 			}
 		}
-		else if (mode == CM_CONVERT){
+		else{
 			switch (pixelFormat){
 			case PF_FLOAT32:
 				return ConvertToGrayImage<float, float>(*sourcePtr, *this);
