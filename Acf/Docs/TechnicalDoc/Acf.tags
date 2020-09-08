@@ -46172,6 +46172,13 @@
       <anchor>a0c1095c6972abe72e723b8fd84913fee</anchor>
       <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiprm_1_1_c_params_set_delegator_comp.html</anchorfile>
+      <anchor>a40777b358d0ba8828e4573512a12f9e6</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
