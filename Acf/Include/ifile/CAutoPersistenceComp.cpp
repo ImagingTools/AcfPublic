@@ -285,7 +285,7 @@ void CAutoPersistenceComp::OnModelChanged(int modelId, const istd::IChangeable::
 				if (storeOnEnd && m_objectCompPtr.IsValid()){
 					StoreObject(*m_objectCompPtr.GetPtr());
 				}
-			}			
+			}
 			break;
 
 		default:
