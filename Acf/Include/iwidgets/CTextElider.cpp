@@ -68,6 +68,12 @@ bool CTextElider::RegisterElideObject(QObject* elideObject)
 		elideObject->installEventFilter(this);
 		m_objectPtrMap.insert(elideObject, info);
 
+		connect(
+					elideObject,
+					SIGNAL(destroyed(QObject*)),
+					this,
+					SLOT(OnObjectDestroyed(QObject*)));
+
 		UpdateElidedText(*elideObject);
 
 		if (!m_textObservingTimer.isActive()){
@@ -225,4 +231,14 @@ void CTextElider::OnTimeout()
 }
 
 
+// private slots
+
+void CTextElider::OnObjectDestroyed(QObject* objectPtr)
+{
+	UnregisterElideObject(objectPtr);
+}
+
+
 } // namespace iwidgets
+
+

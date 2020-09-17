@@ -222,7 +222,16 @@
     <ClInclude Include="..\CSplitterDelegate.h" />
     <ClInclude Include="..\CStackWidgetDelegate.h" />
     <ClInclude Include="..\CTabWidgetDelegate.h" />
-    <ClInclude Include="..\CTextElider.h" />
+    <CustomBuild Include="..\CTextElider.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CTextElider.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iwidgets/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTextElider.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CTextElider.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CTextElider.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CTextElider.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CTextElider.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/iwidgets/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTextElider.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CTextElider.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CTextElider.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CTextElider.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
     <ClInclude Include="..\CToolBoxDelegate.h" />
     <ClInclude Include="..\CTreeWidgetFilter.h" />
     <ClInclude Include="..\CWidgetUpdateBlocker.h" />
@@ -238,6 +247,7 @@
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CHierarchicalHeaderView.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMiniWidgetPage.cpp" />
     <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CMultiPageWidget.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\moc_CTextElider.cpp" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CCollapsiblePage.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CDoubleRangeSpinEdit.h" />
     <ClInclude Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\iwidgets\ui_CMiniWidgetPage.h" />

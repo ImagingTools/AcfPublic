@@ -45,6 +45,7 @@ namespace iwidgets
 */
 class CTextElider: public QObject
 {
+	Q_OBJECT
 public:
 	explicit CTextElider(QObject* parentPtr = NULL);
 	virtual ~CTextElider();
@@ -64,6 +65,9 @@ private:
 	void UpdateElidedText(QObject& elideObject);
 
 	void OnTimeout();
+
+private Q_SLOTS:
+	void OnObjectDestroyed(QObject* objectPtr);
 
 private:
 	struct ElideObjectInfo
