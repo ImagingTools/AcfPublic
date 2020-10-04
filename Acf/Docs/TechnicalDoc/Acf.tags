@@ -2380,7 +2380,6 @@
     <includes id="_i_runtime_status_provider_8h" name="IRuntimeStatusProvider.h" local="no" imported="no">ibase/IRuntimeStatusProvider.h</includes>
     <includes id="_c_multi_model_dispatcher_base_8h" name="CMultiModelDispatcherBase.h" local="no" imported="no">imod/CMultiModelDispatcherBase.h</includes>
     <class kind="class">ifile::CFileSystemInfoProviderComp</class>
-    <class kind="struct">ifile::CFileSystemInfoProviderComp::DriveInfo</class>
     <namespace>ifile</namespace>
   </compound>
   <compound kind="file">
@@ -32126,7 +32125,6 @@
     <base virtualness="virtual">ifile::IFileSystemInfoProvider</base>
     <base virtualness="virtual">iprm::IOptionsList</base>
     <base protection="protected">imod::CMultiModelDispatcherBase</base>
-    <class kind="struct">ifile::CFileSystemInfoProviderComp::DriveInfo</class>
     <member kind="enumeration">
       <type></type>
       <name>ModelId</name>
@@ -32219,10 +32217,10 @@
       <arglist>(int index) const </arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>std::vector&lt; DriveInfo &gt;</type>
+      <type>std::vector&lt; istd::CSystem::FileDriveDescriptor &gt;</type>
       <name>DriveInfos</name>
       <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
-      <anchor>ad527854b6b26adaaafa659c6e95e076a</anchor>
+      <anchor>a8d62f637dd89cfd71bd2db7c6fc18b30</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -32252,38 +32250,6 @@
       <anchorfile>classifile_1_1_c_file_system_info_provider_comp.html</anchorfile>
       <anchor>a8fbaed1ad4175c96eba9e2965613636f</anchor>
       <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>ifile::CFileSystemInfoProviderComp::DriveInfo</name>
-    <filename>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</filename>
-    <member kind="function">
-      <type>bool</type>
-      <name>operator==</name>
-      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
-      <anchor>a281a32a1b7d5e9d9086608c3083df93c</anchor>
-      <arglist>(const DriveInfo &amp;driveInfo) const </arglist>
-    </member>
-    <member kind="variable">
-      <type>istd::CSystem::FileDriveInfo</type>
-      <name>info</name>
-      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
-      <anchor>a076631d51111b76bf25aa2e2c9cc81a4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>QString</type>
-      <name>name</name>
-      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
-      <anchor>ad1eb4e8c74887f4770f207487797ea47</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>QByteArray</type>
-      <name>id</name>
-      <anchorfile>structifile_1_1_c_file_system_info_provider_comp_1_1_drive_info.html</anchorfile>
-      <anchor>aafc0b750f5dd7c8acfb9306333e455d1</anchor>
-      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
