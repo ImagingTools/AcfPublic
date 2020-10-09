@@ -131,10 +131,6 @@ void CPatternTeachingControllerGuiComp::UpdateGui(const istd::IChangeable::Chang
 		PatternInfoLabel->setProperty("Status", "Ok");
 	}
 
-	// reapply style sheet
-	PatternInfoLabel->style()->polish(PatternInfoLabel);
-	PatternInfoLabel->update();	
-
 	// view
 	if (m_patternViewObserverCompPtr.IsValid()){
 		imod::IModel* patternModelPtr = const_cast<imod::IModel*>(dynamic_cast<const imod::IModel*>(objectPtr->GetPatternObject()));
@@ -179,6 +175,18 @@ void CPatternTeachingControllerGuiComp::OnGuiDestroyed()
 	}
 
 	BaseClass::OnGuiDestroyed();
+}
+
+
+void CPatternTeachingControllerGuiComp::OnGuiRetranslate()
+{
+	BaseClass::OnGuiRetranslate();
+
+	if (!IsUpdateBlocked()){
+		UpdateBlocker blockUpdate(this);
+
+		UpdateGui(istd::IChangeable::GetAnyChange());
+	}
 }
 
 

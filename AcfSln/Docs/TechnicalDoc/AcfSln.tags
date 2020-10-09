@@ -35926,6 +35926,13 @@
       <anchor>a0c5f4711c8ffaa453c60ea2ba11db659</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</anchorfile>
+      <anchor>a3b9e115ffdce174f87b494b3141517d0</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtipr::CProcessedBitmapView</name>

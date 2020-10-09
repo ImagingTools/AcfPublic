@@ -275,7 +275,11 @@ bool CSingleDocumentManagerBase::SaveDocument(
 		filePath = GetSaveFilePath(m_documentTypeId, m_documentPtr.GetPtr(), filePath);
 
 		if (filePath.isEmpty()){
-			return true;
+			if (ignoredPtr != NULL){
+				*ignoredPtr = true;
+			}
+
+			return false;
 		}
 	}
 
