@@ -35475,6 +35475,13 @@
       <anchor>a213a4a6d9675631abd3f415c73662c3c</anchor>
       <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqtipr_1_1_c_general_search_params_gui_comp.html</anchorfile>
+      <anchor>a771ca6297b54259634cdf2497a236ab5</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtipr::CImageInterpolationParamsGuiComp</name>
