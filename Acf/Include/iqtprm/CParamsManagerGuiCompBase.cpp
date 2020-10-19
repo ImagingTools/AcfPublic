@@ -404,7 +404,7 @@ void CParamsManagerGuiCompBase::UpdateTree()
 				itemFlags |= Qt::ItemIsEditable;
 			}
 
-			if (!isOptionEnabled){
+			if (!(flags & iprm::IOptionsManager::OOF_SUPPORT_ENABLING)){
 				itemFlags &= ~Qt::ItemIsEnabled;
 			}
 
