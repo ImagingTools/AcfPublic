@@ -85,7 +85,7 @@ const CHistoryReader::HistoryChunk& CHistoryReader::GetHistoryChunk()
 }
 
 
-const QStringList& CHistoryReader::GetErrors() const
+QStringList CHistoryReader::GetErrors() const
 {
 	return m_errors;
 }
