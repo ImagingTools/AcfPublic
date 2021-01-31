@@ -66211,6 +66211,13 @@
     </member>
     <member kind="function">
       <type>bool</type>
+      <name>operator==</name>
+      <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
+      <anchor>a11fb5305b5dfd8e85a326a6dd0f8a87b</anchor>
+      <arglist>(const TSmartPtr &amp;other) const </arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
       <name>SetCastedOrRemove</name>
       <anchorfile>classistd_1_1_t_smart_ptr.html</anchorfile>
       <anchor>ae2f00bd23dce1f31929c72b659147a33</anchor>

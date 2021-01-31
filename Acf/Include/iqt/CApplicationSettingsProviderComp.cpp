@@ -23,7 +23,6 @@
 #include <iqt/CApplicationSettingsProviderComp.h>
 
 
-
 namespace iqt
 {
 

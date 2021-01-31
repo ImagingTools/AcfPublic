@@ -39,7 +39,7 @@ namespace iqt
 
 	This component provides access to the application's specific settings object.
 */
-class CApplicationSettingsProviderComp: 
+class CApplicationSettingsProviderComp:
 			public icomp::CComponentBase,
 			virtual public iqt::ISettingsProvider
 {
