@@ -140,11 +140,11 @@
   <ItemGroup>
     <CustomBuild Include="..\AcfLoc.acc">
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfLoc.acc;..\..\..\Config\AcfConfig.awc;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfLoc.acc -o ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp -config ..\..\..\Impl\AcfLoc\QMake\..\..\..\Config\AcfConfig.awc -conf_name DebugVC10 -v</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfLoc.acc -o ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp -config ..\..\..\Impl\AcfLoc\QMake\..\..\..\Config\AcfConfig.awc -conf_name DebugVC10 -env_vars -v</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ARX-Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp;%(Outputs)</Outputs>
       <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\AcfLoc.acc;..\..\..\Config\AcfConfig.awc;%(AdditionalInputs)</AdditionalInputs>
-      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfLoc.acc -o ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp -config ..\..\..\Impl\AcfLoc\QMake\..\..\..\Config\AcfConfig.awc -conf_name ReleaseVC10 -v</Command>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfLoc.acc -o ..\..\..\Impl\AcfLoc\QMake\..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp -config ..\..\..\Impl\AcfLoc\QMake\..\..\..\Config\AcfConfig.awc -conf_name ReleaseVC10 -env_vars -v</Command>
       <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ARX-Compiler</Message>
       <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfLoc\CAcfLoc.cpp;%(Outputs)</Outputs>
     </CustomBuild>
