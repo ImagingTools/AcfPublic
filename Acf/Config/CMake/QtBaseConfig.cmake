@@ -1,0 +1,36 @@
+# Standard settings for a Qt based project
+#message("Include QtBaseConfig.cmake")
+#include(${CMAKE_CURRENT_LIST_DIR}/CompileDir.cmake)
+#include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
+
+if(${QT_DEFAULT_MAJOR_VERSION} STREQUAL 5)
+#	message("COMPONENTS Core Gui Xml Network XmlPatterns Widgets Svg Concurrent")
+        find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core Gui Xml Network XmlPatterns Svg Concurrent REQUIRED)
+endif()
+
+#function(qt_add_resources_acf outfiles)
+#    if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
+#        qt5_add_resources("${outfiles}" ${ARGN})
+#    elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
+#        qt6_add_resources("${outfiles}" ${ARGN})
+#    endif()
+#    set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
+#endfunction()
+
+
+file(GLOB QRC_FILES "${PROJECT_DIR}/*.qrc")
+#qt_generate_moc(${SOURCES_FILES} TARGET ${PROJECT_NAME})
+#qt_add_resources_acf(RESOURCES_FILES ${RESOURCES_FILES})
+foreach(it ${QRC_FILES})
+    get_filename_component(outfilename ${it} NAME_WE)
+    get_filename_component(infile ${it} ABSOLUTE)
+    set(outfile ${CMAKE_CURRENT_BINARY_DIR}/qrc_${outfilename}.cpp)
+    execute_process(COMMAND ${Qt5_DIR}/../../../bin/rcc --name ${outfilename} --output ${outfile} ${infile} )
+# COMMAND ${Qt5Core_RCC_EXECUTABLE}
+    #    ARGS ${rcc_options} --name ${outfilename} --output ${outfile} ${infile}
+    list(APPEND RESOURCES_FILES ${outfile})
+    set(ARGS "${Qt5_DIR}/../../../bin/rcc --name ${outfilename} --output ${outfile} ${infile} ")
+#    message("APPEND RESOURCES_FILES")
+#    message("${ARGS}")
+endforeach()
+
