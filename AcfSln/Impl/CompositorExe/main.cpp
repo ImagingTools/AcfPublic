@@ -36,11 +36,11 @@
 
 int main(int argc, char *argv[])
 {
-	Q_INIT_RESOURCE(iqtgui);
-	Q_INIT_RESOURCE(icmpstr);
-	Q_INIT_RESOURCE(AcfLoc);
-	Q_INIT_RESOURCE(AcfSlnLoc);
-	Q_INIT_RESOURCE(Compositor);
+    Q_INIT_RESOURCE(iqtgui);
+    Q_INIT_RESOURCE(icmpstr);
+    Q_INIT_RESOURCE(AcfLoc);
+    Q_INIT_RESOURCE(AcfSlnLoc);
+    Q_INIT_RESOURCE(Compositor);
 
 	QApplication::addLibraryPath("./");
 
