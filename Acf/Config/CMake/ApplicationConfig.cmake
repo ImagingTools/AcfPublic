@@ -27,10 +27,10 @@ add_executable(${PROJECT_NAME} ${PROJECT_SRC})
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
-set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
+set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
 set_property(
     TARGET ${PROJECT_NAME}
-    PROPERTY RUNTIME_OUTPUT_DIRECTORY ${ACFDIRBUILD})
+    PROPERTY RUNTIME_OUTPUT_DIRECTORY ${outbindir})
 
 #set(EXECUTABLE_OUTPUT_PATH "${ACFDIRBUILD}")
 

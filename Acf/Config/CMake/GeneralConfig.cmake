@@ -5,11 +5,11 @@ message(${PROJECT_DIR})
 #message(${BINARY_DIR})
 
 
-if(${PROJECT_NAME} STREQUAL "ArxcExe")
-    project(Arxc LANGUAGES CXX)
-else()
-    project(${PROJECT_NAME} LANGUAGES CXX)
-endif()
+#if(${PROJECT_NAME} STREQUAL "ArxcExe")
+#    project(Arxc LANGUAGES CXX)
+#else()
+#    project(${PROJECT_NAME} LANGUAGES CXX)
+#endif()
 
 #add_compile_options(-fno-rtti)
 #add_compile_options(-msse2)

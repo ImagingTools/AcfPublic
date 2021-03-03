@@ -24,8 +24,19 @@ set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ${TARGET_EXT})
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
-set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
-set(LIBRARY_OUTPUT_PATH "${ACFDIRBUILD}")
+set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
+
+set_property(
+    TARGET ${PROJECT_NAME}
+    PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${outbindir})
+
+set_property(
+    TARGET ${PROJECT_NAME}
+    PROPERTY LIBRARY_OUTPUT_DIRECTORY ${outbindir})
+
+
+#set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
+#set(LIBRARY_OUTPUT_PATH "${ACFDIRBUILD}")
 
 #set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
 

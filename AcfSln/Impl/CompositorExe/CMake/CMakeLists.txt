@@ -8,11 +8,11 @@ include(${CONFIG_DIR}/CustomBuild.cmake)
 #target_link_libraries(${PROJECT_NAME} "${ACFLIBDIR}/iqtgui.lib")
 include(${CONFIG_DIR}/QtGuiBaseConfig.cmake)
 include(${CONFIG_DIR}/ApplicationConfig.cmake)
-include(${CONFIG_DIR}/AcfQt.cmake)
-include(${CONFIG_DIR}/AcfStd.cmake)
+#include(${CONFIG_DIR}/AcfQt.cmake)
+#include(${CONFIG_DIR}/AcfStd.cmake)
 
-message("ARXC_CONFIG")
-message("${ARXC_CONFIG}")
+target_link_libraries(${PROJECT_NAME} AcfSlnLoc AcfLoc)
+
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS PrintSupport REQUIRED)
 target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)
