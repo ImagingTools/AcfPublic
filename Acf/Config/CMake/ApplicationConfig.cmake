@@ -23,7 +23,7 @@ file(GLOB PROJECT_SRC
 message("SOURCES_FILE_AUX")
 message("${PROJECT_SRC}")
 
-add_executable(${PROJECT_NAME} ${PROJECT_SRC})
+add_executable(${PROJECT_NAME} WIN32 ${PROJECT_SRC})
 
 #target_include_directories(${PROJECT_NAME} PUBLIC ${AUX_INCLUDE_DIR})
 #target_include_directories(${PROJECT_NAME} PRIVATE ${ACFSLNLIBGLOBDIR})
