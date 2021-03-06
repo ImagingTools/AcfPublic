@@ -245,6 +245,18 @@ file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
 qt_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
 #qt5_wrap_cpp(MOC_SOURCES)
 
+function(acf_link_libraries infiles)
+	set(outfiles)
+	foreach(it ${ARGN})
+		if(WIN32)
+			list(APPEND outfiles "${it}.lib")
+		else()
+			list(APPEND outfiles "lib${it}.a")
+		endif()
+	endforeach()
+#	message("outfiles: " ${outfiles})
+	target_link_libraries(${PROJECT_NAME} ${outfiles})
+endfunction()
 
 #message("${MOC_SOURCES}")
 

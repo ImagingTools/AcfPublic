@@ -10,7 +10,8 @@ include(${CONFIG_DIR}/AcfQt.cmake)
 include(${CONFIG_DIR}/AcfStd.cmake)
 
 #link_libraries("iqtgui icmpstr")
-target_link_libraries(${PROJECT_NAME} -licmpstr -lAcfLoc -lAcfSlnLoc)
+#target_link_libraries(${PROJECT_NAME} -licmpstr -lAcfLoc -lAcfSlnLoc)
+acf_link_libraries(icmpstr AcfLoc AcfSlnLoc)
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS PrintSupport REQUIRED)
 target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)

@@ -3,14 +3,9 @@
 target_link_directories(${PROJECT_NAME} PUBLIC ${ACFLIBDIR})
 target_link_directories(${PROJECT_NAME} PUBLIC ${ACFSLNLIBDIR})
 #link_libraries(iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
-target_link_libraries(${PROJECT_NAME} -liqt -lipackage -lidoc -lifile -liimg -licmm -li2d -li3d -liprm -lilog -libase -licomp -liattr -liser -limod -limath -listd)
-
-#list(APPEND LIST_LIBRARY iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
-#list(APPEND LIST_LIBRARY iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)
-#list(APPEND LIST_LIBRARY iqtdoc)
-#acf_add_library(${LIST_LIBRARY})
-
+#target_link_libraries(${PROJECT_NAME} -liqt -lipackage -lidoc -lifile -liimg -licmm -li2d -li3d -liprm -lilog -libase -licomp -liattr -liser -limod -limath -listd)
 #target_link_libraries(${PROJECT_NAME} iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
+acf_link_libraries(iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
 
 #if(${MSVC})
 #	link_libraries("Mpr")
