@@ -5,26 +5,40 @@ include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
 #        find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Widgets REQUIRED)
 #endif()
 
-file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
+#file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
 file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
 file(GLOB SOURCES_FILES "${PROJECT_DIR}/*.cpp")
 file(GLOB QRC_FILES "${PROJECT_DIR}/*.qrc")
 
 file(GLOB PROJECT_SRC
-        ${UI_FILES}
+		${MOC_SOURCES}
         ${HEADER_FILES}
         ${SOURCES_FILES}
-        ${RESOURCES_FILES}
-        ${HEADER_FILES_AUX}
-        ${SOURCES_FILES_AUX}
-        ${QRC_FILES}
+#        ${RESOURCES_FILES}
+#        ${HEADER_FILES_AUX}
+#        ${SOURCES_FILES_AUX}
+#		${MOC_SOURCES}
+		${QRC_FILES}
 )
 
+#message(MOC_SOURCES "${MOC_SOURCES}")
 #message("SOURCES_FILES_AUX")
 #message("${SOURCES_FILES_AUX}")
 #set(TARGET_EXT ".lib")
 
 add_library(${PROJECT_NAME} STATIC ${PROJECT_SRC})
+
+#if(${RESOURCES_FILES_CHECK} STREQUAL "1")
+#	add_dependencies(${PROJECT_NAME} resources${PROJECT_NAME})
+#endif()
+#if(UI_FILES_LOCAL)
+#	add_dependencies(${PROJECT_NAME} ${UI_FILES})
+#endif()
+
+target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
+target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
+target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
 
 #set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ${TARGET_EXT})
 #set_target_properties(${PROJECT_NAME} PROPERTIES AUTOGEN_BUILD_DIR "${ACF_TRANSLATIONS_OUTDIR}")

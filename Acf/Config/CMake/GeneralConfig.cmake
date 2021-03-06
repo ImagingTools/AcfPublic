@@ -106,9 +106,9 @@ if(${MSVC})
 endif()
 
 
-if(CMAKE_VERSION VERSION_LESS "3.7.0")
-    set(CMAKE_INCLUDE_CURRENT_DIR ON)
-endif()
+#if(CMAKE_VERSION VERSION_LESS "3.7.0")
+#    set(CMAKE_INCLUDE_CURRENT_DIR ON)
+#endif()
 
 
 
@@ -126,7 +126,7 @@ set(AUXINCLUDEPATH "${PROJECT_DIR}/../../${AUXINCLUDEDIR}")
 set(ACF_TRANSLATIONS_OUTDIR "${AUXINCLUDEPATH}/${TARGETNAME}")
 #set(AUTOGEN_BUILD_DIR "${ACF_TRANSLATIONS_OUTDIR}")
 
-set(CMAKE_AUTOMOC ON)
+#set(CMAKE_AUTOMOC ON)
 #set(CMAKE_AUTORCC ON)
 #set(CMAKE_AUTOUIC ON)
 
@@ -193,13 +193,13 @@ if (WIN32)
     include_directories("${IMPL_DIR}")
 endif()
 
-foreach(SUBDIR ${INCLUDE_DIRS})
-    include_directories("${PROJECT_DIR}" "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
-endforeach()
+#foreach(SUBDIR ${INCLUDE_DIRS})
+#    include_directories("${PROJECT_DIR}" "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
+#endforeach()
 
-foreach(SUBDIR ${IMPL_DIRS})
-    include_directories("${PROJECT_DIR}" "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
-endforeach()
+#foreach(SUBDIR ${IMPL_DIRS})
+#    include_directories("${PROJECT_DIR}" "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
+#endforeach()
 
 #file(GLOB HEADER_FILES_AUX "${AUXINCLUDEPATH}/${PROJECT_NAME}/*.h")
 #file(GLOB SOURCES_FILES_AUX "${AUXINCLUDEPATH}/${PROJECT_NAME}/*.cpp")
@@ -217,16 +217,38 @@ endforeach()
 #        ${SOURCES_FILES}
 #)
 
-file(GLOB LIBACF_LIST "${ACFLIBDIR}/*.lib")
-file(GLOB LIBACFSLN_LIST "${ACFSLNLIBDIR}/*.lib")
+#file(GLOB LIBACF_LIST "${ACFLIBDIR}/*.lib")
+#file(GLOB LIBACFSLN_LIST "${ACFSLNLIBDIR}/*.lib")
+#file(GLOB LIBACF_LIST "${ACFLIBDIR}/*.a")
+#file(GLOB LIBACFSLN_LIST "${ACFSLNLIBDIR}/*.a")
 
-link_directories(${ACFLIBDIR})
+#link_directories(${ACFLIBDIR})
 
-link_directories(${ACFSLNLIBDIR})
+#link_directories(${ACFSLNLIBDIR})
 
-link_libraries(${LIBACF_LIST})
-link_libraries(${LIBACFSLN_LIST})
+#list(APPEND FILES_N "libimod.a" "libistd.a" "libipackage.a" "libibase.a" "libiser.a" "libilog.a" "libi2d.a" "libicomp.a" "libifile.a")
+##list(APPEND FILES_N "libicomp")
+#set(LIBACF_LIST "/Users/viktor/ImagingTools/AcfPublic/Build/CMake/../../Acf/Lib/Qt5_DebugClang/libicomp.a;/Users/viktor/ImagingTools/AcfPublic/Build/CMake/../../Acf/Lib/Qt5_DebugClang/libifile.a")
+#link_libraries(${FILES_N})
+#link_libraries(${LIBACF_LIST})
+#link_libraries(${LIBACFSLN_LIST})
+
+#file(GLOB MOC_SOURCES "${PROJECT_DIR}/*.h")
+file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
+#foreach(it ${SOURCES_FILES})
+#	get_filename_component(outfilename ${it} NAME_WE)
+#	qt5_generate_moc(${outfilename}.cpp ${outfilename}.moc TARGET ${PROJECT_NAME})
+##	qt5_generate_moc("${outfilename}.cpp" "${outfilename}.moc")
+#endforeach()
+
+#qt5_wrap_cpp(MOC_SOURCES ${PROJECT_NAME}.h) TARGET ${PROJECT_NAME} ${HEADER_FILES}
+qt_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
+#qt5_wrap_cpp(MOC_SOURCES)
+
+
+#message("${MOC_SOURCES}")
 
 if(${MSVC})
     link_libraries("Mpr.lib")
 endif()
+

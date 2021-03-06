@@ -2,25 +2,30 @@ include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
 
 include_directories(${PROJECT_DIR}../../)
 
-file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
+#file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
 file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
 file(GLOB SOURCES_FILES "${PROJECT_DIR}/*.cpp")
 file(GLOB QRC_FILES "${PROJECT_DIR}/*.qrc")
 
 file(GLOB PROJECT_SRC
-    ${UI_FILES}
+#    ${UI_FILES}
     ${HEADER_FILES}
     ${SOURCES_FILES}
-    ${RESOURCES_FILES}
-    ${HEADER_FILES_AUX}
-    ${SOURCES_FILES_AUX}
+#    ${RESOURCES_FILES}
+#    ${HEADER_FILES_AUX}
+#    ${SOURCES_FILES_AUX}
     ${QRC_FILES}
 )
 set(TARGET_EXT ".arp")
 
 add_library(${PROJECT_NAME} ${PROJECT_SRC})
 
-set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ${TARGET_EXT})
+target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
+target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
+target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
+
+set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ${TARGET_EXT})
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 

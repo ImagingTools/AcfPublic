@@ -53,17 +53,17 @@ list(APPEND DEPENDSY_SUBDIRS_INCLUDE
 )
 
 list(APPEND DEPENDSY_SUBDIRS_IMPL 
-    "BasePck"
-    "BitmapPck"
-    "QtPck"
-    "FilePck"
-    "QtGuiPck"
-    "QtViewPck"
-    "PackagePck"
-    "FileGuiPck"
-    "ArxcExe"
-    "AcfExe"
-    "AcfLoc"
+	"BasePck"
+	"BitmapPck"
+	"QtPck"
+	"FilePck"
+	"QtGuiPck"
+	"QtViewPck"
+	"PackagePck"
+	"FileGuiPck"
+	"ArxcExe"
+	"AcfExe"
+	"AcfLoc"
 )
 
 list(APPEND LIB_LIST "")

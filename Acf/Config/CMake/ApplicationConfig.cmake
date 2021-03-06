@@ -5,26 +5,44 @@ if(WIN32)
     set(CMAKE_EXE_LINKER_FLAGS "/MANIFEST:NO /DEBUG:FULL /LIBPATH:${ACFLIBDIR} /LIBPATH:${ACFSLNLIBDIR} /VERBOSE /SUBSYSTEM:WINDOWS")
 endif()
 
-file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
+#file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
 file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
 file(GLOB SOURCES_FILES "${PROJECT_DIR}/*.cpp")
 file(GLOB QRC_FILES "${PROJECT_DIR}/*.qrc")
 
 file(GLOB PROJECT_SRC
-    ${UI_FILES}
+#    ${UI_FILES}
     ${HEADER_FILES}
     ${SOURCES_FILES}
-    ${RESOURCES_FILES}
-    ${HEADER_FILES_AUX}
-    ${SOURCES_FILES_AUX}
-    ${QRC_FILES}
+#    ${RESOURCES_FILES}
+#    ${HEADER_FILE_AUX}
+#    ${SOURCES_FILE_AUX}
+#    ${QRC_FILES}
 )
 
-message("SOURCES_FILES_AUX")
-message("${SOURCES_FILES_AUX}")
+message("SOURCES_FILE_AUX")
+message("${PROJECT_SRC}")
 
 add_executable(${PROJECT_NAME} ${PROJECT_SRC})
 
+#target_include_directories(${PROJECT_NAME} PUBLIC ${AUX_INCLUDE_DIR})
+#target_include_directories(${PROJECT_NAME} PRIVATE ${ACFSLNLIBGLOBDIR})
+#target_sources(${PROJECT_NAME} PUBLIC ${HEADER_FILE_AUX} ${SOURCES_FILE_AUX})
+#target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
+#target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
+#target_sources(${PROJECT_NAME} PUBLIC ${HEADER_FILE_AUX} ${SOURCES_FILE_AUX})
+#target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
+#target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
+#add_dependencies(${PROJECT_NAME} ARXC${PROJECT_NAME})
+target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
+target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
+target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
+
+#if(${RESOURCES_FILES_CHECK} STREQUAL "1")
+#    message(RESOURCES_FILES_CHECK)
+#    add_dependencies(${PROJECT_NAME} resources${PROJECT_NAME})
+#endif()
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
 set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
