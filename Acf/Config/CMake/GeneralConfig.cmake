@@ -242,7 +242,7 @@ file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
 #endforeach()
 
 #qt5_wrap_cpp(MOC_SOURCES ${PROJECT_NAME}.h) TARGET ${PROJECT_NAME} ${HEADER_FILES}
-qt_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
+qt5_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
 #qt5_wrap_cpp(MOC_SOURCES)
 
 function(acf_link_libraries infiles)
