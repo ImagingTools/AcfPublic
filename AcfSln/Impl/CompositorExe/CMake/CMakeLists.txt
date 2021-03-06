@@ -15,11 +15,11 @@ include(${CONFIG_DIR}/AcfStd.cmake)
 #target_link_directories(${PROJECT_NAME} PUBLIC ${ACFLIBDIR})
 
 #target_link_directories(${PROJECT_NAME} PUBLIC ${ACFSLNLIBDIR})
-add_dependencies(${PROJECT_NAME} icmpstr)
+#add_dependencies(${PROJECT_NAME} icmpstr)
 
 #target_link_libraries(${PROJECT_NAME} iser istd icomp iqtgui libicmpstr.a AcfSlnLoc AcfLoc)
 #target_link_libraries(${PROJECT_NAME} -licmpstr -lAcfSlnLoc -lAcfLoc)
-acf_link_libraries(icmpstr AcfLoc AcfSlnLoc)
+acf_link_libraries(${PROJECT_NAME} icmpstr AcfLoc AcfSlnLoc)
 
 #if(WIN32)
 #	target_link_libraries(${PROJECT_NAME} iser istd icomp iqtgui libicmpstr.a libAcfSlnLoc.a libAcfLoc.a)

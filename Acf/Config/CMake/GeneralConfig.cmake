@@ -132,66 +132,66 @@ set(ACF_TRANSLATIONS_OUTDIR "${AUXINCLUDEPATH}/${TARGETNAME}")
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core REQUIRED)
 
-include_directories("$ENV{QTDIR}/include/")
+#include_directories("$ENV{QTDIR}/include/")
 
-include_directories("$ENV{ACFDIR}/include/")
-include_directories("$ENV{ACFDIR}/Impl/")
+#include_directories("$ENV{ACFDIR}/include/")
+#include_directories("$ENV{ACFDIR}/Impl/")
 
-include_directories("$ENV{ACFSLNDIR}/include/")
-include_directories("$ENV{ACFSLNDIR}/Impl/")
+#include_directories("$ENV{ACFSLNDIR}/include/")
+#include_directories("$ENV{ACFSLNDIR}/Impl/")
 
-include_directories("$ENV{IACFDIR}/include/")
-include_directories("$ENV{IACFDIR}/Impl/")
-include_directories("${PROJECT_DIR}/../../../")
-include_directories("${PROJECT_DIR}/../../")
-include_directories("${PROJECT_DIR}/../")
+#include_directories("$ENV{IACFDIR}/include/")
+#include_directories("$ENV{IACFDIR}/Impl/")
+#include_directories("${PROJECT_DIR}/../../../")
+#include_directories("${PROJECT_DIR}/../../")
+#include_directories("${PROJECT_DIR}/../")
 
 include_directories("${INCLUDE_DIR}")
 include_directories("${IMPL_DIR}")
-#include_directories("${AUXINCLUDEPATH}/${PROJECT_NAME}")
+##include_directories("${AUXINCLUDEPATH}/${PROJECT_NAME}")
 
-#message(PROJECT_NAME)
-#message("${AUXINCLUDEPATH}/${PROJECT_NAME}")
+##message(PROJECT_NAME)
+##message("${AUXINCLUDEPATH}/${PROJECT_NAME}")
 
-if (WIN32)
-    include_directories("$ENV{QTDIR}/include/")
+#if (WIN32)
+#    include_directories("$ENV{QTDIR}/include/")
 
-    include_directories("$ENV{ACFDIR}/include/")
-    include_directories("$ENV{ACFDIR}/Impl/")
+#    include_directories("$ENV{ACFDIR}/include/")
+#    include_directories("$ENV{ACFDIR}/Impl/")
 
-    include_directories("$ENV{ACFSLNDIR}/include/")
-    include_directories("$ENV{ACFSLNDIR}/Impl/")
+#    include_directories("$ENV{ACFSLNDIR}/include/")
+#    include_directories("$ENV{ACFSLNDIR}/Impl/")
 
-    include_directories("$ENV{IACFDIR}/include/")
-    include_directories("$ENV{IACFDIR}/Impl/")
+#    include_directories("$ENV{IACFDIR}/include/")
+#    include_directories("$ENV{IACFDIR}/Impl/")
 
-    include_directories("$ENV{LCMSDIR_2_3}/include/")
+#    include_directories("$ENV{LCMSDIR_2_3}/include/")
 
-    include_directories("$ENV{LIBDC1394_2_2_0}/include/")
+#    include_directories("$ENV{LIBDC1394_2_2_0}/include/")
 
-    include_directories("$ENV{LIVE555DIR_20121024}/include/")
+#    include_directories("$ENV{LIVE555DIR_20121024}/include/")
 
-    include_directories("$ENV{OPENCVDIR_3_3_1}/include/")
+#    include_directories("$ENV{OPENCVDIR_3_3_1}/include/")
 
-    include_directories("$ENV{QSCINTILLA}/Qt4Qt5/")
+#    include_directories("$ENV{QSCINTILLA}/Qt4Qt5/")
 
-    include_directories("$ENV{QWT3DDIR_0_3_1}/include/")
+#    include_directories("$ENV{QWT3DDIR_0_3_1}/include/")
 
-    include_directories("$ENV{QWTDIR_6_1_2}/src/")
+#    include_directories("$ENV{QWTDIR_6_1_2}/src/")
 
-    include_directories("$ENV{ZLIBDIR}/include/")
+#    include_directories("$ENV{ZLIBDIR}/include/")
 
-    include_directories("$ENV{FFMPEGDIR_20121010}/include/")
+#    include_directories("$ENV{FFMPEGDIR_20121010}/include/")
 
-    include_directories("$ENV{LIBDC1394_2_2_0}")
+#    include_directories("$ENV{LIBDC1394_2_2_0}")
 
-    include_directories("${PROJECT_DIR}/../../../")
-    include_directories("${PROJECT_DIR}/../../")
-    include_directories("${PROJECT_DIR}/../")
+#    include_directories("${PROJECT_DIR}/../../../")
+#    include_directories("${PROJECT_DIR}/../../")
+#    include_directories("${PROJECT_DIR}/../")
 
-    include_directories("${INCLUDE_DIR}")
-    include_directories("${IMPL_DIR}")
-endif()
+#    include_directories("${INCLUDE_DIR}")
+#    include_directories("${IMPL_DIR}")
+#endif()
 
 #foreach(SUBDIR ${INCLUDE_DIRS})
 #    include_directories("${PROJECT_DIR}" "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
@@ -242,10 +242,15 @@ file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
 #endforeach()
 
 #qt5_wrap_cpp(MOC_SOURCES ${PROJECT_NAME}.h) TARGET ${PROJECT_NAME} ${HEADER_FILES}
-qt5_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
+if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
+	qt5_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
+elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
+	qt6_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
+endif()
+
 #qt5_wrap_cpp(MOC_SOURCES)
 
-function(acf_link_libraries infiles)
+function(acf_link_libraries target)
 	set(outfiles)
 	foreach(it ${ARGN})
 		if(WIN32)
@@ -255,7 +260,7 @@ function(acf_link_libraries infiles)
 		endif()
 	endforeach()
 #	message("outfiles: " ${outfiles})
-	target_link_libraries(${PROJECT_NAME} ${outfiles})
+	target_link_libraries(${target} ${outfiles})
 endfunction()
 
 #message("${MOC_SOURCES}")
