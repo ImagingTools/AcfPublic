@@ -1,3 +1,5 @@
+project(WizardGuiPck LANGUAGES CXX)
+
 include(${CONFIG_DIR}/QtBaseConfig.cmake)
 include(${CONFIG_DIR}/ComponentConfig.cmake)
 include(${CONFIG_DIR}/AcfQt.cmake)

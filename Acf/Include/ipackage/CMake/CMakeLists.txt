@@ -1,3 +1,5 @@
+project(ipackage LANGUAGES CXX)
+
 include(${CONFIG_DIR}/StaticConfig.cmake)
 
 ADD_DEFINITIONS(-DUNICODE)

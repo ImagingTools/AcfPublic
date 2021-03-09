@@ -2,7 +2,7 @@ set(ARXC_CONFIG "${CONFIGSLN_DIR}/AcfSlnConfig.awc")
 set(ARXC_FILES "${CMAKE_CURRENT_LIST_DIR}/../${PROJECT_NAME}.acc")
 set(ARXC_OUTDIR "${AUX_INCLUDE_DIR}")
 
-
+project(Compositor LANGUAGES CXX)
 
 #link_libraries(iqtgui icmpstr AcfSlnLoc AcfLoc)
 #target_link_libraries(${PROJECT_NAME} "${ACFLIBDIR}/iqtgui.lib")

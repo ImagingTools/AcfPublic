@@ -20,10 +20,12 @@ file(GLOB PROJECT_SRC
 #    ${QRC_FILES}
 )
 
-message("SOURCES_FILE_AUX")
-message("${PROJECT_SRC}")
+message("SOURCES_FILE_AUX " "${PROJECT_SRC}")
+#message("ACFLIBDIR " "${ACFLIBDIR}")
+#message("ACFSLNLIBDIR " "${ACFSLNLIBDIR}")
 
-add_executable(${PROJECT_NAME} WIN32 ${PROJECT_SRC})
+#add_executable(${PROJECT_NAME} WIN32 ${PROJECT_SRC})
+add_executable(${PROJECT_NAME} ${PROJECT_SRC})
 
 #target_include_directories(${PROJECT_NAME} PUBLIC ${AUX_INCLUDE_DIR})
 #target_include_directories(${PROJECT_NAME} PRIVATE ${ACFSLNLIBGLOBDIR})
@@ -45,7 +47,7 @@ target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
 #endif()
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
-set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
+set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
 set_property(
     TARGET ${PROJECT_NAME}
     PROPERTY RUNTIME_OUTPUT_DIRECTORY ${outbindir})

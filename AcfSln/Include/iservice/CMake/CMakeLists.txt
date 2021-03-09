@@ -1,4 +1,5 @@
-#include(${CONFIG_DIR}/StaticConfig.cmake)
+project(iservice LANGUAGES CXX)
+
 
 include(${CONFIG_DIR}/QtGuiBaseConfig.cmake)
 include(${CONFIG_DIR}/GeneralConfig.cmake)

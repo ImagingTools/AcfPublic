@@ -144,10 +144,10 @@ find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core REQUIRED)
 #include_directories("$ENV{IACFDIR}/Impl/")
 #include_directories("${PROJECT_DIR}/../../../")
 #include_directories("${PROJECT_DIR}/../../")
-#include_directories("${PROJECT_DIR}/../")
+include_directories("${PROJECT_DIR}/../")
 
 include_directories("${INCLUDE_DIR}")
-include_directories("${IMPL_DIR}")
+#include_directories("${IMPL_DIR}")
 ##include_directories("${AUXINCLUDEPATH}/${PROJECT_NAME}")
 
 ##message(PROJECT_NAME)
@@ -264,6 +264,9 @@ function(acf_link_libraries target)
 endfunction()
 
 #message("${MOC_SOURCES}")
+link_directories(${ACFLIBDIR})
+link_directories(${ACFSLNLIBDIR})
+
 
 if(${MSVC})
     link_libraries("Mpr.lib")

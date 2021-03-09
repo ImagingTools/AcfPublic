@@ -42,7 +42,7 @@ target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
 
 #set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ${TARGET_EXT})
 #set_target_properties(${PROJECT_NAME} PROPERTIES AUTOGEN_BUILD_DIR "${ACF_TRANSLATIONS_OUTDIR}")
-set(outlibdir "${AUX_INCLUDE_DIR}/../../../Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
+set(outlibdir "${AUX_INCLUDE_DIR}/../../../Lib/${TARGETNAME}")
 
 set_property(
     TARGET ${PROJECT_NAME}

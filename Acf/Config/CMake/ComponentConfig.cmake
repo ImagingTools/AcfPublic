@@ -29,7 +29,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ${TARGET_EXT})
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
-set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
+set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
 
 set_property(
     TARGET ${PROJECT_NAME}
