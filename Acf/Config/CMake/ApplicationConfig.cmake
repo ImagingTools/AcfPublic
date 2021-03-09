@@ -45,6 +45,10 @@ target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
 #    message(RESOURCES_FILES_CHECK)
 #    add_dependencies(${PROJECT_NAME} resources${PROJECT_NAME})
 #endif()
+if(NOT ${PROJECT_NAME} STREQUAL "Arxc")
+	add_dependencies(${PROJECT_NAME} Arxc)
+endif()
+
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
 set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")

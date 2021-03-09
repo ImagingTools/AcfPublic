@@ -11,7 +11,8 @@ include(${CONFIG_DIR}/QtBaseConfig.cmake)
 include(${CONFIG_DIR}/ApplicationConfig.cmake)
 include(${CONFIG_DIR}/AcfStd.cmake)
 
-
+add_dependencies(${PROJECT_NAME} iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
+add_dependencies(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)
 
 message("ACFLIBDIR " "${ACFLIBDIR}")
 message("ACFSLNLIBDIR " "${ACFSLNLIBDIR}")
