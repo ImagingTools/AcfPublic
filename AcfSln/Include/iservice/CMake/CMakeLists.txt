@@ -1,8 +1,8 @@
 project(iservice LANGUAGES CXX)
 
 
-include(${CONFIG_DIR}/QtGuiBaseConfig.cmake)
-include(${CONFIG_DIR}/GeneralConfig.cmake)
+include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/GeneralConfig.cmake)
 
 
 #file(GLOB PROJECT_SRC

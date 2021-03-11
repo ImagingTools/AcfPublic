@@ -1,4 +1,4 @@
-#include(${CONFIG_DIR}/AcfQt.cmake)
+#include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 #link_libraries("libimod.a" "libistd.a" "libipackage.a" "libibase.a" "libiser.a" "libilog.a" "libi2d.a" "libicomp.a" "libifile.a")
 #link_libraries(${FILES_N})
 
@@ -7,12 +7,12 @@ set(PROJECT_NAME Arxc)
 
 #link_libraries(iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
 
-include(${CONFIG_DIR}/QtBaseConfig.cmake)
-include(${CONFIG_DIR}/ApplicationConfig.cmake)
-include(${CONFIG_DIR}/AcfStd.cmake)
+include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
+include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
-add_dependencies(${PROJECT_NAME} iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
-add_dependencies(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)
+#add_dependencies(${PROJECT_NAME} iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
+#add_dependencies(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)
 
 message("ACFLIBDIR " "${ACFLIBDIR}")
 message("ACFSLNLIBDIR " "${ACFSLNLIBDIR}")

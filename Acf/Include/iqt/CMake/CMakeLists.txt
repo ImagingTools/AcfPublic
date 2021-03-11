@@ -1,4 +1,4 @@
 project(iqt LANGUAGES CXX)
 
-include(${CONFIG_DIR}/QtBaseConfig.cmake)
-include(${CONFIG_DIR}/StaticConfig.cmake)
+include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/StaticConfig.cmake)

@@ -60,13 +60,13 @@ public:
 
 		QTreeWidgetItem* itemPtr = reinterpret_cast<QTreeWidgetItem*>(index.internalPointer());
 
-		QString message = itemPtr->text(CLogGuiComp::CT_MESSAGE);
+        QString message = itemPtr->text(CLogGuiComp::CT_MESSAGE);
 
-		int lineCount = message.count('\n') + 1;
+        int lineCount = message.count('\n') + 1;
 
-		int height = qMax(retVal.height(), option.fontMetrics.height() * lineCount + 4);
+        int height = qMax(retVal.height(), option.fontMetrics.height() * lineCount + 4);
 
-		retVal.setHeight(height);
+        retVal.setHeight(height);
 
 		return retVal;
 	}

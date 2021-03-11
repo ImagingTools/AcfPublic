@@ -11,6 +11,9 @@ else()
     set(COPY_FILE "cp")
 endif()
 
+set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
+message("PROJECT_BINARY_DIR " ${PROJECT_BINARY_DIR})
+
 set(ACFTOOLS "$ENV{ACFDIR}/../AcfTools")
 
 set(ARXCBIN "${ACFBINDIR}/${ARX_COMPILER}")
@@ -25,6 +28,7 @@ add_custom_command(OUTPUT ${ARXC_OUTFILE_NANE}
     DEPENDS Arxc VERBATIM)
 
 #MAIN_DEPENDENCY ${ARXC_FILES} VERBATIM)
+message("Arxc generated: ${ARXCBIN} ${ARXC_FILES} -o ${ARXC_OUTFILE_NANE} -config ${ARXC_CONFIG} -conf_name ${TARGETNAME}_64 -env_vars ${ENV_VARS} -v" )
 
 add_custom_target(ARXC${PROJECT_NAME} ALL DEPENDS ${ARXC_OUTFILE_NANE})
 

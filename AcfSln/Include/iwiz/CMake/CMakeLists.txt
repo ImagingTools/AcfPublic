@@ -1,3 +1,3 @@
 project(iwiz LANGUAGES CXX)
 
-include(${CONFIG_DIR}/StaticConfig.cmake)
+include(${ACFDIR}/Config/CMake/StaticConfig.cmake)

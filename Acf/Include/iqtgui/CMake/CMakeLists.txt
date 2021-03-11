@@ -1,4 +1,4 @@
 project(iqtgui LANGUAGES CXX)
 
-include(${CONFIG_DIR}/QtGuiBaseConfig.cmake)
-include(${CONFIG_DIR}/StaticConfig.cmake)
+include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/StaticConfig.cmake)

@@ -1,15 +1,16 @@
-set(ARXC_CONFIG "${CONFIGSLN_DIR}/AcfSlnConfig.awc")
+set(PROJECT_NAME XpcEditor)
+
+set(ARXC_CONFIG "${ACFSLNDIR}/Config/AcfSlnConfig.awc")
 set(ARXC_FILES "${CMAKE_CURRENT_LIST_DIR}/../${PROJECT_NAME}.acc")
 set(ARXC_OUTDIR "${AUX_INCLUDE_DIR}")
 
 
-set(PROJECT_NAME XpcEditor)
 
-include(${CONFIG_DIR}/CustomBuild.cmake)
-include(${CONFIG_DIR}/QtBaseConfig.cmake)
-include(${CONFIG_DIR}/ApplicationConfig.cmake)
-include(${CONFIG_DIR}/AcfQt.cmake)
-include(${CONFIG_DIR}/AcfStd.cmake)
+include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
+include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
+include(${ACFDIR}/Config/CMake/AcfQt.cmake)
+include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
 #link_libraries("iqtgui icmpstr")
 #target_link_libraries(${PROJECT_NAME} -liqt -lipackage -lidoc -lifile -liimg -licmm -li2d -li3d -liprm -lilog -libase -licomp -liattr -liser -limod -limath -listd)

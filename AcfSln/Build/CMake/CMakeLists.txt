@@ -4,7 +4,7 @@ project(AcfSln)
 
 set(QT_DEFAULT_MAJOR_VERSION 5)
 
-include(${CONFIG_DIR}/Macro.cmake)
+include(${ACFDIR}/Config/CMake/Macro.cmake)
 
 set(MAIN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include/")
 
@@ -36,103 +36,108 @@ include_directories("${CMAKE_CURRENT_LIST_DIR}/../../../Acf/AuxInclude/Qt${QT_DE
 message("${AUX_INCLUDE_DIR}")
 
 list(APPEND DEPENDSY_SUBDIRS_INCLUDE
-"ialgo"
-"iauth"
-"ibarcode"
-"icomm"
-"ihotf"
-"ihotfgui"
-"imeas"
-"iqtmeas"
-"iqtex"
-"iqtmm"
-"icalib"
-"icalibgui"
-"icam"
-"iqtcam"
-"iqtauth"
-"iinsp"
-"iqtinsp"
-"iipr"
-"iqtipr"
-"isig"
-"iqtsig"
-"ifileproc"
-"iprod"
-"iproc"
-"iprocgui"
-"iweb"
-"iwiz"
-"iwizgui"
-"iedge"
-"iedgegui"
-"icmpstr"
-"idocproc"
-"iblob"
-"iblobgui"
-"iservice"
+#"ialgo"
+#"iauth"
+#"ibarcode"
+#"icomm"
+#"ihotf"
+#"ihotfgui"
+#"imeas"
+#"iqtmeas"
+#"iqtex"
+#"iqtmm"
+#"icalib"
+#"icalibgui"
+#"icam"
+#"iqtcam"
+#"iqtauth"
+#"iinsp"
+#"iqtinsp"
+#"iipr"
+#"iqtipr"
+#"isig"
+#"iqtsig"
+#"ifileproc"
+#"iprod"
+#"iproc"
+#"iprocgui"
+#"iweb"
+#"iwiz"
+#"iwizgui"
+#"iedge"
+#"iedgegui"
+#"icmpstr"
+#"idocproc"
+#"iblob"
+#"iblobgui"
+#"iservice"
 )
 
 list(APPEND DEPENDSY_SUBDIRS_IMPL
-"AcfSlnLoc"
-"AuthorizationPck"
-"BlobPck"
-"BarcodePck"
-"ProcessingPck"
-"FileProcessingPck"
-"CameraPck"
-"CalibrationPck"
-"CommunicationPck"
-"EdgePck"
-"HotfolderPck"
-"InspectionPck"
-"IprPck"
-"MeasPck"
-"SignalPck"
-"WebPck"
-"WizardPck"
-"QtAuthorizationPck"
-"QtCameraPck"
-"CalibrationGuiPck"
-"QtExPck"
-"QtInspectionPck"
-"QtIprPck"
-"QtMeasPck"
-"QtMmPck"
-"QtSignalPck"
-"WizardGuiPck"
-"HotfolderGuiPck"
-"ProcessingGuiPck"
+#"AcfSlnLoc"
+#"AuthorizationPck"
+#"BlobPck"
+#"BarcodePck"
+#"ProcessingPck"
+#"FileProcessingPck"
+#"CameraPck"
+#"CalibrationPck"
+#"CommunicationPck"
+#"EdgePck"
+#"HotfolderPck"
+#"InspectionPck"
+#"IprPck"
+#"MeasPck"
+#"SignalPck"
+#"WebPck"
+#"WizardPck"
+#"QtAuthorizationPck"
+#"QtCameraPck"
+#"CalibrationGuiPck"
+#"QtExPck"
+#"QtInspectionPck"
+#"QtIprPck"
+#"QtMeasPck"
+#"QtMmPck"
+#"QtSignalPck"
+#"WizardGuiPck"
+#"HotfolderGuiPck"
+#"ProcessingGuiPck"
 "CompositorPck"
-"DocumentProcessingPck"
-"ProductionPck"
+#"DocumentProcessingPck"
+#"ProductionPck"
 "XpcEditorExe"
 "CompositorExe"
 )
 
 FOREACH(SUBDIR ${DEPENDSY_SUBDIRS_INCLUDE})
-        set(PROJECT_NAME ${SUBDIR})
-        set(PROJECT_DIR "${INCLUDE_DIR}/${PROJECT_NAME}")
-        set(SOURCES_DIR "${INCLUDE_DIR}/${PROJECT_NAME}/CMake")
-        set(BINARY_DIR "${AUX_INCLUDE_DIR}/${PROJECT_NAME}")
+#        set(PROJECT_NAME ${SUBDIR})
+		set(PROJECT_DIR "${INCLUDE_DIR}/${SUBDIR}")
+		set(SOURCES_DIR "${INCLUDE_DIR}/${SUBDIR}/CMake")
+		set(BINARY_DIR "${AUX_INCLUDE_DIR}/${SUBDIR}")
         add_subdirectory(${SOURCES_DIR} ${BINARY_DIR})
-        list(APPEND LIB_DIRS "${LIB_DIR}/${PROJECT_NAME}")
+		add_dependencies(${SUBDIR} Arxc)
+
+#        list(APPEND LIB_DIRS "${LIB_DIR}/${PROJECT_NAME}")
 #        set(LIB_LIST ${LIB_LIST} ${PROJECT_NAME}.lib PARENT_SCOPE)
 ENDFOREACH()
 
 FOREACH(SUBDIR ${DEPENDSY_SUBDIRS_IMPL})
-        set(PROJECT_NAME ${SUBDIR})
-        set(PROJECT_DIR "${IMPL_DIR}/${PROJECT_NAME}")
-        set(SOURCES_DIR "${IMPL_DIR}/${PROJECT_NAME}/CMake")
-        list(APPEND LIB_DIRS "${LIB_DIR}/${PROJECT_NAME}")
-        if(${PROJECT_NAME}   MATCHES ".*Exe")
-            STRING(REGEX REPLACE "([^ ]*)...$" "\\1" PROJECT_NAME ${PROJECT_NAME})
-        endif()
+#		set(PROJECT_NAME ${SUBDIR})
+		set(PROJECT_DIR "${IMPL_DIR}/${SUBDIR}")
+		set(SOURCES_DIR "${IMPL_DIR}/${SUBDIR}/CMake")
+#		list(APPEND LIB_DIRS "${LIB_DIR}/${PROJECT_NAME}")
+		if(${SUBDIR}   MATCHES ".*Exe")
+			STRING(REGEX REPLACE "([^ ]*)...$" "\\1" SUBDIR ${SUBDIR})
+		endif()
 
         #        if(NOT ${PROJECT_NAME}  MATCHES ".*Pck" )
 #            STRING(REGEX REPLACE "([^ ]*)...$" "\\1" PROJECT_NAME ${PROJECT_NAME})
 #        endif()
 
-        set(BINARY_DIR "${AUX_INCLUDE_DIR}/${PROJECT_NAME}")
-        add_subdirectory(${SOURCES_DIR} ${BINARY_DIR})
+		set(BINARY_DIR "${AUX_INCLUDE_DIR}/${SUBDIR}")
+		add_subdirectory(${SOURCES_DIR} ${BINARY_DIR})
+#		add_subdirectory(${SOURCES_DIR})
+#		add_dependencies(${PROJECT_NAME} Arxc)
+
 ENDFOREACH()

@@ -4,15 +4,29 @@ project(AcfAll)
 
 set(QT_DEFAULT_MAJOR_VERSION 5)
 
-set(CONFIG_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Config/CMake")
+if(DEFINED ENV{ACFDIR})
+	set(ACFDIR $ENV{ACFDIR})
+else()
+	set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
+endif()
+
+if(DEFINED ENV{ACFDIR})
+	set(ACFSLNDIR $ENV{ACFSLNDIR})
+else()
+	set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
+endif()
+
+#	set(CONFIG_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Config/CMake")
 set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
 
-include("${CONFIG_DIR}/Macro.cmake")
+include("${ACFDIR}/Config/CMake/Macro.cmake")
 
-#list(APPEND PROJECTS "Acf" "AcfSln")
+message("ACFDIR: " ${ACFDIR})
+message("ACFSLNDIR: " ${ACFSLNDIR})
+
 list(APPEND PROJECTS "Acf")
 list(APPEND PROJECTS "AcfSln")
-#"Iacf")
+#list(APPEND PROJECTS "Iacf")
 
 get_target_name(TARGETNAME)
 

@@ -1,16 +1,21 @@
-set(ARXC_CONFIG "${CONFIGSLN_DIR}/AcfSlnConfig.awc")
+project(Compositor LANGUAGES CXX)
+
+set(ARXC_CONFIG "${ACFSLNDIR}/Config/AcfSlnConfig.awc")
 set(ARXC_FILES "${CMAKE_CURRENT_LIST_DIR}/../${PROJECT_NAME}.acc")
 set(ARXC_OUTDIR "${AUX_INCLUDE_DIR}")
 
-project(Compositor LANGUAGES CXX)
+#set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
+#set(BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
+#set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
+
 
 #link_libraries(iqtgui icmpstr AcfSlnLoc AcfLoc)
 #target_link_libraries(${PROJECT_NAME} "${ACFLIBDIR}/iqtgui.lib")
-include(${CONFIG_DIR}/CustomBuild.cmake)
-include(${CONFIG_DIR}/QtGuiBaseConfig.cmake)
-include(${CONFIG_DIR}/ApplicationConfig.cmake)
-include(${CONFIG_DIR}/AcfQt.cmake)
-include(${CONFIG_DIR}/AcfStd.cmake)
+include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
+include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
+include(${ACFDIR}/Config/CMake/AcfQt.cmake)
+include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
 #target_link_directories(${PROJECT_NAME} PUBLIC ${ACFLIBDIR})
 

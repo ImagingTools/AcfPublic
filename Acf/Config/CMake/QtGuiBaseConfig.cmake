@@ -1,6 +1,6 @@
 # Standard settings for a Qt based UI project
 #message("Include QtGuiBaseConfig.cmake")
-include (${CONFIG_DIR}/QtBaseConfig.cmake)
+include (${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 
 if(${QT_DEFAULT_MAJOR_VERSION} STREQUAL 5)
 #	message("COMPONENTS Widgets")

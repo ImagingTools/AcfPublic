@@ -1,9 +1,10 @@
 #General base configuration should be included from all ACF-based projects
 
-message(${PROJECT_NAME})
-message(${PROJECT_DIR})
-#message(${BINARY_DIR})
-
+message("PROJECT_NAME " ${PROJECT_NAME})
+message("PROJECT_DIR " ${PROJECT_DIR})
+message("BINARY_DIR " ${BINARY_DIR})
+#set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
+#message("PROJECT_BINARY_DIR " ${PROJECT_BINARY_DIR})
 
 #if(${PROJECT_NAME} STREQUAL "ArxcExe")
 #    project(Arxc LANGUAGES CXX)

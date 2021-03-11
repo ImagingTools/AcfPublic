@@ -1,5 +1,5 @@
 project(BitmapPck LANGUAGES CXX)
 
-include(${CONFIG_DIR}/QtBaseConfig.cmake)
-include(${CONFIG_DIR}/ComponentConfig.cmake)
-include(${CONFIG_DIR}/AcfStd.cmake)
+include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
+include(${ACFDIR}/Config/CMake/ComponentConfig.cmake)
+include(${ACFDIR}/Config/CMake/AcfStd.cmake)
