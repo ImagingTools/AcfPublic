@@ -2,8 +2,8 @@
 #link_libraries("libimod.a" "libistd.a" "libipackage.a" "libibase.a" "libiser.a" "libilog.a" "libi2d.a" "libicomp.a" "libifile.a")
 #link_libraries(${FILES_N})
 
-#project(ArxcExe LANGUAGES CXX)
-set(PROJECT_NAME Arxc)
+project(Arxc LANGUAGES CXX)
+#set(PROJECT_NAME Arxc)
 
 #link_libraries(iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
 

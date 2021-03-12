@@ -6,18 +6,18 @@ include(${ACFDIR}/Config/CMake/GeneralConfig.cmake)
 
 
 #file(GLOB PROJECT_SRC
-#        "${PROJECT_DIR}/CServiceApplicationComp.h"
-#        "${PROJECT_DIR}/CServiceApplicationComp.cpp"
-#        "${PROJECT_DIR}/qtservice.h"
-#        "${PROJECT_DIR}/qtservice.cpp"
-#        "${PROJECT_DIR}/qtservice_win.h"
-#        "${PROJECT_DIR}/qtservice_win.cpp"
-#        "${PROJECT_DIR}/qtservicestarter.h"
-#        "${PROJECT_DIR}/qtservicestarter.cpp"
+#        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.h"
+#        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
+#        "${PROJECT_SOURCE_DIR}/../qtservice.h"
+#        "${PROJECT_SOURCE_DIR}/../qtservice.cpp"
+#        "${PROJECT_SOURCE_DIR}/../qtservice_win.h"
+#        "${PROJECT_SOURCE_DIR}/../qtservice_win.cpp"
+#        "${PROJECT_SOURCE_DIR}/../qtservicestarter.h"
+#        "${PROJECT_SOURCE_DIR}/../qtservicestarter.cpp"
 #)
 file(GLOB PROJECT_SRC
-        "${PROJECT_DIR}/CServiceApplicationComp.h"
-        "${PROJECT_DIR}/CServiceApplicationComp.cpp"
+        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.h"
+        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
 )
 
 if (WIN32)
@@ -26,12 +26,12 @@ if (WIN32)
     ADD_DEFINITIONS(-D_UNICODE)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /UMBCS /D_UNICODE /DUNICODE")
     file(GLOB PROJECT_SRC
-            "${PROJECT_DIR}/qtservice.h"
-            "${PROJECT_DIR}/qtservice.cpp"
-            "${PROJECT_DIR}/qtservice_win.h"
-            "${PROJECT_DIR}/qtservice_win.cpp"
-            "${PROJECT_DIR}/qtservicestarter.h"
-            "${PROJECT_DIR}/qtservicestarter.cpp"
+            "${PROJECT_SOURCE_DIR}/../qtservice.h"
+            "${PROJECT_SOURCE_DIR}/../qtservice.cpp"
+            "${PROJECT_SOURCE_DIR}/../qtservice_win.h"
+            "${PROJECT_SOURCE_DIR}/../qtservice_win.cpp"
+            "${PROJECT_SOURCE_DIR}/../qtservicestarter.h"
+            "${PROJECT_SOURCE_DIR}/../qtservicestarter.cpp"
     )
 endif()
 

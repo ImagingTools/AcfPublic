@@ -16,7 +16,7 @@ endif()
 #    set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
 #endfunction()
 
-file(GLOB UI_FILES_LOCAL "${PROJECT_DIR}/*.ui")
+file(GLOB UI_FILES_LOCAL "${PROJECT_SOURCE_DIR}/../*.ui")
 #qt_wrap_ui_acf(SOURCES ${UI_FILES})
 
 #message("APPEND UI_FILES")
@@ -33,7 +33,7 @@ file(GLOB UI_FILES_LOCAL "${PROJECT_DIR}/*.ui")
 
 set(UI_FILES_CHECK "0")
 
-file(GLOB UI_FILES_LOCAL "${PROJECT_DIR}/*.ui")
+file(GLOB UI_FILES_LOCAL "${PROJECT_SOURCE_DIR}/../*.ui")
 foreach(UI_FILE ${UI_FILES_LOCAL})
     set(UI_FILES_CHECK "1")
     continue()

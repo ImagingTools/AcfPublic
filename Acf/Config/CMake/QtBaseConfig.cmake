@@ -18,7 +18,7 @@ function(qt_add_resources_acf outfiles)
 endfunction()
 
 
-file(GLOB QRC_FILES "${PROJECT_DIR}/*.qrc")
+file(GLOB QRC_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
 #qt_generate_moc(${SOURCES_FILES} TARGET ${PROJECT_NAME})
 qt_add_resources_acf(RESOURCES_FILES ${QRC_FILES})
 
@@ -36,7 +36,7 @@ qt_add_resources_acf(RESOURCES_FILES ${QRC_FILES})
 #endforeach()
 
 
-#file(GLOB RESOURCES_FILES "${PROJECT_DIR}/*.qrc")
+#file(GLOB RESOURCES_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
 
 #set(RESOURCES_FILES_CHECK "0")
 #foreach(RESOURCES_FILE ${RESOURCES_FILES})

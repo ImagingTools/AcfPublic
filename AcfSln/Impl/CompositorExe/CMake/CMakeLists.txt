@@ -24,8 +24,8 @@ include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
 #target_link_libraries(${PROJECT_NAME} iser istd icomp iqtgui libicmpstr.a AcfSlnLoc AcfLoc)
 #target_link_libraries(${PROJECT_NAME} -licmpstr -lAcfSlnLoc -lAcfLoc)
-target_link_libraries(${PROJECT_NAME} icmpstr AcfSlnLoc AcfLoc)
-#acf_link_libraries(${PROJECT_NAME} icmpstr AcfLoc AcfSlnLoc)
+#target_link_libraries(${PROJECT_NAME} icmpstr AcfSlnLoc AcfLoc)
+acf_link_libraries(${PROJECT_NAME} icmpstr AcfLoc AcfSlnLoc)
 
 #if(WIN32)
 #	target_link_libraries(${PROJECT_NAME} iser istd icomp iqtgui libicmpstr.a libAcfSlnLoc.a libAcfLoc.a)

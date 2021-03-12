@@ -1,11 +1,11 @@
 include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
 
-include_directories(${PROJECT_DIR}../../)
+include_directories(${PROJECT_SOURCE_DIR}/..../../)
 
-#file(GLOB UI_FILES "${PROJECT_DIR}/*.ui")
-file(GLOB HEADER_FILES "${PROJECT_DIR}/*.h")
-file(GLOB SOURCES_FILES "${PROJECT_DIR}/*.cpp")
-file(GLOB QRC_FILES "${PROJECT_DIR}/*.qrc")
+#file(GLOB UI_FILES "${PROJECT_SOURCE_DIR}/../*.ui")
+file(GLOB HEADER_FILES "${PROJECT_SOURCE_DIR}/../*.h")
+file(GLOB SOURCES_FILES "${PROJECT_SOURCE_DIR}/../*.cpp")
+file(GLOB QRC_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
 
 file(GLOB PROJECT_SRC
 #    ${UI_FILES}
