@@ -1,9 +1,9 @@
 # For non-shadow build use lib directory inside source tree:
 
-#target_link_directories(${PROJECT_NAME} PUBLIC ${ACFLIBDIR})
-#target_link_directories(${PROJECT_NAME} PUBLIC ${ACFSLNLIBDIR})
-link_directories(${ACFLIBDIR})
-link_directories(${ACFSLNLIBDIR})
+#target_link_directories(${PROJECT_NAME} PUBLIC ${ACFDIR}/Lib/${TARGETNAME})
+#target_link_directories(${PROJECT_NAME} PUBLIC ${ACFSLNDIR}/Lib/${TARGETNAME})
+link_directories(${ACFDIR}/Lib/${TARGETNAME})
+link_directories(${ACFSLNDIR}/Lib/${TARGETNAME})
 
 
 #link_libraries(iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)

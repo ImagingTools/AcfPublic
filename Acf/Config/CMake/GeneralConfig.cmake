@@ -167,8 +167,8 @@ function(acf_link_libraries target)
 endfunction()
 
 #message("${MOC_SOURCES}")
-link_directories(${ACFLIBDIR})
-link_directories(${ACFSLNLIBDIR})
+link_directories(${ACFDIR}/Lib/${TARGETNAME})
+link_directories(${ACFSLNDIR}/Lib/${TARGETNAME})
 
 
 if(${MSVC})

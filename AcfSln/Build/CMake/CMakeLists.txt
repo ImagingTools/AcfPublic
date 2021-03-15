@@ -14,7 +14,7 @@ if(NOT DEFINED ${ACFDIR})
 	endif()
 endif()
 
-set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../../AcfSln")
+set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}/../../../AcfSln")
 
 message("ACFDIR " "${ACFDIR}")
 
