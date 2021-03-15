@@ -4,11 +4,13 @@ if(WIN32)
     set(ACF_TOOL "Acf.exe")
     set(QMAKE_RCC "rcc.exe")
     set(COPY_FILE "copy")
+	set(QMAKE_LRELEASE "lrelease.exe")
 else()
     set(ARX_COMPILER "Arxc")
     set(ACF_TOOL "Acf")
     set(QMAKE_RCC "rcc")
     set(COPY_FILE "cp")
+	set(QMAKE_LRELEASE "lrelease")
 endif()
 
 set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
@@ -19,21 +21,39 @@ set(ACFTOOLS "$ENV{ACFDIR}/../AcfTools")
 set(ARXCBIN "${ACFBINDIR}/${ARX_COMPILER}")
 set(ACFBIN "${ACFBINDIR}/${ACF_TOOL}")
 
-set(ARXC_OUTFILE_NANE C${PROJECT_NAME}.cpp)
-set(ARXC_OUTFILE_PATH ${ARXC_OUTDIR}/GeneratedFiles/${PROJECT_NAME}/${ARXC_OUTFILE_NANE})
+set(ARXC_OUTFILE_NAME C${PROJECT_NAME}.cpp)
+set(ARXC_OUTFILE_PATH ${ARXC_OUTDIR}/GeneratedFiles/${PROJECT_NAME}/${ARXC_OUTFILE_NAME})
 
-add_custom_command(OUTPUT ${ARXC_OUTFILE_NANE}
+add_custom_command(OUTPUT ${ARXC_OUTFILE_NAME}
     COMMAND ${ARXCBIN}
-    ARGS ${ARXC_FILES} -o ${ARXC_OUTFILE_NANE} -config ${ARXC_CONFIG} -conf_name ${TARGETNAME}_64 -env_vars ${ENV_VARS} -v
+	ARGS ${ARXC_FILES} -o ${ARXC_OUTFILE_NAME} -config ${ARXC_CONFIG} -conf_name ${TARGETNAME}_64 -env_vars ${ENV_VARS} -v
     DEPENDS Arxc VERBATIM)
 
 #MAIN_DEPENDENCY ${ARXC_FILES} VERBATIM)
-message("Arxc generated: ${ARXCBIN} ${ARXC_FILES} -o ${ARXC_OUTFILE_NANE} -config ${ARXC_CONFIG} -conf_name ${TARGETNAME}_64 -env_vars ${ENV_VARS} -v" )
+#message("Arxc generated: ${ARXCBIN} ${ARXC_FILES} -o ${ARXC_OUTFILE_NAME} -config ${ARXC_CONFIG} -conf_name ${TARGETNAME}_64 -env_vars ${ENV_VARS} -v" )
 
-add_custom_target(ARXC${PROJECT_NAME} ALL DEPENDS ${ARXC_OUTFILE_NANE})
+add_custom_target(ARXC${PROJECT_NAME} ALL DEPENDS ${ARXC_OUTFILE_NAME})
 
 set(HEADER_FILE_AUX "${ARXC_OUTDIR}/${PROJECT_NAME}/C${PROJECT_NAME}.h")
 set(SOURCES_FILE_AUX "${ARXC_OUTDIR}/${PROJECT_NAME}/C${PROJECT_NAME}.cpp")
+
+if(WIN32)
+	if(ACF_CONVERT_FILES)
+		add_custom_command(OUTPUT ${RC_FILE}
+			COMMAND ${ACFBIN}
+			ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ACF_CONVERT_FILES} -o ${RC_FILE} -env_vars ${ENV_VARS}
+			DEPENDS Acf VERBATIM)
+		add_custom_target(CONVERT${PROJECT_NAME} ALL DEPENDS ${RC_FILE})
+	endif()
+endif()
+
+if(ACF_TRANSLATIONS)
+	add_custom_command(OUTPUT ${TRANSLATION_OUTPUT_FILE}
+		COMMAND ${QMAKE_LRELEASE}
+		ARGS ${ACF_TRANSLATIONS} -qm ${TRANSLATION_OUTPUT_FILE}
+		DEPENDS ${ACF_TRANSLATIONS})
+	add_custom_target(LRELEASE${PROJECT_NAME} ALL DEPENDS ${TRANSLATION_OUTPUT_FILE})
+endif()
 
 set_property(SOURCE ${SOURCES_FILE_AUX} PROPERTY SKIP_AUTOMOC ON)
 set_property(SOURCE ${HEADER_FILE_AUX} PROPERTY SKIP_AUTOMOC ON)

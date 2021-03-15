@@ -2,9 +2,16 @@ project(XpcEditor LANGUAGES CXX)
 #set(PROJECT_NAME XpcEditor)
 
 set(ARXC_CONFIG "${ACFSLNDIR}/Config/AcfSlnConfig.awc")
-set(ARXC_FILES "${CMAKE_CURRENT_LIST_DIR}/../${PROJECT_NAME}.acc")
+set(ARXC_FILES "${PROJECT_SOURCE_DIR}/../${PROJECT_NAME}.acc")
 set(ARXC_OUTDIR "${AUX_INCLUDE_DIR}")
 
+set(CMAKE_WIN32_EXECUTABLE "on")
+
+
+set(ACF_CONVERT_FILES "${PROJECT_SOURCE_DIR}/../VC/XpcEditor.rc.xtracf")
+set(ACF_CONVERT_REGISTRY "${PROJECT_SOURCE_DIR}/../../../Partitura/AcfInfoCopyApp.acc")
+set(ACF_CONVERT_CONFIG  "${PROJECT_SOURCE_DIR}/../../../Config/BaseOnly.awc")
+set(RC_FILE "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/XpcEditor.rc")
 
 
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)

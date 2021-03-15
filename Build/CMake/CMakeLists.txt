@@ -4,17 +4,21 @@ project(AcfAll)
 
 set(QT_DEFAULT_MAJOR_VERSION 5)
 
-if(DEFINED ENV{ACFDIR})
-	set(ACFDIR $ENV{ACFDIR})
-else()
-	set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
-endif()
+#if(DEFINED ENV{ACFDIR})
+#	set(ACFDIR $ENV{ACFDIR})
+#else()
+#	set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
+#endif()
 
-if(DEFINED ENV{ACFDIR})
-	set(ACFSLNDIR $ENV{ACFSLNDIR})
-else()
-	set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
-endif()
+#if(DEFINED ENV{ACFSLNDIR})
+#	set(ACFSLNDIR $ENV{ACFSLNDIR})
+#else()
+#	set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
+#endif()
+
+set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
+set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
+
 
 #	set(CONFIG_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Config/CMake")
 set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")

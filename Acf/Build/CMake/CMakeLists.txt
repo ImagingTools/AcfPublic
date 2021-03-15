@@ -5,6 +5,8 @@ project(Acf)
 
 set(QT_DEFAULT_MAJOR_VERSION 5)
 
+set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../../Acf")
+
 include("${ACFDIR}/Config/CMake/Macro.cmake")
 
 set(INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include")

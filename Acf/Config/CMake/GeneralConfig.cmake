@@ -1,7 +1,8 @@
 #General base configuration should be included from all ACF-based projects
 
 message("PROJECT_NAME " ${PROJECT_NAME})
-message("PROJECT_DIR " ${PROJECT_DIR})
+message("CMAKE_CURRENT_LIST_DIR " ${CMAKE_CURRENT_LIST_DIR})
+message("PROJECT_SOURCE_DIR " ${PROJECT_SOURCE_DIR})
 message("BINARY_DIR " ${BINARY_DIR})
 #set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
 #message("PROJECT_BINARY_DIR " ${PROJECT_BINARY_DIR})
@@ -133,18 +134,6 @@ set(ACF_TRANSLATIONS_OUTDIR "${AUXINCLUDEPATH}/${TARGETNAME}")
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core REQUIRED)
 
-#include_directories("$ENV{QTDIR}/include/")
-
-#include_directories("$ENV{ACFDIR}/include/")
-#include_directories("$ENV{ACFDIR}/Impl/")
-
-#include_directories("$ENV{ACFSLNDIR}/include/")
-#include_directories("$ENV{ACFSLNDIR}/Impl/")
-
-#include_directories("$ENV{IACFDIR}/include/")
-#include_directories("$ENV{IACFDIR}/Impl/")
-#include_directories("${PROJECT_SOURCE_DIR}/../../../../")
-#include_directories("${PROJECT_SOURCE_DIR}/../../../")
 include_directories("${PROJECT_SOURCE_DIR}/../../")
 #include_directories("${PROJECT_SOURCE_DIR}/../")
 
@@ -152,100 +141,10 @@ include_directories("${PROJECT_SOURCE_DIR}/../../")
 #include_directories("${CMAKE_CURRENT_LIST_DIR}/../../Impl")
 include_directories("${INCLUDE_DIR}")
 include_directories("${IMPL_DIR}")
-##include_directories("${AUXINCLUDEPATH}/${PROJECT_NAME}")
 
-##message(PROJECT_NAME)
-##message("${AUXINCLUDEPATH}/${PROJECT_NAME}")
 
-#if (WIN32)
-#    include_directories("$ENV{QTDIR}/include/")
-
-#    include_directories("$ENV{ACFDIR}/include/")
-#    include_directories("$ENV{ACFDIR}/Impl/")
-
-#    include_directories("$ENV{ACFSLNDIR}/include/")
-#    include_directories("$ENV{ACFSLNDIR}/Impl/")
-
-#    include_directories("$ENV{IACFDIR}/include/")
-#    include_directories("$ENV{IACFDIR}/Impl/")
-
-#    include_directories("$ENV{LCMSDIR_2_3}/include/")
-
-#    include_directories("$ENV{LIBDC1394_2_2_0}/include/")
-
-#    include_directories("$ENV{LIVE555DIR_20121024}/include/")
-
-#    include_directories("$ENV{OPENCVDIR_3_3_1}/include/")
-
-#    include_directories("$ENV{QSCINTILLA}/Qt4Qt5/")
-
-#    include_directories("$ENV{QWT3DDIR_0_3_1}/include/")
-
-#    include_directories("$ENV{QWTDIR_6_1_2}/src/")
-
-#    include_directories("$ENV{ZLIBDIR}/include/")
-
-#    include_directories("$ENV{FFMPEGDIR_20121010}/include/")
-
-#    include_directories("$ENV{LIBDC1394_2_2_0}")
-
-#    include_directories("${PROJECT_SOURCE_DIR}/../../../../")
-#    include_directories("${PROJECT_SOURCE_DIR}/../../../")
-#    include_directories("${PROJECT_SOURCE_DIR}/../../")
-
-#    include_directories("${INCLUDE_DIR}")
-#    include_directories("${IMPL_DIR}")
-#endif()
-
-#foreach(SUBDIR ${INCLUDE_DIRS})
-#    include_directories("${PROJECT_SOURCE_DIR}/.." "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
-#endforeach()
-
-#foreach(SUBDIR ${IMPL_DIRS})
-#    include_directories("${PROJECT_SOURCE_DIR}/.." "${AUX_INCLUDE_DIR}/${SUBDIR}/${SUBDIR}_autogen/include")
-#endforeach()
-
-#file(GLOB HEADER_FILES_AUX "${AUXINCLUDEPATH}/${PROJECT_NAME}/*.h")
-#file(GLOB SOURCES_FILES_AUX "${AUXINCLUDEPATH}/${PROJECT_NAME}/*.cpp")
-
-#foreach(outfile ${SOURCES_FILES_AUX})
-#    set_source_files_properties(${outfile} PROPERTIES SKIP_AUTOMOC ON)
-#    set_source_files_properties(${outfile} PROPERTIES SKIP_AUTOUIC ON)
-#endforeach()
-
-#message("Test_HEADER")
-#message("${AUXINCLUDEPATH}/${PROJECT_NAME}")
-
-#file(GLOB PROJECT_SRC
-#        ${HEADER_FILES}
-#        ${SOURCES_FILES}
-#)
-
-#file(GLOB LIBACF_LIST "${ACFLIBDIR}/*.lib")
-#file(GLOB LIBACFSLN_LIST "${ACFSLNLIBDIR}/*.lib")
-#file(GLOB LIBACF_LIST "${ACFLIBDIR}/*.a")
-#file(GLOB LIBACFSLN_LIST "${ACFSLNLIBDIR}/*.a")
-
-#link_directories(${ACFLIBDIR})
-
-#link_directories(${ACFSLNLIBDIR})
-
-#list(APPEND FILES_N "libimod.a" "libistd.a" "libipackage.a" "libibase.a" "libiser.a" "libilog.a" "libi2d.a" "libicomp.a" "libifile.a")
-##list(APPEND FILES_N "libicomp")
-#set(LIBACF_LIST "/Users/viktor/ImagingTools/AcfPublic/Build/CMake/../../Acf/Lib/Qt5_DebugClang/libicomp.a;/Users/viktor/ImagingTools/AcfPublic/Build/CMake/../../Acf/Lib/Qt5_DebugClang/libifile.a")
-#link_libraries(${FILES_N})
-#link_libraries(${LIBACF_LIST})
-#link_libraries(${LIBACFSLN_LIST})
-
-#file(GLOB MOC_SOURCES "${PROJECT_SOURCE_DIR}/../*.h")
 file(GLOB HEADER_FILES "${PROJECT_SOURCE_DIR}/../*.h")
-#foreach(it ${SOURCES_FILES})
-#	get_filename_component(outfilename ${it} NAME_WE)
-#	qt5_generate_moc(${outfilename}.cpp ${outfilename}.moc TARGET ${PROJECT_NAME})
-##	qt5_generate_moc("${outfilename}.cpp" "${outfilename}.moc")
-#endforeach()
 
-#qt5_wrap_cpp(MOC_SOURCES ${PROJECT_NAME}.h) TARGET ${PROJECT_NAME} ${HEADER_FILES}
 if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
 	qt5_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
 elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)

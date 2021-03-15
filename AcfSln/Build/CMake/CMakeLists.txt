@@ -4,11 +4,25 @@ project(AcfSln)
 
 set(QT_DEFAULT_MAJOR_VERSION 5)
 
+
+if(NOT DEFINED ${ACFDIR})
+	message("NOT ACFDIR " "${ACFDIR}")
+	if(DEFINED ENV{ACFDIR})
+		set(ACFDIR $ENV{ACFDIR})
+	else()
+		set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../../Acf")
+	endif()
+endif()
+
+set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../../AcfSln")
+
+message("ACFDIR " "${ACFDIR}")
+
 include(${ACFDIR}/Config/CMake/Macro.cmake)
 
 set(MAIN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include/")
 
-subdirlist(SUBDIRS ${MAIN_DIR})
+#subdirlist(SUBDIRS ${MAIN_DIR})
 
 get_target_name(TARGETNAME)
 
@@ -23,8 +37,8 @@ include_directories("${ACF_IMPL_DIR}")
 set(INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include")
 set(IMPL_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Impl")
 
-subdirlist(INCLUDE_DIRS ${INCLUDE_DIR})
-subdirlist(IMPL_DIRS ${IMPL_DIR})
+#subdirlist(INCLUDE_DIRS ${INCLUDE_DIR})
+#subdirlist(IMPL_DIRS ${IMPL_DIR})
 
 set(LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
 
@@ -35,112 +49,7 @@ include_directories("${CMAKE_CURRENT_LIST_DIR}/../../../Acf/AuxInclude/Qt${QT_DE
 
 message("${AUX_INCLUDE_DIR}")
 
-list(APPEND DEPENDSY_SUBDIRS_INCLUDE
-#"ialgo"
-#"iauth"
-#"ibarcode"
-#"icomm"
-#"ihotf"
-#"ihotfgui"
-#"imeas"
-#"iqtmeas"
-#"iqtex"
-#"iqtmm"
-#"icalib"
-#"icalibgui"
-#"icam"
-#"iqtcam"
-#"iqtauth"
-#"iinsp"
-#"iqtinsp"
-#"iipr"
-#"iqtipr"
-#"isig"
-#"iqtsig"
-#"ifileproc"
-#"iprod"
-#"iproc"
-#"iprocgui"
-#"iweb"
-#"iwiz"
-#"iwizgui"
-#"iedge"
-#"iedgegui"
-#"icmpstr"
-#"idocproc"
-#"iblob"
-#"iblobgui"
-#"iservice"
-)
 
-list(APPEND DEPENDSY_SUBDIRS_IMPL
-#"AcfSlnLoc"
-#"AuthorizationPck"
-#"BlobPck"
-#"BarcodePck"
-#"ProcessingPck"
-#"FileProcessingPck"
-#"CameraPck"
-#"CalibrationPck"
-#"CommunicationPck"
-#"EdgePck"
-#"HotfolderPck"
-#"InspectionPck"
-#"IprPck"
-#"MeasPck"
-#"SignalPck"
-#"WebPck"
-#"WizardPck"
-#"QtAuthorizationPck"
-#"QtCameraPck"
-#"CalibrationGuiPck"
-#"QtExPck"
-#"QtInspectionPck"
-#"QtIprPck"
-#"QtMeasPck"
-#"QtMmPck"
-#"QtSignalPck"
-#"WizardGuiPck"
-#"HotfolderGuiPck"
-#"ProcessingGuiPck"
-#"CompositorPck"
-#"DocumentProcessingPck"
-#"ProductionPck"
-#"XpcEditorExe"
-#"CompositorExe"
-)
-
-#FOREACH(SUBDIR ${DEPENDSY_SUBDIRS_INCLUDE})
-##        set(PROJECT_NAME ${SUBDIR})
-#		set(PROJECT_DIR "${INCLUDE_DIR}/${SUBDIR}")
-#		set(SOURCES_DIR "${INCLUDE_DIR}/${SUBDIR}/CMake")
-#		set(BINARY_DIR "${AUX_INCLUDE_DIR}/${SUBDIR}")
-#        add_subdirectory(${SOURCES_DIR} ${BINARY_DIR})
-#		add_dependencies(${SUBDIR} Arxc)
-
-##        list(APPEND LIB_DIRS "${LIB_DIR}/${PROJECT_NAME}")
-##        set(LIB_LIST ${LIB_LIST} ${PROJECT_NAME}.lib PARENT_SCOPE)
-#ENDFOREACH()
-
-#FOREACH(SUBDIR ${DEPENDSY_SUBDIRS_IMPL})
-##		set(PROJECT_NAME ${SUBDIR})
-#		set(PROJECT_DIR "${IMPL_DIR}/${SUBDIR}")
-#		set(SOURCES_DIR "${IMPL_DIR}/${SUBDIR}/CMake")
-##		list(APPEND LIB_DIRS "${LIB_DIR}/${PROJECT_NAME}")
-#		if(${SUBDIR}   MATCHES ".*Exe")
-#			STRING(REGEX REPLACE "([^ ]*)...$" "\\1" SUBDIR ${SUBDIR})
-#		endif()
-
-#        #        if(NOT ${PROJECT_NAME}  MATCHES ".*Pck" )
-##            STRING(REGEX REPLACE "([^ ]*)...$" "\\1" PROJECT_NAME ${PROJECT_NAME})
-##        endif()
-
-#		set(BINARY_DIR "${AUX_INCLUDE_DIR}/${SUBDIR}")
-#		add_subdirectory(${SOURCES_DIR} ${BINARY_DIR})
-##		add_subdirectory(${SOURCES_DIR})
-##		add_dependencies(${PROJECT_NAME} Arxc)
-
-#ENDFOREACH()
 # Include
 
 add_subdirectory("${INCLUDE_DIR}/ialgo/CMake" "${AUX_INCLUDE_DIR}/ialgo")
