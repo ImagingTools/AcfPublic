@@ -1,4 +1,4 @@
-project(AcfSlnLoc LANGUAGES CXX)
+project(IAcfLoc LANGUAGES CXX)
 
 include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
