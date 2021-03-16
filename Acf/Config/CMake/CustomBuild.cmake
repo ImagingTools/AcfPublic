@@ -44,7 +44,8 @@ if(WIN32)
 		add_custom_command(OUTPUT ${RC_FILE}
 			COMMAND ${ACFBIN}
 			ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ACF_CONVERT_FILES} -o ${RC_FILE} -env_vars ${ENV_VARS}
-			DEPENDS Acf VERBATIM)
+			MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
+#			DEPENDS Acf VERBATIM)
 		add_custom_target(CONVERT${PROJECT_NAME} ALL DEPENDS ${RC_FILE})
 	endif()
 endif()

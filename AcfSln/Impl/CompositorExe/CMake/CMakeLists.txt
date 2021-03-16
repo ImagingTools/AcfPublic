@@ -6,16 +6,16 @@ set(ARXC_OUTDIR "${AUX_INCLUDE_DIR}")
 
 if(WIN32)
 	set(CMAKE_WIN32_EXECUTABLE "on")
+	set(ACF_CONVERT_FILES "${PROJECT_SOURCE_DIR}/../VC/Compositor.rc.xtracf")
+	set(ACF_CONVERT_REGISTRY "${PROJECT_SOURCE_DIR}/../../../Partitura/AcfInfoCopyApp.acc")
+	set(ACF_CONVERT_CONFIG  "${PROJECT_SOURCE_DIR}/../../../Config/BaseOnly.awc")
+	set(RC_FILE "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/Compositor.rc")
 endif()
 
 if(APPLE)
 	set(CMAKE_MACOSX_BUNDLE "on")
 endif()
 
-set(ACF_CONVERT_FILES "${PROJECT_SOURCE_DIR}/../VC/Compositor.rc.xtracf")
-set(ACF_CONVERT_REGISTRY "${PROJECT_SOURCE_DIR}/../../../Partitura/AcfInfoCopyApp.acc")
-set(ACF_CONVERT_CONFIG  "${PROJECT_SOURCE_DIR}/../../../Config/BaseOnly.awc")
-#set(RC_FILE "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/Compositor.rc")
 
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
 include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
