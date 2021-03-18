@@ -29,12 +29,8 @@ file(GLOB PROJECT_SRC
 
 add_library(${PROJECT_NAME} STATIC ${PROJECT_SRC})
 
-#if(${RESOURCES_FILES_CHECK} STREQUAL "1")
-#	add_dependencies(${PROJECT_NAME} resources${PROJECT_NAME})
-#endif()
-#if(UI_FILES_LOCAL)
-#	add_dependencies(${PROJECT_NAME} ${UI_FILES})
-#endif()
+
+#message("MOC_SOURCES " "${MOC_SOURCES}")
 
 target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
@@ -60,18 +56,3 @@ qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Con
 
 #set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${ACFDIRBUILD}")
 
-
-#install(DIRECTORY DESTINATION ${ACFDIRBUILD})
-
-#if(WIN32)
-#    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-#        COMMAND ${CMAKE_COMMAND} -E copy
-#        "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/${CMAKE_BUILD_TYPE}/${PROJECT_NAME}.lib"
-#        "${ACFDIRBUILD}/${PROJECT_NAME}.lib" )
-
-#else()
-#    add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-#        COMMAND ${CMAKE_COMMAND} -E copy
-#        "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/lib${PROJECT_NAME}.a"
-#        "${ACFDIRBUILD}/lib${PROJECT_NAME}.a" )
-#endif()

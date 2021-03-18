@@ -130,5 +130,5 @@ add_subdirectory("${IMPL_DIR}/DocumentProcessingPck/CMake" "${AUX_INCLUDE_DIR}/D
 add_subdirectory("${IMPL_DIR}/ProductionPck/CMake" "${AUX_INCLUDE_DIR}/ProductionPck")
 
 add_subdirectory("${IMPL_DIR}/XpcEditorExe/CMake" "${AUX_INCLUDE_DIR}/XpcEditor")
-add_subdirectory("${IMPL_DIR}/CompositorExe/CMake" "${AUX_INCLUDE_DIR}/Compositor")
+#add_subdirectory("${IMPL_DIR}/CompositorExe/CMake" "${AUX_INCLUDE_DIR}/Compositor")
 
