@@ -28,11 +28,9 @@ include("${ACFDIR}/Config/CMake/Macro.cmake")
 message("ACFDIR: " ${ACFDIR})
 message("ACFSLNDIR: " ${ACFSLNDIR})
 
-list(APPEND PROJECTS "Acf")
-list(APPEND PROJECTS "AcfSln")
-#list(APPEND PROJECTS "Iacf")
-
 get_target_name(TARGETNAME)
+
+
 
 #set(ACFBINDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Bin/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
 #set(ACFLIBDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
@@ -47,10 +45,22 @@ set(ACFSLNLIBDIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Lib/${TARGETNAME}")
 
 #link_directories(${ACFSLNDIR}/Lib/${TARGETNAME})
 
+#list(APPEND PROJECTS "Acf")
+#list(APPEND PROJECTS "AcfSln")
+#list(APPEND PROJECTS "Iacf")
 
-foreach(PROJECT ${PROJECTS})
-		set(PROJECT_DIR "${CMAKE_CURRENT_LIST_DIR}/../../${PROJECT}")
-		set(SOURCES_DIR "${PROJECT_DIR}/Build/CMake/")
-		set(BINARY_DIR "${PROJECT_DIR}/Bin/${TARGETNAME}")
-        add_subdirectory("${SOURCES_DIR}" "${BINARY_DIR}")
-endforeach()
+#foreach(PROJECT ${PROJECTS})
+#		set(PROJECT_DIR "${CMAKE_CURRENT_LIST_DIR}/../../${PROJECT}")
+#		set(SOURCES_DIR "${PROJECT_DIR}/Build/CMake/")
+#		set(BINARY_DIR "${PROJECT_DIR}/Bin/${TARGETNAME}")
+#        add_subdirectory("${SOURCES_DIR}" "${BINARY_DIR}")
+#endforeach()
+
+add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../Acf/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../Acf/AuxInclude/${TARGETNAME}")
+#add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/AuxInclude/${TARGETNAME}")
+#add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../IAcf/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../IAcf/AuxInclude/${TARGETNAME}")
+
+#add_dependencies(ialgo iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
+#add_dependencies(ialgo iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)
+
+
