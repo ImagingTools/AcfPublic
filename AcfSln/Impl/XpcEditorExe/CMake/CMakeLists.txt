@@ -20,24 +20,17 @@ endif()
 
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
 include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
-#link_libraries(iqtgui.lib  AcfLoc.lib)
 include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
-#target_link_directories(${PROJECT_NAME} PUBLIC ${ACFDIR}/Lib/${TARGETNAME})
-#target_link_directories(${PROJECT_NAME} PUBLIC ${ACFSLNDIR}/Lib/${TARGETNAME})
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
-#message("ACFLIBDIR " ${ACFDIR}/Lib/${TARGETNAME})
-#message("ACFSLNLIBDIR " ${ACFSLNDIR}/Lib/${TARGETNAME})
-#target_link_libraries(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iqtgui iwidgets)
-#target_link_libraries(${PROJECT_NAME} iqtgui.lib AcfLoc.lib)
-acf_link_libraries(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iwidgets)
+#acf_link_libraries(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iwidgets)
 
 #target_link_libraries(${PROJECT_NAME} AcfLoc)
 
-acf_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
+target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
 
-add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc CompositorPck)
+#add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc CompositorPck)
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS PrintSupport REQUIRED)
 target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)

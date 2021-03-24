@@ -42,14 +42,16 @@ target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
 set(outlibdir "${AUX_INCLUDE_DIR}/../../../Lib/${TARGETNAME}")
 
 set_property(
-    TARGET ${PROJECT_NAME}
-    PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${outlibdir})
+	TARGET ${PROJECT_NAME}
+	PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${outlibdir})
 
 set_property(
-    TARGET ${PROJECT_NAME}
-    PROPERTY LIBRARY_OUTPUT_DIRECTORY ${outlibdir})
+	TARGET ${PROJECT_NAME}
+	PROPERTY LIBRARY_OUTPUT_DIRECTORY ${outlibdir})
+#set(LIBRARY_OUTPUT_PATH "${outbindir}")
 
-qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
+#qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
+qt5_use_modules(${PROJECT_NAME} Core)
 
 #set(LIBRARY_OUTPUT_PATH "${ACFDIRBUILD}")
 #set(CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG "${ACFDIRBUILD}")

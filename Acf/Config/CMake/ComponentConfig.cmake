@@ -18,7 +18,7 @@ file(GLOB PROJECT_SRC
 )
 set(TARGET_EXT ".arp")
 
-add_library(${PROJECT_NAME} ${PROJECT_SRC})
+add_library(${PROJECT_NAME} SHARED ${PROJECT_SRC})
 
 target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
@@ -28,20 +28,21 @@ target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ${TARGET_EXT})
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
+#qt5_use_modules(${PROJECT_NAME} Core)
 
 set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
 
-set_property(
-    TARGET ${PROJECT_NAME}
-    PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${outbindir})
+#set_property(
+#    TARGET ${PROJECT_NAME}
+#    PROPERTY ARCHIVE_OUTPUT_DIRECTORY ${outbindir})
 
-set_property(
-    TARGET ${PROJECT_NAME}
-    PROPERTY LIBRARY_OUTPUT_DIRECTORY ${outbindir})
+#set_property(
+#    TARGET ${PROJECT_NAME}
+#    PROPERTY LIBRARY_OUTPUT_DIRECTORY ${outbindir})
 
 
-#set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
-#set(LIBRARY_OUTPUT_PATH "${ACFDIRBUILD}")
+#set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Lib/${TARGETNAME}")
+set(LIBRARY_OUTPUT_PATH "${outbindir}")
 
 #set(ACFDIRBUILD "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
 

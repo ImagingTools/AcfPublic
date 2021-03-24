@@ -22,6 +22,7 @@ file(GLOB QRC_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
 #qt_generate_moc(${SOURCES_FILES} TARGET ${PROJECT_NAME})
 qt_add_resources_acf(RESOURCES_FILES ${QRC_FILES})
 
+
 #foreach(it ${QRC_FILES})
 #    get_filename_component(outfilename ${it} NAME_WE)
 #    get_filename_component(infile ${it} ABSOLUTE)
