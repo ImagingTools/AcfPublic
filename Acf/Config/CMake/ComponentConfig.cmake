@@ -19,8 +19,11 @@ file(GLOB PROJECT_SRC
 set(TARGET_EXT ".arp")
 
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRC})
+#add_library(${PROJECT_NAME} STATIC ${PROJECT_SRC})
 
-target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+acf_create_moc("${HEADER_FILES}")
+
+#target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
 target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
 target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})

@@ -26,9 +26,9 @@ include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
 #acf_link_libraries(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iwidgets)
 
-#target_link_libraries(${PROJECT_NAME} AcfLoc)
+#acf_link_libraries(${PROJECT_NAME} AcfLoc)
 
-target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
+acf_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
 
 #add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc CompositorPck)
 

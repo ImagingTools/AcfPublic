@@ -41,7 +41,10 @@ add_executable(${PROJECT_NAME} ${PROJECT_SRC})
 #target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
 #target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
 #add_dependencies(${PROJECT_NAME} ARXC${PROJECT_NAME})
-target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+
+acf_create_moc("${HEADER_FILES}")
+
+#target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
 target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
 target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})

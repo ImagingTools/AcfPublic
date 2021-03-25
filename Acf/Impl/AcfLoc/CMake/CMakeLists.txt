@@ -7,3 +7,5 @@ set(ARXC_OUTDIR "${AUX_INCLUDE_DIR}")
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
 include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
+
+add_dependencies(${PROJECT_NAME} Arxc Acf)

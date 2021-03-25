@@ -5,43 +5,52 @@ include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/GeneralConfig.cmake)
 
 
-#file(GLOB PROJECT_SRC
-#        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.h"
-#        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
-#        "${PROJECT_SOURCE_DIR}/../qtservice.h"
-#        "${PROJECT_SOURCE_DIR}/../qtservice.cpp"
-#        "${PROJECT_SOURCE_DIR}/../qtservice_win.h"
-#        "${PROJECT_SOURCE_DIR}/../qtservice_win.cpp"
-#        "${PROJECT_SOURCE_DIR}/../qtservicestarter.h"
-#        "${PROJECT_SOURCE_DIR}/../qtservicestarter.cpp"
-#)
-file(GLOB PROJECT_SRC
-        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.h"
-        "${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
-)
+file(GLOB HEADER_FILES "${PROJECT_SOURCE_DIR}/../*.h")
+file(GLOB SOURCES_FILES "${PROJECT_SOURCE_DIR}/../*.cpp")
+file(GLOB QRC_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
+
+
+
 
 if (WIN32)
     add_compile_options(/utf-8)
     ADD_DEFINITIONS(-DUNICODE)
     ADD_DEFINITIONS(-D_UNICODE)
     SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} /UMBCS /D_UNICODE /DUNICODE")
-	file(GLOB PROJECT_SRC
+	file(GLOB HEADER_FILES
 		"${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.h"
-		"${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
 		"${PROJECT_SOURCE_DIR}/../qtservice.h"
-		"${PROJECT_SOURCE_DIR}/../qtservice.cpp"
 		"${PROJECT_SOURCE_DIR}/../qtservice_win.h"
-		"${PROJECT_SOURCE_DIR}/../qtservice_win.cpp"
 		"${PROJECT_SOURCE_DIR}/../qtservicestarter.h"
+		)
+	file(GLOB SOURCES_FILES
+		"${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
+		"${PROJECT_SOURCE_DIR}/../qtservice.cpp"
+		"${PROJECT_SOURCE_DIR}/../qtservice_win.cpp"
 		"${PROJECT_SOURCE_DIR}/../qtservicestarter.cpp"
 		)
+else()
+	file(GLOB HEADER_FILES
+		"${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.h"
+	)
+    file(GLOB SOURCES_FILES
+		"${PROJECT_SOURCE_DIR}/../CServiceApplicationComp.cpp"
+	)
 endif()
+
+
+file(GLOB PROJECT_SRC
+	    ${HEADER_FILES}
+		${SOURCES_FILES}
+)
 
 #set(TARGET_EXT ".lib")
 
 add_library(${PROJECT_NAME} STATIC ${PROJECT_SRC})
 
-target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+acf_create_moc("${HEADER_FILES}")
+
+#target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 #set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ${TARGET_EXT})
 set_property(
     TARGET ${PROJECT_NAME}

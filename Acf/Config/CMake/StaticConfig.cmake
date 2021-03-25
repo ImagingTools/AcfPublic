@@ -12,14 +12,14 @@ file(GLOB SOURCES_FILES "${PROJECT_SOURCE_DIR}/../*.cpp")
 file(GLOB QRC_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
 
 file(GLOB PROJECT_SRC
-		${MOC_SOURCES}
+#		${MOC_SOURCES}
         ${HEADER_FILES}
         ${SOURCES_FILES}
 #        ${RESOURCES_FILES}
 #        ${HEADER_FILES_AUX}
 #        ${SOURCES_FILES_AUX}
 #		${MOC_SOURCES}
-		${QRC_FILES}
+#		${QRC_FILES}
 )
 
 #message(MOC_SOURCES "${MOC_SOURCES}")
@@ -32,7 +32,9 @@ add_library(${PROJECT_NAME} STATIC ${PROJECT_SRC})
 
 #message("MOC_SOURCES " "${MOC_SOURCES}")
 
-target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+acf_create_moc("${HEADER_FILES}")
+
+#target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 target_sources(${PROJECT_NAME} PUBLIC ${UI_FILES})
 target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
 target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
