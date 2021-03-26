@@ -10,4 +10,4 @@ include(../../../Config/CMake/Qwt3d.cmake)
 #target_link_libraries(${PROJECT_NAME} -lqwt3d)
 #qt5_use_modules(${PROJECT_NAME} Widgets Gui)
 
-qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
+qt5_use_modules(${PROJECT_NAME} Core Widgets OpenGL Gui)
