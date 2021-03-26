@@ -23,6 +23,8 @@ set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
 #	set(CONFIG_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Config/CMake")
 set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
 
+set(DEPENDS_OF_ACF)
+
 include("${ACFDIR}/Config/CMake/Macro.cmake")
 
 message("ACFDIR: " ${ACFDIR})
