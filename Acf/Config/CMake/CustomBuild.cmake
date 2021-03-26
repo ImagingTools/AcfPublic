@@ -60,7 +60,7 @@ if(WIN32)
 		${DEPENDS_ATTR})
 	#		MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
 	#		    DEPENDS Acf VERBATIM)
-	#		add_custom_target(CONVERT${PROJECT_NAME} ALL DEPENDS ${RC_FILE})
+                add_custom_target(CONVERT${PROJECT_NAME} ALL DEPENDS ${RC_FILE})
 	endif()
 endif()
 
