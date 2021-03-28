@@ -3,3 +3,6 @@ project(BasePck LANGUAGES CXX)
 
 include(${ACFDIR}/Config/CMake/ComponentConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
+
+#add_dependencies(${PROJECT_NAME} iqt ipackage idoc ifile iimg icmm i2d i3d iprm ilog ibase icomp iattr iser imod imath istd)
+

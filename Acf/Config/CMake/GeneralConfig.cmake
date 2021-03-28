@@ -158,14 +158,49 @@ include_directories("${IMPL_DIR}")
 #endif()
 
 #qt5_wrap_cpp(MOC_SOURCES)
-function(acf_create_moc)
+
+function(acf_create_moc outfiles)
 	if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
-		qt5_wrap_cpp(MOC_SOURCES ${ARGN} )
+		qt5_wrap_cpp("${outfiles}" ${ARGN} )
 	elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
-		qt6_wrap_cpp(MOC_SOURCES ${ARGN} )
+		qt6_wrap_cpp("${outfiles}" ${ARGN} )
 	endif()
-	target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+	set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
 endfunction()
+
+
+#if(NOT DEFINED DEPENDS_OF_ACF OR ${PROJECT_NAME} STREQUAL "Acf")
+#	set(DEPENDS_ATTR MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
+#else()
+#	set(DEPENDS_ATTR DEPENDS Acf VERBATIM)
+#endif()
+
+#if(WIN32)
+#	if(ACF_CONVERT_FILES)
+#		add_custom_command(OUTPUT ${RC_FILE}
+#		COMMAND ${ACFBIN}
+#		ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ACF_CONVERT_FILES} -o ${RC_FILE} -env_vars ${ENV_VARS}
+#		${DEPENDS_ATTR})
+#	#		MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
+#	#		    DEPENDS Acf VERBATIM)
+##                add_custom_target(CONVERT${PROJECT_NAME} ALL DEPENDS ${RC_FILE})
+##        target_sources(${PROJECT_NAME} PUBLIC ${RC_FILE})
+
+#    endif()
+#endif()
+
+#function(acf_add_rc outfiles)
+##	if(ARGN)
+#set(ACFBIN "${ACFDIR}/Bin/${TARGETNAME}/Acf.exe")
+#        add_custom_command(OUTPUT ${outfiles}
+#			COMMAND ${ACFBIN}
+#			ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ARGN} -o ${outfiles} -env_vars ${ENV_VARS}
+##			${DEPENDS_ATTR})
+#DEPENDS Acf VERBATIM)
+#        add_custom_target(ACF_RC_${PROJECT_NAME} ALL DEPENDS ${outfiles})
+
+##	endif()
+#endfunction()
 
 function(acf_link_libraries target)
 	set(outfiles)

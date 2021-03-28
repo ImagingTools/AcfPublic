@@ -48,9 +48,9 @@ file(GLOB PROJECT_SRC
 
 add_library(${PROJECT_NAME} STATIC ${PROJECT_SRC})
 
-acf_create_moc("${HEADER_FILES}")
+acf_create_moc(MOC_SOURCES "${HEADER_FILES}")
 
-#target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
+target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
 #set_target_properties(${PROJECT_NAME} PROPERTIES SUFFIX ${TARGET_EXT})
 set_property(
     TARGET ${PROJECT_NAME}

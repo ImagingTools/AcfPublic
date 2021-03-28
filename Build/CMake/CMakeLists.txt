@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.1.0)
+#cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.13.0)
 
 project(AcfAll)
 
@@ -9,7 +10,7 @@ set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
 
 set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
 
-set(DEPENDS_OF_ACF)
+set(DEPENDS_OF_ACF TRUE)
 
 include("${ACFDIR}/Config/CMake/Macro.cmake")
 
