@@ -31,10 +31,10 @@ acf_create_moc(MOC_SOURCES "${HEADER_FILES}")
 acf_wrap_resources(RESOURCES_FILES "${QRC_FILES}")
 acf_wrap_ui(UI_SOURCES "${UI_FILES}")
 
-target_sources(${PROJECT_NAME} PUBLIC ${MOC_SOURCES})
-target_sources(${PROJECT_NAME} PUBLIC ${UI_SOURCES})
-target_sources(${PROJECT_NAME} PUBLIC ${RESOURCES_FILES})
-target_sources(${PROJECT_NAME} PUBLIC ${SOURCES_FILE_AUX})
+target_sources(${PROJECT_NAME} PRIVATE ${MOC_SOURCES})
+target_sources(${PROJECT_NAME} PRIVATE ${UI_SOURCES})
+target_sources(${PROJECT_NAME} PRIVATE ${RESOURCES_FILES})
+target_sources(${PROJECT_NAME} PRIVATE ${SOURCES_FILE_AUX})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ${TARGET_EXT})
 

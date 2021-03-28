@@ -23,7 +23,7 @@ include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
-acf_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc) #AcfLoc
+target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc) #AcfLoc
 #add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc)
 #add_dependencies(${PROJECT_NAME} iservice icmpstr AcfSlnLoc)
 

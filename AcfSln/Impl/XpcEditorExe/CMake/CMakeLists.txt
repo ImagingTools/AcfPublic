@@ -28,7 +28,7 @@ include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
 #acf_link_libraries(${PROJECT_NAME} AcfLoc)
 
-acf_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
+target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
 
 #add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc CompositorPck)
 
