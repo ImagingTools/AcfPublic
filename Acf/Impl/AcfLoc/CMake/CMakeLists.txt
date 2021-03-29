@@ -8,4 +8,4 @@ include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
 include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
 
-#add_dependencies(${PROJECT_NAME} Arxc Acf)
+add_dependencies(${PROJECT_NAME} Arxc Acf)
