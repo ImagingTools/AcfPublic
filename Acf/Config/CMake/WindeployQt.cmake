@@ -14,14 +14,15 @@ function(windeployqt target)
     add_custom_command(TARGET ${target} POST_BUILD
         COMMAND "${_qt_bin_dir}/windeployqt.exe"         
                 --verbose 1
-                --release
-                --no-svg
-                --no-angle
-                --no-opengl
-                --no-opengl-sw
-                --no-compiler-runtime
-                --no-system-d3d-compiler
-                \"$<TARGET_FILE:${target}>\"
+#                --release
+#                --no-svg
+#                --no-angle
+#                --no-opengl
+#                --no-opengl-sw
+#                --no-compiler-runtime
+#                --no-system-d3d-compiler
+#                \"$<TARGET_FILE:${target}>\"
+                "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}"
         COMMENT "Deploying Qt libraries using windeployqt for compilation target '${target}' ..."
     )
 

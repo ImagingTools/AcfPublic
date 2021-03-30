@@ -10,6 +10,7 @@ if(WIN32)
 	set(ACF_CONVERT_REGISTRY "${PROJECT_SOURCE_DIR}/../../../Partitura/AcfInfoCopyApp.acc")
 	set(ACF_CONVERT_CONFIG  "${PROJECT_SOURCE_DIR}/../../../Config/BaseOnly.awc")
 	set(RC_FILE "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/Compositor.rc")
+	#windeployqt(${PROJECT_NAME})
 endif()
 
 if(APPLE)
@@ -29,3 +30,7 @@ target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc) #AcfLoc
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS PrintSupport REQUIRED)
 target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)
+
+if(WIN32)
+windeployqt(${PROJECT_NAME})
+endif()
