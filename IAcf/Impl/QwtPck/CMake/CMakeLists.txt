@@ -7,8 +7,9 @@ include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(../../../Config/CMake/Qwt.cmake)
 include(../../../Config/CMake/Qwt3d.cmake)
 
-target_link_directories(${PROJECT_NAME} PUBLIC ../../../Lib/${TARGETNAME})
-acf_link_libraries(${PROJECT_NAME} iqwt iqwt3d)
+#target_link_directories(${PROJECT_NAME} PUBLIC ../../../Lib/${TARGETNAME})
+link_directories(../../../Lib/${TARGETNAME})
+target_link_libraries(${PROJECT_NAME} iqwt iqwt3d qwt)
 #target_link_directories(${PROJECT_NAME} PUBLIC ${COMPILER_DIR}/Lib/${TARGETNAME})
 #target_link_libraries(${PROJECT_NAME} iprm)
 

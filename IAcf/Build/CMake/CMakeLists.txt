@@ -37,12 +37,12 @@ set(INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include")
 set(IMPL_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Impl")
 
 set(AUX_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AuxInclude/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}/GeneratedFiles")
+message("IACF AUX_INCLUDE_DIR " "${AUX_INCLUDE_DIR}")
 
 include_directories("${CMAKE_CURRENT_LIST_DIR}/../../AuxInclude/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
 include_directories("${CMAKE_CURRENT_LIST_DIR}/../../../Acf/AuxInclude/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
 include_directories("${ACFSLNDIR}/Include")
-
-message("IACF AUX_INCLUDE_DIR " "${AUX_INCLUDE_DIR}")
+include_directories("${AUX_INCLUDE_DIR}/../")
 
 # Include
 
