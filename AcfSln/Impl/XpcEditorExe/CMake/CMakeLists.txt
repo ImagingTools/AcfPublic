@@ -1,5 +1,4 @@
 project(XpcEditor LANGUAGES CXX)
-#set(PROJECT_NAME XpcEditor)
 
 set(ARXC_CONFIG "${ACFSLNDIR}/Config/AcfSlnConfig.awc")
 set(ARXC_FILES "${PROJECT_SOURCE_DIR}/../${PROJECT_NAME}.acc")
@@ -19,18 +18,11 @@ endif()
 
 
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
-#include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
-#acf_link_libraries(${PROJECT_NAME} iqtdoc iview iqt2d iqtprm iloggui ifilegui iwidgets)
-
-#acf_link_libraries(${PROJECT_NAME} AcfLoc)
-
 target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
-
-#add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc CompositorPck)
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS PrintSupport REQUIRED)
 target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)

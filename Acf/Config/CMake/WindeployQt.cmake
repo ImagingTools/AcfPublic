@@ -15,6 +15,7 @@ function(windeployqt target)
 
     add_custom_command(TARGET ${target} POST_BUILD
 		COMMAND "${Qt5_DIR}/../../../bin/windeployqt.exe"
+#COMMAND "$ENV{QTDIR}/bin/windeployqt.exe"
 #COMMAND "${_qt_bin_dir}/windeployqt.exe"
 #ARGS --verbose 1 ${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}
                 --verbose 1
@@ -28,7 +29,7 @@ function(windeployqt target)
 #                \"$<TARGET_FILE:${target}>\"
                 \"${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}\"
 
-				COMMENT "Deploying Qt libraries using windeployqt for compilation target '${target}' ..."
+		COMMENT "Deploying Qt libraries using windeployqt for compilation target '${target}' ..."
     )
 
 endfunction()

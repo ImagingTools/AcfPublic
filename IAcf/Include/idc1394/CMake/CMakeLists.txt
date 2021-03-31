@@ -1,5 +1,4 @@
 project(idc1394 LANGUAGES CXX)
-#project(idc1394)
 
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
 

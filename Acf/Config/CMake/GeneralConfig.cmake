@@ -4,14 +4,6 @@ message("PROJECT_NAME " ${PROJECT_NAME})
 message("CMAKE_CURRENT_LIST_DIR " ${CMAKE_CURRENT_LIST_DIR})
 message("PROJECT_SOURCE_DIR " ${PROJECT_SOURCE_DIR})
 message("BINARY_DIR " ${BINARY_DIR})
-#set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
-#message("PROJECT_BINARY_DIR " ${PROJECT_BINARY_DIR})
-
-#if(${PROJECT_NAME} STREQUAL "ArxcExe")
-#    project(Arxc LANGUAGES CXX)
-#else()
-#    project(${PROJECT_NAME} LANGUAGES CXX)
-#endif()
 
 #add_compile_options(-fno-rtti)
 #add_compile_options(-msse2)
@@ -114,17 +106,9 @@ if(${MSVC})
 endif()
 
 message("CMAKE_CXX_COMPILER_ARCHITECTURE_ID " "${CMAKE_CXX_COMPILER_ARCHITECTURE_ID}")
-#if(CMAKE_VERSION VERSION_LESS "3.7.0")
-#    set(CMAKE_INCLUDE_CURRENT_DIR ON)
-#endif()
-
 
 
 set(COMPILER_DIR "${CMAKE_BUILD_TYPE}${COMPILER_NAME}${PLATFORM_CODE}")
-
-#message(COMPILER_DIR)
-
-#message(${COMPILER_DIR})
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -141,23 +125,10 @@ set(ACF_TRANSLATIONS_OUTDIR "${AUXINCLUDEPATH}/${TARGETNAME}")
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core Widgets Core Gui Xml Network XmlPatterns Svg Concurrent REQUIRED)
 
 include_directories("${PROJECT_SOURCE_DIR}/../../")
-#include_directories("${PROJECT_SOURCE_DIR}/../")
 
-#include_directories("${CMAKE_CURRENT_LIST_DIR}/../../Include")
-#include_directories("${CMAKE_CURRENT_LIST_DIR}/../../Impl")
 include_directories("${INCLUDE_DIR}")
 include_directories("${IMPL_DIR}")
 
-
-#file(GLOB HEADER_FILES "${PROJECT_SOURCE_DIR}/../*.h")
-
-#if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
-#	qt5_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
-#elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
-#	qt6_wrap_cpp(MOC_SOURCES ${HEADER_FILES} )
-#endif()
-
-#qt5_wrap_cpp(MOC_SOURCES)
 
 function(acf_create_moc outfiles)
 	if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
@@ -186,53 +157,8 @@ function(acf_wrap_ui outfiles)
 	set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
 endfunction()
 
-#if(NOT DEFINED DEPENDS_OF_ACF OR ${PROJECT_NAME} STREQUAL "Acf")
-#	set(DEPENDS_ATTR MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
-#else()
-#	set(DEPENDS_ATTR DEPENDS Acf VERBATIM)
-#endif()
 
-#if(WIN32)
-#	if(ACF_CONVERT_FILES)
-#		add_custom_command(OUTPUT ${RC_FILE}
-#		COMMAND ${ACFBIN}
-#		ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ACF_CONVERT_FILES} -o ${RC_FILE} -env_vars ${ENV_VARS}
-#		${DEPENDS_ATTR})
-#	#		MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
-#	#		    DEPENDS Acf VERBATIM)
-##                add_custom_target(CONVERT${PROJECT_NAME} ALL DEPENDS ${RC_FILE})
-##        target_sources(${PROJECT_NAME} PUBLIC ${RC_FILE})
 
-#    endif()
-#endif()
-
-#function(acf_add_rc outfiles)
-##	if(ARGN)
-#set(ACFBIN "${ACFDIR}/Bin/${TARGETNAME}/Acf.exe")
-#        add_custom_command(OUTPUT ${outfiles}
-#			COMMAND ${ACFBIN}
-#			ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ARGN} -o ${outfiles} -env_vars ${ENV_VARS}
-##			${DEPENDS_ATTR})
-#DEPENDS Acf VERBATIM)
-#        add_custom_target(ACF_RC_${PROJECT_NAME} ALL DEPENDS ${outfiles})
-
-##	endif()
-#endfunction()
-
-#function(acf_link_libraries target)
-#	set(outfiles)
-#	foreach(it ${ARGN})
-#		if(WIN32)
-#			list(APPEND outfiles "${it}.lib")
-#		else()
-#			list(APPEND outfiles "lib${it}.a")
-#		endif()
-#	endforeach()
-##	message("outfiles: " ${outfiles})
-#	target_link_libraries(${target} ${outfiles})
-#endfunction()
-
-#message("${MOC_SOURCES}")
 link_directories(${ACFDIR}/Lib/${TARGETNAME})
 link_directories(${ACFSLNDIR}/Lib/${TARGETNAME})
 
@@ -240,5 +166,4 @@ link_directories(${ACFSLNDIR}/Lib/${TARGETNAME})
 if(${MSVC})
 	#link_libraries("C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/Mpr.lib")
    link_libraries("Mpr.lib")
-#link_libraries(mpr)
 endif()

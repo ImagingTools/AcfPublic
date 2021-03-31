@@ -9,8 +9,7 @@ if(WIN32)
 	set(ACF_CONVERT_FILES "${PROJECT_SOURCE_DIR}/../VC/Compositor.rc.xtracf")
 	set(ACF_CONVERT_REGISTRY "${PROJECT_SOURCE_DIR}/../../../Partitura/AcfInfoCopyApp.acc")
 	set(ACF_CONVERT_CONFIG  "${PROJECT_SOURCE_DIR}/../../../Config/BaseOnly.awc")
-	set(RC_FILE "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/Compositor.rc")
-	#windeployqt(${PROJECT_NAME})
+	set(RC_FILE "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/Compositor.rc")	
 endif()
 
 if(APPLE)
@@ -25,9 +24,7 @@ include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 include(${ACFDIR}/Config/CMake/WindeployQt.cmake)
 
-target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc) #AcfLoc
-#add_dependencies(${PROJECT_NAME} icmpstr AcfSlnLoc)
-#add_dependencies(${PROJECT_NAME} iservice icmpstr AcfSlnLoc)
+target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
 
 find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS PrintSupport REQUIRED)
 target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)

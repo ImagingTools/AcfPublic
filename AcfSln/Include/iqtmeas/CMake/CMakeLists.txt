@@ -1,4 +1,3 @@
 project(iqtmeas LANGUAGES CXX)
 
-#include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)

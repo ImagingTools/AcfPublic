@@ -21,27 +21,13 @@ message("ACFDIR " "${ACFDIR}")
 
 include(${ACFDIR}/Config/CMake/Macro.cmake)
 
-#set(MAIN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include/")
-
-#subdirlist(SUBDIRS ${MAIN_DIR})
-
 get_target_name(TARGETNAME)
-
-#set(ACF_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../Acf/Include")
-#set(ACF_IMPL_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../Acf/Impl")
-
-#message(${ACF_INCLUDE_DIR})
 
 include_directories("${ACFDIR}/Include")
 include_directories("${ACFDIR}/Impl")
 
 set(INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include")
 set(IMPL_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Impl")
-
-#subdirlist(INCLUDE_DIRS ${INCLUDE_DIR})
-#subdirlist(IMPL_DIRS ${IMPL_DIR})
-
-#set(LIB_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Lib/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}")
 
 set(AUX_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AuxInclude/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}/GeneratedFiles")
 
