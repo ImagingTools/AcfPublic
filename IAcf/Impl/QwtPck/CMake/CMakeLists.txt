@@ -3,7 +3,7 @@ project(QwtPck LANGUAGES CXX)
 link_directories($ENV{QWTDIR_6_1_2}/Lib/${TARGETNAME})
 link_directories($ENV{QWT3DDIR_0_3_1}/Lib/${TARGETNAME})
 
-include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
+#include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/ComponentConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)

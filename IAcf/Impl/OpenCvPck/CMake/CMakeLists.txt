@@ -2,7 +2,7 @@ project(OpenCvPck LANGUAGES CXX)
 
 link_directories($ENV{OPENCVDIR_3_3_1}/lib/${TARGETNAME})
 
-include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
+#include(${ACFDIR}/Config/CMake/QtBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/ComponentConfig.cmake)
 #include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)

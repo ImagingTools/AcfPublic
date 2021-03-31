@@ -1,7 +1,7 @@
 project(iservice LANGUAGES CXX)
 
 
-include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
+#include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/GeneralConfig.cmake)
 
 

@@ -138,7 +138,7 @@ set(ACF_TRANSLATIONS_OUTDIR "${AUXINCLUDEPATH}/${TARGETNAME}")
 #set(CMAKE_AUTORCC ON)
 #set(CMAKE_AUTOUIC ON)
 
-find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core REQUIRED)
+find_package("Qt${QT_DEFAULT_MAJOR_VERSION}" COMPONENTS Core Widgets Core Gui Xml Network XmlPatterns Svg Concurrent REQUIRED)
 
 include_directories("${PROJECT_SOURCE_DIR}/../../")
 #include_directories("${PROJECT_SOURCE_DIR}/../")
@@ -168,6 +168,23 @@ function(acf_create_moc outfiles)
 	set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
 endfunction()
 
+function(acf_wrap_resources outfiles)
+	if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
+		qt5_add_resources("${outfiles}" ${ARGN})
+	elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
+		qt6_add_resources("${outfiles}" ${ARGN})
+	endif()
+	set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
+endfunction()
+
+function(acf_wrap_ui outfiles)
+	if(QT_DEFAULT_MAJOR_VERSION EQUAL 5)
+		qt5_wrap_ui("${outfiles}" ${ARGN})
+	elseif(QT_DEFAULT_MAJOR_VERSION EQUAL 6)
+		qt6_wrap_ui("${outfiles}" ${ARGN})
+	endif()
+	set("${outfiles}" "${${outfiles}}" PARENT_SCOPE)
+endfunction()
 
 #if(NOT DEFINED DEPENDS_OF_ACF OR ${PROJECT_NAME} STREQUAL "Acf")
 #	set(DEPENDS_ATTR MAIN_DEPENDENCY ${ACF_CONVERT_FILES} VERBATIM)
@@ -221,6 +238,7 @@ link_directories(${ACFSLNDIR}/Lib/${TARGETNAME})
 
 
 if(${MSVC})
-	link_libraries("Mpr.lib")
+	#link_libraries("C:/Program Files (x86)/Windows Kits/10/Lib/10.0.19041.0/um/x64/Mpr.lib")
+   link_libraries("Mpr.lib")
+#link_libraries(mpr)
 endif()
-

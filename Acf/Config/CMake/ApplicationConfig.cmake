@@ -1,4 +1,4 @@
-include(${CMAKE_CURRENT_LIST_DIR}/QtGuiBaseConfig.cmake)
+#include(${CMAKE_CURRENT_LIST_DIR}/QtGuiBaseConfig.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
 
 

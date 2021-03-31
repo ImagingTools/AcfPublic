@@ -19,7 +19,7 @@ endif()
 
 
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
-include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
+#include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
