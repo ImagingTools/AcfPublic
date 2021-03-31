@@ -1,5 +1,7 @@
 project(iqwt3d LANGUAGES CXX)
 
+link_directories($ENV{QWT3DDIR_0_3_1}/Lib/${TARGETNAME})
+
 include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
 include(../../../Config/CMake/Qwt3d.cmake)

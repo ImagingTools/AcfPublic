@@ -1,8 +1,9 @@
 include_directories("$ENV{OPENCVDIR_3_3_1}/include")
 #INCLUDEPATH += ($(OPENCVDIR_3_3_1)/include)
 
+#target_link_directories(${PROJECT_NAME} PRIVATE $ENV{OPENCVDIR_3_3_1}/lib/${TARGETNAME})
 #target_link_directories(${PROJECT_NAME} PUBLIC $ENV{OPENCVDIR_3_3_1}/lib/${TARGETNAME})
-link_directories($ENV{OPENCVDIR_3_3_1}/lib/${TARGETNAME})
+#link_directories($ENV{OPENCVDIR_3_3_1}/lib/${TARGETNAME})
 #-$(OPENCVDIR_3_3_1)/lib/$$COMPILER_DIR
 if(WIN32)
 

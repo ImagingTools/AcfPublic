@@ -1,7 +1,8 @@
 project(iqwt LANGUAGES CXX)
 
-link_libraries(qwtreth)
+#link_libraries(qwtreth)
 
+link_directories($ENV{QWTDIR_6_1_2}/Lib/${TARGETNAME})
 
 include(${ACFDIR}/Config/CMake/QtGuiBaseConfig.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
