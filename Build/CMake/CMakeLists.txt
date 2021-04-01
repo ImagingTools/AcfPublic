@@ -14,7 +14,7 @@ endif()
 set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
 set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
 
-set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
+#set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
 
 
 include("${ACFDIR}/Config/CMake/Macro.cmake")
