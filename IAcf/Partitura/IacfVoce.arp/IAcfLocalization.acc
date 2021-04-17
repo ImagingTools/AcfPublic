@@ -7,10 +7,28 @@
             <Version Id="1023" Number="331010" Description="Qt Framework"/>
         </VersionInfos>
     </AcfHeader>
-    <Description>ACF strings localization</Description>
+    <Description>ACF-Solutions strings localization</Description>
     <Keywords>Translation Tag='Localization'</Keywords>
     <ElementsList>
-        <Element Id="AcfLocalization" PackageId="QtPck" ComponentId="TranslationManager">
+        <Element Id="AcfSlnLocalization" PackageId="AcfSlnVoce" ComponentId="AcfSolutionsLocalization">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="LanguageIds" Type="Id[]" ExportId="LanguageIds">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="LanguageSelection" Type="Reference" ExportId="LanguageSelection">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SlaveTranslationManager" Type="Reference" ExportId="SlaveTranslationManager">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="IAcfLocalization" PackageId="QtPck" ComponentId="TranslationManager">
             <Data IsEnabled="true" Flags="0">
                 <AttributeInfoMap>
                     <AttributeInfo Id="LanguageIds" Type="Id[]" ExportId="LanguageIds">
@@ -30,44 +48,13 @@
                         <Data IsEnabled="false"/>
                     </AttributeInfo>
                     <AttributeInfo Id="SlaveTranslationManager" Type="Reference" ExportId="">
-                        <Data IsEnabled="true" Value="QtLocalization"/>
+                        <Data IsEnabled="true" Value="AcfSlnLocalization"/>
                     </AttributeInfo>
                     <AttributeInfo Id="TranslationFilePath" Type="String" ExportId="">
                         <Data IsEnabled="true" Value=":/Translations"/>
                     </AttributeInfo>
                     <AttributeInfo Id="TranslationFilePrefix" Type="Id" ExportId="">
-                        <Data IsEnabled="true" Value="Acf"/>
-                    </AttributeInfo>
-                </AttributeInfoMap>
-            </Data>
-        </Element>
-        <Element Id="QtLocalization" PackageId="QtPck" ComponentId="TranslationManager">
-            <Data IsEnabled="true" Flags="0">
-                <AttributeInfoMap>
-                    <AttributeInfo Id="LanguageIds" Type="Id[]" ExportId="LanguageIds">
-                        <Data IsEnabled="true">
-                            <Values>
-                                <Value>en_US</Value>
-                                <Value>de_DE</Value>
-                                <Value>ru_RU</Value>
-                                <Value>pl_PL</Value>
-                            </Values>
-                        </Data>
-                    </AttributeInfo>
-                    <AttributeInfo Id="LanguageSelection" Type="Reference" ExportId="LanguageSelection">
-                        <Data IsEnabled="false"/>
-                    </AttributeInfo>
-                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
-                        <Data IsEnabled="false"/>
-                    </AttributeInfo>
-                    <AttributeInfo Id="SlaveTranslationManager" Type="Reference" ExportId="SlaveTranslationManager">
-                        <Data IsEnabled="false"/>
-                    </AttributeInfo>
-                    <AttributeInfo Id="TranslationFilePath" Type="String" ExportId="">
-                        <Data IsEnabled="true" Value=":/Translations"/>
-                    </AttributeInfo>
-                    <AttributeInfo Id="TranslationFilePrefix" Type="Id" ExportId="">
-                        <Data IsEnabled="true" Value="qt"/>
+                        <Data IsEnabled="true" Value="IAcf"/>
                     </AttributeInfo>
                 </AttributeInfoMap>
             </Data>
@@ -75,10 +62,10 @@
     </ElementsList>
     <EmbeddedRegistriesList/>
     <ExportedInterfaces>
-        <Interface InterfaceId="imod::IModel" ComponentId="AcfLocalization"/>
-        <Interface InterfaceId="iprm::IOptionsList" ComponentId="AcfLocalization"/>
-        <Interface InterfaceId="iqt::ITranslationManager" ComponentId="AcfLocalization"/>
-        <Interface InterfaceId="istd::IChangeable" ComponentId="AcfLocalization"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="IAcfLocalization"/>
+        <Interface InterfaceId="iprm::IOptionsList" ComponentId="IAcfLocalization"/>
+        <Interface InterfaceId="iqt::ITranslationManager" ComponentId="IAcfLocalization"/>
+        <Interface InterfaceId="istd::IChangeable" ComponentId="IAcfLocalization"/>
     </ExportedInterfaces>
     <ExportedComponents/>
 </Acf>

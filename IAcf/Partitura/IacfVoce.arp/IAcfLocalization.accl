@@ -8,8 +8,8 @@
         </VersionInfos>
     </AcfHeader>
     <PositionMap>
-        <Element ComponentName="AcfLocalization" X="575" Y="375" Note=""/>
-        <Element ComponentName="QtLocalization" X="575" Y="525" Note=""/>
+        <Element ComponentName="AcfSlnLocalization" X="525" Y="400" Note=""/>
+        <Element ComponentName="IAcfLocalization" X="525" Y="250" Note=""/>
     </PositionMap>
     <EmbeddedRegistries/>
 </Acf>

@@ -445,6 +445,13 @@ void CLogGuiComp::OnAddMessage(const MessagePtr& messagePtr)
 	if (IsGuiCreated()){
 		AddMessageToList(messagePtr);
 	}
+	else{
+		if (messagePtr->GetInformationCategory() > m_statusCategory){
+			m_statusCategory = messagePtr->GetInformationCategory();
+		}
+
+		UpdateVisualStatus();
+	}
 
 	BaseClass2::AddMessage(messagePtr);
 }
