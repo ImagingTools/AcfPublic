@@ -177,6 +177,11 @@ void CGuiComponentBase::OnGuiRetranslate()
 }
 
 
+void CGuiComponentBase::OnGuiPolished()
+{
+}
+
+
 void CGuiComponentBase::OnGuiCreated()
 {
 }
@@ -255,6 +260,10 @@ bool CGuiComponentBase::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 
 	case QEvent::LanguageChange:
 		OnLanguageChanged();
+		break;
+
+	case QEvent::Polish:
+		OnGuiPolished();
 		break;
 
 	default:
