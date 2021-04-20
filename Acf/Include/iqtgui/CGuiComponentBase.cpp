@@ -96,6 +96,8 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 
 			EnableLocalization(true);
 
+			EnableDesignHandler(true);
+
 			MakeAutoSlotConnection();
 
 			if (m_fixedWidthAttrPtr.IsValid()){
@@ -128,6 +130,7 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 bool CGuiComponentBase::DestroyGui()
 {
 	EnableLocalization(false);
+	EnableDesignHandler(false);
 
 	if (m_widgetPtr != NULL){
 		OnGuiDestroyed();
@@ -177,11 +180,6 @@ void CGuiComponentBase::OnGuiRetranslate()
 }
 
 
-void CGuiComponentBase::OnGuiPolished()
-{
-}
-
-
 void CGuiComponentBase::OnGuiCreated()
 {
 }
@@ -219,6 +217,13 @@ void CGuiComponentBase::OnLanguageChanged()
 	if (IsGuiCreated()){
 		OnGuiRetranslate();
 	}
+}
+
+
+// reimplemented (ibase::TDesignSchemaHandlerWrap)
+
+void CGuiComponentBase::OnDesignSchemaChanged()
+{
 }
 
 
@@ -260,10 +265,6 @@ bool CGuiComponentBase::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 
 	case QEvent::LanguageChange:
 		OnLanguageChanged();
-		break;
-
-	case QEvent::Polish:
-		OnGuiPolished();
 		break;
 
 	default:
