@@ -20,9 +20,9 @@ subdirlist(IMPL_DIRS ${IMPL_DIR})
 
 get_target_name(TARGETNAME)
 
-
 set(AUX_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AuxInclude/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGETNAME}/GeneratedFiles")
-set(ACFBINDIR "${CMAKE_CURRENT_LIST_DIR}/../../Bin/${TARGETNAME}")
+
+set(ACFBINDIR "${CMAKE_CURRENT_LIST_DIR}/../../Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}")
 
 include_directories(${AUX_INCLUDE_DIR}/..)
 
@@ -34,7 +34,7 @@ add_subdirectory("${INCLUDE_DIR}/iser/CMake" "${AUX_INCLUDE_DIR}/iser")
 add_subdirectory("${INCLUDE_DIR}/ilog/CMake" "${AUX_INCLUDE_DIR}/ilog")
 add_subdirectory("${INCLUDE_DIR}/i2d/CMake" "${AUX_INCLUDE_DIR}/i2d")
 add_subdirectory("${INCLUDE_DIR}/i3d/CMake" "${AUX_INCLUDE_DIR}/i3d")
-
+#
 add_subdirectory("${INCLUDE_DIR}/iattr/CMake" "${AUX_INCLUDE_DIR}/iattr")
 add_subdirectory("${INCLUDE_DIR}/iimg/CMake" "${AUX_INCLUDE_DIR}/iimg")
 add_subdirectory("${INCLUDE_DIR}/imath/CMake" "${AUX_INCLUDE_DIR}/imath")

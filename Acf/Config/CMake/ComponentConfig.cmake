@@ -1,6 +1,6 @@
 include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
 
-include_directories(${PROJECT_SOURCE_DIR}/..../../)
+include_directories(${PROJECT_SOURCE_DIR}/../../../)
 
 file(GLOB UI_FILES "${PROJECT_SOURCE_DIR}/../*.ui")
 file(GLOB HEADER_FILES "${PROJECT_SOURCE_DIR}/../*.h")
@@ -29,7 +29,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES PREFIX "" SUFFIX ${TARGET_EXT})
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
-set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
+set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}")
 
 set(LIBRARY_OUTPUT_PATH "${outbindir}")
 

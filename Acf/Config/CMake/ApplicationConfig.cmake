@@ -35,16 +35,14 @@ target_sources(${PROJECT_NAME} PRIVATE ${MOC_SOURCES})
 target_sources(${PROJECT_NAME} PRIVATE ${UI_SOURCES})
 target_sources(${PROJECT_NAME} PRIVATE ${RESOURCES_FILES})
 target_sources(${PROJECT_NAME} PRIVATE ${SOURCES_FILE_AUX})
-target_sources(${PROJECT_NAME} PRIVATE ${RC_FILE})
+#target_sources(${PROJECT_NAME} PRIVATE ${RC_FILE})
 
 
 qt5_use_modules(${PROJECT_NAME} Core Widgets Gui Xml Network XmlPatterns Svg Concurrent)
 
-set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${TARGETNAME}")
+set(outbindir "${AUX_INCLUDE_DIR}/../../../Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}")
 set_property(
     TARGET ${PROJECT_NAME}
     PROPERTY RUNTIME_OUTPUT_DIRECTORY ${outbindir})
 
 #set(EXECUTABLE_OUTPUT_PATH "${ACFDIRBUILD}")
-
-
