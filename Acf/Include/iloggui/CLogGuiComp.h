@@ -33,11 +33,13 @@
 #endif
 
 // ACF includes
+#include <ibase/ICommandsProvider.h>
 #include <ifile/IFilePersistence.h>
 #include <iprm/CEnableableParam.h>
 #include <ilog/CMessageContainer.h>
 #include <ilog/CMessage.h>
 #include <iqtgui/TDesignerGuiObserverCompBase.h>
+#include <iqtgui/CHierarchicalCommand.h>
 #include <GeneratedFiles/iloggui/ui_CLogGuiComp.h>
 
 
@@ -50,7 +52,8 @@ namespace iloggui
 */
 class CLogGuiComp:
 			public iqtgui::TDesignerGuiCompBase<Ui::CLogGuiComp>,
-			public ilog::CMessageContainer
+			public ilog::CMessageContainer,
+			virtual public ibase::ICommandsProvider
 {
 	Q_OBJECT
 
@@ -67,6 +70,7 @@ public:
 	};
 
 	I_BEGIN_COMPONENT(CLogGuiComp);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
 		I_REGISTER_INTERFACE(ilog::IMessageConsumer);
 		I_REGISTER_SUBELEMENT(DiagnosticState);
 		I_REGISTER_SUBELEMENT_INTERFACE(DiagnosticState, iprm::IEnableableParam, ExtractDiagnosticState);
@@ -81,10 +85,17 @@ public:
 		I_ASSIGN(m_defaultModeAttrPtr, "DefaultMode", "Default display mode,\n 0 - info,\n 1 - warning,\n 2 - error", true, 0);
 		I_ASSIGN(m_showLogDescriptionAttrPtr, "ShowLogDescription", "Sets the log tables description visible", true, false);
 		I_ASSIGN(m_showMessageTextFilterAttrPtr, "ShowMessageTextFilter", "If enabled, the text filter for the messages will be shown", true, true);
+		I_ASSIGN(m_showPanelAttrPtr, "ShowPanel", "If enabled, the text filter and filter buttons will be shown", true, true);
 		I_ASSIGN(m_logTimeFormatAttrPtr, "TimeFormat", "Format of the date/time used for displaing message's time stamp", true, "");
 	I_END_COMPONENT;
 
 	CLogGuiComp();
+
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiRetranslate();
+
+	// reimplemented (ibase::ICommandsProvider)
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
 protected:
 	enum MessageMode
@@ -127,6 +138,16 @@ protected:
 	*/
 	virtual QString GetCategoryText(int category) const;
 
+	/**
+		Setup log gui commands.
+	*/
+	virtual void SetupCommands();
+
+	/**
+		Setup log gui command visuals.
+	*/
+	virtual void SetCommandsVisuals();
+
 	// reimplemented (ilog::IMessageConsumer)
 	virtual bool IsMessageSupported(
 				int messageCategory = -1,
@@ -166,12 +187,28 @@ Q_SIGNALS:
 	void EmitAddMessage(const MessagePtr& messagePtr);
 
 protected:
+	enum CommandGroup
+	{
+		CG_FILTER = 5000,
+		CG_EDIT,
+	};
+
+protected:
 	QAction* m_infoActionPtr;
 	QAction* m_warningActionPtr;
 	QAction* m_errorActionPtr;
 	QAction* m_clearActionPtr;
 	QAction* m_exportActionPtr;
 	QAction* m_diagnosticModeActionPtr;
+
+	// commands
+	iqtgui::CHierarchicalCommand m_rootCommands;
+	iqtgui::CHierarchicalCommand m_infoCommand;
+	iqtgui::CHierarchicalCommand m_warningCommand;
+	iqtgui::CHierarchicalCommand m_errorCommand;
+	iqtgui::CHierarchicalCommand m_clearCommand;
+	iqtgui::CHierarchicalCommand m_exportCommand;
+	iqtgui::CHierarchicalCommand m_diagnosticCommand;
 
 private:
 	// static template methods for subelement access
@@ -189,6 +226,7 @@ private:
 	I_ATTR(int, m_maxMessagesCountAttrPtr);
 	I_ATTR(bool, m_showLogDescriptionAttrPtr);
 	I_ATTR(bool, m_showMessageTextFilterAttrPtr);
+	I_ATTR(bool, m_showPanelAttrPtr);
 	I_ATTR(QString, m_logTimeFormatAttrPtr);
 
 	int m_currentMessageMode;
