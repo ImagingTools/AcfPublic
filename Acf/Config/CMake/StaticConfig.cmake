@@ -1,6 +1,6 @@
 include(${CMAKE_CURRENT_LIST_DIR}/GeneralConfig.cmake)
 
-message("PROJECT_SOURCE_DIR "  ${PROJECT_SOURCE_DIR})
+#message("PROJECT_SOURCE_DIR "  ${PROJECT_SOURCE_DIR})
 
 file(GLOB UI_FILES "${PROJECT_SOURCE_DIR}/../*.ui")
 file(GLOB HEADER_FILES "${PROJECT_SOURCE_DIR}/../*.h")

@@ -10,7 +10,6 @@ file(GLOB QRC_FILES "${PROJECT_SOURCE_DIR}/../*.qrc")
 file(GLOB PROJECT_SRC
     ${HEADER_FILES}
     ${SOURCES_FILES}
- #   ${QRC_FILES}
 )
 set(TARGET_EXT ".arp")
 

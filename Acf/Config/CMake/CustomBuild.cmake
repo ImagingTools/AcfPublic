@@ -36,11 +36,11 @@ set(SOURCES_FILE_AUX "${ARXC_OUTDIR}/${PROJECT_NAME}/C${PROJECT_NAME}.cpp")
 
 if(WIN32)
 	if(ACF_CONVERT_FILES)
-#		add_custom_command(OUTPUT ${RC_FILE}
-#		COMMAND ${ACFBIN}
-#		ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ACF_CONVERT_FILES} -o ${RC_FILE} -env_vars ${ENV_VARS}
-#		DEPENDS ${ACFBIN} VERBATIM)
-    endif()
+		add_custom_command(OUTPUT ${RC_FILE}
+		COMMAND ${ACFBIN}
+		ARGS ${ACF_CONVERT_REGISTRY} -console -config ${ACF_CONVERT_CONFIG} -input ${ACF_CONVERT_FILES} -o ${RC_FILE} -env_vars ${ENV_VARS}
+		DEPENDS ${ACFBIN} VERBATIM)
+	endif()
 endif()
 
 

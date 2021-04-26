@@ -7,5 +7,3 @@ set(ACF_CONVERT_FILES "")
 
 include(${ACFDIR}/Config/CMake/CustomBuild.cmake)
 include(${ACFDIR}/Config/CMake/StaticConfig.cmake)
-
-
