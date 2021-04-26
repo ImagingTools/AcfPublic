@@ -477,7 +477,7 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 #ifdef __clang__
 		QString retVal = "Clang";
 		if (sizeof(void*) > 4){
-			return retVal + "_64";
+			return retVal; // + "_64";
 		}
 		else{
 			return retVal;

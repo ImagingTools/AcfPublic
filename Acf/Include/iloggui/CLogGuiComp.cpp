@@ -60,6 +60,9 @@ public:
 
 		QTreeWidgetItem* itemPtr = reinterpret_cast<QTreeWidgetItem*>(index.internalPointer());
 
+		if(itemPtr == nullptr)
+			return retVal;
+
 		QString message = itemPtr->text(CLogGuiComp::CT_MESSAGE);
 
 		int lineCount = message.count('\n') + 1;
