@@ -117,7 +117,7 @@ void COptionsListEditorComp::UpdateList()
 
 			OptionsList->addItem(optionItemPtr);
 
-			if (itemFlags == Qt::ItemIsSelectable){
+			if (itemFlags & Qt::ItemIsSelectable){
 				optionItemPtr->setSelected(optionIndex == lastSelectedIndex);
 			}
 		}
@@ -193,6 +193,14 @@ void COptionsListEditorComp::OnGuiCreated()
 		OptionsList->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
 		OptionsList->setUniformItemSizes(true);
 	}
+}
+
+
+void COptionsListEditorComp::OnGuiRetranslate()
+{
+	BaseClass::OnGuiRetranslate();
+
+	UpdateList();
 }
 
 
