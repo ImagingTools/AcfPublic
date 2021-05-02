@@ -40,15 +40,12 @@ public:
 	using BaseClass::Process;
 
 protected:
-//	bool WriteStringNode(const QString& text);
 	void writeTag(const iser::CArchiveTag& tag, QString separator, bool isWriteTag = true);
 
 	// reimplemented (iser::CTextWriteArchiveBase)
 	virtual bool WriteTextNode(const QByteArray& text);
-//	QXmlStreamWriter m_xmlWriter;
 
 private:
-//	QJsonDocument m_document;
 	QTextStream m_stream;
 	bool m_firstTag;
 	QJsonDocument::JsonFormat m_jsonFormat;
@@ -57,8 +54,6 @@ private:
 
 	bool m_serializeHeader;
 	iser::CArchiveTag m_rootTag;
-
-//	QVector<QJsonObject::iterator> m_objectsStack;
 
 	bool m_isSeparatorNeeded;	// idicate that separator must be added before something is outputted
 	bool m_allowAttribute;		// indicate if attribute outputting is allowed now

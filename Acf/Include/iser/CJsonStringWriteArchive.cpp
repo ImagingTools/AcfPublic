@@ -25,6 +25,7 @@
 // Qt includes
 #include <QtCore/QJsonDocument>
 #include <QtCore/QJsonObject>
+#include <QtCore/QIODevice>
 
 namespace iser
 {
@@ -37,34 +38,29 @@ CJsonStringWriteArchive::CJsonStringWriteArchive(
 		const IVersionInfo *versionInfoPtr,
 		QJsonDocument::JsonFormat jsonFormat)
 	: CTextWriteArchiveBase(versionInfoPtr),
-	  m_stream(&inputString),
+	  m_stream(&inputString,  QIODevice::WriteOnly),
 	  m_jsonFormat(jsonFormat)
 {
-//	m_stream << "{";
 	m_firstTag = true;
 }
 
+
 CJsonStringWriteArchive::~CJsonStringWriteArchive()
 {
-//	m_stream << "}";
 	m_stream.flush();
 }
+
+
+// reimplemented (iser::IArchive)
 
 bool CJsonStringWriteArchive::IsTagSkippingSupported() const
 {
 	return true;
 }
 
+
 bool CJsonStringWriteArchive::BeginTag(const CArchiveTag &tag)
 {
-
-//	Q_ASSERT(!m_currentAttribute.isEmpty());
-
-//	if (m_document.isEmpty()){
-//		QJsonObject object;
-//		m_document.setObject(object);
-//		m_objectsStack.append(m_document.object().begin());
-//	}
 	m_isSeparatorNeeded = false;
 	m_currentAttribute.clear();
 
@@ -85,15 +81,13 @@ bool CJsonStringWriteArchive::BeginTag(const CArchiveTag &tag)
 			return true;
 		}
 	}
-//	m_currentAttribute = tag.GetId();
-//	//m_xmlWriter.writeStartElement(tag.GetId());
-//	QJsonObject::iterator objIterator = m_objectsStack.last();
-////	objIterator.value().toObject()
-//	QJsonObject jsonObject; // = (*objIterator).toObject();
-//	(*objIterator).toObject().insert(m_currentAttribute,jsonObject);
-//	m_objectsStack.append(jsonObject.begin());
-	writeTag(tag, "{", false);
-//	m_stream << "{";
+	if (tag.GetId().isEmpty()){
+		writeTag(tag, "{", false);
+	}
+	else{
+		writeTag(tag, "{", true);
+	}
+
 	m_firstTag = true;
 
 	m_tagsStack.push_back(&tag);
@@ -103,14 +97,9 @@ bool CJsonStringWriteArchive::BeginTag(const CArchiveTag &tag)
 	return true;
 }
 
+
 bool CJsonStringWriteArchive::BeginMultiTag(const CArchiveTag &tag, const CArchiveTag &subTag, int &count)
 {
-////	m_xmlWriter.writeStartElement(tag.GetId());
-//	QJsonObject::iterator objIterator = m_objectsStack.last();
-////	objIterator.value().toObject()
-//	QJsonArray jsonArray; // = (*objIterator).toObject();
-//	(*objIterator).toObject().insert(m_currentAttribute,jsonArray);
-//	m_objectsStack.append(jsonArray.begin());
 	writeTag(tag,"[");
 	m_firstTag = true;
 
@@ -122,6 +111,7 @@ bool CJsonStringWriteArchive::BeginMultiTag(const CArchiveTag &tag, const CArchi
 
 	return true;
 }
+
 
 bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 {
@@ -135,11 +125,8 @@ bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 	m_tagsStack.pop_back();
 
 	if (lastTagPtr == NULL){
-//		m_stream << "}";
 		return true;
 	}
-
-//	m_allowAttribute = false;
 
 	if (lastTagPtr->GetTagType() == iser::CArchiveTag::TT_MULTIPLE){
 		m_stream << "]";
@@ -148,15 +135,15 @@ bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 		m_stream << "}";
 	}
 
-//	m_xmlWriter.writeEndElement();
-
 	return true;
 }
+
 
 bool CJsonStringWriteArchive::Process(QString &value)
 {
 	return WriteTextNode("\"" + value.toUtf8() + "\"");
 }
+
 
 void CJsonStringWriteArchive::writeTag(const CArchiveTag &tag, QString separator, bool isWriteTag)
 {
@@ -171,15 +158,13 @@ void CJsonStringWriteArchive::writeTag(const CArchiveTag &tag, QString separator
 }
 
 
+// reimplemented (iser::CTextWriteArchiveBase)
+
 bool CJsonStringWriteArchive::WriteTextNode(const QByteArray &text)
 {
 	m_stream << text;
 	return true;
 }
-
-
-	
-
 
 
 } // namespace iser
