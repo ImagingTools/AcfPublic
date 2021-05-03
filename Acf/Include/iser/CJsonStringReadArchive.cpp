@@ -36,11 +36,11 @@ CJsonStringReadArchive::CJsonStringReadArchive(const QByteArray &inputString)
 	m_document = QJsonDocument::fromJson(inputString, &error);
 	if (error.error != QJsonParseError::NoError && IsLogConsumed()){
 		SendLogMessage(
-			istd::IInformationProvider::IC_ERROR,
-			MI_TAG_ERROR,
-			error.errorString(),
-			"CJsonStringReadArchive",
-			istd::IInformationProvider::ITF_SYSTEM);
+					istd::IInformationProvider::IC_ERROR,
+					MI_TAG_ERROR,
+					error.errorString(),
+					"CJsonStringReadArchive",
+					istd::IInformationProvider::ITF_SYSTEM);
 	}
 }
 
@@ -49,14 +49,6 @@ CJsonStringReadArchive::CJsonStringReadArchive(const QByteArray &inputString)
 
 bool CJsonStringReadArchive::BeginTag(const iser::CArchiveTag& tag)
 {
-//	if(!(*m_objIterator).toObject().contains(tag.GetId()))
-//	{
-//		LogJsonArchiveError(QString("Unbalanced tags, begin tag '%1', not found in JSON data.").arg(tag.GetId().constData()));
-//		return false;
-//	}
-
-//	m_lastTag = tag.GetId();
-
 	Q_ASSERT(m_currentAttribute.isEmpty());
 
 	QString tagId(tag.GetId());
@@ -82,10 +74,6 @@ bool CJsonStringReadArchive::BeginTag(const iser::CArchiveTag& tag)
 
 	objIterator = m_objectsStack.last();
 
-//	QDomElement element = m_currentParent.firstChildElement(tagId);
-//	if (!element.isNull()){
-//		m_currentParent = element;
-//	}
 	QJsonObject jsonObject = (*objIterator).toObject();
 	objIterator = jsonObject.find(tagId);
 	if (objIterator != jsonObject.end() && jsonObject.value(tagId).isObject()){
@@ -119,13 +107,6 @@ bool CJsonStringReadArchive::BeginMultiTag(const iser::CArchiveTag& tag, const i
 
 	objIterator = m_objectsStack.last();
 
-//		if(!(*m_objIterator).toObject().contains(tag.GetId()))
-	//	{
-	//		LogJsonArchiveError(QString("Unbalanced tags, begin tag '%1', not found in JSON data.").arg(tag.GetId().constData()));
-	//		return false;
-	//	}
-//	QDomElement element = m_currentParent.firstChildElement(tagId);
-//	if (!element.isNull()){
 	QJsonObject jsonObject = (*objIterator).toObject();
 	objIterator = jsonObject.find(tagId);
 	if (objIterator != jsonObject.end() && jsonObject.value(tagId).isArray()){
@@ -143,15 +124,6 @@ bool CJsonStringReadArchive::BeginMultiTag(const iser::CArchiveTag& tag, const i
 
 		return false;
 	}
-
-//	int tempCount = 0;
-//	tempCount = jsonObject.value(tagId).toArray().count();
-//	for (		QDomElement child = element.firstChildElement(QString(subTag.GetId()));
-//				!child.isNull();
-//				child = child.nextSiblingElement(QString(subTag.GetId()))){
-//		tempCount++;
-//	}
-//	count = tempCount;
 
 	count = jsonObject.value(tagId).toArray().count();
 
@@ -183,7 +155,7 @@ bool CJsonStringReadArchive::EndTag(const iser::CArchiveTag& tag)
 					istd::IInformationProvider::IC_ERROR,
 					MI_TAG_ERROR,
 					QString("Closing tag '%1' was not opened!").arg(QString(tag.GetId())),
-					"CompactXmlReader",
+					"JSON Reader",
 					istd::IInformationProvider::ITF_SYSTEM);
 
 		return false;
@@ -195,26 +167,16 @@ bool CJsonStringReadArchive::EndTag(const iser::CArchiveTag& tag)
 	objIterator = m_objectsStack.last();
 	QJsonObject jsonObject = (*objIterator).toObject();
 
-//	Q_ASSERT (lastTagPtr->GetId() == m_currentParent.tagName().toLatin1());
 	Q_ASSERT (jsonObject.contains(lastTagPtr->GetId()));
 
 	m_objectsStack.pop_back();
-
-//	QDomNode parent = m_currentParent.parentNode();
-
-//	parent.removeChild(m_currentParent);
-
-//	m_currentParent = parent.toElement();
 
 	if (m_isNewFormat){
 		m_allowAttribute = false;
 	}
 
 	return true;
-
 }
-
-
 
 
 bool CJsonStringReadArchive::Process(QString& value)
@@ -235,14 +197,7 @@ bool CJsonStringReadArchive::ReadStringNode(QString &text)
 
 		objIterator = m_objectsStack.last();
 		QJsonObject jsonObject = (*objIterator).toObject();
-//		const iser::CArchiveTag* lastTagPtr = m_tagsStack.back();
 
-	//	Q_ASSERT (lastTagPtr->GetId() == m_currentParent.tagName().toLatin1());
-//		Q_ASSERT (jsonObject.contains(lastTagPtr->GetId()));
-
-//		if (m_currentParent.hasAttribute(m_currentAttribute)){
-//			text = m_currentParent.attribute(m_currentAttribute);
-//		}
 		if (jsonObject.contains(m_currentAttribute)){
 			text = jsonObject.value(m_currentAttribute).toString();
 		}
@@ -252,7 +207,7 @@ bool CJsonStringReadArchive::ReadStringNode(QString &text)
 							istd::IInformationProvider::IC_ERROR,
 							MI_TAG_ERROR,
 							QString("No attribute '%1' found!").arg(QString(m_currentAttribute)),
-							"CompactXmlReader",
+							"JSON Reader",
 							istd::IInformationProvider::ITF_SYSTEM);
 			}
 
@@ -261,8 +216,9 @@ bool CJsonStringReadArchive::ReadStringNode(QString &text)
 	}
 
 	return true;
-
 }
 
 
 } // namespace iser
+
+

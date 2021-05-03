@@ -22,10 +22,11 @@
 
 #include <iser/CJsonStringWriteArchive.h>
 
+
 // Qt includes
 #include <QtCore/QJsonDocument>
 #include <QtCore/QJsonObject>
-#include <QtCore/QIODevice>
+
 
 namespace iser
 {
@@ -34,12 +35,12 @@ namespace iser
 // public methods
 
 CJsonStringWriteArchive::CJsonStringWriteArchive(
-		QByteArray &inputString,
-		const IVersionInfo *versionInfoPtr,
-		QJsonDocument::JsonFormat jsonFormat)
-	: CTextWriteArchiveBase(versionInfoPtr),
-	  m_stream(&inputString,  QIODevice::WriteOnly),
-	  m_jsonFormat(jsonFormat)
+			QByteArray &inputString,
+			const IVersionInfo* versionInfoPtr,
+			QJsonDocument::JsonFormat jsonFormat)
+	:CTextWriteArchiveBase(versionInfoPtr),
+	m_stream(&inputString),
+	m_jsonFormat(jsonFormat)
 {
 	m_firstTag = true;
 }
@@ -59,16 +60,18 @@ bool CJsonStringWriteArchive::IsTagSkippingSupported() const
 }
 
 
-bool CJsonStringWriteArchive::BeginTag(const CArchiveTag &tag)
+bool CJsonStringWriteArchive::BeginTag(const CArchiveTag& tag)
 {
 	m_isSeparatorNeeded = false;
+
 	m_currentAttribute.clear();
 
 	if (m_tagsStack.isEmpty() || (m_tagsStack.back() == NULL) || (m_tagsStack.back()->GetTagType() != iser::CArchiveTag::TT_MULTIPLE)){
 		int tagType = tag.GetTagType();
 		if (m_allowAttribute && (tagType == iser::CArchiveTag::TT_LEAF)){
 			m_currentAttribute = tag.GetId();
-			writeTag(tag, "");
+
+			WriteTag(tag, "");
 
 			m_tagsStack.push_back(NULL);
 
@@ -76,17 +79,14 @@ bool CJsonStringWriteArchive::BeginTag(const CArchiveTag &tag)
 		}
 		else if (tagType == iser::CArchiveTag::TT_WEAK){
 			m_tagsStack.push_back(NULL);
-			writeTag(tag, "{");
+
+			WriteTag(tag, "{");
 
 			return true;
 		}
 	}
-	if (tag.GetId().isEmpty()){
-		writeTag(tag, "{", false);
-	}
-	else{
-		writeTag(tag, "{", true);
-	}
+
+	WriteTag(tag, "{", false);
 
 	m_firstTag = true;
 
@@ -100,7 +100,7 @@ bool CJsonStringWriteArchive::BeginTag(const CArchiveTag &tag)
 
 bool CJsonStringWriteArchive::BeginMultiTag(const CArchiveTag &tag, const CArchiveTag &subTag, int &count)
 {
-	writeTag(tag,"[");
+	WriteTag(tag,"[");
 	m_firstTag = true;
 
 	m_tagsStack.push_back(&tag);
@@ -111,7 +111,6 @@ bool CJsonStringWriteArchive::BeginMultiTag(const CArchiveTag &tag, const CArchi
 
 	return true;
 }
-
 
 bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 {
@@ -145,15 +144,20 @@ bool CJsonStringWriteArchive::Process(QString &value)
 }
 
 
-void CJsonStringWriteArchive::writeTag(const CArchiveTag &tag, QString separator, bool isWriteTag)
+// protected methods
+
+void CJsonStringWriteArchive::WriteTag(const CArchiveTag &tag, QString separator, bool isWriteTag)
 {
 	if (!m_firstTag){
 		m_stream << ",";
 	}
+
 	if (isWriteTag){
 		m_stream << "\"" << tag.GetId() << "\":";
 	}
+
 	m_stream << separator;
+
 	m_firstTag = false;
 }
 
@@ -163,8 +167,11 @@ void CJsonStringWriteArchive::writeTag(const CArchiveTag &tag, QString separator
 bool CJsonStringWriteArchive::WriteTextNode(const QByteArray &text)
 {
 	m_stream << text;
+
 	return true;
 }
 
 
 } // namespace iser
+
+
