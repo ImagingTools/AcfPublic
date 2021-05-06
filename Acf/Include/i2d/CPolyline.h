@@ -107,7 +107,6 @@ public:
 		Get position on this polyline in order to normal position [0..1].
 	*/
 	bool GetInterpolatedPosition(double position, i2d::CVector2d& output) const;
-	i2d::CVector2d GetInterpolatedPosition(double position) const;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive);

@@ -392,6 +392,8 @@ void TRanges<ValueType>::GetInverted(TRanges<ValueType>& result, const TRange<Va
 				break;
 			}
 
+			state = !state;
+
 			if (position > prevPosition){
 				if (!state){
 					result.m_switchPoints.insert(prevPosition);
@@ -400,8 +402,6 @@ void TRanges<ValueType>::GetInverted(TRanges<ValueType>& result, const TRange<Va
 
 				prevPosition = position;
 			}
-
-			state = !state;
 		}
 
 		if (!state){

@@ -74,7 +74,7 @@ private:
 		MS_DONE
 	};
 
-	bool IsDistanceMeasureToolActive() const;
+	bool IsDistanceToolActive() const;
 	void BeginDrag();
 	void EndDrag();
 

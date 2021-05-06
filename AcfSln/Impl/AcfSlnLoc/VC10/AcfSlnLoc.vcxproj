@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4F8B0F4A-6FAB-3CB7-A590-EE6F470EBFBB}</ProjectGuid>
+    <RootNamespace>AcfSlnLoc</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\DebugVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\AcfSlnLoc\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\ReleaseVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\AcfSlnLoc\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\AcfSlnLoc\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\AcfSlnLoc\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\AcfSlnLoc\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\AcfSlnLoc\</ObjectFileName>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\AcfSlnLoc\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\AcfSlnLoc\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\qrc_AcfSlnLoc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\Impl\AcfSlnLoc\Translations\*.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\AcfSlnLoc.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfSlnLoc.qrc;..\Translations\AcfSln_en_US.qm;..\Translations\AcfSln_pl_PL.qm;..\Translations\AcfSln_ru_RU.qm;..\Translations\AcfSln_de_DE.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\rcc.exe -name AcfSlnLoc ..\AcfSlnLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\qrc_AcfSlnLoc.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">RCC ..\AcfSlnLoc.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\qrc_AcfSlnLoc.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\AcfSlnLoc.qrc;..\Translations\AcfSln_en_US.qm;..\Translations\AcfSln_pl_PL.qm;..\Translations\AcfSln_ru_RU.qm;..\Translations\AcfSln_de_DE.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\rcc.exe -name AcfSlnLoc ..\AcfSlnLoc.qrc -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\qrc_AcfSlnLoc.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">RCC ..\AcfSlnLoc.qrc</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\qrc_AcfSlnLoc.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <None Include="..\Translations\AcfSln_de_DE.qm" />
+    <None Include="..\Translations\AcfSln_en_US.qm" />
+    <None Include="..\Translations\AcfSln_pl_PL.qm" />
+    <None Include="..\Translations\AcfSln_ru_RU.qm" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\AcfSlnLoc.acc">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\AcfSlnLoc.acc;..\..\..\..\Acf\Config\AcfConfig.awc;..\..\..\Config\AcfSlnConfig.awc;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfSlnLoc.acc -o ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp -config ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\Config\AcfSlnConfig.awc -conf_name DebugVC10 -env_vars -v</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">ARX-Compiler</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\AcfSlnLoc.acc;..\..\..\..\Acf\Config\AcfConfig.awc;..\..\..\Config\AcfSlnConfig.awc;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(ACF_TOOLS_BIN)\Windows\Arxc.exe ..\AcfSlnLoc.acc -o ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp -config ..\..\..\Impl\AcfSlnLoc\QMake\..\..\..\Config\AcfSlnConfig.awc -conf_name ReleaseVC10 -env_vars -v</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">ARX-Compiler</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\AcfSlnLoc\CAcfSlnLoc.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

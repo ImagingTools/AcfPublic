@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{08277E67-DCC1-3E3B-AEF1-C4A6C7808BB3}</ProjectGuid>
+    <RootNamespace>ifile</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\DebugVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ifile\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\ReleaseVC10\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ifile\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ifile\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC10\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ifile\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ifile\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Debug\ifile\</ObjectFileName>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtConcurrent&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile&quot;;$(QTDIR)\mkspecs\win32-msvc2010;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 /MP /bigobj %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ifile\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\Release\ifile\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_CONCURRENT_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CApplicationInfoBasedFileNameComp.cpp" />
+    <ClCompile Include="..\CAutoPersistenceComp.cpp" />
+    <ClCompile Include="..\CCompactXmlFileReadArchive.cpp" />
+    <ClCompile Include="..\CCompactXmlFileWriteArchive.cpp" />
+    <ClCompile Include="..\CComposedFileMetaInfoProviderComp.cpp" />
+    <ClCompile Include="..\CComposedFilePersistenceComp.cpp" />
+    <ClCompile Include="..\CCompressedXmlFileReadArchive.cpp" />
+    <ClCompile Include="..\CCompressedXmlFileWriteArchive.cpp" />
+    <ClCompile Include="..\CFileArchiveInfo.cpp" />
+    <ClCompile Include="..\CFileListProviderComp.cpp" />
+    <ClCompile Include="..\CFileNameParam.cpp" />
+    <ClCompile Include="..\CFileNameParamComp.cpp" />
+    <ClCompile Include="..\CFileReadArchive.cpp" />
+    <ClCompile Include="..\CFileSerializerCompBase.cpp" />
+    <ClCompile Include="..\CFileSystemInfoProviderComp.cpp" />
+    <ClCompile Include="..\CFileTypeInfoComp.cpp" />
+    <ClCompile Include="..\CFileWriteArchive.cpp" />
+    <ClCompile Include="..\CGeneratedFileNameParamComp.cpp" />
+    <ClCompile Include="..\CRelativeFileNameParamComp.cpp" />
+    <ClCompile Include="..\CSimpleXmlFileReadArchive.cpp" />
+    <ClCompile Include="..\CSimpleXmlFileWriteArchive.cpp" />
+    <ClCompile Include="..\CSystemLocationComp.cpp" />
+    <ClCompile Include="..\CTempFileManagerComp.cpp" />
+    <ClCompile Include="..\CTextFileLogComp.cpp" />
+    <ClCompile Include="..\CTextFileLogStreamerComp.cpp" />
+    <ClCompile Include="..\CTimeStampFileNameParamComp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CApplicationInfoBasedFileNameComp.h" />
+    <CustomBuild Include="..\CAutoPersistenceComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CAutoPersistenceComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ifile/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtConcurrent -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CAutoPersistenceComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CAutoPersistenceComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CAutoPersistenceComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CAutoPersistenceComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CAutoPersistenceComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ifile/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtConcurrent -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CAutoPersistenceComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CAutoPersistenceComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CAutoPersistenceComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CAutoPersistenceComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CCompactXmlFileReadArchive.h" />
+    <ClInclude Include="..\CCompactXmlFileWriteArchive.h" />
+    <ClInclude Include="..\CComposedFileMetaInfoProviderComp.h" />
+    <ClInclude Include="..\CComposedFilePersistenceComp.h" />
+    <ClInclude Include="..\CCompressedXmlFileReadArchive.h" />
+    <ClInclude Include="..\CCompressedXmlFileWriteArchive.h" />
+    <ClInclude Include="..\CFileArchiveInfo.h" />
+    <CustomBuild Include="..\CFileListProviderComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CFileListProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ifile/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtConcurrent -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CFileListProviderComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileListProviderComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CFileListProviderComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileListProviderComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CFileListProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ifile/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtConcurrent -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CFileListProviderComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileListProviderComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CFileListProviderComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileListProviderComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CFileNameParam.h" />
+    <ClInclude Include="..\CFileNameParamComp.h" />
+    <ClInclude Include="..\CFileReadArchive.h" />
+    <ClInclude Include="..\CFileSerializerCompBase.h" />
+    <CustomBuild Include="..\CFileSystemInfoProviderComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CFileSystemInfoProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ifile/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtConcurrent -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CFileSystemInfoProviderComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileSystemInfoProviderComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CFileSystemInfoProviderComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileSystemInfoProviderComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CFileSystemInfoProviderComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_SVG_LIB -DQT_XMLPATTERNS_LIB -DQT_WIDGETS_LIB -DQT_CONCURRENT_LIB -DQT_NETWORK_LIB -DQT_XML_LIB -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1600 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2010 -I../../../Include/ifile/QMake -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../AuxInclude/Qt5_VC10 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtSvg -I$(QTDIR)/include/QtXmlPatterns -I$(QTDIR)/include/QtWidgets -I$(QTDIR)/include/QtConcurrent -I$(QTDIR)/include/QtNetwork -I$(QTDIR)/include/QtXml -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CFileSystemInfoProviderComp.h -o ..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileSystemInfoProviderComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CFileSystemInfoProviderComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileSystemInfoProviderComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CFileTypeInfoComp.h" />
+    <ClInclude Include="..\CFileWriteArchive.h" />
+    <ClInclude Include="..\CGeneratedFileNameParamComp.h" />
+    <ClInclude Include="..\CRelativeFileNameParamComp.h" />
+    <ClInclude Include="..\CSimpleXmlFileReadArchive.h" />
+    <ClInclude Include="..\CSimpleXmlFileWriteArchive.h" />
+    <ClInclude Include="..\CSystemLocationComp.h" />
+    <ClInclude Include="..\CTempFileManagerComp.h" />
+    <ClInclude Include="..\CTextFileLogComp.h" />
+    <ClInclude Include="..\CTextFileLogStreamerComp.h" />
+    <ClInclude Include="..\CTimeStampFileNameParamComp.h" />
+    <ClInclude Include="..\IFileArchiveInfo.h" />
+    <ClInclude Include="..\IFileListProvider.h" />
+    <ClInclude Include="..\IFileMetaInfoProvider.h" />
+    <ClInclude Include="..\IFileNameParam.h" />
+    <ClInclude Include="..\IFilePersistence.h" />
+    <ClInclude Include="..\IFilePersistenceInfo.h" />
+    <ClInclude Include="..\IFileResourceTypeConstraints.h" />
+    <ClInclude Include="..\IFileResourceValidator.h" />
+    <ClInclude Include="..\IFileResourcesManager.h" />
+    <ClInclude Include="..\IFileSystemInfoProvider.h" />
+    <ClInclude Include="..\IFileTypeInfo.h" />
+    <ClInclude Include="..\IRelativeFilePath.h" />
+    <ClInclude Include="..\ITempFileManager.h" />
+    <ClInclude Include="..\TFileSerializerComp.h" />
+    <ClInclude Include="..\TXmlFileSerializerComp.h" />
+    <ClInclude Include="..\ifile.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CAutoPersistenceComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileListProviderComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC10\GeneratedFiles\ifile\moc_CFileSystemInfoProviderComp.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

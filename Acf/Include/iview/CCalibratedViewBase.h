@@ -75,15 +75,9 @@ public:
 	virtual void ConnectCalibrationShape(iview::IShape* shapePtr);
 
 	/**
-		Set distance measure tool active.
+		Set distance tool active.
 	*/
-	virtual void SetDistanceMeasureToolActive(bool state = true);
-
-	/**
-		Set point measure tool active.
-	*/
-	virtual void SetPointMeasureToolActive(bool state = true);
-
+	virtual void SetDistanceToolActive(bool state = true);
 
 	/**
 		Connect visualisation shape for ruler object.
@@ -153,8 +147,7 @@ public:
 	virtual bool IsGridInMm() const;
 
 	// reimplemented (iview::IToolsLayerInfo)
-	virtual bool IsDistanceMeasureToolActive() const;
-	virtual bool IsPointMeasureToolActive() const;
+	virtual bool IsDistanceToolActive() const;
 
 	// reimplemented (i2d::ICalibrationProvider)
 	virtual const i2d::ICalibration2d* GetCalibration() const;
@@ -180,8 +173,7 @@ private:
 	bool m_isGridVisible;
 	bool m_isGridInMm;
 	double m_minGridDistance;
-	bool m_isDistanceMeasureToolActive;
-	bool m_isPointMeasureToolActive;
+	bool m_isDistanceToolActive;
 
 	int m_calibrationLayerIndex;
 	int m_toolsLayerIndex;
@@ -253,40 +245,16 @@ inline bool CCalibratedViewBase::IsGridInMm() const
 }
 
 
-inline bool CCalibratedViewBase::IsDistanceMeasureToolActive() const
+inline bool CCalibratedViewBase::IsDistanceToolActive() const
 {
-	return m_isDistanceMeasureToolActive;
+	return m_isDistanceToolActive;
 }
 
 
-inline void CCalibratedViewBase::SetDistanceMeasureToolActive(bool state)
+inline void CCalibratedViewBase::SetDistanceToolActive(bool state)
 {
-	if (state){
-		m_isPointMeasureToolActive = false;
-	}
-
-	if (m_isDistanceMeasureToolActive != state){
-		m_isDistanceMeasureToolActive = state;
-
-		InvalidateBackground();
-	}
-}
-
-
-inline bool CCalibratedViewBase::IsPointMeasureToolActive() const
-{
-	return m_isPointMeasureToolActive;
-}
-
-
-inline void CCalibratedViewBase::SetPointMeasureToolActive(bool state)
-{
-	if (state){
-		m_isDistanceMeasureToolActive = false;
-	}
-
-	if (m_isPointMeasureToolActive != state){
-		m_isPointMeasureToolActive = state;
+	if (m_isDistanceToolActive != state){
+		m_isDistanceToolActive = state;
 
 		InvalidateBackground();
 	}

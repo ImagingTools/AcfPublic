@@ -97,10 +97,8 @@ public:
 	void SetGridVisible(bool state = true);
 	bool IsRulerVisible() const;
 	void SetRulerVisible(bool state = true);
-	bool IsDistanceMeasureToolActive() const;
-	void SetDistanceMeasureToolActive(bool state = true);
-	bool IsPointMeasureToolActive() const;
-	void SetPointMeasureToolActive(bool state = true);
+	bool IsDistanceToolActive() const;
+	void SetDistanceToolActive(bool state = true);
 	bool IsGridInMm() const;
 	void SetGridInMm(bool state = true);
 
@@ -129,10 +127,8 @@ public:
 	void SetRulerButtonVisible(bool state = true);
 	bool IsMmButtonVisible() const;
 	void SetMmButtonVisible(bool state = true);
-	bool IsDistanceMeasureButtonVisible() const;
-	void SetDistanceMeasureButtonVisible(bool state = true);
-	bool IsPointMeasureButtonVisible() const;
-	void SetPointMeasureButtonVisible(bool state = true);
+	bool IsDistanceButtonVisible() const;
+	void SetDistanceButtonVisible(bool state = true);
 
 	// fullscreen
 	bool IsFullScreenAllowed() const;
@@ -207,8 +203,7 @@ private:
 	bool m_isGridButtonVisible;
 	bool m_isRulerButtonVisible;
 	bool m_isMmButtonVisible;
-	bool m_isDistanceMeasureButtonVisible;
-	bool m_isPointMeasureButtonVisible;
+	bool m_isDistanceButtonVisible;
 
 	iview::CScreenTransform m_storedFitTransform;
 
