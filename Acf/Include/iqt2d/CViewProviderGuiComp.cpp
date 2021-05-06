@@ -121,20 +121,12 @@ void CViewProviderGuiComp::OnGuiCreated()
 		view.ConnectCalibrationShape(m_calibrationShapeCompPtr.GetPtr());
 	}
 
-	if (m_distanceMeasureShapeCompPtr.IsValid()){
-		view.ConnectToolShape(m_distanceMeasureShapeCompPtr.GetPtr());
-		consolePtr->SetDistanceMeasureButtonVisible(true);
+	if (m_distanceShapeCompPtr.IsValid()){
+		view.ConnectToolShape(m_distanceShapeCompPtr.GetPtr());
+		consolePtr->SetDistanceButtonVisible(true);
 	}
 	else{
-		consolePtr->SetDistanceMeasureButtonVisible(false);
-	}
-
-	if (m_pointMeasureShapeCompPtr.IsValid()) {
-		view.ConnectToolShape(m_pointMeasureShapeCompPtr.GetPtr());
-		consolePtr->SetPointMeasureButtonVisible(true);
-	}
-	else {
-		consolePtr->SetPointMeasureButtonVisible(false);
+		consolePtr->SetDistanceButtonVisible(false);
 	}
 
 	if (m_backgroundModeAttrPtr.IsValid()){

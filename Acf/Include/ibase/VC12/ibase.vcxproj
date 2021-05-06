@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{898A7769-D98C-30E1-B483-9E3FC1370038}</ProjectGuid>
+    <RootNamespace>ibase</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\DebugVC12\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\ibase\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\ReleaseVC12\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\ibase\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC12\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\ibase\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC12\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\ibase\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\ibase\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\ibase\</ObjectFileName>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\ibase\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\ibase\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CApplicationInfoComp.cpp" />
+    <ClCompile Include="..\CConsoleApplicationComp.cpp" />
+    <ClCompile Include="..\CDelegatedProgressManager.cpp" />
+    <ClCompile Include="..\CInstantiatorComp.cpp" />
+    <ClCompile Include="..\CModelBinderComp.cpp" />
+    <ClCompile Include="..\CMultiObserverBinderComp.cpp" />
+    <ClCompile Include="..\CObjectQueueComp.cpp" />
+    <ClCompile Include="..\CObjectSynchronizerComp.cpp" />
+    <ClCompile Include="..\CQtVersionInfoComp.cpp" />
+    <ClCompile Include="..\CSize.cpp" />
+    <ClCompile Include="..\CUuidComp.cpp" />
+    <ClCompile Include="..\CVersionInfoComp.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CApplicationInfoComp.h" />
+    <CustomBuild Include="..\CConsoleApplicationComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CConsoleApplicationComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/ibase/QMake -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConsoleApplicationComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CConsoleApplicationComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CConsoleApplicationComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/ibase/QMake -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CConsoleApplicationComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CConsoleApplicationComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CDelegatedProgressManager.h" />
+    <ClInclude Include="..\CInstantiatorComp.h" />
+    <ClInclude Include="..\CModelBinderComp.h" />
+    <ClInclude Include="..\CMultiObserverBinderComp.h" />
+    <ClInclude Include="..\CObjectQueueComp.h" />
+    <ClInclude Include="..\CObjectSynchronizerComp.h" />
+    <ClInclude Include="..\CQtVersionInfoComp.h" />
+    <ClInclude Include="..\CSize.h" />
+    <ClInclude Include="..\CUuidComp.h" />
+    <ClInclude Include="..\CVersionInfoComp.h" />
+    <ClInclude Include="..\IApplication.h" />
+    <ClInclude Include="..\IApplicationInfo.h" />
+    <ClInclude Include="..\ICommand.h" />
+    <ClInclude Include="..\ICommandsProvider.h" />
+    <ClInclude Include="..\IObjectQueue.h" />
+    <ClInclude Include="..\IProgressManager.h" />
+    <ClInclude Include="..\IQtItemModelProvider.h" />
+    <ClInclude Include="..\IRuntimeStatusProvider.h" />
+    <ClInclude Include="..\TCommandsProviderCompWrap.h" />
+    <ClInclude Include="..\TComposedFactoryComp.h" />
+    <ClInclude Include="..\TContainer.h" />
+    <ClInclude Include="..\TFactorisableContainer.h" />
+    <ClInclude Include="..\TLocalizableWrap.h" />
+    <ClInclude Include="..\TMakeModelObserverCompWrap.h" />
+    <ClInclude Include="..\TModelObserverCompWrap.h" />
+    <ClInclude Include="..\TMsbWord.h" />
+    <ClInclude Include="..\TRuntimeStatusHanderCompWrap.h" />
+    <ClInclude Include="..\TSerializableContainer.h" />
+    <ClInclude Include="..\TVersionInfoBase.h" />
+    <ClInclude Include="..\ibase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\ibase\moc_CConsoleApplicationComp.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

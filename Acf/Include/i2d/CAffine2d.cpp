@@ -22,9 +22,6 @@
 
 #include <i2d/CAffine2d.h>
 
-// std includes
-#include <cmath>
-
 
 namespace i2d
 {
