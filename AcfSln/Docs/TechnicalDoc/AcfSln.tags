@@ -3916,6 +3916,7 @@
   <compound kind="class">
     <name>icam::CAcquisitionConstraintsComp</name>
     <filename>classicam_1_1_c_acquisition_constraints_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ITriggerConstraints</base>
     <base virtualness="virtual">icam::IExposureConstraints</base>
     <member kind="typedef">
@@ -3976,6 +3977,8 @@
   <compound kind="class">
     <name>icalib::CAffineCalibration2d</name>
     <filename>classicalib_1_1_c_affine_calibration2d.html</filename>
+    <base>i2d::CAffineTransformation2d</base>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="typedef">
       <type>i2d::CAffineTransformation2d</type>
       <name>BaseClass</name>
@@ -4092,6 +4095,7 @@
   <compound kind="class">
     <name>icalib::CAffineCalibration2dComp</name>
     <filename>classicalib_1_1_c_affine_calibration2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>icalib::CAffineCalibration2d</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -4125,6 +4129,9 @@
   <compound kind="class">
     <name>icalib::CAffineCalibrationProviderComp</name>
     <filename>classicalib_1_1_c_affine_calibration_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base>i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -4244,6 +4251,7 @@
   <compound kind="class">
     <name>icmpstr::CAttributeEditorComp</name>
     <filename>classicmpstr_1_1_c_attribute_editor_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CAttributeEditorComp &gt;, CElementSelectionInfoManagerBase &gt;</base>
     <class kind="struct">icmpstr::CAttributeEditorComp::AttrInfo</class>
     <member kind="enumeration">
       <type></type>
@@ -5044,6 +5052,7 @@
   <compound kind="class">
     <name>icam::CBitmapJoinerCompBase</name>
     <filename>classicam_1_1_c_bitmap_joiner_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <class kind="struct">icam::CBitmapJoinerCompBase::ImageInfo</class>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -5099,6 +5108,7 @@
     <name>iipr::CBitmapJoinerSupplierComp</name>
     <filename>classiipr_1_1_c_bitmap_joiner_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; i2d::ITransformation2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -5277,6 +5287,9 @@
   <compound kind="class">
     <name>iipr::CBitmapProviderCacheComp</name>
     <filename>classiipr_1_1_c_bitmap_provider_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -5316,6 +5329,8 @@
   <compound kind="class">
     <name>iqtcam::CBitmapSupplierGuiComp</name>
     <filename>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</filename>
+    <base>TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
     <member kind="typedef">
       <type>ilog::TLoggerCompWrap&lt; iqtinsp::TSupplierGuiCompBase&lt; Ui::CBitmapSupplierGuiComp &gt; &gt;</type>
       <name>BaseClass</name>
@@ -5461,6 +5476,8 @@
     <name>icam::CBitmapSupplierMultiplexerComp</name>
     <filename>classicam_1_1_c_bitmap_supplier_multiplexer_comp.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -5766,6 +5783,7 @@
   <compound kind="class">
     <name>iblob::CBlobFilterParamsComp</name>
     <filename>classiblob_1_1_c_blob_filter_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iblob::CBlobFilterParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -5792,6 +5810,7 @@
   <compound kind="class">
     <name>iblobgui::CBlobFilterParamsGuiComp</name>
     <filename>classiblobgui_1_1_c_blob_filter_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CBlobFilterParamsGuiComp, iblob::IBlobFilterParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CBlobFilterParamsGuiComp, iblob::IBlobFilterParams &gt;</type>
       <name>BaseClass</name>
@@ -5946,6 +5965,8 @@
   <compound kind="class">
     <name>icalib::CCalibration2dProxyComp</name>
     <filename>classicalib_1_1_c_calibration2d_proxy_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::ICalibration2d</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -6290,6 +6311,7 @@
   <compound kind="class">
     <name>iipr::CCaliperParamsComp</name>
     <filename>classiipr_1_1_c_caliper_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CCaliperParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -6309,6 +6331,7 @@
   <compound kind="class">
     <name>iqtipr::CCaliperParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_caliper_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CCaliperParamsGuiComp, iipr::ICaliperParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCaliperParamsGuiComp, iipr::ICaliperParams &gt;</type>
       <name>BaseClass</name>
@@ -6362,6 +6385,7 @@
   <compound kind="class">
     <name>icam::CCameraDelegatorComp</name>
     <filename>classicam_1_1_c_camera_delegator_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>icam::IBitmapAcquisition</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -6458,6 +6482,7 @@
   <compound kind="class">
     <name>iqtcam::CCameraInfoGuiComp</name>
     <filename>classiqtcam_1_1_c_camera_info_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CCameraInfoGuiComp, iprm::ISelectionParam &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCameraInfoGuiComp, iprm::ISelectionParam &gt;</type>
       <name>BaseClass</name>
@@ -6476,6 +6501,7 @@
   <compound kind="class">
     <name>icam::CCameraMultiplexerComp</name>
     <filename>classicam_1_1_c_camera_multiplexer_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">icam::IBitmapAcquisition</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -6598,6 +6624,7 @@
   <compound kind="class">
     <name>iproc::CCascadedProcessorComp</name>
     <filename>classiproc_1_1_c_cascaded_processor_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -7193,6 +7220,7 @@
     <name>iipr::CCheckboardCalibSupplierComp</name>
     <filename>classiipr_1_1_c_checkboard_calib_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; icalib::CPerspectiveCalibration2d &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <class kind="class">iipr::CCheckboardCalibSupplierComp::ChessboardParamsContraints</class>
     <class kind="struct">iipr::CCheckboardCalibSupplierComp::LineInfo</class>
     <class kind="class">iipr::CCheckboardCalibSupplierComp::LinesConsumer</class>
@@ -7376,6 +7404,7 @@
   <compound kind="class">
     <name>iipr::CCircleFinderParamsComp</name>
     <filename>classiipr_1_1_c_circle_finder_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CCircleFinderParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -7402,6 +7431,7 @@
   <compound kind="class">
     <name>iqtipr::CCircleFinderParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_circle_finder_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CCircleFinderParamsGuiComp, iipr::ICircleFinderParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CCircleFinderParamsGuiComp, iipr::ICircleFinderParams &gt;</type>
       <name>BaseClass</name>
@@ -7581,6 +7611,8 @@
     <filename>classiipr_1_1_c_color_pattern_comparator_comp.html</filename>
     <base>TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</base>
     <base virtualness="virtual">iipr::IFeaturesProvider</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; imeas::CSimpleNumericValue &gt;</type>
       <name>BaseClass</name>
@@ -7723,8 +7755,11 @@
   <compound kind="class">
     <name>iipr::CColorPatternControllerComp</name>
     <filename>classiipr_1_1_c_color_pattern_controller_comp.html</filename>
+    <base virtualness="virtual">ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iipr::IPatternController</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
     <base virtualness="virtual">imeas::IDataSequenceProvider</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -7792,6 +7827,7 @@
   <compound kind="class">
     <name>icomm::CCommonVersionInfo</name>
     <filename>classicomm_1_1_c_common_version_info.html</filename>
+    <base virtualness="virtual">iser::IVersionInfo</base>
     <class kind="struct">icomm::CCommonVersionInfo::VersionIdElement</class>
     <member kind="function">
       <type></type>
@@ -7853,6 +7889,8 @@
   <compound kind="class">
     <name>icmpstr::CComponentHelpFileProviderComp</name>
     <filename>classicmpstr_1_1_c_component_help_file_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">idoc::IHelpFileProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -7899,6 +7937,8 @@
   <compound kind="class">
     <name>icmpstr::CComponentNoteEditorComp</name>
     <filename>classicmpstr_1_1_c_component_note_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CComponentNoteEditorComp, IElementSelectionInfo &gt;</type>
       <name>BaseClass</name>
@@ -7973,6 +8013,7 @@
   <compound kind="class">
     <name>ifileproc::CComposedCopyFilesComp</name>
     <filename>classifileproc_1_1_c_composed_copy_files_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="enumeration">
       <type></type>
@@ -8011,6 +8052,8 @@
   <compound kind="class">
     <name>iinsp::CComposedInformationProviderComp</name>
     <filename>classiinsp_1_1_c_composed_information_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -8085,6 +8128,8 @@
   <compound kind="class">
     <name>iwiz::CComposedStateControllerComp</name>
     <filename>classiwiz_1_1_c_composed_state_controller_comp.html</filename>
+    <base>iprm::CComposedParamsSetComp</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <base virtualness="virtual">iproc::IStateController</base>
     <member kind="typedef">
       <type>iprm::CComposedParamsSetComp</type>
@@ -8188,6 +8233,9 @@
   <compound kind="class">
     <name>icmpstr::CConvertComponentCommandComp</name>
     <filename>classicmpstr_1_1_c_convert_component_command_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -8337,6 +8385,7 @@
   <compound kind="class">
     <name>iqtipr::CConvolution2dParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_convolution2d_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CConvolution2dParamsGuiComp, iipr::IConvolutionKernel2d &gt;</type>
       <name>BaseClass</name>
@@ -8390,6 +8439,7 @@
   <compound kind="class">
     <name>iipr::CConvolutionKernel2d</name>
     <filename>classiipr_1_1_c_convolution_kernel2d.html</filename>
+    <base virtualness="virtual">imath::CSampledFunction2d</base>
     <base virtualness="virtual">iipr::IConvolutionKernel2d</base>
     <member kind="typedef">
       <type>imath::CSampledFunction2d</type>
@@ -8507,6 +8557,7 @@
   <compound kind="class">
     <name>iipr::CConvolutionKernel2dComp</name>
     <filename>classiipr_1_1_c_convolution_kernel2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CConvolutionKernel2d</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -8559,6 +8610,8 @@
   <compound kind="class">
     <name>ifileproc::CCopyAppComp</name>
     <filename>classifileproc_1_1_c_copy_app_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ibase::IApplication</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -8598,6 +8651,7 @@
   <compound kind="class">
     <name>ifileproc::CCopyFilesTreeComp</name>
     <filename>classifileproc_1_1_c_copy_files_tree_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="enumeration">
       <type></type>
@@ -8754,6 +8808,7 @@
   <compound kind="class">
     <name>iqtmeas::CDataSequenceSupplierResultsViewComp</name>
     <filename>classiqtmeas_1_1_c_data_sequence_supplier_results_view_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::IDataSequenceProvider &gt; &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::IDataSequenceProvider &gt; &gt;</type>
       <name>BaseClass</name>
@@ -8786,6 +8841,7 @@
   <compound kind="class">
     <name>iqtmeas::CDataSequenceViewComp</name>
     <filename>classiqtmeas_1_1_c_data_sequence_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CDataSequenceViewComp, imeas::IDataSequence &gt;</base>
     <class kind="class">iqtmeas::CDataSequenceViewComp::DiagramWidget</class>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDataSequenceViewComp, imeas::IDataSequence &gt;</type>
@@ -8896,6 +8952,7 @@
   <compound kind="class">
     <name>iqtmeas::CDataStatisticsGuiComp</name>
     <filename>classiqtmeas_1_1_c_data_statistics_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CDataStatisticsGuiComp, imeas::IDataStatistics &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDataStatisticsGuiComp, imeas::IDataStatistics &gt;</type>
       <name>BaseClass</name>
@@ -8914,6 +8971,10 @@
   <compound kind="class">
     <name>iipr::CDelegatedBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_delegated_bitmap_supplier_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -9018,6 +9079,8 @@
     <name>iipr::CDifferenceBitmapSupplierComp</name>
     <filename>classiipr_1_1_c_difference_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; i2d::ICalibration2d *, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -9133,6 +9196,7 @@
   <compound kind="class">
     <name>ihotfgui::CDirectoryMonitorComp</name>
     <filename>classihotfgui_1_1_c_directory_monitor_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ihotf::IDirectoryMonitor</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -9353,6 +9417,7 @@
   <compound kind="class">
     <name>ihotf::CDirectoryMonitorParamsComp</name>
     <filename>classihotf_1_1_c_directory_monitor_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>ihotf::CDirectoryMonitorParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -9379,6 +9444,7 @@
   <compound kind="class">
     <name>ihotfgui::CDirectoryMonitorParamsGui</name>
     <filename>classihotfgui_1_1_c_directory_monitor_params_gui.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CDirectoryMonitorParamsGui, ihotf::IDirectoryMonitorParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CDirectoryMonitorParamsGui, ihotf::IDirectoryMonitorParams &gt;</type>
       <name>BaseClass</name>
@@ -9568,6 +9634,9 @@
   <compound kind="class">
     <name>iprocgui::CDocumentProcessingManagerCompBase</name>
     <filename>classiprocgui_1_1_c_document_processing_manager_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -9672,6 +9741,9 @@
     <filename>classiedge_1_1_c_edge_based_features_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, std::vector&lt; icalib::CAffineCalibration2d &gt; &gt; &gt;</base>
     <base virtualness="virtual">iipr::IFeaturesProvider</base>
+    <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; iipr::CFeaturesContainer, std::vector&lt; icalib::CAffineCalibration2d &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -9802,6 +9874,7 @@
   <compound kind="class">
     <name>iipr::CEdgeDistanceProcessorComp</name>
     <filename>classiipr_1_1_c_edge_distance_processor_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
     <class kind="struct">iipr::CEdgeDistanceProcessorComp::CaliperLine</class>
     <class kind="struct">iipr::CEdgeDistanceProcessorComp::Point</class>
@@ -9899,6 +9972,7 @@
   <compound kind="class">
     <name>iedge::CEdgeLine</name>
     <filename>classiedge_1_1_c_edge_line.html</filename>
+    <base>i2d::CObject2dBase</base>
     <member kind="typedef">
       <type>i2d::CObject2dBase</type>
       <name>BaseClass</name>
@@ -10113,6 +10187,8 @@
   <compound kind="class">
     <name>iedge::CEdgeLineContainer</name>
     <filename>classiedge_1_1_c_edge_line_container.html</filename>
+    <base>TSerializableContainer&lt; CEdgeLine, std::vector&lt; CEdgeLine &gt; &gt;</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="typedef">
       <type>ibase::TSerializableContainer&lt; CEdgeLine, std::vector&lt; CEdgeLine &gt; &gt;</type>
       <name>BaseClass</name>
@@ -10215,6 +10291,7 @@
   <compound kind="class">
     <name>iedgegui::CEdgeLineContainerShape</name>
     <filename>classiedgegui_1_1_c_edge_line_container_shape.html</filename>
+    <base>iview::CShapeBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -10364,6 +10441,7 @@
   <compound kind="class">
     <name>iedge::CEdgeNode</name>
     <filename>classiedge_1_1_c_edge_node.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CEdgeNode</name>
@@ -10419,6 +10497,7 @@
     <filename>classiedge_1_1_c_edges_reductor_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</type>
       <name>BaseClass</name>
@@ -10549,6 +10628,7 @@
   <compound kind="class">
     <name>icmpstr::CElementSelectionInfoManagerBase</name>
     <filename>classicmpstr_1_1_c_element_selection_info_manager_base.html</filename>
+    <base>TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</base>
     <member kind="typedef">
       <type>imod::TSingleModelObserverBase&lt; IElementSelectionInfo &gt;</type>
       <name>BaseClass</name>
@@ -10609,6 +10689,7 @@
   <compound kind="class">
     <name>icam::CExposureParamsComp</name>
     <filename>classicam_1_1_c_exposure_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">icam::IExposureParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -10691,6 +10772,7 @@
   <compound kind="class">
     <name>iqtcam::CExposureParamsGuiComp</name>
     <filename>classiqtcam_1_1_c_exposure_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CExposureParamsGuiComp, icam::IExposureParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CExposureParamsGuiComp, icam::IExposureParams &gt;</type>
       <name>BaseClass</name>
@@ -10737,6 +10819,7 @@
   <compound kind="class">
     <name>ifileproc::CExternalFileConverterComp</name>
     <filename>classifileproc_1_1_c_external_file_converter_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -10797,6 +10880,7 @@
   <compound kind="class">
     <name>iipr::CExtremumCaliperProcessorComp</name>
     <filename>classiipr_1_1_c_extremum_caliper_processor_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; ICaliperProcessor &gt;</base>
     <base virtualness="virtual">iipr::IFeatureToProjectionMapper</base>
     <member kind="typedef">
@@ -10881,6 +10965,7 @@
     <filename>classiedge_1_1_c_fast_edges_extractor_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</type>
       <name>BaseClass</name>
@@ -11074,6 +11159,7 @@
   <compound kind="class">
     <name>iipr::CFeatureToImageMapperProcessorComp</name>
     <filename>classiipr_1_1_c_feature_to_image_mapper_processor_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>TSyncProcessorWrap&lt; IFeatureToFeatureProcessor &gt;</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -11107,6 +11193,7 @@
   <compound kind="class">
     <name>iqtcam::CFileAcquisitionComp</name>
     <filename>classiqtcam_1_1_c_file_acquisition_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <class kind="struct">iqtcam::CFileAcquisitionComp::ParamsInfo</class>
     <member kind="typedef">
@@ -11183,6 +11270,7 @@
   <compound kind="class">
     <name>ifileproc::CFileConvertOverProcessorComp</name>
     <filename>classifileproc_1_1_c_file_convert_over_processor_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -11202,6 +11290,7 @@
   <compound kind="class">
     <name>ifileproc::CFileCopyOverLoaderComp</name>
     <filename>classifileproc_1_1_c_file_copy_over_loader_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -11221,6 +11310,7 @@
   <compound kind="class">
     <name>ifileproc::CFileInfoCopyComp</name>
     <filename>classifileproc_1_1_c_file_info_copy_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="enumeration">
       <type></type>
@@ -11333,6 +11423,7 @@
   <compound kind="class">
     <name>ifileproc::CFileNamingComp</name>
     <filename>classifileproc_1_1_c_file_naming_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileNaming</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -11497,6 +11588,7 @@
   <compound kind="class">
     <name>ifileproc::CFileNamingParamsComp</name>
     <filename>classifileproc_1_1_c_file_naming_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>ifileproc::CFileNamingParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -11523,6 +11615,7 @@
   <compound kind="class">
     <name>ihotfgui::CFileNamingParamsGuiComp</name>
     <filename>classihotfgui_1_1_c_file_naming_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CFileNamingParamsGuiComp, ifileproc::IFileNamingParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CFileNamingParamsGuiComp, ifileproc::IFileNamingParams &gt;</type>
       <name>BaseClass</name>
@@ -11562,6 +11655,7 @@
   <compound kind="class">
     <name>ifileproc::CFilePathesContainer</name>
     <filename>classifileproc_1_1_c_file_pathes_container.html</filename>
+    <base virtualness="virtual">ifile::IFileListProvider</base>
     <member kind="function">
       <type>void</type>
       <name>ResetFiles</name>
@@ -11643,6 +11737,7 @@
     <filename>classiqtmm_1_1_c_frame_seq_video_controller_comp.html</filename>
     <base>TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</type>
       <name>BaseClass</name>
@@ -11854,6 +11949,7 @@
     <name>imeas::CGeneralDataSequence</name>
     <filename>classimeas_1_1_c_general_data_sequence.html</filename>
     <base virtualness="virtual">imeas::IDataSequence</base>
+    <base virtualness="virtual">imath::TISampledFunction</base>
     <member kind="function">
       <type></type>
       <name>CGeneralDataSequence</name>
@@ -12117,6 +12213,7 @@
     <name>imeas::CGeneralNumericConstraints</name>
     <filename>classimeas_1_1_c_general_numeric_constraints.html</filename>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="function">
       <type>void</type>
       <name>Reset</name>
@@ -12273,6 +12370,7 @@
   <compound kind="class">
     <name>iqtipr::CGeneralSearchParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_general_search_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CGeneralSearchParamsGuiComp, iipr::ISearchParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CGeneralSearchParamsGuiComp, iipr::ISearchParams &gt;</type>
       <name>BaseClass</name>
@@ -12380,6 +12478,7 @@
   <compound kind="class">
     <name>iipr::CGeometryMessage</name>
     <filename>classiipr_1_1_c_geometry_message.html</filename>
+    <base>ilog::CExtMessage</base>
     <member kind="typedef">
       <type>ilog::CExtMessage</type>
       <name>BaseClass</name>
@@ -12817,6 +12916,7 @@
   <compound kind="class">
     <name>icomm::CHeartbeatQuestion</name>
     <filename>classicomm_1_1_c_heartbeat_question.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CHeartbeatQuestion</name>
@@ -12899,6 +12999,7 @@
     <name>iipr::CCheckboardCalibSupplierComp::ChessboardParamsContraints</name>
     <filename>classiipr_1_1_c_checkboard_calib_supplier_comp_1_1_chessboard_params_contraints.html</filename>
     <base>imeas::INumericConstraints</base>
+    <base protection="protected">iprm::IOptionsList</base>
     <member kind="function">
       <type></type>
       <name>ChessboardParamsContraints</name>
@@ -13052,6 +13153,7 @@
   <compound kind="class">
     <name>iipr::CHoughLineFinderComp</name>
     <filename>classiipr_1_1_c_hough_line_finder_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
     <member kind="enumeration">
       <type></type>
@@ -13130,6 +13232,7 @@
   <compound kind="class">
     <name>iipr::CHoughLineFromPosFinderComp</name>
     <filename>classiipr_1_1_c_hough_line_from_pos_finder_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>TSyncProcessorWrap&lt; IFeatureToFeatureProcessor &gt;</base>
     <member kind="enumeration">
       <type></type>
@@ -13236,6 +13339,7 @@
   <compound kind="class">
     <name>ialgo::CHoughSpace2d</name>
     <filename>classialgo_1_1_c_hough_space2d.html</filename>
+    <base>iimg::CGeneralBitmap</base>
     <base virtualness="virtual">TIHoughSpace&lt; 2 &gt;</base>
     <member kind="typedef">
       <type>iimg::CGeneralBitmap</type>
@@ -13388,6 +13492,7 @@
   <compound kind="class">
     <name>iinsp::CIdProviderCacheComp</name>
     <filename>classiinsp_1_1_c_id_provider_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iinsp::IIdProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -13772,6 +13877,7 @@
   <compound kind="class">
     <name>iipr::CImageInterpolationParamsComp</name>
     <filename>classiipr_1_1_c_image_interpolation_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CImageInterpolationParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -13791,6 +13897,7 @@
   <compound kind="class">
     <name>iqtipr::CImageInterpolationParamsGuiComp</name>
     <filename>classiqtipr_1_1_c_image_interpolation_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CImageInterpolationParamsGuiComp, iipr::IImageInterpolationParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CImageInterpolationParamsGuiComp, iipr::IImageInterpolationParams &gt;</type>
       <name>BaseClass</name>
@@ -14041,6 +14148,8 @@
   <compound kind="class">
     <name>iinsp::CInformationProviderCacheComp</name>
     <filename>classiinsp_1_1_c_information_provider_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -14115,8 +14224,11 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp</name>
     <filename>classiinsp_1_1_c_inspection_task_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::IInspectionTask</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
+    <base protection="protected">imod::CModelUpdateBridge</base>
     <class kind="class">iinsp::CInspectionTaskComp::MessageContainer</class>
     <class kind="class">iinsp::CInspectionTaskComp::Parameters</class>
     <class kind="class">iinsp::CInspectionTaskComp::Status</class>
@@ -14497,6 +14609,9 @@
   <compound kind="class">
     <name>iqtinsp::CInspectionTaskGuiComp</name>
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp.html</filename>
+    <base>TRestorableGuiWrap&lt; TResultShapeCreatorWrap&lt; CInspectionTaskGuiCompBase &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumeration">
       <type></type>
       <name>DataRole</name>
@@ -14802,6 +14917,7 @@
   <compound kind="class">
     <name>iqtinsp::CInspectionTaskGuiCompBase</name>
     <filename>classiqtinsp_1_1_c_inspection_task_gui_comp_base.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CInspectionTaskGuiComp, iinsp::IInspectionTask &gt;</type>
       <name>BaseClass</name>
@@ -14820,7 +14936,9 @@
   <compound kind="class">
     <name>iproc::CIterativeProcessorComp</name>
     <filename>classiproc_1_1_c_iterative_processor_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
+    <base virtualness="virtual">iprm::IOptionsList</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -14922,6 +15040,7 @@
     <name>iipr::CLensCorrFindSupplierComp</name>
     <filename>classiipr_1_1_c_lens_corr_find_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; icalib::CSimpleLensCorrection &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <class kind="struct">iipr::CLensCorrFindSupplierComp::CorrectionInfo</class>
     <class kind="struct">iipr::CLensCorrFindSupplierComp::CorrectionLineInfo</class>
     <class kind="struct">iipr::CLensCorrFindSupplierComp::FeatureInfo</class>
@@ -15021,6 +15140,7 @@
   <compound kind="class">
     <name>imeas::CLinearAdjustParamsComp</name>
     <filename>classimeas_1_1_c_linear_adjust_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::ILinearAdjustParams</base>
     <base virtualness="virtual">imeas::INumericValue</base>
     <base protection="protected" virtualness="virtual">imeas::INumericConstraints</base>
@@ -15292,6 +15412,7 @@
   <compound kind="class">
     <name>iqtauth::CLoginBarGuiComp</name>
     <filename>classiqtauth_1_1_c_login_bar_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CLoginBarGuiComp &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CLoginBarGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -15345,6 +15466,8 @@
   <compound kind="class">
     <name>iqtmm::CMediaLoaderComp</name>
     <filename>classiqtmm_1_1_c_media_loader_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -15391,6 +15514,8 @@
   <compound kind="class">
     <name>icam::CMemoryAcquisitionComp</name>
     <filename>classicam_1_1_c_memory_acquisition_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>iimg::CGeneralBitmap</base>
     <base virtualness="virtual">TSyncProcessorWrap&lt; IBitmapAcquisition &gt;</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -15425,6 +15550,8 @@
     <name>iqtinsp::CMessageBasedViewExtenderComp</name>
     <filename>classiqtinsp_1_1_c_message_based_view_extender_comp.html</filename>
     <base>TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</base>
+    <base virtualness="virtual">iqt2d::IViewExtender</base>
+    <base protection="private">imod::CMultiModelDispatcherBase</base>
     <class kind="struct">iqtinsp::CMessageBasedViewExtenderComp::Shape</class>
     <member kind="typedef">
       <type>iqtinsp::TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</type>
@@ -15528,6 +15655,8 @@
   <compound kind="class">
     <name>iproc::CModelBasedProcessingTriggerComp</name>
     <filename>classiproc_1_1_c_model_based_processing_trigger_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -15600,6 +15729,7 @@
   <compound kind="class">
     <name>ihotf::CMonitoringSessionsManager</name>
     <filename>classihotf_1_1_c_monitoring_sessions_manager.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <base virtualness="virtual">ihotf::IMonitoringSessionManager</base>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -15961,6 +16091,10 @@
   <compound kind="class">
     <name>iipr::CMultiBitmapCacheComp</name>
     <filename>classiipr_1_1_c_multi_bitmap_cache_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -16160,6 +16294,8 @@
     <name>icam::CMultiCameraBitmapSupplierComp</name>
     <filename>classicam_1_1_c_multi_camera_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; istd::TPointerVector&lt; const iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -16490,6 +16626,7 @@
     <name>iipr::CMultiPointPosCorrSupplierComp</name>
     <filename>classiipr_1_1_c_multi_point_pos_corr_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt; &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt; &gt;</type>
       <name>BaseClass</name>
@@ -16569,6 +16706,7 @@
   <compound kind="class">
     <name>icalib::CNoneCalibration2d</name>
     <filename>classicalib_1_1_c_none_calibration2d.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CRectangle *</type>
       <name>GetArgumentArea</name>
@@ -16692,6 +16830,7 @@
   <compound kind="class">
     <name>icalibgui::CNoneCalibrationShape</name>
     <filename>classicalibgui_1_1_c_none_calibration_shape.html</filename>
+    <base>iview::CShapeBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -16759,7 +16898,11 @@
   <compound kind="class">
     <name>imeas::CNumericConstraintsComp</name>
     <filename>classimeas_1_1_c_numeric_constraints_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base virtualness="virtual">imath::IUnitInfo</base>
+    <base protection="protected">imath::CDoubleManip</base>
+    <base protection="protected">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -16876,7 +17019,9 @@
   <compound kind="class">
     <name>imeas::CNumericParamsComp</name>
     <filename>classimeas_1_1_c_numeric_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>imeas::CSimpleNumericValue</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -16923,6 +17068,8 @@
   <compound kind="class">
     <name>iqtmeas::CNumericParamsGuiComp</name>
     <filename>classiqtmeas_1_1_c_numeric_params_gui_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; QWidget &gt;, imod::TSingleModelObserverBase&lt; imeas::INumericValue &gt; &gt;</type>
       <name>BaseClass</name>
@@ -17325,6 +17472,8 @@
   <compound kind="class">
     <name>icmpstr::CPackageOverviewComp</name>
     <filename>classicmpstr_1_1_c_package_overview_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPackageOverviewComp, icomp::IRegistry &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">icmpstr::IAttributeSelectionObserver</base>
     <class kind="struct">icmpstr::CPackageOverviewComp::RootInfo</class>
     <member kind="typedef">
@@ -17590,6 +17739,7 @@
   <compound kind="class">
     <name>icmpstr::CPackagesLoaderExtComp</name>
     <filename>classicmpstr_1_1_c_packages_loader_ext_comp.html</filename>
+    <base>ipackage::CPackagesLoaderComp</base>
     <base virtualness="virtual">icmpstr::IExternalMetaInfoManager</base>
     <member kind="typedef">
       <type>ipackage::CPackagesLoaderComp</type>
@@ -17623,6 +17773,7 @@
   <compound kind="class">
     <name>iqtipr::CPatternTeachingControllerGuiComp</name>
     <filename>classiqtipr_1_1_c_pattern_teaching_controller_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPatternTeachingControllerGuiComp, iipr::IPatternController &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPatternTeachingControllerGuiComp, iipr::IPatternController &gt;</type>
       <name>BaseClass</name>
@@ -17683,6 +17834,7 @@
   <compound kind="class">
     <name>iipr::CPerspCalibFinder</name>
     <filename>classiipr_1_1_c_persp_calib_finder.html</filename>
+    <base>istd::IPolymorphic</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>FindPerspCalib</name>
@@ -17701,6 +17853,8 @@
   <compound kind="class">
     <name>icalibgui::CPerspectiveCalibEditorComp</name>
     <filename>classicalibgui_1_1_c_perspective_calib_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPerspectiveCalibEditorComp, icalib::CPerspectiveCalibration2d &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPerspectiveCalibEditorComp, icalib::CPerspectiveCalibration2d &gt;</type>
       <name>BaseClass</name>
@@ -17761,6 +17915,7 @@
   <compound kind="class">
     <name>icalib::CPerspectiveCalibration2d</name>
     <filename>classicalib_1_1_c_perspective_calibration2d.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="function">
       <type></type>
       <name>CPerspectiveCalibration2d</name>
@@ -18024,6 +18179,7 @@
   <compound kind="class">
     <name>icalib::CPerspectiveCalibration2dComp</name>
     <filename>classicalib_1_1_c_perspective_calibration2d_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>icalib::CPerspectiveCalibration2d</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -18091,6 +18247,7 @@
     <name>iipr::CPerspectiveCalibrationSupplierComp</name>
     <filename>classiipr_1_1_c_perspective_calibration_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; icalib::CPerspectiveCalibration2d &gt;</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; icalib::CPerspectiveCalibration2d &gt;</type>
       <name>BaseClass</name>
@@ -18132,6 +18289,7 @@
   <compound kind="class">
     <name>iqtmm::CPlaybackControllerGuiComp</name>
     <filename>classiqtmm_1_1_c_playback_controller_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPlaybackControllerGuiComp, imm::IVideoController &gt;</type>
       <name>BaseClass</name>
@@ -18164,6 +18322,8 @@
   <compound kind="class">
     <name>icalib::CPointGrid</name>
     <filename>classicalib_1_1_c_point_grid.html</filename>
+    <base>TArray&lt; i2d::CVector2d, 2 &gt;</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>istd::TArray&lt; i2d::CVector2d, 2 &gt;</type>
       <name>BaseClass</name>
@@ -18252,6 +18412,7 @@
     <filename>classiipr_1_1_c_position_from_image_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
     <base virtualness="virtual">iipr::IFeaturesProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -18384,6 +18545,8 @@
     <name>iipr::CProcessedBitmapSupplierBase</name>
     <filename>classiipr_1_1_c_processed_bitmap_supplier_base.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IBitmap &gt; &gt;</type>
       <name>BaseClass</name>
@@ -18615,6 +18778,7 @@
   <compound kind="class">
     <name>ifileproc::CProcessingResultsReviewComp</name>
     <filename>classifileproc_1_1_c_processing_results_review_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -18641,6 +18805,8 @@
   <compound kind="class">
     <name>iprocgui::CProcessorCommandComp</name>
     <filename>classiprocgui_1_1_c_processor_command_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -18736,6 +18902,7 @@
   <compound kind="class">
     <name>iprocgui::CProcessorControlGuiComp</name>
     <filename>classiprocgui_1_1_c_processor_control_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CProcessorControlGuiComp &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProcessorControlGuiComp, QWidget &gt;</type>
       <name>BaseClass</name>
@@ -18824,6 +18991,7 @@
   <compound kind="class">
     <name>iprod::CProductionHistoryComp</name>
     <filename>classiprod_1_1_c_production_history_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iprod::IProductionHistoryController</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -18920,6 +19088,7 @@
   <compound kind="class">
     <name>iqtipr::CProjectionShape</name>
     <filename>classiqtipr_1_1_c_projection_shape.html</filename>
+    <base>iview::CShapeBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -19000,6 +19169,7 @@
   <compound kind="class">
     <name>isig::CPulseParamsComp</name>
     <filename>classisig_1_1_c_pulse_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::IPulseParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -19082,6 +19252,7 @@
   <compound kind="class">
     <name>iqtsig::CPulseParamsGuiComp</name>
     <filename>classiqtsig_1_1_c_pulse_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CPulseParamsGuiComp, isig::IPulseParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CPulseParamsGuiComp, isig::IPulseParams &gt;</type>
       <name>BaseClass</name>
@@ -19135,6 +19306,8 @@
   <compound kind="class">
     <name>icmpstr::CQuickHelpGuiComp</name>
     <filename>classicmpstr_1_1_c_quick_help_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CQuickHelpGuiComp &gt;</base>
+    <base virtualness="virtual">idoc::IHelpViewer</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CQuickHelpGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -19256,6 +19429,7 @@
   <compound kind="class">
     <name>iipr::CRectDerivativeProcessorComp</name>
     <filename>classiipr_1_1_c_rect_derivative_processor_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CRectDerivativeProcessor</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -19403,6 +19577,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryConsistInfoComp</name>
     <filename>classicmpstr_1_1_c_registry_consist_info_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">icmpstr::IRegistryConsistInfo</base>
     <member kind="enumeration">
       <type></type>
@@ -19729,6 +19904,8 @@
   <compound kind="class">
     <name>icmpstr::CRegistryLoaderComp</name>
     <filename>classicmpstr_1_1_c_registry_loader_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -19813,6 +19990,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryPreviewComp</name>
     <filename>classicmpstr_1_1_c_registry_preview_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>icmpstr::IRegistryPreview</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -19888,6 +20066,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryPropEditorComp</name>
     <filename>classicmpstr_1_1_c_registry_prop_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryPropEditorComp, icomp::IRegistry &gt;</base>
     <class kind="class">icmpstr::CRegistryPropEditorComp::TextLog</class>
     <member kind="enumeration">
       <type></type>
@@ -20044,6 +20223,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryTreeViewComp</name>
     <filename>classicmpstr_1_1_c_registry_tree_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CRegistryTreeViewComp, icomp::IRegistry &gt;</base>
     <class kind="class">icmpstr::CRegistryTreeViewComp::EnvironmentObserver</class>
     <member kind="enumeration">
       <type></type>
@@ -20299,6 +20479,10 @@
   <compound kind="class">
     <name>imeas::CRelativeUnitSelectorComp</name>
     <filename>classimeas_1_1_c_relative_unit_selector_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">imath::IUnitInfo</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="enumeration">
       <type></type>
       <name>DisplayMode</name>
@@ -20505,6 +20689,9 @@
   <compound kind="class">
     <name>idocproc::CRenderedDocumentPreviewGeneratorComp</name>
     <filename>classidocproc_1_1_c_rendered_document_preview_generator_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>TSingleModelObserverBase&lt; idoc::IMultiPageDocument &gt;</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -20579,6 +20766,9 @@
   <compound kind="class">
     <name>ifileproc::CRenderedObjectFileLoaderComp</name>
     <filename>classifileproc_1_1_c_rendered_object_file_loader_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -20639,6 +20829,7 @@
   <compound kind="class">
     <name>icomm::CRequestHeader</name>
     <filename>classicomm_1_1_c_request_header.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CRequestHeader</name>
@@ -20754,6 +20945,7 @@
   <compound kind="class">
     <name>icomm::CResponseHeader</name>
     <filename>classicomm_1_1_c_response_header.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ResponseFlags</name>
@@ -21023,6 +21215,9 @@
   <compound kind="class">
     <name>iauth::CRightsBasedEnablerComp</name>
     <filename>classiauth_1_1_c_rights_based_enabler_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">iprm::IEnableableParam</base>
+    <base protection="protected">TSingleModelObserverBase&lt; iauth::IRightsProvider &gt;</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -21116,6 +21311,7 @@
   <compound kind="class">
     <name>iipr::CRingPatternGeneratorParamsComp</name>
     <filename>classiipr_1_1_c_ring_pattern_generator_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::IRingPatternGeneratorParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -21177,6 +21373,7 @@
   <compound kind="class">
     <name>iqtsig::CSampleAcquisitionGuiComp</name>
     <filename>classiqtsig_1_1_c_sample_acquisition_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CSampleAcquisitionGuiComp, QWidget &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CSampleAcquisitionGuiComp, QWidget &gt;</type>
       <name>BaseClass</name>
@@ -21258,6 +21455,7 @@
   <compound kind="class">
     <name>iqtsig::CSampleContainerView</name>
     <filename>classiqtsig_1_1_c_sample_container_view.html</filename>
+    <base>TSingleModelObserverBase&lt; imeas::IDataSequence &gt;</base>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -21305,6 +21503,7 @@
     <name>imeas::CSamplesInfo</name>
     <filename>classimeas_1_1_c_samples_info.html</filename>
     <base virtualness="virtual">imeas::IDataSequenceInfo</base>
+    <base protection="protected">iprm::IOptionsList</base>
     <member kind="function">
       <type></type>
       <name>CSamplesInfo</name>
@@ -21435,6 +21634,7 @@
   <compound kind="class">
     <name>isig::CSamplingParamsComp</name>
     <filename>classisig_1_1_c_sampling_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ISamplingParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -21503,6 +21703,7 @@
   <compound kind="class">
     <name>iqtsig::CSamplingParamsGuiComp</name>
     <filename>classiqtsig_1_1_c_sampling_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CSamplingParamsGuiComp, isig::ISamplingParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSamplingParamsGuiComp, isig::ISamplingParams &gt;</type>
       <name>BaseClass</name>
@@ -21542,6 +21743,7 @@
   <compound kind="class">
     <name>iqtcam::CScaleCalibrationEditorComp</name>
     <filename>classiqtcam_1_1_c_scale_calibration_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CScaleCalibrationEditorComp, imeas::INumericValue &gt;</type>
       <name>BaseClass</name>
@@ -21627,7 +21829,10 @@
   <compound kind="class">
     <name>icmpstr::CSceneProviderGuiComp</name>
     <filename>classicmpstr_1_1_c_scene_provider_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CSceneProviderGuiComp &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <base virtualness="virtual">icmpstr::ISceneProvider</base>
+    <base virtualness="virtual">i2d::ISceneController</base>
     <class kind="class">icmpstr::CSceneProviderGuiComp::CScene</class>
     <member kind="enumeration">
       <type></type>
@@ -22001,6 +22206,8 @@
     <filename>classiipr_1_1_c_search_based_features_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; CFeaturesContainer &gt;</base>
     <base virtualness="virtual">iipr::IFeaturesProvider</base>
+    <base virtualness="virtual">i2d::IMultiCalibrationProvider</base>
+    <base virtualness="virtual">istd::IInformationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; CFeaturesContainer &gt;</type>
       <name>BaseClass</name>
@@ -22320,6 +22527,7 @@
   <compound kind="class">
     <name>iipr::CSearchConstraintsComp</name>
     <filename>classiipr_1_1_c_search_constraints_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iipr::ISearchConstraints</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -22580,6 +22788,7 @@
   <compound kind="class">
     <name>iipr::CSearchParamsComp</name>
     <filename>classiipr_1_1_c_search_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iipr::CSearchParams</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -22607,6 +22816,8 @@
     <name>icam::CSelectableBitmapSupplierComp</name>
     <filename>classicam_1_1_c_selectable_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -22653,6 +22864,8 @@
   <compound kind="class">
     <name>iipr::CSelectableCalibrationProviderComp</name>
     <filename>classiipr_1_1_c_selectable_calibration_provider_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -22671,7 +22884,10 @@
   <compound kind="class">
     <name>ifileproc::CSelectableFileConverterComp</name>
     <filename>classifileproc_1_1_c_selectable_file_converter_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">ifileproc::IFileConversion</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -22781,7 +22997,9 @@
   <compound kind="class">
     <name>iwiz::CSelectionConsistencyControllerComp</name>
     <filename>classiwiz_1_1_c_selection_consistency_controller_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iproc::IStateController</base>
+    <base protection="protected">imod::CMultiModelObserverBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -22960,6 +23178,8 @@
   <compound kind="class">
     <name>iservice::CServiceApplicationComp</name>
     <filename>classiservice_1_1_c_service_application_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>ibase::IApplication</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -23027,6 +23247,8 @@
   <compound kind="class">
     <name>iqtipr::CMultiLineSupplierGuiComp::CShape</name>
     <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_c_shape.html</filename>
+    <base>iview::CShapeBase</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iview::CShapeBase</type>
       <name>BaseClass</name>
@@ -23081,6 +23303,7 @@
     <name>imeas::CSimpleDataStatistics</name>
     <filename>classimeas_1_1_c_simple_data_statistics.html</filename>
     <base virtualness="virtual">imeas::IDataStatistics</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CSimpleDataStatistics</name>
@@ -23148,6 +23371,7 @@
   <compound kind="class">
     <name>icalib::CSimpleLensCorrection</name>
     <filename>classicalib_1_1_c_simple_lens_correction.html</filename>
+    <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="function">
       <type></type>
       <name>CSimpleLensCorrection</name>
@@ -23376,6 +23600,7 @@
   <compound kind="class">
     <name>icalib::CSimpleLensCorrectionComp</name>
     <filename>classicalib_1_1_c_simple_lens_correction_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>icalib::CSimpleLensCorrection</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -23402,6 +23627,8 @@
   <compound kind="class">
     <name>icalibgui::CSimpleLensCorrectionEditorComp</name>
     <filename>classicalibgui_1_1_c_simple_lens_correction_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CSimpleLensCorrectionEditorComp, icalib::CSimpleLensCorrection &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSimpleLensCorrectionEditorComp, icalib::CSimpleLensCorrection &gt;</type>
       <name>BaseClass</name>
@@ -23462,8 +23689,10 @@
   <compound kind="class">
     <name>iauth::CSimpleLoginComp</name>
     <filename>classiauth_1_1_c_simple_login_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iauth::ILogin</base>
     <base>iauth::IRightsProvider</base>
+    <base>iser::ISerializable</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -23731,6 +23960,8 @@
     <name>icam::CSnapBitmapSupplierCompBase</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</filename>
     <base>TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IBitmapProvider</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, istd::TDelPtr&lt; iimg::IBitmap &gt; &gt; &gt;</type>
       <name>BaseClass</name>
@@ -23784,6 +24015,7 @@
   <compound kind="class">
     <name>iqtcam::CSnapImageGuiComp</name>
     <filename>classiqtcam_1_1_c_snap_image_gui_comp.html</filename>
+    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</base>
     <class kind="class">iqtcam::CSnapImageGuiComp::ParamsObserver</class>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiCompBase&lt; Ui::CSnapImageGuiComp, QWidget &gt; &gt;</type>
@@ -23922,6 +24154,7 @@
   <compound kind="class">
     <name>iqtcam::CSnapImageParamsEditorComp</name>
     <filename>classiqtcam_1_1_c_snap_image_params_editor_comp.html</filename>
+    <base>TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSnapImageParamsEditorComp, iprm::IParamsSet &gt; &gt;</base>
     <class kind="class">iqtcam::CSnapImageParamsEditorComp::ParamsObserver</class>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CSnapImageParamsEditorComp, iprm::IParamsSet &gt; &gt;</type>
@@ -24075,6 +24308,8 @@
     <name>icam::CSnapMultiPageBitmapSupplierComp</name>
     <filename>classicam_1_1_c_snap_multi_page_bitmap_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</base>
+    <base virtualness="virtual">iimg::IMultiBitmapProvider</base>
+    <base virtualness="virtual">idoc::IMultiPageDocumentProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; iimg::IMultiBitmapProvider &gt; &gt;</type>
       <name>BaseClass</name>
@@ -24128,6 +24363,7 @@
   <compound kind="class">
     <name>iwiz::CStateControllerCompBase</name>
     <filename>classiwiz_1_1_c_state_controller_comp_base.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iproc::IStateController</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -24224,6 +24460,8 @@
   <compound kind="class">
     <name>icalib::CStaticCalibrationProviderComp</name>
     <filename>classicalib_1_1_c_static_calibration_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -24263,6 +24501,7 @@
   <compound kind="class">
     <name>iauth::CStaticRightsProviderComp</name>
     <filename>classiauth_1_1_c_static_rights_provider_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>iauth::IRightsProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -24289,6 +24528,7 @@
   <compound kind="class">
     <name>iinsp::CSupplierActivationProxyComp</name>
     <filename>classiinsp_1_1_c_supplier_activation_proxy_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iinsp::IEnableableSupplier</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -24399,6 +24639,7 @@
   <compound kind="class">
     <name>iinsp::CSupplierCompBase</name>
     <filename>classiinsp_1_1_c_supplier_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iinsp::ISupplier</base>
     <class kind="class">iinsp::CSupplierCompBase::Status</class>
     <class kind="class">iinsp::CSupplierCompBase::Timer</class>
@@ -24622,6 +24863,8 @@
   <compound kind="class">
     <name>iqtmm::CSvgBitmapLoaderComp</name>
     <filename>classiqtmm_1_1_c_svg_bitmap_loader_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -24687,6 +24930,7 @@
   <compound kind="class">
     <name>icomm::CTcpClientsManagerComp</name>
     <filename>classicomm_1_1_c_tcp_clients_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -24871,6 +25115,7 @@
   <compound kind="class">
     <name>icomm::CTcpRequestsManagerComp</name>
     <filename>classicomm_1_1_c_tcp_requests_manager_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>icomm::IHostConnection</base>
     <base>TPopCumulatorBase&lt; CTcpMessageHeader &gt;</base>
     <base>icomm::CRequestsManagerBase</base>
@@ -25101,6 +25346,8 @@
   <compound kind="class">
     <name>icomm::CTcpStreamComp</name>
     <filename>classicomm_1_1_c_tcp_stream_comp.html</filename>
+    <base>TRuntimeStatusHanderCompWrap&lt; ilog::CLoggerComponentBase &gt;</base>
+    <base>imod::TSingleModelObserverBase</base>
     <base>icomm::IBinaryStream</base>
     <base>icomm::IHostConnection</base>
     <member kind="typedef">
@@ -25247,6 +25494,8 @@
   <compound kind="class">
     <name>iqtex::CTcpTerminalGuiComp</name>
     <filename>classiqtex_1_1_c_tcp_terminal_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CTcpTerminalGuiComp &gt;</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CTcpTerminalGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -25342,6 +25591,7 @@
   <compound kind="class">
     <name>iqtinsp::CTeachableParamsDecoratorGuiComp</name>
     <filename>classiqtinsp_1_1_c_teachable_params_decorator_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CTeachableParamsDecoratorGuiComp, iprm::IParamsSet &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTeachableParamsDecoratorGuiComp, iprm::IParamsSet &gt;</type>
       <name>BaseClass</name>
@@ -25430,7 +25680,10 @@
   <compound kind="class">
     <name>isig::CTriggerParamsComp</name>
     <filename>classisig_1_1_c_trigger_params_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">isig::ITriggerParams</base>
+    <base virtualness="virtual">iprm::ISelectionParam</base>
+    <base protection="protected" virtualness="virtual">iprm::IOptionsList</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -25575,6 +25828,7 @@
   <compound kind="class">
     <name>iqtsig::CTriggerParamsGuiComp</name>
     <filename>classiqtsig_1_1_c_trigger_params_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CTriggerParamsGuiComp, isig::ITriggerParams &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CTriggerParamsGuiComp, isig::ITriggerParams &gt;</type>
       <name>BaseClass</name>
@@ -25657,6 +25911,7 @@
     <name>iipr::CTubeProjectionLinesProviderComp</name>
     <filename>classiipr_1_1_c_tube_projection_lines_provider_comp.html</filename>
     <base>iipr::CMultiLineSupplierCompBase</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iipr::CMultiLineSupplierCompBase</type>
       <name>BaseClass</name>
@@ -25714,6 +25969,7 @@
   <compound kind="class">
     <name>icomm::CUdpServersManagerComp</name>
     <filename>classicomm_1_1_c_udp_servers_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base>icomm::IHeartbeatServersManager</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -25817,6 +26073,8 @@
   <compound kind="class">
     <name>icomm::CUdpStreamComp</name>
     <filename>classicomm_1_1_c_udp_stream_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base>imod::TSingleModelObserverBase</base>
     <base>icomm::IBinaryStream</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -25892,6 +26150,7 @@
   <compound kind="class">
     <name>iauth::CUser</name>
     <filename>classiauth_1_1_c_user.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>CUser</name>
@@ -25973,6 +26232,8 @@
   <compound kind="class">
     <name>iqtauth::CUserGuiComp</name>
     <filename>classiqtauth_1_1_c_user_gui_comp.html</filename>
+    <base>TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <base virtualness="virtual">iauth::IPasswordChanger</base>
     <member kind="typedef">
       <type>ilog::TLoggerCompWrap&lt; iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CUserGuiComp, iauth::IUsersManager &gt; &gt;</type>
@@ -26048,6 +26309,7 @@
   <compound kind="class">
     <name>iauth::CUserLoginComp</name>
     <filename>classiauth_1_1_c_user_login_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iauth::ILogin</base>
     <base virtualness="virtual">iauth::IRightsProvider</base>
     <member kind="typedef">
@@ -26222,6 +26484,7 @@
   <compound kind="class">
     <name>iauth::CUsersManagerComp</name>
     <filename>classiauth_1_1_c_users_manager_comp.html</filename>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iauth::IUsersManager</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -26421,6 +26684,8 @@
   <compound kind="class">
     <name>iqtmm::CVideoPlayerGuiComp</name>
     <filename>classiqtmm_1_1_c_video_player_gui_comp.html</filename>
+    <base>TDesignerGuiCompBase&lt; Ui::CVideoPlayerGuiComp &gt;</base>
+    <base protection="protected">imod::CSingleModelObserverBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CVideoPlayerGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -26467,6 +26732,7 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistry</name>
     <filename>classicmpstr_1_1_c_visual_registry.html</filename>
+    <base>icomp::CRegistry</base>
     <base virtualness="virtual">icmpstr::IComponentNoteController</base>
     <member kind="enumeration">
       <type></type>
@@ -27024,6 +27290,10 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistryEditorCompBase</name>
     <filename>classicmpstr_1_1_c_visual_registry_editor_comp_base.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</base>
+    <base virtualness="virtual">iqtgui::IDropConsumer</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CVisualRegistryEditorComp, icomp::IRegistry &gt;</type>
       <name>BaseClass</name>
@@ -27035,6 +27305,8 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistryElement</name>
     <filename>classicmpstr_1_1_c_visual_registry_element.html</filename>
+    <base>icomp::CRegistryElement</base>
+    <base>i2d::CObject2dBase</base>
     <member kind="typedef">
       <type>icomp::CRegistryElement</type>
       <name>BaseClass</name>
@@ -27151,6 +27423,8 @@
   <compound kind="class">
     <name>imeas::CWavSamplesLoaderComp</name>
     <filename>classimeas_1_1_c_wav_samples_loader_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -27301,6 +27575,7 @@
   <compound kind="class">
     <name>iwiz::CWizardDocumentComp</name>
     <filename>classiwiz_1_1_c_wizard_document_comp.html</filename>
+    <base>iprm::CParamsManagerComp</base>
     <base virtualness="virtual">iwiz::IParamsManagerWizard</base>
     <member kind="typedef">
       <type>iprm::CParamsManagerComp</type>
@@ -27376,6 +27651,7 @@
   <compound kind="class">
     <name>iwizgui::CWizardOptionsListGuiComp</name>
     <filename>classiwizgui_1_1_c_wizard_options_list_gui_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CWizardOptionsListGuiComp, iwiz::IParamsManagerWizard &gt;</base>
     <member kind="enumeration">
       <type></type>
       <name>DataRole</name>
@@ -27434,6 +27710,7 @@
   <compound kind="class">
     <name>icmpstr::CXpcEditorComp</name>
     <filename>classicmpstr_1_1_c_xpc_editor_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::XpcEditorComp, icomp::CXpcModel &gt;</type>
       <name>BaseClass</name>
@@ -27480,6 +27757,7 @@
   <compound kind="class">
     <name>iqtex::CXslSerializerComp</name>
     <filename>classiqtex_1_1_c_xsl_serializer_comp.html</filename>
+    <base>ifile::CFileSerializerCompBase</base>
     <member kind="typedef">
       <type>ifile::CFileSerializerCompBase</type>
       <name>BaseClass</name>
@@ -27519,6 +27797,8 @@
   <compound kind="class">
     <name>iqtex::CXslTransformationReadArchive</name>
     <filename>classiqtex_1_1_c_xsl_transformation_read_archive.html</filename>
+    <base>iser::CTextReadArchiveBase</base>
+    <base>iser::CXmlDocumentInfoBase</base>
     <member kind="function">
       <type></type>
       <name>CXslTransformationReadArchive</name>
@@ -27586,6 +27866,9 @@
   <compound kind="class">
     <name>iqtex::CXslTransformationWriteArchive</name>
     <filename>classiqtex_1_1_c_xsl_transformation_write_archive.html</filename>
+    <base>iser::CTextWriteArchiveBase</base>
+    <base>ifile::CFileArchiveInfo</base>
+    <base>iser::CXmlDocumentInfoBase</base>
     <member kind="typedef">
       <type>iser::CTextWriteArchiveBase</type>
       <name>BaseClass</name>
@@ -27713,6 +27996,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryTreeViewComp::EnvironmentObserver</name>
     <filename>classicmpstr_1_1_c_registry_tree_view_comp_1_1_environment_observer.html</filename>
+    <base>TSingleModelObserverBase&lt; icomp::IComponentEnvironmentManager &gt;</base>
     <member kind="function">
       <type></type>
       <name>EnvironmentObserver</name>
@@ -27731,6 +28015,7 @@
   <compound kind="class">
     <name>icmpstr::CVisualRegistryEditorComp::EnvironmentObserver</name>
     <filename>classicmpstr_1_1_c_visual_registry_editor_comp_1_1_environment_observer.html</filename>
+    <base>TSingleModelObserverBase&lt; icomp::IMetaInfoManager &gt;</base>
     <member kind="function">
       <type></type>
       <name>EnvironmentObserver</name>
@@ -28018,6 +28303,7 @@
   <compound kind="class">
     <name>icomm::IBinaryStream::Handler</name>
     <filename>classicomm_1_1_i_binary_stream_1_1_handler.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnDataReceived</name>
@@ -28036,6 +28322,7 @@
   <compound kind="class">
     <name>icomm::IHostConnection::Handler</name>
     <filename>classicomm_1_1_i_host_connection_1_1_handler.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnAttached</name>
@@ -28068,6 +28355,7 @@
   <compound kind="class">
     <name>icomm::IMemoryCommunication::Handler</name>
     <filename>classicomm_1_1_i_memory_communication_1_1_handler.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnInputBlockChanged</name>
@@ -28079,6 +28367,7 @@
   <compound kind="class">
     <name>icomm::IArchiveEx</name>
     <filename>classicomm_1_1_i_archive_ex.html</filename>
+    <base virtualness="virtual">iser::IArchive</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>Clear</name>
@@ -28104,6 +28393,7 @@
   <compound kind="class">
     <name>icmpstr::IAttributeSelectionObserver</name>
     <filename>classicmpstr_1_1_i_attribute_selection_observer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>OnAttributeSelected</name>
@@ -28115,6 +28405,7 @@
   <compound kind="class">
     <name>ibarcode::IBarcode</name>
     <filename>classibarcode_1_1_i_barcode.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>BarcodeType</name>
@@ -28279,6 +28570,7 @@
   <compound kind="class">
     <name>icomm::IBinaryStream</name>
     <filename>classicomm_1_1_i_binary_stream.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <class kind="class">icomm::IBinaryStream::Handler</class>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -28324,6 +28616,8 @@
   <compound kind="class">
     <name>iblob::IBlobFilterParams</name>
     <filename>classiblob_1_1_i_blob_filter_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
+    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="enumeration">
       <type></type>
       <name>FilterOperation</name>
@@ -28532,6 +28826,7 @@
   <compound kind="class">
     <name>iipr::ICaliperParams</name>
     <filename>classiipr_1_1_i_caliper_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>PolarityMode</name>
@@ -28719,6 +29014,7 @@
   <compound kind="class">
     <name>icam::ICameraInfo</name>
     <filename>classicam_1_1_i_camera_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <type></type>
       <name>CameraAttribute</name>
@@ -28905,6 +29201,7 @@
   <compound kind="class">
     <name>iipr::ICircleFinderParams</name>
     <filename>classiipr_1_1_i_circle_finder_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>CaliperMode</name>
@@ -29003,6 +29300,7 @@
   <compound kind="class">
     <name>icomm::IClientStatus</name>
     <filename>classicomm_1_1_i_client_status.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual const QString &amp;</type>
       <name>GetClientComputerName</name>
@@ -29028,6 +29326,7 @@
   <compound kind="class">
     <name>icmpstr::IComponentNoteController</name>
     <filename>classicmpstr_1_1_i_component_note_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -29065,6 +29364,7 @@
   <compound kind="class">
     <name>iipr::IConvolutionKernel2d</name>
     <filename>classiipr_1_1_i_convolution_kernel2d.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>SeparationType</name>
@@ -29156,6 +29456,7 @@
   <compound kind="class">
     <name>imeas::IDataSequence</name>
     <filename>classimeas_1_1_i_data_sequence.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateSequence</name>
@@ -29236,6 +29537,7 @@
     <name>imeas::IDataSequenceInfo</name>
     <filename>classimeas_1_1_i_data_sequence_info.html</filename>
     <base virtualness="virtual">imeas::INumericConstraints</base>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>SequenceInfoFlags</name>
@@ -29354,6 +29656,7 @@
   <compound kind="class">
     <name>imeas::IDataSequenceProvider</name>
     <filename>classimeas_1_1_i_data_sequence_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const imeas::IDataSequence *</type>
       <name>GetDataSequence</name>
@@ -29365,6 +29668,7 @@
   <compound kind="class">
     <name>imeas::IDataSequenceStatistics</name>
     <filename>classimeas_1_1_i_data_sequence_statistics.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>SetChannelStatistics</name>
@@ -29409,6 +29713,7 @@
   <compound kind="class">
     <name>imeas::IDataStatistics</name>
     <filename>classimeas_1_1_i_data_statistics.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>SupportedStatFeatures</name>
@@ -29503,6 +29808,7 @@
   <compound kind="class">
     <name>ihotf::IDirectoryMonitor</name>
     <filename>classihotf_1_1_i_directory_monitor.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsRunning</name>
@@ -29528,6 +29834,7 @@
   <compound kind="class">
     <name>ihotf::IDirectoryMonitorParams</name>
     <filename>classihotf_1_1_i_directory_monitor_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ObserveItems</name>
@@ -29908,6 +30215,7 @@
   <compound kind="class">
     <name>iedge::IEdgeLinesProvider</name>
     <filename>classiedge_1_1_i_edge_lines_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const CEdgeLineContainer *</type>
       <name>GetEdgesContainer</name>
@@ -29931,6 +30239,7 @@
   <compound kind="class">
     <name>iproc::IElapsedTimeProvider</name>
     <filename>classiproc_1_1_i_elapsed_time_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetElapsedTime</name>
@@ -29942,6 +30251,7 @@
   <compound kind="class">
     <name>icmpstr::IElementSelectionInfo</name>
     <filename>classicmpstr_1_1_i_element_selection_info.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -30031,6 +30341,7 @@
   <compound kind="class">
     <name>icam::IExposureConstraints</name>
     <filename>classicam_1_1_i_exposure_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetShutterTimeRange</name>
@@ -30056,6 +30367,7 @@
   <compound kind="class">
     <name>icam::IExposureParams</name>
     <filename>classicam_1_1_i_exposure_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IExposureConstraints *</type>
       <name>GetExposureConstraints</name>
@@ -30109,6 +30421,7 @@
   <compound kind="class">
     <name>icmpstr::IExternalMetaInfoManager</name>
     <filename>classicmpstr_1_1_i_external_meta_info_manager.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>GetPackageInfoPath</name>
@@ -30127,6 +30440,7 @@
   <compound kind="class">
     <name>iipr::IFeaturesConsumer</name>
     <filename>classiipr_1_1_i_features_consumer.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetFeatures</name>
@@ -30145,6 +30459,7 @@
   <compound kind="class">
     <name>iipr::IFeaturesProvider</name>
     <filename>classiipr_1_1_i_features_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetFeaturesCount</name>
@@ -30175,6 +30490,7 @@
   <compound kind="class">
     <name>iipr::IFeatureToImageMapper</name>
     <filename>classiipr_1_1_i_feature_to_image_mapper.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetImagePosition</name>
@@ -30186,6 +30502,7 @@
   <compound kind="class">
     <name>iipr::IFeatureToProjectionMapper</name>
     <filename>classiipr_1_1_i_feature_to_projection_mapper.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>GetProjectionPosition</name>
@@ -30197,6 +30514,7 @@
   <compound kind="class">
     <name>ifileproc::IFileConversion</name>
     <filename>classifileproc_1_1_i_file_conversion.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -30239,6 +30557,7 @@
   <compound kind="class">
     <name>ifileproc::IFileNaming</name>
     <filename>classifileproc_1_1_i_file_naming.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
       <name>CalculateFileName</name>
@@ -30250,6 +30569,7 @@
   <compound kind="class">
     <name>ifileproc::IFileNamingParams</name>
     <filename>classifileproc_1_1_i_file_naming_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>OverwriteStrategy</name>
@@ -30341,6 +30661,7 @@
   <compound kind="class">
     <name>ihotf::IFileSystemChangeStorage</name>
     <filename>classihotf_1_1_i_file_system_change_storage.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -30454,6 +30775,7 @@
   <compound kind="class">
     <name>ibarcode::IGeneralBarcodeSearchParams</name>
     <filename>classibarcode_1_1_i_general_barcode_search_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>QSet&lt; IBarcode::BarcodeType &gt;</type>
       <name>BarcodeTypes</name>
@@ -30519,6 +30841,7 @@
   <compound kind="class">
     <name>icomm::IHostConnection</name>
     <filename>classicomm_1_1_i_host_connection.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <class kind="class">icomm::IHostConnection::Handler</class>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
@@ -30573,6 +30896,7 @@
   <compound kind="class">
     <name>iinsp::IIdProvider</name>
     <filename>classiinsp_1_1_i_id_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual quint32</type>
       <name>GetCurrentId</name>
@@ -30584,6 +30908,7 @@
   <compound kind="class">
     <name>iipr::IImageInterpolationParams</name>
     <filename>classiipr_1_1_i_image_interpolation_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>InterpolationMode</name>
@@ -30676,6 +31001,7 @@
   <compound kind="class">
     <name>iinsp::IInspectionTask</name>
     <filename>classiinsp_1_1_i_inspection_task.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSubtasksCount</name>
@@ -30701,6 +31027,7 @@
   <compound kind="class">
     <name>imeas::ILinearAdjustConstraints</name>
     <filename>classimeas_1_1_i_linear_adjust_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetScaleFactorRange</name>
@@ -30719,6 +31046,7 @@
   <compound kind="class">
     <name>imeas::ILinearAdjustParams</name>
     <filename>classimeas_1_1_i_linear_adjust_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const ILinearAdjustConstraints *</type>
       <name>GetAdjustConstraints</name>
@@ -30770,6 +31098,7 @@
   <compound kind="class">
     <name>iauth::ILogin</name>
     <filename>classiauth_1_1_i_login.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -30851,6 +31180,8 @@
   <compound kind="class">
     <name>imm::IMediaController</name>
     <filename>classimm_1_1_i_media_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
+    <base virtualness="virtual">ifile::IFileTypeInfo</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -31004,6 +31335,7 @@
   <compound kind="class">
     <name>icomm::IMemoryCommunication</name>
     <filename>classicomm_1_1_i_memory_communication.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <class kind="class">icomm::IMemoryCommunication::Handler</class>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
@@ -31065,6 +31397,7 @@
   <compound kind="class">
     <name>iinsp::IModelTeachController</name>
     <filename>classiinsp_1_1_i_model_teach_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsModelTeachable</name>
@@ -31097,6 +31430,7 @@
   <compound kind="class">
     <name>ihotf::IMonitoringSession</name>
     <filename>classihotf_1_1_i_monitoring_session.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="typedef">
       <type>QMap&lt; QString, QDateTime &gt;</type>
       <name>FileItems</name>
@@ -31129,6 +31463,7 @@
   <compound kind="class">
     <name>ihotf::IMonitoringSessionManager</name>
     <filename>classihotf_1_1_i_monitoring_session_manager.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ResetSessions</name>
@@ -31154,6 +31489,7 @@
   <compound kind="class">
     <name>imeas::IMultiDataSequenceProvider</name>
     <filename>classimeas_1_1_i_multi_data_sequence_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetSequencesCount</name>
@@ -31172,6 +31508,7 @@
   <compound kind="class">
     <name>imeas::INumericConstraints</name>
     <filename>classimeas_1_1_i_numeric_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const iprm::IOptionsList &amp;</type>
       <name>GetValueListInfo</name>
@@ -31190,6 +31527,7 @@
   <compound kind="class">
     <name>imeas::INumericValue</name>
     <filename>classimeas_1_1_i_numeric_value.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ValueTypeId</name>
@@ -31376,6 +31714,7 @@
     <name>iwiz::IParamsManagerWizard</name>
     <filename>classiwiz_1_1_i_params_manager_wizard.html</filename>
     <base virtualness="virtual">iwiz::IWizardNavigationController</base>
+    <base virtualness="virtual">iprm::IParamsManager</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsPageSelectionAllowed</name>
@@ -31387,6 +31726,7 @@
   <compound kind="class">
     <name>iauth::IPasswordChanger</name>
     <filename>classiauth_1_1_i_password_changer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>TryChangePassword</name>
@@ -31398,6 +31738,7 @@
   <compound kind="class">
     <name>iipr::IPatternController</name>
     <filename>classiipr_1_1_i_pattern_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -31449,6 +31790,7 @@
   <compound kind="class">
     <name>iproc::IProcessor</name>
     <filename>classiproc_1_1_i_processor.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -31669,6 +32011,7 @@
   <compound kind="class">
     <name>iprod::IProductionHistory</name>
     <filename>classiprod_1_1_i_production_history.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <class kind="struct">iprod::IProductionHistory::ObjectInfo</class>
     <class kind="struct">iprod::IProductionHistory::PartInfo</class>
     <class kind="struct">iprod::IProductionHistory::ProcessingInfo</class>
@@ -31771,6 +32114,7 @@
   <compound kind="class">
     <name>iipr::IProjectionConstraints</name>
     <filename>classiipr_1_1_i_projection_constraints.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetLineWidthRange</name>
@@ -31803,6 +32147,7 @@
   <compound kind="class">
     <name>iipr::IProjectionParams</name>
     <filename>classiipr_1_1_i_projection_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IProjectionConstraints *</type>
       <name>GetProjectionConstraints</name>
@@ -31842,6 +32187,7 @@
   <compound kind="class">
     <name>isig::IPulseConstraints</name>
     <filename>classisig_1_1_i_pulse_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>PulseSupportedFlags</name>
@@ -31929,6 +32275,7 @@
   <compound kind="class">
     <name>isig::IPulseParams</name>
     <filename>classisig_1_1_i_pulse_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const IPulseConstraints *</type>
       <name>GetPulseConstraints</name>
@@ -31982,6 +32329,7 @@
   <compound kind="class">
     <name>icmpstr::IRegistryConsistInfo</name>
     <filename>classicmpstr_1_1_i_registry_consist_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <type></type>
       <name>QueryFlags</name>
@@ -32095,6 +32443,7 @@
   <compound kind="class">
     <name>icmpstr::IRegistryPreview</name>
     <filename>classicmpstr_1_1_i_registry_preview.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>StartRegistry</name>
@@ -32120,6 +32469,7 @@
   <compound kind="class">
     <name>icomm::IRequest</name>
     <filename>classicomm_1_1_i_request.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual double</type>
       <name>GetTimeOut</name>
@@ -32145,6 +32495,7 @@
   <compound kind="class">
     <name>icomm::IRequestsManager</name>
     <filename>classicomm_1_1_i_requests_manager.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <class kind="struct">icomm::IRequestsManager::RequestInfo</class>
     <member kind="enumeration">
       <type></type>
@@ -32259,6 +32610,7 @@
   <compound kind="class">
     <name>icomm::IResponse</name>
     <filename>classicomm_1_1_i_response.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
       <name>GetCommand</name>
@@ -32291,6 +32643,7 @@
   <compound kind="class">
     <name>icomm::IResponsesManager</name>
     <filename>classicomm_1_1_i_responses_manager.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
       <name>ConnectProvider</name>
@@ -32309,6 +32662,7 @@
   <compound kind="class">
     <name>iauth::IRightsProvider</name>
     <filename>classiauth_1_1_i_rights_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>HasRight</name>
@@ -32320,6 +32674,7 @@
   <compound kind="class">
     <name>iipr::IRingPatternGeneratorParams</name>
     <filename>classiipr_1_1_i_ring_pattern_generator_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>PatternType</name>
@@ -32395,6 +32750,7 @@
   <compound kind="class">
     <name>isig::ISamplingConstraints</name>
     <filename>classisig_1_1_i_sampling_constraints.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
       <name>GetIntervalRange</name>
@@ -32427,6 +32783,7 @@
   <compound kind="class">
     <name>isig::ISamplingParams</name>
     <filename>classisig_1_1_i_sampling_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>SamplingMode</name>
@@ -32521,6 +32878,7 @@
   <compound kind="class">
     <name>icmpstr::ISceneProvider</name>
     <filename>classicmpstr_1_1_i_scene_provider.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <type></type>
       <name>SceneFlags</name>
@@ -32584,6 +32942,7 @@
   <compound kind="class">
     <name>iipr::ISearchConstraints</name>
     <filename>classiipr_1_1_i_search_constraints.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>SearchSupportedFlags</name>
@@ -32695,6 +33054,7 @@
   <compound kind="class">
     <name>iipr::ISearchParams</name>
     <filename>classiipr_1_1_i_search_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const ISearchConstraints *</type>
       <name>GetSearchConstraints</name>
@@ -32762,10 +33122,12 @@
   <compound kind="class">
     <name>icomm::IServerInfo</name>
     <filename>classicomm_1_1_i_server_info.html</filename>
+    <base virtualness="virtual">ibase::IApplicationInfo</base>
   </compound>
   <compound kind="class">
     <name>icomm::IServersManager</name>
     <filename>classicomm_1_1_i_servers_manager.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetServersCount</name>
@@ -32784,6 +33146,7 @@
   <compound kind="class">
     <name>iproc::IStateController</name>
     <filename>classiproc_1_1_i_state_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -32892,6 +33255,7 @@
   <compound kind="class">
     <name>icomm::IStationState</name>
     <filename>classicomm_1_1_i_station_state.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="enumeration">
       <type></type>
       <name>State</name>
@@ -32979,6 +33343,7 @@
   <compound kind="class">
     <name>iinsp::ISupplier</name>
     <filename>classiinsp_1_1_i_supplier.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>WorkStatus</name>
@@ -33180,6 +33545,7 @@
   <compound kind="class">
     <name>iinsp::ITimeStampProvider</name>
     <filename>classiinsp_1_1_i_time_stamp_provider.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual const istd::ITimeStamp *</type>
       <name>GetCurrentTimeStamp</name>
@@ -33191,6 +33557,7 @@
   <compound kind="class">
     <name>isig::ITriggerConstraints</name>
     <filename>classisig_1_1_i_trigger_constraints.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsTriggerModeSupported</name>
@@ -33202,6 +33569,7 @@
   <compound kind="class">
     <name>isig::ITriggerController</name>
     <filename>classisig_1_1_i_trigger_controller.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="typedef">
       <type>istd::TDelPtr&lt; istd::ITimeStamp &gt;</type>
       <name>TimeStampPtr</name>
@@ -33227,6 +33595,7 @@
   <compound kind="class">
     <name>isig::ITriggerParams</name>
     <filename>classisig_1_1_i_trigger_params.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>TriggerMode</name>
@@ -33369,6 +33738,7 @@
   <compound kind="class">
     <name>iauth::IUsersManager</name>
     <filename>classiauth_1_1_i_users_manager.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ChangeFlags</name>
@@ -33518,6 +33888,7 @@
   <compound kind="class">
     <name>imm::IVideoInfo</name>
     <filename>classimm_1_1_i_video_info.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetFramesCount</name>
@@ -33550,6 +33921,7 @@
   <compound kind="class">
     <name>iweb::IWebServerStatus</name>
     <filename>classiweb_1_1_i_web_server_status.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
       <name>ServerStatus</name>
@@ -33630,6 +34002,7 @@
   <compound kind="class">
     <name>iwiz::IWizardNavigationController</name>
     <filename>classiwiz_1_1_i_wizard_navigation_controller.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>IsFinishAllowed</name>
@@ -33662,6 +34035,7 @@
   <compound kind="class">
     <name>icam::CSelectionParamCameraComp::JoinParamsSet</name>
     <filename>classicam_1_1_c_selection_param_camera_comp_1_1_join_params_set.html</filename>
+    <base virtualness="virtual">iprm::IParamsSet</base>
     <member kind="function">
       <type></type>
       <name>JoinParamsSet</name>
@@ -33752,6 +34126,7 @@
   <compound kind="class">
     <name>iqtipr::CMultiLineSupplierGuiComp::LineSelection</name>
     <filename>classiqtipr_1_1_c_multi_line_supplier_gui_comp_1_1_line_selection.html</filename>
+    <base>iprm::ISelectionParam</base>
     <member kind="function">
       <type></type>
       <name>LineSelection</name>
@@ -33805,6 +34180,7 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::MessageContainer</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_message_container.html</filename>
+    <base virtualness="virtual">ilog::CMessageContainer</base>
     <member kind="typedef">
       <type>ilog::CMessageContainer</type>
       <name>BaseClass</name>
@@ -33929,6 +34305,8 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::Parameters</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_parameters.html</filename>
+    <base virtualness="virtual">iprm::IParamsSet</base>
+    <base>imod::CModelUpdateBridge</base>
     <member kind="function">
       <type></type>
       <name>Parameters</name>
@@ -34021,6 +34399,7 @@
   <compound kind="class">
     <name>iqtcam::CSnapImageGuiComp::ParamsObserver</name>
     <filename>classiqtcam_1_1_c_snap_image_gui_comp_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>ParamsObserver</name>
@@ -34039,6 +34418,7 @@
   <compound kind="class">
     <name>iqtcam::CSnapImageParamsEditorComp::ParamsObserver</name>
     <filename>classiqtcam_1_1_c_snap_image_params_editor_comp_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>ParamsObserver</name>
@@ -34057,6 +34437,7 @@
   <compound kind="class">
     <name>iqtinsp::TCommonSupplierGuiCompBase::ParamsObserver</name>
     <filename>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_params_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>ParamsObserver</name>
@@ -35192,6 +35573,7 @@
   <compound kind="class">
     <name>ialgo::TIHoughSpace::ResultsConsumer</name>
     <filename>classialgo_1_1_t_i_hough_space_1_1_results_consumer.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual QList&lt; int &gt;</type>
       <name>GetSupportedNeghboursCount</name>
@@ -36136,6 +36518,7 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::Status</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_status.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function">
       <type></type>
       <name>Status</name>
@@ -36161,6 +36544,7 @@
   <compound kind="class">
     <name>iinsp::CSupplierCompBase::Status</name>
     <filename>classiinsp_1_1_c_supplier_comp_base_1_1_status.html</filename>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function">
       <type></type>
       <name>Status</name>
@@ -36186,6 +36570,7 @@
   <compound kind="class">
     <name>iqtinsp::TCommonSupplierGuiCompBase::StatusObserver</name>
     <filename>classiqtinsp_1_1_t_common_supplier_gui_comp_base_1_1_status_observer.html</filename>
+    <base>imod::CSingleModelObserverBase</base>
     <member kind="function">
       <type></type>
       <name>StatusObserver</name>
@@ -36204,6 +36589,7 @@
   <compound kind="class">
     <name>iinsp::CInspectionTaskComp::TaskStatusObserver</name>
     <filename>classiinsp_1_1_c_inspection_task_comp_1_1_task_status_observer.html</filename>
+    <base>imod::CMultiModelObserverBase</base>
     <member kind="typedef">
       <type>imod::CMultiModelObserverBase</type>
       <name>BaseClass</name>
@@ -36230,6 +36616,7 @@
     <name>iqtinsp::TCommonSupplierGuiCompBase</name>
     <filename>classiqtinsp_1_1_t_common_supplier_gui_comp_base.html</filename>
     <templarg></templarg>
+    <base>TDesignerGuiObserverCompBase&lt; UI, iinsp::ISupplier &gt;</base>
     <class kind="class">iqtinsp::TCommonSupplierGuiCompBase::ParamsObserver</class>
     <class kind="class">iqtinsp::TCommonSupplierGuiCompBase::StatusObserver</class>
     <member kind="typedef">
@@ -36480,6 +36867,7 @@
   <compound kind="class">
     <name>icmpstr::CRegistryPropEditorComp::TextLog</name>
     <filename>classicmpstr_1_1_c_registry_prop_editor_comp_1_1_text_log.html</filename>
+    <base virtualness="virtual">ilog::IMessageConsumer</base>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsMessageSupported</name>
@@ -36500,6 +36888,7 @@
     <filename>classiproc_1_1_t_file_cached_producer_comp_base.html</filename>
     <templarg></templarg>
     <templarg></templarg>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iproc::TILockedProducer</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -36577,6 +36966,7 @@
     <filename>classialgo_1_1_t_general_hough_space.html</filename>
     <templarg>Dimensions</templarg>
     <templarg></templarg>
+    <base>istd::TArray</base>
     <base virtualness="virtual">TIHoughSpace&lt; Dimensions, double &gt;</base>
     <member kind="typedef">
       <type>istd::TArray&lt; Element, Dimensions &gt;</type>
@@ -36800,6 +37190,7 @@
     <filename>classialgo_1_1_t_i_hough_space.html</filename>
     <templarg>Dimensions</templarg>
     <templarg></templarg>
+    <base virtualness="virtual">iser::ISerializable</base>
     <class kind="class">ialgo::TIHoughSpace::ResultsConsumer</class>
     <member kind="enumeration">
       <type></type>
@@ -36925,6 +37316,7 @@
   <compound kind="class">
     <name>TIHoughSpace&lt; 2 &gt;</name>
     <filename>classialgo_1_1_t_i_hough_space.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ExtensionMode</name>
@@ -37031,6 +37423,7 @@
   <compound kind="class">
     <name>TIHoughSpace&lt; Dimensions, double &gt;</name>
     <filename>classialgo_1_1_t_i_hough_space.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="enumeration">
       <type></type>
       <name>ExtensionMode</name>
@@ -37139,6 +37532,7 @@
     <filename>classiproc_1_1_t_i_locked_producer.html</filename>
     <templarg></templarg>
     <templarg></templarg>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function" virtualness="pure">
       <type>virtual const CacheObject *</type>
       <name>ProduceLockedObject</name>
@@ -37202,6 +37596,7 @@
     <name>iauth::TLoginStatusHandlerCompWrap</name>
     <filename>classiauth_1_1_t_login_status_handler_comp_wrap.html</filename>
     <templarg></templarg>
+    <base protection="protected">imod::CMultiModelDispatcherBase</base>
     <member kind="typedef">
       <type>BaseComponent</type>
       <name>BaseClass</name>
@@ -37337,6 +37732,7 @@
     <name>imeas::TMeasurementValue</name>
     <filename>classimeas_1_1_t_measurement_value.html</filename>
     <templarg></templarg>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>TMeasurementValue</name>
@@ -37418,6 +37814,7 @@
   <compound kind="class">
     <name>TMeasurementValue&lt; double &gt;</name>
     <filename>classimeas_1_1_t_measurement_value.html</filename>
+    <base virtualness="virtual">iser::ISerializable</base>
     <member kind="function">
       <type></type>
       <name>TMeasurementValue</name>
@@ -37501,6 +37898,7 @@
     <filename>classiproc_1_1_t_mem_cached_producer_comp.html</filename>
     <templarg></templarg>
     <templarg></templarg>
+    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iproc::TILockedProducer</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -37641,6 +38039,7 @@
     <templarg></templarg>
     <templarg></templarg>
     <base>icmpstr::TShapeBase</base>
+    <base>TSingleModelObserverBase&lt; ObjectClass &gt;</base>
     <member kind="typedef">
       <type>TShapeBase&lt; GraphicsItemClass &gt;</type>
       <name>BaseClass</name>
@@ -37723,6 +38122,7 @@
     <name>TObjectShapeBase&lt; QGraphicsRectItem, CVisualRegistryElement &gt;</name>
     <filename>classicmpstr_1_1_t_object_shape_base.html</filename>
     <base>icmpstr::TShapeBase</base>
+    <base>imod::TSingleModelObserverBase</base>
     <member kind="typedef">
       <type>TShapeBase&lt; QGraphicsRectItem &gt;</type>
       <name>BaseClass</name>
@@ -37805,6 +38205,7 @@
     <name>icomm::TPopCumulatorBase</name>
     <filename>classicomm_1_1_t_pop_cumulator_base.html</filename>
     <templarg></templarg>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function">
       <type></type>
       <name>TPopCumulatorBase</name>
@@ -37872,6 +38273,7 @@
   <compound kind="class">
     <name>TPopCumulatorBase&lt; CTcpMessageHeader &gt;</name>
     <filename>classicomm_1_1_t_pop_cumulator_base.html</filename>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function">
       <type></type>
       <name>TPopCumulatorBase</name>
@@ -37967,6 +38369,7 @@
     <name>icomm::TPushCumulatorBase</name>
     <filename>classicomm_1_1_t_push_cumulator_base.html</filename>
     <templarg></templarg>
+    <base virtualness="virtual">istd::IPolymorphic</base>
     <member kind="function">
       <type></type>
       <name>TPushCumulatorBase</name>
@@ -38046,6 +38449,7 @@
   <compound kind="class">
     <name>TResultShapeCreatorWrap&lt; icomp::CComponentBase &gt;</name>
     <filename>classiqtinsp_1_1_t_result_shape_creator_wrap.html</filename>
+    <base>icomp::CComponentBase</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -38266,6 +38670,7 @@
     <filename>classialgo_1_1_t_simple_space_result_consumer.html</filename>
     <templarg>Dimensions</templarg>
     <templarg></templarg>
+    <base>iimg::CGeneralBitmap</base>
     <base virtualness="virtual">ialgo::TIHoughSpace::ResultsConsumer</base>
     <member kind="typedef">
       <type>imath::TVector&lt; Dimensions &gt;</type>
@@ -39382,6 +39787,7 @@
     <name>iqtinsp::TSupplierGuiCompBase</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
     <templarg></templarg>
+    <base>TViewExtenderCompBase&lt; iqtinsp::TCommonSupplierGuiCompBase&lt; UI &gt; &gt;</base>
     <member kind="typedef">
       <type>iqt2d::TViewExtenderCompBase&lt; iqtinsp::TCommonSupplierGuiCompBase&lt; UI &gt; &gt;</type>
       <name>BaseClass</name>
@@ -39442,44 +39848,54 @@
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CColorPatternComparatorGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CEdgeLinesSupplierEditorComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CGeneralSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CLineProjectionSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CMultiBitmapSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CMultiLineProjectionSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CMultiLineSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CSearchBasedFeaturesSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>TSupplierGuiCompBase&lt; Ui::CValueSupplierGuiComp &gt;</name>
     <filename>classiqtinsp_1_1_t_supplier_gui_comp_base.html</filename>
+    <base>iqt2d::TViewExtenderCompBase</base>
   </compound>
   <compound kind="class">
     <name>iproc::TSyncProcessorCompBase</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
     <templarg></templarg>
     <templarg></templarg>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39506,6 +39922,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39532,6 +39949,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; IDataSequenceCorrelationProcessor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39558,6 +39976,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; IDataSequenceStatisticsProcessor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39584,6 +40003,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; IEdgeLinesProcessor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39610,6 +40030,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; IEdgesExtractor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39636,6 +40057,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; IImageToFeatureProcessor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39662,6 +40084,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -39688,6 +40111,7 @@
   <compound kind="class">
     <name>TSyncProcessorCompBase&lt; ILineProjectionProcessor &gt;</name>
     <filename>classiproc_1_1_t_sync_processor_comp_base.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -40258,6 +40682,7 @@
     <name>TWeightedFeatureWrap&lt; i2d::CLine2d &gt;</name>
     <filename>classiipr_1_1_t_weighted_feature_wrap.html</filename>
     <base>imeas::CSimpleNumericValue</base>
+    <base>i2d::CLine2d</base>
     <member kind="typedef">
       <type>imeas::CSimpleNumericValue</type>
       <name>BaseClass</name>
@@ -40333,6 +40758,7 @@
     <name>TWeightedFeatureWrap&lt; i2d::CPosition2d &gt;</name>
     <filename>classiipr_1_1_t_weighted_feature_wrap.html</filename>
     <base>imeas::CSimpleNumericValue</base>
+    <base>i2d::CPosition2d</base>
     <member kind="typedef">
       <type>imeas::CSimpleNumericValue</type>
       <name>BaseClass</name>
