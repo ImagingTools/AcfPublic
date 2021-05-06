@@ -1,5 +1,0 @@
-Installation creation time: Do Mai 6 12:58:50 2021
-IACF Version: $AcfVersion:10$ ($AcfRawVersion:10$)
-Compiler code: VC15
-
-This distribution based on ACF $AcfVersion:0$ ($AcfRawVersion:0$) and ACF-Solutions $AcfVersion:1$ ($AcfRawVersion:1$)
