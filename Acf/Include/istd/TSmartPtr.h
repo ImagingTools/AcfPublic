@@ -109,7 +109,7 @@ inline void TSmartPtr<Type>::SetPtr(Type* pointer)
 template <class Type>
 inline bool TSmartPtr<Type>::operator==(const TSmartPtr<Type>& other) const
 {
-	return this->GetPtr() == other.GetPtr();
+	return GetPtr() == other.GetPtr();
 }
 
 

@@ -122,7 +122,7 @@ const ibase::IHierarchicalCommand* CLogGuiComp::GetCommands() const
 		return &m_rootCommands;
 	}
 
-	return nullptr;
+	return NULL;
 }
 
 
