@@ -25,7 +25,6 @@
 
 // Qt includes
 #include <QtGui/QPainter>
-#include <QtGui/QPainterPath>
 
 // ACF includes
 #include <imod/IModel.h>
