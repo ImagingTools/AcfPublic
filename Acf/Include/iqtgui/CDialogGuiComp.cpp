@@ -58,7 +58,9 @@ int CDialogGuiComp::ExecuteDialog(IGuiObject* parentPtr)
 	if (dialogPtr.IsValid()){
 		if (*m_isModalAttrPtr){
 			m_dialogPtr = dialogPtr.GetPtr();
+		
 			int retVal = dialogPtr->exec();
+		
 			m_dialogPtr = NULL;
 
 			return retVal;

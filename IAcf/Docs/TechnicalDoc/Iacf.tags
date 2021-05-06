@@ -1,29 +1,29 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile>
+<tagfile doxygen_version="1.9.1" doxygen_gitid="ef9b20ac7f8a8621fcfc299f8bd0b80422390f4b">
   <compound kind="file">
     <name>CMemoryBankSerializerComp.h</name>
-    <path>C:/Temp/Iacf/Include/icbox/</path>
-    <filename>_c_memory_bank_serializer_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/icbox/</path>
+    <filename>_c_memory_bank_serializer_comp_8h.html</filename>
     <class kind="class">icbox::CMemoryBankSerializerComp</class>
     <namespace>icbox</namespace>
   </compound>
   <compound kind="file">
     <name>icbox.h</name>
-    <path>C:/Temp/Iacf/Include/icbox/</path>
-    <filename>icbox_8h</filename>
+    <path>C:/Temp/IAcf/Include/icbox/</path>
+    <filename>icbox_8h.html</filename>
     <namespace>icbox</namespace>
   </compound>
   <compound kind="file">
     <name>CSimpleCameraComp.h</name>
-    <path>C:/Temp/Iacf/Include/idc1394/</path>
-    <filename>_c_simple_camera_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/idc1394/</path>
+    <filename>_c_simple_camera_comp_8h.html</filename>
     <class kind="class">idc1394::CSimpleCameraComp</class>
     <namespace>idc1394</namespace>
   </compound>
   <compound kind="file">
     <name>CLibAvConverter.h</name>
-    <path>C:/Temp/Iacf/Include/ilibav/</path>
-    <filename>_c_lib_av_converter_8h</filename>
+    <path>C:/Temp/IAcf/Include/ilibav/</path>
+    <filename>_c_lib_av_converter_8h.html</filename>
     <class kind="class">ilibav::CLibAvConverter</class>
     <class kind="struct">ilibav::CLibAvConverter::Rgba</class>
     <namespace>ilibav</namespace>
@@ -37,8 +37,8 @@
   </compound>
   <compound kind="file">
     <name>CLibAvVideoDecoderComp.h</name>
-    <path>C:/Temp/Iacf/Include/ilibav/</path>
-    <filename>_c_lib_av_video_decoder_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/ilibav/</path>
+    <filename>_c_lib_av_video_decoder_comp_8h.html</filename>
     <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
     <namespace>ilibav</namespace>
     <member kind="define">
@@ -58,55 +58,55 @@
   </compound>
   <compound kind="file">
     <name>ilibav.h</name>
-    <path>C:/Temp/Iacf/Include/ilibav/</path>
-    <filename>ilibav_8h</filename>
+    <path>C:/Temp/IAcf/Include/ilibav/</path>
+    <filename>ilibav_8h.html</filename>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
     <name>inat.h</name>
-    <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>inat_8h</filename>
+    <path>C:/Temp/IAcf/Include/inat/</path>
+    <filename>inat_8h.html</filename>
     <namespace>inat</namespace>
   </compound>
   <compound kind="file">
     <name>TComPtr.h</name>
-    <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>inat_2_t_com_ptr_8h</filename>
+    <path>C:/Temp/IAcf/Include/inat/</path>
+    <filename>inat_2_t_com_ptr_8h.html</filename>
     <includes id="inat_8h" name="inat.h" local="no" imported="no">inat/inat.h</includes>
   </compound>
   <compound kind="file">
     <name>TComPtr.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>iwin_2_t_com_ptr_8h</filename>
+    <path>C:/Temp/IAcf/Include/iwin/</path>
+    <filename>iwin_2_t_com_ptr_8h.html</filename>
     <class kind="class">iwin::TComPtr</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CCorrSearchProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_corr_search_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_corr_search_processor_comp_8h.html</filename>
     <class kind="class">iocv::CCorrSearchProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CHoughBasedSearchProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_hough_based_search_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_hough_based_search_processor_comp_8h.html</filename>
     <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CLensDistorsionCalibration.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_lens_distorsion_calibration_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_lens_distorsion_calibration_8h.html</filename>
     <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
     <class kind="class">iocv::CLensDistorsionCalibration</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CLensDistorsionCalibrationProviderComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_lens_distorsion_calibration_provider_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_lens_distorsion_calibration_provider_comp_8h.html</filename>
     <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
     <includes id="_c_lens_distorsion_calibration_8h" name="CLensDistorsionCalibration.h" local="no" imported="no">iocv/CLensDistorsionCalibration.h</includes>
     <class kind="class">iocv::CLensDistorsionCalibrationProviderComp</class>
@@ -114,896 +114,230 @@
   </compound>
   <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_acquisition_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_acquisition_comp_8h.html</filename>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvAdaptiveBinarizationComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_adaptive_binarization_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_adaptive_binarization_comp_8h.html</filename>
     <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvBlobProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_blob_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_blob_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvEdgeExtractorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_edge_extractor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_edge_extractor_comp_8h.html</filename>
     <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvImage.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_image_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_image_8h.html</filename>
     <class kind="class">iocv::COcvImage</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvIntrinsicCameraCalibration.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_intrinsic_camera_calibration_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_intrinsic_camera_calibration_8h.html</filename>
     <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvIntrinsicCameraCalibrationSupplierComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_intrinsic_camera_calibration_supplier_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_intrinsic_camera_calibration_supplier_comp_8h.html</filename>
     <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
     <class kind="class">iocv::COcvIntrinsicCameraCalibrationSupplierComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvMedianProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_median_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_median_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvMorphologicalProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_morphological_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_morphological_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
     <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvPointGridExtractorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_point_grid_extractor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_point_grid_extractor_comp_8h.html</filename>
     <class kind="class">iocv::COcvPointGridExtractorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvResamplingProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_resampling_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_resampling_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvSubdiv2d.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_subdiv2d_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_subdiv2d_8h.html</filename>
     <class kind="class">iocv::COcvSubdiv2d</class>
     <class kind="struct">iocv::COcvSubdiv2d::Triangle</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvUndistortImageProcessorComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_undistort_image_processor_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_undistort_image_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvVideoControllerComp.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>_c_ocv_video_controller_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_video_controller_comp_8h.html</filename>
     <class kind="class">iocv::COcvVideoControllerComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>iocv.h</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>iocv_8h</filename>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>iocv_8h.html</filename>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CPhononVideoViewGuiComp.h</name>
-    <path>C:/Temp/Iacf/Include/iphonon/</path>
-    <filename>_c_phonon_video_view_gui_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iphonon/</path>
+    <filename>_c_phonon_video_view_gui_comp_8h.html</filename>
     <class kind="class">iphonon::CPhononVideoViewGuiComp</class>
     <namespace>iphonon</namespace>
   </compound>
   <compound kind="file">
     <name>iphonon.h</name>
-    <path>C:/Temp/Iacf/Include/iphonon/</path>
-    <filename>iphonon_8h</filename>
+    <path>C:/Temp/IAcf/Include/iphonon/</path>
+    <filename>iphonon_8h.html</filename>
+    <namespace>iqtmm</namespace>
   </compound>
   <compound kind="file">
     <name>CVlcVideoViewGuiComp.h</name>
-    <path>C:/Temp/Iacf/Include/iqaxmm/</path>
-    <filename>_c_vlc_video_view_gui_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqaxmm/</path>
+    <filename>_c_vlc_video_view_gui_comp_8h.html</filename>
     <class kind="class">iqaxmm::CVlcVideoViewGuiComp</class>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
     <name>iqaxmm.h</name>
-    <path>C:/Temp/Iacf/Include/iqaxmm/</path>
-    <filename>iqaxmm_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqaxmm/</path>
+    <filename>iqaxmm_8h.html</filename>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
     <name>CTextEditor.h</name>
-    <path>C:/Temp/Iacf/Include/iqsci/</path>
-    <filename>_c_text_editor_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqsci/</path>
+    <filename>_c_text_editor_8h.html</filename>
     <class kind="class">iqsci::CTextEditor</class>
     <namespace>iqsci</namespace>
   </compound>
   <compound kind="file">
     <name>CTextEditorGuiComp.h</name>
-    <path>C:/Temp/Iacf/Include/iqsci/</path>
-    <filename>_c_text_editor_gui_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqsci/</path>
+    <filename>_c_text_editor_gui_comp_8h.html</filename>
     <includes id="_c_text_editor_8h" name="CTextEditor.h" local="no" imported="no">iqsci/CTextEditor.h</includes>
     <class kind="class">iqsci::CTextEditorGuiComp</class>
     <namespace>iqsci</namespace>
   </compound>
   <compound kind="file">
     <name>iqsci.h</name>
-    <path>C:/Temp/Iacf/Include/iqsci/</path>
-    <filename>iqsci_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqsci/</path>
+    <filename>iqsci_8h.html</filename>
     <namespace>iqsci</namespace>
   </compound>
   <compound kind="file">
     <name>CHistogramViewComp.h</name>
-    <path>C:/Temp/Iacf/Include/iqwt/</path>
-    <filename>_c_histogram_view_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqwt/</path>
+    <filename>_c_histogram_view_comp_8h.html</filename>
     <class kind="class">iqwt::CHistogramViewComp</class>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CProgressHistoryGuiComp.h</name>
-    <path>C:/Temp/Iacf/Include/iqwt/</path>
-    <filename>_c_progress_history_gui_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqwt/</path>
+    <filename>_c_progress_history_gui_comp_8h.html</filename>
     <class kind="class">iqwt::CProgressHistoryGuiComp</class>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CQwtDataSequenceViewComp.h</name>
-    <path>C:/Temp/Iacf/Include/iqwt/</path>
-    <filename>_c_qwt_data_sequence_view_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqwt/</path>
+    <filename>_c_qwt_data_sequence_view_comp_8h.html</filename>
     <class kind="class">iqwt::CQwtDataSequenceViewComp</class>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>iqwt.h</name>
-    <path>C:/Temp/Iacf/Include/iqwt/</path>
-    <filename>iqwt_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqwt/</path>
+    <filename>iqwt_8h.html</filename>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CSurfaceViewComp.h</name>
-    <path>C:/Temp/Iacf/Include/iqwt3d/</path>
-    <filename>_c_surface_view_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqwt3d/</path>
+    <filename>_c_surface_view_comp_8h.html</filename>
     <class kind="class">iqwt3d::CSurfaceViewComp</class>
     <namespace>iqwt3d</namespace>
   </compound>
   <compound kind="file">
     <name>iqwt3d.h</name>
-    <path>C:/Temp/Iacf/Include/iqwt3d/</path>
-    <filename>iqwt3d_8h</filename>
+    <path>C:/Temp/IAcf/Include/iqwt3d/</path>
+    <filename>iqwt3d_8h.html</filename>
     <namespace>iqwt3d</namespace>
   </compound>
   <compound kind="file">
     <name>CPerformanceTimeStamp.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_performance_time_stamp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iwin/</path>
+    <filename>_c_performance_time_stamp_8h.html</filename>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CSystem.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_system_8h</filename>
+    <path>C:/Temp/IAcf/Include/iwin/</path>
+    <filename>_c_system_8h.html</filename>
     <class kind="class">iwin::CSystem</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CTimeStampCacheComp.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>_c_time_stamp_cache_comp_8h</filename>
+    <path>C:/Temp/IAcf/Include/iwin/</path>
+    <filename>_c_time_stamp_cache_comp_8h.html</filename>
     <includes id="_c_performance_time_stamp_8h" name="CPerformanceTimeStamp.h" local="no" imported="no">iwin/CPerformanceTimeStamp.h</includes>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>iwin.h</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>iwin_8h</filename>
+    <path>C:/Temp/IAcf/Include/iwin/</path>
+    <filename>iwin_8h.html</filename>
     <namespace>iwin</namespace>
-  </compound>
-  <compound kind="namespace">
-    <name>icbox</name>
-    <filename>namespaceicbox.html</filename>
-    <class kind="class">icbox::CMemoryBankSerializerComp</class>
-  </compound>
-  <compound kind="class">
-    <name>icbox::CMemoryBankSerializerComp</name>
-    <filename>classicbox_1_1_c_memory_bank_serializer_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifile::IFilePersistence</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>ad09059de033cc8d5eeca18f4c0306b79</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CBIOS_ERROR</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>ad09059de033cc8d5eeca18f4c0306b79a5e8cfd94201e0696c3922a69e09c1a12</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a52b29b8d5f920c4bb72ab55c2806be0f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CMemoryBankSerializerComp</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>abdf7064b6330cff9ecb2abc4c7ec2983</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsOperationSupported</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>afb75ed0d7a3029887fc4b1e004d14725</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>LoadFromFile</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a59cd8154119ebf295c6149f2660c4b34</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>SaveToFile</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a0edf34d03ae7d92e3c781df2bca076a1</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a2ff45265dabd230c5c8bcdbab9858d21</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a4e3be8898630e880622ac43de886dad3</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>CheckError</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a06eba6f5d6afef66a7c0cd45999e1206</anchor>
-      <arglist>(quint32 errorCode) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsurePartitionOpened</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a22926e88b9f7822e266d29cf13c6cf71</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>EnsurePartitionClosed</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a96d774d82617302c64d71d7802672369</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ReadFromMem</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a7945992c6acd021af54331321a19c964</anchor>
-      <arglist>(int offset, void *bufferPtr, int size) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>WriteToMem</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a6122f61b7d1f742ca66e7223a1e66901</anchor>
-      <arglist>(int offset, const void *bufferPtr, int size) const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>abb3222c839521c5fe500f1628428afbf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
-      <anchor>a07f0ac668736e287a66e50f8448c78b5</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>idc1394</name>
-    <filename>namespaceidc1394.html</filename>
-    <class kind="class">idc1394::CSimpleCameraComp</class>
-  </compound>
-  <compound kind="class">
-    <name>idc1394::CSimpleCameraComp</name>
-    <filename>classidc1394_1_1_c_simple_camera_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>ad730c02b8989c060e5f1debdbbce0e74</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_FIND_CAMERA</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>ad730c02b8989c060e5f1debdbbce0e74a0cd4b261466e4ea1fcb0ecfc5443cefd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CAMERA</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>ad730c02b8989c060e5f1debdbbce0e74af1b7d9e878abd4917ef49c7bae523b1b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a5746952508ff11bcf72b0ac4120f91dd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a51c6ac1942ae9aa972e9b3ae4d4dae07</anchor>
-      <arglist>(AdjustConstraints, imeas::ILinearAdjustConstraints, ExtractAdjustContraints)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a6ce03d62ec88ab97a1e4afa9f8b93ba2</anchor>
-      <arglist>(AdjustConstraints, istd::IChangeable, ExtractAdjustContraints)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a09920bb780cd86274139b641154452ff</anchor>
-      <arglist>(ExposureConstraints, icam::IExposureConstraints, ExtractExposureContraints)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>acd8960063a9cd71e164a1704ba15bb4a</anchor>
-      <arglist>(ExposureConstraints, istd::IChangeable, ExtractExposureContraints)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CSimpleCameraComp</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>af3693f53b6341b5e1da3e2e7775517d6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a882b0f96c12186ff13902968f8a1b7a5</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CIndex2d</type>
-      <name>GetBitmapSize</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a4e54ce3d6498b21a58757d7eaf6adfc7</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InitProcessor</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>ad7bcc345314b5e82bf2fcfa18a2bd45a</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>SetParametersToCamera</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>af6d1430d5bf59257aba2278bd68bced0</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>GetAbsoluteFeatureRange</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>ae63768e02e4f517a5a7f4e5a4f5ddec3</anchor>
-      <arglist>(dc1394camera_t &amp;camera, dc1394feature_t feature, istd::CRange &amp;range) const </arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>SetAbsoluteFeatureValue</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>afb358a9036404272978613d2c522076d</anchor>
-      <arglist>(dc1394camera_t &amp;camera, dc1394feature_t feature, double value)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>a638e9e9393718aa43e6b151b31ef2a76</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
-      <anchor>adf1a7c914e13f1af70657c9544941fa0</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>ilibav</name>
-    <filename>namespaceilibav.html</filename>
-    <class kind="class">ilibav::CLibAvConverter</class>
-    <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
-  </compound>
-  <compound kind="class">
-    <name>ilibav::CLibAvConverter</name>
-    <filename>classilibav_1_1_c_lib_av_converter.html</filename>
-    <class kind="struct">ilibav::CLibAvConverter::Rgba</class>
-    <member kind="function" static="yes">
-      <type>static bool</type>
-      <name>ConvertBitmap</name>
-      <anchorfile>classilibav_1_1_c_lib_av_converter.html</anchorfile>
-      <anchor>af8162bac8f826ea754007f7c0da7dd4d</anchor>
-      <arglist>(const AVFrame &amp;avFrame, const istd::CIndex2d &amp;size, AVPixelFormat pixelFormat, iimg::IBitmap &amp;result)</arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>ilibav::CLibAvConverter::Rgba</name>
-    <filename>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</filename>
-    <member kind="variable">
-      <type>quint8</type>
-      <name>r</name>
-      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>a50db7994977a7ad022b4c956b46e078f</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>quint8</type>
-      <name>g</name>
-      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>ab81a488fcd6d82feaabfc6e27436ce1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>quint8</type>
-      <name>b</name>
-      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>a9e60ece58c0d11b6116d353d3d46b11d</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>quint8</type>
-      <name>a</name>
-      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
-      <anchor>a81c969d65f0101a34846c96a74e63e42</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ilibav::CLibAvVideoDecoderComp</name>
-    <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">icam::IBitmapAcquisition</base>
-    <base virtualness="virtual">imeas::ISampleAcquisition</base>
-    <base virtualness="virtual">imm::IVideoController</base>
-    <member kind="enumeration">
-      <type></type>
-      <name>MessageId</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aec4a8c42ef500a7f0e557494f67616fd</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_CANNOT_OPEN</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aec4a8c42ef500a7f0e557494f67616fda3d9b23ac652c8788e877198a922d8d12</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <type>@</type>
-      <name>MI_FORMAT_PROBLEM</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aec4a8c42ef500a7f0e557494f67616fdac376a6eb16842b46299048e72319fb1e</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>ilog::CLoggerComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a0a5ec1333d53d2fb28a303b21a18853b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CLibAvVideoDecoderComp</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>afd9f57c624c7ad811b7723c517c0570b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CLibAvVideoDecoderComp</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ac0cf7232ac25e1ce82e8966222469ffc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CIndex2d</type>
-      <name>GetBitmapSize</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>afc59fde5adb804abb667f7aea3689bd5</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetSamplingRate</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a121259e880df91d448acf7410f8e8704</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetProcessorState</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a45e71b723848df89aa2d89a2d5baf4d8</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>AreParamsAccepted</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>afdf4663d84c9d257f4451bf12ca489ec</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>DoProcessing</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ac4495eda28d9560926dc6364a2a1430d</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginTask</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>abc94ce909081fb03ac7567d8cb129b5f</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>WaitTaskFinished</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a445f06f357addbda5a5bf6c8d53666ed</anchor>
-      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CancelTask</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a4ca9e8303f0c9fefea43345fe18366ac</anchor>
-      <arglist>(int taskId=-1)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetReadyTask</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a5dcb2cf145db80ee4f505fff004a6a95</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetTaskState</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a9631c1296147481b7c0900a01db68fac</anchor>
-      <arglist>(int taskId=-1) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>InitProcessor</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a103b44d5c716bb2a4bfe684451f6db60</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOpenedMediumUrl</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a1afef3dbad39836516a8ff192a0d625b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OpenMediumUrl</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab0e133b1360731de8738ce44928278d8</anchor>
-      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CloseMedium</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a608d33d560b71a71da53e50b2a6b6415</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsPlaying</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aed6c5778cc2b5d92ebebfb182b1f133e</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetPlaying</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>adf3be7ebecbacb973cae2ae15854ff20</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetMediumLength</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a1995d970345ee55441852949beec2d9b</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetCurrentPosition</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a829298004b435f8b1891d3f36a1c170a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentPosition</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a393585cc556a36ba5690dd574a5d0229</anchor>
-      <arglist>(double position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedFeatures</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a192e0f62801fc2a2abd82906cc2673b4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetFramesCount</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a40f997a16bb01938e90c1bd305e6f303</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetFrameInterval</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aede99503fd19420c6e8adf96395d3cbb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CIndex2d</type>
-      <name>GetFrameSize</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a61e251b90569457275c49dad7d7054e5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetPixelAspectRatio</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a821b94b2631c2abe60ffd3a8e1aed33a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetCurrentFrame</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a96697f7cc792f4ddeacabbaeb875c584</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentFrame</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a48118e9d420d4d263f56d7e9bc4a3ffe</anchor>
-      <arglist>(int frameIndex)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aa7b3fb92e64d0348a9d40b48c986cf38</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>aeabc3c4dd1a46490eeac9e6671e76e62</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-    <member kind="enumeration" protection="protected">
-      <type></type>
-      <name>FrameType</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>FT_ERROR</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>FT_END</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>FT_AUDIO_SAMPLE</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>FT_IMAGE</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>FT_SKIPPED_AUDIO_SAMPLE</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue" protection="protected">
-      <type>@</type>
-      <name>FT_SKIPPED_IMAGE</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>FrameType</type>
-      <name>ReadNextFrame</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a29343028654b62f11c26217fbf1dcad1</anchor>
-      <arglist>(iimg::IBitmap *bitmapPtr, imeas::IDataSequence *audioSequencePtr, int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ReadNextPacket</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>adf9cb79a6663eef95c1eb5e04cf2c22b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>int</type>
-      <name>FinishNextTask</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>af73e0499cbc6789ca76929403cf858c0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>TryTracePosition</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a938d4a18b32cb89880fde3fe63e79f2c</anchor>
-      <arglist>(int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a0cc965e1514968d67d54697689c2939f</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>OnComponentDestroyed</name>
-      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
-      <anchor>a3c38ff59a2f59fc3607c3c6d936a3844</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>inat</name>
-    <filename>namespaceinat.html</filename>
-  </compound>
-  <compound kind="namespace">
-    <name>iocv</name>
-    <filename>namespaceiocv.html</filename>
-    <class kind="class">iocv::CCorrSearchProcessorComp</class>
-    <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
-    <class kind="class">iocv::CLensDistorsionCalibration</class>
-    <class kind="class">iocv::CLensDistorsionCalibrationProviderComp</class>
-    <class kind="class">iocv::COcvAcquisitionComp</class>
-    <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
-    <class kind="class">iocv::COcvBlobProcessorComp</class>
-    <class kind="class">iocv::COcvEdgeExtractorComp</class>
-    <class kind="class">iocv::COcvImage</class>
-    <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
-    <class kind="class">iocv::COcvIntrinsicCameraCalibrationSupplierComp</class>
-    <class kind="class">iocv::COcvMedianProcessorComp</class>
-    <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
-    <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
-    <class kind="class">iocv::COcvPointGridExtractorComp</class>
-    <class kind="class">iocv::COcvResamplingProcessorComp</class>
-    <class kind="class">iocv::COcvSubdiv2d</class>
-    <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
-    <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
   <compound kind="class">
     <name>iocv::CCorrSearchProcessorComp</name>
     <filename>classiocv_1_1_c_corr_search_processor_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <base>iproc::TSyncProcessorCompBase</base>
     <base virtualness="virtual">iipr::ISearchConstraints</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
@@ -1030,29 +364,29 @@
       <type>virtual int</type>
       <name>GetSearchSupportedFlags</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a5db0fb58ca18c32a422e87deca57e2ec</anchor>
-      <arglist>() const </arglist>
+      <anchor>a32e6c1345a52d1b2ba5d3cd1cd430521</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a429a19eed9781279cf6f1a4055f1cc53</anchor>
-      <arglist>() const </arglist>
+      <anchor>a643aaec2a281f045f823acc4215ad449</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetScaleRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a9f39a47ec3e0f15f871002576d8c01b5</anchor>
-      <arglist>() const </arglist>
+      <anchor>a19cce5b11f5ede7252623ae144f5c8e4</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CIntRange &amp;</type>
       <name>GetResultsCountConstraints</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>ab2fe9d1832b44d1d54160bd664f0e956</anchor>
-      <arglist>() const </arglist>
+      <anchor>a591e1375091b58b5814d8e62ae54363f</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -1063,9 +397,42 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqwt::CHistogramViewComp</name>
+    <filename>classiqwt_1_1_c_histogram_view_comp.html</filename>
+    <base>TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>a94274a946bd0ecf36d3e91956ddeefb3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>a4426f0397cea85ccc88b900b90ce4bbc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>ad4c5696abe89b2c78e22777a2dce49b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
+      <anchor>acfd4757567b6d0d0750712ce1bbdbe10</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iocv::CHoughBasedSearchProcessorComp</name>
     <filename>classiocv_1_1_c_hough_based_search_processor_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <base>iproc::TSyncProcessorCompBase</base>
     <base virtualness="virtual">iipr::ISearchConstraints</base>
     <member kind="enumeration">
       <type></type>
@@ -1075,21 +442,18 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <type>@</type>
       <name>MT_CIRCLE</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
       <anchor>a327cd41ef5f0ff35be1c66486cbd6743a45689983b300b2fa952669f3ec9044b6</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <type>@</type>
       <name>MT_LINE</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
       <anchor>a327cd41ef5f0ff35be1c66486cbd6743ae9605a6c17e924f8d696e141b17a50ee</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <type>@</type>
       <name>MT_TEMPLATE</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
       <anchor>a327cd41ef5f0ff35be1c66486cbd6743a2cc24446b8b7dd2477c169ce3300e68d</anchor>
@@ -1100,6 +464,24 @@
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
       <anchor>a0786a04dc8da177fea8b66cbe58ebbc7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MT_CIRCLE</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743a45689983b300b2fa952669f3ec9044b6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MT_LINE</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743ae9605a6c17e924f8d696e141b17a50ee</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MT_TEMPLATE</name>
+      <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
+      <anchor>a327cd41ef5f0ff35be1c66486cbd6743a2cc24446b8b7dd2477c169ce3300e68d</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1120,29 +502,29 @@
       <type>virtual int</type>
       <name>GetSearchSupportedFlags</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>a6524ef4839ff49810ffce16e1cc09fee</anchor>
-      <arglist>() const </arglist>
+      <anchor>a2db7e75e60f497551b3dbdebf41e0502</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>adb46ca7c598f42145289c6d110e5490d</anchor>
-      <arglist>() const </arglist>
+      <anchor>a2ae8a27e27dca73b2bed320c953b248f</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetScaleRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>af637f807a88d7055a751c9c213f25da4</anchor>
-      <arglist>() const </arglist>
+      <anchor>a2b25b3bc9a7d606d8dd6ceeb45c7b52a</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CIntRange &amp;</type>
       <name>GetResultsCountConstraints</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>a0a9ad9bccb7e91188c3afc027c9a68eb</anchor>
-      <arglist>() const </arglist>
+      <anchor>adf4dc7f4e443d760f5474b17e97148d7</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -1360,10 +742,522 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ilibav::CLibAvConverter</name>
+    <filename>classilibav_1_1_c_lib_av_converter.html</filename>
+    <class kind="struct">ilibav::CLibAvConverter::Rgba</class>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>ConvertBitmap</name>
+      <anchorfile>classilibav_1_1_c_lib_av_converter.html</anchorfile>
+      <anchor>af8162bac8f826ea754007f7c0da7dd4d</anchor>
+      <arglist>(const AVFrame &amp;avFrame, const istd::CIndex2d &amp;size, AVPixelFormat pixelFormat, iimg::IBitmap &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>ilibav::CLibAvVideoDecoderComp</name>
+    <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">icam::IBitmapAcquisition</base>
+    <base virtualness="virtual">imeas::ISampleAcquisition</base>
+    <base virtualness="virtual">imm::IVideoController</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aec4a8c42ef500a7f0e557494f67616fd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_OPEN</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aec4a8c42ef500a7f0e557494f67616fda3d9b23ac652c8788e877198a922d8d12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_FORMAT_PROBLEM</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aec4a8c42ef500a7f0e557494f67616fdac376a6eb16842b46299048e72319fb1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a0a5ec1333d53d2fb28a303b21a18853b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_OPEN</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aec4a8c42ef500a7f0e557494f67616fda3d9b23ac652c8788e877198a922d8d12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_FORMAT_PROBLEM</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aec4a8c42ef500a7f0e557494f67616fdac376a6eb16842b46299048e72319fb1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CLibAvVideoDecoderComp</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>afd9f57c624c7ad811b7723c517c0570b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~CLibAvVideoDecoderComp</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ac0cf7232ac25e1ce82e8966222469ffc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aff1da06a1ba446df2091a1b956130009</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetSamplingRate</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab06a2ad9870128ed6cc8a1b76619470b</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetProcessorState</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a6b7ef4e49473df41315121a8b79bf871</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>AreParamsAccepted</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>aa1f27ce45f369af348fbae4ac53cb7d4</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, const istd::IChangeable *outputPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ac4495eda28d9560926dc6364a2a1430d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>BeginTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>abc94ce909081fb03ac7567d8cb129b5f</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>WaitTaskFinished</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a445f06f357addbda5a5bf6c8d53666ed</anchor>
+      <arglist>(int taskId=-1, double timeoutTime=-1, bool killOnTimeout=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CancelTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a4ca9e8303f0c9fefea43345fe18366ac</anchor>
+      <arglist>(int taskId=-1)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetReadyTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a5dcb2cf145db80ee4f505fff004a6a95</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTaskState</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a8c1d59520623b4324f4f20eb57792faa</anchor>
+      <arglist>(int taskId=-1) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a103b44d5c716bb2a4bfe684451f6db60</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOpenedMediumUrl</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a3a66107d701c037b876550140daadb08</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OpenMediumUrl</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab0e133b1360731de8738ce44928278d8</anchor>
+      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseMedium</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a608d33d560b71a71da53e50b2a6b6415</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPlaying</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>abe453eb7bca9245a230e393a124efd41</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPlaying</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>adf3be7ebecbacb973cae2ae15854ff20</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMediumLength</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a74e270a068adeed25a43ab1fe251e4b3</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetCurrentPosition</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab72cf597826cd0704981f911af3ddde0</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPosition</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a393585cc556a36ba5690dd574a5d0229</anchor>
+      <arglist>(double position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedFeatures</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a8bceb48a751d7989fe88c872fe0a9988</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFramesCount</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a8f0286e31c460f6004b2f17d1f0826be</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetFrameInterval</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a105e5540f7a3c19fa63dd588c96b7c93</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetFrameSize</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ac031391fb3d22df0b97b200b5ed6133f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPixelAspectRatio</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a4d93d35a01ab13186d913b37f3f7ae34</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentFrame</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a1891c0065b7986d72a74270ed454677c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentFrame</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a48118e9d420d4d263f56d7e9bc4a3ffe</anchor>
+      <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a3a4b1b758e01cd372c1401e98b91c38f</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *, int flags=-1, bool doAppend=false) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a1156e3cb68fd8af9ed3a5e9f8d36f062</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+    </member>
+    <member kind="enumeration" protection="protected">
+      <type></type>
+      <name>FrameType</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_ERROR</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_END</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_AUDIO_SAMPLE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_IMAGE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_SKIPPED_AUDIO_SAMPLE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_SKIPPED_IMAGE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_ERROR</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113af0e448932695ba5e7b7b81dc0b1b93c0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_END</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113acc2dd7b18d9d6a02a0c0ce25cba5ea98</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_AUDIO_SAMPLE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a8f56ca8d22864c5343d53accfb76815b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_IMAGE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a50335d24b1847f1560e407ca732fc022</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_SKIPPED_AUDIO_SAMPLE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a98a52e2fa584ff8dd900df58d2cb7dc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue" protection="protected">
+      <name>FT_SKIPPED_IMAGE</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>ab98135d5291c87415f4bfd03727bb113a68a6fed94fdcfc7b1e0e7d3165a68ede</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>FrameType</type>
+      <name>ReadNextFrame</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a29343028654b62f11c26217fbf1dcad1</anchor>
+      <arglist>(iimg::IBitmap *bitmapPtr, imeas::IDataSequence *audioSequencePtr, int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ReadNextPacket</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>adf9cb79a6663eef95c1eb5e04cf2c22b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>int</type>
+      <name>FinishNextTask</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>af73e0499cbc6789ca76929403cf858c0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>TryTracePosition</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a938d4a18b32cb89880fde3fe63e79f2c</anchor>
+      <arglist>(int minimalImageFrame=-1, int minimalAudioFrame=-1)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a0cc965e1514968d67d54697689c2939f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilibav_1_1_c_lib_av_video_decoder_comp.html</anchorfile>
+      <anchor>a3c38ff59a2f59fc3607c3c6d936a3844</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>icbox::CMemoryBankSerializerComp</name>
+    <filename>classicbox_1_1_c_memory_bank_serializer_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">ifile::IFilePersistence</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>ad09059de033cc8d5eeca18f4c0306b79</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CBIOS_ERROR</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>ad09059de033cc8d5eeca18f4c0306b79a5e8cfd94201e0696c3922a69e09c1a12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a52b29b8d5f920c4bb72ab55c2806be0f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CBIOS_ERROR</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>ad09059de033cc8d5eeca18f4c0306b79a5e8cfd94201e0696c3922a69e09c1a12</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CMemoryBankSerializerComp</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>abdf7064b6330cff9ecb2abc4c7ec2983</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsOperationSupported</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>adba5525e70a5950e0503c535a08cd3bf</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>LoadFromFile</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>aef25d3108ca77efbf90b9e4183649c63</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>SaveToFile</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>afc087ffa78e135e61f80e8da7c1bf482</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a728d895d61fa410fa2ffabb901bc7e95</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a34275ac0ce507019f6162bb5a184e32c</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>CheckError</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>afab782ea93b8a5b2a006dbdd5d227f63</anchor>
+      <arglist>(quint32 errorCode) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsurePartitionOpened</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a9f5ca34325b7a45c714ba1a0cd0f8321</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>EnsurePartitionClosed</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a85ab1f7f2bab8f597493b36d4ce57f02</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>ReadFromMem</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a466f36175213c220b4e5d37ea44af018</anchor>
+      <arglist>(int offset, void *bufferPtr, int size) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteToMem</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a6f4a99b54312a59213148a1d98ef1764</anchor>
+      <arglist>(int offset, const void *bufferPtr, int size) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>abb3222c839521c5fe500f1628428afbf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classicbox_1_1_c_memory_bank_serializer_comp.html</anchorfile>
+      <anchor>a07f0ac668736e287a66e50f8448c78b5</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
     <base>ilog::TLoggerCompWrap</base>
-    <base>TSyncProcessorWrap&lt; icam::IBitmapAcquisition &gt;</base>
+    <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -1389,8 +1283,8 @@
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiocv_1_1_c_ocv_acquisition_comp.html</anchorfile>
-      <anchor>a2f421ded15797848b6f474a587ebf5e2</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+      <anchor>a2b5af681cc43f16e84da50d63196f352</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -1438,7 +1332,6 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <type>@</type>
       <name>MI_FOUND_BLOB</name>
       <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
       <anchor>a24f8313ee7b7d53b351e72b0f395865aabefad07f2b6c37e04b4b334f61964f17</anchor>
@@ -1449,6 +1342,12 @@
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
       <anchor>aa8c1057f317a3ec1a3306bda434be3ca</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_FOUND_BLOB</name>
+      <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
+      <anchor>a24f8313ee7b7d53b351e72b0f395865aabefad07f2b6c37e04b4b334f61964f17</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -1474,8 +1373,8 @@
       <type>virtual bool</type>
       <name>DoContourExtraction</name>
       <anchorfile>classiocv_1_1_c_ocv_edge_extractor_comp.html</anchorfile>
-      <anchor>a201fe1b0b745c861b617de382e0a0810</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;bitmap, iedge::CEdgeLineContainer &amp;result) const </arglist>
+      <anchor>abd7a30fdaa47625633339f3999dddd85</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const iimg::IBitmap &amp;bitmap, iedge::CEdgeLineContainer &amp;result) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -1533,8 +1432,8 @@
       <type>const CameraMatrix &amp;</type>
       <name>GetCameraMatrix</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>adc8caec5fe0a97627572a3f9b5693033</anchor>
-      <arglist>() const </arglist>
+      <anchor>a8b48f6019f1f76b823afc16161a2d67b</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -1547,8 +1446,8 @@
       <type>const DistorsionCoeff &amp;</type>
       <name>GetDistorsion</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>a1c71692c22fb1be0048bc570836ddeae</anchor>
-      <arglist>() const </arglist>
+      <anchor>ad839b7e89fe7697618de552a42fd453a</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -1792,8 +1691,8 @@
       <type>virtual bool</type>
       <name>ProcessImageRegion</name>
       <anchorfile>classiocv_1_1_c_ocv_morphological_processor_comp.html</anchorfile>
-      <anchor>afe6795ef129cdc1100cde947d6aa3f43</anchor>
-      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const </arglist>
+      <anchor>a34acdc2065818f1c1e7448fb2dcc9000</anchor>
+      <arglist>(const iimg::IBitmap &amp;inputBitmap, const iprm::IParamsSet *paramsPtr, const i2d::IObject2d *aoiPtr, istd::IChangeable *outputPtr) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -1806,7 +1705,7 @@
   <compound kind="class">
     <name>iocv::COcvPointGridExtractorComp</name>
     <filename>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</base>
+    <base>iproc::TSyncProcessorCompBase</base>
     <member kind="enumeration">
       <type></type>
       <name>Pattern</name>
@@ -1815,14 +1714,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <type>@</type>
       <name>PT_CHESSBOARD</name>
       <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
       <anchor>a451ab3e9d60812ab2660516349647c16a454af1a9e9f6bb3c0a6b92d05c890dfd</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <type>@</type>
       <name>PT_CIRCLES_GRID</name>
       <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
       <anchor>a451ab3e9d60812ab2660516349647c16aa9b3fe0781c8486ac9ee555462b9a9b2</anchor>
@@ -1833,6 +1730,18 @@
       <name>BaseClass</name>
       <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
       <anchor>aecc00988e485a0c137fe426424a81cb6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_CHESSBOARD</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>a451ab3e9d60812ab2660516349647c16a454af1a9e9f6bb3c0a6b92d05c890dfd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PT_CIRCLES_GRID</name>
+      <anchorfile>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</anchorfile>
+      <anchor>a451ab3e9d60812ab2660516349647c16aa9b3fe0781c8486ac9ee555462b9a9b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1877,40 +1786,8 @@
       <type>void</type>
       <name>GetTrianglesIndices</name>
       <anchorfile>classiocv_1_1_c_ocv_subdiv2d.html</anchorfile>
-      <anchor>aa7a0e8af60b44722b93e617a6c25a9f5</anchor>
-      <arglist>(std::vector&lt; Triangle &gt; &amp;triangleList) const </arglist>
-    </member>
-  </compound>
-  <compound kind="struct">
-    <name>iocv::COcvSubdiv2d::Triangle</name>
-    <filename>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</filename>
-    <member kind="function">
-      <type></type>
-      <name>Triangle</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>a07ec1fde5bd5ab2b26fd2cb4281f484d</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>a</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>a6b633b0153e7b4dd0be5123583c1f0c1</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>b</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>ad2dd72980d907cfe1b50f53e585e4382</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable">
-      <type>int</type>
-      <name>c</name>
-      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
-      <anchor>a270c23482470f40584964315ac99f8ce</anchor>
-      <arglist></arglist>
+      <anchor>a2e9774254c948a1981e1f61640747dd6</anchor>
+      <arglist>(std::vector&lt; Triangle &gt; &amp;triangleList) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -1935,7 +1812,7 @@
   <compound kind="class">
     <name>iocv::COcvVideoControllerComp</name>
     <filename>classiocv_1_1_c_ocv_video_controller_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</base>
+    <base>iproc::TSyncProcessorCompBase</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</type>
@@ -1955,8 +1832,8 @@
       <type>virtual istd::CIndex2d</type>
       <name>GetBitmapSize</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>ada752da881c4fad86827ba0e6b1f8a20</anchor>
-      <arglist>(const iprm::IParamsSet *paramsPtr) const </arglist>
+      <anchor>ab2a3f38a10e42c71edf3e88dfa6261b3</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
@@ -1969,8 +1846,8 @@
       <type>virtual QString</type>
       <name>GetOpenedMediumUrl</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a7363cba1ec4afd839452f8b1ecd95b26</anchor>
-      <arglist>() const </arglist>
+      <anchor>a6eda70cc0cde1a83decbe8f4fead5ed6</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -1990,8 +1867,8 @@
       <type>virtual bool</type>
       <name>IsPlaying</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>ac56c3fb29a7ea0ed37d8bb4a33225b5d</anchor>
-      <arglist>() const </arglist>
+      <anchor>adfc6309bab00ce9d6c04fa9a0551275c</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2004,15 +1881,15 @@
       <type>virtual double</type>
       <name>GetMediumLength</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a4b837a3e2dfa60f3b0b418ea9cafaa02</anchor>
-      <arglist>() const </arglist>
+      <anchor>ad9ca5d4a7a7da46d5be98ea327c21311</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetCurrentPosition</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a50e710fdd9c50725d5566704489605c2</anchor>
-      <arglist>() const </arglist>
+      <anchor>a370bc5242c00104666f66043e6de1686</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2025,43 +1902,43 @@
       <type>virtual int</type>
       <name>GetSupportedFeatures</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>ad49a13d768f898d49cf7b976bb338c38</anchor>
-      <arglist>() const </arglist>
+      <anchor>a0753c81060c41ac149e4bd797e2f8dde</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetFramesCount</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a24f093828449772d3dcdb120197b0271</anchor>
-      <arglist>() const </arglist>
+      <anchor>af9e0883772bcc4ae8bb5d2af79769d4d</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetFrameInterval</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a58c658a45e2fd2f54271ce4d66422021</anchor>
-      <arglist>() const </arglist>
+      <anchor>a79a6160851f3ac3f592e2ecc19b5544c</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetFrameSize</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a8fb4073855376938f7cee47cb93bfed3</anchor>
-      <arglist>() const </arglist>
+      <anchor>a7e9d301f3c76d398f21dba3875c32ebc</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetPixelAspectRatio</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a577bd83bf393efef79b1226ad1d596a6</anchor>
-      <arglist>() const </arglist>
+      <anchor>ad4cd78e181fdd85ee518d4015ae1ffd6</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetCurrentFrame</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>aeed1fa78895b7fb7e80480012fc787bb</anchor>
-      <arglist>() const </arglist>
+      <anchor>a095180989a2bda624fb36617823238f9</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2074,29 +1951,29 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a80e48f915cf48608121ba7b0e0cf7231</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>a1500d538a923b65e00b50c9563fd03d7</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a1cf654279d38ae8098e45c285cc83054</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+      <anchor>a876b1c5e5721f03ff34f458e7f3b6e47</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>GrabCurrentFrame</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a71b63629c15a11118143c57e186b2b90</anchor>
-      <arglist>(iimg::IBitmap &amp;result) const </arglist>
+      <anchor>a404a34f92ea7ace3531ee2b0733fb625</anchor>
+      <arglist>(iimg::IBitmap &amp;result) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>SeekToPosition</name>
       <anchorfile>classiocv_1_1_c_ocv_video_controller_comp.html</anchorfile>
-      <anchor>a567589b45bb2206064833933fba051f2</anchor>
-      <arglist>(int frameIndex) const </arglist>
+      <anchor>a6d0560d16c09bb4d2f1c15aec001ef82</anchor>
+      <arglist>(int frameIndex) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -2106,10 +1983,108 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="namespace">
-    <name>iphonon</name>
-    <filename>namespaceiphonon.html</filename>
-    <class kind="class">iphonon::CPhononVideoViewGuiComp</class>
+  <compound kind="class">
+    <name>iwin::CPerformanceTimeStamp</name>
+    <filename>classiwin_1_1_c_performance_time_stamp.html</filename>
+    <base virtualness="virtual">istd::ITimeStamp</base>
+    <member kind="function">
+      <type></type>
+      <name>CPerformanceTimeStamp</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>aac48770f15b299d01a8b37e5e0fecf65</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CPerformanceTimeStamp</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a39d120c16d24d3a789b4e05dc5135445</anchor>
+      <arglist>(quint64 nativeValue)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsVaild</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a412c0d63cfee996fffde960421235ada</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>af95645442ada4f7dafbbea179e6238ec</anchor>
+      <arglist>(const CPerformanceTimeStamp &amp;timeStamp) const</arglist>
+    </member>
+    <member kind="function">
+      <type>quint64</type>
+      <name>GetNativeRepresentation</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>abd491c9d57672d7445fad3b024f3146e</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetNativeRepresentation</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>afa0b4e846ba566df8459042480149803</anchor>
+      <arglist>(quint64 value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>Start</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>ae3331426035df2167dc3e4fce915cac9</anchor>
+      <arglist>(double elapsedTime=0)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QDateTime</type>
+      <name>GetStartTime</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>af1079451c7f131dd6ad1f6f737381345</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetElapsed</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>af4747c4559b04f04c1a9b4611c8ed780</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimeTo</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a3d970b878bf9f510e0106ea8b42ccf1d</anchor>
+      <arglist>(const istd::ITimeStamp &amp;timeStamp) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>WaitTo</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>acbdbb0fec99e6e5a8f2777801b104d8f</anchor>
+      <arglist>(double time) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetTimerResolution</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a7163d693116d1a21a3a45a0364c88c90</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedOperations</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>a2d53fc41314549b8f2f778ded01ded39</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CopyFrom</name>
+      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
+      <anchor>ac323ea798793f78083506c3876dbd74c</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iphonon::CPhononVideoViewGuiComp</name>
@@ -2134,8 +2109,8 @@
       <type>virtual QString</type>
       <name>GetOpenedMediumUrl</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a66c02ba01903642f76fa867d0f19de23</anchor>
-      <arglist>() const </arglist>
+      <anchor>abcf5802b8097a20173f6a074b36ebedc</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2155,8 +2130,8 @@
       <type>virtual bool</type>
       <name>IsPlaying</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>acc08a6e2d78c8341bb22e1706f9567ff</anchor>
-      <arglist>() const </arglist>
+      <anchor>a75d044f6d3645c8df219a677c536cb1e</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2169,15 +2144,15 @@
       <type>virtual double</type>
       <name>GetMediumLength</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>aa2ef209659715ddc08d7fddfcf71c249</anchor>
-      <arglist>() const </arglist>
+      <anchor>ad988b46552a9ec06b4f2c7117d9140d1</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetCurrentPosition</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>aa03525167778fc1597175eb931805495</anchor>
-      <arglist>() const </arglist>
+      <anchor>a42bb2ba7b16a167ba124edc13c02491d</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2190,43 +2165,43 @@
       <type>virtual int</type>
       <name>GetSupportedFeatures</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a396ebc8bfe998429a522ecb301341cb7</anchor>
-      <arglist>() const </arglist>
+      <anchor>a69794dd077a81c2f6209d7ecd750f9a4</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetFramesCount</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a05da2768a750e273c8dcf3e9d27f0fed</anchor>
-      <arglist>() const </arglist>
+      <anchor>a21d83d5677f566da72726aa0c43261b6</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetFrameInterval</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a7ca5b59a2326c351a8b3edf7a0a1d24d</anchor>
-      <arglist>() const </arglist>
+      <anchor>a0f6ed83e7a519cb08f391b2cb0a821d1</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CIndex2d</type>
       <name>GetFrameSize</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a556f8a1ce5eb1d2744c39f0a7e30c92b</anchor>
-      <arglist>() const </arglist>
+      <anchor>ab822c9dbfc5c6a0746ed5aed4b458240</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetPixelAspectRatio</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ae194766e6fef7d3389728b77040f2d85</anchor>
-      <arglist>() const </arglist>
+      <anchor>a78520cdc9f168cc4b8623e7f83e94fd8</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetCurrentFrame</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a5e294aeb9d30d543d5898c14eeb7d090</anchor>
-      <arglist>() const </arglist>
+      <anchor>a5a3b2db4d61273d58f53684cfe7eaf18</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -2239,22 +2214,22 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>a0d1ed013374685929a19f67a9da39e6f</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
+      <anchor>aadcf84ae08381eb02cd2e8ba6e1447a9</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>af19aec1b7e71236fb15cd365aca45fb1</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
+      <anchor>a12685943fb64eb3f585e5a05b7b14652</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
       <name>EnsureSync</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
-      <anchor>ad59b678f5a9637137d0ab351c75a1e44</anchor>
-      <arglist>() const </arglist>
+      <anchor>ad2e222f4f67eb44379ec86bfd1818064</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -2268,389 +2243,6 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiphonon_1_1_c_phonon_video_view_gui_comp.html</anchorfile>
       <anchor>acab92a5ca720c2e516788b7f10a5d7e9</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>iqaxmm</name>
-    <filename>namespaceiqaxmm.html</filename>
-    <class kind="class">iqaxmm::CVlcVideoViewGuiComp</class>
-  </compound>
-  <compound kind="class">
-    <name>iqaxmm::CVlcVideoViewGuiComp</name>
-    <filename>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; QFrame &gt;</base>
-    <base virtualness="virtual">imm::IVideoController</base>
-    <member kind="typedef">
-      <type>iqtgui::TGuiComponentBase&lt; QFrame &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a8c36d5704e815d9b53c7bc773a39c6c8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CVlcVideoViewGuiComp</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a2e0f879ef9ca05fd8918722493180895</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a40f91acc9cb5db6ca6aed883f67a8062</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>afe5f574e0786a8c49caa1d46d168f409</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetOpenedMediumUrl</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a92987eac92f153ab6a3583ad2766eb49</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>OpenMediumUrl</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a2606d77d598fca61629c46867f74bb39</anchor>
-      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>CloseMedium</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a89c0e2666ccaa7627c30412639cf1eb0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsPlaying</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>ae0d1d6adcdc73da5f56bba7b62d2fa90</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetPlaying</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a8ac24d5e82deb53809947a01cdeb0235</anchor>
-      <arglist>(bool state=true)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetMediumLength</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a9946b03a508d187bca158b6a68d82a21</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetCurrentPosition</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a2bf0c58ff45c70674b1119cc75986507</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentPosition</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a14f26797a10e529ed8ae8e0e78d609a0</anchor>
-      <arglist>(double position)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedFeatures</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>af06cdb6a2b1f6ed42378c181b76a4339</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetFramesCount</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a53d51d068e461c13950fc55115fbb8f7</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetFrameInterval</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>ac4a0951a0455e14ac31651554dc3c7b9</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual istd::CIndex2d</type>
-      <name>GetFrameSize</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>aefd83f5c617729469b79759517c81a11</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetPixelAspectRatio</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>ae586ba3b11ac8bba63e667316dc4bf6a</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetCurrentFrame</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>adc4066caca9c40f796167f14332780ab</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>SetCurrentFrame</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>aaf9cb38260297605cab0c572464e0ea9</anchor>
-      <arglist>(int frameIndex)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>GetFileExtensions</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>a3f075ea7d4d848ae03de40df162f5b65</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetTypeDescription</name>
-      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
-      <anchor>ab5c57b1fb2428da0614feb9856bbcf83</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const </arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>iqsci</name>
-    <filename>namespaceiqsci.html</filename>
-    <class kind="class">iqsci::CTextEditor</class>
-    <class kind="class">iqsci::CTextEditorGuiComp</class>
-  </compound>
-  <compound kind="class">
-    <name>iqsci::CTextEditor</name>
-    <filename>classiqsci_1_1_c_text_editor.html</filename>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <member kind="typedef">
-      <type>QWidget</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a18123cae0937062bd9330565c2e5b799</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>SetFoldingEnabled</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>ae48d8fe18a2f1e3e0ba22abf04c16db3</anchor>
-      <arglist>(bool useFoldingEnabled)</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>SetLineNumberEnabled</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a8e273daee9bcf93f57a6a98e93a3f593</anchor>
-      <arglist>(bool useFoldingEnabled)</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>SetLanguage</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a46d48edde803e6ee038635dc4ed13183</anchor>
-      <arglist>(const QString &amp;language)</arglist>
-    </member>
-    <member kind="slot">
-      <type>void</type>
-      <name>SetReadOnly</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>aba8ce981d3f7cca44c8ad19b288e8660</anchor>
-      <arglist>(bool readOnly=true)</arglist>
-    </member>
-    <member kind="signal">
-      <type>void</type>
-      <name>DataChanged</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>af9b0a3d11bcff3d6100a6946bc8051b0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CTextEditor</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a5a1d7f4697325e1c7f25bb85bd7b3a7d</anchor>
-      <arglist>(QWidget *parentWidget=NULL)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QString</type>
-      <name>GetText</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a86042ddcdc0345343a2aaf53fb92d7ff</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>SetText</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a64878a2a12bca277a16e519e66161b0d</anchor>
-      <arglist>(const QString &amp;text)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnRetranslate</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>aba197a1f90c5d02bf25ddb735a415bb6</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a39fe2d42a1d155645e44b8ab2c4c2e30</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnSelectionChanged</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a4ab6b5421b69103b369d83584d94e9e2</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnTextChanged</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a20484426d62ffc1e3b0988388c020eaf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnToLowercase</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a5fdda80b109d352950c866659df7c6b9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnToUppercase</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>a131bc0aca1a06cc35c5869bf567a3f0b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>RegisterLexers</name>
-      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>aa1294d447f7e661e00199d11ea3a5c4f</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iqsci::CTextEditorGuiComp</name>
-    <filename>classiqsci_1_1_c_text_editor_gui_comp.html</filename>
-    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
-    <member kind="typedef">
-      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>af9ad7b573c878b3f7b9aef17e27d1c24</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual const ibase::IHierarchicalCommand *</type>
-      <name>GetCommands</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ad3ffb186808d13da2ba66df8890d66eb</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="slot" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnTextChanged</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ad5d9fc48a322f1e3a18c8e8f628961da</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateModel</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ad98795e7386a0745cdab5e6c7476ee87</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>a7e97d91f1f8dd1c7aba7d8e9fd247fcc</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiModelDetached</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ad9b3fb8be8766613c0e23ff1f638adca</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>a1f9596413103b00e959deda7e14deddc</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>ae28a0159bc3b18e8fb256ea02851b155</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="namespace">
-    <name>iqwt</name>
-    <filename>namespaceiqwt.html</filename>
-    <class kind="class">iqwt::CHistogramViewComp</class>
-    <class kind="class">iqwt::CProgressHistoryGuiComp</class>
-    <class kind="class">iqwt::CQwtDataSequenceViewComp</class>
-  </compound>
-  <compound kind="class">
-    <name>iqwt::CHistogramViewComp</name>
-    <filename>classiqwt_1_1_c_histogram_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</base>
-    <member kind="typedef">
-      <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>a94274a946bd0ecf36d3e91956ddeefb3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>UpdateGui</name>
-      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>a4426f0397cea85ccc88b900b90ce4bbc</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiCreated</name>
-      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>ad4c5696abe89b2c78e22777a2dce49b9</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiDestroyed</name>
-      <anchorfile>classiqwt_1_1_c_histogram_view_comp.html</anchorfile>
-      <anchor>acfd4757567b6d0d0750712ce1bbdbe10</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -2698,8 +2290,8 @@
       <type>virtual bool</type>
       <name>IsCanceled</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>a27b8d1398bdbe9392a068995b12d3243</anchor>
-      <arglist>(int sessionId) const </arglist>
+      <anchor>ab6f004467295b35c49f34332cef25e45</anchor>
+      <arglist>(int sessionId) const</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -2763,10 +2355,140 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="namespace">
-    <name>iqwt3d</name>
-    <filename>namespaceiqwt3d.html</filename>
-    <class kind="class">iqwt3d::CSurfaceViewComp</class>
+  <compound kind="class">
+    <name>idc1394::CSimpleCameraComp</name>
+    <filename>classidc1394_1_1_c_simple_camera_comp.html</filename>
+    <base>ilog::TLoggerCompWrap</base>
+    <base virtualness="virtual">iproc::TSyncProcessorWrap</base>
+    <member kind="enumeration">
+      <type></type>
+      <name>MessageId</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_FIND_CAMERA</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74a0cd4b261466e4ea1fcb0ecfc5443cefd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CAMERA</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74af1b7d9e878abd4917ef49c7bae523b1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>ilog::CLoggerComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a5746952508ff11bcf72b0ac4120f91dd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CANNOT_FIND_CAMERA</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74a0cd4b261466e4ea1fcb0ecfc5443cefd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>MI_CAMERA</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad730c02b8989c060e5f1debdbbce0e74af1b7d9e878abd4917ef49c7bae523b1b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a51c6ac1942ae9aa972e9b3ae4d4dae07</anchor>
+      <arglist>(AdjustConstraints, imeas::ILinearAdjustConstraints, ExtractAdjustContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a6ce03d62ec88ab97a1e4afa9f8b93ba2</anchor>
+      <arglist>(AdjustConstraints, istd::IChangeable, ExtractAdjustContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a09920bb780cd86274139b641154452ff</anchor>
+      <arglist>(ExposureConstraints, icam::IExposureConstraints, ExtractExposureContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>I_REGISTER_SUBELEMENT_INTERFACE_T</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>acd8960063a9cd71e164a1704ba15bb4a</anchor>
+      <arglist>(ExposureConstraints, istd::IChangeable, ExtractExposureContraints)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSimpleCameraComp</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>af3693f53b6341b5e1da3e2e7775517d6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a882b0f96c12186ff13902968f8a1b7a5</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetBitmapSize</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a37785b4962fecfe1e9292762618dc50d</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>InitProcessor</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>ad7bcc345314b5e82bf2fcfa18a2bd45a</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>SetParametersToCamera</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>af6d1430d5bf59257aba2278bd68bced0</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>GetAbsoluteFeatureRange</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a4ddaee6930fe46b0ef8fde77f1a75cd1</anchor>
+      <arglist>(dc1394camera_t &amp;camera, dc1394feature_t feature, istd::CRange &amp;range) const</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>SetAbsoluteFeatureValue</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>afb358a9036404272978613d2c522076d</anchor>
+      <arglist>(dc1394camera_t &amp;camera, dc1394feature_t feature, double value)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>a638e9e9393718aa43e6b151b31ef2a76</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classidc1394_1_1_c_simple_camera_comp.html</anchorfile>
+      <anchor>adf1a7c914e13f1af70657c9544941fa0</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqwt3d::CSurfaceViewComp</name>
@@ -2774,7 +2496,6 @@
     <base>TDesignerGuiObserverCompBase&lt; Ui::CSurfaceViewComp, imath::ISampledFunction2d &gt;</base>
     <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumvalue">
-      <type>@</type>
       <name>GI_QWT3D</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
       <anchor>aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df</anchor>
@@ -2785,6 +2506,12 @@
       <name>BaseClass</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
       <anchor>adaeaf233d106a40d69f9011e75ed51b2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>GI_QWT3D</name>
+      <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
+      <anchor>aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2805,8 +2532,8 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>a53f1425d210e2f95251edb080fd200aa</anchor>
-      <arglist>() const </arglist>
+      <anchor>a9efea9f38f018479749c9a882936fd46</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -2858,117 +2585,6 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="namespace">
-    <name>iwin</name>
-    <filename>namespaceiwin.html</filename>
-    <class kind="class">iwin::CPerformanceTimeStamp</class>
-    <class kind="class">iwin::CSystem</class>
-    <class kind="class">iwin::CTimeStampCacheComp</class>
-    <class kind="class">iwin::TComPtr</class>
-  </compound>
-  <compound kind="class">
-    <name>iwin::CPerformanceTimeStamp</name>
-    <filename>classiwin_1_1_c_performance_time_stamp.html</filename>
-    <base virtualness="virtual">istd::ITimeStamp</base>
-    <member kind="function">
-      <type></type>
-      <name>CPerformanceTimeStamp</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>aac48770f15b299d01a8b37e5e0fecf65</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CPerformanceTimeStamp</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a39d120c16d24d3a789b4e05dc5135445</anchor>
-      <arglist>(quint64 nativeValue)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>IsVaild</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>af993c0486ead6c97333739ab85e8eccc</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a50890a4ba7decc909ecb80ef24f6e91c</anchor>
-      <arglist>(const CPerformanceTimeStamp &amp;timeStamp) const </arglist>
-    </member>
-    <member kind="function">
-      <type>quint64</type>
-      <name>GetNativeRepresentation</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>ad04752b351c6c004860fb2f775310296</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetNativeRepresentation</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>afa0b4e846ba566df8459042480149803</anchor>
-      <arglist>(quint64 value)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>Start</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>ae3331426035df2167dc3e4fce915cac9</anchor>
-      <arglist>(double elapsedTime=0)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual QDateTime</type>
-      <name>GetStartTime</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a7b0a156c16bf7987d367cc397b39e4d4</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetElapsed</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>ad4b4573d41106beb68da8a6c077188c5</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetTimeTo</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a42d6e51e5bbd5d7f912afaf9c198c9ae</anchor>
-      <arglist>(const istd::ITimeStamp &amp;timeStamp) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>WaitTo</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a29b68b6a6c474a8ae7fc839e3992983b</anchor>
-      <arglist>(double time) const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetTimerResolution</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>adf6e3dec35bfc09d0433d5f02f33c428</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>a0cff265f686beed4198272cf47faa5ef</anchor>
-      <arglist>() const </arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>CopyFrom</name>
-      <anchorfile>classiwin_1_1_c_performance_time_stamp.html</anchorfile>
-      <anchor>ac323ea798793f78083506c3876dbd74c</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
-    </member>
-  </compound>
   <compound kind="class">
     <name>iwin::CSystem</name>
     <filename>classiwin_1_1_c_system.html</filename>
@@ -2988,6 +2604,185 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqsci::CTextEditor</name>
+    <filename>classiqsci_1_1_c_text_editor.html</filename>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>QWidget</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a18123cae0937062bd9330565c2e5b799</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>SetFoldingEnabled</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>ae48d8fe18a2f1e3e0ba22abf04c16db3</anchor>
+      <arglist>(bool useFoldingEnabled)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>SetLineNumberEnabled</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a8e273daee9bcf93f57a6a98e93a3f593</anchor>
+      <arglist>(bool useFoldingEnabled)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>SetLanguage</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a46d48edde803e6ee038635dc4ed13183</anchor>
+      <arglist>(const QString &amp;language)</arglist>
+    </member>
+    <member kind="slot">
+      <type>void</type>
+      <name>SetReadOnly</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>aba8ce981d3f7cca44c8ad19b288e8660</anchor>
+      <arglist>(bool readOnly=true)</arglist>
+    </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>DataChanged</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>af9b0a3d11bcff3d6100a6946bc8051b0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CTextEditor</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a5a1d7f4697325e1c7f25bb85bd7b3a7d</anchor>
+      <arglist>(QWidget *parentWidget=NULL)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetText</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a5c3384a9bad650595502f4b1f2b66ddd</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>SetText</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a64878a2a12bca277a16e519e66161b0d</anchor>
+      <arglist>(const QString &amp;text)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnRetranslate</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>aba197a1f90c5d02bf25ddb735a415bb6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>aba86a889fe9443182c2bb8a080975b68</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnSelectionChanged</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a4ab6b5421b69103b369d83584d94e9e2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnTextChanged</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a20484426d62ffc1e3b0988388c020eaf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnToLowercase</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a5fdda80b109d352950c866659df7c6b9</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnToUppercase</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>a131bc0aca1a06cc35c5869bf567a3f0b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>RegisterLexers</name>
+      <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
+      <anchor>aa1294d447f7e661e00199d11ea3a5c4f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqsci::CTextEditorGuiComp</name>
+    <filename>classiqsci_1_1_c_text_editor_gui_comp.html</filename>
+    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</base>
+    <base virtualness="virtual">ibase::ICommandsProvider</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>af9ad7b573c878b3f7b9aef17e27d1c24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual const ibase::IHierarchicalCommand *</type>
+      <name>GetCommands</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>a2d4a8f05bc374a2d5bd6bbb912898453</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="slot" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnTextChanged</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>ad5d9fc48a322f1e3a18c8e8f628961da</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateModel</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>a3c33ba4a69d2ea0623be8ecc467e6013</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>UpdateGui</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>a7e97d91f1f8dd1c7aba7d8e9fd247fcc</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiModelDetached</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>ad9b3fb8be8766613c0e23ff1f638adca</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>a1f9596413103b00e959deda7e14deddc</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
+      <anchor>ae28a0159bc3b18e8fb256ea02851b155</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iwin::CTimeStampCacheComp</name>
     <filename>classiwin_1_1_c_time_stamp_cache_comp.html</filename>
     <base>icomp::CComponentBase</base>
@@ -3003,8 +2798,8 @@
       <type>virtual const istd::ITimeStamp *</type>
       <name>GetCurrentTimeStamp</name>
       <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
-      <anchor>a09f9f9929f025f22dce0ebd6d56d999d</anchor>
-      <arglist>() const </arglist>
+      <anchor>ac7a8eee7d9958c94fce9915d25cfa940</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -3015,10 +2810,195 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqaxmm::CVlcVideoViewGuiComp</name>
+    <filename>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</filename>
+    <base>TGuiComponentBase&lt; QFrame &gt;</base>
+    <base virtualness="virtual">imm::IVideoController</base>
+    <member kind="typedef">
+      <type>iqtgui::TGuiComponentBase&lt; QFrame &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a8c36d5704e815d9b53c7bc773a39c6c8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CVlcVideoViewGuiComp</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a2e0f879ef9ca05fd8918722493180895</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnGuiCreated</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a40f91acc9cb5db6ca6aed883f67a8062</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>OnGuiDestroyed</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>afe5f574e0786a8c49caa1d46d168f409</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetOpenedMediumUrl</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>ad660b6b421a211f890e5c32b01ab232f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OpenMediumUrl</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a2606d77d598fca61629c46867f74bb39</anchor>
+      <arglist>(const QString &amp;url, bool autoPlay=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>CloseMedium</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a89c0e2666ccaa7627c30412639cf1eb0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>IsPlaying</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a776d8811da40d6ad0c9fe67ce84c57dc</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetPlaying</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a8ac24d5e82deb53809947a01cdeb0235</anchor>
+      <arglist>(bool state=true)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetMediumLength</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a14934058d3d3f430b29e84fdf9b229d7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetCurrentPosition</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>aba5bb515a6e4914372a4c371a5f8b990</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentPosition</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a14f26797a10e529ed8ae8e0e78d609a0</anchor>
+      <arglist>(double position)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetSupportedFeatures</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>ae4e08905818aa5603a461c850c06dc47</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetFramesCount</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>aac48624f7b8916765fee7cf291874ff1</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetFrameInterval</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a9bd2a643912a513d153f4983e886378c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CIndex2d</type>
+      <name>GetFrameSize</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>ab03cae5c27186fc52c5abb717e42cd62</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetPixelAspectRatio</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>af5932f475d98053745c5c6ba90cac599</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetCurrentFrame</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a05b1c61d09395751433c86c1e2321c4f</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>SetCurrentFrame</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>aaf9cb38260297605cab0c572464e0ea9</anchor>
+      <arglist>(int frameIndex)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetFileExtensions</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>ae01c24e0c339996c9054ab7d1fc13dac</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GetTypeDescription</name>
+      <anchorfile>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</anchorfile>
+      <anchor>a5e44468e336dd167877adef06787cfa4</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>ilibav::CLibAvConverter::Rgba</name>
+    <filename>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</filename>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>r</name>
+      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
+      <anchor>a50db7994977a7ad022b4c956b46e078f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>g</name>
+      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
+      <anchor>ab81a488fcd6d82feaabfc6e27436ce1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>b</name>
+      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
+      <anchor>a9e60ece58c0d11b6116d353d3d46b11d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>quint8</type>
+      <name>a</name>
+      <anchorfile>structilibav_1_1_c_lib_av_converter_1_1_rgba.html</anchorfile>
+      <anchor>a81c969d65f0101a34846c96a74e63e42</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iwin::TComPtr</name>
     <filename>classiwin_1_1_t_com_ptr.html</filename>
-    <templarg>Type</templarg>
-    <base>istd::TPointerBase</base>
+    <templarg></templarg>
+    <base>TPointerBase&lt; Type &gt;</base>
     <member kind="typedef">
       <type>istd::TPointerBase&lt; Type &gt;</type>
       <name>BaseClass</name>
@@ -3111,120 +3091,119 @@
       <arglist>()</arglist>
     </member>
   </compound>
-  <compound kind="dir">
-    <name>Include/icbox</name>
-    <path>C:/Temp/Iacf/Include/icbox/</path>
-    <filename>dir_2737d69eb66a4f45a39e1c8d1b2bcc09.html</filename>
-    <file>CMemoryBankSerializerComp.h</file>
-    <file>icbox.h</file>
+  <compound kind="struct">
+    <name>iocv::COcvSubdiv2d::Triangle</name>
+    <filename>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>Triangle</name>
+      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
+      <anchor>a07ec1fde5bd5ab2b26fd2cb4281f484d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>a</name>
+      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
+      <anchor>a6b633b0153e7b4dd0be5123583c1f0c1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>b</name>
+      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
+      <anchor>ad2dd72980d907cfe1b50f53e585e4382</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>c</name>
+      <anchorfile>structiocv_1_1_c_ocv_subdiv2d_1_1_triangle.html</anchorfile>
+      <anchor>a270c23482470f40584964315ac99f8ce</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
-  <compound kind="dir">
-    <name>Include/idc1394</name>
-    <path>C:/Temp/Iacf/Include/idc1394/</path>
-    <filename>dir_4ff46735f2d9b14cc625f958c7c6f49c.html</filename>
-    <file>CSimpleCameraComp.h</file>
+  <compound kind="namespace">
+    <name>icbox</name>
+    <filename>namespaceicbox.html</filename>
+    <class kind="class">icbox::CMemoryBankSerializerComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/ilibav</name>
-    <path>C:/Temp/Iacf/Include/ilibav/</path>
-    <filename>dir_e511f70e8c459ad2a566a0e7856b34c5.html</filename>
-    <file>CLibAvConverter.h</file>
-    <file>CLibAvVideoDecoderComp.h</file>
-    <file>ilibav.h</file>
+  <compound kind="namespace">
+    <name>idc1394</name>
+    <filename>namespaceidc1394.html</filename>
+    <class kind="class">idc1394::CSimpleCameraComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/inat</name>
-    <path>C:/Temp/Iacf/Include/inat/</path>
-    <filename>dir_1d5e059fa2828db014614bc8a1001335.html</filename>
-    <file>inat.h</file>
-    <file>TComPtr.h</file>
+  <compound kind="namespace">
+    <name>ilibav</name>
+    <filename>namespaceilibav.html</filename>
+    <class kind="class">ilibav::CLibAvConverter</class>
+    <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include</name>
-    <path>C:/Temp/Iacf/Include/</path>
-    <filename>dir_856524284ebe840938865dc061f982fb.html</filename>
-    <dir>Include/icbox</dir>
-    <dir>Include/idc1394</dir>
-    <dir>Include/ilibav</dir>
-    <dir>Include/inat</dir>
-    <dir>Include/iocv</dir>
-    <dir>Include/iphonon</dir>
-    <dir>Include/iqaxmm</dir>
-    <dir>Include/iqsci</dir>
-    <dir>Include/iqwt</dir>
-    <dir>Include/iqwt3d</dir>
-    <dir>Include/iwin</dir>
+  <compound kind="namespace">
+    <name>inat</name>
+    <filename>namespaceinat.html</filename>
   </compound>
-  <compound kind="dir">
-    <name>Include/iocv</name>
-    <path>C:/Temp/Iacf/Include/iocv/</path>
-    <filename>dir_ef2d50ad1eb08c82cfa91c345faf6524.html</filename>
-    <file>CCorrSearchProcessorComp.h</file>
-    <file>CHoughBasedSearchProcessorComp.h</file>
-    <file>CLensDistorsionCalibration.h</file>
-    <file>CLensDistorsionCalibrationProviderComp.h</file>
-    <file>COcvAcquisitionComp.h</file>
-    <file>COcvAdaptiveBinarizationComp.h</file>
-    <file>COcvBlobProcessorComp.h</file>
-    <file>COcvEdgeExtractorComp.h</file>
-    <file>COcvImage.h</file>
-    <file>COcvIntrinsicCameraCalibration.h</file>
-    <file>COcvIntrinsicCameraCalibrationSupplierComp.h</file>
-    <file>COcvMedianProcessorComp.h</file>
-    <file>COcvMorphologicalProcessorComp.h</file>
-    <file>COcvPointGridExtractorComp.h</file>
-    <file>COcvResamplingProcessorComp.h</file>
-    <file>COcvSubdiv2d.h</file>
-    <file>COcvUndistortImageProcessorComp.h</file>
-    <file>COcvVideoControllerComp.h</file>
-    <file>iocv.h</file>
+  <compound kind="namespace">
+    <name>iocv</name>
+    <filename>namespaceiocv.html</filename>
+    <class kind="class">iocv::CCorrSearchProcessorComp</class>
+    <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
+    <class kind="class">iocv::CLensDistorsionCalibration</class>
+    <class kind="class">iocv::CLensDistorsionCalibrationProviderComp</class>
+    <class kind="class">iocv::COcvAcquisitionComp</class>
+    <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
+    <class kind="class">iocv::COcvBlobProcessorComp</class>
+    <class kind="class">iocv::COcvEdgeExtractorComp</class>
+    <class kind="class">iocv::COcvImage</class>
+    <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
+    <class kind="class">iocv::COcvIntrinsicCameraCalibrationSupplierComp</class>
+    <class kind="class">iocv::COcvMedianProcessorComp</class>
+    <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
+    <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
+    <class kind="class">iocv::COcvPointGridExtractorComp</class>
+    <class kind="class">iocv::COcvResamplingProcessorComp</class>
+    <class kind="class">iocv::COcvSubdiv2d</class>
+    <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
+    <class kind="class">iocv::COcvVideoControllerComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/iphonon</name>
-    <path>C:/Temp/Iacf/Include/iphonon/</path>
-    <filename>dir_f52723c1dc8b5702504200984a6fa807.html</filename>
-    <file>CPhononVideoViewGuiComp.h</file>
-    <file>iphonon.h</file>
+  <compound kind="namespace">
+    <name>iphonon</name>
+    <filename>namespaceiphonon.html</filename>
+    <class kind="class">iphonon::CPhononVideoViewGuiComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/iqaxmm</name>
-    <path>C:/Temp/Iacf/Include/iqaxmm/</path>
-    <filename>dir_5bf9ccbfb76ce83c0ef90d0e634c1812.html</filename>
-    <file>CVlcVideoViewGuiComp.h</file>
-    <file>iqaxmm.h</file>
+  <compound kind="namespace">
+    <name>iqaxmm</name>
+    <filename>namespaceiqaxmm.html</filename>
+    <class kind="class">iqaxmm::CVlcVideoViewGuiComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/iqsci</name>
-    <path>C:/Temp/Iacf/Include/iqsci/</path>
-    <filename>dir_bb264ae4829889bdcd206d8e92fc140b.html</filename>
-    <file>CTextEditor.h</file>
-    <file>CTextEditorGuiComp.h</file>
-    <file>iqsci.h</file>
+  <compound kind="namespace">
+    <name>iqsci</name>
+    <filename>namespaceiqsci.html</filename>
+    <class kind="class">iqsci::CTextEditor</class>
+    <class kind="class">iqsci::CTextEditorGuiComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/iqwt</name>
-    <path>C:/Temp/Iacf/Include/iqwt/</path>
-    <filename>dir_a02dd45ed13aa908c1f6757a6f9347cb.html</filename>
-    <file>CHistogramViewComp.h</file>
-    <file>CProgressHistoryGuiComp.h</file>
-    <file>CQwtDataSequenceViewComp.h</file>
-    <file>iqwt.h</file>
+  <compound kind="namespace">
+    <name>iqtmm</name>
+    <filename>namespaceiqtmm.html</filename>
   </compound>
-  <compound kind="dir">
-    <name>Include/iqwt3d</name>
-    <path>C:/Temp/Iacf/Include/iqwt3d/</path>
-    <filename>dir_f5aa4777a9750c09b15a066344715fdb.html</filename>
-    <file>CSurfaceViewComp.h</file>
-    <file>iqwt3d.h</file>
+  <compound kind="namespace">
+    <name>iqwt</name>
+    <filename>namespaceiqwt.html</filename>
+    <class kind="class">iqwt::CHistogramViewComp</class>
+    <class kind="class">iqwt::CProgressHistoryGuiComp</class>
+    <class kind="class">iqwt::CQwtDataSequenceViewComp</class>
   </compound>
-  <compound kind="dir">
-    <name>Include/iwin</name>
-    <path>C:/Temp/Iacf/Include/iwin/</path>
-    <filename>dir_2651b4372c0752e5b1e25e46db705489.html</filename>
-    <file>CPerformanceTimeStamp.h</file>
-    <file>CSystem.h</file>
-    <file>CTimeStampCacheComp.h</file>
-    <file>iwin.h</file>
-    <file>TComPtr.h</file>
+  <compound kind="namespace">
+    <name>iqwt3d</name>
+    <filename>namespaceiqwt3d.html</filename>
+    <class kind="class">iqwt3d::CSurfaceViewComp</class>
+  </compound>
+  <compound kind="namespace">
+    <name>iwin</name>
+    <filename>namespaceiwin.html</filename>
+    <class kind="class">iwin::CPerformanceTimeStamp</class>
+    <class kind="class">iwin::CSystem</class>
+    <class kind="class">iwin::CTimeStampCacheComp</class>
+    <class kind="class">iwin::TComPtr</class>
   </compound>
 </tagfile>
