@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60579DB1-8CC8-3B56-AFE0-EAA6498D23B0}</ProjectGuid>
+    <RootNamespace>Acf</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Bin\DebugVC12\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\Acf\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Bin\ReleaseVC12\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\Acf\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Bin\DebugVC12\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\Acf\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Bin\ReleaseVC12\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\Acf\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Acf&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\Acf\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\Acf\</ObjectFileName>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ipackage.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iqtdoc.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iview.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iqt2d.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iqtprm.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iloggui.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\ifilegui.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iqtgui.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iwidgets.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iqt.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\ipackage.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\idoc.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\ifile.lib;$(QTDIR)\lib\Qt5Concurrentd.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iimg.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\icmm.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\i2d.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\i3d.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iprm.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\ilog.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\ibase.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\icomp.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iattr.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\iser.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\imod.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\imath.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12\istd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Mpr.lib;$(QTDIR)\lib\Qt5Svgd.lib;$(QTDIR)\lib\Qt5XmlPatternsd.lib;$(QTDIR)\lib\Qt5Widgetsd.lib;$(QTDIR)\lib\Qt5Networkd.lib;$(QTDIR)\lib\Qt5Xmld.lib;$(QTDIR)\lib\Qt5Guid.lib;$(QTDIR)\lib\Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\DebugVC12;..\..\..\Config\QMake\..\..\Lib\DebugVC12;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\Acf.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Impl&quot;;&quot;..\..\..\Impl&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtSvg&quot;;&quot;$(QTDIR)\include\QtXmlPatterns&quot;;&quot;$(QTDIR)\include\QtWidgets&quot;;&quot;$(QTDIR)\include\QtNetwork&quot;;&quot;$(QTDIR)\include\QtXml&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Acf&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\Acf\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\Acf\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ipackage.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iqtdoc.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iview.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iqt2d.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iqtprm.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iloggui.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\ifilegui.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iqtgui.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iwidgets.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iqt.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\ipackage.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\idoc.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\ifile.lib;$(QTDIR)\lib\Qt5Concurrent.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iimg.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\icmm.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\i2d.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\i3d.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iprm.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\ilog.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\ibase.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\icomp.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iattr.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\iser.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\imod.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\imath.lib;..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12\istd.lib;glu32.lib;opengl32.lib;gdi32.lib;user32.lib;Mpr.lib;$(QTDIR)\lib\Qt5Svg.lib;$(QTDIR)\lib\Qt5XmlPatterns.lib;$(QTDIR)\lib\Qt5Widgets.lib;$(QTDIR)\lib\Qt5Network.lib;$(QTDIR)\lib\Qt5Xml.lib;$(QTDIR)\lib\Qt5Gui.lib;$(QTDIR)\lib\Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\..\Impl\AcfExe\QMake\..\..\..\Lib\ReleaseVC12;..\..\..\Config\QMake\..\..\Lib\ReleaseVC12;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>&quot;/MANIFESTDEPENDENCY:type=&apos;win32&apos; name=&apos;Microsoft.Windows.Common-Controls&apos; version=&apos;6.0.0.0&apos; publicKeyToken=&apos;6595b64144ccf1df&apos; language=&apos;*&apos; processorArchitecture=&apos;*&apos;&quot; %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\Acf.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_CONSOLE;UNICODE;WIN32;QT_NO_DEBUG;QT_SVG_LIB;QT_XMLPATTERNS_LIB;QT_WIDGETS_LIB;QT_NETWORK_LIB;QT_XML_LIB;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Main.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E607C0C9-E986-3CF6-91AD-2BB6B1C0AD32}</ProjectGuid>
+    <RootNamespace>icomm</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\DebugVC12\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\icomm\</IntermediateDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="Configuration">
+    <OutputDirectory>..\..\..\Lib\ReleaseVC12\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <IntermediateDirectory>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\icomm\</IntermediateDirectory>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <ImportGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists(&apos;$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props&apos;)" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\Lib\DebugVC12\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\icomm\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">true</IgnoreImportLibrary>
+    <OutDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\Lib\ReleaseVC12\</OutDir>
+    <IntDir Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\icomm\</IntDir>
+    <IgnoreImportLibrary Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\icomm\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Debug\icomm\</ObjectFileName>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_GUI_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">
+    <ClCompile>
+      <AdditionalIncludeDirectories>&quot;..\..\..\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\..\Acf\Include&quot;;&quot;..\..\..\..\Acf\AuxInclude\Qt5_VC12&quot;;&quot;..\..\..\Include&quot;;&quot;..\..\..\Include&quot;;&quot;$(QTDIR)\include&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm&quot;;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -FS /MP /bigobj /Qpar /Gw /FS %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\icomm\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DisableSpecificWarnings>4127;4250;4347;4355;4365;4481;4505;4510;4511;4512;4548;4571;4619;4625;4626;4640;4702;4710;4820;4826;4718;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <ObjectFileName>..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\Release\icomm\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Link>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;_WINDOWS;UNICODE;WIN32;QT_NO_DEBUG;QT_GUI_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ResourceOutputFileName>$(OutDir)\$(InputName).res</ResourceOutputFileName>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\CCommonVersionInfo.cpp" />
+    <ClCompile Include="..\CHeartbeatAnswer.cpp" />
+    <ClCompile Include="..\CHeartbeatQuestion.cpp" />
+    <ClCompile Include="..\CRequestHeader.cpp" />
+    <ClCompile Include="..\CRequestsManagerBase.cpp" />
+    <ClCompile Include="..\CResponseHeader.cpp" />
+    <ClCompile Include="..\CResponsesManagerBase.cpp" />
+    <ClCompile Include="..\CTcpClientStatus.cpp" />
+    <ClCompile Include="..\CTcpClientsManagerComp.cpp" />
+    <ClCompile Include="..\CTcpRequestsManagerComp.cpp" />
+    <ClCompile Include="..\CTcpStreamComp.cpp" />
+    <ClCompile Include="..\CUdpServersManagerComp.cpp" />
+    <ClCompile Include="..\CUdpStreamComp.cpp" />
+    <ClCompile Include="..\CUserRequest.cpp" />
+    <ClCompile Include="..\CUserResponse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\CCommonVersionInfo.h" />
+    <ClInclude Include="..\CHeartbeatAnswer.h" />
+    <ClInclude Include="..\CHeartbeatQuestion.h" />
+    <ClInclude Include="..\CRequestHeader.h" />
+    <ClInclude Include="..\CRequestsManagerBase.h" />
+    <ClInclude Include="..\CResponseHeader.h" />
+    <ClInclude Include="..\CResponsesManagerBase.h" />
+    <CustomBuild Include="..\CTcpClientStatus.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CTcpClientStatus.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpClientStatus.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientStatus.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CTcpClientStatus.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientStatus.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CTcpClientStatus.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpClientStatus.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientStatus.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CTcpClientStatus.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientStatus.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CTcpClientsManagerComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CTcpClientsManagerComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpClientsManagerComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientsManagerComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CTcpClientsManagerComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientsManagerComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CTcpClientsManagerComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpClientsManagerComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientsManagerComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CTcpClientsManagerComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientsManagerComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CTcpMessageHeader.h" />
+    <CustomBuild Include="..\CTcpRequestsManagerComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CTcpRequestsManagerComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpRequestsManagerComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpRequestsManagerComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CTcpRequestsManagerComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpRequestsManagerComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CTcpRequestsManagerComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpRequestsManagerComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpRequestsManagerComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CTcpRequestsManagerComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpRequestsManagerComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CTcpStreamComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CTcpStreamComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpStreamComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpStreamComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CTcpStreamComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpStreamComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CTcpStreamComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CTcpStreamComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpStreamComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CTcpStreamComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpStreamComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CUdpServersManagerComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CUdpServersManagerComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CUdpServersManagerComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpServersManagerComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CUdpServersManagerComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpServersManagerComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CUdpServersManagerComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CUdpServersManagerComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpServersManagerComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CUdpServersManagerComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpServersManagerComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="..\CUdpStreamComp.h">
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\CUdpStreamComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CUdpStreamComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpStreamComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">MOC ..\CUdpStreamComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Debug|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpStreamComp.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\CUdpStreamComp.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_NO_DEBUG -DQT_GUI_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -I$(QTDIR)/mkspecs/win32-msvc2013 -I../../../Include/icomm/QMake -I../../../AuxInclude/Qt5_VC12 -I..\..\..\..\Acf/Include -I..\..\..\..\Acf/AuxInclude/Qt5_VC12 -I../../../Include -I../../../Include -I$(QTDIR)/include -I$(QTDIR)/include/QtGui -I$(QTDIR)/include/QtCore ..\CUdpStreamComp.h -o ..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpStreamComp.cpp</Command>
+      <Message Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">MOC ..\CUdpStreamComp.h</Message>
+      <Outputs Condition="&apos;$(Configuration)|$(Platform)&apos;==&apos;Release|Win32&apos;">..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpStreamComp.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <ClInclude Include="..\CUserRequest.h" />
+    <ClInclude Include="..\CUserResponse.h" />
+    <ClInclude Include="..\IArchiveEx.h" />
+    <ClInclude Include="..\IBinaryStream.h" />
+    <ClInclude Include="..\IClientStatus.h" />
+    <ClInclude Include="..\IHeartbeatServersManager.h" />
+    <ClInclude Include="..\IHostConnection.h" />
+    <ClInclude Include="..\IMemoryCommunication.h" />
+    <ClInclude Include="..\IRequest.h" />
+    <ClInclude Include="..\IRequestsManager.h" />
+    <ClInclude Include="..\IResponse.h" />
+    <ClInclude Include="..\IResponsesManager.h" />
+    <ClInclude Include="..\IServerInfo.h" />
+    <ClInclude Include="..\IServersManager.h" />
+    <ClInclude Include="..\IStationState.h" />
+    <ClInclude Include="..\TPopCumulatorBase.h" />
+    <ClInclude Include="..\TPushCumulatorBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientStatus.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpClientsManagerComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpRequestsManagerComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CTcpStreamComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpServersManagerComp.cpp" />
+    <ClCompile Include="..\..\..\AuxInclude\Qt5_VC12\GeneratedFiles\icomm\moc_CUdpStreamComp.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

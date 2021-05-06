@@ -44,8 +44,7 @@ CCalibratedViewBase::CCalibratedViewBase()
 	m_isGridVisible(false),
 	m_isGridInMm(true),
 	m_minGridDistance(10),
-	m_isDistanceMeasureToolActive(false),
-	m_isPointMeasureToolActive(false),
+	m_isDistanceToolActive(false),
 	m_calibrationLayerIndex(-1),
 	m_toolsLayerIndex(-1)
 {
