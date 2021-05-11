@@ -45,10 +45,10 @@ namespace istd
 
 	\ingroup DataModel
 */
-class IChangeable: virtual public IPolymorphic  
+class IChangeable: virtual public IPolymorphic
 {
 public:
-	typedef QMap<QByteArray,QVariant> InfoMap;
+	typedef QMap<QByteArray,QVariant> ChangeInfoMap;
 
 	/**
 		Set of change flags (its IDs).
@@ -111,24 +111,24 @@ public:
 		QSet<int> GetIds() const;
 
 		/**
-			Get map of all stored info.
+			Get information about the changes.
 		*/
-		InfoMap GetInfoMap() const;
+		const ChangeInfoMap& GetChangeInfoMap() const;
 
 		/**
 			Set map of all stored info.
 		*/
-		void SetInfoMap(const InfoMap& infoMap);
+		void SetChangeInfoMap(const ChangeInfoMap& infoMap);
 
 		/**
-			Get info by key.
+			Get change info by a key.
 		*/
-		QVariant GetInfo(const QByteArray& key) const;
+		QVariant GetChangeInfo(const QByteArray& key) const;
 
 		/**
-			Set info with the key.
+			Set change info for a defined key.
 		*/
-		void SetInfo(const QByteArray& key, const QVariant& value);
+		void SetChangeInfo(const QByteArray& key, const QVariant& value);
 
 		/**
 			Get the union of two change sets.
@@ -141,11 +141,6 @@ public:
 		ChangeSet& operator+=(int changeId);
 
 		/**
-			Add some info map.
-		*/
-		ChangeSet& operator+=(const InfoMap& infoMap);
-
-		/**
 			Add some change set.
 		*/
 		ChangeSet& operator+=(const ChangeSet& changeSet);
@@ -153,7 +148,7 @@ public:
 	private:
 		QSet<int> m_ids;
 
-		InfoMap m_infoMap;
+		ChangeInfoMap m_infoMap;
 
 		QString m_description;
 	};

@@ -21548,6 +21548,34 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
+      <type>const ChangeInfoMap &amp;</type>
+      <name>GetChangeInfoMap</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>a4765d22f8b28754613c7189e2c3be635</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetChangeInfoMap</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>a228053e7c12c8627f4f1928f1b9efbcf</anchor>
+      <arglist>(const ChangeInfoMap &amp;infoMap)</arglist>
+    </member>
+    <member kind="function">
+      <type>QVariant</type>
+      <name>GetChangeInfo</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>a71769c1a94bb746c72e7d892bc24b972</anchor>
+      <arglist>(const QByteArray &amp;key) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetChangeInfo</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>acbcc4ecee8c749619b14928fb13f1478</anchor>
+      <arglist>(const QByteArray &amp;key, const QVariant &amp;value)</arglist>
+    </member>
+    <member kind="function">
       <type>ChangeSet</type>
       <name>operator+</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
@@ -50490,6 +50518,13 @@
       <name>CM_CONVERT</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
       <anchor>a4e78e759485a497c072bd70566f495dead6e2681eae74556408f9afd806f217e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>QMap&lt; QByteArray, QVariant &gt;</type>
+      <name>ChangeInfoMap</name>
+      <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
+      <anchor>ae848f330e21fdad4f0e2d2393d678038</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">

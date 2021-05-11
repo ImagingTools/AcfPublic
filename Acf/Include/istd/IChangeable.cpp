@@ -219,25 +219,25 @@ QSet<int> IChangeable::ChangeSet::GetIds() const
 }
 
 
-IChangeable::InfoMap IChangeable::ChangeSet::GetInfoMap() const
+const IChangeable::ChangeInfoMap& IChangeable::ChangeSet::GetChangeInfoMap() const
 {
 	return m_infoMap;
 }
 
 
-void IChangeable::ChangeSet::SetInfoMap(const IChangeable::InfoMap &infoMap)
+void IChangeable::ChangeSet::SetChangeInfoMap(const IChangeable::ChangeInfoMap& infoMap)
 {
 	m_infoMap = infoMap;
 }
 
 
-QVariant IChangeable::ChangeSet::GetInfo(const QByteArray &key) const
+QVariant IChangeable::ChangeSet::GetChangeInfo(const QByteArray& key) const
 {
 	return m_infoMap.value(key,QVariant());
 }
 
 
-void IChangeable::ChangeSet::SetInfo(const QByteArray &key, const QVariant &value)
+void IChangeable::ChangeSet::SetChangeInfo(const QByteArray& key, const QVariant& value)
 {
 	m_infoMap.insert(key, value);
 }
@@ -276,18 +276,6 @@ IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(int changeId)
 	return *this;
 }
 
-
-IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(const IChangeable::InfoMap& infoMap)
-{
-#if QT_VERSION > QT_VERSION_CHECK(5, 15, 0)
-	m_infoMap.insert(changeSet.m_infoMap);
-#else
-	for (QByteArray key : infoMap.keys()) {
-		m_infoMap.insert(key, infoMap.value(key));
-	}
-#endif
-	return *this;
-}
 
 IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(const ChangeSet& changeSet)
 {
