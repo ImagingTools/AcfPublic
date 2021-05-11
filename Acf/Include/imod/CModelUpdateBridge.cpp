@@ -79,6 +79,18 @@ void CModelUpdateBridge::EnsureModelsDetached()
 }
 
 
+istd::IChangeable::InfoMap CModelUpdateBridge::GetInfoMap() const
+{
+	return m_infoMap;
+}
+
+
+void CModelUpdateBridge::SetInfoMap(const istd::IChangeable::InfoMap &infoMap)
+{
+	m_infoMap = infoMap;
+}
+
+
 // reimplemented (imod::IObserver)
 
 bool CModelUpdateBridge::IsModelAttached(const imod::IModel* modelPtr) const
@@ -145,8 +157,11 @@ void CModelUpdateBridge::AfterUpdate(IModel* modelPtr, const istd::IChangeable::
 
 	if (IsAttached(modelPtr)){
 		istd::IChangeable::ChangeSet changes(changeSet.GetDescription());
+		changes += m_infoMap;
+
 		if (m_updateFlags & UF_DELEGATED){
 			changes += istd::IChangeable::GetDelegatedChanges();
+			changes += changeSet.GetInfoMap();
 		}
 
 		if (m_updateFlags & UF_SOURCE){

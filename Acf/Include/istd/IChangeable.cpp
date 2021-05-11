@@ -156,6 +156,7 @@ IChangeable::ChangeSet::ChangeSet(int id1, int id2, int id3, int id4, int id5, i
 void IChangeable::ChangeSet::Reset()
 {
 	m_ids.clear();
+	m_infoMap.clear();
 	m_description.clear();
 }
 
@@ -218,12 +219,37 @@ QSet<int> IChangeable::ChangeSet::GetIds() const
 }
 
 
+IChangeable::InfoMap IChangeable::ChangeSet::GetInfoMap() const
+{
+	return m_infoMap;
+}
+
+
+void IChangeable::ChangeSet::SetInfoMap(const IChangeable::InfoMap &infoMap)
+{
+	m_infoMap = infoMap;
+}
+
+
+QVariant IChangeable::ChangeSet::GetInfo(const QByteArray &key) const
+{
+	return m_infoMap.value(key,QVariant());
+}
+
+
+void IChangeable::ChangeSet::SetInfo(const QByteArray &key, const QVariant &value)
+{
+	m_infoMap.insert(key, value);
+}
+
+
 IChangeable::ChangeSet IChangeable::ChangeSet::operator+(const ChangeSet& changeSet) const
 {
 	ChangeSet retVal;
 
 	retVal.m_ids += m_ids;
 	retVal.m_ids += changeSet.m_ids;
+	retVal.m_infoMap.insert(changeSet.m_infoMap);
 
 	if (!changeSet.m_description.isEmpty()){
 		retVal.m_description = changeSet.m_description;
@@ -244,9 +270,17 @@ IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(int changeId)
 }
 
 
+IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(const IChangeable::InfoMap& infoMap)
+{
+	m_infoMap.insert(infoMap);
+
+	return *this;
+}
+
 IChangeable::ChangeSet& IChangeable::ChangeSet::operator+=(const ChangeSet& changeSet)
 {
 	m_ids += changeSet.m_ids;
+	m_infoMap.insert(changeSet.m_infoMap);
 
 	if (!changeSet.m_description.isEmpty()){
 		m_description = changeSet.m_description;

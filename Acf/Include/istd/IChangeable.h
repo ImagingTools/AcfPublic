@@ -27,6 +27,8 @@
 // Qt includes
 #include <QtCore/QString>
 #include <QtCore/QSet>
+#include <QtCore/QVariant>
+#include <QtCore/QMap>
 
 // ACF includes
 #include <istd/IPolymorphic.h>
@@ -46,6 +48,8 @@ namespace istd
 class IChangeable: virtual public IPolymorphic  
 {
 public:
+	typedef QMap<QByteArray,QVariant> InfoMap;
+
 	/**
 		Set of change flags (its IDs).
 	*/
@@ -107,6 +111,26 @@ public:
 		QSet<int> GetIds() const;
 
 		/**
+			Get map of all stored info.
+		*/
+		InfoMap GetInfoMap() const;
+
+		/**
+			Set map of all stored info.
+		*/
+		void SetInfoMap(const InfoMap& infoMap);
+
+		/**
+			Get info by key.
+		*/
+		QVariant GetInfo(const QByteArray& key) const;
+
+		/**
+			Set info with the key.
+		*/
+		void SetInfo(const QByteArray& key, const QVariant& value);
+
+		/**
 			Get the union of two change sets.
 		*/
 		ChangeSet operator+(const ChangeSet& changeSet) const;
@@ -117,12 +141,19 @@ public:
 		ChangeSet& operator+=(int changeId);
 
 		/**
+			Add some info map.
+		*/
+		ChangeSet& operator+=(const InfoMap& infoMap);
+
+		/**
 			Add some change set.
 		*/
 		ChangeSet& operator+=(const ChangeSet& changeSet);
 
 	private:
 		QSet<int> m_ids;
+
+		InfoMap m_infoMap;
 
 		QString m_description;
 	};

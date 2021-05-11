@@ -84,6 +84,17 @@ public:
 	*/
 	void EnsureModelsDetached();
 
+	/**
+		Get info map of bridge .
+	*/
+	istd::IChangeable::InfoMap GetInfoMap() const;
+
+	/**
+		Set info map of bridge.
+	*/
+	void SetInfoMap(const istd::IChangeable::InfoMap& infoMap);
+
+
 	// reimplemented (imod::IObserver)
 	virtual bool IsModelAttached(const imod::IModel* modelPtr) const;
 	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
@@ -97,6 +108,7 @@ private:
 private:
 	typedef QVector<imod::IModel*> Models;
 	Models m_models;
+	istd::IChangeable::InfoMap m_infoMap;
 
 	istd::IChangeable* m_changeablePtr;
 
