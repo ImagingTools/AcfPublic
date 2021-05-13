@@ -16,5 +16,7 @@ include_directories("${IACFDIR}/AuxInclude/Qt${QT_DEFAULT_MAJOR_VERSION}_${TARGE
 include_directories("${IACFDIR}/Include")
 include_directories("${IACFDIR}/Impl")
 
+link_directories(${IACFDIR}/Lib/${CMAKE_BUILD_TYPE}${TARGETNAME})
+
 
 
