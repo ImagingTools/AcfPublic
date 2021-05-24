@@ -11,9 +11,6 @@ file(GLOB PROJECT_SRC
         ${HEADER_FILES}
         ${SOURCES_FILES}
 )
-
-set(TARGET_EXT ".acula")
-
 add_library(${PROJECT_NAME} SHARED ${PROJECT_SRC})
 
 acf_create_moc(MOC_SOURCES "${HEADER_FILES}")

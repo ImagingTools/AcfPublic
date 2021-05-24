@@ -31383,8 +31383,8 @@
       <type>virtual bool</type>
       <name>RegisterEventHandler</name>
       <anchorfile>classicomm_1_1_i_memory_communication.html</anchorfile>
-      <anchor>a483bce31a054bf2de2588688fe7f40b1</anchor>
-      <arglist>(Handler *handlerPtr, bool allowOtherThread=false)=0</arglist>
+      <anchor>a91fbf346a7fbb6d89f2ec008494e296b</anchor>
+      <arglist>(Handler *handlerPtr)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
