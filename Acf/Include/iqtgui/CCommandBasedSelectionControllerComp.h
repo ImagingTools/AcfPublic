@@ -1,0 +1,113 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtgui_CCommandBasedSelectionControllerComp_included
+#define iqtgui_CCommandBasedSelectionControllerComp_included
+
+
+// ACF includes
+#include <imod/TSingleModelObserverBase.h>
+#include <icomp/CComponentBase.h>
+#include <ibase/ICommandsProvider.h>
+#include <ibase/TLocalizableWrap.h>
+#include <iprm/ISelectionParam.h>
+#include <iqtgui/IIconProvider.h>
+#include <iqtgui/CHierarchicalCommand.h>
+
+
+namespace iqtgui
+{
+
+
+/**
+	Command-based selection parameter (iprm::ISelectionParam) controller.
+	Menu commands are generated from the selection constraints of the observered selection object.
+*/
+class CCommandBasedSelectionControllerComp:
+			public QObject,
+			public ibase::TLocalizableWrap<icomp::CComponentBase>,
+			protected imod::TSingleModelObserverBase<iprm::ISelectionParam>,
+			virtual public ibase::ICommandsProvider
+{
+	Q_OBJECT
+public:
+	typedef ibase::TLocalizableWrap<icomp::CComponentBase> BaseClass;
+	typedef imod::TSingleModelObserverBase<iprm::ISelectionParam> BaseClass2;
+	
+	I_BEGIN_COMPONENT(CCommandBasedSelectionControllerComp);
+		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
+		I_ASSIGN(m_commandSelectionCompPtr, "CommandsSelection", "Commands selector and contstraints provider", true, "CommandsSelection");
+		I_ASSIGN_TO(m_commandSelectionModelCompPtr, m_commandSelectionCompPtr, true);
+		I_ASSIGN(m_actionIconsProviderCompPtr, "ActionIcons", "Icons for the region actions", false, "ActionIcons");
+		I_ASSIGN(m_noSelectionCommandAttrPtr, "UnselectActionName", "The name of the unselect action", false, "Deselect");
+		I_ASSIGN(m_menuNameAttrPtr, "MenuName", "Name of the menu for the action group", true, "Selection");
+		I_ASSIGN(m_menuDescriptionAttrPtr, "MenuDescription", "Description for the action group", true, "");
+		I_ASSIGN(m_rootMenuNameAttrPtr, "RootMenu", "Name of the root command", true, "");
+		I_ASSIGN(m_showInToolBarAttrPtr, "ShowInToolBar", "If enabled, the action will be shown in the application's tool bar", false, false);
+		I_ASSIGN(m_commandPriorityAttrPtr, "CommandPriority", "Defines the used command priority for the menu", true, 100);
+	I_END_COMPONENT;
+
+	CCommandBasedSelectionControllerComp();
+
+	// reimpemented (ibase::ICommandsProvider)
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
+
+protected:
+	// reimplemented (ibase::TLocalizableWrap)
+	virtual void OnLanguageChanged();
+
+	// reimpemented (imod::CSingleModelObserverBase)
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
+
+	// reimpemented (icomp::IComponent)
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
+
+private Q_SLOTS:
+	void OnCommandActivated();
+
+private:
+	void BuildCommands();
+
+protected:
+	I_REF(iprm::ISelectionParam, m_commandSelectionCompPtr);
+	I_REF(imod::IModel, m_commandSelectionModelCompPtr);
+	I_REF(iqtgui::IIconProvider, m_actionIconsProviderCompPtr);
+	I_TEXTATTR(m_noSelectionCommandAttrPtr);
+	I_TEXTATTR(m_menuNameAttrPtr);
+	I_TEXTATTR(m_menuDescriptionAttrPtr);
+	I_TEXTATTR(m_rootMenuNameAttrPtr);
+	I_ATTR(bool, m_showInToolBarAttrPtr);
+	I_ATTR(int, m_commandPriorityAttrPtr);
+
+	iqtgui::CHierarchicalCommand m_rootMenuCommand;
+	iqtgui::CHierarchicalCommand m_mainMenuCommand;
+	iqtgui::CHierarchicalCommand m_commandsList;
+};
+
+
+} // namespace iqtgui
+
+
+#endif // !iqtgui_CCommandBasedSelectionControllerComp_included
+
+

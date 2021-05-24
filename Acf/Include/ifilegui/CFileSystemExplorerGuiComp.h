@@ -1,0 +1,141 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef ifilegui_CFileSystemExplorerGuiComp_included
+#define ifilegui_CFileSystemExplorerGuiComp_included
+
+
+// Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtCore/QItemSelectionModel>
+#include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QFileSystemModel>
+#include <QtWidgets/QFileIconProvider>
+#else
+#include <QtGui/QItemSelectionModel>
+#include <QtGui/QTreeWidget>
+#include <QtGui/QFileSystemModel>
+#include <QtGui/QFileIconProvider>
+#endif
+
+// ACF includes
+#include <imod/CMultiModelDispatcherBase.h>
+#include <ifile/IFileTypeInfo.h>
+#include <ifile/IFileNameParam.h>
+#include <iqtgui/TDesignerGuiObserverCompBase.h>
+#include <iwidgets/CExtLineEdit.h>
+
+#include <GeneratedFiles/ifilegui/ui_CFileSystemExplorerGuiComp.h>
+
+
+namespace ifilegui
+{
+
+
+/**
+	UI component for visualization of file system contents.
+
+	CFileSystemExplorerGuiComp is implemented as an observer of IFileNameParam.
+	Connected to model, this component will show the file system item, provided by the data model.
+	Model data will be changed, if the the user selects a supported file item in the file system view.
+*/
+class CFileSystemExplorerGuiComp:
+			public iqtgui::TDesignerGuiObserverCompBase<Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam>,
+			protected imod::CMultiModelDispatcherBase
+{
+	Q_OBJECT
+public:
+	typedef iqtgui::TDesignerGuiObserverCompBase<
+				Ui::CFileSystemExplorerGuiComp, ifile::IFileNameParam> BaseClass;
+
+	I_BEGIN_COMPONENT(CFileSystemExplorerGuiComp);
+		I_ASSIGN(m_filterInfoCompPtr, "FilterInfo", "Provides information about supported files used to filter shown files", false, "FilterInfo");
+		I_ASSIGN(m_rootPathParamCompPtr, "RootPath", "Sets the root path", false, "RootPath");
+		I_ASSIGN_TO(m_rootPathParamModelCompPtr, m_rootPathParamCompPtr, false);
+		I_ASSIGN(m_showUserFilterAttrPtr, "ShowUserFilter", "If activated user filter line will be shown", true, false);
+		I_ASSIGN(m_showFileTypeAttrPtr, "ShowFileType", "Show file type description", true, false);
+		I_ASSIGN(m_showFileModificationTimeAttrPtr, "ShowFileModificationTime", "If activated file modification time stamp will be shown for each file", true, false);
+		I_ASSIGN(m_useSystemDecoratedIconsAttrPtr, "UseSystemDecoratedIcons", "If enabled, system decorated icons are used", false, false);
+		I_ASSIGN(m_allowOpenFileAttrPtr, "AllowOpenFile", "If enabled, the file will be opened by operation system shell", false, false);
+	I_END_COMPONENT;
+
+	CFileSystemExplorerGuiComp();
+
+protected:
+	/**
+		Get default list of filters.
+		This list will be created using component parameters.
+	*/
+	QStringList GetDefaultFilters() const;
+
+	void InvalidateFileSystemModel(const QString& currentFilePath);
+	void UpdateFileRoot();
+
+	// reimplemented (iqtgui::TGuiObserverWrap)
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
+
+	// reimplemented (iqtgui::CGuiComponentBase)
+	virtual void OnGuiCreated();
+
+	// reimplemented (imod::CMultiModelDispatcherBase)
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
+
+private Q_SLOTS:
+	void OnFilterChanged();
+	void OnNewDirLoaded(const QString& path);
+	void OnSelectionChanged(const QItemSelection& selected, const QItemSelection& deselected);
+	void OnDoubleClicked(const QModelIndex& index);
+
+private:
+	I_REF(ifile::IFileTypeInfo, m_filterInfoCompPtr);
+	I_REF(ifile::IFileNameParam, m_rootPathParamCompPtr);
+	I_REF(imod::IModel, m_rootPathParamModelCompPtr);
+	I_ATTR(bool, m_showUserFilterAttrPtr);
+	I_ATTR(bool, m_showFileTypeAttrPtr);
+	I_ATTR(bool, m_showFileModificationTimeAttrPtr);
+	I_ATTR(bool, m_useSystemDecoratedIconsAttrPtr);
+	I_ATTR(bool, m_allowOpenFileAttrPtr);
+
+	class FileIconProvider: public QFileIconProvider
+	{
+	public:
+		typedef QFileIconProvider BaseClass;
+
+		// reimplemented (QFileIconProvider)
+		virtual QIcon icon(const QFileInfo& fileInfo) const;
+	};
+
+	iwidgets::CExtLineEdit* m_filterEditPtr;
+
+	FileIconProvider m_fileIconProvider;
+
+	QFileSystemModel m_fileSystemModel;
+};
+
+
+} // namespace ifilegui
+
+
+#endif // !ifilegui_CFileSystemExplorerGuiComp_included
+
+

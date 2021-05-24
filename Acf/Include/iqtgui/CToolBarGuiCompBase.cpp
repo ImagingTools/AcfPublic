@@ -1,0 +1,164 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#include <iqtgui/CToolBarGuiCompBase.h>
+
+
+// Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QMainWindow>
+#include <QtWidgets/QAction>
+#else
+#include <QtGui/QHBoxLayout>
+#include <QtGui/QComboBox>
+#include <QtGui/QMainWindow>
+#include <QtGui/QAction>
+#endif
+
+
+namespace iqtgui
+{
+
+
+// public methods
+
+// reimplemented (iqtgui::IMainWindowComponent)
+
+bool CToolBarGuiCompBase::AddToMainWindow(QMainWindow& mainWindow)
+{
+	if (IsGuiCreated()){
+		return false;
+	}
+
+	if (!CreateGui(NULL)){
+		return false;
+	}
+
+	Qt::ToolBarArea toolBarArea = Qt::TopToolBarArea;
+	if (m_toolBarAreaAttrPtr.IsValid()){
+		switch (*m_toolBarAreaAttrPtr){
+			case 0:
+				toolBarArea = Qt::LeftToolBarArea;
+				break;
+
+			case 1:
+				toolBarArea = Qt::RightToolBarArea;
+				break;
+			case 2:
+				toolBarArea = Qt::TopToolBarArea;
+				break;
+
+			case 3:
+				toolBarArea = Qt::BottomToolBarArea;
+				break;
+			default:
+				break;
+		}
+	}
+
+	QToolBar* toolBarPtr = GetQtWidget();
+	Q_ASSERT(toolBarPtr != NULL);
+	if (toolBarPtr != NULL){
+		toolBarPtr->setIconSize(mainWindow.iconSize());
+
+		toolBarPtr->setOrientation(*m_useVerticalOrientationAttrPtr ? Qt::Vertical : Qt::Horizontal);
+		toolBarPtr->setFloatable(false);
+		toolBarPtr->setMovable(false);
+
+		toolBarPtr->setFloatable((*m_dockFeaturesAttrPtr & IMainWindowComponent::WCF_FLOATABLE) != 0);
+		toolBarPtr->setMovable((*m_dockFeaturesAttrPtr & IMainWindowComponent::WCF_MOVEABLE) != 0);
+
+		if (m_allowedDockAreasAttrPtr.IsValid()){
+			toolBarPtr->setAllowedAreas(Qt::ToolBarArea(*m_allowedDockAreasAttrPtr));
+		}
+
+		mainWindow.addToolBar(toolBarArea, toolBarPtr);
+
+		return true;
+	}
+
+	return false;
+}
+
+
+bool CToolBarGuiCompBase::RemoveFromMainWindow(QMainWindow& /*mainWindow*/)
+{
+	return DestroyGui();
+}
+
+
+QString CToolBarGuiCompBase::GetTitle() const
+{
+	static QString emptyTitle;
+
+	if (m_titleAttrPtr.IsValid()){
+		return *m_titleAttrPtr;
+	}
+
+	return emptyTitle;
+}
+
+
+int CToolBarGuiCompBase::GetFlags() const
+{
+	return *m_dockFeaturesAttrPtr & (WCF_MOVEABLE | WCF_FLOATABLE);
+}
+
+
+// protected methods
+
+// reimplemented (CGuiComponentBase)
+
+void CToolBarGuiCompBase::OnGuiCreated()
+{
+	BaseClass::OnGuiCreated();
+
+	QToolBar* widgetPtr = GetQtWidget();
+	Q_ASSERT(widgetPtr != NULL);
+	if (widgetPtr == NULL){
+		return;
+	}
+
+	QAction* toggleViewAction = widgetPtr->toggleViewAction();
+	if (toggleViewAction != NULL){
+		toggleViewAction->setVisible(false);
+	}
+
+	if (m_titleAttrPtr.IsValid()){
+		widgetPtr->setWindowTitle(m_titleAttrPtr->GetValue());
+		widgetPtr->setObjectName(m_titleAttrPtr->GetValue());
+	}
+
+	if (m_iconSizeAttrPtr.IsValid()){
+		widgetPtr->setIconSize(QSize(*m_iconSizeAttrPtr, *m_iconSizeAttrPtr));
+	}
+
+	widgetPtr->setToolButtonStyle(Qt::ToolButtonStyle(*m_buttonStyleAttrPtr));
+}
+
+
+} // namespace iqtgui
+
+

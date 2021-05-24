@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Directory monitoring component</Description>
+    <Keywords>Directory Observer Monitoring Dispatcher File</Keywords>
+    <ElementsList>
+        <Element Id="DirectoryMonitor" PackageId="HotfolderGuiPck" ComponentId="DirectoryMonitor">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DirParamId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="DirectoryPath"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DirectoryMonitorParamsId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="DirectoryMonitorParams"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParamsSet" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="DirectoryMonitorParams"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="DirectoryMonitorParams" PackageId="FpfVoce" ComponentId="DirectoryMonitorParams">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="DirectoryMonitorParamsGui" PackageId="FpfVoce" ComponentId="DirectoryMonitorParamsGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="ModelBinder" PackageId="BasePck" ComponentId="ModelBinder">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Model" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="DirectoryMonitorParams"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Observers" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>DirectoryMonitorParamsGui</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="iqtgui::IGuiObject" ComponentId="DirectoryMonitorParamsGui"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>

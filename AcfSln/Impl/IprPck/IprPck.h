@@ -1,0 +1,185 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef IprPck_included
+#define IprPck_included
+
+
+// ACF includes
+#include <iimg/CBitmap.h>
+#include <iimg/CGeneralBitmap.h>
+
+#include <imod/TModelWrap.h>
+#include <icomp/TModelCompWrap.h>
+#include <icomp/TMakeComponentWrap.h>
+
+// ACF-Solutions includes
+#include <iipr/CRectImageSmoothProcessorComp.h>
+#include <iipr/CProcessedAcquisitionComp.h>
+#include <iipr/TUnaryTransformProcessorComp.h>
+#include <iipr/CCaliperParamsComp.h>
+#include <iipr/CExtremumCaliperProcessorComp.h>
+#include <iipr/CExtremumCaliperSupplierComp.h>
+#include <iipr/CLineProjectionProcessorComp.h>
+#include <iipr/CCircleFindProcessorComp.h>
+#include <iipr/CDelegatedBitmapSupplierComp.h>
+#include <iipr/CProcessedBitmapSupplierComp.h>
+#include <iipr/TProcessedBitmapSupplierComp.h>
+#include <iipr/CPositionFromImageSupplierComp.h>
+#include <iipr/CRectDerivativeProcessorComp.h>
+#include <iipr/CFeaturesContainer.h>
+#include <iipr/CSingleFeatureConsumer.h>
+#include <iipr/CFeatureToImageMapperProcessorComp.h>
+#include <iipr/CSearchBasedFeaturesSupplierComp.h>
+#include <iipr/CImageHistogramProcessorComp.h>
+#include <iipr/CCircleFinderParamsComp.h>
+#include <iipr/CImagePolarTransformProcessorComp.h>
+#include <iipr/CImageCropProcessorComp.h>
+#include <iipr/CImageCropDecalibrateProcessorComp.h>
+#include <iipr/CImageInterpolationParamsComp.h>
+#include <iipr/CRingPatternGeneratorComp.h>
+#include <iipr/CRingPatternGeneratorParamsComp.h>
+#include <iipr/CRgbToGrayProcessorComp.h>
+#include <iipr/CGrayToRgbProcessorComp.h>
+#include <iipr/CImageBinarizeProcessorComp.h>
+#include <iipr/CBitmapProviderCacheComp.h>
+#include <iipr/CSearchParamsComp.h>
+#include <iipr/CDifferenceBitmapSupplierComp.h>
+#include <iipr/CConvolutionProcessorComp.h>
+#include <iipr/CConvolutionKernel2dComp.h>
+#include <iipr/CBitmapJoinerSupplierComp.h>
+#include <iipr/CMultiBitmapCacheComp.h>
+#include <iipr/CEdgeDistanceProcessorComp.h>
+#include <iipr/CEdgeDistancesSupplierComp.h>
+#include <iipr/CTubeProjectionLinesProviderComp.h>
+#include <iipr/CMorphologicalProcessorComp.h>
+#include <iipr/CMultiLineProjectionSupplierComp.h>
+#include <iipr/CSelectableCalibrationProviderComp.h>
+#include <iipr/CCheckerboardPatternGeneratorComp.h>
+#include <iipr/CImageFlipProcessorComp.h>
+#include <iipr/CColorPatternControllerComp.h>
+#include <iipr/CColorPatternComparatorComp.h>
+#include <iipr/CImageHistogramSupplierComp.h>
+#include <iipr/CFastGaussianProcessorComp.h>
+#include <iipr/CImageNormalizeProcessorComp.h>
+#include <iipr/CProjectionSupplierComp.h>
+#include <iipr/CAdaptiveImageBinarizeProcessorComp.h>
+#include <iipr/CHoughLineFinderComp.h>
+#include <iipr/CHoughLineFromPosFinderComp.h>
+#include <iipr/CCheckboardCalibSupplierComp.h>
+#include <iipr/CMultiPointPosCorrSupplierComp.h>
+#include <iipr/CLensCorrFindSupplierComp.h>
+#include <iipr/CImageIntegralProcessorComp.h>
+#include <iipr/CCheckerboardPointGridExtractorComp.h>
+#include <iipr/CPerspectiveCalibrationSupplierComp.h>
+
+#include <iipr/CColorBalanceProcessorComp.h>
+#include <iipr/CSearchConstraintsComp.h>
+
+/**
+	System-independent image processing package.
+*/
+namespace IprPck
+{
+
+
+typedef iipr::CProcessedAcquisitionComp ProcessedCamera;
+typedef iipr::CRectImageSmoothProcessorComp RectImageSmoothProcessor;
+typedef iipr::CInvertOperatorComp InvertOperator;
+typedef icomp::TModelCompWrap<iipr::CCaliperParamsComp> CaliperParams;
+typedef icomp::TModelCompWrap<iipr::CCircleFinderParamsComp> CircleFinderParams;
+typedef iipr::CExtremumCaliperProcessorComp ExtremumCaliperProcessor;
+typedef icomp::TModelCompWrap<
+			iipr::CExtremumCaliperSupplierComp> ExtremumCaliperSupplier;
+typedef iipr::CLineProjectionProcessorComp LineProjectionProcessor;
+typedef iipr::CCircleFindProcessorComp CircleFindProcessor;
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<iipr::CFeaturesContainer>,
+			iipr::IFeaturesConsumer,
+			iipr::IFeaturesProvider,
+			iser::ISerializable,
+			istd::IChangeable,
+			imod::IModel> FeaturesContainer;
+typedef iipr::CFeatureToImageMapperProcessorComp FeatureToImageMapperProcessor;
+typedef icomp::TModelCompWrap<iipr::CDelegatedBitmapSupplierComp> DelegatedBitmapSupplier;
+typedef icomp::TModelCompWrap<iipr::CPositionFromImageSupplierComp> PositionFromImageSupplier;
+typedef icomp::TModelCompWrap<iipr::CSearchBasedFeaturesSupplierComp> SearchBasedFeaturesSupplier;
+typedef icomp::TModelCompWrap<iipr::CProcessedBitmapSupplierComp> ProcessedBitmapSupplier;
+typedef icomp::TModelCompWrap<iipr::TProcessedBitmapSupplierComp<iimg::CBitmap> > ProcessedQtBitmapSupplier;
+
+typedef iipr::CRectDerivativeProcessorComp RectDerivativeProcessor;
+typedef iipr::CImageHistogramProcessorComp ImageHistogramProcessor;
+typedef iipr::CImagePolarTransformProcessorComp ImagePolarTransformProcessor;
+typedef iipr::CImageCropProcessorComp ImageCropProcessor;
+typedef iipr::CImageCropDecalibrateProcessorComp ImageCropDecalibrateProcessor;
+typedef iipr::CRingPatternGeneratorComp RingPatternGenerator;
+
+typedef icomp::TModelCompWrap<iipr::CImageInterpolationParamsComp> ImageInterpolationParams;
+
+typedef icomp::TModelCompWrap<iipr::CRingPatternGeneratorParamsComp> RingPatternGeneratorParams;
+typedef iipr::CRgbToGrayProcessorComp RgbToGrayProcessor;
+typedef iipr::CGrayToRgbProcessorComp GrayToRgbProcessor;
+typedef iipr::CImageBinarizeProcessorComp ImageBinarizeProcessor;
+
+typedef icomp::TModelCompWrap<iipr::CBitmapProviderCacheComp> BitmapProviderCache;
+typedef icomp::TModelCompWrap<iipr::CMultiBitmapCacheComp> MultiBitmapProviderCacheComp;
+typedef icomp::TModelCompWrap<iipr::CSearchParamsComp> SearchParams;
+
+typedef icomp::TModelCompWrap<iipr::CDifferenceBitmapSupplierComp> DifferenceBitmapSupplier;
+typedef iipr::CConvolutionProcessorComp ConvolutionProcessor;
+typedef icomp::TModelCompWrap<iipr::CConvolutionKernel2dComp> ConvolutionKernel2d;
+typedef icomp::TModelCompWrap<iipr::CBitmapJoinerSupplierComp> BitmapJoinerSupplier;
+typedef iipr::CEdgeDistanceProcessorComp EdgeDistanceProcessor;
+typedef icomp::TModelCompWrap<iipr::CEdgeDistancesSupplierComp> EdgeDistancesSupplier;
+typedef icomp::TModelCompWrap<iipr::CTubeProjectionLinesProviderComp> TubeProjectionLinesProvider;
+typedef iipr::CMorphologicalProcessorComp MorphologicalProcessor;
+typedef icomp::TModelCompWrap<
+			iipr::CMultiLineProjectionSupplierComp> MultiLineProjectionSupplier;
+typedef icomp::TModelCompWrap<
+			iipr::CSelectableCalibrationProviderComp> SelectableCalibrationProvider;
+typedef iipr::CCheckerboardPatternGeneratorComp CheckerboardPatternGenerator;
+typedef iipr::CImageFlipProcessorComp ImageFlipProcessor;
+typedef icomp::TModelCompWrap<iipr::CColorPatternControllerComp> ColorPatternController;
+typedef icomp::TModelCompWrap<iipr::CColorPatternComparatorComp> ColorPatternComparator;
+typedef icomp::TModelCompWrap<iipr::CImageHistogramSupplierComp> ImageHistogramSupplier;
+typedef iipr::CFastGaussianProcessorComp FastGaussianProcessor;
+typedef iipr::CImageNormalizeProcessorComp ImageNormalizeProcessor;
+typedef icomp::TModelCompWrap<iipr::CProjectionSupplierComp> ProjectionSupplier;
+typedef iipr::CAdaptiveImageBinarizeProcessorComp AdaptiveImageBinarizeProcessor;
+typedef iipr::CHoughLineFinderComp HoughLineFinder;
+typedef iipr::CHoughLineFromPosFinderComp HoughLineFromPosFinder;
+typedef icomp::TModelCompWrap<iipr::CCheckboardCalibSupplierComp> CheckboardCalibSupplier;
+typedef icomp::TModelCompWrap<iipr::CMultiPointPosCorrSupplierComp> MultiPointPosCorrSupplier;
+typedef icomp::TModelCompWrap<iipr::CLensCorrFindSupplierComp> LensCorrFindSupplier;
+typedef iipr::CImageIntegralProcessorComp ImageIntegralProcessor;
+typedef iipr::CCheckerboardPointGridExtractorComp CheckerboardPointGridExtractor;
+typedef icomp::TModelCompWrap<iipr::CPerspectiveCalibrationSupplierComp> PerspectiveCalibrationSupplier;
+
+typedef iipr::CColorBalanceProcessorComp ColorBalanceProcessor;
+typedef iipr::CSearchConstraintsComp SearchConstraints;
+
+} // namespace IprPck
+
+
+#endif // !IprPck_included
+
+
