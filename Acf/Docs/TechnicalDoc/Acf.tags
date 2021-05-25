@@ -41679,6 +41679,27 @@
       <anchor>af42445991a29be81209d923ebd727dd1</anchor>
       <arglist>(const QSettings &amp;settings)</arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>iqtgui::IGuiObject *</type>
+      <name>m_lastViewPtr</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a08c4d59945d50d2dc07e5e91f8f75463</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_organizationName</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a89fc3a1254283d066b457c48d9c4d4b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QString</type>
+      <name>m_applicationName</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>af9b8812cb4a927684bff1d622eea6dac</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>imod::CSingleModelObserverBase</name>
