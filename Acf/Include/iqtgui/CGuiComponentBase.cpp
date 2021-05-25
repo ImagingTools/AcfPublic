@@ -224,6 +224,9 @@ void CGuiComponentBase::OnLanguageChanged()
 
 void CGuiComponentBase::OnDesignSchemaChanged()
 {
+	if (m_defaultStatusIconPathAttrPtr.IsValid()){
+		m_visualStatus.m_statusIcon = GetIcon(*m_defaultStatusIconPathAttrPtr);
+	}
 }
 
 
@@ -282,7 +285,7 @@ void CGuiComponentBase::OnComponentCreated()
 	BaseClass::OnComponentCreated();
 
 	if (m_defaultStatusIconPathAttrPtr.IsValid()){
-		m_visualStatus.m_statusIcon = QIcon(*m_defaultStatusIconPathAttrPtr);
+		m_visualStatus.m_statusIcon = GetIcon(*m_defaultStatusIconPathAttrPtr);
 	}
 
 	m_visualStatus.m_statusText = *m_defaultStatusTextAttrPtr;
