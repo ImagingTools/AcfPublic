@@ -5015,6 +5015,7 @@
     <includes id="_i_gui_object_8h" name="IGuiObject.h" local="no" imported="no">iqtgui/IGuiObject.h</includes>
     <includes id="_i_visual_status_8h" name="IVisualStatus.h" local="no" imported="no">iqtgui/IVisualStatus.h</includes>
     <includes id="_t_design_schema_handler_wrap_8h" name="TDesignSchemaHandlerWrap.h" local="no" imported="no">iqtgui/TDesignSchemaHandlerWrap.h</includes>
+    <includes id="_t_make_icon_provider_comp_wrap_8h" name="TMakeIconProviderCompWrap.h" local="no" imported="no">iqtgui/TMakeIconProviderCompWrap.h</includes>
     <class kind="class">iqtgui::CGuiComponentBase</class>
     <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <namespace>iqtgui</namespace>
@@ -5389,6 +5390,15 @@
     <includes id="_t_designer_gui_observer_comp_base_8h" name="TDesignerGuiObserverCompBase.h" local="no" imported="no">iqtgui/TDesignerGuiObserverCompBase.h</includes>
     <includes id="_t_gui_observer_wrap_8h" name="TGuiObserverWrap.h" local="no" imported="no">iqtgui/TGuiObserverWrap.h</includes>
     <class kind="class">iqtgui::TItemModelEditorCompBase</class>
+    <namespace>iqtgui</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TMakeIconProviderCompWrap.h</name>
+    <path>C:/Temp/Acf/Include/iqtgui/</path>
+    <filename>_t_make_icon_provider_comp_wrap_8h.html</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
+    <class kind="class">iqtgui::TMakeIconProviderCompWrap</class>
     <namespace>iqtgui</namespace>
   </compound>
   <compound kind="file">
@@ -21151,14 +21161,14 @@
   <compound kind="class">
     <name>iqtgui::CGuiComponentBase</name>
     <filename>classiqtgui_1_1_c_gui_component_base.html</filename>
-    <base>TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt;</base>
+    <base>TMakeIconProviderCompWrap&lt; TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt; &gt;</base>
     <base virtualness="virtual">iqtgui::IGuiObject</base>
     <class kind="class">iqtgui::CGuiComponentBase::VisualStatus</class>
     <member kind="typedef">
-      <type>TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt;</type>
+      <type>TMakeIconProviderCompWrap&lt; TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
-      <anchor>afd14971629d47826f6fc0a86418d935e</anchor>
+      <anchor>a1cfd23888e9b4548f062752991d7ce1c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -66663,39 +66673,6 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt;</name>
-    <filename>classiqtgui_1_1_t_design_schema_handler_wrap.html</filename>
-    <base>TLocalizableWrap&lt; icomp::CComponentBase &gt;</base>
-    <member kind="typedef">
-      <type>ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classiqtgui_1_1_t_design_schema_handler_wrap.html</anchorfile>
-      <anchor>ae51e71e01aa508c467692ddb1be95197</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TDesignSchemaHandlerWrap</name>
-      <anchorfile>classiqtgui_1_1_t_design_schema_handler_wrap.html</anchorfile>
-      <anchor>ade3cc0ee4775ad5685d77c40e5e2f318</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>EnableDesignHandler</name>
-      <anchorfile>classiqtgui_1_1_t_design_schema_handler_wrap.html</anchorfile>
-      <anchor>a0672de1600ab32def485ccc82131dc3c</anchor>
-      <arglist>(bool enable=true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="pure">
-      <type>virtual void</type>
-      <name>OnDesignSchemaChanged</name>
-      <anchorfile>classiqtgui_1_1_t_design_schema_handler_wrap.html</anchorfile>
-      <anchor>acd6ceed83eb68ce000ea16da97bb4029</anchor>
-      <arglist>()=0</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
     <name>itest::CStandardTestExecutor::TestRegistrator</name>
     <filename>classitest_1_1_c_standard_test_executor_1_1_test_registrator.html</filename>
     <templarg></templarg>
@@ -71075,6 +71052,44 @@
       <anchorfile>classicomp_1_1_t_make_component_wrap.html</anchorfile>
       <anchor>a0b35c16d25c9e2e9ce82fc0f6865d878</anchor>
       <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::TMakeIconProviderCompWrap</name>
+    <filename>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</filename>
+    <templarg></templarg>
+    <member kind="typedef">
+      <type>Base</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>a7d8d2e6ff2a78d89f0e354b3be0c8d71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>a2d8f84e6ff13c6ec23eec664c52cb755</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>TMakeIconProviderCompWrap&lt; TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt; &gt;</name>
+    <filename>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</filename>
+    <base>iqtgui::TDesignSchemaHandlerWrap</base>
+    <member kind="typedef">
+      <type>TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>a7d8d2e6ff2a78d89f0e354b3be0c8d71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>a2d8f84e6ff13c6ec23eec664c52cb755</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -85898,6 +85913,7 @@
     <class kind="class">iqtgui::TGuiComponentBase</class>
     <class kind="class">iqtgui::TGuiObserverWrap</class>
     <class kind="class">iqtgui::TItemModelEditorCompBase</class>
+    <class kind="class">iqtgui::TMakeIconProviderCompWrap</class>
     <class kind="class">iqtgui::TRestorableGuiWrap</class>
     <member kind="function" static="yes">
       <type>static bool</type>

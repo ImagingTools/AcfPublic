@@ -225,6 +225,8 @@ void CGuiComponentBase::OnLanguageChanged()
 void CGuiComponentBase::OnDesignSchemaChanged()
 {
 	if (m_defaultStatusIconPathAttrPtr.IsValid()){
+		istd::CChangeNotifier changeNotifier(&m_visualStatus);
+
 		m_visualStatus.m_statusIcon = GetIcon(*m_defaultStatusIconPathAttrPtr);
 	}
 }
