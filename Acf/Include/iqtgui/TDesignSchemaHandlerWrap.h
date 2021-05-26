@@ -87,12 +87,14 @@ void TDesignSchemaHandlerWrap<Base>::EnableDesignHandler(bool enable)
 		if (enable){
 			if (!m_isFilterInstalled){
 				applicationPtr->installEventFilter(&m_designSchemaEventsFilter);
+
 				m_isFilterInstalled = true;
 			}
 		}
 		else{
 			if (m_isFilterInstalled){
 				applicationPtr->removeEventFilter(&m_designSchemaEventsFilter);
+
 				m_isFilterInstalled = false;
 			}
 		}

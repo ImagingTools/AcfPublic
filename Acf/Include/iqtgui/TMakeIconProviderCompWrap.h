@@ -54,7 +54,6 @@ QIcon TMakeIconProviderCompWrap<Base>::GetIcon(const QString& iconName) const
 
 	if (pixmap.load(iconName)){
 		icon.addPixmap(pixmap, QIcon::Normal, QIcon::Off);
-		icon.addPixmap(pixmap, QIcon::Normal, QIcon::On);
 	}
 
 	if (pixmap.load(iconName + "_Off_Normal")){

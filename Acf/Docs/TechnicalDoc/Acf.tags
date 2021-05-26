@@ -21332,6 +21332,13 @@
       <anchor>acbe64d5e28b4059b0c34111dd7e3cc8d</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>ab47dcae0232bd6f6ef73cc8aaa3bb480</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual QWidget *</type>
       <name>CreateQtWidget</name>

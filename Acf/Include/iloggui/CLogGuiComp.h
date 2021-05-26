@@ -158,9 +158,6 @@ protected:
 	// reimplemented (ilog::IMessageContainer)
 	virtual void ClearMessages();
 
-	// reimplemented (iqtgui::TDesignSchemaHandlerWrap)
-	virtual void OnDesignSchemaChanged();
-
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();

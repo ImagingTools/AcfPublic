@@ -299,7 +299,7 @@ void CGuiComponentBase::OnComponentDestroyed()
 {
 	EnableDesignHandler(false);
 
-	BaseClass::OnComponentCreated();
+	BaseClass::OnComponentDestroyed();
 }
 
 

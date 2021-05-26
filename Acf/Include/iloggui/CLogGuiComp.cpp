@@ -164,22 +164,29 @@ QTreeWidgetItem* CLogGuiComp::CreateGuiItem(const istd::IInformationProvider& me
 
 QIcon CLogGuiComp::GetCategoryIcon(int category) const
 {
+	static QIcon emptyIcon;
+
+	static QIcon logIcon(":/Icons/Log");
+	static QIcon infoIcon(":/Icons/Info");
+	static QIcon warningIcon(":/Icons/Warning");
+	static QIcon errorIcon(":/Icons/Error");
+
 	switch (category){
 	case istd::IInformationProvider::IC_NONE:
-		return GetIcon(":/Icons/Log");
+		return logIcon;
 
 	case istd::IInformationProvider::IC_INFO:
-		return GetIcon(":/Icons/Info");
+		return infoIcon;
 
 	case istd::IInformationProvider::IC_WARNING:
-		return GetIcon(":/Icons/Warning");
+		return warningIcon;
 
 	case istd::IInformationProvider::IC_ERROR:
 	case istd::IInformationProvider::IC_CRITICAL:
-		return GetIcon(":/Icons/Error");
+		return errorIcon;
 
 	default:
-		return QIcon();
+		return emptyIcon;
 	}
 }
 
@@ -316,14 +323,6 @@ void CLogGuiComp::AddMessage(const MessagePtr& messagePtr)
 void CLogGuiComp::ClearMessages()
 {
 	QTimer::singleShot(0, this, SIGNAL(OnClearAction()));
-}
-
-
-// reimplemented (iqtgui::TDesignSchemaHandlerWrap)
-
-void CLogGuiComp::OnDesignSchemaChanged()
-{
-	UpdateVisualStatus();
 }
 
 

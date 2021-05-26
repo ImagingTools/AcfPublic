@@ -40,8 +40,6 @@
 
 	#undef RemoveDirectory
 #endif
-#define xstr(s) str(s)
-#define str(s) #s
 
 
 namespace istd
@@ -135,28 +133,16 @@ QString CSystem::GetVariableValue(const QString& varName, bool envVars, bool emb
 		}
 		else if (varName == "ConfigurationName"){
 			QString retVal = s_compilerMode + s_compilerName;
-			if (!s_platformCode.isEmpty()){
-				retVal += "_";
-				if (s_platformCode == "x64"){
-					retVal += "64";
-				}
-				else{
-					retVal += s_platformCode;
-				}
+			if (s_platformCode == "x64"){
+				retVal += "_64";
 			}
 
 			return retVal;
 		}
 		else if (varName == "ConfigurationDir"){
 			QString retVal = s_compilerMode + s_compilerName;
-			if (!s_platformCode.isEmpty()){
-				retVal += "_";
-				if (s_platformCode == "x64"){
-					retVal += "64";
-				}
-				else{
-					retVal += s_platformCode;
-				}
+			if (s_platformCode == "x64"){
+				retVal += "_64";
 			}
 
 			return retVal + "/";
@@ -470,20 +456,12 @@ CSystem::FileDriveInfo CSystem::GetFileDriveInfo(const QString& fileDrivePath)
 QString CSystem::GetCompilerVariable(const QString& varName)
 {
 	if (varName == "PlatformCode"){
-#if defined(_MSC_VER)
 		if (sizeof(void*) > 4){
 			return "x64";
 		}
 		else{
 			return QString();
 		}
-#else
-	QString retVal = QString(xstr(PLATFORM_CODE));
-	if (retVal == "PLATFORM_CODE"){
-		retVal.clear();
-	}
-	return retVal;
-#endif
 	}
 	else if (varName == "CompileMode"){
 #ifndef QT_NO_DEBUG
@@ -496,8 +474,17 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 		return GetCompilerVariable("CompileMode") + GetCompilerVariable("CompilerName");
 	}
 	else if (varName == "CompilerName"){
-
-#if defined(_MSC_VER)
+#ifdef __clang__
+		return "Clang";
+#elif defined(__MINGW32__)
+		return "MinGW";
+#elif defined(__MINGW64__)
+		return "MinGW_64";
+#elif defined(__GNUC__)
+		return "GCC";
+#elif defined(__INTEL_COMPILER)
+		return "ICC";
+#elif defined(_MSC_VER)
 #if _MSC_VER >= 1920
 		QString retVal = "VC16";
 #elif _MSC_VER >= 1910
@@ -522,11 +509,7 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 		return retVal;
 
 #else
-	QString retVal = QString(xstr(COMPILER_NAME));
-	if (retVal == "COMPILER_NAME"){
-		retVal = "Unknown";
-	}
-	return retVal;
+		return "Unknown";
 #endif
 	}
 
