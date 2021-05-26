@@ -96,8 +96,6 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 
 			EnableLocalization(true);
 
-			EnableDesignHandler(true);
-
 			MakeAutoSlotConnection();
 
 			if (m_fixedWidthAttrPtr.IsValid()){
@@ -130,7 +128,6 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 bool CGuiComponentBase::DestroyGui()
 {
 	EnableLocalization(false);
-	EnableDesignHandler(false);
 
 	if (m_widgetPtr != NULL){
 		OnGuiDestroyed();
@@ -293,6 +290,16 @@ void CGuiComponentBase::OnComponentCreated()
 	m_visualStatus.m_statusText = *m_defaultStatusTextAttrPtr;
 
 	OnRetranslate();
+
+	EnableDesignHandler(true);
+}
+
+
+void CGuiComponentBase::OnComponentDestroyed()
+{
+	EnableDesignHandler(false);
+
+	BaseClass::OnComponentCreated();
 }
 
 
