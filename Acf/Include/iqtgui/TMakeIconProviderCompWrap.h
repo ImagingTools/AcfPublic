@@ -27,10 +27,6 @@
 // Qt includes
 #include <QtGui/QIcon>
 
-// ACF includes
-#include <icomp/CComponentBase.h>
-#include <ifile/IFileNameParam.h>
-
 
 namespace iqtgui
 {
@@ -54,6 +50,7 @@ QIcon TMakeIconProviderCompWrap<Base>::GetIcon(const QString& iconName) const
 
 	if (pixmap.load(iconName)){
 		icon.addPixmap(pixmap, QIcon::Normal, QIcon::Off);
+		icon.addPixmap(pixmap, QIcon::Normal, QIcon::On);
 	}
 
 	if (pixmap.load(iconName + "_Off_Normal")){

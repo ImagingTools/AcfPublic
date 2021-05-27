@@ -5396,8 +5396,6 @@
     <name>TMakeIconProviderCompWrap.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_t_make_icon_provider_comp_wrap_8h.html</filename>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
-    <includes id="_i_file_name_param_8h" name="IFileNameParam.h" local="no" imported="no">ifile/IFileNameParam.h</includes>
     <class kind="class">iqtgui::TMakeIconProviderCompWrap</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -25271,6 +25269,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnDesignSchemaChanged</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a50d580923d1abb06c282ff3b3528527b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a77b30b21f8b5aea82e9ddc136bbe4cc1</anchor>
@@ -41616,12 +41621,19 @@
       <anchor>a986df33f813c864414ccd7463ccc8443</anchor>
       <arglist>(bool *ignoredPtr=NULL)</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>UpdateTitle</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a6273f06588d0dbb08b1b34ada8628c4a</anchor>
+      <anchor>aa3a0e23b17c0cee5e33b5a4a1ab8e282</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QString</type>
+      <name>GenerateDocumentTitle</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>acc0233ca23a4b3c5edc0b5860cd9b5eb</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QString</type>
