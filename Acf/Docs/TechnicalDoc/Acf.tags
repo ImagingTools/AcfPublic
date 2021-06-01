@@ -3944,6 +3944,7 @@
     <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
+    <includes id="_i_enableable_param_8h" name="IEnableableParam.h" local="no" imported="no">iprm/IEnableableParam.h</includes>
     <class kind="class">iprm::CSelectionConstraintsComp</class>
     <namespace>iprm</namespace>
   </compound>
