@@ -75,7 +75,7 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 				taughtColorItem->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
 
 				double delta = colorValues[1] - colorValues[0];
-                double deltaRel = std::abs(delta) / 255;
+				double deltaRel = abs(delta) / 255;
 				QTableWidgetItem* diffItem = new QTableWidgetItem(QString("%1").arg(delta));
 				QTableWidgetItem* diffProcItem = new QTableWidgetItem(QString("%1%").arg(deltaRel * 100, 2, 'g', 2));
 
@@ -108,7 +108,7 @@ void CColorPatternComparatorGuiComp::UpdateGui(const istd::IChangeable::ChangeSe
 					double taughtValue = colorValues[i + 3];
 
 					double delta = taughtValue - currentValue;
-                    double deltaRel = std::abs(delta) / 255;
+					double deltaRel = abs(delta) / 255;
 
 					if (i == 0){ // Hue difference
 						i2d::CDirection2d taughtHue = i2d::CDirection2d::FromDegree(taughtValue);
