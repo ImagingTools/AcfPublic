@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include <iocv/COcvIntrinsicCameraCalibrationSupplierComp.h>
 
 
@@ -174,18 +152,18 @@ int COcvIntrinsicCameraCalibrationSupplierComp::ProduceObject(ProductType& resul
 		std::vector<cv::Mat> rvecs; // extrinsic camera rotation matrix
 		std::vector<cv::Mat> tvecs; // extrinsic camera translation
 
-		int flags = CV_CALIB_FIX_ASPECT_RATIO;
+		int flags = cv::CALIB_FIX_ASPECT_RATIO;
 
 		if (m_fixK2AttrPtr.IsValid() && *m_fixK2AttrPtr){
-			flags |= CV_CALIB_FIX_K2;
+			flags |= cv::CALIB_FIX_K2;
 		}
 
 		if (m_fixK3AttrPtr.IsValid() && *m_fixK3AttrPtr){
-			flags |= CV_CALIB_FIX_K3;
+			flags |= cv::CALIB_FIX_K3;
 		}
 
 		if (m_fixPrincipalPointAttrPtr.IsValid() && *m_fixPrincipalPointAttrPtr){
-			flags |= CV_CALIB_FIX_PRINCIPAL_POINT;
+			flags |= cv::CALIB_FIX_PRINCIPAL_POINT;
 		}
 
 		//Find intrinsic and extrinsic camera parameters

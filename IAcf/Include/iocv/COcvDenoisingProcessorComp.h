@@ -10,15 +10,14 @@ namespace iocv
 
 
 /**	
-	Median-based smoothing processor.
+	Non-local Means Denoising algorithm
 */
-class COcvMedianProcessorComp: public iproc::CSyncProcessorCompBase
+class COcvDenoisingProcessorComp : public iproc::CSyncProcessorCompBase
 {
 public:
 	typedef iproc::CSyncProcessorCompBase BaseClass;
 	
-	I_BEGIN_COMPONENT(COcvMedianProcessorComp);
-		I_ASSIGN(m_filterSizeParamsIdAttrPtr, "FilterSizeParamsId", "ID of the filter dimension parameter set", true, "FilterSizeParamsId");
+	I_BEGIN_COMPONENT(COcvDenoisingProcessorComp);
 	I_END_COMPONENT;
 
 	// reimplemented (iproc::IProcessor)
@@ -29,7 +28,6 @@ public:
 				ibase::IProgressManager* progressManagerPtr = NULL);
 
 private:
-	I_ATTR(QByteArray, m_filterSizeParamsIdAttrPtr);
 };
 
 

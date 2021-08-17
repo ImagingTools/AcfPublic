@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include <iocv/COcvIntrinsicCameraCalibration.h>
 
 
@@ -149,6 +127,20 @@ bool COcvIntrinsicCameraCalibration::GetInvPositionAt(
 			i2d::CVector2d& result,
 			ExactnessMode mode) const
 {
+	bool emptyDistortion = true;
+
+	for (int i = 0; i < m_distorsionCoeff.rows; i++) {
+		if (std::abs(m_distorsionCoeff(i, 0)) > I_EPSILON) {
+			emptyDistortion = false;
+			break;
+		}
+	}
+
+	if (emptyDistortion) {
+		result = transfPosition;
+		return true;
+	}
+
 	std::vector<cv::Point2f> input(1);
 	input[0].x = transfPosition.GetX();
 	input[0].y = transfPosition.GetY();
@@ -338,11 +330,11 @@ bool COcvIntrinsicCameraCalibration::ResetData(CompatibilityMode /*mode*/)
 
 void COcvIntrinsicCameraCalibration::Reset()
 {
-	m_cameraMatrix = 0.0;
+	m_cameraMatrix.all(0.0);
 	m_cameraMatrix(0, 0) = 1.0;
 	m_cameraMatrix(1, 1) = 1.0;
 	m_cameraMatrix(2, 2) = 1.0;
-	m_distorsionCoeff = 0.0;
+	m_distorsionCoeff.all(0.0);
 }
 
 

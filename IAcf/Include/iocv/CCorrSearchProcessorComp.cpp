@@ -1,31 +1,8 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include <iocv/CCorrSearchProcessorComp.h>
 
 
 // OpenCV includes
 #include "opencv2/opencv.hpp"
-#include <opencv/highgui.h>
 
 // Qt includes
 #include <QtCore/QElapsedTimer>
@@ -194,7 +171,7 @@ int CCorrSearchProcessorComp::DoModelSearch(
 	cv::Mat cvModel(modelSize.GetX(), modelSize.GetY(), CV_8UC1, (quint8*)modelImage.GetLinePtr(0), modelImage.GetLineBytesCount());
 
 	cv::Mat correlationMap;
-	cv::matchTemplate(cvImage, cvModel, correlationMap, CV_TM_CCOEFF_NORMED);
+	cv::matchTemplate(cvImage, cvModel, correlationMap, cv::TM_CCOEFF_NORMED);
 
 	/// Localizing the best match with minMaxLoc
 	double minVal;

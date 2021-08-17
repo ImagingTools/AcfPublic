@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include <iocv/COcvPointGridExtractorComp.h>
 
 
@@ -173,7 +151,7 @@ int COcvPointGridExtractorComp::DoExtractFeatures(
 		{
 		case PT_CHESSBOARD:
 			found = cv::findChessboardCorners(view, gridSize, pointBuf,
-				CV_CALIB_CB_ADAPTIVE_THRESH | CV_CALIB_CB_FAST_CHECK | CV_CALIB_CB_NORMALIZE_IMAGE);
+				cv::CALIB_CB_ADAPTIVE_THRESH | cv::CALIB_CB_FAST_CHECK | cv::CALIB_CB_NORMALIZE_IMAGE);
 			break;
 		case PT_CIRCLES_GRID:
 			found = findCirclesGrid(view, gridSize, pointBuf);
@@ -214,7 +192,7 @@ int COcvPointGridExtractorComp::DoExtractFeatures(
 			}
 
 			cornerSubPix(viewGray, pointBuf, cv::Size(11, 11),
-				cv::Size(-1, -1), cv::TermCriteria(CV_TERMCRIT_EPS + CV_TERMCRIT_ITER, 30, 0.1));
+				cv::Size(-1, -1), cv::TermCriteria(cv::TermCriteria::Type::EPS + cv::TermCriteria::Type::MAX_ITER, 30, 0.1));
 		}
 
 		iipr::CPointGridFeature* pointGridPtr = new iipr::CPointGridFeature();

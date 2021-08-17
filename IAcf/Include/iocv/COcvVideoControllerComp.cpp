@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include <iocv/COcvVideoControllerComp.h>
 
 
@@ -49,7 +27,8 @@ const istd::IChangeable::ChangeSet s_setPositionChangeSet(imm::IMediaController:
 
 COcvVideoControllerComp::COcvVideoControllerComp()
 :	m_isPlaying(false),
-	m_currentFrameIndex(0)
+	m_currentFrameIndex(0),
+	m_framesCount(0)
 {
 }
 
@@ -101,7 +80,7 @@ bool COcvVideoControllerComp::OpenMediumUrl(const QString& url, bool autoPlay)
 			return false;
 		}
 
-		m_framesCount = (int)m_capturePtr->get(CV_CAP_PROP_FRAME_COUNT);
+		m_framesCount = (int)m_capturePtr->get(cv::CAP_PROP_FRAME_COUNT);
 
 		istd::CChangeNotifier notifier(this, &s_openMediaChangeSet);
 		Q_UNUSED(notifier);
@@ -149,7 +128,7 @@ double COcvVideoControllerComp::GetMediumLength() const
 {
 	double fps = 0;
 	if (m_capturePtr.IsValid()){
-		fps = m_capturePtr->get(CV_CAP_PROP_FPS);
+		fps = m_capturePtr->get(cv::CAP_PROP_FPS);
 	}
 
 	return fps * GetFramesCount();
@@ -185,7 +164,7 @@ int COcvVideoControllerComp::GetFramesCount() const
 double COcvVideoControllerComp::GetFrameInterval() const
 {
 	if (m_capturePtr.IsValid()){
-		return 1.0 / m_capturePtr->get(CV_CAP_PROP_FPS);
+		return 1.0 / m_capturePtr->get(cv::CAP_PROP_FPS);
 	}
 
 	return 0;
@@ -195,8 +174,8 @@ double COcvVideoControllerComp::GetFrameInterval() const
 istd::CIndex2d COcvVideoControllerComp::GetFrameSize() const
 {
 	if (m_capturePtr.IsValid()){
-		int frameWidth = (int)m_capturePtr->get(CV_CAP_PROP_FRAME_WIDTH);
-		int frameHeight = (int)m_capturePtr->get(CV_CAP_PROP_FRAME_HEIGHT);
+		int frameWidth = (int)m_capturePtr->get(cv::CAP_PROP_FRAME_WIDTH);
+		int frameHeight = (int)m_capturePtr->get(cv::CAP_PROP_FRAME_HEIGHT);
 
 		return istd::CIndex2d(frameWidth, frameHeight);
 	}
@@ -300,7 +279,7 @@ bool COcvVideoControllerComp::SeekToPosition(int frameIndex) const
 	}
 	else{
 		if (m_capturePtr.GetPtr()){
-			if (m_capturePtr->set(CV_CAP_PROP_POS_FRAMES, frameIndex) != 0){
+			if (m_capturePtr->set(cv::CAP_PROP_POS_FRAMES, frameIndex) != 0){
 				if (m_capturePtr->grab()){
 					m_currentFrameIndex = frameIndex;
 				}
@@ -333,7 +312,7 @@ void COcvVideoControllerComp::EnsureMediumClosed()
 int COcvVideoControllerComp::GetStreamPosition() const
 {
 	if (m_capturePtr.GetPtr()){
-		return (int)m_capturePtr->get(CV_CAP_PROP_POS_FRAMES);
+		return (int)m_capturePtr->get(cv::CAP_PROP_POS_FRAMES);
 	}
 
 	return 0;

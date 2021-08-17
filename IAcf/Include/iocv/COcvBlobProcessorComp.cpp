@@ -1,25 +1,3 @@
-/********************************************************************************
-**
-**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
-**
-**	This file is part of the IACF Toolkit.
-**
-**	This file may be used under the terms of the GNU Lesser
-**	General Public License version 2.1 as published by the Free Software
-**	Foundation and appearing in the file LicenseLGPL.txt included in the
-**	packaging of this file.  Please review the following information to
-**	ensure the GNU Lesser General Public License version 2.1 requirements
-**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
-**
-**	If you are unsure which license is appropriate for your use, please
-**	contact us at info@imagingtools.de.
-**
-** 	See http://www.ilena.org or write info@imagingtools.de for further
-** 	information about the ACF.
-**
-********************************************************************************/
-
-
 #include <iocv/COcvBlobProcessorComp.h>
 
 
@@ -101,19 +79,19 @@ bool COcvBlobProcessorComp::CalculateBlobs(
 		}
 
 		void* imageDataBufferPtr = const_cast<void*>(maskedBitmap.GetLinePtr(0));
-		cv::Mat inputBitmap(size.GetY(), size.GetX(), CV_8UC1, imageDataBufferPtr, maskedBitmap.GetLineBytesCount());
+		cv::Mat inputBitmap(size.GetY(), size.GetX(), CV_8UC1, imageDataBufferPtr, maskedBitmap.GetLinesDifference());
 		tmpBinaryImage = inputBitmap.clone();
 	}
 	else{
 		void* imageDataBufferPtr = const_cast<void*>(image.GetLinePtr(0));
-		cv::Mat inputBitmap(size.GetY(), size.GetX(), CV_8UC1, imageDataBufferPtr, image.GetLineBytesCount());
+		cv::Mat inputBitmap(size.GetY(), size.GetX(), CV_8UC1, imageDataBufferPtr, image.GetLinesDifference());
 
 		tmpBinaryImage = inputBitmap.clone();
 	}
 
 	// Get contours from the binary image:
 	std::vector<std::vector<cv::Point> > contours;
-	findContours(tmpBinaryImage, contours, CV_RETR_LIST, CV_CHAIN_APPROX_SIMPLE);
+	findContours(tmpBinaryImage, contours, CV_RETR_EXTERNAL, CV_CHAIN_APPROX_SIMPLE);
 
 	// Get found blobs:
 	int blobsCount = 0;
