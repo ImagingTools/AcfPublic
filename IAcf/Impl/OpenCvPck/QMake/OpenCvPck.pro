@@ -9,3 +9,4 @@ INCLUDEPATH += ../../../../AcfSln/Include
 LIBS += -L../../../../AcfSln/Lib/$$COMPILER_DIR -liblob -limeas -liipr -licalib -liedge -liinsp
 LIBS += -L../../../Lib/$$COMPILER_DIR -liocv
 
+

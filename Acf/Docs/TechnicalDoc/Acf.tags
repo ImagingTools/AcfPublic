@@ -27833,6 +27833,13 @@
       <anchor>aa74f65a55c8b187c14d098786a4cca36</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef" protection="protected">
+      <type>istd::TPointerVector&lt; SingleDocumentData &gt;</type>
+      <name>DocumentInfos</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a8196e0182f91647dbbac08a27ab655c7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>OpenSingleDocument</name>
@@ -27944,6 +27951,20 @@
       <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
       <anchor>ad17b9585eb3c07039db791ed25f9eef8</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>DocumentInfos</type>
+      <name>m_documentInfos</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a7259d6e85efe48bf543dae1ae5e47463</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>istd::IPolymorphic *</type>
+      <name>m_activeViewPtr</name>
+      <anchorfile>classidoc_1_1_c_multi_document_manager_base.html</anchorfile>
+      <anchor>a6b482add8637d1c07606945b8440cf3b</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">

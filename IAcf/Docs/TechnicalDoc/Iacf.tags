@@ -134,6 +134,13 @@
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
+    <name>COcvDenoisingProcessorComp.h</name>
+    <path>C:/Temp/IAcf/Include/iocv/</path>
+    <filename>_c_ocv_denoising_processor_comp_8h.html</filename>
+    <class kind="class">iocv::COcvDenoisingProcessorComp</class>
+    <namespace>iocv</namespace>
+  </compound>
+  <compound kind="file">
     <name>COcvEdgeExtractorComp.h</name>
     <path>C:/Temp/IAcf/Include/iocv/</path>
     <filename>_c_ocv_edge_extractor_comp_8h.html</filename>
@@ -1356,6 +1363,25 @@
       <anchorfile>classiocv_1_1_c_ocv_blob_processor_comp.html</anchorfile>
       <anchor>af3550ca37a9d7ae01105b58b594fd89c</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr, const iblob::IBlobFilterParams *filterParamsPtr, const i2d::IObject2d *aoiPtr, const iimg::IBitmap &amp;image, iipr::IFeaturesConsumer &amp;result)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iocv::COcvDenoisingProcessorComp</name>
+    <filename>classiocv_1_1_c_ocv_denoising_processor_comp.html</filename>
+    <base>iproc::TSyncProcessorCompBase</base>
+    <member kind="typedef">
+      <type>iproc::CSyncProcessorCompBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiocv_1_1_c_ocv_denoising_processor_comp.html</anchorfile>
+      <anchor>a41ff2279e9784fc0d60112781a84494d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>DoProcessing</name>
+      <anchorfile>classiocv_1_1_c_ocv_denoising_processor_comp.html</anchorfile>
+      <anchor>afbe11c8ec83c81f4d67ca6c55ca19447</anchor>
+      <arglist>(const iprm::IParamsSet *paramsPtr, const istd::IPolymorphic *inputPtr, istd::IChangeable *outputPtr, ibase::IProgressManager *progressManagerPtr=NULL)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -3153,6 +3179,7 @@
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
+    <class kind="class">iocv::COcvDenoisingProcessorComp</class>
     <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <class kind="class">iocv::COcvImage</class>
     <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
