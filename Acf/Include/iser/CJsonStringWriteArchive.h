@@ -29,6 +29,7 @@
 #include <QtCore/QJsonArray>
 #include <QtCore/QVector>
 #include <QtCore/QTextStream>
+#include <QtCore/QDataStream>
 
 // ACF includes
 #include <iser/CTextWriteArchiveBase.h>
@@ -69,7 +70,8 @@ protected:
 	virtual bool WriteTextNode(const QByteArray& text);
 
 private:
-	QTextStream m_stream;
+//	QTextStream m_stream;
+	QDataStream m_stream;
 	bool m_firstTag;
 	QJsonDocument::JsonFormat m_jsonFormat;
 

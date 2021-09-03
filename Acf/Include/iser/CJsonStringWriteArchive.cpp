@@ -39,16 +39,17 @@ CJsonStringWriteArchive::CJsonStringWriteArchive(
 			const IVersionInfo* versionInfoPtr,
 			QJsonDocument::JsonFormat jsonFormat)
 	:CTextWriteArchiveBase(versionInfoPtr),
-	m_stream(&inputString),
+	m_stream(&inputString, QIODevice::WriteOnly),
 	m_jsonFormat(jsonFormat)
 {
+//	m_stream.setAutoDetectUnicode(true);
 	m_firstTag = true;
 }
 
 
 CJsonStringWriteArchive::~CJsonStringWriteArchive()
 {
-	m_stream.flush();
+//	m_stream.device() flush();
 }
 
 
@@ -128,10 +129,10 @@ bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 	}
 
 	if (lastTagPtr->GetTagType() == iser::CArchiveTag::TT_MULTIPLE){
-		m_stream << "]";
+		m_stream.device()->write("]");
 	}
 	else if (lastTagPtr->GetTagType() == iser::CArchiveTag::TT_GROUP){
-		m_stream << "}";
+		m_stream.device()->write( "}");
 	}
 
 	return true;
@@ -140,7 +141,7 @@ bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 
 bool CJsonStringWriteArchive::Process(QString &value)
 {
-	return WriteTextNode("\"" + value.toUtf8() + "\"");
+	return WriteTextNode('"' + value.toUtf8() + '"');
 }
 
 
@@ -149,14 +150,16 @@ bool CJsonStringWriteArchive::Process(QString &value)
 void CJsonStringWriteArchive::WriteTag(const CArchiveTag &tag, QString separator, bool isWriteTag)
 {
 	if (!m_firstTag){
-		m_stream << ",";
+		m_stream.device()->write(",");
 	}
 
 	if (isWriteTag){
-		m_stream << "\"" << tag.GetId() << "\":";
+		m_stream.device()->write("\"");
+		m_stream.device()->write(tag.GetId());
+		m_stream.device()->write("\":");
 	}
 
-	m_stream << separator;
+	m_stream.device()->write(separator.toLatin1());
 
 	m_firstTag = false;
 }
@@ -166,7 +169,7 @@ void CJsonStringWriteArchive::WriteTag(const CArchiveTag &tag, QString separator
 
 bool CJsonStringWriteArchive::WriteTextNode(const QByteArray &text)
 {
-	m_stream << text;
+	m_stream.device()->write(text);
 
 	return true;
 }
