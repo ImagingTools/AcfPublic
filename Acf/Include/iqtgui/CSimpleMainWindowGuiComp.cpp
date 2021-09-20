@@ -431,13 +431,11 @@ void CSimpleMainWindowGuiComp::OnRestoreSettings(const QSettings& settings)
 	QMainWindow* mainWindowPtr = GetQtWidget();
 	Q_ASSERT(mainWindowPtr != NULL);
 
-	if (*m_enableGeometryRestoringAttrPtr){
-		QByteArray windowState = settings.value("MainWindow/State").toByteArray();
-		QByteArray windowGeometry = settings.value("MainWindow/Geometry").toByteArray();
+	QByteArray windowState = settings.value("MainWindow/State").toByteArray();
+	QByteArray windowGeometry = settings.value("MainWindow/Geometry").toByteArray();
 
-		mainWindowPtr->restoreState(windowState);
-		mainWindowPtr->restoreGeometry(windowGeometry);
-	}
+	mainWindowPtr->restoreState(windowState);
+	mainWindowPtr->restoreGeometry(windowGeometry);
 
 	int otherWindowsCount = m_showOtherWindows.GetChildsCount();
 	for (int i = 0; i < otherWindowsCount; ++i){
