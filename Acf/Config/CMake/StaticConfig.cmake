@@ -39,7 +39,16 @@ set_property(
 
 set_property(
 	TARGET ${PROJECT_NAME}
+	PROPERTY COMPILE_PDB_OUTPUT_DIRECTORY "${outlibdir}")
+
+set_property(
+	 TARGET ${PROJECT_NAME}
+	 PROPERTY COMPILE_PDB_NAME "${PROJECT_NAME}")
+
+ set_property(
+	TARGET ${PROJECT_NAME}
 	PROPERTY CMAKE_LIBRARY_OUTPUT_DIRECTORY_DEBUG ${outlibdir})
+
 set_property(
 	TARGET ${PROJECT_NAME}
 	PROPERTY LIBRARY_OUTPUT_PATH ${outlibdir})
