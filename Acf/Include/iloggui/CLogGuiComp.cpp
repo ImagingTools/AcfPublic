@@ -59,7 +59,8 @@ public:
 		QSize retVal = BaseClass::sizeHint(option, index);
 
 		QTreeWidgetItem* itemPtr = reinterpret_cast<QTreeWidgetItem*>(index.internalPointer());
-
+		if (itemPtr == nullptr)
+			return retVal;
 		if(itemPtr == nullptr)
 			return retVal;
 
