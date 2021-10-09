@@ -86,7 +86,7 @@ bool CJsonStringWriteArchive::BeginTag(const CArchiveTag& tag)
 		}
 	}
 
-	WriteTag(tag, "{", false);
+	WriteTag(tag, "{");
 
 	m_firstTag = true;
 
@@ -152,7 +152,7 @@ void CJsonStringWriteArchive::WriteTag(const CArchiveTag &tag, QString separator
 		m_stream << ",";
 	}
 
-	if (isWriteTag){
+	if (isWriteTag && !tag.GetId().isEmpty()){
 		m_stream << "\"" << tag.GetId() << "\":";
 	}
 
