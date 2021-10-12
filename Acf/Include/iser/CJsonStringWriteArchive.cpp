@@ -42,6 +42,7 @@ CJsonStringWriteArchive::CJsonStringWriteArchive(
 	m_stream(&inputString),
 	m_jsonFormat(jsonFormat)
 {
+	m_stream.setCodec("UTF-8");
 	m_firstTag = true;
 }
 
