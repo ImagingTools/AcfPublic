@@ -122,8 +122,9 @@ bool CApplicationCompBase::TryShowSplashScreen()
 
 		splashWidgetPtr->show();
 		splashWidgetPtr->raise();
-        QEventLoop loop;
+
 #ifdef Q_OS_LINUX
+		QEventLoop loop;
 		QTimer initSplashTimer;
 		QObject::connect(&initSplashTimer, SIGNAL(timeout()), &loop, SLOT(quit()), Qt::QueuedConnection);
 		Q_EMIT initSplashTimer.start(1000);
@@ -131,6 +132,7 @@ bool CApplicationCompBase::TryShowSplashScreen()
 #else
 		m_applicationPtr->processEvents(QEventLoop::ExcludeUserInputEvents);
 #endif
+		QEventLoop loop;
 		QTimer::singleShot(*m_splashTimeAttrPtr * 1000, &loop, SLOT(quit()));
 		loop.exec();
 

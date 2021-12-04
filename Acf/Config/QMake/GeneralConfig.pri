@@ -181,10 +181,6 @@ else{
 	QMAKE_CXXFLAGS_WARN_ON += -Wno-format-security
 }
 
-macx*{
-	COMPILER_NAME = $$COMPILER_NAME"OSX"
-}
-
 *-gcc*{
 	QMAKE_CXXFLAGS_WARN_ON += -wformat-security
 	QMAKE_CXXFLAGS += /openmp
