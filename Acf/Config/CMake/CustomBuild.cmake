@@ -25,7 +25,7 @@ set(ARXC_OUTFILE_NAME C${PROJECT_NAME}.cpp)
 
 # collecting additional deps for ARX
 set(ARX_DEPS_LIST)
-if(ARXC_CONFIG)
+if(ARXC_CONFIG AND ARX_GENERATE_DEPENDENCIES_LIST)
 	set(ARX_DEPS_FILE_PATH "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/ArxDependsList.txt")
 	set(ARX_ERRORS_FILE_PATH "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/ArxDependsList_errors.txt")
 
