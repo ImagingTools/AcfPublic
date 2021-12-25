@@ -39,8 +39,6 @@ namespace iqtprm
 
 void CButtonBasedSelectionParamGuiComp::OnGuiModelAttached()
 {
-	BaseClass::OnGuiModelAttached();
-
 	m_buttonsGroup.setExclusive(true);
 
 	const iprm::ISelectionParam* paramPtr = GetObservedObject();
@@ -69,6 +67,8 @@ void CButtonBasedSelectionParamGuiComp::OnGuiModelAttached()
 			connect(&m_buttonsGroup, SIGNAL(buttonClicked(int)), this, SLOT(OnButtonClicked(int)));
 		}
 	}
+
+	BaseClass::OnGuiModelAttached();
 }
 
 
