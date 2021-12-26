@@ -59390,12 +59390,12 @@
     <name>iqtgui::IVisualStatusProvider</name>
     <filename>classiqtgui_1_1_i_visual_status_provider.html</filename>
     <base virtualness="virtual">istd::IChangeable</base>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" virtualness="pure">
       <type>virtual const IVisualStatus *</type>
       <name>GetVisualStatus</name>
       <anchorfile>classiqtgui_1_1_i_visual_status_provider.html</anchorfile>
-      <anchor>ab054b4f268151067ee0a3e57b2295228</anchor>
-      <arglist>() const</arglist>
+      <anchor>af5c850412d5e0b609383ff04a80fe8c6</anchor>
+      <arglist>() const =0</arglist>
     </member>
   </compound>
   <compound kind="class">
