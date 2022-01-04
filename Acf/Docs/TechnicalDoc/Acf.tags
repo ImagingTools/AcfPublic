@@ -30377,16 +30377,9 @@
     </member>
     <member kind="function" protection="protected">
       <type>int</type>
-      <name>GetSelectedIndex</name>
+      <name>GetSelectedListOption</name>
       <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
-      <anchor>ae4b5468394ad36c3fbcd96aae2bdde0a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>EnsureSelectedIndexUpdated</name>
-      <anchorfile>classiqtprm_1_1_c_options_list_editor_comp.html</anchorfile>
-      <anchor>a2abfe46e4e5f2cc3368dec867774c235</anchor>
+      <anchor>ac368125a0d92af020ad1bb01e095e750</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected">
