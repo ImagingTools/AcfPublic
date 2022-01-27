@@ -13,8 +13,8 @@ if(NOT DEFINED IACFDIR)
 endif()
 
 
-if(NOT DEFINED OPENCVDIR_3_3_1)
-	set(OPENCVDIR_3_3_1 "${ACFDIR}/../3rdParty/OpenCV/3.3.1")
+if(NOT DEFINED OPENCVDIR_4_5_3)
+        set(OPENCVDIR_4_5_3 "${ACFDIR}/../3rdParty/OpenCV/4.5.3")
 endif()
 
 include_directories("${IACFDIR}/AuxInclude/Qt${QT_VERSION_MAJOR}_${TARGETNAME}")
