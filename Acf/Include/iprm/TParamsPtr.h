@@ -27,6 +27,7 @@
 // Qt includes
 #include <QtCore/QtGlobal>
 #include <QtCore/QStringList>
+#include <QtCore/QtDebug>
 
 // ACF includes
 #include <istd/TPointerBase.h>
@@ -218,7 +219,7 @@ void TParamsPtr<ParameterInterace>::Init(
 			debugMessage = QString("Parameter was not specified and no default parameter is active");
 		}
 
-		qDebug(qPrintable(debugMessage));
+		qDebug() << debugMessage;
 	}
 #endif
 #endif

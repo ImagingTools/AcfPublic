@@ -60,6 +60,9 @@ public:
 protected:
 	bool ReadStringNode(QString& text);
 
+	// reimplemented (iser::CTextReadArchiveBase)
+	virtual bool ReadTextNode(QByteArray& text);
+
 private:
 	QJsonDocument m_document;
 		

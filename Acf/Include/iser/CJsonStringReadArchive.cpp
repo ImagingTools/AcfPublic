@@ -219,6 +219,20 @@ bool CJsonStringReadArchive::ReadStringNode(QString &text)
 }
 
 
+bool CJsonStringReadArchive::ReadTextNode(QByteArray &text)
+{
+	QString stringText;
+
+	if (ReadStringNode(stringText)){
+		text = stringText.toLocal8Bit();
+
+		return true;
+	}
+
+	return false;
+}
+
+
 } // namespace iser
 
 

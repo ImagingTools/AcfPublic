@@ -29,6 +29,7 @@
 #include <QtCore/QEventLoop>
 #include <QtCore/QTextStream>
 #include <QtCore/QFile>
+#include <QtCore/QDebug>
 #include <QtGui/QIcon>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QStyle>
@@ -79,7 +80,7 @@ bool CApplicationCompBase::InitializeApplication(int argc, char** argv)
 
 		m_applicationArguments << QString::fromLocal8Bit(argv[argIndex]);
 
-		qDebug(argv[argIndex]);
+		qDebug() << QString::fromLocal8Bit(argv[argIndex]);
 	}
 
 	if (!m_applicationPtr.IsValid()){

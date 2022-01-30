@@ -23240,6 +23240,13 @@
       <anchor>a43297565d171cc8485a908e5c586dcc1</anchor>
       <arglist>(QString &amp;text)</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>ReadTextNode</name>
+      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
+      <anchor>aa2d9982eea7e868c4c335ed623c3425d</anchor>
+      <arglist>(QByteArray &amp;text)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::CJsonStringWriteArchive</name>
