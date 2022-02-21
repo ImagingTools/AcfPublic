@@ -43186,8 +43186,8 @@
       <type>static bool</type>
       <name>ConvertToFileName</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
-      <anchor>abfc3277a11613906ce179021643acaa9</anchor>
-      <arglist>(const QString &amp;fileNameString, QString &amp;fileName, const QString replacingChar=QString())</arglist>
+      <anchor>a14736f34aeb68986f2d051d523a1123c</anchor>
+      <arglist>(const QString &amp;fileNameString, QString &amp;fileName, const QString &amp;replacingChar=QString())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QString</type>
@@ -43235,8 +43235,8 @@
       <type>static bool</type>
       <name>CopyDirectory</name>
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
-      <anchor>af6983ede19adb549a7c4d716e54f9a8f</anchor>
-      <arglist>(const QString &amp;srcPath, const QString &amp;dstPath)</arglist>
+      <anchor>ac7fdbc05faab5b8b7edb968cca74412b</anchor>
+      <arglist>(const QString &amp;sourcePath, const QString &amp;destinationPath)</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -43300,6 +43300,13 @@
       <anchorfile>classistd_1_1_c_system.html</anchorfile>
       <anchor>ac1dc709be9de1c25ede4507b90701343</anchor>
       <arglist>(const QString &amp;localPath)</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QString</type>
+      <name>GetCompilerInfo</name>
+      <anchorfile>classistd_1_1_c_system.html</anchorfile>
+      <anchor>a11228a2d188ad913c24740f2d288a55d</anchor>
+      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -134,7 +134,6 @@ bool CJsonStringWriteArchive::EndTag(const CArchiveTag &tag)
 	else if (lastTagPtr->GetTagType() == iser::CArchiveTag::TT_GROUP){
 		m_stream << "}";
 	}
-	m_firstTag = false;
 
 	return true;
 }

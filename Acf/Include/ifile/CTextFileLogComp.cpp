@@ -25,6 +25,7 @@
 
 // Qt includes
 #include <QtCore/QFileInfo>
+#include <QtCore/QMutexLocker>
 
 // ACF includes
 #include <istd/IInformationProvider.h>
@@ -44,6 +45,7 @@ CTextFileLogComp:: CTextFileLogComp()
 	m_filePathObserver(*this),
 	m_mutex(QMutex::Recursive)
 {
+	m_lastDay = QDate::currentDate().day();
 }
 
 
@@ -54,6 +56,13 @@ CTextFileLogComp:: CTextFileLogComp()
 void CTextFileLogComp::WriteText(const QString& text, istd::IInformationProvider::InformationCategory /*category*/)
 {
 	QMutexLocker lock(&m_mutex);
+
+	// check the day overlap
+	int day = QDate::currentDate().day();
+	if (m_lastDay != day) {
+		m_lastDay = day;
+		OpenFileStream();
+	}
 
 	if (m_outputFile.isOpen()){
 		m_outputFileStream << text;
