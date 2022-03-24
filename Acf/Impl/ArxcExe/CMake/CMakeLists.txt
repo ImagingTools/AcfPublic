@@ -2,6 +2,8 @@ include(${ACFDIR}/Config/CMake/WindeployQt.cmake)
 
 project(Arxc LANGUAGES CXX)
 
+set(ARX_DISABLE_GENERATE_DEPENDENCIES_LIST ON)
+
 include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
