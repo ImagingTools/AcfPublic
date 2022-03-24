@@ -68,12 +68,14 @@ QString CSystem::GetOperationSystemName()
 
 #if defined(Q_OS_WIN)
 	retVal = "Windows";
-#elif defined(Q_OS_UNIX)
-	retVal = "Unix";
-#elif defined(Q_OS_IOS)
-	retVal = "iOS";
 #elif defined(Q_OS_OSX)
 	retVal = "OSX";
+#elif defined(Q_OS_IOS)
+	retVal = "iOS";
+#elif defined (Q_OS_LINUX)
+	retVal = "Linux";
+#elif defined(Q_OS_UNIX)
+	retVal = "Unix";
 #endif
 
 	return retVal;
@@ -486,7 +488,15 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 		return GetCompilerVariable("CompileMode") + GetCompilerVariable("CompilerName");
 	}
 	else if (varName == "CompilerName"){
-#ifdef __clang__
+
+#ifdef COMPILER_NAME
+	QString retVal = QString(xstr(COMPILER_NAME));
+	if (retVal == "COMPILER_NAME"){
+		retVal = "Unknown";
+	}
+	return retVal;
+
+#elif defined (__clang__)
 		QString retVal = "Clang";
 		if (sizeof(void*) > 4){
 			return retVal + "_64";
@@ -527,13 +537,6 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 		QString retVal = "VC";
 #endif
 		return retVal;
-
-#else
-	QString retVal = QString(xstr(COMPILER_NAME));
-	if (retVal == "COMPILER_NAME"){
-		retVal = "Unknown";
-	}
-	return retVal;
 #endif
 	}
 
