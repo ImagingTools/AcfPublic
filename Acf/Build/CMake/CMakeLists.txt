@@ -1,6 +1,4 @@
-message(${CMAKE_CURRENT_LIST_DIR})
 cmake_minimum_required(VERSION 3.1.0)
-#cmake_minimum_required(VERSION 3.13.0)
 
 project(Acf)
 
@@ -10,8 +8,6 @@ include("${ACFDIR}/Config/CMake/ProjectRoot.cmake")
 
 set(INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Include")
 set(IMPL_DIR "${CMAKE_CURRENT_LIST_DIR}/../../Impl")
-
-message(${INCLUDE_DIR})
 
 subdirlist(INCLUDE_DIRS ${INCLUDE_DIR})
 subdirlist(IMPL_DIRS ${IMPL_DIR})

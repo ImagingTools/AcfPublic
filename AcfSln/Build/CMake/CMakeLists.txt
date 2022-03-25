@@ -14,8 +14,6 @@ endif()
 
 set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}/../../../AcfSln")
 
-message("ACFDIR " "${ACFDIR}")
-
 include(${ACFDIR}/Config/CMake/ProjectRoot.cmake)
 
 get_target_name(TARGETNAME)
@@ -30,8 +28,6 @@ set(AUX_INCLUDE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AuxInclude/Qt${QT_VERSION_M
 
 include_directories("${CMAKE_CURRENT_LIST_DIR}/../../AuxInclude/Qt${QT_VERSION_MAJOR}_${TARGETNAME}")
 include_directories("${CMAKE_CURRENT_LIST_DIR}/../../../Acf/AuxInclude/Qt${QT_VERSION_MAJOR}_${TARGETNAME}")
-
-message("${AUX_INCLUDE_DIR}")
 
 
 # Include

@@ -3,11 +3,8 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(AcfAll)
 
-message("CMAKE_VERSION " ${CMAKE_VERSION})
 if(DEFINED ENV{QTDIR})
 	set(CMAKE_PREFIX_PATH $ENV{QTDIR})
-	message("set CMAKE_PREFIX_PATH " ${CMAKE_PREFIX_PATH})
-	message("Qt5Core_DIR " ${Qt5Core_DIR})
 endif()
 
 set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
@@ -15,9 +12,6 @@ set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
 set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
 
 include("${ACFDIR}/Config/CMake/ProjectRoot.cmake")
-
-message("ACFDIR: " ${ACFDIR})
-message("ACFSLNDIR: " ${ACFSLNDIR})
 
 get_target_name(TARGETNAME)
 
