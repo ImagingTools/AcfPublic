@@ -43,7 +43,7 @@ CTextFileLogComp:: CTextFileLogComp()
 :	m_outputFile(),
 	m_outputFileStream(&m_outputFile),
 	m_filePathObserver(*this),
-	m_mutex(QMutex::Recursive)
+	m_mutex()
 {
 	m_lastDay = QDate::currentDate().day();
 }

@@ -44,7 +44,7 @@ CUndoManagerCommandsProviderComp::CUndoManagerCommandsProviderComp()
 	m_redoCommand.SetVisuals(tr("&Redo"), tr("Redo"), tr("Redo last document changes"), QIcon(":/Icons/Redo"));
 
 	m_undoCommand.setShortcut(Qt::CTRL + Qt::Key_Z);
-	m_redoCommand.setShortcut(Qt::CTRL + Qt::SHIFT + Qt::Key_Z);
+	m_redoCommand.setShortcut(int(Qt::CTRL) + int(Qt::SHIFT) + Qt::Key_Z);
 
 	m_undoCommand.setVisible(false);
 	m_redoCommand.setVisible(false);

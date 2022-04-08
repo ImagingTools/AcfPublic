@@ -56,7 +56,8 @@ int CModelBase::GetObserverCount() const
 
 CModelBase::Observers CModelBase::GetObservers() const
 {
-	return m_observers.keys().toSet();
+	QList<IObserver*> keys  = m_observers.keys();
+	return QSet<IObserver*>(keys.begin(), keys.end());
 }
 
 

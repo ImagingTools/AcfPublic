@@ -276,7 +276,11 @@ QModelIndex CHierarchicalHeaderView::FindChild(const QModelIndex& curentIndex, i
 		int childCount = curentIndex.model()->columnCount(curentIndex);
 		if (childCount){
 			for (int i = 0; i < childCount; ++i){
-				QModelIndex res(FindChild(curentIndex.child(0, i), sectionIndex, curentChildIndex));
+				const QAbstractItemModel *const model = curentIndex.model();
+				if (model == nullptr){
+					return QModelIndex();
+				}
+				QModelIndex res(FindChild(model->index(0,i,curentIndex), sectionIndex, curentChildIndex));
 				if (res.isValid()){
 					return res;
 				}
@@ -318,10 +322,14 @@ QModelIndexList CHierarchicalHeaderView::SearchChilds(const QModelIndex& curentI
 {
 	QModelIndexList res;
 	if (curentIndex.isValid()){
-		int childCount = curentIndex.model()->columnCount(curentIndex);
+		const QAbstractItemModel *const model = curentIndex.model();
+		if (model == nullptr){
+			return res;
+		}
+		int childCount = model->columnCount(curentIndex);
 		if (childCount){
 			for (int childIndex = 0; childIndex < childCount; ++childIndex){
-				res += SearchChilds(curentIndex.child(0, childIndex));
+				res += SearchChilds(model->index(0, childIndex, curentIndex));
 			}
 		}
 		else{
@@ -337,9 +345,13 @@ QModelIndexList CHierarchicalHeaderView::GetChilds(const QModelIndex& searchedIn
 {
 	QModelIndexList childs;
 	if (searchedIndex.isValid()){
-		int childCount = searchedIndex.model()->columnCount(searchedIndex);
+		const QAbstractItemModel *const model = searchedIndex.model();
+		if (model == nullptr){
+			return childs;
+		}
+		int childCount = model->columnCount(searchedIndex);
 		for (int i = 0; i < childCount; ++i){
-			childs += SearchChilds(searchedIndex.child(0, i));
+			childs += SearchChilds(model->index(0, i, searchedIndex));
 		}
 	}
 
@@ -484,9 +496,9 @@ int CHierarchicalHeaderView::PaintHorizontalCell(
 	if (cellIndex.data(Qt::UserRole).isValid())
 	{
 		headerViewPtr->style()->drawControl(QStyle::CE_HeaderSection, &uniopt, painter, headerViewPtr);
-		QMatrix m;
+		QTransform m;
 		m.rotate(-90);
-		painter->setWorldMatrix(m, true);
+		painter->setWorldTransform(m, true);
 		QRect new_r(0, 0,  r.height(), r.width());
 		new_r.moveCenter(QPoint(-r.center().y(), r.center().x()));
 		uniopt.rect = new_r;
@@ -569,9 +581,9 @@ int CHierarchicalHeaderView::PaintVerticalCell(
 
 	if (cellIndex.data(Qt::UserRole).isValid()){
 		headerViewPtr->style()->drawControl(QStyle::CE_HeaderSection, &uniopt, painter, headerViewPtr);
-		QMatrix m;
+		QTransform m;
 		m.rotate(-90);
-		painter->setWorldMatrix(m, true);
+		painter->setWorldTransform(m, true);
 		QRect new_r(0, 0,  r.height(), r.width());
 		new_r.moveCenter(QPoint(-r.center().y(), r.center().x()));
 		uniopt.rect = new_r;

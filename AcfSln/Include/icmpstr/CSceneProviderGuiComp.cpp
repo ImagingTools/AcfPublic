@@ -208,7 +208,7 @@ bool CSceneProviderGuiComp::SetFullScreenMode(bool fullScreenMode)
 		if (m_isFullScreenMode != SceneView->isFullScreen()){
 			if (m_isFullScreenMode){
 				m_savedParentWidgetPtr = SceneView->parentWidget();
-				m_savedViewTransform = SceneView->matrix();
+				m_savedViewTransform = SceneView->transform();
 				SceneView->setParent(NULL);
 
 				SceneView->showFullScreen();
@@ -225,7 +225,7 @@ bool CSceneProviderGuiComp::SetFullScreenMode(bool fullScreenMode)
 
 				m_savedParentWidgetPtr = NULL;
 
-				SceneView->setMatrix(m_savedViewTransform);
+				SceneView->setTransform(m_savedViewTransform);
 			}
 		}
 	}
@@ -236,7 +236,7 @@ bool CSceneProviderGuiComp::SetFullScreenMode(bool fullScreenMode)
 
 double CSceneProviderGuiComp::GetScale() const
 {
-	QMatrix currentMatrix = SceneView->matrix();
+	QTransform currentMatrix = SceneView->transform();
 
 #if QT_VERSION < 0x050000
 	double currentScale = sqrt(currentMatrix.det());
@@ -259,13 +259,13 @@ bool CSceneProviderGuiComp::SetScale(int scaleMode, double scaleFactor)
 
 	double currentScale = GetScale();
 
-	QMatrix newMatrix;
+	QTransform newMatrix;
 	newMatrix.scale(scaleFactor / currentScale, scaleFactor/ currentScale);
 
-	QMatrix currentMatrix = SceneView->matrix();
+	QTransform currentMatrix = SceneView->transform();
 	currentMatrix *= newMatrix;
 
-	SceneView->setMatrix(currentMatrix);
+	SceneView->setTransform(currentMatrix);
 
 	m_isZoomIgnored = true;
 
@@ -380,11 +380,11 @@ void CSceneProviderGuiComp::SetFittedScale(FitMode mode)
 		scaleY = newScale;
 	}
 
-	QMatrix fitMatrix;
+	QTransform fitMatrix;
 	fitMatrix.scale(scaleX, scaleY);
 	fitMatrix.translate(-sceneRect.left(), -sceneRect.top());
 
-	SceneView->setMatrix(fitMatrix);
+	SceneView->setTransform(fitMatrix);
 }
 
 
@@ -616,10 +616,10 @@ void CSceneProviderGuiComp::OnPrint()
 
 	QRectF sceneRect = m_scenePtr->sceneRect();
 	if (sceneRect.width() <= sceneRect.height()){
-		printer.setOrientation(QPrinter::Portrait);
+		printer.setPageOrientation(QPageLayout::Portrait);
 	}
 	else{
-		printer.setOrientation(QPrinter::Landscape);
+		printer.setPageOrientation(QPageLayout::Landscape);
 	}
 
 	QPrintDialog printerDialog(&printer, GetQtWidget());
@@ -657,7 +657,7 @@ void CSceneProviderGuiComp::OnFitToShapes()
 {
 	SceneView->showNormal();
 
-	double r = SceneView->matrix().m11();
+	double r = SceneView->transform().m11();
 	QRectF sceneRect = SceneView->sceneRect();
 	SceneView->resize(int(sceneRect.width() * r), int(sceneRect.height() * r));
 }

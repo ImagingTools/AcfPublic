@@ -98,7 +98,7 @@ private:
 
 	istd::IChangeable::ChangeSet m_observedIds;
 
-	mutable QMutex m_mutex;
+	mutable QRecursiveMutex m_mutex;
 };
 
 

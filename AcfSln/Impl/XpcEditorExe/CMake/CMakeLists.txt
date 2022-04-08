@@ -21,9 +21,9 @@ include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)
 
-target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
-
 find_package("Qt${QT_VERSION_MAJOR}" COMPONENTS PrintSupport REQUIRED)
-target_link_libraries(${PROJECT_NAME} Qt5::PrintSupport)
+
+target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr AcfSlnLoc)
+target_link_libraries(${PROJECT_NAME} Qt${QT_VERSION_MAJOR}::PrintSupport)
 
 

@@ -234,7 +234,7 @@ void CXpcEditorComp::PickFileNameForLineEdit(
 {
 	QFileDialog dialog;
 	if (SelectDirectories){
-		dialog.setFileMode(QFileDialog::DirectoryOnly);
+		dialog.setFileMode(QFileDialog::Directory);
 		dialog.setOption(QFileDialog::ShowDirsOnly);
 	}
 	else{

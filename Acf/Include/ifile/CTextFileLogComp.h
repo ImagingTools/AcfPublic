@@ -117,7 +117,7 @@ private:
 
 	FilePathObserver m_filePathObserver;
 
-	QMutex m_mutex;
+	QRecursiveMutex m_mutex;
 	int m_lastDay;
 };
 

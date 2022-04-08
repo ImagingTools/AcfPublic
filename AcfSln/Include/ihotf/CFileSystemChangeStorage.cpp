@@ -37,7 +37,7 @@ namespace ihotf
 // public methods
 
 CFileSystemChangeStorage::CFileSystemChangeStorage()
-	:m_mutex(QMutex::Recursive)
+	:m_mutex()
 {
 }
 

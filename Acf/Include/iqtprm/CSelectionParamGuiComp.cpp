@@ -271,7 +271,7 @@ void CSelectionParamGuiComp::OnFilterTextEdited(const QString& text)
 				// some recover special symbols in string, may be should add another translate for special symbols
 				stringFilter.replace("*", ".*");
 				modelPtr->blockSignals(true);
-				modelPtr->setFilterRegExp(QRegExp(stringFilter, Qt::CaseInsensitive));
+				modelPtr->setFilterRegularExpression(QRegularExpression(stringFilter, QRegularExpression::CaseInsensitiveOption));
 				modelPtr->blockSignals(false);
 			}
 		}
@@ -287,7 +287,7 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 	if (mainLayoutPtr == NULL){
 		mainLayoutPtr = new QHBoxLayout(SelectionFrame);
 
-		mainLayoutPtr->setMargin(0);
+		mainLayoutPtr->setContentsMargins(0,0,0,0);
 	}
 
 	int switchIndex = 0;
@@ -385,7 +385,7 @@ void CSelectionParamGuiComp::UpdateRadioButtonView()
 			mainLayoutPtr = new QVBoxLayout(SelectionFrame);
 		}
 
-		mainLayoutPtr->setMargin(0);
+		mainLayoutPtr->setContentsMargins(0,0,0,0);
 
 		m_radioButtonFramePtr = new QFrame(SelectionFrame);
 		m_radioButtonFramePtr->setFrameShape(QFrame::NoFrame);
@@ -523,7 +523,7 @@ void CSelectionParamGuiComp::UpdateSelectorLabel()
 			if (m_labelAlignAttrPtr.IsValid()){
 				int align = *m_labelAlignAttrPtr;
 				if (align >= LA_LEFT_TOP && align <= LA_RIGHT_BOTTOM){
-					Qt::Alignment qtAlign = 0;
+					Qt::Alignment qtAlign = Qt::Alignment(0);
 
 					switch (align){
 					case LA_LEFT_TOP:	
@@ -669,7 +669,7 @@ CSelectionParamGuiComp::RadioButtonWidget::RadioButtonWidget(
 	setFrameShape(QFrame::NoFrame);
 
 	QVBoxLayout* mainLayoutPtr = new QVBoxLayout(this);
-	mainLayoutPtr->setMargin(0);
+	mainLayoutPtr->setContentsMargins(0,0,0,0);
 
 	// Radio button
 	m_radioButtonPtr = new QRadioButton(this);
@@ -682,7 +682,7 @@ CSelectionParamGuiComp::RadioButtonWidget::RadioButtonWidget(
 		// Description [Icon Text]
 		QFrame* descriptionFramePtr = new QFrame(this);
 		QHBoxLayout* descriptionFrameLayoutPtr = new QHBoxLayout(descriptionFramePtr);
-		descriptionFrameLayoutPtr->setMargin(0);
+		descriptionFrameLayoutPtr->setContentsMargins(0,0,0,0);
 
 		QLabel* infoIconLabelPtr = new QLabel(descriptionFramePtr);
 		infoIconLabelPtr->setPixmap(infoIcon);

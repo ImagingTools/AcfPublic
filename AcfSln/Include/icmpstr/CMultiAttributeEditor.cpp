@@ -128,7 +128,7 @@ void CMultiAttributeEditor::OnItemRemove()
 
 		delete itemPtr;
 
-		m_dialog.AttributeValuesTree->setItemSelected(m_dialog.AttributeValuesTree->item(qMax(rowIndex - 1, 0)), true);
+		m_dialog.AttributeValuesTree->item(qMax(rowIndex - 1, 0))->setSelected(true);
 	}
 
 	UpdateButtonStates();
@@ -148,7 +148,7 @@ void CMultiAttributeEditor::OnItemMoveUp()
 
 		m_dialog.AttributeValuesTree->insertItem(rowIndex - 1, itemPtr);
 
-		m_dialog.AttributeValuesTree->setItemSelected(itemPtr, true);
+		itemPtr->setSelected(true);
 	}
 }
 
@@ -166,7 +166,7 @@ void CMultiAttributeEditor::OnItemMoveDown()
 
 		m_dialog.AttributeValuesTree->insertItem(rowIndex + 1, itemPtr);
 
-		m_dialog.AttributeValuesTree->setItemSelected(itemPtr, true);
+		itemPtr->setSelected(true);
 	}
 }
 
@@ -402,8 +402,8 @@ void CMultiAttributeEditor::ValueItemDelegate::setEditorData(QWidget* editor, co
 							*registryPtr,
 							queryFlags);
 
-				QList< QByteArray> compatIdList = compatIds.toList();	
-				qSort(compatIdList);
+				QList< QByteArray> compatIdList(compatIds.begin(), compatIds.end());
+				std::sort(compatIdList.begin(), compatIdList.end());
 				
 				for(		QList< QByteArray>::const_iterator iter = compatIdList.begin();
 							iter != compatIdList.end();

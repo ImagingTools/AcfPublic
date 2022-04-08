@@ -41,7 +41,6 @@ add_subdirectory("${INCLUDE_DIR}/ihotf/CMake" "${AUX_INCLUDE_DIR}/ihotf")
 add_subdirectory("${INCLUDE_DIR}/ihotfgui/CMake" "${AUX_INCLUDE_DIR}/ihotfgui")
 add_subdirectory("${INCLUDE_DIR}/imeas/CMake" "${AUX_INCLUDE_DIR}/imeas")
 add_subdirectory("${INCLUDE_DIR}/iqtmeas/CMake" "${AUX_INCLUDE_DIR}/iqtmeas")
-add_subdirectory("${INCLUDE_DIR}/iqtex/CMake" "${AUX_INCLUDE_DIR}/iqtex")
 add_subdirectory("${INCLUDE_DIR}/iqtmm/CMake" "${AUX_INCLUDE_DIR}/iqtmm")
 add_subdirectory("${INCLUDE_DIR}/icalib/CMake" "${AUX_INCLUDE_DIR}/icalib")
 
@@ -73,6 +72,9 @@ add_subdirectory("${INCLUDE_DIR}/iblob/CMake" "${AUX_INCLUDE_DIR}/iblob")
 add_subdirectory("${INCLUDE_DIR}/iblobgui/CMake" "${AUX_INCLUDE_DIR}/iblobgui")
 add_subdirectory("${INCLUDE_DIR}/iservice/CMake" "${AUX_INCLUDE_DIR}/iservice")
 
+if(QT_VERSION_MAJOR EQUAL 5)
+	add_subdirectory("${INCLUDE_DIR}/iqtex/CMake" "${AUX_INCLUDE_DIR}/iqtex")
+endif()
 
 # Impl
 if (NOT ANDROID)
@@ -96,7 +98,11 @@ add_subdirectory("${IMPL_DIR}/WizardPck/CMake" "${AUX_INCLUDE_DIR}/WizardPck")
 add_subdirectory("${IMPL_DIR}/QtAuthorizationPck/CMake" "${AUX_INCLUDE_DIR}/QtAuthorizationPck")
 add_subdirectory("${IMPL_DIR}/QtCameraPck/CMake" "${AUX_INCLUDE_DIR}/QtCameraPck")
 add_subdirectory("${IMPL_DIR}/CalibrationGuiPck/CMake" "${AUX_INCLUDE_DIR}/CalibrationGuiPck")
-add_subdirectory("${IMPL_DIR}/QtExPck/CMake" "${AUX_INCLUDE_DIR}/QtExPck")
+
+if(QT_VERSION_MAJOR EQUAL 5)
+	add_subdirectory("${IMPL_DIR}/QtExPck/CMake" "${AUX_INCLUDE_DIR}/QtExPck")
+endif()
+
 add_subdirectory("${IMPL_DIR}/QtInspectionPck/CMake" "${AUX_INCLUDE_DIR}/QtInspectionPck")
 add_subdirectory("${IMPL_DIR}/QtIprPck/CMake" "${AUX_INCLUDE_DIR}/QtIprPck")
 add_subdirectory("${IMPL_DIR}/QtMeasPck/CMake" "${AUX_INCLUDE_DIR}/QtMeasPck")

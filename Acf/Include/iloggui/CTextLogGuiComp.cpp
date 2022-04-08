@@ -120,7 +120,7 @@ void CTextLogGuiComp::UpdateFilters()
 		}
 
 		if (!sources.isEmpty()){
-			SourceFilterCB->addItems(sources.toList());
+			SourceFilterCB->addItems(QStringList(sources.begin(), sources.end()));
 		}
 	}
 }
