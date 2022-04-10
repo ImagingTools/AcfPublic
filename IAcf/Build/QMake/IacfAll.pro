@@ -19,14 +19,18 @@ win32{
 		}
 	}
 
-	SUBDIRS += iqaxmm
+lessThan(QT_MAJOR_VERSION, 6){
+    SUBDIRS += iqaxmm
 	iqaxmm.file = ../../Include/iqaxmm/QMake/iqaxmm.pro
 
-	SUBDIRS += iqwt
+    SUBDIRS += iqwt
 	iqwt.file = ../../Include/iqwt/QMake/iqwt.pro
 
-	SUBDIRS += iqwt3d
+    SUBDIRS += iqwt3d
 	iqwt3d.file = ../../Include/iqwt3d/QMake/iqwt3d.pro
+	}
+
+
 
 	SUBDIRS += iwin
 	iwin.file = ../../Include/iwin/QMake/iwin.pro
@@ -72,8 +76,10 @@ win32{
 		}
 	}
 
-	SUBDIRS += QwtPck
+lessThan(QT_MAJOR_VERSION, 6){
+    SUBDIRS += QwtPck
 	QwtPck.file = ../../Impl/QwtPck/QMake/QwtPck.pro
+	}
 
 	SUBDIRS += WinPck
 	WinPck.file = ../../Impl/WinPck/QMake/WinPck.pro
@@ -84,8 +90,10 @@ win32{
 	}
 
 	win32-msvc2005 | win32-msvc2008{
+	lessThan(QT_MAJOR_VERSION, 6){
 		SUBDIRS += QaxPck
 		QaxPck.file = ../../Impl/QaxPck/QMake/QaxPck.pro
+		}
 
 #		SUBDIRS += CboxPck
 #		CboxPck.file = ../../Impl/CboxPck/QMake/CboxPck.pro

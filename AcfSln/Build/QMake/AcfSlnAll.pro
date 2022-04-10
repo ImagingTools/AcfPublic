@@ -30,8 +30,10 @@ imeas.file = ../../Include/imeas/QMake/imeas.pro
 SUBDIRS += iqtmeas
 iqtmeas.file = ../../Include/iqtmeas/QMake/iqtmeas.pro
 
-SUBDIRS += iqtex
-iqtex.file = ../../Include/iqtex/QMake/iqtex.pro
+lessThan(QT_MAJOR_VERSION, 6){
+    SUBDIRS += iqtex
+	iqtex.file = ../../Include/iqtex/QMake/iqtex.pro
+}
 
 SUBDIRS += iqtmm
 iqtmm.file = ../../Include/iqtmm/QMake/iqtmm.pro
@@ -197,10 +199,11 @@ AcfSlnLoc.file = ../../Impl/AcfSlnLoc/QMake/AcfSlnLoc.pro
 	CalibrationGuiPck.file = ../../Impl/CalibrationGuiPck/QMake/CalibrationGuiPck.pro
 	CalibrationGuiPck.depends = icalib icalibgui
 
-	SUBDIRS += QtExPck
+lessThan(QT_MAJOR_VERSION, 6){
+    SUBDIRS += QtExPck
 	QtExPck.file = ../../Impl/QtExPck/QMake/QtExPck.pro
 	QtExPck.depends = iqtext
-
+}
 	SUBDIRS += QtInspectionPck
 	QtInspectionPck.file = ../../Impl/QtInspectionPck/QMake/QtInspectionPck.pro
 	QtInspectionPck.depends = iinsp iqtinsp

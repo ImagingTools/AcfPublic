@@ -216,16 +216,17 @@ macx{
 		DEFINES += "PLATFORM_CODE=arm64"
 	}
 }
-linux ! macx ! android{
-	DEFINES += "PLATFORM_CODE=x64"
-	*-clang*{
-		DEFINES += "COMPILER_NAME=ClangLinux"
-	}
-	else{
-		DEFINES += "COMPILER_NAME=GCCLinux"
-		COMPILER_NAME = GCCLinux
-	}
-}
+
+#linux ! macx ! android{
+#    DEFINES += "PLATFORM_CODE=x64"
+#	*-clang*{
+#	    DEFINES += "COMPILER_NAME=ClangLinux"
+#	}
+#	else{
+#	    DEFINES += "COMPILER_NAME=GCCLinux"
+#		COMPILER_NAME = GCCLinux
+#	}
+#}
 
 
 

@@ -1,28 +1,32 @@
-
-if(WIN32)
-    set(ARX_COMPILER "Arxc.exe")
-    set(ACF_TOOL "Acf.exe")
-    set(QMAKE_RCC "rcc.exe")
-    set(COPY_FILE "copy")
+string(FIND "$ENV{ARXCHOST}" "VC" POSITION_OF_VC)
+if (WIN32 OR (${POSITION_OF_VC} EQUAL 0))
+	set(ARX_COMPILER "Arxc.exe")
+	set(ACF_TOOL "Acf.exe")
+	set(QMAKE_RCC "rcc.exe")
+	set(COPY_FILE "copy")
 	set(QMAKE_LRELEASE "lrelease.exe")
 else()
-    set(ARX_COMPILER "Arxc")
-    set(ACF_TOOL "Acf")
-    set(QMAKE_RCC "rcc")
-    set(COPY_FILE "cp")
+	set(ARX_COMPILER "Arxc")
+	set(ACF_TOOL "Acf")
+	set(QMAKE_RCC "rcc")
+	set(COPY_FILE "cp")
 	set(QMAKE_LRELEASE "lrelease")
 endif()
 
 set(PROJECT_BINARY_DIR ${AUX_INCLUDE_DIR}/${PROJECT_NAME})
 
 set(ACFTOOLS "$ENV{ACFDIR}/../AcfTools")
-
-set(ARXCBIN "${ACFDIR}/Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}/${ARX_COMPILER}")
-set(ACFBIN "${ACFDIR}/Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}/${ACF_TOOL}")
-
 get_filename_component(ARXC_FILES_NAME "${ARXC_FILES}" NAME_WE)
-
 set(ARXC_OUTFILE_NAME C${ARXC_FILES_NAME}.cpp)
+
+if(ANDROID)
+	set(ARXCBIN "${ACFDIR}/Bin/${CMAKE_BUILD_TYPE}$ENV{ARXCHOST}/${ARX_COMPILER}")
+	set(ACFBIN "${ACFDIR}/Bin/${CMAKE_BUILD_TYPE}$ENV{ARXCHOST}/${ACF_TOOL}")
+	set(ARXC_OUTFILE_NAME ${PROJECT_BINARY_DIR}/C${ARXC_FILES_NAME}.cpp)
+else()
+	set(ARXCBIN "${ACFDIR}/Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}/${ARX_COMPILER}")
+	set(ACFBIN "${ACFDIR}/Bin/${CMAKE_BUILD_TYPE}${TARGETNAME}/${ACF_TOOL}")
+endif()
 
 # collecting additional deps for ARX
 set(ARX_DEPS_LIST)
@@ -30,18 +34,18 @@ if(ARXC_CONFIG AND NOT ARX_DISABLE_GENERATE_DEPENDENCIES_LIST)
 	set(ARX_DEPS_FILE_PATH "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/ArxDependsList.txt")
 	set(ARX_ERRORS_FILE_PATH "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/ArxDependsList_errors.txt")
 
-	message("Collectiong ARX dependences for ${PROJECT_NAME}")
+	message("Collectiong ARX dependences for ${PROJECT_NAME} ${ARXCBIN} TEST $ENV{ARXCHOST}")
 	
 	execute_process(
 		COMMAND
-			${ARXCBIN} ${ARXC_FILES} -mode depends -config ${ARXC_CONFIG} -conf_name ${TARGETNAME} -env_vars ${ENV_VARS}
+		${ARXCBIN} ${ARXC_FILES} -mode depends -config ${ARXC_CONFIG} -conf_name ${TARGETNAME} -env_vars ${ENV_VARS}
 		OUTPUT_FILE
-			${ARX_DEPS_FILE_PATH}
+		${ARX_DEPS_FILE_PATH}
 		ERROR_FILE
-			${ARX_ERRORS_FILE_PATH}
+		${ARX_ERRORS_FILE_PATH}
 		RESULT_VARIABLE
-			ARX_DEPS_GENERATION_RESULT_CODE
-	)
+		ARX_DEPS_GENERATION_RESULT_CODE
+		)
 
 	if(NOT ARX_DEPS_GENERATION_RESULT_CODE EQUAL 0)
 		message("!!! ARX Cannot to create dependens")
@@ -66,6 +70,7 @@ add_custom_command(OUTPUT ${ARXC_OUTFILE_NAME}
 set(HEADER_FILE_AUX "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/C${ARXC_FILES_NAME}.h")
 set(SOURCES_FILE_AUX "${AUX_INCLUDE_DIR}/${PROJECT_NAME}/C${ARXC_FILES_NAME}.cpp")
 
+message("ARXCBIN ${ARXCBIN} ${ARXC_FILES} -o ${ARXC_OUTFILE_NAME} -config ${ARXC_CONFIG} -conf_name ${TARGETNAME} -env_vars ${ENV_VARS} -v")
 
 if(WIN32)
 	if(ACF_CONVERT_FILES)
