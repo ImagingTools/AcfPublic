@@ -27,7 +27,7 @@
 #include <QtNetwork/QTcpSocket>
 #include <QtCore/QTimer>
 #include <QtCore/QThread>
-#include <QtCore/QRecursiveMutex>
+#include <QtCore/QMutex>
 
 // ACF includes
 #include <iprm/IParamsSet.h>
@@ -113,7 +113,12 @@ private:
 	quint16 m_port;
 	QByteArray m_dataReceived;
 	QByteArray m_dataToSent;
-	QRecursiveMutex m_lock;
+
+#if QT_VERSION >= 0x060000
+	mutable QRecursiveMutex m_mutex;
+#else
+	mutable QMutex m_mutex;
+#endif
 
 	typedef QSet<icomm::IHostConnection::Handler*> ConnectionHandlers;
 	ConnectionHandlers m_handlers;

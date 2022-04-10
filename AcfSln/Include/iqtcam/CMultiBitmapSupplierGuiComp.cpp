@@ -314,7 +314,14 @@ void CMultiBitmapSupplierGuiComp::SelectBitmap(int bitmapIndex)
 
 	const ShapesMap& shapesMap = GetShapesMap();
 	QList<iqt2d::IViewProvider*> keys = shapesMap.keys();
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
 	QSet<iqt2d::IViewProvider*> views(keys.begin(), keys.end());
+
+#else
+	QSet<iqt2d::IViewProvider*> views = keys.toSet();
+#endif
+
 	for (QSet<iqt2d::IViewProvider*>::ConstIterator viewIter = views.begin();
 			viewIter != views.end();
 			++viewIter){

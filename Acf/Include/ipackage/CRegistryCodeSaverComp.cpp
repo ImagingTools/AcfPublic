@@ -674,7 +674,12 @@ bool CRegistryCodeSaverComp::WriteIncludes(
 		stream << "\n";
 		stream << "// ACF component includes" << "\n";
 
+#if QT_VERSION > QT_VERSION_CHECK(5, 15, 0)
 		QList<QByteArray> sortedList(packageIds.begin(), packageIds.end());
+#else
+		QList<QByteArray> sortedList  = packageIds.toList();
+#endif
+
 		std::sort(sortedList.begin(), sortedList.end());
 
 		for (		QList<QByteArray>::ConstIterator packageIter = sortedList.constBegin();
@@ -1012,7 +1017,11 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 	}
 
 	if (!composedAddresses.isEmpty() && !realAddresses.isEmpty()){
+#if QT_VERSION > QT_VERSION_CHECK(5, 15, 0)
 		QList<icomp::CComponentAddress> sortedComponentAdresses(composedAddresses.begin(), composedAddresses.end());
+#else
+		QList<icomp::CComponentAddress> sortedComponentAdresses = composedAddresses.toList();
+#endif
 		std::sort(sortedComponentAdresses.begin(), sortedComponentAdresses.end());
 
 		for (		QList<icomp::CComponentAddress>::const_iterator addressIter = sortedComponentAdresses.constBegin();
@@ -1046,7 +1055,11 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 			packageIdsList.insert(address.GetPackageId());
 		}
 
+#if QT_VERSION > QT_VERSION_CHECK(5, 15, 0)
 		QList<QByteArray> sortedPackageIdsList(packageIdsList.begin(), packageIdsList.end());
+#else
+		QList<QByteArray> sortedPackageIdsList = packageIdsList.toList();
+#endif
 		std::sort(sortedPackageIdsList.begin(), sortedPackageIdsList.end());
 
 		for (		QList<QByteArray>::const_iterator packageIter = sortedPackageIdsList.begin();
@@ -1067,7 +1080,11 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 	if (m_extPackagesManagerCompPtr.IsValid()){
 		icomp::IExtPackagesManager::PathList configFilesList = m_extPackagesManagerCompPtr->GetConfigurationPathList(icomp::IExtPackagesManager::PT_CONFIG);
 
-		QStringList sortedConfigFilesList(configFilesList.begin(), configFilesList.end());
+#if QT_VERSION > QT_VERSION_CHECK(5, 15, 0)
+		QList<QString> sortedConfigFilesList(configFilesList.begin(), configFilesList.end());
+#else
+		QList<QString> sortedConfigFilesList = configFilesList.toList();
+#endif
 		std::sort(sortedConfigFilesList.begin(), sortedConfigFilesList.end());
 
 		for (		QStringList::const_iterator pathIter = sortedConfigFilesList.constBegin();

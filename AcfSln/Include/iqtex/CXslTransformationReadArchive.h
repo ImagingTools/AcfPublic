@@ -24,6 +24,8 @@
 #define iqtex_CXslTransformationReadArchive_included
 
 
+#if QT_VERSION < 0x060000
+
 // Qt includes
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomNode>
@@ -82,6 +84,8 @@ private:
 
 } // namespace iqtex
 
+
+#endif // Qt5
 
 #endif // !iqtex_CXslTransformationReadArchive_included
 

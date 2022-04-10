@@ -1478,8 +1478,12 @@ bool CAttributeEditorComp::EncodeAttribute(
 	}
 	// set multiple reference data
 	else if ((attributeStatMeaning == AM_MULTI_REFERENCE) || (attributeStatMeaning == AM_MULTI_FACTORY)){
-		QStringList references = text.split(';', Qt::SkipEmptyParts);
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+		QStringList references = text.split(';', Qt::SkipEmptyParts);
+#else
+		QStringList references = text.split(';', QString::SkipEmptyParts);
+#endif
 		iattr::TMultiAttribute<QByteArray>* multiReferenceAttributePtr = dynamic_cast<iattr::TMultiAttribute<QByteArray>*>(&result);
 
 		if (multiReferenceAttributePtr != NULL){
@@ -1648,7 +1652,12 @@ void CAttributeEditorComp::CreateInterfacesTree(
 
 		if (includeSubelement){
 			const icomp::IElementStaticInfo::Ids subcomponentIds = infoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_SUBELEMENTS);
-			QList<QByteArray> sortedSubcomponentIds(subcomponentIds.begin(), subcomponentIds.end());
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+			QList< QByteArray> sortedSubcomponentIds(subcomponentIds.begin(), subcomponentIds.end());
+#else
+			QList<QByteArray> sortedSubcomponentIds = subcomponentIds.toList();
+#endif
 			std::sort(sortedSubcomponentIds.begin(), sortedSubcomponentIds.end());
 
 			for (		QList<QByteArray>::ConstIterator subIter = sortedSubcomponentIds.constBegin();
@@ -1776,7 +1785,12 @@ void CAttributeEditorComp::CreateExportedComponentsTree(
 
 	if (elementMetaInfoPtr != NULL){
 		const icomp::IElementStaticInfo::Ids subcomponentIds = elementMetaInfoPtr->GetMetaIds(icomp::IComponentStaticInfo::MGI_SUBELEMENTS);
-		QList<QByteArray> sortedSubcomponentIds(subcomponentIds.begin(), subcomponentIds.end());
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
+		QList< QByteArray> sortedSubcomponentIds(subcomponentIds.begin(), subcomponentIds.end());
+#else
+		QList<QByteArray> sortedSubcomponentIds = subcomponentIds.toList();
+#endif
 		std::sort(sortedSubcomponentIds.begin(), sortedSubcomponentIds.end());
 
 		for (		QList<QByteArray>::ConstIterator subIter = sortedSubcomponentIds.constBegin();
@@ -2216,7 +2230,11 @@ bool CAttributeEditorComp::AttributeItemDelegate::SetAttributeValueEditor(
 							*registryPtr,
 							queryFlags);
 
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
 				QList< QByteArray> compatIdList(compatIds.begin(), compatIds.end());
+#else
+				QList<QByteArray> compatIdList = compatIds.toList();
+#endif
 				std::sort(compatIdList.begin(), compatIdList.end());
 
 				for(		QList< QByteArray>::ConstIterator iter = compatIdList.constBegin();

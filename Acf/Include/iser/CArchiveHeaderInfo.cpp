@@ -145,7 +145,13 @@ bool CArchiveHeaderInfo::WriteArchiveHeader(IArchive& archive, const IVersionInf
 
 	retVal = retVal && archive.BeginMultiTag(s_versionInfosTag, s_versionInfoTag, versionIdsCount);
 
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
 	QList<int> sortedIds(ids.begin(), ids.end());
+#else
+	QList<int> sortedIds = ids.toList();
+#endif
+
 	std::sort(sortedIds.begin(), sortedIds.end());
 
 	for (		QList<int>::iterator iter = sortedIds.begin();
@@ -191,8 +197,13 @@ bool CArchiveHeaderInfo::WriteArchiveHeader(IArchive& archive, const IVersionInf
 
 CArchiveHeaderInfo::VersionIds CArchiveHeaderInfo::GetVersionIds() const
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
 	QList<int> keys  = m_versionIdList.keys();
+
 	return QSet<int>(keys.begin(), keys.end());
+#else
+	return m_versionIdList.keys().toSet();
+#endif
 }
 
 

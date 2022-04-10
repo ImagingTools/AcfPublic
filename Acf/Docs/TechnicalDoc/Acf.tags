@@ -953,15 +953,6 @@
     <namespace>ibase</namespace>
   </compound>
   <compound kind="file">
-    <name>TComposedFactoryComp.h</name>
-    <path>C:/Temp/Acf/Include/ibase/</path>
-    <filename>_t_composed_factory_comp_8h.html</filename>
-    <includes id="_t_composed_factory_8h" name="TComposedFactory.h" local="no" imported="no">istd/TComposedFactory.h</includes>
-    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
-    <class kind="class">ibase::TComposedFactoryComp</class>
-    <namespace>ibase</namespace>
-  </compound>
-  <compound kind="file">
     <name>TContainer.h</name>
     <path>C:/Temp/Acf/Include/ibase/</path>
     <filename>_t_container_8h.html</filename>
@@ -5173,6 +5164,7 @@
     <includes id="_i_application_info_8h" name="IApplicationInfo.h" local="no" imported="no">ibase/IApplicationInfo.h</includes>
     <includes id="_t_designer_gui_comp_base_8h" name="TDesignerGuiCompBase.h" local="no" imported="no">iqtgui/TDesignerGuiCompBase.h</includes>
     <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
+    <class kind="class">iqtgui::CSplashScreenCustom</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -6255,7 +6247,7 @@
     <path>C:/Temp/Acf/Include/istd/</path>
     <filename>_t_composed_factory_8h.html</filename>
     <includes id="_t_i_factory_8h" name="TIFactory.h" local="no" imported="no">istd/TIFactory.h</includes>
-    <includes id="_t_opt_del_ptr_8h" name="TOptDelPtr.h" local="no" imported="no">istd/TOptDelPtr.h</includes>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
     <class kind="class">istd::TComposedFactory</class>
     <namespace>istd</namespace>
   </compound>
@@ -42136,15 +42128,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::CSplashScreenCustom</name>
+    <filename>classiqtgui_1_1_c_splash_screen_custom.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CSplashScreenCustom</name>
+      <anchorfile>classiqtgui_1_1_c_splash_screen_custom.html</anchorfile>
+      <anchor>a8e4105c72be200e2e9d1dae9913edc86</anchor>
+      <arglist>(QWidget *parent=nullptr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtgui::CSplashScreenGuiComp</name>
     <filename>classiqtgui_1_1_c_splash_screen_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, QSplashScreen &gt;</base>
+    <base>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, CSplashScreenCustom &gt;</base>
     <base virtualness="virtual">ilog::IMessageConsumer</base>
     <member kind="typedef">
-      <type>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, QSplashScreen &gt;</type>
+      <type>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, CSplashScreenCustom &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_splash_screen_gui_comp.html</anchorfile>
-      <anchor>a725e53333e4763da0d411225c8966833</anchor>
+      <anchor>aa04a8a9549538534b990e6f34c2dcdc8</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -50607,10 +50610,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef">
-      <type>QMap&lt; QByteArray, QVariant &gt;</type>
+      <type>QMultiMap&lt; QByteArray, QVariant &gt;</type>
       <name>ChangeInfoMap</name>
       <anchorfile>classistd_1_1_i_changeable.html</anchorfile>
-      <anchor>ae848f330e21fdad4f0e2d2393d678038</anchor>
+      <anchor>a8121963054905773711fb85fccf87490</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -62759,8 +62762,8 @@
       <type>bool</type>
       <name>RegisterFactory</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>ac7983de55ffa7ee52fb802052f36fd03</anchor>
-      <arglist>(FactoryInterface *factoryPtr, bool releaseFlag=false)</arglist>
+      <anchor>aeca392e24efca3d65d4e4794dfa14125</anchor>
+      <arglist>(const QByteArray &amp;typeId)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IFactoryInfo::KeyList</type>
@@ -62777,10 +62780,10 @@
       <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>istd::TOptDelPtr&lt; FactoryInterface &gt;</type>
+      <type>istd::TSmartPtr&lt; FactoryInterface &gt;</type>
       <name>FactoryPtr</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>a6b8f54351be42b9c1ae13400d5a6d274</anchor>
+      <anchor>a8af777e93b498dd9ab6ed015d88025b2</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
@@ -62796,88 +62799,6 @@
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
       <anchor>afa44671fdccb37ee8d1fd287a9632f0c</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TComposedFactory&lt; Interface &gt;</name>
-    <filename>classistd_1_1_t_composed_factory.html</filename>
-    <base virtualness="virtual">istd::TIFactory</base>
-    <member kind="typedef">
-      <type>TIFactory&lt; Interface &gt;</type>
-      <name>FactoryInterface</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>a13696347c79fff4a75fdca6bbf80de00</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>RegisterFactory</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>ac7983de55ffa7ee52fb802052f36fd03</anchor>
-      <arglist>(FactoryInterface *factoryPtr, bool releaseFlag=false)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual IFactoryInfo::KeyList</type>
-      <name>GetFactoryKeys</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>a93694495e2ebeef4cc3e8470e51cce6e</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual Interface *</type>
-      <name>CreateInstance</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>aa5d3d444bb4a8e96a0d769f4c49902a8</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>istd::TOptDelPtr&lt; FactoryInterface &gt;</type>
-      <name>FactoryPtr</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>a6b8f54351be42b9c1ae13400d5a6d274</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QList&lt; FactoryPtr &gt;</type>
-      <name>FactoryList</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>aff46fb3fb33f4c5ede14d5359599a368</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>FactoryList</type>
-      <name>m_factoryList</name>
-      <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>afa44671fdccb37ee8d1fd287a9632f0c</anchor>
-      <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>ibase::TComposedFactoryComp</name>
-    <filename>classibase_1_1_t_composed_factory_comp.html</filename>
-    <templarg></templarg>
-    <base>icomp::CComponentBase</base>
-    <base>TComposedFactory&lt; Interface &gt;</base>
-    <member kind="typedef">
-      <type>icomp::CComponentBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classibase_1_1_t_composed_factory_comp.html</anchorfile>
-      <anchor>a0699806c2f39cf46d0da7dc64ad17dae</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::TComposedFactory&lt; Interface &gt;</type>
-      <name>BaseClass2</name>
-      <anchorfile>classibase_1_1_t_composed_factory_comp.html</anchorfile>
-      <anchor>a0077c0618b2911b86e3cfe12a1e5bba2</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnComponentCreated</name>
-      <anchorfile>classibase_1_1_t_composed_factory_comp.html</anchorfile>
-      <anchor>a86922e8e44803326b0feda52e57780ab</anchor>
-      <arglist>()</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -66487,8 +66408,8 @@
       <type></type>
       <name>TDesignerBasicGui</name>
       <anchorfile>classiqtgui_1_1_t_designer_basic_gui.html</anchorfile>
-      <anchor>a94a128b00714261f4ec3568d31b9e6be</anchor>
-      <arglist>(QWidget *parentPtr=0, Qt::WindowFlags f=0)</arglist>
+      <anchor>af2fdded60fe12fbf2a0914bc9e88aca8</anchor>
+      <arglist>(QWidget *parentPtr=0, Qt::WindowFlags f=Qt::WindowFlags(0))</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -66550,7 +66471,7 @@
     <base>TGuiComponentBase&lt; QWidget &gt;</base>
   </compound>
   <compound kind="class">
-    <name>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, QSplashScreen &gt;</name>
+    <name>TDesignerGuiCompBase&lt; Ui::CSplashScreenGuiComp, CSplashScreenCustom &gt;</name>
     <filename>classiqtgui_1_1_t_designer_gui_comp_base.html</filename>
     <base>iqtgui::TGuiComponentBase</base>
   </compound>
@@ -85220,7 +85141,6 @@
     <class kind="class">ibase::IQtItemModelProvider</class>
     <class kind="class">ibase::IRuntimeStatusProvider</class>
     <class kind="class">ibase::TCommandsProviderCompWrap</class>
-    <class kind="class">ibase::TComposedFactoryComp</class>
     <class kind="class">ibase::TContainer</class>
     <class kind="class">ibase::TFactorisableContainer</class>
     <class kind="class">ibase::TLocalizableWrap</class>
@@ -85965,6 +85885,7 @@
     <class kind="class">iqtgui::CProgressManagerGuiComp</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiCompBase</class>
     <class kind="class">iqtgui::CSimpleMainWindowGuiComp</class>
+    <class kind="class">iqtgui::CSplashScreenCustom</class>
     <class kind="class">iqtgui::CSplashScreenGuiComp</class>
     <class kind="class">iqtgui::CStatusBarWidgetComp</class>
     <class kind="class">iqtgui::CStatusGuiComp</class>

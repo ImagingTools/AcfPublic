@@ -38,7 +38,7 @@
 
 #if defined (Q_OS_WIN)
 	#if QT_VERSION >= 0x050500 && QT_VERSION < 0x060000
-		#include <QtPlatformHeaders/QWindowsWindowFunctions>
+	#include <QtPlatformHeaders/QWindowsWindowFunctions>
 	#endif
 #endif
 

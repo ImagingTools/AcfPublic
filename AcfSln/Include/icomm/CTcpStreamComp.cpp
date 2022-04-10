@@ -37,14 +37,24 @@ namespace icomm
 
 // public methods
 
+#if QT_VERSION >= 0x060000
 CTcpStreamComp::CTcpStreamComp()
-	:m_lock()
 {
 	qRegisterMetaType<QAbstractSocket::SocketState>();
 	qRegisterMetaType<QAbstractSocket::SocketError>();
 
 	connect(&m_connectionTimer, SIGNAL(timeout()), this, SLOT(OnTimeout()));
 }
+#else
+CTcpStreamComp::CTcpStreamComp()
+	:m_mutex(QMutex::Recursive)
+{
+	qRegisterMetaType<QAbstractSocket::SocketState>();
+	qRegisterMetaType<QAbstractSocket::SocketError>();
+
+	connect(&m_connectionTimer, SIGNAL(timeout()), this, SLOT(OnTimeout()));
+}
+#endif
 
 
 // reimplemented (icomm::IBinaryStream)
@@ -55,7 +65,7 @@ bool CTcpStreamComp::SendData(const void* data, int size, void* /*userContextPtr
 		return false;
 	}
 
-	QMutexLocker lock(&m_lock);
+	QMutexLocker lock(&m_mutex);
 
 	m_dataToSent.append((const char*)data, size);
 
@@ -79,7 +89,7 @@ bool CTcpStreamComp::ReadData(void* data, int& size)
 		return false;
 	}
 
-	QMutexLocker lock(&m_lock);
+	QMutexLocker lock(&m_mutex);
 
 	if (m_dataReceived.isEmpty()){
 		size = 0;
@@ -359,7 +369,7 @@ void CTcpStreamComp::OnReadyRead()
 		return; 
 	}
 
-	QMutexLocker lock(&m_lock);
+	QMutexLocker lock(&m_mutex);
 
 	m_dataReceived.append(m_socketPtr->readAll());
 }
@@ -405,7 +415,7 @@ void CTcpStreamComp::run()
 
 	// try to connect
 	{
-		QMutexLocker lock(&m_lock);
+		QMutexLocker lock(&m_mutex);
 
 		m_socketPtr->connectToHost(m_host, m_port, QIODevice::ReadWrite);
 

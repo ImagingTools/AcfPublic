@@ -113,7 +113,7 @@ win32-msvc*{
 
 	contains(MSVC_VER, "16.0"){
 		QMAKE_CXXFLAGS += /Qpar /Gy /Gw /FS /Zc:threadSafeInit- /D__STDC_LIMIT_MACROS
-        COMPILER_NAME = VC16
+		COMPILER_NAME = VC16
 
 		CONFIG(release, debug|release){
 			#extra optimizations
@@ -205,30 +205,6 @@ win32{
 		}
 	}
 }
-
-# Additional defines for CSystem
-macx{
-	DEFINES += "COMPILER_NAME=ClangOSX"
-	contains(QMAKE_TARGET.arch, x86_64) {
-		DEFINES += "PLATFORM_CODE=x64"
-	} 
-	else{
-		DEFINES += "PLATFORM_CODE=arm64"
-	}
-}
-
-#linux ! macx ! android{
-#    DEFINES += "PLATFORM_CODE=x64"
-#	*-clang*{
-#	    DEFINES += "COMPILER_NAME=ClangLinux"
-#	}
-#	else{
-#	    DEFINES += "COMPILER_NAME=GCCLinux"
-#		COMPILER_NAME = GCCLinux
-#	}
-#}
-
-
 
 CONFIG(debug, debug|release){
 	CONFIGURATION_NAME = Debug

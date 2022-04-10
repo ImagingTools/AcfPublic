@@ -85,8 +85,13 @@ void CCommonVersionInfo::MergeVersions(const iser::IVersionInfo& versionInfo)
 
 CCommonVersionInfo::VersionIds CCommonVersionInfo::GetVersionIds() const
 {
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
 	QList<int> keys = m_versionIdList.keys();
-	return  QSet<int>(keys.begin(), keys.end());
+
+	return QSet<int>(keys.begin(), keys.end());
+#else
+	return m_versionIdList.keys().toSet();
+#endif
 }
 
 
