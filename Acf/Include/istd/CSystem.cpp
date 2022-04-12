@@ -137,7 +137,7 @@ QString CSystem::GetVariableValue(const QString& varName, bool envVars, bool emb
 			return s_compilerName;
 		}
 		else if (varName == "ConfigurationName"){
-			QString retVal = s_compilerMode + QString("_Qt%1_").arg(QT_VERSION_MAJOR) + s_compilerName;
+			QString retVal = s_compilerMode + "_" + s_acfQtVersion + "_" + s_compilerName;
 			if (!s_platformCode.isEmpty()){
 				retVal += "_";
 				retVal += s_platformCode;
@@ -446,9 +446,15 @@ CSystem::FileDriveInfo CSystem::GetFileDriveInfo(const QString& fileDrivePath)
 
 QString CSystem::GetCompilerVariable(const QString& varName)
 {
-	if (varName == "PlatformCode"){
+	if (varName == "AcfQtVersion"){
+		QString retVal = QString(xstr(ACF_QT_VERSION));
+		if (retVal == "ACF_QT_VERSION"){
+			retVal.clear();
+		}
+		return retVal;
+	}
+	else if (varName == "PlatformCode"){
 		QString retVal = QString(xstr(PLATFORM_CODE));
-		qDebug() << "PLATFORM_CODE:" << retVal;
 		if (retVal == "PLATFORM_CODE"){
 			retVal.clear();
 		}
@@ -461,12 +467,11 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 		return "Release";
 #endif // !QT_NO_DEBUG
 	}
-//	else if (varName == "ConfigurationName"){
-//		return GetCompilerVariable("CompileMode") + GetCompilerVariable("CompilerName");
-//	}
+	else if (varName == "ConfigurationName"){
+		return GetVariableValue("ConfigurationName");
+	}
 	else if (varName == "CompilerName"){
 		QString retVal = QString(xstr(COMPILER_NAME));
-		qDebug() << "COMPILER_NAME:" << retVal;
 		if (retVal == "COMPILER_NAME"){
 			retVal = "Unknown";
 		}
@@ -477,9 +482,10 @@ QString CSystem::GetCompilerVariable(const QString& varName)
 }
 
 
-void CSystem::SetUserVariables(const QString& compilerMode, const QString& compilerName, const QString& platformCode)
+void CSystem::SetUserVariables(const QString& compilerMode, const QString& acfQtVersion, const QString& compilerName, const QString& platformCode)
 {
 	s_compilerMode = compilerMode;
+	s_acfQtVersion = acfQtVersion;
 	s_compilerName = compilerName;
 	s_platformCode = platformCode;
 }
@@ -541,6 +547,7 @@ QString CSystem::GetCompilerInfo()
 
 
 // private static attributes
+QString CSystem::s_acfQtVersion = CSystem::GetCompilerVariable("AcfQtVersion");
 QString CSystem::s_compilerMode = CSystem::GetCompilerVariable("CompileMode");
 QString CSystem::s_compilerName = CSystem::GetCompilerVariable("CompilerName");
 QString CSystem::s_platformCode = CSystem::GetCompilerVariable("PlatformCode");

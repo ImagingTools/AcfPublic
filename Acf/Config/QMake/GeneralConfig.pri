@@ -110,7 +110,7 @@ win32-msvc*{
 #		message("Using Visual Studio 2017");
 	}
 
-	contains(MSVC_VER, "16.0"){
+	contains(MSVC_VER, "16.10"){
 		QMAKE_CXXFLAGS += /Qpar /Gy /Gw /FS /Zc:threadSafeInit- /D__STDC_LIMIT_MACROS
 		COMPILER_NAME = VC16
 
@@ -123,7 +123,7 @@ win32-msvc*{
 			QMAKE_LFLAGS += /MACHINE:X64
 		}
 
-#		message("Using Visual Studio 2019");
+		message("Using Visual Studio 2019");
 	}
 }
 else{
@@ -229,6 +229,10 @@ CONFIG(release, debug|release){
 	CONFIGURATION_NAME = Release
 }
 
+#COMPILER_NAME = VC15
+message("COMPILER_NAME $$COMPILER_NAME COMPILER_NAME $$MSVC_VER");
+
+DEFINES += "ACF_QT_VERSION=$${QT_MAJOR_VERSION}"
 DEFINES += "COMPILER_NAME=$$COMPILER_NAME"
 DEFINES += "PLATFORM_CODE=$$PLATFORM_CODE"
 
