@@ -7,6 +7,10 @@ if(DEFINED ENV{QTDIR})
 	set(CMAKE_PREFIX_PATH $ENV{QTDIR})
 endif()
 
+if (MSVC_IDE)
+	set(CMAKE_BUILD_TYPE $<$<CONFIG:DEBUG>:Debug>$<$<CONFIG:RELEASE>:Release>$<$<CONFIG:MINSIZEREL>:MinSizeRel>$<$<CONFIG:RELWITHDEBINFO>:RelWithDebInfo>)
+endif()
+
 set(ACFDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf")
 set(ACFSLNDIR "${CMAKE_CURRENT_LIST_DIR}../../AcfSln")
 set(CONFIGSLN_DIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Config")
@@ -20,6 +24,7 @@ set(ACFSLNLIBDIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Lib/${CMAKE_BUILD_TYPE}
 
 add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../Acf/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../Acf/AuxInclude/${TARGETNAME}")
 add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/AuxInclude/${TARGETNAME}")
-#if(NOT UNIX)
+
+if(NOT DEFINED USE_IACF OR USE_IACF)
 	add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../IAcf/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../IAcf/AuxInclude/${TARGETNAME}")
-#endif()
+endif()
