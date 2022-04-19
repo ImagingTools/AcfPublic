@@ -115,7 +115,7 @@ void CSurfaceViewComp::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet
 		delete [] dataPtr;
 
 		m_surfacePlotPtr->updateData();
-		m_surfacePlotPtr->updateGL();
+		m_surfacePlotPtr->update();
 	}
 }
 
@@ -159,7 +159,7 @@ void CSurfaceViewComp::SetupLighting()
 	m_surfacePlotPtr->illuminate(4);
 	m_surfacePlotPtr->illuminate(5);
 
-	m_surfacePlotPtr->updateGL();
+	m_surfacePlotPtr->update();
 }
 
 
@@ -270,7 +270,7 @@ void CSurfaceViewComp::OnToggleAutoScale(bool value)
 
 	m_surfacePlotPtr->coordinates()->setAutoScale(value);
 
-	m_surfacePlotPtr->updateGL();
+	m_surfacePlotPtr->update();
 }
 
 
@@ -298,7 +298,7 @@ void CSurfaceViewComp::OnMeshEnabled(bool isMeshEnabled)
 	}
 
 	m_surfacePlotPtr->updateData();
-	m_surfacePlotPtr->updateGL();
+	m_surfacePlotPtr->update();
 }
 
 

@@ -6,4 +6,4 @@ message("OPENCVDIR_4_5_3 " "$ENV{OPENCVDIR_4_5_3}")
 
 include_directories("$ENV{OPENCVDIR_4_5_3}/include")
 
-qt5_use_modules(${PROJECT_NAME} Widgets Gui)
+#qt5_use_modules(${PROJECT_NAME} Widgets Gui)
