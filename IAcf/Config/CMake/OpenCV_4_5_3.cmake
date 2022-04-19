@@ -9,6 +9,5 @@ if(WIN32)
 endif()
 
 if(UNIX)
-#unix
     target_link_libraries(${PROJECT_NAME} opencv_world453)
 endif()

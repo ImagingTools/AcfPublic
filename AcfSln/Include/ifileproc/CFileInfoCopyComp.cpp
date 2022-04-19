@@ -135,8 +135,8 @@ int CFileInfoCopyComp::ConvertFiles(
 			QRegularExpressionMatch match;
 
 			while ((pos = line.indexOf(tagsExpression, endPos, &match)) != -1){
-
 				outputLine += line.mid(endPos, pos - endPos);
+
 				endPos = pos + match.capturedLength();
 
 				QString substitutionTag = match.captured(1);

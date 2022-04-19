@@ -20,9 +20,6 @@
 ********************************************************************************/
 
 
-// STL includes
-#include <iostream>
-
 // Qt includes
 #include <QtCore/QCoreApplication>
 #include <QtCore/QDir>
@@ -145,14 +142,11 @@ int main(int argc, char *argv[])
 
 	if (!configName.isEmpty()){
 		QStringList configParts = configName.split("_");
-		if (configParts.count() > 2){
+		if (configParts.count() > 3){
 			QString compilerMode = configParts[0];
 			QString acfQtVersion = configParts[1];
 			QString compilerName = configParts[2];
-			QString platformCode;
-			if (configParts.count() > 3){
-				platformCode = configParts[3];
-			}
+			QString platformCode = configParts[3];
 
 			istd::CSystem::SetUserVariables(compilerMode, acfQtVersion, compilerName, platformCode);
 
