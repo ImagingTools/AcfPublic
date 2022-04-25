@@ -34,11 +34,8 @@
 namespace iimg
 {
 
-
 CGeneralBitmap::CGeneralBitmap()
 :	m_linesDifference(0),
-	m_pixelBitsCount(0),
-	m_componentsCount(0),
 	m_pixelFormat(PF_UNKNOWN)
 {
 }
@@ -51,14 +48,12 @@ CGeneralBitmap::CGeneralBitmap(const CGeneralBitmap& bitmap)
 		m_buffer.SetPtr(bitmap.m_buffer.GetPtr(), false);
 		m_size = bitmap.m_size;
 		m_linesDifference = bitmap.m_linesDifference;
-		m_pixelBitsCount = bitmap.m_pixelBitsCount;
-		m_componentsCount = bitmap.m_componentsCount;
 		m_pixelFormat = bitmap.m_pixelFormat;
 	}
 	else{
 		// copy structure refering to external buffer
-		if (CGeneralBitmap::CreateBitmap(bitmap.m_size, bitmap.m_pixelBitsCount, bitmap.m_componentsCount, bitmap.m_pixelFormat)){
-			int linesSize = (m_pixelBitsCount * m_size.GetX() + 7) >> 3;
+		if (CGeneralBitmap::CreateBitmap(bitmap.m_size, bitmap.GetPixelBitsCount(), bitmap.GetComponentsCount(), bitmap.m_pixelFormat)){
+			int linesSize = (GetPixelBitsCount() * m_size.GetX() + 7) >> 3;
 
 			for (int y = 0; y < m_size.GetY(); ++y){
 				const void* sourceLinePtr = bitmap.GetLinePtr(y);
@@ -73,9 +68,9 @@ CGeneralBitmap::CGeneralBitmap(const CGeneralBitmap& bitmap)
 
 // reimplemented (iimg::IBitmap)
 
-bool CGeneralBitmap::IsFormatSupported(PixelFormat /*pixelFormat*/) const
+bool CGeneralBitmap::IsFormatSupported(PixelFormat pixelFormat) const
 {
-	return true;
+	return pixelFormat != PF_MONO && pixelFormat != PF_RGB24;
 }
 
 
@@ -85,97 +80,21 @@ IBitmap::PixelFormat CGeneralBitmap::GetPixelFormat() const
 }
 
 
-bool CGeneralBitmap::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int pixelBitsCount, int componentsCount)
+bool CGeneralBitmap::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int, int)
 {
-	switch(pixelFormat){
-	case PF_GRAY:
-		componentsCount = 1;
-		pixelBitsCount = 8;
-		break;
-
-	case PF_RGB:
-	case PF_RGBA:
-		componentsCount = 4;
-		pixelBitsCount = 32;
-		break;
-
-	case PF_GRAY16:
-		componentsCount = 1;
-		pixelBitsCount = 16;
-		break;
-
-	case PF_GRAY32:
-		componentsCount = 1;
-		pixelBitsCount = 32;
-		break;
-
-	case PF_FLOAT32:
-		componentsCount = 1;
-		pixelBitsCount = 32;
-		break;
-
-	case PF_FLOAT64:
-		componentsCount = 1;
-		pixelBitsCount = 64;
-		break;
-
-	case PF_XYZ32:
-		componentsCount = 3;
-		pixelBitsCount = 96;
-		break;
-
-	case PF_XY32:
-		componentsCount = 2;
-		pixelBitsCount = 64;
-		break;
-
-	case PF_USER:
-		break;
-
-	default:
+	if (!IsFormatSupported(pixelFormat))
 		return false;
-	}
 
-	// Unknown pixel format and missing user format specification:
-	if ((componentsCount <= 0) || (pixelBitsCount <= 0)){
-		return false;
-	}
-
-	return CreateBitmap(size, pixelBitsCount, componentsCount, pixelFormat);
+	return CreateBitmap(size, GetPixelBitsCount(pixelFormat), GetComponentsCount(pixelFormat), pixelFormat);
 }
 
 
 bool CGeneralBitmap::CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference)
 {
-	switch(pixelFormat){
-	case PF_GRAY:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 8, 1, PF_GRAY);
-
-	case PF_RGB:
-	case PF_RGBA:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 32, 4, pixelFormat);
-
-	case PF_GRAY16:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 16, 1, PF_GRAY16);
-
-	case PF_GRAY32:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 32, 1, PF_GRAY32);
-
-	case PF_FLOAT32:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 32, 1, PF_FLOAT32);
-
-	case PF_FLOAT64:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 64, 1, PF_FLOAT64);
-
-	case PF_XYZ32:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 32, 3, PF_XYZ32);
-
-	case PF_XY32:
-		return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, 32, 2, PF_XY32);
-
-	default:
+	if (!IsFormatSupported(pixelFormat))
 		return false;
-	}
+
+	return CreateBitmap(size, dataPtr, releaseFlag, linesDifference, GetPixelBitsCount(pixelFormat), GetComponentsCount(pixelFormat), pixelFormat);
 }
 
 
@@ -188,8 +107,6 @@ void CGeneralBitmap::ResetImage()
 	m_size.Reset();
 	m_buffer.Reset();
 	m_linesDifference = 0;
-	m_pixelBitsCount = 0;
-	m_componentsCount = 0;
 }
 
 
@@ -270,14 +187,12 @@ CGeneralBitmap& CGeneralBitmap::operator=(const CGeneralBitmap& bitmap)
 		m_buffer.SetPtr(bitmap.m_buffer.GetPtr(), false);
 		m_size = bitmap.m_size;
 		m_linesDifference = bitmap.m_linesDifference;
-		m_pixelBitsCount = bitmap.m_pixelBitsCount;
-		m_componentsCount = bitmap.m_componentsCount;
 		m_pixelFormat = bitmap.m_pixelFormat;
 	}
 	else{
 		// copy structure refering to external buffer
-		if (CGeneralBitmap::CreateBitmap(bitmap.m_size, bitmap.m_pixelBitsCount, bitmap.m_componentsCount, bitmap.m_pixelFormat)){
-			int linesSize = (m_pixelBitsCount * m_size.GetX() + 7) >> 3;
+		if (CGeneralBitmap::CreateBitmap(bitmap.m_size, bitmap.GetPixelBitsCount(), bitmap.GetComponentsCount(), bitmap.m_pixelFormat)){
+			int linesSize = (GetPixelBitsCount() * m_size.GetX() + 7) >> 3;
 
 			for (int y = 0; y < m_size.GetY(); ++y){
 				const void* sourceLinePtr = bitmap.GetLinePtr(y);
@@ -301,12 +216,12 @@ bool CGeneralBitmap::operator==(const CGeneralBitmap& bitmap) const
 		return false;
 	}
 
-	if (m_pixelBitsCount != bitmap.m_pixelBitsCount){
+	if (GetPixelBitsCount() != bitmap.GetPixelBitsCount()){
 		return false;
 	}
 
 	if (m_buffer.IsValid() && bitmap.m_buffer.IsValid() && (m_buffer.GetPtr() != bitmap.m_buffer.GetPtr())){
-		int lineBytes = (m_pixelBitsCount * m_size.GetX() + 7) >> 3;
+		int lineBytes = (GetPixelBitsCount() * m_size.GetX() + 7) >> 3;
 
 		for (int y = 0; y < m_size.GetY(); ++y){
 			if (std::memcmp(GetLinePtr(y), bitmap.GetLinePtr(y), lineBytes) != 0){
@@ -333,17 +248,11 @@ bool CGeneralBitmap::CreateBitmap(
 			int componentsCount,
 			PixelFormat pixelFormat)
 {
-	if (		(size.GetX() < 0) ||
-				(size.GetY() < 0) ||
-				(componentsCount <= 0) ||
-				(pixelBitsCount <= 0) ||
-				(pixelBitsCount % (componentsCount * 8) != 0)){
+	if ((size.GetX() < 0) || (size.GetY() < 0) || (componentsCount <= 0) || (pixelBitsCount <= 0) || (pixelBitsCount % (componentsCount * 8) != 0))
 		return false;
-	}
 
-	if (m_buffer.IsToRelase() && (size == m_size) && (pixelBitsCount == m_pixelBitsCount) && (componentsCount == m_componentsCount) && (pixelFormat = m_pixelFormat)){
+	if (m_buffer.IsToRelase() && size == m_size && pixelBitsCount == GetPixelBitsCount() && componentsCount == GetComponentsCount() && pixelFormat == m_pixelFormat)
 		return true;	// nothing to do
-	}
 
 	int linesDifference = (pixelBitsCount * size.GetX() + 7) >> 3;
 	Q_ASSERT(linesDifference >= 0);
@@ -352,13 +261,18 @@ bool CGeneralBitmap::CreateBitmap(
 	istd::CChangeNotifier notifier(this);
 
 	m_size = size;
-	m_pixelBitsCount = pixelBitsCount;
-	m_componentsCount = componentsCount;
 	m_pixelFormat = pixelFormat;
 	m_linesDifference = linesDifference;
 
 	if (bufferSize > 0){
-		m_buffer.SetPtr(new quint8[bufferSize], true);
+		try {
+			uint8_t* buff = new quint8[bufferSize];
+			m_buffer.SetPtr(buff, true);
+		}
+		catch (...)
+		{
+			ResetData();
+		}
 
 		return m_buffer.IsValid();
 	}
@@ -379,6 +293,9 @@ bool CGeneralBitmap::CreateBitmap(
 			int componentsCount,
 			PixelFormat pixelFormat)
 {
+	if (!IsFormatSupported(pixelFormat))
+		return false;
+
 	if (		(size.GetX() < 0) ||
 				(size.GetY() < 0) ||
 				(componentsCount <= 0) ||
@@ -390,8 +307,6 @@ bool CGeneralBitmap::CreateBitmap(
 	istd::CChangeNotifier notifier(this);
 
 	m_size = size;
-	m_pixelBitsCount = pixelBitsCount;
-	m_componentsCount = componentsCount;
 	m_pixelFormat = pixelFormat;
 
 	if (linesDifference != 0){

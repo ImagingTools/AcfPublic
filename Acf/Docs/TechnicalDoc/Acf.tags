@@ -10663,13 +10663,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPixelBitsCount</name>
-      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>ab5f94fba36498a2ddffca44285b44026</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const void *</type>
       <name>GetLinePtr</name>
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
@@ -10703,20 +10696,6 @@
       <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
       <anchor>a0cc24c81b4537e7e3e7652bb739db979</anchor>
       <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetComponentsCount</name>
-      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>a8809f9c3450e27432395078ab6dfa58a</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual icmm::CVarColor</type>
-      <name>GetColorAt</name>
-      <anchorfile>classiimg_1_1_c_bitmap.html</anchorfile>
-      <anchor>a221311a27cbf5f4412c785ac2e87c20e</anchor>
-      <arglist>(const istd::CIndex2d &amp;position) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
@@ -10830,10 +10809,24 @@
       <arglist>(int componentIndex=0) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetPixelBitsCount</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a045863e70b00d32b25a60ea99323b89c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
       <anchor>a44c062ef0c475b1aeae78e9060467bb9</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetComponentsCount</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a195c5a8afa95933ff8f59c5c018047d8</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -10863,6 +10856,27 @@
       <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
       <anchor>a8e0cc2546902be76780c9424a350602b</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static int</type>
+      <name>GetComponentsCount</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a4de41b837fd3572e73cef88d17a0118f</anchor>
+      <arglist>(IBitmap::PixelFormat format)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static int</type>
+      <name>GetComponentBitsCount</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a27043362f7f95d68c7bb5286d5455c84</anchor>
+      <arglist>(IBitmap::PixelFormat format, int componentIndex)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static int</type>
+      <name>GetPixelBitsCount</name>
+      <anchorfile>classiimg_1_1_c_bitmap_base.html</anchorfile>
+      <anchor>a12faaafef85f3b72b0da7f6a4250c7ed</anchor>
+      <arglist>(IBitmap::PixelFormat format)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10900,36 +10914,36 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a16691bf9cb62fcf0e4262c1bf160a8cd</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const</arglist>
+      <anchor>acbaf2440c5adc1e203515223d8a74ab4</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a998826e517e20584a14324fea674c445</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>af79043c824efe781c7083810b0ddb541</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a854f9127896e57c5a533c6f486b49f11</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>ab9f1839fa1a16a8514cdd43e892f7cae</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a02ed556cf25da9508ed3dddcd0990b9c</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
+      <anchor>a912e1bc2a8d1453722301f94ea6553aa</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classiimg_1_1_c_bitmap_loader_comp.html</anchorfile>
-      <anchor>a575a57ac37d442c37e1a5eedac2bd5ac</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+      <anchor>ad6a049ec643d3b6f60f7e98ea5c1d5e5</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -20754,13 +20768,6 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetPixelBitsCount</name>
-      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>a104efd77fef82d088f21e408b6688595</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const void *</type>
       <name>GetLinePtr</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
@@ -20793,13 +20800,6 @@
       <name>GetImageSize</name>
       <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
       <anchor>a34baa8b5168a269ed986c353003fdf6d</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetComponentsCount</name>
-      <anchorfile>classiimg_1_1_c_general_bitmap.html</anchorfile>
-      <anchor>aeeccf6c3e68219ca369736b8ffc5f5d0</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -76447,6 +76447,102 @@
       <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
       <anchor>a66f8b2c72d51bcd4cbcaccbdc5416de9</anchor>
       <arglist>(quint8 *ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetCastedOrRemove</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a9c3552ba52eb14411f4e2bbff17e6aea</anchor>
+      <arglist>(SourceType *ptr, bool releaseFlag=false)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Detach</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>ab70a67295b105975133516ad03435f5c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>TOptDelPtr&lt; uint8_t, true &gt;</name>
+    <filename>classistd_1_1_t_opt_del_ptr.html</filename>
+    <base>istd::TPointerBase</base>
+    <member kind="typedef">
+      <type>TPointerBase&lt; uint8_t &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a76d0648ad77b7eb76b61b8c8e7402a88</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TOptDelPtr</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>afd4bc9e06d3f5ec81e834e059dc9f973</anchor>
+      <arglist>(uint8_t *ptr=NULL, bool releaseFlag=false)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TOptDelPtr</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a508c9da5cdbc82c3ee6e5bed6f246f40</anchor>
+      <arglist>(const TOptDelPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TOptDelPtr</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>aec043c55151c3094c59b410172fde630</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsToRelase</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a3562c79805947a0dc99ff2d34e4e1c3c</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a4077ac614da6a11b3842e451eacdec02</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPtr</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>ad89d9841405496be65040a0b3c220eb1</anchor>
+      <arglist>(uint8_t *ptr, bool releaseFlag=false)</arglist>
+    </member>
+    <member kind="function">
+      <type>uint8_t *</type>
+      <name>PopPtr</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>aa87a52acb8c5e044de5f7fd8e3f86b81</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>TakeOver</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a51d576768e7a35762b01667bf2b4f5c8</anchor>
+      <arglist>(TOptDelPtr &amp;sourcePtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TOptDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>acbeedf8206a2881300e6604df305cda3</anchor>
+      <arglist>(const TOptDelPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TOptDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_opt_del_ptr.html</anchorfile>
+      <anchor>a66f8b2c72d51bcd4cbcaccbdc5416de9</anchor>
+      <arglist>(uint8_t *ptr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
