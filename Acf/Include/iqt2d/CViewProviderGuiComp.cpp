@@ -23,6 +23,10 @@
 #include <iqt2d/CViewProviderGuiComp.h>
 
 
+// Qt include
+#include <QtGui/QGuiApplication>
+
+
 namespace iqt2d
 {
 
@@ -65,6 +69,22 @@ iview::IShapeView* CViewProviderGuiComp::GetView() const
 
 
 // protected methods
+
+// reimplemented (ibase::TDesignSchemaHandlerWrap)
+
+void CViewProviderGuiComp::OnDesignSchemaChanged()
+{
+	BaseClass::OnDesignSchemaChanged();
+
+	iview::CConsoleGui* consolePtr = GetQtWidget();
+	Q_ASSERT(consolePtr != nullptr);
+
+	consolePtr->GetViewRef().SetDefaultColorSchema(nullptr);
+	consolePtr->GetViewRef().InvalidateBackground();
+}
+
+
+// reimplemented (CGuiComponentBase)
 
 void CViewProviderGuiComp::OnGuiCreated()
 {
@@ -144,7 +164,7 @@ void CViewProviderGuiComp::OnGuiCreated()
 				iview::CColorSchema* newColorSchemaPtr = new iview::CColorSchema;
 				newColorSchemaPtr->Assign(consolePtr->GetViewRef().GetColorSchema());
 
-				QBrush backgroundBrush(qRgb(192, 192, 192));
+				QBrush backgroundBrush(QGuiApplication::palette().color(QPalette::Window));
 				newColorSchemaPtr->SetBrush(iview::IColorSchema::SB_BACKGROUND, backgroundBrush);
 
 				consolePtr->GetViewRef().SetDefaultColorSchema(newColorSchemaPtr, true);

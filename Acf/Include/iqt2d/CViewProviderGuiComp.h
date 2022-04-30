@@ -130,6 +130,9 @@ public:
 	virtual iview::IShapeView* GetView() const;
 
 protected:
+	// reimplemented (ibase::TDesignSchemaHandlerWrap)
+	virtual void OnDesignSchemaChanged();
+
 	// reimplemented (CGuiComponentBase)
 	virtual void OnGuiCreated();
 	virtual void OnGuiDestroyed();

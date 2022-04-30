@@ -6603,12 +6603,15 @@
     <name>CConsoleGui.h</name>
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_console_gui_8h.html</filename>
+    <includes id="_t_make_icon_provider_comp_wrap_8h" name="TMakeIconProviderCompWrap.h" local="no" imported="no">iqtgui/TMakeIconProviderCompWrap.h</includes>
+    <includes id="_t_design_schema_handler_wrap_8h" name="TDesignSchemaHandlerWrap.h" local="no" imported="no">iqtgui/TDesignSchemaHandlerWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_console_base_8h" name="CConsoleBase.h" local="no" imported="no">iview/CConsoleBase.h</includes>
     <includes id="_c_viewport_8h" name="CViewport.h" local="no" imported="no">iview/CViewport.h</includes>
     <includes id="_i_shape_status_info_8h" name="IShapeStatusInfo.h" local="no" imported="no">iview/IShapeStatusInfo.h</includes>
     <class kind="class">iview::CConsoleGui</class>
+    <class kind="class">iview::CConsoleGui::UiResourcesManager</class>
     <namespace>iview</namespace>
   </compound>
   <compound kind="file">
@@ -15967,6 +15970,7 @@
     <filename>classiview_1_1_c_console_gui.html</filename>
     <base>iview::CConsoleBase</base>
     <base>ibase::ICommandsProvider</base>
+    <class kind="class">iview::CConsoleGui::UiResourcesManager</class>
     <member kind="enumeration">
       <type></type>
       <name>CommandGroupId</name>
@@ -48544,6 +48548,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnDesignSchemaChanged</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a114bf8cd5a6dd2f5a806ad350d303876</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
@@ -71071,6 +71082,25 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>TMakeIconProviderCompWrap&lt; iqtgui::TDesignSchemaHandlerWrap&lt; QObject &gt; &gt;</name>
+    <filename>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</filename>
+    <base>iqtgui::TDesignSchemaHandlerWrap</base>
+    <member kind="typedef">
+      <type>iqtgui::TDesignSchemaHandlerWrap&lt; QObject &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>a7d8d2e6ff2a78d89f0e354b3be0c8d71</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>GetIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>a2d8f84e6ff13c6ec23eec664c52cb755</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>TMakeIconProviderCompWrap&lt; TDesignSchemaHandlerWrap&lt; ibase::TLocalizableWrap&lt; icomp::CComponentBase &gt; &gt; &gt;</name>
     <filename>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</filename>
     <base>iqtgui::TDesignSchemaHandlerWrap</base>
@@ -84815,6 +84845,32 @@
       <name>typeIdToIndexMap</name>
       <anchorfile>structiprm_1_1_c_multi_params_manager_comp_1_1_type_info_list.html</anchorfile>
       <anchor>ae7accea8545bcb8e2ec743630a2b8d13</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iview::CConsoleGui::UiResourcesManager</name>
+    <filename>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</filename>
+    <base>TMakeIconProviderCompWrap&lt; iqtgui::TDesignSchemaHandlerWrap&lt; QObject &gt; &gt;</base>
+    <member kind="function">
+      <type></type>
+      <name>UiResourcesManager</name>
+      <anchorfile>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</anchorfile>
+      <anchor>a214e85ccdcfbc2f07e68f0673580a464</anchor>
+      <arglist>(CConsoleGui &amp;parent)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnDesignSchemaChanged</name>
+      <anchorfile>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</anchorfile>
+      <anchor>a019bc9618b293ed8259fd1a7b45bc001</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>CConsoleGui &amp;</type>
+      <name>m_parent</name>
+      <anchorfile>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</anchorfile>
+      <anchor>ae86f413d6b3279a99ed185d26c2eebf1</anchor>
       <arglist></arglist>
     </member>
   </compound>
