@@ -29,7 +29,7 @@
 
 
 // ACF includes
-#include <istd/IPolymorphic.h>
+#include <istd/IChangeable.h>>
 #include <iqtgui/iqtgui.h>
 
 
@@ -40,7 +40,7 @@ namespace iqtgui
 /**
 	This interface provides acces to an icon.
 */
-class IIconProvider: virtual public istd::IPolymorphic
+class IIconProvider: virtual public istd::IChangeable
 {
 public:
 	/**

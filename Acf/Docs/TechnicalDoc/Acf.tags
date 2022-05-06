@@ -5271,7 +5271,7 @@
     <name>IIconProvider.h</name>
     <path>C:/Temp/Acf/Include/iqtgui/</path>
     <filename>_i_icon_provider_8h.html</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
+    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <includes id="iqtgui_8h" name="iqtgui.h" local="no" imported="no">iqtgui/iqtgui.h</includes>
     <class kind="class">iqtgui::IIconProvider</class>
     <namespace>iqtgui</namespace>
@@ -53988,7 +53988,7 @@
   <compound kind="class">
     <name>iqtgui::IIconProvider</name>
     <filename>classiqtgui_1_1_i_icon_provider.html</filename>
-    <base virtualness="virtual">istd::IPolymorphic</base>
+    <base virtualness="virtual">istd::IChangeable</base>
     <member kind="function" virtualness="pure">
       <type>virtual int</type>
       <name>GetIconCount</name>
