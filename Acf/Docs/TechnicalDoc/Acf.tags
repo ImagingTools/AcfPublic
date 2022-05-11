@@ -50168,6 +50168,18 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>PF_RGB48</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea1d2df5052d4010710c33f1a1439e76c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_RGBA64</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eae290ca1252cb7c06269e78b8a3c6c0f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>PF_GRAY16</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eac36906405ccdf273418e45b6d9711e39</anchor>
@@ -50243,6 +50255,18 @@
       <name>PF_RGB24</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea4c5e7557ec4b021dd0e478e1ff7f4015</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_RGB48</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea1d2df5052d4010710c33f1a1439e76c3</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_RGBA64</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10eae290ca1252cb7c06269e78b8a3c6c0f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
