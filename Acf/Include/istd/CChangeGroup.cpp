@@ -50,7 +50,8 @@ void CChangeGroup::Reset()
 // private methods
 
 CChangeGroup::CChangeGroup(const CChangeGroup& /*group*/)
-:	m_changeSet(istd::IChangeable::GetNoChanges())
+	:m_changeablePtr(nullptr),
+	m_changeSet(istd::IChangeable::GetNoChanges())
 {
 }
 

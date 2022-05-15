@@ -108,6 +108,8 @@ bool TSerializableContainer<ItemClass, ContainerType>::Serialize(iser::IArchive&
 		}
 	}
 
+	retVal = retVal && archive.EndTag(itemsTag);
+
 	return retVal;
 }
 

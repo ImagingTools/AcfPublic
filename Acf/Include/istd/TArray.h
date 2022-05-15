@@ -554,6 +554,8 @@ typename TArray<Element, Dimensions>::Iterator& TArray<Element, Dimensions>::Ite
 	BaseClass::operator=(iterator);
 
 	m_arrayPtr = iterator.m_arrayPtr;
+
+	return *this;
 }
 
 
