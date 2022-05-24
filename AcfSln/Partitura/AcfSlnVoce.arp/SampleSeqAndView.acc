@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>View for a samle sequence</Description>
+    <Keywords>View Sample Sequence</Keywords>
+    <ElementsList>
+        <Element Id="DataSequenceView" PackageId="QtMeasPck" ComponentId="DataSequenceView">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="IsChannelPanelVisible" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="IsScalePanelVisible" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="IsScaledValue" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="IsTimeSpanPanelVisible" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="MaxValue" Type="Real" ExportId="">
+                        <Data IsEnabled="true" Value="1"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="MinValue" Type="Real" ExportId="">
+                        <Data IsEnabled="true" Value="-1"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="GeneralDataSequence" PackageId="MeasPck" ComponentId="GeneralDataSequence">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="ModelBinder" PackageId="BasePck" ComponentId="ModelBinder">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Model" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="GeneralDataSequence"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Observers" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>DataSequenceView</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="imath::TISampledFunction&lt;2,1&gt;" ComponentId="GeneralDataSequence"/>
+        <Interface InterfaceId="imeas::IDataSequence" ComponentId="GeneralDataSequence"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="GeneralDataSequence"/>
+        <Interface InterfaceId="iqtgui::IGuiObject" ComponentId="DataSequenceView"/>
+        <Interface InterfaceId="iser::ISerializable" ComponentId="GeneralDataSequence"/>
+        <Interface InterfaceId="istd::IChangeable" ComponentId="GeneralDataSequence"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>

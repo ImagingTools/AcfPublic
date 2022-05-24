@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4243" Description="ACF"/>
+            <Version Id="1023" Number="329472" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <ConfigFiles>
+        <FilePath>../../AcfSln/Config/BaseOnly.awc</FilePath>
+    </ConfigFiles>
+    <PackageDirs/>
+    <PackageFiles>
+        <FilePath>../Partitura/IacfVoce.arp</FilePath>
+    </PackageFiles>
+    <RegistryFiles/>
+</Acf>

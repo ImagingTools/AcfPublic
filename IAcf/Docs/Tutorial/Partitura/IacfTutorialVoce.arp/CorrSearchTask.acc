@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4316" Description="ACF"/>
+            <Version Id="1" Number="1664" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="329472" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Circle finder task using annulus segment to speciffy AOI</Description>
+    <Keywords>Circle Finder Task Annulus Position</Keywords>
+    <ElementsList>
+        <Element Id="AOI" PackageId="BasePck" ComponentId="Rectangle">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Calibration" Type="Reference" ExportId="AoiCalibration">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Height" Type="Real" ExportId="Height">
+                        <Data IsEnabled="true" Value="100"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Width" Type="Real" ExportId="Width">
+                        <Data IsEnabled="true" Value="100"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="X" Type="Real" ExportId="AoiX">
+                        <Data IsEnabled="true" Value="100"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Y" Type="Real" ExportId="AoiY">
+                        <Data IsEnabled="true" Value="100"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SearchParams" PackageId="IprPck" ComponentId="SearchParams">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="SearchParamsSet" PackageId="BasePck" ComponentId="ComposedParamsSet">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Parameters" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>AOI</Value>
+                                <Value>SearchParams</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParametersId" Type="Id[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>SearchAoi, SearchParams</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SlaveSets" Type="Reference[]" ExportId="SlaveSets">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SearchProcessor" PackageId="OpenCvPck" ComponentId="OpenCvCorrSearchProcessor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="AoiParamId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="SearchAoi"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DefaultModelImage" Type="Reference" ExportId="DefaultModelImage">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SearchParamsId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="SearchParams"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SearchTask" PackageId="IprPck" ComponentId="SearchBasedFeaturesSupplier">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="BitmapProvider">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParamsSet" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="SearchParamsSet"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Processor" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="SearchProcessor"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SearchParamsId" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="SearchParamsId"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="i2d::IMultiCalibrationProvider" ComponentId="SearchTask"/>
+        <Interface InterfaceId="iinsp::ISupplier" ComponentId="SearchTask"/>
+        <Interface InterfaceId="iipr::IFeaturesProvider" ComponentId="SearchTask"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="SearchTask"/>
+        <Interface InterfaceId="istd::IChangeable" ComponentId="SearchTask"/>
+        <Interface InterfaceId="istd::IInformationProvider" ComponentId="SearchTask"/>
+        <Interface InterfaceId="istd::IPolymorphic" ComponentId="SearchTask"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description></Description>
+    <Keywords></Keywords>
+    <ElementsList>
+        <Element Id="Application" PackageId="QtGuiPck" ComponentId="GuiApplication">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="ApplicationInfo" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Info"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="MainGui" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Tabs"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Info" PackageId="IacfVoce" ComponentId="VersionInfo">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="LogTab" PackageId="AcfGuiVoce" ComponentId="LogDock">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="ParamsEditorGui" PackageId="AcfGuiVoce" ComponentId="SceneModelGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Gui" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="ParamsSetGui"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Model" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="ParamsSet"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="ParamsSet" PackageId="BasePck" ComponentId="ComposedParamsSet">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Parameters" Type="Reference[]" ExportId="Parameters">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParametersId" Type="Id[]" ExportId="Ids">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="ParamsSetGui" PackageId="QtGuiPck" ComponentId="ComposedParamsSetGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DesignType" Type="Integer" ExportId="">
+                        <Data IsEnabled="true" Value="1"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Editors" Type="Reference[]" ExportId="Editors">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Ids" Type="Id[]" ExportId="Ids">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Names" Type="Text[]" ExportId="Names">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="ParamsTab" PackageId="QtViewPck" ComponentId="SceneConnector">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="ExtenderGui" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="ParamsEditorGui"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SceneGui" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="ViewProvider"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Tabs" PackageId="QtGuiPck" ComponentId="TabContainer">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Guis" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>ParamsTab</Value>
+                                <Value>LogTab</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Names" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Snap</Value>
+                                <Value>Log</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="ViewProvider" PackageId="QtViewPck" ComponentId="ViewProvider">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="UseAntialiasing" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="ibase::IApplication" ComponentId="Application"/>
+        <Interface InterfaceId="ilog::IMessageConsumer" ComponentId="LogTab"/>
+        <Interface InterfaceId="ilog::IMessageContainer" ComponentId="LogTab"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="LogTab"/>
+        <Interface InterfaceId="iqtgui::IGuiObject" ComponentId="LogTab"/>
+        <Interface InterfaceId="iser::IVersionInfo" ComponentId="Info"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>
