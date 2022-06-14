@@ -192,6 +192,11 @@ I_EXPORT_COMPONENT(
 			"ID Parameter" IM_CATEGORY(I_DATA_MODEL));
 
 I_EXPORT_COMPONENT(
+			ParamsSetProxy,
+			"ParamsSet proxy",
+			"Params ParamsSet Proxy" IM_CATEGORY(I_DATA_MODEL));
+
+I_EXPORT_COMPONENT(
 			SingleDocumentTemplate,
 			"Single document template for only one type of documents",
 			"Single Template MVC" IM_CATEGORY(I_APPLICATION_LOGIC) IM_TAG("Document"));
