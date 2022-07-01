@@ -117,6 +117,11 @@ public:
 		PF_XY32,
 
 		/**
+			32-bit CMYK-bitmap.
+		*/
+		PF_CMYK,
+
+		/**
 			First user defined pixel format.
 		*/
 		PF_USER = 256

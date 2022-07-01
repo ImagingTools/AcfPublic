@@ -50397,6 +50397,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>PF_CMYK</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea3b62f658fabeaf93c7d3df7a0385403c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>PF_USER</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea2d2cb16572347303c10cbe08359ad67b</anchor>
@@ -50484,6 +50490,12 @@
       <name>PF_XY32</name>
       <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
       <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea1d1ba843c23391fb94b0329eb45f4287</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>PF_CMYK</name>
+      <anchorfile>classiimg_1_1_i_bitmap.html</anchorfile>
+      <anchor>a0c4e5f4e61840ce1e0330048cfa5f10ea3b62f658fabeaf93c7d3df7a0385403c</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
