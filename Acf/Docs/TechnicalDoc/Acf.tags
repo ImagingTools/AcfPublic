@@ -2110,9 +2110,17 @@
     <name>IDocumentMetaInfo.h</name>
     <path>C:/Temp/Acf/Include/idoc/</path>
     <filename>_i_document_meta_info_8h.html</filename>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <class kind="class">idoc::IDocumentMetaInfo</class>
     <namespace>idoc</namespace>
+    <member kind="typedef">
+      <type>istd::TSmartPtr&lt; IDocumentMetaInfo &gt;</type>
+      <name>MetaInfoPtr</name>
+      <anchorfile>namespaceidoc.html</anchorfile>
+      <anchor>abee2ceb15b3a414198b0229de0127edd</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="file">
     <name>IDocumentStateComparator.h</name>
@@ -85734,6 +85742,13 @@
     <class kind="class">idoc::ITextDocument</class>
     <class kind="class">idoc::IUndoManager</class>
     <class kind="class">idoc::TMultiPageDocumentWrap</class>
+    <member kind="typedef">
+      <type>istd::TSmartPtr&lt; IDocumentMetaInfo &gt;</type>
+      <name>MetaInfoPtr</name>
+      <anchorfile>namespaceidoc.html</anchorfile>
+      <anchor>abee2ceb15b3a414198b0229de0127edd</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="typedef">
       <type>idoc::TMultiPageDocumentWrap&lt; idoc::IMultiPageDocument &gt;</type>
       <name>CMultiPageDocumentBase</name>
