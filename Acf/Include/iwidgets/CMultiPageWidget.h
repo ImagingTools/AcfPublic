@@ -321,8 +321,8 @@ private:
 		If enabled, no notification about changes of the current page will be done.
 	*/
 	bool m_pageSwitchingBlocked;
-
-	CWidgetWheelEventBlocker m_widgetWheelEventBlocker;
+	
+	istd::TDelPtr<CWidgetWheelEventBlocker> m_widgetWheelEventBlockerPtr;
 
 };
 

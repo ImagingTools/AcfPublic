@@ -7249,7 +7249,6 @@
     <name>CWidgetWheelEventBlocker.h</name>
     <path>C:/Temp/Acf/Include/iwidgets/</path>
     <filename>_c_widget_wheel_event_blocker_8h.html</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <class kind="class">iwidgets::CWidgetWheelEventBlocker</class>
     <namespace>iwidgets</namespace>
   </compound>
@@ -48708,166 +48707,64 @@
   <compound kind="class">
     <name>iwidgets::CWidgetWheelEventBlocker</name>
     <filename>classiwidgets_1_1_c_widget_wheel_event_blocker.html</filename>
-    <base>istd::IChangeable</base>
     <member kind="enumeration">
       <type></type>
-      <name>ProcessingFlags</name>
+      <name>AffectedWidgets</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5</anchor>
+      <anchor>a9625dcae7af1f319838059f4b464e383</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>PF_NONE</name>
+      <name>AW_SPIN_BOXES</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5a147a4424edbef79843a9fba47977ac28</anchor>
+      <anchor>a9625dcae7af1f319838059f4b464e383aa538967ea5c518877fe914721af37cc3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>PF_SPIN_BOXES</name>
+      <name>AW_COMBO_BOXES</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5a98f44ebd000886681bed8163dbe56ea8</anchor>
+      <anchor>a9625dcae7af1f319838059f4b464e383ab826beeafb7a10fba8739c037cb45dcc</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>PF_COMBO_BOXES</name>
+      <name>AW_SPIN_BOXES</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5a482c5e9fc7fba0d4c358cbad4ad2d64a</anchor>
+      <anchor>a9625dcae7af1f319838059f4b464e383aa538967ea5c518877fe914721af37cc3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
-      <name>PF_COLLECT_CHILDREN</name>
+      <name>AW_COMBO_BOXES</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5aff291bdb1e27f88ba574a896f7d67dd3</anchor>
+      <anchor>a9625dcae7af1f319838059f4b464e383ab826beeafb7a10fba8739c037cb45dcc</anchor>
       <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QObject</type>
-      <name>BaseClass</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a8d36f3f4ca8e385d5e4a648f8a26fa12</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>istd::IChangeable</type>
-      <name>BaseClass2</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>af35eab61054126336364702fb9fe9ed5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="typedef">
-      <type>QList&lt; QObject * &gt;</type>
-      <name>ObjectsPtrsList</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a5b70aa75bda975e1bc176c1888345c49</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PF_NONE</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5a147a4424edbef79843a9fba47977ac28</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PF_SPIN_BOXES</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5a98f44ebd000886681bed8163dbe56ea8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PF_COMBO_BOXES</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5a482c5e9fc7fba0d4c358cbad4ad2d64a</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="enumvalue">
-      <name>PF_COLLECT_CHILDREN</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a7b603953dfe552a216d52906d24c21f5aff291bdb1e27f88ba574a896f7d67dd3</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>I_DECLARE_FLAGS</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>ad2ee2947c65308ea0052da5b1a9cba9b</anchor>
-      <arglist>(ProcessingFlags, PF_NONE, PF_SPIN_BOXES, PF_COMBO_BOXES, PF_COLLECT_CHILDREN)</arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CWidgetWheelEventBlocker</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a0863ec0abd5bd00346f42eab64e59ec1</anchor>
-      <arglist>(int flags=PF_NONE, QObject *parentPtr=nullptr)</arglist>
+      <anchor>a40f9a2b1ea848f08f9cd273dec2b7796</anchor>
+      <arglist>(QWidget *parentPtr, int flags=AW_SPIN_BOXES|AW_COMBO_BOXES)</arglist>
     </member>
-    <member kind="function">
-      <type>int</type>
-      <name>GetProcessingFlags</name>
+    <member kind="typedef" protection="protected">
+      <type>QList&lt; QObject * &gt;</type>
+      <name>ObjectPtrList</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a9aa8dd7306049dba046cf1e464bf49f1</anchor>
-      <arglist>() const</arglist>
+      <anchor>adc45e264bcf3d6551e303fe2e6e73b71</anchor>
+      <arglist></arglist>
     </member>
-    <member kind="function">
-      <type>const ObjectsPtrsList</type>
-      <name>GetWatchedWidgets</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a0c724f02fcc570e955c69dd8b4b9b100</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function">
+    <member kind="function" protection="protected">
       <type>void</type>
-      <name>SetProcessingFlags</name>
+      <name>FilterWidgets</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a731db2adb6dd748e083dfcc42f68951a</anchor>
-      <arglist>(int flags)</arglist>
+      <anchor>ad2fabb6aa8e81181e3cdb6d6ab4b4600</anchor>
+      <arglist>(ObjectPtrList &amp;widgetPtrsList)</arglist>
     </member>
-    <member kind="function">
-      <type>void</type>
-      <name>AddProcessingFlag</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a1f3e2e86a0338163445aafa9a3ba4180</anchor>
-      <arglist>(ProcessingFlags flag)</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>AcquireChildScrollArea</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a9d3a2524a90681cd890cae52be35e51b</anchor>
-      <arglist>(QObject &amp;parentObject)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AddChildrenWidgetsFromParent</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a855013990f07115de60e0102f938a060</anchor>
-      <arglist>(QObject &amp;parentObject)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>AddWidgets</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>ac64af725d802eba3721121802410c5f3</anchor>
-      <arglist>(ObjectsPtrsList &amp;widgetPtrsList)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>eventFilter</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
       <anchor>ad1b25d675e33993c2b73257f8e972df9</anchor>
       <arglist>(QObject *objectPtr, QEvent *eventPtr) override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>GetSupportedOperations</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>ac7eb86f0e5c53b887ed14759cb3190fe</anchor>
-      <arglist>() const override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ResetData</name>
-      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>aded0f592225f0e1088cc23378e541768</anchor>
-      <arglist>(CompatibilityMode mode) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -65474,6 +65371,95 @@
       <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
       <anchor>a68a5f39f761d95fff4bf04d35d987900</anchor>
       <arglist>(iview::CImageShape *ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetCastedOrRemove</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>ab1138022120c02f70f206f404cee6298</anchor>
+      <arglist>(SourceType *ptr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Detach</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a0db00924e06e8a1cf2ca6f4acf7fd01f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>TDelPtr&lt; iwidgets::CWidgetWheelEventBlocker &gt;</name>
+    <filename>classistd_1_1_t_del_ptr.html</filename>
+    <base>istd::TPointerBase</base>
+    <member kind="typedef">
+      <type>TPointerBase&lt; iwidgets::CWidgetWheelEventBlocker &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a87b57b7584e65b6b60e8a7c14dc58419</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a896ce8c6bef0468cb803e1c701d39ad5</anchor>
+      <arglist>(iwidgets::CWidgetWheelEventBlocker *ptr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a0a1b4b4044e72a40eff06aae3b7ee2cc</anchor>
+      <arglist>(const TDelPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a0fcab1cd48712954b560f29534489777</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a402b3bb1ac7c61782eedf605cc64a148</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>ad2e88db38d69bbee93059067d3ec1f08</anchor>
+      <arglist>(iwidgets::CWidgetWheelEventBlocker *ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>iwidgets::CWidgetWheelEventBlocker *</type>
+      <name>PopPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a699e9ff86495a4b8e5f22cbdc285c2cf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>TakeOver</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a44f838475fdc9654f29ba624593e88ec</anchor>
+      <arglist>(TDelPtr &amp;sourcePtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a027e7984f7ca086ff3c3b1f247f43694</anchor>
+      <arglist>(const TDelPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a68a5f39f761d95fff4bf04d35d987900</anchor>
+      <arglist>(iwidgets::CWidgetWheelEventBlocker *ptr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
