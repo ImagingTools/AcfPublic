@@ -326,14 +326,6 @@ void CLogGuiComp::ClearMessages()
 }
 
 
-// reimplemented (iqtgui::TDesignSchemaHandlerWrap)
-
-void CLogGuiComp::OnDesignSchemaChanged()
-{
-	UpdateVisualStatus();
-}
-
-
 // reimplemented (CGuiComponentBase)
 
 void CLogGuiComp::OnGuiCreated()
@@ -463,6 +455,14 @@ void CLogGuiComp::OnGuiDestroyed()
 	m_removeMessagesTimer.stop();
 
 	BaseClass::OnGuiDestroyed();
+}
+
+
+void CLogGuiComp::OnGuiDesignChanged()
+{
+	BaseClass::OnGuiDesignChanged();
+
+	UpdateVisualStatus();
 }
 
 

@@ -26,7 +26,6 @@
 
 // ACF includes
 #include <iqtgui/TMakeIconProviderCompWrap.h>
-#include <iqtgui/TDesignSchemaHandlerWrap.h>
 #include <iqtgui/CHierarchicalCommand.h>
 #include <ibase/ICommandsProvider.h>
 #include <iview/CConsoleBase.h>
@@ -96,6 +95,7 @@ public:
 	void SetFullScreenMode(bool isFullScreen);
 
 	void RetranslateGui();
+	void UpdateDesign();
 
 	// reimplemented (iview::CConsoleBase)
 	virtual const CViewport& GetView() const;
@@ -154,18 +154,12 @@ protected:
 	iview::CViewport* m_viewPtr;
 
 protected:
-	class UiResourcesManager: public iqtgui::TMakeIconProviderCompWrap<iqtgui::TDesignSchemaHandlerWrap<QObject>>
+	class UiResourcesManager: public iqtgui::TMakeIconProviderCompWrap<QObject>
 	{
 	public:
 		UiResourcesManager(CConsoleGui& parent)
 			:m_parent(parent)
 		{
-		}
-
-	protected:
-		virtual void OnDesignSchemaChanged() override
-		{
-			m_parent.UpdateCommands();
 		}
 
 		CConsoleGui& m_parent;

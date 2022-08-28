@@ -6612,7 +6612,6 @@
     <path>C:/Temp/Acf/Include/iview/</path>
     <filename>_c_console_gui_8h.html</filename>
     <includes id="_t_make_icon_provider_comp_wrap_8h" name="TMakeIconProviderCompWrap.h" local="no" imported="no">iqtgui/TMakeIconProviderCompWrap.h</includes>
-    <includes id="_t_design_schema_handler_wrap_8h" name="TDesignSchemaHandlerWrap.h" local="no" imported="no">iqtgui/TDesignSchemaHandlerWrap.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_c_console_base_8h" name="CConsoleBase.h" local="no" imported="no">iview/CConsoleBase.h</includes>
@@ -16243,6 +16242,13 @@
       <anchor>a5a73fffeb1a0661e335c2599cf242ca3</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>void</type>
+      <name>UpdateDesign</name>
+      <anchorfile>classiview_1_1_c_console_gui.html</anchorfile>
+      <anchor>a959aa91da8edcc7a40cd8af7ea4db16d</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const CViewport &amp;</type>
       <name>GetView</name>
@@ -21254,6 +21260,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
+      <anchor>abfa73cea672cb524e91911d49666cf75</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_c_gui_component_base.html</anchorfile>
       <anchor>a63af8cac8fe1b606d391935666d2df92</anchor>
@@ -25289,13 +25302,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnDesignSchemaChanged</name>
-      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a50d580923d1abb06c282ff3b3528527b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>a77b30b21f8b5aea82e9ddc136bbe4cc1</anchor>
@@ -25306,6 +25312,13 @@
       <name>OnGuiDestroyed</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
       <anchor>ab388d6e2dc6934112506280fc4ca9768</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a8342e93ed714e4264cb85c42340cd3cc</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -48571,13 +48584,6 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnDesignSchemaChanged</name>
-      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
-      <anchor>a114bf8cd5a6dd2f5a806ad350d303876</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
@@ -48595,6 +48601,13 @@
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>af9bac4c7d8a92b4c9ffb3a934dced771</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a7b88bfb05030bed215f858350e746006</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -71312,11 +71325,10 @@
     </member>
   </compound>
   <compound kind="class">
-    <name>TMakeIconProviderCompWrap&lt; iqtgui::TDesignSchemaHandlerWrap&lt; QObject &gt; &gt;</name>
+    <name>TMakeIconProviderCompWrap&lt; QObject &gt;</name>
     <filename>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</filename>
-    <base>iqtgui::TDesignSchemaHandlerWrap</base>
     <member kind="typedef">
-      <type>iqtgui::TDesignSchemaHandlerWrap&lt; QObject &gt;</type>
+      <type>QObject</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
       <anchor>a7d8d2e6ff2a78d89f0e354b3be0c8d71</anchor>
@@ -85081,7 +85093,7 @@
   <compound kind="class">
     <name>iview::CConsoleGui::UiResourcesManager</name>
     <filename>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</filename>
-    <base>TMakeIconProviderCompWrap&lt; iqtgui::TDesignSchemaHandlerWrap&lt; QObject &gt; &gt;</base>
+    <base>TMakeIconProviderCompWrap&lt; QObject &gt;</base>
     <member kind="function">
       <type></type>
       <name>UiResourcesManager</name>
@@ -85089,14 +85101,7 @@
       <anchor>a214e85ccdcfbc2f07e68f0673580a464</anchor>
       <arglist>(CConsoleGui &amp;parent)</arglist>
     </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnDesignSchemaChanged</name>
-      <anchorfile>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</anchorfile>
-      <anchor>a019bc9618b293ed8259fd1a7b45bc001</anchor>
-      <arglist>() override</arglist>
-    </member>
-    <member kind="variable" protection="protected">
+    <member kind="variable">
       <type>CConsoleGui &amp;</type>
       <name>m_parent</name>
       <anchorfile>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</anchorfile>

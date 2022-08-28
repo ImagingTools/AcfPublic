@@ -102,6 +102,8 @@ protected:
 	};
 
 protected:
+	virtual void OnGuiDesignChanged();
+
 	/**
 		Called from widget event filter when slave widget is shown.
 	*/
@@ -190,6 +192,8 @@ private:
 	{
 		return &component.m_visualStatus;
 	}
+
+	bool m_hasPendingDesignChanges;
 };
 
 
