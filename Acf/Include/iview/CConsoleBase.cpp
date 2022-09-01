@@ -45,7 +45,8 @@ namespace iview
 // public methods
 
 CConsoleBase::CConsoleBase(QWidget* parent)
-	:QWidget(parent)
+	:QWidget(parent),
+	m_updateBlockFlags(0)
 {
 	Init();
 }
@@ -167,7 +168,10 @@ void CConsoleBase::SetPolylineButtonsVisible(bool state)
 	if (state != m_arePolylineButtonsVisible){
 		m_arePolylineButtonsVisible = state;
 		UpdateComponentsPosition();
-		UpdateCommands();
+
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -177,7 +181,10 @@ void CConsoleBase::SetUserModeButtonsVisible(bool state)
 	if (state != m_areUserModeButtonsVisible){
 		m_areUserModeButtonsVisible = state;
 		UpdateComponentsPosition();
-		UpdateCommands();
+
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -187,7 +194,10 @@ void CConsoleBase::SetScrollbarsButtonVisible(bool state)
 	if (state != m_isScrollbarsButtonVisible){
 		m_isScrollbarsButtonVisible = state;
 		UpdateComponentsPosition();
-		UpdateCommands();
+
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -197,7 +207,10 @@ void CConsoleBase::SetGridButtonVisible(bool state)
 	if (state != m_isGridButtonVisible){
 		m_isGridButtonVisible = state;
 		UpdateComponentsPosition();
-		UpdateCommands();
+
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -207,7 +220,10 @@ void CConsoleBase::SetRulerButtonVisible(bool state)
 	if (state != m_isRulerButtonVisible){
 		m_isRulerButtonVisible = state;
 		UpdateComponentsPosition();
-		UpdateCommands();
+
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -217,7 +233,10 @@ void CConsoleBase::SetMmButtonVisible(bool state)
 	if (state != m_isMmButtonVisible){
 		m_isMmButtonVisible = state;
 		UpdateComponentsPosition();
-		UpdateCommands();
+
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -235,7 +254,9 @@ void CConsoleBase::SetDistanceMeasureButtonVisible(bool state)
 
 		UpdateComponentsPosition();
 
-		UpdateCommands();
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -248,12 +269,14 @@ bool CConsoleBase::IsPointMeasureButtonVisible() const
 
 void CConsoleBase::SetPointMeasureButtonVisible(bool state)
 {
-	if (state != m_isPointMeasureButtonVisible) {
+	if (state != m_isPointMeasureButtonVisible){
 		m_isPointMeasureButtonVisible = state;
 
 		UpdateComponentsPosition();
 
-		UpdateCommands();
+		if ((m_updateBlockFlags & BF_COMMANDS) == 0){
+			UpdateCommands();
+		}
 	}
 }
 
@@ -276,6 +299,20 @@ void CConsoleBase::UpdateView()
 	view.Update();
 }
 
+
+void CConsoleBase::SetUpdateBlocked(bool isBlocked, int flags)
+{
+	if (!isBlocked){
+		if (m_updateBlockFlags & BF_COMMANDS){
+			UpdateCommands();
+		}
+
+		m_updateBlockFlags = 0;
+	}
+	else{
+		m_updateBlockFlags = flags;
+	}
+}
 
 // private methods
 
