@@ -103,6 +103,8 @@ iqtgui::CGuiComponentDialog* CDialogGuiComp::CreateComponentDialog(int buttons, 
 								true,
 								parentWidgetPtr));
 
+		dialogPtr->setWindowFlags((Qt::WindowFlags)*m_windowFlagsAttrPtr);
+
 		if (m_dialogTitleAttrPtr.IsValid()){
 			dialogPtr->setWindowTitle((*m_dialogTitleAttrPtr));
 		}
