@@ -49,6 +49,7 @@
 #include <QtGui/QIcon>
 #include <QtCore/QtGlobal>
 #include <QtGui/QKeyEvent>
+#include <QtWidgets/QPushButton>
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QApplication>
 #else
@@ -142,6 +143,28 @@ iqtgui::CGuiComponentDialog* CDialogGuiComp::CreateComponentDialog(int buttons, 
 		}
 
 		dialogPtr->SetDialogGeometry(m_initialDialogSizeAttrPtr.IsValid() ? *m_initialDialogSizeAttrPtr : 0.0);
+
+		if (*m_defaultButtonAttrPtr != 0){
+			QDialogButtonBox* boxPtr = const_cast<QDialogButtonBox*>(dialogPtr->GetButtonBoxPtr());
+			if (boxPtr != nullptr){
+				QList<QAbstractButton*> buttons = boxPtr->buttons();
+				for (QAbstractButton* buttonPtr : buttons){
+					QPushButton* pushButtonPtr = dynamic_cast<QPushButton*>(buttonPtr);
+					if (pushButtonPtr != nullptr){
+						pushButtonPtr->setDefault(false);
+						pushButtonPtr->setAutoDefault(false);
+					}
+				}
+
+				QPushButton* pushButtonPtr = boxPtr->button((QDialogButtonBox::StandardButton)*m_defaultButtonAttrPtr);
+				if (pushButtonPtr != nullptr){
+					pushButtonPtr->setDefault(true);
+					if (!(*m_defaultButtonPropertyAttrPtr).isEmpty()){
+						pushButtonPtr->setProperty(*m_defaultButtonPropertyAttrPtr, true);
+					}
+				}
+			}
+		}
 	}
 
 	return dialogPtr.PopPtr();
