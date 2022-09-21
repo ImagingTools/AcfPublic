@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4439" Description="ACF"/>
+            <Version Id="1" Number="1778" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328961" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Dialog displaying and managing compositor settings</Description>
+    <Keywords></Keywords>
+    <ElementsList>
+        <Element Id="ConfigEditor" PackageId="CompositorVoce" ComponentId="SelectableConfigDataEditor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="ConfigSelectorGui" PackageId="QtGuiPck" ComponentId="SelectionParamGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DefaultModel" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Settings/ConfigsManager"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="LabelAlignment" Type="Integer" ExportId="">
+                        <Data IsEnabled="true" Value="1"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="LabelPosition" Type="Integer" ExportId="">
+                        <Data IsEnabled="true" Value="1"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="OptionsLabel" Type="Text" ExportId="">
+                        <Data IsEnabled="true" Value="Configuration"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="ConfigSelectorToolbar" PackageId="QtGuiPck" ComponentId="ToolBarWidgetGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DockFeatures" Type="Integer" ExportId="">
+                        <Data IsEnabled="true" Value="2"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ToolBarWidget" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="ConfigSelectorGui"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="DocumentPersistenceGui" PackageId="QtGuiPck" ComponentId="EnableableParamGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Label" Type="Text" ExportId="">
+                        <Data IsEnabled="true" Value="Remember open documents on exit"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="HtmlBrowserFileGui" PackageId="QtGuiPck" ComponentId="FileNameParamGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="HtmlEditorFileGui" PackageId="QtGuiPck" ComponentId="FileNameParamGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="LanguageSelectionGui" PackageId="QtGuiPck" ComponentId="SelectionParamGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="PreviewCommandFileGui" PackageId="QtGuiPck" ComponentId="FileNameParamGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="FileTypeInfo" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="PreviewCommandFileInfo"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="PreviewCommandFileInfo" PackageId="FilePck" ComponentId="FileTypeInfo">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="FileExtensionsMac" Type="String[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value></Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="FileExtensionsUnx" Type="String[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value></Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="FileExtensionsWin" Type="String[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>exe</Value>
+                                <Value>bat</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="TypeDescriptionsMac" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>MAC executable file</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="TypeDescriptionsUnx" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Executable file</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="TypeDescriptionsWin" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Windows executable</Value>
+                                <Value>Script file</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Settings" PackageId="CompositorVoce" ComponentId="CompositorSettings">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="LanguageSelectionConstraints" Type="Reference" ExportId="LanguageSelectionConstraints">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SettingsDialog" PackageId="QtGuiPck" ComponentId="ModelDialogGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DialogIconPath" Type="String" ExportId="">
+                        <Data IsEnabled="true" Value=":/Icons/Settings"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DialogTitle" Type="Text" ExportId="">
+                        <Data IsEnabled="true" Value="Settings"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Gui" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="SettingsGui"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Model" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Settings"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="WorkingDataFactory" Type="Factory" ExportId="">
+                        <Data IsEnabled="true" Value="WorkingSettings"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SettingsGui" PackageId="QtGuiPck" ComponentId="ComposedParamsSetGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Editors" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>ConfigEditor</Value>
+                                <Value>PreviewCommandFileGui</Value>
+                                <Value>HtmlBrowserFileGui</Value>
+                                <Value>HtmlEditorFileGui</Value>
+                                <Value>LanguageSelectionGui</Value>
+                                <Value>DocumentPersistenceGui</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Ids" Type="Id[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>ConfigFile</Value>
+                                <Value>PreviewCommandFile</Value>
+                                <Value>HtmlBrowserFile</Value>
+                                <Value>HtmlEditorFile</Value>
+                                <Value>LanguageSelection</Value>
+                                <Value>EnableDocumentPersistence</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Names" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Configuration File</Value>
+                                <Value>ACF Command Path</Value>
+                                <Value>HTML Browser</Value>
+                                <Value>HTML Editor</Value>
+                                <Value>Language</Value>
+                                <Value>Document Persistence</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SettingsPersistence" PackageId="AcfGuiVoce" ComponentId="SettingsPersistence">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="ApplicationInfo" Type="Reference" ExportId="ApplicationInfo">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Object" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Settings"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="RootKey" Type="Id" ExportId="">
+                        <Data IsEnabled="true" Value="ApplicationSettings/$(ConfigurationName)"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="WorkingSettings" PackageId="CompositorVoce" ComponentId="CompositorSettings">
+            <Data IsEnabled="true" Flags="2">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="LanguageSelectionConstraints" Type="Reference" ExportId="LanguageSelectionConstraints">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="iqtgui::IDialog" ComponentId="SettingsDialog"/>
+    </ExportedInterfaces>
+    <ExportedComponents>
+        <Component ExportedId="ConfigFile" ComponentId="Settings/ConfigFile"/>
+        <Component ExportedId="ConfigSelectorToolbar" ComponentId="ConfigSelectorToolbar"/>
+        <Component ExportedId="EnableDocumentPersistence" ComponentId="Settings/EnableDocumentPersistence"/>
+        <Component ExportedId="HtmlBrowserFile" ComponentId="Settings/HtmlBrowserFile"/>
+        <Component ExportedId="HtmlEditorFile" ComponentId="Settings/HtmlEditorFile"/>
+        <Component ExportedId="LanguageSelection" ComponentId="Settings/LanguageSelection"/>
+        <Component ExportedId="PreviewCommandFile" ComponentId="Settings/PreviewCommandFile"/>
+        <Component ExportedId="SettingsGui" ComponentId="SettingsGui"/>
+    </ExportedComponents>
+</Acf>

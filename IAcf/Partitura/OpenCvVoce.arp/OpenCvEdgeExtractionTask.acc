@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4606" Description="ACF"/>
+            <Version Id="1" Number="1937" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="329217" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Extracts edges from image</Description>
+    <Keywords>Supplier Edge Contour Extraction Processing Get Provider Task Category='&quot;Data Processing&quot;'</Keywords>
+    <ElementsList>
+        <Element Id="BinarizationTask" PackageId="ImageProcessingVoce" ComponentId="BinarizationTask">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="SmoothedImageSupplier"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DefaultThreshold" Type="Real[]" ExportId="DefaultEdgeExtractionThreshold">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="InverseMode" Type="Boolean" ExportId="InverseMode">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="EdgeExtractor" PackageId="" ComponentId="EdgeExtractor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="BinarizationTask"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="CalibrationProvider" Type="Reference" ExportId="CalibrationProvider">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="GrayImageSupplier" PackageId="" ComponentId="GrayImageSupplier">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="BitmapProvider">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="InspectionTask" PackageId="InspectionPck" ComponentId="InspectionTask">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Subtasks" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>GrayImageSupplier</Value>
+                                <Value>SmoothedImageSupplier</Value>
+                                <Value>BinarizationTask</Value>
+                                <Value>EdgeExtractor</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SmoothedImageSupplier" PackageId="" ComponentId="SmoothedImageSupplier">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="GrayImageSupplier"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList>
+        <EmbeddedRegistry Id="EdgeExtractor">
+            <Data Description="" Keywords="">
+                <ElementsList>
+                    <Element Id="ApproxMode" PackageId="BasePck" ComponentId="SelectionParam">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="Constraints" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="OpenCvEdgeExtractor/ApproxModeList"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="DefaultIndex" Type="Integer" ExportId="">
+                                    <Data IsEnabled="true" Value="0"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="ExtractedEdgesSupplier" PackageId="EdgePck" ComponentId="ExtractedEdgeLinesSupplier">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="AdditionalTriggerInputs" Type="Reference[]" ExportId="AdditionalTriggerInputs">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="BitmapProvider">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="CalibrationProvider" Type="Reference" ExportId="CalibrationProvider">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="DiagnosticName" Type="Text" ExportId="">
+                                    <Data IsEnabled="true" Value="EdgeExtractor"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="EdgesExtractor" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="OpenCvEdgeExtractor"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="ParamsSet" Type="Reference" ExportId="ParamsSet">
+                                    <Data IsEnabled="true" Value="ProcessingParams"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="OpenCvEdgeExtractor" PackageId="OpenCvPck" ComponentId="OpenCvEdgeExtractor">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="AoiParamId" Type="Id" ExportId="AoiParamId">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="ApproxModeParamId" Type="Id" ExportId="ApproxModeParamId">
+                                    <Data IsEnabled="true" Value="ApproxMode"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="ContourModeParamId" Type="Id" ExportId="ContourModeParamId">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Log" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="ExtractedEdgesSupplier/TaskLog"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="ProcessingParams" PackageId="BasePck" ComponentId="ComposedParamsSet">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="Parameters" Type="Reference[]" ExportId="">
+                                    <Data IsEnabled="true">
+                                        <Values>
+                                            <Value>ApproxMode</Value>
+                                        </Values>
+                                    </Data>
+                                </AttributeInfo>
+                                <AttributeInfo Id="ParametersId" Type="Id[]" ExportId="">
+                                    <Data IsEnabled="true">
+                                        <Values>
+                                            <Value>ApproxMode</Value>
+                                        </Values>
+                                    </Data>
+                                </AttributeInfo>
+                                <AttributeInfo Id="TypeId" Type="Id" ExportId="">
+                                    <Data IsEnabled="true" Value="ContourExtraction"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                </ElementsList>
+                <EmbeddedRegistriesList/>
+                <ExportedInterfaces>
+                    <Interface InterfaceId="iedge::IEdgeLinesProvider" ComponentId="ExtractedEdgesSupplier"/>
+                    <Interface InterfaceId="iinsp::ISupplier" ComponentId="ExtractedEdgesSupplier"/>
+                    <Interface InterfaceId="imod::IModel" ComponentId="ExtractedEdgesSupplier"/>
+                    <Interface InterfaceId="istd::IChangeable" ComponentId="ExtractedEdgesSupplier"/>
+                    <Interface InterfaceId="istd::IPolymorphic" ComponentId="ExtractedEdgesSupplier"/>
+                </ExportedInterfaces>
+                <ExportedComponents/>
+            </Data>
+        </EmbeddedRegistry>
+        <EmbeddedRegistry Id="GrayImageSupplier">
+            <Data Description="" Keywords="">
+                <ElementsList>
+                    <Element Id="BitmapGray" PackageId="BitmapPck" ComponentId="Bitmap">
+                        <Data IsEnabled="true" Flags="2">
+                            <AttributeInfoMap/>
+                        </Data>
+                    </Element>
+                    <Element Id="GrayImageSupplier" PackageId="IprPck" ComponentId="ProcessedBitmapSupplier">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="AdditionalTriggerInputs" Type="Reference[]" ExportId="AdditionalTriggerInputs">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapFactory" Type="Factory" ExportId="">
+                                    <Data IsEnabled="true" Value="BitmapGray"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapProcessor" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="RgbToGrayProcessor"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="BitmapProvider">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="DiagnosticName" Type="Text" ExportId="">
+                                    <Data IsEnabled="true" Value="GrayImage"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="RgbToGrayProcessor" PackageId="IprPck" ComponentId="RgbToGrayProcessor">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                </ElementsList>
+                <EmbeddedRegistriesList/>
+                <ExportedInterfaces>
+                    <Interface InterfaceId="iimg::IBitmapProvider" ComponentId="GrayImageSupplier"/>
+                    <Interface InterfaceId="iinsp::ISupplier" ComponentId="GrayImageSupplier"/>
+                    <Interface InterfaceId="imod::IModel" ComponentId="GrayImageSupplier"/>
+                    <Interface InterfaceId="istd::IChangeable" ComponentId="GrayImageSupplier"/>
+                </ExportedInterfaces>
+                <ExportedComponents/>
+            </Data>
+        </EmbeddedRegistry>
+        <EmbeddedRegistry Id="SmoothedImageSupplier">
+            <Data Description="" Keywords="">
+                <ElementsList>
+                    <Element Id="BitmapSmooth" PackageId="BitmapPck" ComponentId="Bitmap">
+                        <Data IsEnabled="true" Flags="2">
+                            <AttributeInfoMap/>
+                        </Data>
+                    </Element>
+                    <Element Id="FilterSize" PackageId="MeasPck" ComponentId="NumericParams">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="Constraints" Type="Reference" ExportId="SmoothFilterConstraints">
+                                    <Data IsEnabled="true" Value="RectImageSmoothProcessor/FilterContraints"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Values" Type="Real[]" ExportId="">
+                                    <Data IsEnabled="true">
+                                        <Values>
+                                            <Value>1</Value>
+                                            <Value>1</Value>
+                                        </Values>
+                                    </Data>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="ProcessingParams" PackageId="BasePck" ComponentId="ComposedParamsSet">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="Parameters" Type="Reference[]" ExportId="">
+                                    <Data IsEnabled="true">
+                                        <Values>
+                                            <Value>FilterSize</Value>
+                                        </Values>
+                                    </Data>
+                                </AttributeInfo>
+                                <AttributeInfo Id="ParametersId" Type="Id[]" ExportId="">
+                                    <Data IsEnabled="true">
+                                        <Values>
+                                            <Value>FilterSize</Value>
+                                        </Values>
+                                    </Data>
+                                </AttributeInfo>
+                                <AttributeInfo Id="TypeId" Type="Id" ExportId="">
+                                    <Data IsEnabled="true" Value="ContourExtraction"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="RectImageSmoothProcessor" PackageId="IprPck" ComponentId="RectImageSmoothProcessor">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="FilterParamsId" Type="Id" ExportId="">
+                                    <Data IsEnabled="true" Value="FilterSize"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Log" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="SmoothedImageSupplier/TaskLog"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                    <Element Id="SmoothedImageSupplier" PackageId="IprPck" ComponentId="ProcessedBitmapSupplier">
+                        <Data IsEnabled="true" Flags="0">
+                            <AttributeInfoMap>
+                                <AttributeInfo Id="AdditionalTriggerInputs" Type="Reference[]" ExportId="AdditionalTriggerInputs">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapFactory" Type="Factory" ExportId="">
+                                    <Data IsEnabled="true" Value="BitmapSmooth"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapProcessor" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="RectImageSmoothProcessor"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="BitmapProvider" Type="Reference" ExportId="BitmapProvider">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="DiagnosticName" Type="Text" ExportId="">
+                                    <Data IsEnabled="true" Value="SmoothedImage"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                                    <Data IsEnabled="false"/>
+                                </AttributeInfo>
+                                <AttributeInfo Id="ParamsSet" Type="Reference" ExportId="">
+                                    <Data IsEnabled="true" Value="ProcessingParams"/>
+                                </AttributeInfo>
+                            </AttributeInfoMap>
+                        </Data>
+                    </Element>
+                </ElementsList>
+                <EmbeddedRegistriesList/>
+                <ExportedInterfaces>
+                    <Interface InterfaceId="iimg::IBitmapProvider" ComponentId="SmoothedImageSupplier"/>
+                    <Interface InterfaceId="iinsp::ISupplier" ComponentId="SmoothedImageSupplier"/>
+                    <Interface InterfaceId="imod::IModel" ComponentId="SmoothedImageSupplier"/>
+                    <Interface InterfaceId="istd::IChangeable" ComponentId="SmoothedImageSupplier"/>
+                    <Interface InterfaceId="istd::IPolymorphic" ComponentId="SmoothedImageSupplier"/>
+                </ExportedInterfaces>
+                <ExportedComponents>
+                    <Component ExportedId="SmoothFilterContraints" ComponentId="RectImageSmoothProcessor/FilterContraints"/>
+                </ExportedComponents>
+            </Data>
+        </EmbeddedRegistry>
+    </EmbeddedRegistriesList>
+    <ExportedInterfaces>
+        <Interface InterfaceId="iedge::IEdgeLinesProvider" ComponentId="EdgeExtractor"/>
+        <Interface InterfaceId="iinsp::IInspectionTask" ComponentId="InspectionTask"/>
+        <Interface InterfaceId="iinsp::ISupplier" ComponentId="InspectionTask"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="EdgeExtractor"/>
+        <Interface InterfaceId="iser::ISerializable" ComponentId="InspectionTask"/>
+        <Interface InterfaceId="istd::IChangeable" ComponentId="EdgeExtractor"/>
+        <Interface InterfaceId="istd::IInformationProvider" ComponentId="InspectionTask"/>
+    </ExportedInterfaces>
+    <ExportedComponents>
+        <Component ExportedId="Parameters" ComponentId="InspectionTask/Parameters"/>
+    </ExportedComponents>
+</Acf>

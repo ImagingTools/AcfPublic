@@ -1,0 +1,104 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iauth_CRightsBasedEnablerComp_included
+#define iauth_CRightsBasedEnablerComp_included
+
+
+// Qt includes
+#include <QtCore/QByteArray>
+
+// ACF includes
+#include <icomp/CComponentBase.h>
+#include <imod/TSingleModelObserverBase.h>
+#include <iprm/IEnableableParam.h>
+
+// ACF-Solutions includes
+#include <iauth/IRightsProvider.h>
+
+
+namespace iauth
+{
+
+
+/**
+	State component implementation based on underlaying rights provider.
+*/
+class CRightsBasedEnablerComp:
+			public icomp::CComponentBase,
+			virtual public iprm::IEnableableParam,
+			protected imod::TSingleModelObserverBase<iauth::IRightsProvider>
+{
+public:
+	typedef icomp::CComponentBase BaseClass;
+	typedef imod::TSingleModelObserverBase<iauth::IRightsProvider> BaseClass2;
+
+	I_BEGIN_COMPONENT(CRightsBasedEnablerComp);
+		I_REGISTER_INTERFACE(iprm::IEnableableParam);
+		I_ASSIGN(m_rightsProviderCompPtr, "RightsProvider", "Slave rights provider", true, "RightsProvider");
+		I_ASSIGN_TO(m_rightsProviderModelCompPtr, m_rightsProviderCompPtr, true);
+		I_ASSIGN_MULTI_0(m_rightIdsAttrPtr, "RightIds", "List of right IDs to be checked for calculation of the entire enabling state", true);
+	I_END_COMPONENT;
+
+	CRightsBasedEnablerComp();
+
+	// reimplemented (iprm::IEnableableParam)
+	virtual bool IsEnabled() const;
+	virtual bool IsEnablingAllowed() const;
+	virtual bool SetEnabled(bool isEnabled = true);
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive);
+
+protected:
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
+
+	// reimplemented (imod::TSingleModelObserverBase)
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
+
+private:
+	/**
+		Underlaying rights provider.
+	*/
+	I_REF(IRightsProvider, m_rightsProviderCompPtr);
+	I_REF(imod::IModel, m_rightsProviderModelCompPtr);
+
+	/**
+		List if the right IDs to be checked for calculation of the final enabling state.
+	*/
+	I_MULTIATTR(QByteArray, m_rightIdsAttrPtr);
+
+	/**
+		Current enabling state.
+	*/
+	bool m_isEnabled;
+};
+
+
+} // namespace iauth
+
+
+#endif // !iauth_CRightsBasedEnablerComp_included
+
+
