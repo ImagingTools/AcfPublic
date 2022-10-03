@@ -4969,6 +4969,7 @@
     <includes id="_i_dialog_8h" name="IDialog.h" local="no" imported="no">iqtgui/IDialog.h</includes>
     <includes id="_c_gui_component_dialog_8h" name="CGuiComponentDialog.h" local="no" imported="no">iqtgui/CGuiComponentDialog.h</includes>
     <includes id="_c_hierarchical_command_8h" name="CHierarchicalCommand.h" local="no" imported="no">iqtgui/CHierarchicalCommand.h</includes>
+    <class kind="class">iqtgui::CDialogGuiCompAttr</class>
     <class kind="class">iqtgui::CDialogGuiComp</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -16833,13 +16834,13 @@
   <compound kind="class">
     <name>iqtgui::CDialogGuiComp</name>
     <filename>classiqtgui_1_1_c_dialog_gui_comp.html</filename>
-    <base>icomp::CComponentBase</base>
+    <base>iqtgui::CDialogGuiCompAttr</base>
     <base virtualness="virtual">iqtgui::IDialog</base>
     <member kind="typedef">
-      <type>icomp::CComponentBase</type>
+      <type>CDialogGuiCompAttr</type>
       <name>BaseClass</name>
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
-      <anchor>acd7fe5ded9a9e2fbb78cd1c38277d961</anchor>
+      <anchor>a12ad6692a1ed20028bdd8aa7f5bbdb2b</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -16897,6 +16898,18 @@
       <anchorfile>classiqtgui_1_1_c_dialog_gui_comp.html</anchorfile>
       <anchor>a4f3b61e691793eb9b4984476803cb106</anchor>
       <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iqtgui::CDialogGuiCompAttr</name>
+    <filename>classiqtgui_1_1_c_dialog_gui_comp_attr.html</filename>
+    <base>icomp::CComponentBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiqtgui_1_1_c_dialog_gui_comp_attr.html</anchorfile>
+      <anchor>a73e47476397384da7bd04c6337fa5c49</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21458,6 +21471,13 @@
       <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
       <anchor>a171cf05205e5b3af63e71229ff97beb5</anchor>
       <arglist>(double screenFactor=0.0, const QPoint *positionPtr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetDialogGeometry</name>
+      <anchorfile>classiqtgui_1_1_c_gui_component_dialog.html</anchorfile>
+      <anchor>a7e0a3d864eafae99e2c64f598f623a7b</anchor>
+      <arglist>(double screenFactorX, double screenFactorY, const QPoint *positionPtr=NULL)</arglist>
     </member>
     <member kind="function">
       <type>const QDialogButtonBox *</type>
@@ -86309,6 +86329,7 @@
     <class kind="class">iqtgui::CCommandTools</class>
     <class kind="class">iqtgui::CComposedGuiComp</class>
     <class kind="class">iqtgui::CDialogApplicationComp</class>
+    <class kind="class">iqtgui::CDialogGuiCompAttr</class>
     <class kind="class">iqtgui::CDialogGuiComp</class>
     <class kind="class">iqtgui::CDockWidgetGuiComp</class>
     <class kind="class">iqtgui::CFreeWidgetGuiComp</class>

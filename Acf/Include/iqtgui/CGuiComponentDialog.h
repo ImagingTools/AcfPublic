@@ -75,6 +75,7 @@ public:
 		\param positionPtr	Position of the dialog on the screen. If not set, the dialog will be placed at the center of the screen.
 	*/
 	void SetDialogGeometry(double screenFactor = 0.0, const QPoint* positionPtr = NULL);
+	void SetDialogGeometry(double screenFactorX, double screenFactorY, const QPoint* positionPtr = NULL);
 
 	/**
 		Returns the internal button box.
@@ -97,7 +98,8 @@ private:
 	QDialogButtonBox* m_buttonsBox;
 	iqtgui::IGuiObject* m_guiObjectPtr;
 
-	double m_screenFactor;
+	double m_screenFactorX;
+	double m_screenFactorY;
 	const QPoint* m_screenPositionPtr;
 };
 
