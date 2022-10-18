@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4790" Description="ACF"/>
+            <Version Id="1" Number="2079" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="331008" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <PositionMap>
+        <Element ComponentName="BlobsSupplier" X="450" Y="200" Note=""/>
+        <Element ComponentName="Calibration2dProxy" X="950" Y="550" Note=""/>
+        <Element ComponentName="FilterParams" X="450" Y="550" Note=""/>
+        <Element ComponentName="GetBlackBlobs" X="125" Y="150" Note=""/>
+        <Element ComponentName="OpenCvBlobExtractor" X="125" Y="375" Note=""/>
+        <Element ComponentName="Params" X="450" Y="375" Note=""/>
+        <Element ComponentName="Region" X="700" Y="550" Note=""/>
+    </PositionMap>
+    <EmbeddedRegistries/>
+</Acf>

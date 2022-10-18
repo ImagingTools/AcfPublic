@@ -1,0 +1,86 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef CompositorPck_included
+#define CompositorPck_included
+
+
+#include <icomp/TModelCompWrap.h>
+#include <icomp/TMakeComponentWrap.h>
+#include <ibase/TModelObserverCompWrap.h>
+
+#include <icmpstr/CAttributeEditorComp.h>
+#include <icmpstr/CPackageOverviewComp.h>
+#include <icmpstr/CRegistryLoaderComp.h>
+#include <icmpstr/CRegistryPreviewComp.h>
+#include <icmpstr/CComponentHelpFileProviderComp.h>
+#include <icmpstr/CVisualRegistry.h>
+#include <icmpstr/CVisualRegistryEditorComp.h>
+#include <icmpstr/CRegistryConsistInfoComp.h>
+#include <icmpstr/CRegistryPropEditorComp.h>
+#include <icmpstr/CQuickHelpGuiComp.h>
+#include <icmpstr/CPackagesLoaderExtComp.h>
+#include <icmpstr/CComponentNoteEditorComp.h>
+#include <icmpstr/CSceneProviderGuiComp.h>
+#include <icmpstr/CXpcEditorComp.h>
+#include <icmpstr/CRegistryTreeViewComp.h>
+#include <icmpstr/CConvertComponentCommandComp.h>
+
+
+/**
+	Component manipulation package.
+	This package is used to contruct Compositor tool.
+*/
+namespace CompositorPck
+{
+
+
+typedef ibase::TModelObserverCompWrap<icmpstr::CAttributeEditorComp> AttributeEditor;
+typedef icomp::TModelCompWrap<icmpstr::CPackageOverviewComp> PackageOverview;
+typedef icmpstr::CRegistryLoaderComp RegistryLoader;
+typedef icmpstr::CRegistryPreviewComp RegistryPreview;
+typedef icmpstr::CComponentHelpFileProviderComp ComponentHelpFileProvider;
+typedef icomp::TMakeComponentWrap<
+			imod::TModelWrap<icmpstr::CVisualRegistry>,
+			icomp::IRegistry,
+			iser::ISerializable,
+			istd::IChangeable,
+			imod::IModel,
+			icmpstr::IComponentNoteController> VisualRegistry;
+typedef icomp::TModelCompWrap<icmpstr::CVisualRegistryEditorComp> VisualRegistryScenographer;
+typedef icmpstr::CRegistryConsistInfoComp RegistryConsistInfo;
+typedef icmpstr::CRegistryPropEditorComp RegistryPropEditor;
+typedef icmpstr::CQuickHelpGuiComp QuickHelpGui;
+typedef icomp::TModelCompWrap<icmpstr::CPackagesLoaderExtComp> PackagesLoaderExt;
+typedef icmpstr::CComponentNoteEditorComp ComponentNoteEditor;
+typedef icomp::TModelCompWrap<icmpstr::CSceneProviderGuiComp> SceneProvider;
+typedef icmpstr::CXpcEditorComp XpcEditorGui;
+typedef icmpstr::CRegistryTreeViewComp RegistryTreeView;
+typedef ibase::TModelObserverCompWrap<icmpstr::CConvertComponentCommandComp> ConvertComponentCommand;
+
+
+} // namespace CompositorPck
+
+
+#endif // !CompositorPck_included
+
+

@@ -1,0 +1,123 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iblob_CPreciseBlobProcessorComp_included
+#define iblob_CPreciseBlobProcessorComp_included
+
+
+// ACF includes
+#include <iprm/IEnableableParam.h>
+#include <iimg/CScanlineMask.h>
+
+// ACF-Solutions includes
+#include <imeas/INumericValue.h>
+#include <imeas/CGeneralNumericConstraints.h>
+#include <iblob/CBlobProcessorCompBase.h>
+
+
+namespace iblob
+{
+
+
+/**
+	Implementation of image processor using convolution kernel.
+*/
+class CPreciseBlobProcessorComp: public CBlobProcessorCompBase
+{
+public:
+	typedef CBlobProcessorCompBase BaseClass;
+
+	I_BEGIN_COMPONENT(CPreciseBlobProcessorComp);
+		I_REGISTER_SUBELEMENT(ThresholdContraints);
+		I_REGISTER_SUBELEMENT_INTERFACE(ThresholdContraints, imeas::INumericConstraints, ExtractThresholdContraints);
+		I_REGISTER_SUBELEMENT_INTERFACE(ThresholdContraints, istd::IChangeable, ExtractThresholdContraints);
+		I_ASSIGN(m_thresholdParamIdAttrPtr, "ThresholdParamId", "ID of threshold value in parameter set (imeas::INumericValue)", false, "Threshold");
+		I_ASSIGN(m_defaultThresholdCompPtr, "DefaultThreshold", "Threshold used if not specified in parameters", false, "DefaultThreshold");
+		I_ASSIGN(m_isThresholdRelativeParamIdAttrPtr, "IsThresholdRelativeParamId", "ID of flag (if threshold is relative) in parameter set (iprm::IEnableableParam)", false, "IsRelative");
+		I_ASSIGN(m_defaultIsThresholdRelativeCompPtr, "DefaultIsThresholdRelative", "Flag if the threshold is relative (if not specified in parameters)", false, "DefaultIsThresholdRelative");
+		I_ASSIGN(m_resultConsumerCompPtr, "ResultConsumer", "Consumer of result messages with geometrical layout", false, "ResultConsumer");
+		I_ASSIGN(m_tempConsumerCompPtr, "TempConsumer", "Consumer of temporary result messages with geometrical layout", false, "TempConsumer");
+	I_END_COMPONENT;
+
+	enum MessageId
+	{
+		MI_FOUND_BLOB = 0x9354f0
+	};
+
+	CPreciseBlobProcessorComp();
+
+	// static methods
+	/**
+		Calculate complete convolution with all parameters as static function.
+		\param	valueRange			range of accepüted values, it should be in range [0, 1].
+		\param	isRangeRelative		indicate if the \c valueRange is relative (will be adjusted to minimal and maximal values) or absolute.
+									Absolute value is normalized to range [0, 1], where 0 is black, 1 is white.
+		\param	filterParamsPtr		optional filter of considered blobs. If \c NULL no filter will be used.
+		\param	imageMask			AOI mask where the image pixels should be used.
+		\param	image				input image.
+		\param	result				consumer of result blob features.
+		\param	loggerPtr			optional object collecting processing messages.
+	*/
+	static bool DoCalculateBlobs(
+				const istd::CRange& valueRange,
+				bool isRangeRelative,
+				const iblob::IBlobFilterParams* filterParamsPtr,
+				const iimg::CScanlineMask& imageMask,
+				const iimg::IBitmap& image,
+				iipr::IFeaturesConsumer& result,
+				ilog::IMessageConsumer* resultConsumerPtr = NULL,
+				ilog::IMessageConsumer* tempMessageConsumerPtr = NULL);
+
+protected:
+	// reimplemented (iblob::CBlobProcessorCompBase)
+	virtual bool CalculateBlobs(
+				const iprm::IParamsSet* paramsPtr,
+				const iblob::IBlobFilterParams* filterParamsPtr,
+				const i2d::IObject2d* aoiPtr,
+				const iimg::IBitmap& image,
+				iipr::IFeaturesConsumer& result);
+
+private:
+	I_ATTR(QByteArray, m_thresholdParamIdAttrPtr);
+	I_REF(imeas::INumericValue, m_defaultThresholdCompPtr);
+	I_ATTR(QByteArray, m_isThresholdRelativeParamIdAttrPtr);
+	I_REF(iprm::IEnableableParam, m_defaultIsThresholdRelativeCompPtr);
+	I_REF(ilog::IMessageConsumer, m_resultConsumerCompPtr);
+	I_REF(ilog::IMessageConsumer, m_tempConsumerCompPtr);
+
+	// static template methods for subelement access
+	template <class InterfaceType>
+	static InterfaceType* ExtractThresholdContraints(CPreciseBlobProcessorComp& component)
+	{
+		return &component.m_thresholdContraints;
+	}
+
+	imeas::CGeneralNumericConstraints m_thresholdContraints;
+};
+
+
+} // namespace iblob
+
+
+#endif // !iblob_CPreciseBlobProcessorComp_included
+
+

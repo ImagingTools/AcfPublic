@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description></Description>
+    <Keywords></Keywords>
+    <ElementsList>
+        <Element Id="RegistryModelBinder" PackageId="BasePck" ComponentId="SelectedDocModelBinder">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="ActivationObject" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="VisualRegistry"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DocumentManager" Type="Reference" ExportId="DocumentManager">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Model" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="VisualRegistry"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Observers" Type="Reference[]" ExportId="RegistryObservers">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="VisualRegistry" PackageId="CompositorPck" ComponentId="VisualRegistry">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="MetaInfoManager" Type="Reference" ExportId="MetaInfoManager">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="icmpstr::IComponentNoteController" ComponentId="VisualRegistry"/>
+        <Interface InterfaceId="icomp::IRegistry" ComponentId="VisualRegistry"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="VisualRegistry"/>
+        <Interface InterfaceId="istd::IChangeable" ComponentId="VisualRegistry"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>
