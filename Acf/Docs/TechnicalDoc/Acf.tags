@@ -41379,6 +41379,20 @@
       <arglist>(istd::IPolymorphic *viewPtr=NULL, bool beQuiet=false, bool *ignoredPtr=NULL)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>BeforeSavingDocument</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>a440750d496b1d14161755a39ee4a8bc3</anchor>
+      <arglist>(const QString &amp;filePath)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>AfterSavingDocument</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>a5bb6d9680486c307df7c5a3eb7ecea28</anchor>
+      <arglist>(bool saveState)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>OpenSingleDocument</name>
       <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
