@@ -31,11 +31,12 @@ namespace iqtgui
 {
 
 
-CHierarchicalCommand::CHierarchicalCommand(const QString& name, int priority, int staticFlags, int groupId)
+CHierarchicalCommand::CHierarchicalCommand(const QString& name, int priority, int staticFlags, int groupId, const QByteArray& commandId)
 :	BaseClass(name, NULL),
 	m_priority(priority),
 	m_staticFlags(0),
-	m_groupId(groupId)
+	m_groupId(groupId),
+	m_commandId(commandId)
 {
 	BaseClass3::SetName(QString(name).replace('&', ""));
 	SetStaticFlags(staticFlags);
@@ -47,6 +48,18 @@ CHierarchicalCommand::CHierarchicalCommand(const QString& name, int priority, in
 void CHierarchicalCommand::SetPriority(int priority)
 {
 	m_priority = priority;
+}
+
+
+QByteArray CHierarchicalCommand::GetCommandId() const
+{
+	return m_commandId;
+}
+
+
+void CHierarchicalCommand::SetCommandId(const QByteArray& commandId)
+{
+	m_commandId = commandId;
 }
 
 

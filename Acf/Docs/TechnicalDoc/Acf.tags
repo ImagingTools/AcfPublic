@@ -21750,8 +21750,8 @@
       <type></type>
       <name>CHierarchicalCommand</name>
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
-      <anchor>af8f687d00d6f953cae7f800e150adbde</anchor>
-      <arglist>(const QString &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL)</arglist>
+      <anchor>a025d20f9f6c8121bdff4d56789f414f4</anchor>
+      <arglist>(const QString &amp;name=&quot;&quot;, int priority=100, int staticFlags=CF_GLOBAL_MENU, int groupId=GI_NORMAL, const QByteArray &amp;commandId=QByteArray())</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -21766,6 +21766,13 @@
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
       <anchor>a3069c429f7d67830eee7d55eab560fc7</anchor>
       <arglist>(int flags)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetCommandId</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>a9a88666da47cefe28ffa820aae4fee7b</anchor>
+      <arglist>(const QByteArray &amp;commandId)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -21814,6 +21821,13 @@
       <name>GetPriority</name>
       <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
       <anchor>a852ae0ddeeb2f6290308fb7c9dc819b7</anchor>
+      <arglist>() const</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual QByteArray</type>
+      <name>GetCommandId</name>
+      <anchorfile>classiqtgui_1_1_c_hierarchical_command.html</anchorfile>
+      <anchor>ac7e5dcb539d8e5b2cd4796a49b460c79</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -51895,6 +51909,13 @@
       <name>GetPriority</name>
       <anchorfile>classibase_1_1_i_command.html</anchorfile>
       <anchor>a7701c46b3a14d95395b88a45c11b458f</anchor>
+      <arglist>() const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual QByteArray</type>
+      <name>GetCommandId</name>
+      <anchorfile>classibase_1_1_i_command.html</anchorfile>
+      <anchor>a73c1904c036c854f492d1f6ba080614e</anchor>
       <arglist>() const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
