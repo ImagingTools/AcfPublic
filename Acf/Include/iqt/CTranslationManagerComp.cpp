@@ -122,7 +122,9 @@ void CTranslationManagerComp::SwitchLanguage(int languageIndex)
 	}
 
 	if (languageIndex >= 0 && languageIndex < m_translatorsList.count()){
-		QCoreApplication::installTranslator(m_translatorsList[languageIndex].translatorPtr.GetPtr());
+		if (!m_installTranslator.IsValid() ||  *m_installTranslator){
+			QCoreApplication::installTranslator(m_translatorsList[languageIndex].translatorPtr.GetPtr());
+		}
 
 		m_currentLanguageIndex = languageIndex;
 	}
