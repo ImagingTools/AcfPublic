@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4349" Description="ACF"/>
+            <Version Id="1" Number="1683" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328961" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Search for edge on the line position using 1 pixel wide projection</Description>
+    <Keywords>Edge Finder Processor Caliper Tool</Keywords>
+    <ElementsList>
+        <Element Id="Caliper" PackageId="IprPck" ComponentId="ExtremumCaliperProcessor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="CaliperParamsId" Type="Id" ExportId="CaliperParamId">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Casade" PackageId="ProcessingPck" ComponentId="CascadedProcessor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Buffers" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Projection</Value>
+                                <Value>Derivative</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Processors" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>LineProjection</Value>
+                                <Value>DerivativeProcessor</Value>
+                                <Value>Caliper</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Derivative" PackageId="MeasPck" ComponentId="GeneralDataSequence">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="DerivativeProcessor" PackageId="IprPck" ComponentId="RectDerivativeProcessor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="FilterParamsId" Type="Id" ExportId="FilterParamsId">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="LineProjection" PackageId="IprPck" ComponentId="LineProjectionProcessor">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="FeatureMapper" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="Caliper"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="LineParamId" Type="Id" ExportId="LineParamId">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="Projection" PackageId="MeasPck" ComponentId="GeneralDataSequence">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="iipr::IFeatureToImageMapper" ComponentId="LineProjection"/>
+        <Interface InterfaceId="iipr::IProjectionConstraints" ComponentId="LineProjection"/>
+        <Interface InterfaceId="iproc::IProcessor" ComponentId="Casade"/>
+    </ExportedInterfaces>
+    <ExportedComponents>
+        <Component ExportedId="Derivative" ComponentId="Derivative"/>
+        <Component ExportedId="Projection" ComponentId="Projection"/>
+    </ExportedComponents>
+</Acf>

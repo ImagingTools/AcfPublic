@@ -1,0 +1,114 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#include <iauth/CRightsBasedEnablerComp.h>
+
+
+namespace iauth
+{
+
+
+// public methods
+
+CRightsBasedEnablerComp::CRightsBasedEnablerComp()
+	:m_isEnabled(false)
+{
+}
+
+
+// reimplemented (iprm::IEnableableParam)
+
+bool CRightsBasedEnablerComp::IsEnabled() const
+{
+	return m_isEnabled;
+}
+
+
+bool CRightsBasedEnablerComp::IsEnablingAllowed() const
+{
+	return false;
+}
+
+
+bool CRightsBasedEnablerComp::SetEnabled(bool /*isEnabled*/)
+{
+	return false;
+}
+
+
+// reimplemented (iser::ISerializable)
+
+bool CRightsBasedEnablerComp::Serialize(iser::IArchive& /*archive*/)
+{
+	return true;
+}
+
+
+// protected methods
+
+// reimplemented (icomp::CComponentBase)
+
+void CRightsBasedEnablerComp::OnComponentCreated()
+{
+	BaseClass::OnComponentCreated();
+
+	if (m_rightsProviderModelCompPtr.IsValid()){
+		m_rightsProviderModelCompPtr->AttachObserver(this);
+	}
+}
+
+
+void CRightsBasedEnablerComp::OnComponentDestroyed()
+{
+	EnsureModelDetached();
+
+	BaseClass::OnComponentDestroyed();
+}
+
+
+// reimplemented (imod::TSingleModelObserverBase)
+
+void CRightsBasedEnablerComp::OnUpdate(const ChangeSet& /*changeSet*/)
+{
+	bool retVal = m_isEnabled;
+
+	if (m_rightsProviderCompPtr.IsValid()){
+		int rightsCount = m_rightIdsAttrPtr.GetCount();
+
+		retVal = (rightsCount > 0);
+	
+		for (int rightIndex = 0; rightIndex < rightsCount; rightIndex++){
+			retVal = retVal && m_rightsProviderCompPtr->HasRight(m_rightIdsAttrPtr[rightIndex], true);
+		}
+	}
+
+	if (retVal != m_isEnabled){
+		istd::CChangeNotifier changePtr(this);
+
+		m_isEnabled = retVal;
+	}
+}
+
+
+} // namespace iauth
+
+

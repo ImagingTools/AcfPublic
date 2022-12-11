@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="Images/" >
+	<file alias="CompositorSplashScreen">Resources/Images/CompositorSplashScreen.svg</file>
+	<file alias="CompositorLogo">Resources/Images/CompositorLogo.svg</file>
+  </qresource>
+  <qresource prefix="Icons/" >
+	<file alias="CompositorIcon">Resources/Icons/CompositorIcon.svg</file>
+  </qresource>
+</RCC>
