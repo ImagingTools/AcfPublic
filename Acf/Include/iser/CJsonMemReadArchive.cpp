@@ -20,27 +20,22 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <iser/CJsonMemReadArchive.h>
 
 
-namespace istd
+namespace iser
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+// public methods
+
+CJsonMemReadArchive::CJsonMemReadArchive(const QByteArray &inputString)
+	: CJsonReadArchiveBase()
 {
-	RS_ORIGINAL_VERSION =  5046,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	initArchive(inputString);
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace iser
 
 

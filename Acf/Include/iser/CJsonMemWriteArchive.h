@@ -20,27 +20,29 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
+
+// ACF includes
+#include <iser/CJsonWriteArchiveBase.h>
 
 
-namespace istd
+namespace iser
 {
+
 
 /**
-	Enumeration for reflecting the state of ACF's SVN repository.
+	Implementation of an ACF Archive serializing to JSON string
 */
-enum RepositoryState
+class CJsonMemWriteArchive: public CJsonWriteArchiveBase
 {
-	RS_ORIGINAL_VERSION =  5046,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	CJsonMemWriteArchive(
+				QByteArray& inputString,
+				const iser::IVersionInfo* versionInfoPtr = NULL,
+				QJsonDocument::JsonFormat jsonFormat = QJsonDocument::Compact);
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace iser
 
 

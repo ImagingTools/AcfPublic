@@ -20,27 +20,30 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <iser/CJsonMemWriteArchive.h>
 
 
-namespace istd
+// Qt includes
+#include <QtCore/QJsonDocument>
+#include <QtCore/QJsonObject>
+
+
+namespace iser
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+// public methods
+
+
+CJsonMemWriteArchive::CJsonMemWriteArchive(
+				QByteArray &inputString,
+				const IVersionInfo* versionInfoPtr,
+				QJsonDocument::JsonFormat jsonFormat)
+		: CJsonWriteArchiveBase(versionInfoPtr)
 {
-	RS_ORIGINAL_VERSION =  5046,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	InitArchive(inputString);
+}
 
-
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace iser
 
 

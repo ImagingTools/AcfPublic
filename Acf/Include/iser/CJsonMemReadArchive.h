@@ -20,27 +20,33 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// ACF includes
+#include <iser/CJsonReadArchiveBase.h>
+
+
+namespace iser
 {
+
 
 /**
-	Enumeration for reflecting the state of ACF's SVN repository.
+	Implementation of an ACF archive deserializing from a JSON string
+
+	\note	As to simplify decoding of some more complicated data structures support
+			for special annotation tags was added. They are used for guiding the 
+			deserialization algorithm in some special cases.
 */
-enum RepositoryState
+class CJsonMemReadArchive : public iser::CJsonReadArchiveBase
 {
-	RS_ORIGINAL_VERSION =  5046,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	typedef CTextReadArchiveBase BaseClass;
+
+	CJsonMemReadArchive(const QByteArray& inputString);
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace iser
 
 
