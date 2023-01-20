@@ -47,9 +47,7 @@ public:
 	// reimplemented (idoc::IDocumentMetaInfo)
 	virtual MetaInfoTypes GetMetaInfoTypes(bool allowReadOnly = true) const;
 	virtual QVariant GetMetaInfo(int metaInfoType) const;
-	virtual QVariant GetMetaInfo(QByteArray metaInfoId) const;
 	virtual bool SetMetaInfo(int metaInfoType, const QVariant& metaInfo);
-	virtual bool SetMetaInfo(QByteArray metaInfoId, const QVariant& metaInfo);
 	virtual QByteArray GetMetaInfoId(int metaInfoType) const;
 	virtual QString GetMetaInfoName(int metaInfoType) const;
 	virtual QString GetMetaInfoDescription(int metaInfoType) const;
@@ -64,11 +62,8 @@ public:
 	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS);
 
-protected:
-	bool GetMetaInfoType(int& metainfoType, const QByteArray& metaInfoId) const;
-
 private:
-	typedef QMap<QByteArray, QVariant> MetaInfoMap;
+	typedef QMap<int, QVariant> MetaInfoMap;
 	MetaInfoMap m_infosMap;
 };
 
