@@ -22,6 +22,7 @@
 
 #pragma once
 
+
 // ACF includes
 #include <iser/CJsonWriteArchiveBase.h>
 
@@ -36,6 +37,8 @@ namespace iser
 class CJsonMemWriteArchive: public CJsonWriteArchiveBase
 {
 public:
+	typedef CJsonWriteArchiveBase BaseClass;
+
 	CJsonMemWriteArchive(
 				QByteArray& inputString,
 				const iser::IVersionInfo* versionInfoPtr = NULL,

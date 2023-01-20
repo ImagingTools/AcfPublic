@@ -23366,6 +23366,13 @@
     <name>ifile::CJsonFileReadArchive</name>
     <filename>classifile_1_1_c_json_file_read_archive.html</filename>
     <base>iser::CJsonReadArchiveBase</base>
+    <member kind="typedef">
+      <type>iser::CJsonReadArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classifile_1_1_c_json_file_read_archive.html</anchorfile>
+      <anchor>aa70e0d885cd85db32f63691907c7f1f8</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CJsonFileReadArchive</name>
@@ -23405,24 +23412,31 @@
     <filename>classiser_1_1_c_json_mem_read_archive.html</filename>
     <base>iser::CJsonReadArchiveBase</base>
     <member kind="typedef">
-      <type>CTextReadArchiveBase</type>
+      <type>CJsonReadArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_json_mem_read_archive.html</anchorfile>
-      <anchor>a6de6ec5961bd9ef2b1ecf0b272d96c85</anchor>
+      <anchor>a454195b3e8b73d9d3bd727db569cf548</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
       <type></type>
       <name>CJsonMemReadArchive</name>
       <anchorfile>classiser_1_1_c_json_mem_read_archive.html</anchorfile>
-      <anchor>a979bc89d0bb5c95e112f7d130968a0a1</anchor>
-      <arglist>(const QByteArray &amp;inputString)</arglist>
+      <anchor>ab2a2e5c27c660f254ae15786607987ac</anchor>
+      <arglist>(const QByteArray &amp;data)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iser::CJsonMemWriteArchive</name>
     <filename>classiser_1_1_c_json_mem_write_archive.html</filename>
     <base>iser::CJsonWriteArchiveBase</base>
+    <member kind="typedef">
+      <type>CJsonWriteArchiveBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classiser_1_1_c_json_mem_write_archive.html</anchorfile>
+      <anchor>a5f12f5b9f53aecf143c3205d2ae6f5d7</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CJsonMemWriteArchive</name>
@@ -23478,10 +23492,10 @@
       <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
-      <name>initArchive</name>
+      <type>bool</type>
+      <name>InitArchive</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a2c523d61481a6ae1993d1328b9b107c7</anchor>
+      <anchor>af65228e9109edb3ec327c81f6e8feac2</anchor>
       <arglist>(const QByteArray &amp;inputString)</arglist>
     </member>
     <member kind="function" protection="protected">
@@ -23920,24 +23934,24 @@
       <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
+      <type>bool</type>
       <name>InitStream</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>ab15a5bd0f0962ecd49b0dec36c0646a0</anchor>
+      <anchor>ac2a3360d92f1fa06735c6ae118697449</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
+      <type>bool</type>
       <name>InitArchive</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>ac934069e9857481f51dc932135e28a9f</anchor>
+      <anchor>aae99f9ede510bee937540c4f3147ccde</anchor>
       <arglist>(QIODevice *devicePtr)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
+      <type>bool</type>
       <name>InitArchive</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a79f367f9e4bbc8afdd1b3c82bd99f0b0</anchor>
+      <anchor>a03b2ddefb56b1e582506bc24a8878ff2</anchor>
       <arglist>(QByteArray &amp;inputString)</arglist>
     </member>
     <member kind="function" protection="protected">
