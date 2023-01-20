@@ -120,14 +120,24 @@ public:
 	virtual MetaInfoTypes GetMetaInfoTypes(bool allowReadOnly = true) const = 0;
 
 	/**
-		Get document's meta info.
+		Get document's meta info for a given meta type.
 	*/
 	virtual QVariant GetMetaInfo(int metaInfoType) const = 0;
+
+	/**
+		Get document's meta info for a ID meta info.
+	*/
+	virtual QVariant GetMetaInfo(QByteArray metaInfoId) const = 0;
 
 	/**
 		Set new document's meta information for a given meta type.
 	*/
 	virtual bool SetMetaInfo(int metaInfoType, const QVariant& metaInfo) = 0;
+
+	/**
+		Set new document's meta information for a ID meta info.
+	*/
+	virtual bool SetMetaInfo(QByteArray metaInfoId, const QVariant& metaInfo) = 0;
 
 	/**
 		Get an unique ID of the meta information.

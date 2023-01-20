@@ -47,22 +47,33 @@ const istd::IChangeable::ChangeSet s_setMetaInfoChangeSet(idoc::IDocumentMetaInf
 
 CStandardDocumentMetaInfo::MetaInfoTypes CStandardDocumentMetaInfo::GetMetaInfoTypes(bool /*allowReadOnly*/) const
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
-	QList<int> keys = m_infosMap.keys();
+	QSet<int> metaInfoTypes;
 
-	return QSet<int>(keys.begin(), keys.end());
-#else
-	return m_infosMap.keys().toSet();
-#endif
+	for (QByteArray metainfoId: m_infosMap.keys()){
+		int metaInfoType;
+		if (GetMetaInfoType(metaInfoType, metainfoId)){
+			metaInfoTypes.insert(metaInfoType);
+		}
+	}
+
+	return metaInfoTypes;
 }
 
 
 QVariant CStandardDocumentMetaInfo::GetMetaInfo(int metaInfoType) const
 {
+	QByteArray metaInfoId = GetMetaInfoId(metaInfoType);
+
+	return GetMetaInfo(metaInfoId);
+}
+
+
+QVariant CStandardDocumentMetaInfo::GetMetaInfo(QByteArray metaInfoId) const
+{
 	static QVariant emptyValue;
 
-	if (m_infosMap.contains(metaInfoType)){
-		return m_infosMap[metaInfoType];
+	if (m_infosMap.contains(metaInfoId)){
+		return m_infosMap[metaInfoId];
 	}
 
 	return emptyValue;
@@ -71,20 +82,22 @@ QVariant CStandardDocumentMetaInfo::GetMetaInfo(int metaInfoType) const
 
 bool CStandardDocumentMetaInfo::SetMetaInfo(int metaInfoType, const QVariant& metaInfo)
 {
-	if (		!m_infosMap.contains(metaInfoType) ||
-				(m_infosMap.contains(metaInfoType) &&
-				(m_infosMap[metaInfoType].type() == metaInfo.type()) &&
-				(m_infosMap[metaInfoType] != metaInfo)) ||
-				(m_infosMap.contains(metaInfoType) &&
-				(m_infosMap[metaInfoType].type() != metaInfo.type()))
-				){
+	QByteArray metaInfoId = GetMetaInfoId(metaInfoType);
+
+	return SetMetaInfo(metaInfoId, metaInfo);
+}
+
+bool CStandardDocumentMetaInfo::SetMetaInfo(QByteArray metaInfoId, const QVariant &metaInfo)
+{
+	if(!metaInfoId.isEmpty() && !m_infosMap.contains(metaInfoId)){
 		istd::CChangeNotifier notifier(this, &s_setMetaInfoChangeSet);
 		Q_UNUSED(notifier);
 
-		m_infosMap[metaInfoType] = metaInfo;
+		m_infosMap[metaInfoId] = metaInfo;
+		return true;
 	}
 
-	return true;
+	return false;
 }
 
 
@@ -238,7 +251,8 @@ bool CStandardDocumentMetaInfo::Serialize(iser::IArchive& archive)
 					++index){
 			retVal = retVal && archive.BeginTag(metaInfoTag);
 
-			int type = index.key();
+			int type;
+			GetMetaInfoType(type, index.key());
 			retVal = retVal && archive.BeginTag(typeTag);
 			retVal = retVal && archive.Process(type);
 			retVal = retVal && archive.EndTag(typeTag);
@@ -275,7 +289,7 @@ bool CStandardDocumentMetaInfo::Serialize(iser::IArchive& archive)
 		for (int itemIndex = 0; itemIndex < metaInfosCount; ++itemIndex){
 			retVal = retVal && archive.BeginTag(metaInfoTag);
 
-			int type;
+			int type = -1;
 			retVal = retVal && archive.BeginTag(typeTag);
 			retVal = retVal && archive.Process(type);
 			retVal = retVal && archive.EndTag(typeTag);
@@ -306,7 +320,9 @@ bool CStandardDocumentMetaInfo::Serialize(iser::IArchive& archive)
 			variantStream >> variantValue;
 
 			if (retVal){
-				m_infosMap[type] = variantValue;
+				QByteArray metaInfoId = GetMetaInfoId(type);
+				Q_ASSERT(metaInfoId.isEmpty());
+				m_infosMap[metaInfoId] = variantValue;
 			}
 
 			retVal = retVal && archive.EndTag(metaInfoTag);
@@ -367,6 +383,65 @@ bool CStandardDocumentMetaInfo::ResetData(CompatibilityMode /*mode*/)
 	}
 
 	return true;
+}
+
+bool CStandardDocumentMetaInfo::GetMetaInfoType(int &metainfoType, const QByteArray &metaInfoId) const
+{
+	if (metaInfoId == "Title"){
+		metainfoType = MIT_TITLE;
+
+		return true;
+	}
+
+	if (metaInfoId == "Author"){
+		metainfoType = MIT_AUTHOR;
+
+		return true;
+	}
+
+	if (metaInfoId == "Creator"){
+		metainfoType = MIT_CREATOR;
+
+		return true;
+	}
+
+	if (metaInfoId == "Description"){
+		metainfoType = MIT_DESCRIPTION;
+
+		return true;
+	}
+
+	if (metaInfoId == "CreationTime"){
+		metainfoType = MIT_CREATION_TIME;
+
+		return true;
+	}
+
+	if (metaInfoId == "ModificationTime"){
+		metainfoType = MIT_MODIFICATION_TIME;
+
+		return true;
+	}
+
+	if (metaInfoId == "CreatorVersion"){
+		metainfoType = MIT_CREATOR_VERSION;
+
+		return true;
+	}
+
+	if (metaInfoId == "Version"){
+		metainfoType = MIT_DOCUMENT_VERSION;
+
+		return true;
+	}
+
+	if (metaInfoId == "Checksum"){
+		metainfoType = MIT_CONTENT_CHECKSUM;
+
+		return true;
+	}
+
+	return false;
 }
 
 

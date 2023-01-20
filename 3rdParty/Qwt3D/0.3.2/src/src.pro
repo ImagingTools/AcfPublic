@@ -3,8 +3,8 @@ TEMPLATE          = lib
 DESTDIR      	  = ../lib
 CONFIG           += qt warn_on thread static #release
 QT               += opengl
-#QT += openglwidgets
-#CONFIG += staticlib
+QT += openglwidgets
+CONFIG += staticlib
 
 SOURCES           = *.cpp
 
