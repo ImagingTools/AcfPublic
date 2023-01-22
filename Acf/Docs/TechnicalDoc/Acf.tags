@@ -5750,6 +5750,7 @@
     <filename>_c_json_read_archive_base_8h.html</filename>
     <includes id="_c_text_read_archive_base_8h" name="CTextReadArchiveBase.h" local="no" imported="no">iser/CTextReadArchiveBase.h</includes>
     <class kind="class">iser::CJsonReadArchiveBase</class>
+    <class kind="class">iser::CJsonReadArchiveBase::HelperIterator</class>
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
@@ -23400,6 +23401,13 @@
       <arglist>(const QString &amp;filePath=&quot;&quot;, const iser::IVersionInfo *infoPtr=nullptr)</arglist>
     </member>
     <member kind="function">
+      <type></type>
+      <name>~CJsonFileWriteArchive</name>
+      <anchorfile>classifile_1_1_c_json_file_write_archive.html</anchorfile>
+      <anchor>ac0d9624474d36599bde0f0622f0f4cd3</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>OpenFile</name>
       <anchorfile>classifile_1_1_c_json_file_write_archive.html</anchorfile>
@@ -23449,12 +23457,20 @@
     <name>iser::CJsonReadArchiveBase</name>
     <filename>classiser_1_1_c_json_read_archive_base.html</filename>
     <base>iser::CTextReadArchiveBase</base>
+    <class kind="class">iser::CJsonReadArchiveBase::HelperIterator</class>
     <member kind="typedef">
       <type>CTextReadArchiveBase</type>
       <name>BaseClass</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
       <anchor>a4d563be4386d8b50130f452f89aa6963</anchor>
       <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CJsonReadArchiveBase</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
+      <anchor>aa213ed128b3b164e34f99e0122cea145</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -23483,13 +23499,6 @@
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
       <anchor>a85b81c77746385ad39f3c44e43ac8429</anchor>
       <arglist>(QString &amp;value)</arglist>
-    </member>
-    <member kind="typedef" protection="protected">
-      <type>QList&lt; const iser::CArchiveTag * &gt;</type>
-      <name>TagsList</name>
-      <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>afcd865ed6881f70f55295af1164a44ad</anchor>
-      <arglist></arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -23520,38 +23529,17 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>QVector&lt; QJsonObject::const_iterator &gt;</type>
-      <name>m_objectsStack</name>
+      <type>QVector&lt; HelperIterator &gt;</type>
+      <name>m_iterators</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>afeb6076ffa2cc7cb81a9cae140665065</anchor>
+      <anchor>a3d06d21503562024b109290c0c1e2a74</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_isNewFormat</name>
+      <type>iser::CArchiveTag</type>
+      <name>m_rootTag</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a2712d6a6edbd2357a56ed5e275e193cc</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_allowAttribute</name>
-      <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a254ed0e177c9added71877af53b4ec76</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QByteArray</type>
-      <name>m_currentAttribute</name>
-      <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a5a18c5fab70c2709705c6391df0e36b5</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>TagsList</type>
-      <name>m_tagsStack</name>
-      <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>af6b2b0af66021d7ddaa708ed56d1738d</anchor>
+      <anchor>a1aca24cb764b9bc941ba34c0e0330365</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23801,13 +23789,6 @@
       <arglist>(const iser::IVersionInfo *versionInfoPtr=NULL, QJsonDocument::JsonFormat jsonFormat=QJsonDocument::Compact)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CJsonWriteArchiveBase</name>
-      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a1db6ac65994a5c51697239a702e3b041</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
@@ -23841,6 +23822,13 @@
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
       <anchor>a45932c45356f61c2fb5846cad8229f16</anchor>
       <arglist>(QString &amp;value)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>Process</name>
+      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
+      <anchor>a891673ecf220eaafc5a2ee939fe98f27</anchor>
+      <arglist>(QByteArray &amp;value)</arglist>
     </member>
     <member kind="function">
       <type>virtual bool</type>
@@ -23955,10 +23943,10 @@
       <arglist>(QByteArray &amp;inputString)</arglist>
     </member>
     <member kind="function" protection="protected">
-      <type>void</type>
+      <type>bool</type>
       <name>WriteTag</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a7323574ea5c8fd3cdd8cabc285f1270f</anchor>
+      <anchor>a917a2e449f228ae6e3a7236bbf36cddd</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag, QString separator, bool isWriteTag=true)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -23969,10 +23957,17 @@
       <arglist>(const QByteArray &amp;text)</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; QTextStream &gt;</type>
+      <type>QTextStream</type>
       <name>m_stream</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a7337272c660189c841a58663c4b0dae0</anchor>
+      <anchor>ad86a47a96df898efdd57c72582532f1c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QBuffer</type>
+      <name>m_buffer</name>
+      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
+      <anchor>a021a45882b1afa88523efb1d529fede9</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -23987,13 +23982,6 @@
       <name>m_jsonFormat</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
       <anchor>a430b408cac45ca008ae330d4b53e2cd8</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>QByteArray</type>
-      <name>m_currentAttribute</name>
-      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>ac72181838826caf30a0c08a127a573dd</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
@@ -50198,6 +50186,66 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iser::CJsonReadArchiveBase::HelperIterator</name>
+    <filename>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>SetKey</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>a287304d6910bf0033ceade8a21323398</anchor>
+      <arglist>(QString &amp;key)</arglist>
+    </member>
+    <member kind="function">
+      <type>const QString</type>
+      <name>GetKey</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>af09ed713c3948e6e5186a58eddb53f9a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QString</type>
+      <name>GetValue</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>a41b1c46c81c7c5054e40c2646a4382b7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>QJsonObject</type>
+      <name>GetObject</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>a579dc2eea44f7a8645a07bfe9e2917b6</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>NextElementArray</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>ae0f2ed5d3cfaf6e8a407973ad20cad31</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetValue</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>a2b1d2bdc0d5367a54a97a3757aff2aed</anchor>
+      <arglist>(const QJsonValue value)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isObject</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>aa55c42d20da97d0ed0389a6a571f521c</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>isArray</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>a16ed54450c1ef705cb86ff60af8dce3c</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>ibase::IApplication</name>
     <filename>classibase_1_1_i_application.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -67542,109 +67590,6 @@
       <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
       <anchor>a68a5f39f761d95fff4bf04d35d987900</anchor>
       <arglist>(QTextBrowser *ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>bool</type>
-      <name>SetCastedOrRemove</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>ab1138022120c02f70f206f404cee6298</anchor>
-      <arglist>(SourceType *ptr)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>Detach</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a0db00924e06e8a1cf2ca6f4acf7fd01f</anchor>
-      <arglist>()</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>TDelPtr&lt; QTextStream &gt;</name>
-    <filename>classistd_1_1_t_del_ptr.html</filename>
-    <base>istd::TPointerBase</base>
-    <member kind="typedef">
-      <type>TPointerBase&lt; QTextStream &gt;</type>
-      <name>BaseClass</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a87b57b7584e65b6b60e8a7c14dc58419</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TDelPtr</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a896ce8c6bef0468cb803e1c701d39ad5</anchor>
-      <arglist>(QTextStream *ptr=NULL)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TDelPtr</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a0a1b4b4044e72a40eff06aae3b7ee2cc</anchor>
-      <arglist>(const TDelPtr &amp;ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>TDelPtr</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>aac1c3a51aa0a24ecd30833f592cc44b3</anchor>
-      <arglist>(TDelPtr &amp;&amp;ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>~TDelPtr</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a0fcab1cd48712954b560f29534489777</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>Reset</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a402b3bb1ac7c61782eedf605cc64a148</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>SetPtr</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>ad2e88db38d69bbee93059067d3ec1f08</anchor>
-      <arglist>(QTextStream *ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>QTextStream *</type>
-      <name>PopPtr</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a699e9ff86495a4b8e5f22cbdc285c2cf</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function">
-      <type>void</type>
-      <name>TakeOver</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a44f838475fdc9654f29ba624593e88ec</anchor>
-      <arglist>(TDelPtr &amp;sourcePtr)</arglist>
-    </member>
-    <member kind="function">
-      <type>TDelPtr &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a027e7984f7ca086ff3c3b1f247f43694</anchor>
-      <arglist>(const TDelPtr &amp;ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>TDelPtr &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>add9e3ee5dffb62ac60abf50537e23719</anchor>
-      <arglist>(TDelPtr &amp;&amp;ptr)</arglist>
-    </member>
-    <member kind="function">
-      <type>TDelPtr &amp;</type>
-      <name>operator=</name>
-      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
-      <anchor>a68a5f39f761d95fff4bf04d35d987900</anchor>
-      <arglist>(QTextStream *ptr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>

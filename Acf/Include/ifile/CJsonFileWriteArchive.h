@@ -64,7 +64,7 @@ class CJsonFileWriteArchive: public iser::CJsonWriteArchiveBase
 {
 public:
 	CJsonFileWriteArchive(const QString& filePath = "", const iser::IVersionInfo* infoPtr = nullptr);
-
+	~CJsonFileWriteArchive();
 	bool OpenFile(const QString& filePath);
 
 private:
