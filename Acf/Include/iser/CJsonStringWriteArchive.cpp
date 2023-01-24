@@ -66,13 +66,11 @@ bool CJsonStringWriteArchive::IsTagSkippingSupported() const
 
 bool CJsonStringWriteArchive::BeginTag(const CArchiveTag& tag)
 {
-	m_isSeparatorNeeded = false;
-
 	m_currentAttribute.clear();
 
 	if (m_tagsStack.isEmpty() || (m_tagsStack.back() == NULL) || (m_tagsStack.back()->GetTagType() != iser::CArchiveTag::TT_MULTIPLE)){
 		int tagType = tag.GetTagType();
-		if (m_allowAttribute && (tagType == iser::CArchiveTag::TT_LEAF)){
+		if (tagType == iser::CArchiveTag::TT_LEAF){
 			m_currentAttribute = tag.GetId();
 
 			WriteTag(tag, "");
@@ -96,8 +94,6 @@ bool CJsonStringWriteArchive::BeginTag(const CArchiveTag& tag)
 
 	m_tagsStack.push_back(&tag);
 
-	m_allowAttribute = true;
-
 	return true;
 }
 
@@ -108,10 +104,6 @@ bool CJsonStringWriteArchive::BeginMultiTag(const CArchiveTag &tag, const CArchi
 	m_firstTag = true;
 
 	m_tagsStack.push_back(&tag);
-
-	m_allowAttribute = true;
-
-	m_isSeparatorNeeded = false;
 
 	return true;
 }

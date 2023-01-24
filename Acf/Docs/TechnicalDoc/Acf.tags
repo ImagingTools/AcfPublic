@@ -23946,8 +23946,8 @@
       <type>bool</type>
       <name>WriteTag</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a917a2e449f228ae6e3a7236bbf36cddd</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag, QString separator, bool isWriteTag=true)</arglist>
+      <anchor>ae3c28228c082a9c10cf8835454f458f7</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, QString separator)</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
@@ -50189,11 +50189,18 @@
     <name>iser::CJsonReadArchiveBase::HelperIterator</name>
     <filename>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</filename>
     <member kind="function">
+      <type></type>
+      <name>HelperIterator</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
+      <anchor>a29c83ac480f3b8e290dbc5c0b2918f13</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
       <type>void</type>
       <name>SetKey</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base_1_1_helper_iterator.html</anchorfile>
-      <anchor>a287304d6910bf0033ceade8a21323398</anchor>
-      <arglist>(QString &amp;key)</arglist>
+      <anchor>afcbae113abe5c4745c481d20e68addc7</anchor>
+      <arglist>(const QString &amp;key)</arglist>
     </member>
     <member kind="function">
       <type>const QString</type>
