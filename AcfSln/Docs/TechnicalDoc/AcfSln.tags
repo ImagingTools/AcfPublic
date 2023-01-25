@@ -46,6 +46,13 @@
     <namespace>ialgo</namespace>
   </compound>
   <compound kind="file">
+    <name>CLogoutEvent.h</name>
+    <path>D:/Temp/Qt5/AcfSln/Include/iauth/</path>
+    <filename>_c_logout_event_8h.html</filename>
+    <class kind="class">iauth::CLogoutEvent</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
     <name>CRightsBasedEnablerComp.h</name>
     <path>D:/Temp/Qt5/AcfSln/Include/iauth/</path>
     <filename>_c_rights_based_enabler_comp_8h.html</filename>
@@ -135,6 +142,14 @@
     <filename>_t_login_status_handler_comp_wrap_8h.html</filename>
     <includes id="_i_login_8h" name="ILogin.h" local="no" imported="no">iauth/ILogin.h</includes>
     <class kind="class">iauth::TLoginStatusHandlerCompWrap</class>
+    <namespace>iauth</namespace>
+  </compound>
+  <compound kind="file">
+    <name>TLogoutEventHandlerWrap.h</name>
+    <path>D:/Temp/Qt5/AcfSln/Include/iauth/</path>
+    <filename>_t_logout_event_handler_wrap_8h.html</filename>
+    <includes id="_c_logout_event_8h" name="CLogoutEvent.h" local="no" imported="no">iauth/CLogoutEvent.h</includes>
+    <class kind="class">iauth::TLogoutEventHandlerWrap</class>
     <namespace>iauth</namespace>
   </compound>
   <compound kind="file">
@@ -15460,6 +15475,24 @@
       <name>OnGuiCreated</name>
       <anchorfile>classiqtauth_1_1_c_login_bar_gui_comp.html</anchorfile>
       <anchor>a10193f000ad799005f2282740485af84</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>iauth::CLogoutEvent</name>
+    <filename>classiauth_1_1_c_logout_event.html</filename>
+    <member kind="function">
+      <type></type>
+      <name>CLogoutEvent</name>
+      <anchorfile>classiauth_1_1_c_logout_event.html</anchorfile>
+      <anchor>a0a02e767cd42caf964443f343ec53fd2</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static QEvent::Type</type>
+      <name>GenerateType</name>
+      <anchorfile>classiauth_1_1_c_logout_event.html</anchorfile>
+      <anchor>a6054fff7a8a9d5184b2016481d3104fa</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -37660,6 +37693,26 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iauth::TLogoutEventHandlerWrap</name>
+    <filename>classiauth_1_1_t_logout_event_handler_wrap.html</filename>
+    <templarg></templarg>
+    <base virtualness="virtual">istd::IPolymorphic</base>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>OnTryToLogout</name>
+      <anchorfile>classiauth_1_1_t_logout_event_handler_wrap.html</anchorfile>
+      <anchor>a79e000759c0da185594bd7b4e1f40c3b</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>event</name>
+      <anchorfile>classiauth_1_1_t_logout_event_handler_wrap.html</anchorfile>
+      <anchor>abf9df7d045615dd5f16d686a6f9c5f61</anchor>
+      <arglist>(QEvent *e) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imeas::TMeasurementMessage</name>
     <filename>classimeas_1_1_t_measurement_message.html</filename>
     <templarg></templarg>
@@ -40940,6 +40993,7 @@
   <compound kind="namespace">
     <name>iauth</name>
     <filename>namespaceiauth.html</filename>
+    <class kind="class">iauth::CLogoutEvent</class>
     <class kind="class">iauth::CRightsBasedEnablerComp</class>
     <class kind="class">iauth::CSimpleLoginComp</class>
     <class kind="class">iauth::CStaticRightsProviderComp</class>
@@ -40951,6 +41005,7 @@
     <class kind="class">iauth::IRightsProvider</class>
     <class kind="class">iauth::IUsersManager</class>
     <class kind="class">iauth::TLoginStatusHandlerCompWrap</class>
+    <class kind="class">iauth::TLogoutEventHandlerWrap</class>
   </compound>
   <compound kind="namespace">
     <name>ibarcode</name>
