@@ -15488,11 +15488,25 @@
       <anchor>a0a02e767cd42caf964443f343ec53fd2</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>IsLogoutCanceled</name>
+      <anchorfile>classiauth_1_1_c_logout_event.html</anchorfile>
+      <anchor>ab97e7bf99e0d5925705aff5f798ffa9f</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>CancelLogout</name>
+      <anchorfile>classiauth_1_1_c_logout_event.html</anchorfile>
+      <anchor>a1c6e117409da44d1089ded62b736cb0b</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" static="yes">
       <type>static QEvent::Type</type>
-      <name>GenerateType</name>
+      <name>type</name>
       <anchorfile>classiauth_1_1_c_logout_event.html</anchorfile>
-      <anchor>a6054fff7a8a9d5184b2016481d3104fa</anchor>
+      <anchor>a4385d0cf585b2ba0ad5c1df448053315</anchor>
       <arglist>()</arglist>
     </member>
   </compound>
@@ -37696,20 +37710,26 @@
     <name>iauth::TLogoutEventHandlerWrap</name>
     <filename>classiauth_1_1_t_logout_event_handler_wrap.html</filename>
     <templarg></templarg>
-    <base virtualness="virtual">istd::IPolymorphic</base>
-    <member kind="function" virtualness="virtual">
+    <member kind="function">
+      <type></type>
+      <name>TLogoutEventHandlerWrap</name>
+      <anchorfile>classiauth_1_1_t_logout_event_handler_wrap.html</anchorfile>
+      <anchor>a2934f12ce063b828072524a498003e32</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>EnableLogoutHandler</name>
+      <anchorfile>classiauth_1_1_t_logout_event_handler_wrap.html</anchorfile>
+      <anchor>a6775aa53ff08375b4dde2f671c95e3c3</anchor>
+      <arglist>(bool enable=true)</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
       <name>OnTryToLogout</name>
       <anchorfile>classiauth_1_1_t_logout_event_handler_wrap.html</anchorfile>
-      <anchor>a79e000759c0da185594bd7b4e1f40c3b</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>event</name>
-      <anchorfile>classiauth_1_1_t_logout_event_handler_wrap.html</anchorfile>
-      <anchor>abf9df7d045615dd5f16d686a6f9c5f61</anchor>
-      <arglist>(QEvent *e) override</arglist>
+      <anchor>a978411964c5842a13c963f9042f19f1a</anchor>
+      <arglist>()=0</arglist>
     </member>
   </compound>
   <compound kind="class">
