@@ -56,13 +56,13 @@ int CModelBase::GetObserverCount() const
 
 CModelBase::Observers CModelBase::GetObservers() const
 {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 0)
-	QList<IObserver*> keys = m_observers.keys();
+	QSet<IObserver*> observers;
 
-	return QSet<IObserver*>(keys.begin(), keys.end());
-#else
-	return m_observers.keys().toSet();
-#endif
+	for (const ObserverInfoPtr& infoPtr : m_observers) {
+		observers.insert(infoPtr->observerPtr);
+	}
+
+	return observers;
 }
 
 
@@ -74,9 +74,18 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 		return false;
 	}
 
-	Q_ASSERT_X(!m_observers.contains(observerPtr) || (m_observers[observerPtr].state >= AS_DETACHING), "Attaching observer", "Observer is already connected to this model");
+	ObserverInfoList::Iterator iter = FindObserverInfoPtr(observerPtr);
+	Q_ASSERT_X(iter == m_observers.end() || ((*iter)->state >= AS_DETACHING), "Attaching observer", "Observer is already connected to this model");
 
-	ObserverInfo& info = m_observers[observerPtr];
+	if (iter == m_observers.end()){
+		m_observers.push_back(ObserverInfoPtr(new ObserverInfo()));
+		iter = m_observers.end() - 1;
+		Q_ASSERT(iter != m_observers.end());
+	}
+
+	ObserverInfoPtr& infoPtr = *iter;
+	ObserverInfo& info = *infoPtr;
+	info.observerPtr = observerPtr;
 	info.state = AS_ATTACHING;
 	info.mask.Reset();
 
@@ -93,7 +102,7 @@ bool CModelBase::AttachObserver(IObserver* observerPtr)
 		return true;
 	}
 	else{
-		m_observers.remove(observerPtr);
+		m_observers.erase(iter);
 
 		return false;
 	}
@@ -105,9 +114,10 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 	Q_ASSERT(observerPtr != NULL);
 
 	// try to remove from current observer list
-	ObserversMap::Iterator findIter = m_observers.find(observerPtr);
-	if (findIter != m_observers.end()){
-		ObserverInfo& info = findIter.value();
+	ObserverInfoList::Iterator iter = FindObserverInfoPtr(observerPtr);
+	if (iter != m_observers.end()){
+		ObserverInfoPtr& infoPtr = *iter;
+		ObserverInfo& info = *infoPtr;
 
 		if (info.state >= AS_DETACHING){
 			Q_ASSERT_X(false, "Detaching observer", "Observer was already detached");
@@ -125,7 +135,7 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 		info.state = AS_DETACHED;
 
 		if (m_cumulatedChangeIds.IsEmpty()){
-			m_observers.erase(findIter);
+			m_observers.erase(iter);
 		}
 
 		return;
@@ -135,20 +145,17 @@ void CModelBase::DetachObserver(IObserver* observerPtr)
 
 void CModelBase::DetachAllObservers()
 {
-	for (ObserversMap::Iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter){
-		IObserver* observerPtr = iter.key();
-		Q_ASSERT(observerPtr != NULL);
-
-		ObserverInfo& info = iter.value();
+	for (ObserverInfoPtr& infoPtr : m_observers) {
+		ObserverInfo& info = *infoPtr;
 
 		if (info.state == AS_ATTACHED_UPDATING){
-			observerPtr->AfterUpdate(this, m_cumulatedChangeIds);
+			info.observerPtr->AfterUpdate(this, m_cumulatedChangeIds);
 		}
 
 		if (info.state < AS_DETACHING){
 			info.state = AS_DETACHING;
 
-			observerPtr->OnModelDetached(this);
+			info.observerPtr->OnModelDetached(this);
 
 			info.state = AS_DETACHED;
 		}
@@ -162,9 +169,11 @@ void CModelBase::DetachAllObservers()
 
 bool CModelBase::IsAttached(const IObserver* observerPtr) const
 {
-	ObserversMap::ConstIterator findIter = m_observers.constFind(const_cast<IObserver*>(observerPtr));
-	if (findIter != m_observers.end()){
-		const ObserverInfo& info = findIter.value();
+	ObserverInfoList::ConstIterator iter = FindObserverInfoPtr(const_cast<IObserver*>(observerPtr));
+	if (iter != m_observers.end()){
+		const ObserverInfoPtr& infoPtr = *iter;
+		const ObserverInfo& info = *infoPtr;
+
 		return info.state < AS_DETACHING;
 	}
 
@@ -192,15 +201,13 @@ void CModelBase::NotifyBeforeChange(const istd::IChangeable::ChangeSet& changeSe
 	bool isFirstChange = !m_isDuringChanges;
 	m_isDuringChanges = true;
 
-	for (ObserversMap::Iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter){
-		ObserverInfo& info = iter.value();
+	for (ObserverInfoPtr& infoPtr : m_observers) {
+		ObserverInfo& info = *infoPtr;
 
 		if ((info.state == AS_ATTACHED) && changeSet.ContainsAny(info.mask)){
 			info.state = AS_ATTACHED_UPDATING;
 
-			IObserver* observerPtr = iter.key();
-
-			observerPtr->BeforeUpdate(this);
+			info.observerPtr->BeforeUpdate(this);
 		}
 	}
 
@@ -226,15 +233,13 @@ void CModelBase::NotifyAfterChange(const istd::IChangeable::ChangeSet& changeSet
 
 		OnEndGlobalChanges(m_cumulatedChangeIds);
 
-		for (ObserversMap::Iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter){
-			ObserverInfo& info = iter.value();
+		for (ObserverInfoPtr& infoPtr : m_observers) {
+			ObserverInfo& info = *infoPtr;
 
 			if (info.state == AS_ATTACHED_UPDATING){
-				IObserver* observerPtr = iter.key();
-
 				info.state = AS_ATTACHED;
 
-				observerPtr->AfterUpdate(this, m_cumulatedChangeIds);
+				info.observerPtr->AfterUpdate(this, m_cumulatedChangeIds);
 			}
 		}
 	}
@@ -249,9 +254,9 @@ void CModelBase::NotifyAfterChange(const istd::IChangeable::ChangeSet& changeSet
 
 void CModelBase::CleanupObserverState()
 {
-	ObserversMap::Iterator iter = m_observers.begin();
+	ObserverInfoList::Iterator iter = m_observers.begin();
 	while (iter != m_observers.end()){
-		ObserverInfo& info = iter.value();
+		ObserverInfo& info = **iter;
 
 		if (info.state == AS_DETACHED){
 			iter = m_observers.erase(iter);
@@ -260,6 +265,32 @@ void CModelBase::CleanupObserverState()
 			++iter;
 		}
 	}
+}
+
+
+CModelBase::ObserverInfoList::ConstIterator CModelBase::FindObserverInfoPtr(const IObserver* observerPtr) const
+{
+	for (ObserverInfoList::ConstIterator iter = m_observers.cbegin(); iter != m_observers.cend(); ++iter) {
+		ObserverInfo& info = **iter;
+		if (info.observerPtr == observerPtr) {
+			return iter;
+		}
+	}
+
+	return m_observers.cend();
+}
+
+
+CModelBase::ObserverInfoList::Iterator CModelBase::FindObserverInfoPtr(const IObserver* observerPtr)
+{
+	for (ObserverInfoList::Iterator iter = m_observers.begin(); iter != m_observers.end(); ++iter) {
+		ObserverInfo& info = **iter;
+		if (info.observerPtr == observerPtr) {
+			return iter;
+		}
+	}
+
+	return m_observers.end();
 }
 
 

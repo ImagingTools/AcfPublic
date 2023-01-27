@@ -90,11 +90,6 @@ protected:
 	virtual void OnEndGlobalChanges(const istd::IChangeable::ChangeSet& changeSet) = 0;
 
 private:
-	Q_DISABLE_COPY(CModelBase);
-
-	void CleanupObserverState();
-
-private:
 	/**
 		Observer connection state.
 	*/
@@ -126,12 +121,23 @@ private:
 
 	struct ObserverInfo
 	{
+		IObserver* observerPtr;
 		AttachingState state;
 		istd::IChangeable::ChangeSet mask;
 	};
+	typedef QSharedPointer<ObserverInfo> ObserverInfoPtr;
 
-	typedef QMap<IObserver*, ObserverInfo> ObserversMap;
-	ObserversMap m_observers;
+	typedef QList<ObserverInfoPtr> ObserverInfoList;
+
+private:
+	Q_DISABLE_COPY(CModelBase);
+
+	void CleanupObserverState();
+	ObserverInfoList::ConstIterator FindObserverInfoPtr(const IObserver* observerPtr) const;
+	ObserverInfoList::Iterator FindObserverInfoPtr(const IObserver* observerPtr);
+
+private:
+	ObserverInfoList m_observers;
 
 	int m_blockCounter;
 	bool m_isDuringChanges;
