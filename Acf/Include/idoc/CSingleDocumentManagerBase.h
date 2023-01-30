@@ -89,7 +89,7 @@ public:
 
 protected:
 	/**
-		Ñalled just before the document is saved via persistence
+		Called just before the document is saved via persistence
 	*/
 	virtual void BeforeSavingDocument(const QString& filePath);
 
@@ -133,7 +133,10 @@ protected:
 	void EnsureViewRemoved();
 
 	QString GetCurrentDocumentFilePath() const;
+
 	bool HasDocumentPendingChanges() const;
+
+	void OnUndoManagerUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (imod::CSingleModelObserverBase)
 	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
@@ -182,12 +185,27 @@ protected:
 	bool SerializeOpenDocument(iser::IArchive& archive);
 
 private:
+	class UndoManagerObserver: public imod::CSingleModelObserverBase
+	{
+	public:
+		UndoManagerObserver(CSingleDocumentManagerBase& parent);
+
+	protected:
+		// reimplemented (imod::CSingleModelObserverBase)
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
+
+	private:
+		CSingleDocumentManagerBase& m_parent;
+	};
+
+private:
 	QString m_filePath;
 	QByteArray m_documentTypeId;
 	QByteArray m_viewTypeId;
 	istd::TDelPtr<istd::IChangeable> m_documentPtr;
 	istd::TDelPtr<idoc::IUndoManager> m_undoManagerPtr;
 	istd::TDelPtr<istd::IPolymorphic> m_viewPtr;
+	UndoManagerObserver m_undoManagerObserver;
 
 	bool m_isDirty;
 };
