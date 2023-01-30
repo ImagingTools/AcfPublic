@@ -41945,6 +41945,13 @@
       <anchor>af0106db3cdb1099047f93b29b65cfa67</anchor>
       <arglist>() const</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>OnUndoManagerUpdate</name>
+      <anchorfile>classidoc_1_1_c_single_document_manager_base.html</anchorfile>
+      <anchor>a98cf0e70b91ab9dba1d885a4c6d269b3</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
