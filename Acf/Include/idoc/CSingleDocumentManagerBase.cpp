@@ -44,8 +44,7 @@ const istd::IChangeable::ChangeSet s_closeViewChangeSet(IDocumentManager::CF_DOC
 
 
 CSingleDocumentManagerBase::CSingleDocumentManagerBase()
-	:m_isDirty(false),
-	m_undoManagerObserver(*this)
+: m_isDirty(false)
 {
 }
 
@@ -375,7 +374,6 @@ bool CSingleDocumentManagerBase::CloseDocument(int /*documentIndex*/, bool beQui
 
 		m_filePath = "";
 		m_documentTypeId = "";
-		m_undoManagerObserver.EnsureModelDetached();
 		m_documentPtr.Reset();
 		m_undoManagerPtr.Reset();
 
@@ -503,7 +501,6 @@ bool CSingleDocumentManagerBase::NewDocument(
 			bool beQuiet,
 			bool* ignoredPtr)
 {
-	m_undoManagerObserver.EnsureModelDetached();
 	m_undoManagerPtr.Reset();
 
 	if (ignoredPtr != NULL){
@@ -563,11 +560,6 @@ bool CSingleDocumentManagerBase::RegisterDocument()
 			imod::IModel* documentModelPtr = CompCastPtr<imod::IModel>(m_documentPtr.GetPtr());
 			if (documentModelPtr != NULL){
 				documentModelPtr->AttachObserver(this);
-
-				imod::IModel* undoManagerModelPtr = CompCastPtr<imod::IModel>(m_undoManagerPtr.GetPtr());
-				if (undoManagerModelPtr != NULL) {
-					undoManagerModelPtr->AttachObserver(&m_undoManagerObserver);
-				}
 			}
 		}
 	}
@@ -599,18 +591,6 @@ QString CSingleDocumentManagerBase::GetCurrentDocumentFilePath() const
 bool CSingleDocumentManagerBase::HasDocumentPendingChanges() const
 {
 	return m_isDirty;
-}
-
-
-void CSingleDocumentManagerBase::OnUndoManagerUpdate(const istd::IChangeable::ChangeSet& changeSet)
-{
-	bool newDirty = m_undoManagerPtr->GetDocumentChangeFlag() != IDocumentStateComparator::DCF_EQUAL;
-
-	if (m_isDirty != newDirty){
-		istd::CChangeNotifier notifier(this);
-
-		m_isDirty = newDirty;
-	}
 }
 
 
@@ -668,29 +648,16 @@ bool CSingleDocumentManagerBase::SerializeOpenDocument(iser::IArchive& archive)
 
 void CSingleDocumentManagerBase::OnUpdate(const ChangeSet& /*changeSet*/)
 {
-	if (m_undoManagerObserver.GetObservedModel() == nullptr){
+	bool newDirty = true;
+	if (m_documentPtr.IsValid() && m_undoManagerPtr.IsValid()){
+		newDirty = (m_undoManagerPtr->GetDocumentChangeFlag() != IDocumentStateComparator::DCF_EQUAL);
+	}
+
+	if (m_isDirty != newDirty){
 		istd::CChangeNotifier notifier(this);
 
-		m_isDirty = true;
+		m_isDirty = newDirty;
 	}
-}
-
-
-// public methods of the embedded class UndoManagerObserver
-
-CSingleDocumentManagerBase::UndoManagerObserver::UndoManagerObserver(CSingleDocumentManagerBase& parent)
-	:m_parent(parent)
-{
-}
-
-
-// protercted methods of the embedded class UndoManagerObserver
-
-// reimplemented (imod::CSingleModelObserverBase)
-
-void CSingleDocumentManagerBase::UndoManagerObserver::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
-{
-	m_parent.OnUndoManagerUpdate(changeSet);
 }
 
 
