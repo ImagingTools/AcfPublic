@@ -23452,6 +23452,13 @@
       <anchor>aecb383ab7e0f7f94905b3dfaa30785d6</anchor>
       <arglist>(QByteArray &amp;inputString, const iser::IVersionInfo *versionInfoPtr=NULL, QJsonDocument::JsonFormat jsonFormat=QJsonDocument::Compact)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>~CJsonMemWriteArchive</name>
+      <anchorfile>classiser_1_1_c_json_mem_write_archive.html</anchorfile>
+      <anchor>accdac364895c9838f2157aa9e5272f18</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::CJsonReadArchiveBase</name>

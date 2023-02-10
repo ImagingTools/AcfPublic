@@ -43,6 +43,7 @@ public:
 				QByteArray& inputString,
 				const iser::IVersionInfo* versionInfoPtr = NULL,
 				QJsonDocument::JsonFormat jsonFormat = QJsonDocument::Compact);
+	~CJsonMemWriteArchive();
 };
 
 
