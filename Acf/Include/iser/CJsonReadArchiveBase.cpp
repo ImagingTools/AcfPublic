@@ -196,8 +196,6 @@ bool CJsonReadArchiveBase::InitArchive(const QByteArray &inputString)
 		return false;
 	}
 
-	//BeginTag(m_rootTag);
-
 	return true;
 }
 
