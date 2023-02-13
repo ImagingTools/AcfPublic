@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.1.0)
 project(AcfAll)
 
 if(DEFINED ENV{QTDIR})
-	set(CMAKE_PREFIX_PATH $ENV{QTDIR})
+	list(APPEND CMAKE_PREFIX_PATH $ENV{QTDIR})
 endif()
 
 if (MSVC_IDE)
