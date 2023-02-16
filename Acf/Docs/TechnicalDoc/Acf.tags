@@ -23378,15 +23378,15 @@
       <type></type>
       <name>CJsonFileReadArchive</name>
       <anchorfile>classifile_1_1_c_json_file_read_archive.html</anchorfile>
-      <anchor>ae04266e410a9b773dc3226bdc74ee791</anchor>
-      <arglist>(const QString &amp;filePath=&quot;&quot;, const iser::IVersionInfo *infoPtr=nullptr)</arglist>
+      <anchor>a106a7ff71e7f4dcda15b82858b53a608</anchor>
+      <arglist>(const QString &amp;filePath=&quot;&quot;, bool serializeHeader=true)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
       <name>OpenFile</name>
       <anchorfile>classifile_1_1_c_json_file_read_archive.html</anchorfile>
-      <anchor>a49dc49a5b6dc749f720de8d3017e72e3</anchor>
-      <arglist>(const QString &amp;filePath)</arglist>
+      <anchor>a04253c54aa350cd7fb3e59a89ea37e1c</anchor>
+      <arglist>(const QString &amp;filePath, bool serializeHeader)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23411,8 +23411,8 @@
       <type>bool</type>
       <name>OpenFile</name>
       <anchorfile>classifile_1_1_c_json_file_write_archive.html</anchorfile>
-      <anchor>aa0075bf3ae45001ca0969da4ccd461cf</anchor>
-      <arglist>(const QString &amp;filePath)</arglist>
+      <anchor>aef434c9c10f1528b20f03c6a4b5162c8</anchor>
+      <arglist>(const QString &amp;filePath, bool serializeHeader)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23483,36 +23483,36 @@
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a31e8af46de446318caa9a413d29b8b0a</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>a63825f478c45725b5f9c08288d3eacdc</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a50a80c1bf75e72056da2ec710aa3d8ca</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
+      <anchor>ad203f2ff73c06b11f49449b29da76e7b</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>af427bd8ae1b3604ca284c9226832fd72</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>abf8db243ce520012a6d5aa4c87908738</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a85b81c77746385ad39f3c44e43ac8429</anchor>
-      <arglist>(QString &amp;value)</arglist>
+      <anchor>ab88a4cbb161131f548587b925665259f</anchor>
+      <arglist>(QString &amp;value) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>InitArchive</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>af65228e9109edb3ec327c81f6e8feac2</anchor>
-      <arglist>(const QByteArray &amp;inputString)</arglist>
+      <anchor>a75983baced6c13a9c7565cb6b0ae31ad</anchor>
+      <arglist>(const QByteArray &amp;inputString, bool serializeHeader=false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -23525,8 +23525,8 @@
       <type>virtual bool</type>
       <name>ReadTextNode</name>
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
-      <anchor>a26a191cf972231294668f368f0bf2c0d</anchor>
-      <arglist>(QByteArray &amp;text)</arglist>
+      <anchor>a9ffdb75ed9ce2ddc773ff4265de90977</anchor>
+      <arglist>(QByteArray &amp;text) override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QJsonDocument</type>
@@ -23932,22 +23932,22 @@
       <type>bool</type>
       <name>InitStream</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>ac2a3360d92f1fa06735c6ae118697449</anchor>
-      <arglist>()</arglist>
+      <anchor>a316ff38242fdadba5a8242cf985f6b4e</anchor>
+      <arglist>(bool serializeHeader)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>InitArchive</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>aae99f9ede510bee937540c4f3147ccde</anchor>
-      <arglist>(QIODevice *devicePtr)</arglist>
+      <anchor>a5f5b35d6c717c83ea979509ee02bc145</anchor>
+      <arglist>(QIODevice *devicePtr, bool serializeHeader=false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
       <name>InitArchive</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a03b2ddefb56b1e582506bc24a8878ff2</anchor>
-      <arglist>(QByteArray &amp;inputString)</arglist>
+      <anchor>a41e0ca348f18913ff8f1849cde8f5a87</anchor>
+      <arglist>(QByteArray &amp;inputString, bool serializeHeader=false)</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>

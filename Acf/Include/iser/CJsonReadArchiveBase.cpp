@@ -180,7 +180,7 @@ bool CJsonReadArchiveBase::Process(QString& value)
 
 // protected methods
 
-bool CJsonReadArchiveBase::InitArchive(const QByteArray &inputString)
+bool CJsonReadArchiveBase::InitArchive(const QByteArray &inputString, bool serializeHeader)
 {
 	QJsonParseError error;
 	m_document = QJsonDocument::fromJson(inputString, &error);
@@ -194,6 +194,12 @@ bool CJsonReadArchiveBase::InitArchive(const QByteArray &inputString)
 					istd::IInformationProvider::ITF_SYSTEM);
 
 		return false;
+	}
+
+	BeginTag(m_rootTag);
+
+	if (serializeHeader){
+		SerializeAcfHeader();
 	}
 
 	return true;
@@ -249,7 +255,20 @@ const QString CJsonReadArchiveBase::HelperIterator::GetKey()
 
 QString CJsonReadArchiveBase::HelperIterator::GetValue()
 {
-	return m_value.toString();
+	QString retVal;
+	if (m_value.isBool()){
+		retVal = m_value.toBool() ? "true" : "false";
+	}
+	else{
+		if (m_value.isDouble()){
+			retVal = QString::number(m_value.toDouble());
+		}
+		else{
+			retVal = m_value.toString();
+		}
+	}
+
+	return retVal;
 }
 
 
