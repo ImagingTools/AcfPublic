@@ -20099,8 +20099,8 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
-      <anchor>a78bcb0e783dda87db708870b4d00131e</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const</arglist>
+      <anchor>ae3478be2b7e2b639a9fea536311d7879</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual const iser::IVersionInfo *</type>
@@ -20129,6 +20129,13 @@
       <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
       <anchor>a788ce711f1c179a4332ee110bd9d33e4</anchor>
       <arglist>(const QString filePath, bool beQuiet=true) const</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classifile_1_1_c_file_serializer_comp_base.html</anchorfile>
+      <anchor>a23b90c8ca9282818331ded879e1578d9</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
