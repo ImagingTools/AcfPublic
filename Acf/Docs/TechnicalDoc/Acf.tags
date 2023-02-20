@@ -43547,6 +43547,13 @@
       <arglist>(int metaInfoType, const QVariant &amp;metaInfo)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>RemoveMetaInfo</name>
+      <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
+      <anchor>a98d6f91238b441c16c60216e4498d7db</anchor>
+      <arglist>(int metaInfoType)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetMetaInfoId</name>
       <anchorfile>classidoc_1_1_c_standard_document_meta_info.html</anchorfile>
@@ -53489,6 +53496,13 @@
       <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
       <anchor>a92ad9f03e2a33aa3358c5d2b7c4579d5</anchor>
       <arglist>(int metaInfoType, const QVariant &amp;metaInfo)=0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual void</type>
+      <name>RemoveMetaInfo</name>
+      <anchorfile>classidoc_1_1_i_document_meta_info.html</anchorfile>
+      <anchor>a9246b9dfde783d62c687309722b8221a</anchor>
+      <arglist>(int metaInfoType)=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QByteArray</type>
