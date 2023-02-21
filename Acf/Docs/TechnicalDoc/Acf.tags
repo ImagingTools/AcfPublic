@@ -23556,6 +23556,13 @@
       <anchor>a1aca24cb764b9bc941ba34c0e0330365</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_rootTagEnabled</name>
+      <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
+      <anchor>a385b9e9af9d101ee583c9e63db97a120</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iser::CJsonStringReadArchive</name>
@@ -24024,6 +24031,13 @@
       <name>m_allowAttribute</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
       <anchor>a002fbdcfabd5fb1dd890a07889d9b205</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>bool</type>
+      <name>m_rootTagEnabled</name>
+      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
+      <anchor>a8826122b1e7caa923e10859086e5eba4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
