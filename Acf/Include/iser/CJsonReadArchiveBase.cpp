@@ -42,15 +42,13 @@ CJsonReadArchiveBase::CJsonReadArchiveBase()
 
 bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 {
+	bool retVal = true;
 	QString tagId(tag.GetId());
-
 	int tagType = tag.GetTagType();
 
-	if (m_iterators.isEmpty() && tagType == iser::CArchiveTag::TT_LEAF){
-		if (m_iterators.isEmpty()){
-			BeginTag(m_rootTag);
-			m_rootTagEnabled = true;
-		}
+	if (m_iterators.isEmpty() && !tagId.isEmpty()){
+		retVal = retVal && BeginTag(m_rootTag);
+		m_rootTagEnabled = true;
 	}
 
 	if (m_iterators.isEmpty()){
@@ -62,7 +60,7 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 		QString value = newHelperIterator.GetValue();
 		m_iterators.push_back(newHelperIterator);
 
-		return true;
+		return retVal;
 	}
 
 	HelperIterator helperIterator = m_iterators.last();
@@ -100,7 +98,7 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 		}
 	}
 
-	return true;
+	return retVal;
 }
 
 
