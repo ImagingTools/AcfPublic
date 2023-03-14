@@ -21778,6 +21778,13 @@
       <type>ChangeSet &amp;</type>
       <name>operator+=</name>
       <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
+      <anchor>a9cb0f6d0a0e6e6644870717cdeffb809</anchor>
+      <arglist>(const QSet&lt; int &gt; &amp;ids)</arglist>
+    </member>
+    <member kind="function">
+      <type>ChangeSet &amp;</type>
+      <name>operator+=</name>
+      <anchorfile>classistd_1_1_i_changeable_1_1_change_set.html</anchorfile>
       <anchor>a32962c476c9e8f87b89e99a2eb53b8f1</anchor>
       <arglist>(const ChangeSet &amp;changeSet)</arglist>
     </member>
