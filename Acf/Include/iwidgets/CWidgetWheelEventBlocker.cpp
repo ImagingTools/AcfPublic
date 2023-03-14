@@ -40,9 +40,10 @@ namespace iwidgets
 
 // public methods
 
-CWidgetWheelEventBlocker::CWidgetWheelEventBlocker(QWidget* parentPtr, int flags)
+CWidgetWheelEventBlocker::CWidgetWheelEventBlocker(QWidget* parentPtr, int flags, bool setStrongFocusToAffectedWidgets)
 	:QObject(parentPtr),
-	m_processingFlags(flags)
+	m_processingFlags(flags),
+	m_isSetStrongFocusToAffectedWidgets(setStrongFocusToAffectedWidgets)
 {
 	AddSupportedChildWidgets(*parentPtr);
 }
@@ -90,6 +91,8 @@ bool CWidgetWheelEventBlocker::eventFilter(QObject* objectPtr, QEvent* eventPtr)
 			if (m_processingFlags & AW_COMBO_BOXES){
 				const QComboBox* comboBoxPtr = dynamic_cast<const QComboBox*>(objectPtr);
 				if (comboBoxPtr != nullptr){
+					eventPtr->ignore();
+
 					return true;
 				}
 			}
@@ -97,6 +100,8 @@ bool CWidgetWheelEventBlocker::eventFilter(QObject* objectPtr, QEvent* eventPtr)
 			if (m_processingFlags & AW_SPIN_BOXES){
 				const QAbstractSpinBox* spinBoxPtr = dynamic_cast<const QAbstractSpinBox*>(objectPtr);
 				if (spinBoxPtr != nullptr){
+					eventPtr->ignore();
+
 					return true;
 				}
 			}
@@ -141,7 +146,10 @@ void CWidgetWheelEventBlocker::AddSupportedChildWidgets(QWidget& parentObject)
 
 
 void CWidgetWheelEventBlocker::AcquireWidget(QWidget& widget)
-{
+{	
+	if (m_isSetStrongFocusToAffectedWidgets){
+		widget.setFocusPolicy(Qt::StrongFocus);
+	}
 	widget.installEventFilter(this);
 	m_filteredWidgets.insert(&widget);
 }

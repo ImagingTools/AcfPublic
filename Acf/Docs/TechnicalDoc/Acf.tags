@@ -49427,8 +49427,8 @@
       <type></type>
       <name>CWidgetWheelEventBlocker</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a40f9a2b1ea848f08f9cd273dec2b7796</anchor>
-      <arglist>(QWidget *parentPtr, int flags=AW_SPIN_BOXES|AW_COMBO_BOXES)</arglist>
+      <anchor>a9cb74599c1d72788a57158c307862ef1</anchor>
+      <arglist>(QWidget *parentPtr, int flags=AW_SPIN_BOXES|AW_COMBO_BOXES, bool setStrongFocusToAffectedWidgets=true)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QList&lt; QObject * &gt;</type>
