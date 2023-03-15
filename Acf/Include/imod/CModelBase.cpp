@@ -179,6 +179,12 @@ void CModelBase::NotifyBeforeChange(const istd::IChangeable::ChangeSet& changeSe
 	Q_ASSERT(m_blockCounter >= 0);
 	Q_ASSERT((m_blockCounter > 0) || !m_isDuringChanges);
 
+	if (changeSet.Contains(istd::IChangeable::CF_ALL_DATA)){
+		const istd::IChangeable::ChangeInfoMap emptyInfoMap;
+		m_cumulatedChangeIds.SetChangeInfoMap(emptyInfoMap);
+		m_cumulatedChangeIds += changeSet.GetIds();
+	}
+
 	m_blockCounter++;
 
 	if (changeSet.IsEmpty()){
@@ -214,7 +220,18 @@ void CModelBase::NotifyAfterChange(const istd::IChangeable::ChangeSet& changeSet
 {
 	Q_ASSERT(m_blockCounter > 0);
 
-	m_cumulatedChangeIds += changeSet;
+	if (changeSet.Contains(istd::IChangeable::CF_ALL_DATA)){
+		const istd::IChangeable::ChangeInfoMap emptyInfoMap;
+		m_cumulatedChangeIds.SetChangeInfoMap(emptyInfoMap);
+		m_cumulatedChangeIds += istd::IChangeable::CF_ALL_DATA;
+	}
+
+	if (!m_cumulatedChangeIds.Contains(istd::IChangeable::CF_ALL_DATA)){
+		m_cumulatedChangeIds += changeSet;
+	}
+	else{
+		m_cumulatedChangeIds += changeSet.GetIds();
+	}
 
 	// check if we are at end of outer change block
 	if (--m_blockCounter > 0){
