@@ -69,10 +69,6 @@ bool CJsonWriteArchiveBase::BeginTag(const CArchiveTag& tag)
 	}
 
 	if (tagType == iser::CArchiveTag::TT_LEAF){
-		if ( m_tagsStack.back()->GetTagType() == iser::CArchiveTag::TT_MULTIPLE){
-			return false;
-		}
-
 		retVal = retVal && WriteTag(tag, "");
 		m_tagsStack.push_back(&tag);
 
@@ -193,8 +189,9 @@ bool CJsonWriteArchiveBase::WriteTag(const CArchiveTag &tag, QString separator)
 	}
 
 	bool isWritePrefix = true;
+	int tagType = tag.GetTagType();
 
-	if (tag.GetTagType() == iser::CArchiveTag::TT_GROUP && !m_tagsStack.isEmpty()){
+	if ((tagType == iser::CArchiveTag::TT_GROUP || tagType == iser::CArchiveTag::TT_LEAF) && !m_tagsStack.isEmpty()){
 		const iser::CArchiveTag* lastTagPtr = m_tagsStack.last();
 		if (lastTagPtr->GetTagType() == iser::CArchiveTag::TT_MULTIPLE){
 			isWritePrefix = false;

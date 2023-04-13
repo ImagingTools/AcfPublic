@@ -67,14 +67,19 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 
 	if (helperIterator.isArray()){
 		if (tagType == iser::CArchiveTag::TT_LEAF){
-
-				return false;
+			HelperIterator newHelperIterator;
+			newHelperIterator.SetKey(tagId);
+			QString value = helperIterator.GetValue();
+			newHelperIterator.SetValue(value);
+			m_iterators.push_back(newHelperIterator);
 		}
-		QJsonObject jsonObject = helperIterator.GetObject();
-		HelperIterator newHelperIterator;
-		newHelperIterator.SetValue(jsonObject);
-		newHelperIterator.SetKey(tagId);
-		m_iterators.push_back(newHelperIterator);
+		else{
+			QJsonObject jsonObject = helperIterator.GetObject();
+			HelperIterator newHelperIterator;
+			newHelperIterator.SetValue(jsonObject);
+			newHelperIterator.SetKey(tagId);
+			m_iterators.push_back(newHelperIterator);
+		}
 	}
 	else {
 		QJsonObject jsonObject = helperIterator.GetObject();
@@ -265,7 +270,12 @@ QString CJsonReadArchiveBase::HelperIterator::GetValue()
 			retVal = QString::number(m_value.toDouble());
 		}
 		else{
-			retVal = m_value.toString();
+			if (m_value.isArray() && activeArrayIndex > -1 && activeArrayIndex < m_array.count()){
+				retVal = m_array[activeArrayIndex].toString();
+			}
+			else{
+				retVal = m_value.toString();
+			}
 		}
 	}
 
