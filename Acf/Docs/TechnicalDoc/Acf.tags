@@ -5331,8 +5331,8 @@
       <type>static bool</type>
       <name>SetStyleSheetFromFile</name>
       <anchorfile>namespaceiqtgui.html</anchorfile>
-      <anchor>ab139d1db099b47b0558a8bcf4c3a14fe</anchor>
-      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+      <anchor>a419841ed3dcd079f6c2900884a4d0805</anchor>
+      <arglist>(StyleSheetConsumer *styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
     </member>
   </compound>
   <compound kind="file">
@@ -5364,6 +5364,7 @@
     <path>D:/Temp/Qt5/Acf/Include/iqtgui/</path>
     <filename>_t_designer_gui_comp_base_8h.html</filename>
     <includes id="_t_gui_component_base_8h" name="TGuiComponentBase.h" local="no" imported="no">iqtgui/TGuiComponentBase.h</includes>
+    <class kind="class">iqtgui::UIDummy</class>
     <class kind="class">iqtgui::TDesignerGuiCompBase</class>
     <namespace>iqtgui</namespace>
   </compound>
@@ -67981,22 +67982,22 @@
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
-      <anchor>a79a6e89759412a5264ed5c7444dd4d7a</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>af4b02760854974c6ed10884e172475cc</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
-      <anchor>a482be2f2e094f1fbd7c242ed1572fe2e</anchor>
-      <arglist>()</arglist>
+      <anchor>a5b81591903b1fe281bcd44a2d62e4ed7</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtgui_1_1_t_designer_gui_observer_comp_base.html</anchorfile>
-      <anchor>a1976d40edc946ca755d00480947e722e</anchor>
-      <arglist>()</arglist>
+      <anchor>adfce2a1955693cae7ee065e0f67cf11c</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -69929,15 +69930,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a436a32807c5c03620b025d8abf7a2450</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a6193f12aa906f04fbc09a10d7745f6e6</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae875cd73d476eb05af117844fd9c2653</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>aaacfa7ec4c2db5debf3ad2151be2db36</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -69999,71 +70000,71 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afae9475979b647c00dc8f012740a8238</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9fb5d1ed1ba45b920f0f798c4afcb53b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModelFromEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abcbf1b568921e4d6149b5ccf3b262bc0</anchor>
-      <arglist>() const</arglist>
+      <anchor>aef848656f61b54f2f1e0f066b32e6597</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
-      <arglist>()</arglist>
+      <anchor>ac15b25ea506ff2de50a42f341737eb01</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
-      <arglist>()</arglist>
+      <anchor>a4743775c0a1b5ac355b404db8c07e0ed</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b8ff545056fb57c15ddf1fddb60919f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
-      <arglist>()</arglist>
+      <anchor>a6455ef5610627c205cd38f6c317638d1</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
-      <arglist>()</arglist>
+      <anchor>a8bbe322810f39c6675c4f7b567690836</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a7d041c6d98c1a15b99ba7a4bdde78f0a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab8a34c43ea716280604a47ae2050de82</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a28822205ad7534122653e9eb75f46b61</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac13a40f715f33a5207c43159415c3701</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>a724959ca233e6e97ac97f8314e726f8c</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -70096,15 +70097,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a436a32807c5c03620b025d8abf7a2450</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a6193f12aa906f04fbc09a10d7745f6e6</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae875cd73d476eb05af117844fd9c2653</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>aaacfa7ec4c2db5debf3ad2151be2db36</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -70166,71 +70167,71 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afae9475979b647c00dc8f012740a8238</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9fb5d1ed1ba45b920f0f798c4afcb53b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModelFromEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abcbf1b568921e4d6149b5ccf3b262bc0</anchor>
-      <arglist>() const</arglist>
+      <anchor>aef848656f61b54f2f1e0f066b32e6597</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
-      <arglist>()</arglist>
+      <anchor>ac15b25ea506ff2de50a42f341737eb01</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
-      <arglist>()</arglist>
+      <anchor>a4743775c0a1b5ac355b404db8c07e0ed</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b8ff545056fb57c15ddf1fddb60919f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
-      <arglist>()</arglist>
+      <anchor>a6455ef5610627c205cd38f6c317638d1</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
-      <arglist>()</arglist>
+      <anchor>a8bbe322810f39c6675c4f7b567690836</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a7d041c6d98c1a15b99ba7a4bdde78f0a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab8a34c43ea716280604a47ae2050de82</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a28822205ad7534122653e9eb75f46b61</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac13a40f715f33a5207c43159415c3701</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>a724959ca233e6e97ac97f8314e726f8c</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -70264,15 +70265,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a436a32807c5c03620b025d8abf7a2450</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a6193f12aa906f04fbc09a10d7745f6e6</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae875cd73d476eb05af117844fd9c2653</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>aaacfa7ec4c2db5debf3ad2151be2db36</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -70334,71 +70335,71 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afae9475979b647c00dc8f012740a8238</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9fb5d1ed1ba45b920f0f798c4afcb53b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModelFromEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abcbf1b568921e4d6149b5ccf3b262bc0</anchor>
-      <arglist>() const</arglist>
+      <anchor>aef848656f61b54f2f1e0f066b32e6597</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
-      <arglist>()</arglist>
+      <anchor>ac15b25ea506ff2de50a42f341737eb01</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
-      <arglist>()</arglist>
+      <anchor>a4743775c0a1b5ac355b404db8c07e0ed</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b8ff545056fb57c15ddf1fddb60919f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
-      <arglist>()</arglist>
+      <anchor>a6455ef5610627c205cd38f6c317638d1</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
-      <arglist>()</arglist>
+      <anchor>a8bbe322810f39c6675c4f7b567690836</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a7d041c6d98c1a15b99ba7a4bdde78f0a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab8a34c43ea716280604a47ae2050de82</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a28822205ad7534122653e9eb75f46b61</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac13a40f715f33a5207c43159415c3701</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>a724959ca233e6e97ac97f8314e726f8c</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -70432,15 +70433,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a436a32807c5c03620b025d8abf7a2450</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a6193f12aa906f04fbc09a10d7745f6e6</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae875cd73d476eb05af117844fd9c2653</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>aaacfa7ec4c2db5debf3ad2151be2db36</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -70502,71 +70503,71 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afae9475979b647c00dc8f012740a8238</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9fb5d1ed1ba45b920f0f798c4afcb53b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModelFromEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abcbf1b568921e4d6149b5ccf3b262bc0</anchor>
-      <arglist>() const</arglist>
+      <anchor>aef848656f61b54f2f1e0f066b32e6597</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
-      <arglist>()</arglist>
+      <anchor>ac15b25ea506ff2de50a42f341737eb01</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
-      <arglist>()</arglist>
+      <anchor>a4743775c0a1b5ac355b404db8c07e0ed</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b8ff545056fb57c15ddf1fddb60919f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
-      <arglist>()</arglist>
+      <anchor>a6455ef5610627c205cd38f6c317638d1</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
-      <arglist>()</arglist>
+      <anchor>a8bbe322810f39c6675c4f7b567690836</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a7d041c6d98c1a15b99ba7a4bdde78f0a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab8a34c43ea716280604a47ae2050de82</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a28822205ad7534122653e9eb75f46b61</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac13a40f715f33a5207c43159415c3701</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>a724959ca233e6e97ac97f8314e726f8c</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -70600,15 +70601,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a436a32807c5c03620b025d8abf7a2450</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a6193f12aa906f04fbc09a10d7745f6e6</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae875cd73d476eb05af117844fd9c2653</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>aaacfa7ec4c2db5debf3ad2151be2db36</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -70670,71 +70671,71 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afae9475979b647c00dc8f012740a8238</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9fb5d1ed1ba45b920f0f798c4afcb53b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModelFromEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abcbf1b568921e4d6149b5ccf3b262bc0</anchor>
-      <arglist>() const</arglist>
+      <anchor>aef848656f61b54f2f1e0f066b32e6597</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
-      <arglist>()</arglist>
+      <anchor>ac15b25ea506ff2de50a42f341737eb01</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
-      <arglist>()</arglist>
+      <anchor>a4743775c0a1b5ac355b404db8c07e0ed</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b8ff545056fb57c15ddf1fddb60919f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
-      <arglist>()</arglist>
+      <anchor>a6455ef5610627c205cd38f6c317638d1</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
-      <arglist>()</arglist>
+      <anchor>a8bbe322810f39c6675c4f7b567690836</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a7d041c6d98c1a15b99ba7a4bdde78f0a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab8a34c43ea716280604a47ae2050de82</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a28822205ad7534122653e9eb75f46b61</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac13a40f715f33a5207c43159415c3701</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>a724959ca233e6e97ac97f8314e726f8c</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -70768,15 +70769,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a436a32807c5c03620b025d8abf7a2450</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a6193f12aa906f04fbc09a10d7745f6e6</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ae875cd73d476eb05af117844fd9c2653</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>aaacfa7ec4c2db5debf3ad2151be2db36</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -70838,71 +70839,71 @@
       <type>virtual void</type>
       <name>UpdateEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>afae9475979b647c00dc8f012740a8238</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9fb5d1ed1ba45b920f0f798c4afcb53b</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModelFromEditor</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>abcbf1b568921e4d6149b5ccf3b262bc0</anchor>
-      <arglist>() const</arglist>
+      <anchor>aef848656f61b54f2f1e0f066b32e6597</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a25770e920ca8d48a4d07e6adbd9be8ab</anchor>
-      <arglist>()</arglist>
+      <anchor>ac15b25ea506ff2de50a42f341737eb01</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>aee8694519e89700cb4d0d92b4d952b71</anchor>
-      <arglist>()</arglist>
+      <anchor>a4743775c0a1b5ac355b404db8c07e0ed</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a45eba5a0c0a00d4a3a7e671dd8e4afc4</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b8ff545056fb57c15ddf1fddb60919f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>ac57a710831aca6724b034983717d1a12</anchor>
-      <arglist>()</arglist>
+      <anchor>a6455ef5610627c205cd38f6c317638d1</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a21ea58f03167fc90ff7bccb51d1a2ead</anchor>
-      <arglist>()</arglist>
+      <anchor>a8bbe322810f39c6675c4f7b567690836</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a7d041c6d98c1a15b99ba7a4bdde78f0a</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab8a34c43ea716280604a47ae2050de82</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a28822205ad7534122653e9eb75f46b61</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac13a40f715f33a5207c43159415c3701</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetReadOnly</name>
       <anchorfile>classiqtgui_1_1_t_gui_observer_wrap.html</anchorfile>
-      <anchor>a71927e7a9688911c9b1071434e9f17d5</anchor>
-      <arglist>(bool state)</arglist>
+      <anchor>a724959ca233e6e97ac97f8314e726f8c</anchor>
+      <arglist>(bool state) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -86372,6 +86373,24 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>iqtgui::UIDummy</name>
+    <filename>classiqtgui_1_1_u_i_dummy.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>setupUi</name>
+      <anchorfile>classiqtgui_1_1_u_i_dummy.html</anchorfile>
+      <anchor>a1a21efdcd3986d9c02317204effd1b69</anchor>
+      <arglist>(QWidget *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>retranslateUi</name>
+      <anchorfile>classiqtgui_1_1_u_i_dummy.html</anchorfile>
+      <anchor>aa52cf49092059bc26bcc1cc59135a851</anchor>
+      <arglist>(QWidget *)</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iview::CConsoleGui::UiResourcesManager</name>
     <filename>classiview_1_1_c_console_gui_1_1_ui_resources_manager.html</filename>
     <base>TMakeIconProviderCompWrap&lt; QObject &gt;</base>
@@ -87582,6 +87601,7 @@
     <class kind="class">iqtgui::IVisualStatus</class>
     <class kind="class">iqtgui::IVisualStatusProvider</class>
     <class kind="class">iqtgui::TDesignerBasicGui</class>
+    <class kind="class">iqtgui::UIDummy</class>
     <class kind="class">iqtgui::TDesignerGuiCompBase</class>
     <class kind="class">iqtgui::TDesignerGuiObserverCompBase</class>
     <class kind="class">iqtgui::TDesignSchemaHandlerWrap</class>
@@ -87594,8 +87614,8 @@
       <type>static bool</type>
       <name>SetStyleSheetFromFile</name>
       <anchorfile>namespaceiqtgui.html</anchorfile>
-      <anchor>ab139d1db099b47b0558a8bcf4c3a14fe</anchor>
-      <arglist>(StyleSheetConsumer &amp;styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
+      <anchor>a419841ed3dcd079f6c2900884a4d0805</anchor>
+      <arglist>(StyleSheetConsumer *styleSheetConsumer, const QString &amp;styleSheetFilePath)</arglist>
     </member>
   </compound>
   <compound kind="namespace">
