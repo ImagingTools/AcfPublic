@@ -3049,6 +3049,18 @@
     <namespace>ilog</namespace>
   </compound>
   <compound kind="file">
+    <name>CLogRouterComp.h</name>
+    <path>D:/Temp/Qt5/Acf/Include/ilog/</path>
+    <filename>_c_log_router_comp_8h.html</filename>
+    <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
+    <includes id="_i_message_consumer_8h" name="IMessageConsumer.h" local="no" imported="no">ilog/IMessageConsumer.h</includes>
+    <includes id="_i_message_container_8h" name="IMessageContainer.h" local="no" imported="no">ilog/IMessageContainer.h</includes>
+    <includes id="_i_model_8h" name="IModel.h" local="no" imported="no">imod/IModel.h</includes>
+    <includes id="_c_single_model_observer_base_8h" name="CSingleModelObserverBase.h" local="no" imported="no">imod/CSingleModelObserverBase.h</includes>
+    <class kind="class">ilog::CLogRouterComp</class>
+    <namespace>ilog</namespace>
+  </compound>
+  <compound kind="file">
     <name>CMessage.h</name>
     <path>D:/Temp/Qt5/Acf/Include/ilog/</path>
     <filename>_c_message_8h.html</filename>
@@ -26038,6 +26050,47 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>ilog::CLogRouterComp</name>
+    <filename>classilog_1_1_c_log_router_comp.html</filename>
+    <base>icomp::CComponentBase</base>
+    <base>imod::CSingleModelObserverBase</base>
+    <member kind="typedef">
+      <type>icomp::CComponentBase</type>
+      <name>BaseClass</name>
+      <anchorfile>classilog_1_1_c_log_router_comp.html</anchorfile>
+      <anchor>a08e3b744da5e03bc09d5ceccbf85fad9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>imod::CSingleModelObserverBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classilog_1_1_c_log_router_comp.html</anchorfile>
+      <anchor>a9be57602bb810325952cbb6a4b19c396</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentCreated</name>
+      <anchorfile>classilog_1_1_c_log_router_comp.html</anchorfile>
+      <anchor>ae04922b865e1cc8b3b9e442aa1ec23c7</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnComponentDestroyed</name>
+      <anchorfile>classilog_1_1_c_log_router_comp.html</anchorfile>
+      <anchor>adbd659528ed9fd55b8895d9d74227df1</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnUpdate</name>
+      <anchorfile>classilog_1_1_c_log_router_comp.html</anchorfile>
+      <anchor>a49f34d83ecb7902f52a236f427fbbb49</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iqtdoc::CMainWindowGuiComp</name>
     <filename>classiqtdoc_1_1_c_main_window_gui_comp.html</filename>
     <base>iqtdoc::CMainWindowGuiCompBase</base>
@@ -28013,29 +28066,29 @@
       <type>virtual bool</type>
       <name>AttachObserver</name>
       <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>af53eca2c218ffed1fd8191e96f419202</anchor>
-      <arglist>(IObserver *observerPtr)</arglist>
+      <anchor>a3ee2795dbd51487d45f0fa931807dcdc</anchor>
+      <arglist>(IObserver *observerPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>DetachObserver</name>
       <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>a91b766842c09e073ca5a17bf8b1325cd</anchor>
-      <arglist>(IObserver *observerPtr)</arglist>
+      <anchor>a924fa605dff009e120b5e9f6b8fed0db</anchor>
+      <arglist>(IObserver *observerPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>DetachAllObservers</name>
       <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>af2f98f5f056f3c1d711046326c1caba6</anchor>
-      <arglist>()</arglist>
+      <anchor>aa51e81e7d39da4b1421d15b751ede3f5</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsAttached</name>
       <anchorfile>classimod_1_1_c_model_proxy.html</anchorfile>
-      <anchor>a5bb3fd01f7a1a546699db00c39c06dc6</anchor>
-      <arglist>(const IObserver *observerPtr) const</arglist>
+      <anchor>af450146665869370c52f2b33f1c9aed1</anchor>
+      <arglist>(const IObserver *observerPtr) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -87181,6 +87234,7 @@
     <class kind="class">ilog::CLogComp</class>
     <class kind="class">ilog::CLogCompBase</class>
     <class kind="class">ilog::CLoggerBase</class>
+    <class kind="class">ilog::CLogRouterComp</class>
     <class kind="class">ilog::CMessage</class>
     <class kind="class">ilog::CMessageContainer</class>
     <class kind="class">ilog::CStandardStreamBridge</class>

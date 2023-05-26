@@ -31,13 +31,16 @@ namespace imod
 
 CModelProxy::CModelProxy()
 	:m_modelObserver(*this),
-	m_modelPtr(NULL)
+	m_modelPtr(NULL),
+	m_modelMutex(QMutex::Recursive)
 {
 }
 
 
 void CModelProxy::SetModelPtr(imod::IModel* modelPtr)
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	if (m_modelPtr == modelPtr){
 		return;
 	}
@@ -59,6 +62,8 @@ void CModelProxy::SetModelPtr(imod::IModel* modelPtr)
 
 void CModelProxy::ResetModel()
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	m_modelPtr = NULL;
 }
 
@@ -67,6 +72,8 @@ void CModelProxy::ResetModel()
 
 bool CModelProxy::AttachObserver(IObserver* observerPtr)
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	Q_ASSERT(observerPtr != NULL);
 	if (observerPtr == NULL){
 		return false;
@@ -94,6 +101,8 @@ bool CModelProxy::AttachObserver(IObserver* observerPtr)
 
 void CModelProxy::DetachObserver(IObserver* observerPtr)
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	if (m_modelPtr != NULL){
 		m_modelPtr->DetachObserver(observerPtr);
 	}
@@ -112,6 +121,8 @@ void CModelProxy::DetachAllObservers()
 
 bool CModelProxy::IsAttached(const IObserver* observerPtr) const
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	if (m_modelPtr != NULL){
 		return m_modelPtr->IsAttached(observerPtr);
 	}
@@ -129,6 +140,8 @@ bool CModelProxy::IsAttached(const IObserver* observerPtr) const
 
 void CModelProxy::AttachProxyObservers()
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	if (m_modelPtr == NULL){
 		return;
 	}
@@ -148,6 +161,8 @@ void CModelProxy::AttachProxyObservers()
 
 void CModelProxy::DetachProxyObservers()
 {
+	QMutexLocker lock(&m_modelMutex);
+
 	imod::IModel* modelPtr = m_modelObserver.GetObservedModel();
 	if (modelPtr == NULL){
 		return;
@@ -177,6 +192,8 @@ CModelProxy::ModelObserver::ModelObserver(CModelProxy& parent)
 
 bool CModelProxy::ModelObserver::OnModelDetached(imod::IModel* modelPtr)
 {
+	QMutexLocker lock(&m_parent.m_modelMutex);
+
 	Q_ASSERT(modelPtr == m_parent.m_modelPtr);
 
 	if (modelPtr == m_parent.m_modelPtr){
