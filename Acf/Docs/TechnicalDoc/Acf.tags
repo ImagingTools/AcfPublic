@@ -5767,22 +5767,6 @@
     <namespace>iser</namespace>
   </compound>
   <compound kind="file">
-    <name>CJsonStringReadArchive.h</name>
-    <path>D:/Temp/Qt5/Acf/Include/iser/</path>
-    <filename>_c_json_string_read_archive_8h.html</filename>
-    <includes id="_c_text_read_archive_base_8h" name="CTextReadArchiveBase.h" local="no" imported="no">iser/CTextReadArchiveBase.h</includes>
-    <class kind="class">iser::CJsonStringReadArchive</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
-    <name>CJsonStringWriteArchive.h</name>
-    <path>D:/Temp/Qt5/Acf/Include/iser/</path>
-    <filename>_c_json_string_write_archive_8h.html</filename>
-    <includes id="_c_text_write_archive_base_8h" name="CTextWriteArchiveBase.h" local="no" imported="no">iser/CTextWriteArchiveBase.h</includes>
-    <class kind="class">iser::CJsonStringWriteArchive</class>
-    <namespace>iser</namespace>
-  </compound>
-  <compound kind="file">
     <name>CJsonWriteArchiveBase.h</name>
     <path>D:/Temp/Qt5/Acf/Include/iser/</path>
     <filename>_c_json_write_archive_base_8h.html</filename>
@@ -23457,8 +23441,8 @@
       <type></type>
       <name>CJsonMemReadArchive</name>
       <anchorfile>classiser_1_1_c_json_mem_read_archive.html</anchorfile>
-      <anchor>ab2a2e5c27c660f254ae15786607987ac</anchor>
-      <arglist>(const QByteArray &amp;data)</arglist>
+      <anchor>a0ac13ca5a0b11fa1ec5aa11f884ceac6</anchor>
+      <arglist>(const QByteArray &amp;data, bool serializeHeader=true)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -23582,233 +23566,6 @@
       <anchorfile>classiser_1_1_c_json_read_archive_base.html</anchorfile>
       <anchor>a385b9e9af9d101ee583c9e63db97a120</anchor>
       <arglist></arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::CJsonStringReadArchive</name>
-    <filename>classiser_1_1_c_json_string_read_archive.html</filename>
-    <base>iser::CTextReadArchiveBase</base>
-    <member kind="typedef">
-      <type>CTextReadArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>a9868ad2cbe6699e4939dda2ccef52aaf</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CJsonStringReadArchive</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>a9ca6d53ac164a38c18248e68ee2ad609</anchor>
-      <arglist>(const QByteArray &amp;inputString)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>BeginTag</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>a5a4780e3c954b71f6816a8e59ca2af1e</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>BeginMultiTag</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>aa8afa176ab029dc3462875f35ccae778</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>EndTag</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>a07658bc60d202a74e62ba3ca50e61eea</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>a57bbc1dbeba22fd43a7b34abaae94bdb</anchor>
-      <arglist>(QString &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>bool</type>
-      <name>ReadStringNode</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>a43297565d171cc8485a908e5c586dcc1</anchor>
-      <arglist>(QString &amp;text)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>ReadTextNode</name>
-      <anchorfile>classiser_1_1_c_json_string_read_archive.html</anchorfile>
-      <anchor>aa2d9982eea7e868c4c335ed623c3425d</anchor>
-      <arglist>(QByteArray &amp;text)</arglist>
-    </member>
-  </compound>
-  <compound kind="class">
-    <name>iser::CJsonStringWriteArchive</name>
-    <filename>classiser_1_1_c_json_string_write_archive.html</filename>
-    <base>iser::CTextWriteArchiveBase</base>
-    <member kind="typedef">
-      <type>iser::CTextWriteArchiveBase</type>
-      <name>BaseClass</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a48185062033cac1ca4cc9f47bc9b18d4</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="function">
-      <type></type>
-      <name>CJsonStringWriteArchive</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>af529f34375f027e5e827a4f2ecc1317e</anchor>
-      <arglist>(QByteArray &amp;inputString, const iser::IVersionInfo *versionInfoPtr=NULL, QJsonDocument::JsonFormat jsonFormat=QJsonDocument::Compact)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual</type>
-      <name>~CJsonStringWriteArchive</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a3ad4773d5f9e9db560db253295c997d3</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsTagSkippingSupported</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>ad5774121d79c970ae2d83399e90dc782</anchor>
-      <arglist>() const</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>BeginTag</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a646ff7317c3cfd8107fd6aab366dc0e5</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>BeginMultiTag</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a30524bc2bdc6574e2bde0df50656a58b</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>EndTag</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a3ace06525253d7858efb9a99bb51d824</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>ac1e0b9181e5e13d230a23e4468e3e574</anchor>
-      <arglist>(QString &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a1a0ce1d50d6d98967c69bb27648e6704</anchor>
-      <arglist>(bool &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>ae92763a12f5215e1fe37be36b4a0a6d1</anchor>
-      <arglist>(char &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>ace32773797bbe6e8610cc1f0c5bb56d7</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>aaf325f96e2d6796c4353e3a4d6766228</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>ab5d83218338e263882c69ff66d27a356</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>adede51284670880252c6c794c725a8ea</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a76a780148987c4422d3298b22fbc1e9c</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a4b7ce949e06c7980f3fd65e9b45bffec</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a7d647e6216ef355266045d9ce7913ec1</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>ae24e11f31f4fb4c888c960bfe124f3c3</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a598a529851feb04108c269cab260142f</anchor>
-      <arglist>(float &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a081519b653a69dca843c8239e783bffd</anchor>
-      <arglist>(double &amp;value)</arglist>
-    </member>
-    <member kind="function">
-      <type>virtual bool</type>
-      <name>Process</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>addbfd544c6534d8b5a29e66da0fe44e9</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
-    </member>
-    <member kind="function" protection="protected">
-      <type>void</type>
-      <name>WriteTag</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a901cf063a730c3dc799125cfdf42adec</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag, QString separator, bool isWriteTag=true)</arglist>
-    </member>
-    <member kind="function" protection="protected" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>WriteTextNode</name>
-      <anchorfile>classiser_1_1_c_json_string_write_archive.html</anchorfile>
-      <anchor>a8de40196fddc6a3c7832f3a1a1b8f22a</anchor>
-      <arglist>(const QByteArray &amp;text)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -87712,8 +87469,6 @@
     <class kind="class">iser::CJsonMemReadArchive</class>
     <class kind="class">iser::CJsonMemWriteArchive</class>
     <class kind="class">iser::CJsonReadArchiveBase</class>
-    <class kind="class">iser::CJsonStringReadArchive</class>
-    <class kind="class">iser::CJsonStringWriteArchive</class>
     <class kind="class">iser::CJsonWriteArchiveBase</class>
     <class kind="class">iser::CMemoryReadArchive</class>
     <class kind="class">iser::CMemoryWriteArchive</class>
