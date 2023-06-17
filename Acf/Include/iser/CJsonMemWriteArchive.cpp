@@ -36,7 +36,7 @@ namespace iser
 CJsonMemWriteArchive::CJsonMemWriteArchive(
 			QByteArray &inputString,
 			const IVersionInfo* versionInfoPtr,
-			QJsonDocument::JsonFormat jsonFormat)
+			QJsonDocument::JsonFormat /*jsonFormat*/)
 	:BaseClass(versionInfoPtr)
 {
 	bool serializeHeader = versionInfoPtr != nullptr;

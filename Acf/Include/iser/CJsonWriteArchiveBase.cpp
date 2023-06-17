@@ -86,7 +86,7 @@ bool CJsonWriteArchiveBase::BeginTag(const CArchiveTag& tag)
 }
 
 
-bool CJsonWriteArchiveBase::BeginMultiTag(const CArchiveTag &tag, const CArchiveTag &subTag, int &count)
+bool CJsonWriteArchiveBase::BeginMultiTag(const CArchiveTag& tag, const CArchiveTag& /*subTag*/, int&/*count*/)
 {
 	bool retVal = WriteTag(tag,"[");
 	m_firstTag = true;
@@ -99,7 +99,7 @@ bool CJsonWriteArchiveBase::BeginMultiTag(const CArchiveTag &tag, const CArchive
 }
 
 
-bool CJsonWriteArchiveBase::EndTag(const CArchiveTag &tag)
+bool CJsonWriteArchiveBase::EndTag(const CArchiveTag& /*tag*/)
 {
 	if (m_tagsStack.isEmpty()){
 		return false;
