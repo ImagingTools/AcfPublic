@@ -49223,6 +49223,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>AW_SLIDERS</name>
+      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
+      <anchor>a9625dcae7af1f319838059f4b464e383a8de39ff9a419b60736c743d22536fa24</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>AW_SPIN_BOXES</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
       <anchor>a9625dcae7af1f319838059f4b464e383aa538967ea5c518877fe914721af37cc3</anchor>
@@ -49234,12 +49240,18 @@
       <anchor>a9625dcae7af1f319838059f4b464e383ab826beeafb7a10fba8739c037cb45dcc</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>AW_SLIDERS</name>
+      <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
+      <anchor>a9625dcae7af1f319838059f4b464e383a8de39ff9a419b60736c743d22536fa24</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CWidgetWheelEventBlocker</name>
       <anchorfile>classiwidgets_1_1_c_widget_wheel_event_blocker.html</anchorfile>
-      <anchor>a9cb74599c1d72788a57158c307862ef1</anchor>
-      <arglist>(QWidget *parentPtr, int flags=AW_SPIN_BOXES|AW_COMBO_BOXES, bool setStrongFocusToAffectedWidgets=true)</arglist>
+      <anchor>ac09831a1e5fa0156af6ff03189ef571b</anchor>
+      <arglist>(QWidget *parentPtr, int flags=AW_SPIN_BOXES|AW_COMBO_BOXES|AW_SLIDERS, bool setStrongFocusToAffectedWidgets=true)</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QList&lt; QObject * &gt;</type>
