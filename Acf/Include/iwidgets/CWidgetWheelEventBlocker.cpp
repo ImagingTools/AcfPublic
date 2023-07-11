@@ -28,7 +28,7 @@
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QAbstractScrollArea>
 #include <QtWidgets/QLayoutItem>
-#include <QtWidgets/QAbstractSlider>
+#include <QtWidgets/QSlider>
 
 // Acf includes
 #include <istd/CChangeNotifier.h>
@@ -70,7 +70,7 @@ void CWidgetWheelEventBlocker::FilterWidgets(ObjectPtrList& widgetPtrsList)
 		}
 
 		if (m_processingFlags & AW_SLIDERS){
-			QAbstractSlider* providedSliderPtr = dynamic_cast<QAbstractSlider*>(povidedWidgetPtr);
+			QSlider* providedSliderPtr = dynamic_cast<QSlider*>(povidedWidgetPtr);
 			if (providedSliderPtr != nullptr){
 				AcquireWidget(*providedSliderPtr);
 			}
@@ -90,7 +90,7 @@ bool CWidgetWheelEventBlocker::eventFilter(QObject* objectPtr, QEvent* eventPtr)
 
 	if (eventType == QEvent::ChildAdded){
 		QList<QWidget*> children = objectPtr->findChildren<QWidget*>(QString(), Qt::FindChildrenRecursively);
-		for (QWidget* childPtr: children){
+		for (QWidget* childPtr: qAsConst(children)){
 			AddSupportedChildWidgets(*childPtr);
 		}
 	}
@@ -115,7 +115,7 @@ bool CWidgetWheelEventBlocker::eventFilter(QObject* objectPtr, QEvent* eventPtr)
 			}
 
 			if (m_processingFlags & AW_SLIDERS){
-				const QAbstractSlider* sliderPtr = dynamic_cast<const QAbstractSlider*>(objectPtr);
+				const QSlider* sliderPtr = dynamic_cast<const QSlider*>(objectPtr);
 				if (sliderPtr != nullptr){
 					eventPtr->ignore();
 
@@ -133,7 +133,7 @@ void CWidgetWheelEventBlocker::AddSupportedChildWidgets(QWidget& parentObject)
 {
 	QComboBox* comboBoxPtr = dynamic_cast<QComboBox*>(&parentObject);
 	QAbstractSpinBox* spinBoxPtr = dynamic_cast<QAbstractSpinBox*>(&parentObject);
-	QAbstractSlider* sliderPtr = dynamic_cast<QAbstractSlider*>(&parentObject);
+	QSlider* sliderPtr = dynamic_cast<QSlider*>(&parentObject);
 	if (comboBoxPtr != nullptr){
 		if (m_processingFlags & AW_COMBO_BOXES){
 			AcquireWidget(*comboBoxPtr);
@@ -166,7 +166,7 @@ void CWidgetWheelEventBlocker::AddSupportedChildWidgets(QWidget& parentObject)
 		}
 
 		if (m_processingFlags & AW_SLIDERS){
-			for (QAbstractSlider* childSliderPtr : parentObject.findChildren<QAbstractSlider*>(QString(), Qt::FindChildrenRecursively)){
+			for (QSlider* childSliderPtr : parentObject.findChildren<QSlider*>(QString(), Qt::FindChildrenRecursively)){
 				AcquireWidget(*childSliderPtr);
 			}
 		}
