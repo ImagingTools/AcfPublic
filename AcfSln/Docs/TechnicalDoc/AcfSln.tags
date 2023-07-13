@@ -17212,6 +17212,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>SF_SLIDER_VISIBLE</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3afb08d4b3f382e052c5b9b43b0a697916</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>SF_SLIDER_ONLY</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>ae7e58acadd784847fdb9f58f5a7b14b3a5c8842a0014cc477d22f9d141d86848b</anchor>
@@ -17227,6 +17233,12 @@
       <name>SF_SINGLE_ROW</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>ae7e58acadd784847fdb9f58f5a7b14b3abfe3618bcbbce53e03d463391d647275</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_WITHOUT_SPIN_BOX</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3a9d2bef118b1d7b00c58f908fe6a83391</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
@@ -17236,6 +17248,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>SF_SLIDER_VISIBLE</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3afb08d4b3f382e052c5b9b43b0a697916</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>SF_SLIDER_ONLY</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>ae7e58acadd784847fdb9f58f5a7b14b3a5c8842a0014cc477d22f9d141d86848b</anchor>
@@ -17251,6 +17269,12 @@
       <name>SF_SINGLE_ROW</name>
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>ae7e58acadd784847fdb9f58f5a7b14b3abfe3618bcbbce53e03d463391d647275</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>SF_WITHOUT_SPIN_BOX</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>ae7e58acadd784847fdb9f58f5a7b14b3a9d2bef118b1d7b00c58f908fe6a83391</anchor>
       <arglist></arglist>
     </member>
     <member kind="signal">
@@ -17273,6 +17297,13 @@
       <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
       <anchor>a1c199454030f5b94cf9d5a1c6edbe07e</anchor>
       <arglist>(const QString &amp;name, const QString &amp;description, const imath::IUnitInfo *unitInfoPtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSliderTickPositionInterval</name>
+      <anchorfile>classiqtmeas_1_1_c_numeric_value_widget.html</anchorfile>
+      <anchor>a5ac6b189fdbd706cd2ca937e5c569cc6</anchor>
+      <arglist>(QSlider::TickPosition tickPosition, int interval=0)</arglist>
     </member>
     <member kind="function">
       <type>double</type>
