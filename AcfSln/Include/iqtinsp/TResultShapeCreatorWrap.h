@@ -44,13 +44,15 @@ public:
 		I_ASSIGN(m_okColorSchemeCompPtr, "OkColorSchema", "Color schema used for ok shapes", false, "OkColorSchema");
 		I_ASSIGN(m_warningColorSchemeCompPtr, "WarningColorSchema", "Color schema used for warning shapes", false, "WarningColorSchema");
 		I_ASSIGN(m_errorColorSchemeCompPtr, "ErrorColorSchema", "Color schema used for error shapes", false, "ErrorColorSchema");
+        I_ASSIGN_MULTI_0(m_resultColorShemaListCompPtr, "ResultColorSchemeList", "List of color schema used for related results (according to the list of corresponding IDs)", false);
+        I_ASSIGN_MULTI_0(m_resultIdListAttrPtr, "ResultIdList", "List of result IDs for mapping related result color schema", false);
 	I_END_COMPONENT;
 
 	/**
 		Create a shape for the result object and corresponding status information.
 	*/
 	virtual iview::IShape* CreateResultShape(
-				const iview::IShapeFactory* shapeFactoryPtr, 
+				const iview::IShapeFactory* shapeFactoryPtr,
 				const istd::IChangeable* objectPtr,
 				const istd::IInformationProvider* infoPtr,
 				bool connectToModel = true) const;
@@ -59,10 +61,13 @@ private:
 	I_REF(iview::IColorSchema, m_okColorSchemeCompPtr);
 	I_REF(iview::IColorSchema, m_warningColorSchemeCompPtr);
 	I_REF(iview::IColorSchema, m_errorColorSchemeCompPtr);
+    I_MULTIREF(iview::IColorSchema, m_resultColorShemaListCompPtr);
+    I_MULTIATTR(int, m_resultIdListAttrPtr);
 };
 
 
 // public methods
+
 template <class Base>
 iview::IShape* TResultShapeCreatorWrap<Base>::CreateResultShape(
 			const iview::IShapeFactory* shapeFactoryPtr,
@@ -111,6 +116,17 @@ iview::IShape* TResultShapeCreatorWrap<Base>::CreateResultShape(
 				break;
 
 			default:;
+		}
+
+		// Check for result-specific user color schema:
+		int resultId = infoPtr->GetInformationId();
+		if (resultId >= 0){
+			int schemaIndex = m_resultIdListAttrPtr.FindValue(resultId);
+			if ((schemaIndex >= 0) && (schemaIndex < m_resultColorShemaListCompPtr.GetCount())){
+				if ((userColorSchemaPtr == NULL) && m_resultColorShemaListCompPtr[schemaIndex] != nullptr){
+					shapePtr->SetUserColorSchema(m_resultColorShemaListCompPtr[schemaIndex]);
+				}
+			}
 		}
 
 		return shapePtr;

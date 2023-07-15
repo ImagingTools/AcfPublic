@@ -653,8 +653,8 @@ void CInspectionTaskGuiComp::OnGuiRetranslate()
 {
 	BaseClass::OnGuiRetranslate();
 
-	m_executeTaskCommand.SetVisuals(tr("Execute"), tr("Execute"), tr("Execute supplier chain"), QIcon(":/Icons/Play"));
-	m_continuousExecuteCommand.SetVisuals(tr("Continuous"), tr("Continuous"), tr("Enable continuous execution of the supplier chain"), QIcon(":/Icons/AutoUpdate"));
+	m_executeTaskCommand.SetVisuals(tr("Execute"), tr("Execute"), tr("Execute processing pipline"), QIcon(":/Icons/Play"));
+	m_continuousExecuteCommand.SetVisuals(tr("Continuous"), tr("Continuous"), tr("Enable continuous execution of the processing pipeline"), QIcon(":/Icons/AutoUpdate"));
 
 	int subtasksCount = m_editorGuisCompPtr.GetCount();
 
@@ -1171,7 +1171,6 @@ void CInspectionTaskGuiComp::ActivateTaskShapes(int taskIndex, const ShapeIndice
 
 void CInspectionTaskGuiComp::CreateMenu()
 {
-	/*
 	QMenu* actionsMenuPtr = new QMenu(MenuButton);
 	MenuButton->setMenu(actionsMenuPtr);
 
@@ -1188,13 +1187,11 @@ void CInspectionTaskGuiComp::CreateMenu()
 	}
 
 	UpdateMenu();
-	*/
 }
 
 
 void CInspectionTaskGuiComp::UpdateMenu()
 {
-	/*
 	Q_ASSERT(m_pasteCurrentTaskActionPtr != NULL);
 	Q_ASSERT(m_pasteAllActionPtr != NULL);
 
@@ -1208,7 +1205,6 @@ void CInspectionTaskGuiComp::UpdateMenu()
 		m_pasteCurrentTaskActionPtr->setEnabled(false);
 		m_pasteAllActionPtr->setEnabled(false);
 	}
-	*/
 }
 
 
