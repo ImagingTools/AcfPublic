@@ -6,6 +6,6 @@ QT += multimedia axcontainer
 
 INCLUDEPATH += ../../../../AcfSln/Include
 
-HEADERS += ../Wrapped/*.h
-SOURCES += ../Wrapped/*.cpp
+HEADERS += ../Wrapped/axvlc.h
+SOURCES += ../Wrapped/axvlc.cpp
 
