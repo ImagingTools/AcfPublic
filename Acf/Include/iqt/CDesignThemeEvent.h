@@ -20,40 +20,37 @@
 ********************************************************************************/
 
 
-#include <iqtgui/CIconProviderComp.h>
+#pragma once
 
 
-namespace iqtgui
+// Qt includes
+#include <QtCore/QEvent>
+
+
+namespace iqt
 {
 
 
-// public methods
-
-// reimplemented (iqtgui::IIconProvider)
-
-int CIconProviderComp::GetIconCount() const
+class CDesignThemeEvent: public QEvent
 {
-	return m_iconFilesAttrPtr.GetCount();
-}
+public:
+	typedef QEvent BaseClass;
+
+	static int s_eventType;
+
+	CDesignThemeEvent(const QByteArray& themeId);
+
+	QByteArray GetThemeId() const;
+
+#if QT_VERSION >= 0x600000
+	// reimplemented (QEvent)
+	virtual QEvent* clone() const override;
+#endif
+private:
+	QByteArray m_themeId;
+};
 
 
-QIcon CIconProviderComp::GetIcon(int iconIndex) const
-{
-	static QIcon emptyIcon;
-
-	Q_ASSERT(iconIndex < m_iconFilesAttrPtr.GetCount());
-	Q_ASSERT(iconIndex >= 0);
-
-	if (iconIndex >= 0 && iconIndex < m_iconFilesAttrPtr.GetCount()){
-		QString iconPath = QString(*m_iconPathAttrPtr) + QString("/") + QString(m_iconFilesAttrPtr[iconIndex]);
-
-		return QIcon(GetIconPath(iconPath));
-	}
-
-	return emptyIcon;
-}
-
-
-} // namespace iqtgui
+} // namespace iqt
 
 

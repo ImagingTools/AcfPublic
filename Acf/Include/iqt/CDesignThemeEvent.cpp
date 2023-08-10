@@ -20,40 +20,44 @@
 ********************************************************************************/
 
 
-#include <iqtgui/CIconProviderComp.h>
+#include <iqt/CDesignThemeEvent.h>
 
 
-namespace iqtgui
+namespace iqt
 {
+
+
+// public static methods
+
+int CDesignThemeEvent::s_eventType = QEvent::MaxUser - 1;
 
 
 // public methods
 
-// reimplemented (iqtgui::IIconProvider)
-
-int CIconProviderComp::GetIconCount() const
+CDesignThemeEvent::CDesignThemeEvent(const QByteArray& themeId)
+	:BaseClass(QEvent::Type(s_eventType)),
+	m_themeId(themeId)
 {
-	return m_iconFilesAttrPtr.GetCount();
 }
 
 
-QIcon CIconProviderComp::GetIcon(int iconIndex) const
+QByteArray CDesignThemeEvent::GetThemeId() const
 {
-	static QIcon emptyIcon;
-
-	Q_ASSERT(iconIndex < m_iconFilesAttrPtr.GetCount());
-	Q_ASSERT(iconIndex >= 0);
-
-	if (iconIndex >= 0 && iconIndex < m_iconFilesAttrPtr.GetCount()){
-		QString iconPath = QString(*m_iconPathAttrPtr) + QString("/") + QString(m_iconFilesAttrPtr[iconIndex]);
-
-		return QIcon(GetIconPath(iconPath));
-	}
-
-	return emptyIcon;
+	return m_themeId;
 }
 
 
-} // namespace iqtgui
+// reimplemented (QEvent)
+
+#if QT_VERSION >= 0x600000
+
+QEvent* CDesignThemeEvent::clone() const
+{
+	return new CDesignThemeEvent;
+}
+#endif
+
+
+} // namespace iqt
 
 

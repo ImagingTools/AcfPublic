@@ -45,7 +45,7 @@ namespace iocv
 // reimplemented (iproc::IProcessor)
 
 int COcvDenoisingProcessorComp::DoProcessing(
-			const iprm::IParamsSet* paramsPtr,
+			const iprm::IParamsSet* /*paramsPtr*/,
 			const istd::IPolymorphic* inputPtr,
 			istd::IChangeable* outputPtr,
 			ibase::IProgressManager* /*progressManagerPtr*/)

@@ -27,6 +27,9 @@
 #include <QtCore/QObject>
 #include <QtCore/QCoreApplication>
 
+// ACF includes
+#include <iqt/CDesignThemeEvent.h>
+
 
 namespace iqtgui
 {
@@ -46,7 +49,7 @@ public:
 	virtual void EnableDesignHandler(bool enable = true);
 
 protected:
-	virtual void OnDesignSchemaChanged() = 0;
+	virtual void OnDesignSchemaChanged(const QByteArray& themeId) = 0;
 
 private:
 	class DesignSchemaEventsFilter: public QObject
@@ -119,10 +122,11 @@ template <class Base>
 bool TDesignSchemaHandlerWrap<Base>::DesignSchemaEventsFilter::eventFilter(QObject* sourcePtr, QEvent* eventPtr)
 {
 	if (sourcePtr == QCoreApplication::instance()){
-		switch (eventPtr->type()){
-		case QEvent::QEvent::ApplicationPaletteChange:
-			m_parent.OnDesignSchemaChanged();
-			break;
+		if (eventPtr->type() == iqt::CDesignThemeEvent::s_eventType){
+			const iqt::CDesignThemeEvent* designEventPtr = dynamic_cast<const iqt::CDesignThemeEvent*>(eventPtr);
+			Q_ASSERT(designEventPtr != nullptr);
+
+			m_parent.OnDesignSchemaChanged(designEventPtr->GetThemeId());
 		}
 	}
 

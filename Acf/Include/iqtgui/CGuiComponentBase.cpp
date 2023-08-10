@@ -154,11 +154,11 @@ void CGuiComponentBase::OnGuiDesignChanged()
 	}
 
 	if (m_styleSheetPathAttrPtr.IsValid()){
-		if (!iqtgui::SetStyleSheetFromFile(m_widgetPtr, *m_styleSheetPathAttrPtr)){
-			qDebug("Style sheet file could not be set: %s", (*m_styleSheetPathAttrPtr).toLocal8Bit().constData());
+		QString styleSheetPath = GetStyleSheetPath(*m_styleSheetPathAttrPtr);
+		if (!iqtgui::SetStyleSheetFromFile(m_widgetPtr, styleSheetPath)){
+			qDebug("Style sheet file could not be set: %s", styleSheetPath.toLocal8Bit().constData());
 		}
 	}
-
 	if (m_defaultStatusIconPathAttrPtr.IsValid()){
 		istd::CChangeNotifier changeNotifier(&m_visualStatus);
 
@@ -240,8 +240,10 @@ void CGuiComponentBase::OnLanguageChanged()
 
 // reimplemented (ibase::TDesignSchemaHandlerWrap)
 
-void CGuiComponentBase::OnDesignSchemaChanged()
+void CGuiComponentBase::OnDesignSchemaChanged(const QByteArray& themeId)
 {
+	BaseClass::OnDesignSchemaChanged(themeId);
+
 	if (IsGuiShown()){
 		OnGuiDesignChanged();
 	}
