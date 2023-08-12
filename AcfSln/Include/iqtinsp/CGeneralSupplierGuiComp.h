@@ -187,7 +187,8 @@ public:
 
 protected:
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated();
+	virtual void OnGuiCreated() override;
+	virtual void OnGuiDesignChanged() override;
 
 protected Q_SLOTS:
 	void on_TestButton_clicked();

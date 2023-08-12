@@ -193,9 +193,9 @@ QIcon CLogGuiComp::GetCategoryIcon(int category) const
 QIcon CLogGuiComp::GetActionIcon(int functionType) const
 {
 	static QIcon emptyIcon;
-	static QIcon clearIcon(":/Icons/Clear");
-	static QIcon exportIcon(":/Icons/DocumentExport");
-	static QIcon diagnosticsIcon(":/Icons/Diagnostics");
+	QIcon clearIcon(GetIcon(":/Icons/Clear"));
+	QIcon exportIcon(GetIcon(":/Icons/DocumentExport"));
+	QIcon diagnosticsIcon(GetIcon(":/Icons/Diagnostics"));
 	
 	switch (functionType){
 	case AT_CLEAR:
@@ -461,6 +461,8 @@ void CLogGuiComp::OnGuiDestroyed()
 void CLogGuiComp::OnGuiDesignChanged()
 {
 	BaseClass::OnGuiDesignChanged();
+
+	SetCommandsVisuals();
 
 	UpdateVisualStatus();
 }

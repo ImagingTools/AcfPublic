@@ -5364,8 +5364,8 @@
       <type>virtual const iimg::IBitmap *</type>
       <name>GetBitmap</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>ad873643a5d12ac1672d29589cb88dfa1</anchor>
-      <arglist>() const</arglist>
+      <anchor>a859f42c2bbfe4032b6e39af3f029f7ac</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -5420,71 +5420,78 @@
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a63d8908addcc55bf4ce82b3c2effb1b0</anchor>
-      <arglist>()</arglist>
+      <anchor>a7307d82ec049793c6221fe2284b24b68</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a2150109a96286521900211014d02910f</anchor>
-      <arglist>()</arglist>
+      <anchor>a22923cdb7ce5cd8d9f372d2f0575a3e9</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QWidget *</type>
       <name>GetParamsWidget</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a7e0fb3a1f0d669e9949bf84e7cc8ee75</anchor>
-      <arglist>() const</arglist>
+      <anchor>ae576bb2493234d3ffda225dc1e36e496</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>ac18cf1f6b895addf037fcc93daacc910</anchor>
-      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+      <anchor>a34178a7e5e52e648b97bc9c2f46dab33</anchor>
+      <arglist>(int sceneId, Shapes &amp;result) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a7187188354d8bf4cfdd4dd0681b901c9</anchor>
-      <arglist>()</arglist>
+      <anchor>a4b66a9483803e9a0972fce57e27bd3ec</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a1127f1431c96c7113d36551cbcc71f43</anchor>
-      <arglist>()</arglist>
+      <anchor>a6df2fe2ad9ae5672c2e5a29b652089f5</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>aca2baa38ae82c628f5570fe6caae274c</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a77723a431a4c0c0a13f903f5534f92fb</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a706b776264c100b91fb0d6a28b8a0a01</anchor>
-      <arglist>()</arglist>
+      <anchor>aeb001df27ec52168eaeeb03e9de2cfba</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
+      <anchor>a8503f48cf819088ecd486fad37b8fc13</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a688cfe7622545cd4998803b65d71da99</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a4c5cf5f833e4171e116c6d26ed2e2fa5</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtcam_1_1_c_bitmap_supplier_gui_comp.html</anchorfile>
-      <anchor>a4db4d36978017b4a871af944173afe89</anchor>
-      <arglist>()</arglist>
+      <anchor>aa99bfffd58cd83e1bfa2f03b8343a881</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12486,8 +12493,15 @@
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
-      <anchor>aa2faf9bb189e5b8606a40642e811ff02</anchor>
-      <arglist>()</arglist>
+      <anchor>a1de22740b70babc256a9737b802db1c8</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtinsp_1_1_c_general_supplier_gui_comp.html</anchorfile>
+      <anchor>a93a651b2c11d5a639ffeaf5048f4d15b</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14743,22 +14757,22 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>aaa547de1f011eb41346acf84587c32b5</anchor>
-      <arglist>() const</arglist>
+      <anchor>aaa2ea62190d12c800b4fe909833d54cd</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a076071b4da69338faafe971219596e6b</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>afc292fc5fd33559d2a498d5effbc62c5</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ad9058807cc1e70f35c76cf5ae0acb41c</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>af55c96520db3b48149ba9cc34f945b0f</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -14862,71 +14876,78 @@
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a42b2c0ef5e402fd77c301d1691768873</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
+      <anchor>af632ba195641e1c28ac2b5b85aa85bff</anchor>
+      <arglist>(const QSettings &amp;settings) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSaveSettings</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a26d73944f3dd2b5c7cdaa12234fcc9e8</anchor>
-      <arglist>(QSettings &amp;settings) const</arglist>
+      <anchor>ae9226ef580e24a4f1dc68adc61420156</anchor>
+      <arglist>(QSettings &amp;settings) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a056675835a58af83e61275bb4b2e530c</anchor>
-      <arglist>() const</arglist>
+      <anchor>ade73a9aa4c4259e934c997eb3071b797</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a00da780da6db945206a9173d33b19c5d</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>af3bd5294f029b1bea92480c7704608a7</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ab33f552e9b1943e938513d0dce5e37b4</anchor>
-      <arglist>()</arglist>
+      <anchor>ad6082748a214bb5d1f80308533501190</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>ada49cbc8477c5762f0440350d78eeafc</anchor>
-      <arglist>()</arglist>
+      <anchor>a01249a749266da1882dde37e1ef98e93</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a193feab80d5fff0e3e5c9d2e88dc0613</anchor>
-      <arglist>()</arglist>
+      <anchor>aa1910b4ed1e07bd4406e22451d1cdcd4</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a17341706955cb3c685324ebfaba268ad</anchor>
-      <arglist>()</arglist>
+      <anchor>a5d1a902ea2b165c744438a4b0c0ea098</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>aafcf3b4b949e1f0112ea31a691458462</anchor>
-      <arglist>()</arglist>
+      <anchor>a5bad329f1b9e31fa684e77792c4b17b3</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
+      <anchor>a8f2d0ba2a29d07a9a2607add121e3d30</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiqtinsp_1_1_c_inspection_task_gui_comp.html</anchorfile>
-      <anchor>a42dc658c6fe4765fff7d191bf6ffb6f5</anchor>
-      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ad07e10bc91abe5dff6c65b0ab834e369</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24113,15 +24134,15 @@
       <type>virtual void</type>
       <name>AddItemsToScene</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a35d15ce54c839c27613dd372c2074ac7</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr, int flags)</arglist>
+      <anchor>af8159befcc3d0106ceef1860a43c255e</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr, int flags) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>RemoveItemsFromScene</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a880029695b9daef6702eb374e41c1055</anchor>
-      <arglist>(iqt2d::IViewProvider *providerPtr)</arglist>
+      <anchor>a808576d44877ecc2b3147c8df71cc411</anchor>
+      <arglist>(iqt2d::IViewProvider *providerPtr) override</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -24197,36 +24218,36 @@
       <type>virtual void</type>
       <name>CreateShapes</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a8c9034b06b859bc5f7ab5da4c25b4b9e</anchor>
-      <arglist>(int sceneId, Shapes &amp;result)</arglist>
+      <anchor>aa8acf130a219a3795106acb04d373fb3</anchor>
+      <arglist>(int sceneId, Shapes &amp;result) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a4335c96470759561d6913f4ef4360010</anchor>
-      <arglist>()</arglist>
+      <anchor>ad1df4bbc40980a0b64f28441ac991366</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ace398d36c92e317269f704daa0c2fba7</anchor>
-      <arglist>()</arglist>
+      <anchor>aca2e8087d7880301b5fb7912ae93abad</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiHidden</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>ad52134190f4bf9ee248bcb0b88a91186</anchor>
-      <arglist>()</arglist>
+      <anchor>a5c3a6ba7103efe81225d570a229d6c55</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp.html</anchorfile>
-      <anchor>a4cad6f246901f20cb0eb1a4bcf74ce68</anchor>
-      <arglist>()</arglist>
+      <anchor>ac5e108d4e97055213effa097da4d80fa</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34489,8 +34510,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtcam_1_1_c_snap_image_gui_comp_1_1_params_observer.html</anchorfile>
-      <anchor>ae6ff65be061e916f9e63dee1aa1e4616</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>acc3c0f86fa940cada9a7879c857ee0aa</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">

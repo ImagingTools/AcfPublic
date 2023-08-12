@@ -19847,36 +19847,43 @@
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>abb5d137c83b17c15eb3e47e3807936f6</anchor>
-      <arglist>()</arglist>
+      <anchor>a139cce250b64cf584bd8de906bc66819</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>af09680d91a7f51c17cb81b084a43de9f</anchor>
-      <arglist>()</arglist>
+      <anchor>a4de361ed7d91fe35565039a759e7f631</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
+      <anchor>a38f0eec589a973e76b3d842e8e487c44</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>adb92085eb9f5d8d8c6b4a2951d1a7298</anchor>
-      <arglist>()</arglist>
+      <anchor>ac6e4bc6910a2daad1af3d6731899578b</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>a225d639c04b064eaca87624624344255</anchor>
-      <arglist>() const</arglist>
+      <anchor>a58d56c86c8e93597fa4e66273a8cb863</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtprm_1_1_c_file_name_param_gui_comp.html</anchorfile>
-      <anchor>a4b6e33a05837c4abb98c9c3f5d9a3aa8</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab49d35bcc6d879eadf9eee55a8cd8a36</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -25454,18 +25461,11 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual void</type>
-      <name>OnGuiRetranslate</name>
-      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad3d1e99bb3c6cf7a29f0b65fbf1326e0</anchor>
-      <arglist>()</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>add66e403f9f531e7c4af3abeabd960ec</anchor>
-      <arglist>() const</arglist>
+      <anchor>af1b46dae9fac4d4e55261c4cc2070cb4</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="enumeration" protection="protected">
       <type></type>
@@ -25731,29 +25731,36 @@
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a77b30b21f8b5aea82e9ddc136bbe4cc1</anchor>
-      <arglist>()</arglist>
+      <anchor>a9467b0e3cefac97ea5bca627b08bcffb</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ab388d6e2dc6934112506280fc4ca9768</anchor>
-      <arglist>()</arglist>
+      <anchor>aefa9a342322af0055378e2c103b32838</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiRetranslate</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a31d42bf5d9d31d04caf41c063a4c591f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDesignChanged</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a8342e93ed714e4264cb85c42340cd3cc</anchor>
-      <arglist>()</arglist>
+      <anchor>aeefbc275bcd92c66f6259de2c76b07cb</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>af5494bcbfde5a6f2940553497758ed5b</anchor>
-      <arglist>()</arglist>
+      <anchor>a328f723e75546ba8221e5d71bddd2a43</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QAction *</type>
@@ -41072,36 +41079,43 @@
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
-      <anchor>a10271c0c14f515111adcf17e324b3054</anchor>
-      <arglist>()</arglist>
+      <anchor>ac6313b0864617f1c41c6f8eda5127c5e</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateModel</name>
       <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
-      <anchor>a55c6ee2eca3af41b99ffdd6782032333</anchor>
-      <arglist>() const</arglist>
+      <anchor>a2bb01b89068ba0a112244a1f777302e4</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
-      <anchor>aacc0e89737bbcea7ea0be9074d985ac3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ac5b14054dfcb1f7cf39e0f61185dea53</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
-      <anchor>a790670f532e2fbe9eeb07f47754e89d6</anchor>
-      <arglist>()</arglist>
+      <anchor>a05d254f4e00b2be698379b5801edc418</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
-      <anchor>a3463bc355e6326622671abdb1bfaf641</anchor>
-      <arglist>()</arglist>
+      <anchor>ad83b923182fdfd8b3401fd4a7d2fa85d</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classifilegui_1_1_c_simple_file_path_param_gui_comp.html</anchorfile>
+      <anchor>a1929d4a2371aa6ebdd7940d00c0c1087</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
