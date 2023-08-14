@@ -497,6 +497,7 @@
     <includes id="_c_component_base_8h" name="CComponentBase.h" local="no" imported="no">icomp/CComponentBase.h</includes>
     <includes id="_i_calibration2d_8h" name="ICalibration2d.h" local="no" imported="no">i2d/ICalibration2d.h</includes>
     <includes id="_i_object2d_8h" name="IObject2d.h" local="no" imported="no">i2d/IObject2d.h</includes>
+    <includes id="_i_object2d_provider_8h" name="IObject2dProvider.h" local="no" imported="no">i2d/IObject2dProvider.h</includes>
     <class kind="class">i2d::TObject2dCompWrap</class>
     <namespace>i2d</namespace>
   </compound>
@@ -7814,92 +7815,92 @@
       <type>virtual int</type>
       <name>GetTransformationFlags</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a90efa4b6f3501d899fd9641e270b4ac8</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa853136a574ecb3435a4b43fdd62ebb2</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetDistance</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>ac03a0d308c5d45991c33913bc5abebeb</anchor>
-      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>a57cc7d80f5b381a8add3686b2fdc937a</anchor>
+      <arglist>(const CVector2d &amp;origPos1, const CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetPositionAt</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a18ca0df3bc7040992af34b928d80c6fc</anchor>
-      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>aaf16f26fc2b2a9b880b5a2c3b759b202</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvPositionAt</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a53a741c9d3b5a96905e60767c03f4178</anchor>
-      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>a3307813f4f77d56ce458b6bbf20b291b</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetLocalTransform</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a8460e78ee11f99f96b59bc9593ecb2b5</anchor>
-      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>a817c93430e5974678f35aea581a17364</anchor>
+      <arglist>(const CVector2d &amp;origPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetLocalInvTransform</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a4582c937d2006330f5274f4b85cd5529</anchor>
-      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>ad9875d2ae4c238539918a848987faa0d</anchor>
+      <arglist>(const CVector2d &amp;transfPosition, CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvValueAt</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a2c56e197c1f93292b860f5acde36b2bf</anchor>
-      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const</arglist>
+      <anchor>abdf573a04357fc091d975cb083b847c0</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
       <name>GetInvValueAt</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a94c09f2067a02007fd03f5528589be04</anchor>
-      <arglist>(const CVector2d &amp;argument) const</arglist>
+      <anchor>a28d34bb0689154774c3574a71abacf6b</anchor>
+      <arglist>(const CVector2d &amp;argument) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>aeb1b58b9a1a01515b00fd2a6776ff999</anchor>
-      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const</arglist>
+      <anchor>a0d13b54f1b92d9e12e6bc1e48618ac34</anchor>
+      <arglist>(const CVector2d &amp;argument, CVector2d &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CVector2d</type>
       <name>GetValueAt</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a9fb199551455179c963ad98c80d166c0</anchor>
-      <arglist>(const CVector2d &amp;argument) const</arglist>
+      <anchor>acd61e0ee36ca93526e5b1a7b1ae13793</anchor>
+      <arglist>(const CVector2d &amp;argument) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a75b334351ed65d769049fb2451e3d06d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a45b0165c61055095647dcfc9944a4ee7</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a60acaed5eecce2e4ec38ee1d81b4bdd8</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>add9e621e27a322a30ae370bcc0b913a2</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_affine_transformation2d.html</anchorfile>
-      <anchor>a0001b2c2479e5419c7299dd5920f74fb</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a3f4d18cd922bd066c8422cdef13b867c</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>CAffine2d</type>
@@ -8335,64 +8336,64 @@
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>aa780f06ed97562a895f760e2ceb22d33</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad973dc19c2a58ed31549be25a031aeb7</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a97de2392bbcb8359aae87d166f9a9dee</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a820e1a697b142515046bc70b80a0b129</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a994865c894bec6edfb431b5fc7792566</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a72256467f3df61417b16f32017a04624</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a17cd7a48b0c50d4ca20084cd49b6b843</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>abab60253f6eb9b651c940db0738403b3</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a49c512e6890fcfc632ca5c961b319563</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a44d68e438a6b15099a479e8696064afd</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a8440118483cb7448d4c4da2169d4aff2</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0e62c78486047318a396d62d22f84d89</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>accbe0dcee91355db378d5efa91675464</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a03606ae14b3e8e99ac35659e704fa8bc</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a587952b923f7bd990cb770464e925eb8</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a99255d102ef053f73afcb8515cee0b20</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_annulus.html</anchorfile>
-      <anchor>a007c1e575f9e4241d1282c1da5932522</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>afc08b1ac1dffd72f54a0bda4d5f9e4d5</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::CRange</type>
@@ -8417,15 +8418,15 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
-      <anchor>ac1b0ecf4f05188e652047870e6756a0e</anchor>
-      <arglist>()</arglist>
+      <anchor>ab0a9af84abbbe97326d21a91bcbecec0</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>ResetData</name>
       <anchorfile>classi2d_1_1_c_annulus_comp.html</anchorfile>
-      <anchor>aaa82fe7f5924ed225d2c4662758a2ea7</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>aa99013b8cf16a2cb35d73acda010bfaa</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8553,50 +8554,50 @@
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a95e3dd3b784f61134f2ef2ef602c7c68</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3a0154817c0f53d2bdbdeb5d28bb70f5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a18c53fb637db7b494a4b0d0349af4b39</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>ac9a49d9d6a6a4003c2b02c208d001479</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>ab35a80b324c5177a4c079c8340609dee</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>aedf3dab6f42e6ed25ff010a188a2e691</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>af2f5092ef1745dde8d2bc26c26fd4549</anchor>
-      <arglist>() const</arglist>
+      <anchor>a84648c5d9733b2ad91e0b8939ac171af</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>aec8ed214f621cfc921a46d02ac214d77</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a884ef3c476bade73c4cf270c7ef5703c</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a625150f2ab0fd81ff493cd5cf28500ff</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>ac54ebf4d29b985984c90714dcf4c1289</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_annulus_segment.html</anchorfile>
-      <anchor>a48de034e5cffa9239a48dc46b3e7c700</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a450830e705d264dd6ec2ede93c2d022c</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -8614,8 +8615,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_annulus_segment_comp.html</anchorfile>
-      <anchor>afc3743dcac9bc22779f957257261be4c</anchor>
-      <arglist>()</arglist>
+      <anchor>af798bd29b8510e885b50c149ce2c83fe</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9278,64 +9279,64 @@
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>ac0d8ba766bba7b38ad482f355f11f2b1</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad83fce5ac35e0caf1565158c0a5575c3</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>a34b2e1d505f93f0f0b1d8b67976611df</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a43848e206c11f4bf6f33d622134188a9</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>a044239d65b93f128a269b8a159be9530</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a50155dd01858164643730c37c2073567</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>a220fddadf1db98971da4d55090de85f0</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a83c4699878f426dc95e72b3e60043def</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>a3e5a7bdbbab392a06d25231e3354e9f5</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>acf4ccf13a95eaf0ab46f0efad9603a49</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>adfc2ea2701abb9129f6bdb311d8de25b</anchor>
-      <arglist>() const</arglist>
+      <anchor>a42c684da8899d60281aeff2c8d57dcb5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>a2d14f93dd77d458137ffca5587742452</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>ace7de1871bb35542440453b228e58661</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>ad342b45bc855aff331881f3b328ea614</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>af91e0abdd2582cf56d53f08b70fc3726</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_arc.html</anchorfile>
-      <anchor>adde3531e1a8c6a21fbf0fb095500fc0a</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a25b22d8946e7b7aa3cc27ffc89da8cd2</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>double</type>
@@ -9367,8 +9368,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_arc_comp.html</anchorfile>
-      <anchor>a7cbd098bb536b9bc7d6ca36b596b58f0</anchor>
-      <arglist>()</arglist>
+      <anchor>a7cf79bfd09c7bb7b6c0cbf0bdd58326f</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -11925,71 +11926,71 @@
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>acaac8922db13d41f12a6691a5f67495e</anchor>
-      <arglist>() const</arglist>
+      <anchor>aca224c1ec20dfd0204e6ca3e9f5bb890</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a8015a4528b42eb8a741d0edd56b98b46</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>add38a908036364d45cf38ad097b1814e</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>af4ba43370e7e1756fbb925617939af69</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a1c3f65cc90a7138eba5db55dc1367953</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a5875fae41e225655b2679ac12c7f8ee8</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a03cd8474349ec03e763a975c5344cbca</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a65c9dec34631fa25caf61bbff23a4e9c</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a41d7af8d9d1a858664387393d359a174</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>ae5c4ac947f70692d79c5d8ea72345a69</anchor>
-      <arglist>() const</arglist>
+      <anchor>a6b300ee6f82a9821f1edd0caa125871e</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a86240244e65b84a6c0bc22c520dbcae5</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa8dc6be4b1201e1203657d12af65f6d5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a4a264c2053d9e2e1e9307e7e55ea1fec</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>ab8576f143eaf78576e92eed9ded1432c</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a021893439837cfe2fef04e38f0c3f426</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a759bf1f5e8229b3b7683d267732c37e9</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_circle.html</anchorfile>
-      <anchor>a192c7508130cf4243165eed039f7a253</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a5ca8db8cb18ac364a6500661a17618d7</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -12021,8 +12022,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_circle_comp.html</anchorfile>
-      <anchor>a1bbacd11a54daecbfb247fdd890d88aa</anchor>
-      <arglist>()</arglist>
+      <anchor>ade34159f028e4edbe7153ee65584dd06</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24125,36 +24126,36 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_label.html</anchorfile>
-      <anchor>a9014bf003fa9b9b0b5c3a207d7af0e17</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>abef196a3318bdb97fd09284b83e3a3ad</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_label.html</anchorfile>
-      <anchor>ac3f6ec77c7ea29418f64b36f0b0cb42c</anchor>
-      <arglist>() const</arglist>
+      <anchor>a742721e80760cce7d3c233e1a6fd2ca7</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_label.html</anchorfile>
-      <anchor>ace2fec5a7ded7b01940723e70e9fd566</anchor>
-      <arglist>() const</arglist>
+      <anchor>a360761b194a0f61bdd8b3163f2cbca78</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_label.html</anchorfile>
-      <anchor>a06924e695112eefcd9481586aec53924</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a5aef5f187ad981110ab6b4caf0ab1860</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_label.html</anchorfile>
-      <anchor>a2514745bf0901970ac4e5c333575dc40</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>abf1316d4415f62dc505615ae403b19d3</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -24690,85 +24691,85 @@
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>afd96789747c827afa40c84376503c463</anchor>
-      <arglist>() const</arglist>
+      <anchor>a502fa52462222cb6de7bf9b7463395d5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>adc52d2ade237a9765830c7a3d67b38c5</anchor>
-      <arglist>(const CVector2d &amp;position)</arglist>
+      <anchor>a9b2d2e7c3281549cd8c3376cd8368fa8</anchor>
+      <arglist>(const CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a8cf0ac223e3e58a74ed5f60a85a57ac0</anchor>
-      <arglist>() const</arglist>
+      <anchor>a1d04ba25f4bc895d51e0b415e41dd166</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>ab210c59ecb8699481c596fa217805c7a</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>af74b44264cca417813584106b1627cd7</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>aea187f4dcad6dc4bd3e242434b3d90f6</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a88ea5b4e896db460835525795ffe31a9</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a1d0432fccc1358370efa76547b00ee4d</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a6a4e174c83ab34d914aeea02b2c786b0</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>ad88bbdb212363341f8e9fe161d43f8ba</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>ade5c74f6498660e4e666a379ece35ad2</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a4185415c104d6e7a9c3c6f1ede722572</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0efc1337e09e4200ed2968d997ddb240</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>aae8e660611fa681843fc72590678f4b1</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a7c60e2a97bcaf32b0aab22d94e86b508</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a988b8b335fff3b81daa32141a29f81f3</anchor>
-      <arglist>() const</arglist>
+      <anchor>a7d6761f82703eb6deeb99f32492020a4</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>a97593a5952ccb1cc4d478bc91cc15bfe</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a061dc09afca4961de20497d90a6babd6</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
-      <anchor>af6db01d0dce6a7cad44b03f42185725e</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a06c0a407607c56e678454a48473d3e4b</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -24776,6 +24777,13 @@
       <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
       <anchor>a2f1446832702f09621a5f28404cb0e80</anchor>
       <arglist>()</arglist>
+    </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>Intersects</name>
+      <anchorfile>classi2d_1_1_c_line2d.html</anchorfile>
+      <anchor>a37308110d43933fb77aa678005f99c0e</anchor>
+      <arglist>(const CVector2d &amp;lhsp1, const CVector2d &amp;lhsp2, const CVector2d &amp;rhsp1, const CVector2d &amp;rhsp2)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -24793,8 +24801,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_line2d_comp.html</anchorfile>
-      <anchor>af8fcaa15684c6b5ea942c3a205396291</anchor>
-      <arglist>()</arglist>
+      <anchor>ad69d2189dbf2ff47ed25b47a97870eff</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -30537,15 +30545,15 @@
       <type>virtual iser::IObject *</type>
       <name>CreateInstance</name>
       <anchorfile>classi2d_1_1_c_object2d_factory.html</anchorfile>
-      <anchor>a6282a35e4ab801113f4a0a59219fe4a4</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
+      <anchor>ab17420c892da432cdeeec2888cc6bf13</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual KeyList</type>
       <name>GetFactoryKeys</name>
       <anchorfile>classi2d_1_1_c_object2d_factory.html</anchorfile>
-      <anchor>a52cdab1eb2f25884e93f871964251a01</anchor>
-      <arglist>() const</arglist>
+      <anchor>a86e8c83e386f501473d1c6985b08e69d</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const CObject2dFactory &amp;</type>
@@ -30571,78 +30579,78 @@
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a507f5ef06864f2cd3423822977462153</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0ab31d23722a899e94f0fd2cfcfcb591</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>aee96a1445fa6f88c570e5deb30739979</anchor>
-      <arglist>(const CVector2d &amp;position)</arglist>
+      <anchor>acc09c4ba139dc89f6776f5ae474d6b31</anchor>
+      <arglist>(const CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a60acd18afe535f4f1b5093ac2d1fd73d</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0380ea0e3cac14c3be4cae90f11e10a0</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetCalibration</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a13352324ba1eb8d820d569713fa0564a</anchor>
-      <arglist>(const ICalibration2d *calibrationPtr, bool releaseFlag=false)</arglist>
+      <anchor>a4aa6c53ca371d4e1679b5e3bb1fd037e</anchor>
+      <arglist>(const ICalibration2d *calibrationPtr, bool releaseFlag=false) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a1c241497cb00c29e77473821f2957150</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a6f19106a320860416f55f3fd0d07e17b</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>aba7ffded2868315ac4e598978feafe2a</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>aa8b956baeab8ce07e5ce174894fe6365</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a6fbc397ac2d93286dd917967ee8eb705</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a5eec27c5fd5dd6524fc0a796ca9790fe</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>aa08dfb8fe200f35d696823fa58bcf0f3</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a7c96eb3e737e4e8b7fe65a7b4ef468fd</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a84007c05ecac9b4c874f169bf2520ee6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a5f5176017ca8c925e3daa60063320d75</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>a6bb24c83608a29abb34f5072f2b84cd5</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>aa2bdac0d5374278346e0e5cc0fecdef4</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_object2d_proxy_comp.html</anchorfile>
-      <anchor>aba868e44b7384c89a1dd30d2516b736d</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>aececb6df247bce9c05e1dd39596130b6</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const i2d::IObject2d *</type>
@@ -31477,36 +31485,36 @@
       <type>virtual bool</type>
       <name>ConvertToPolygon</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>a422f69425c6b0371d7c17bbf968e776f</anchor>
-      <arglist>(i2d::CPolygon &amp;result, int segmentsCount=0) const</arglist>
+      <anchor>a2d792dfeb08403bc04f4c7bde03a1201</anchor>
+      <arglist>(i2d::CPolygon &amp;result, int segmentsCount=0) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>a14bb3ec92ef557c9d265445319eb2f3c</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa2ffaec8411d55841bcc2a325b6560e8</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>ad44db0c100a85dbff95a3e8a07a5b12d</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a1c1d71f0313cd11db0f0ce9df4c6e7cf</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>ab576f0608ee46ebe113bf63c0199772d</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>ac8abcd522bf2fa03418ac3fa3f44b96c</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_oriented_circle.html</anchorfile>
-      <anchor>a2e5d7c0dcd981d318f1477c546bd4822</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>abdc0cb527c9179946d5788a6dd0d682b</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31524,8 +31532,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_oriented_circle_comp.html</anchorfile>
-      <anchor>acf994f602211d69c19b6e8e052ece9b1</anchor>
-      <arglist>()</arglist>
+      <anchor>adad0d2856792b620847dfc2c34df0ced</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -31947,78 +31955,78 @@
       <type>virtual i2d::CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a888f0b9e9755889076753f107975b1be</anchor>
-      <arglist>() const</arglist>
+      <anchor>a5228f636c3402ac041a8e5d7db5ac4ef</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a50274a89ccaeebd3259cca25c17a8c52</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+      <anchor>aad0afe0c284c9b165cc18a6cfb9dde40</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a461d2b8686aa2380e0f489c1e815a087</anchor>
-      <arglist>() const</arglist>
+      <anchor>a34fa3e57e80b4692afb446317e139f83</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>ae27897353c7f9386e779be26f6702fa8</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a74d22f5cfd3394e33f8eafff164669fb</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>ae0c4cdbcd9026fd201edcfe31b47089d</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a7a788c84fd31d9e8956ab38c36a07acc</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a1f1614ae6b9b8e5877ab591680ddb9f1</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a92a972be8a50b2f68f2eda921d3a75a2</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a6dc9ff768625628be08d837167fc89e5</anchor>
-      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a237301fe4b34c51f5aec879c8d18ea42</anchor>
+      <arglist>(const i2d::ITransformation2d &amp;transformation, i2d::IObject2d &amp;result, i2d::ITransformation2d::ExactnessMode mode=i2d::ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>ace09aa51e841ec3c49030cc0ed2b2605</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0f914c461560f69fa2239562f5076b43</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>afe1253858f2bb19455e953176c682f4c</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a55b04f0171b30d543d8c24b299c40243</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a21416fd778b1a837306a35ae80496a6b</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>ae11eb39c90dc380c710d38aa69dff02e</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_parallelogram.html</anchorfile>
-      <anchor>a6cffb8f3bd3d584cb868d6899c499a7f</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>adedd414d52dcbb68d8d0c4b275a207b9</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
@@ -32043,8 +32051,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_parallelogram_comp.html</anchorfile>
-      <anchor>afe25228069569171a4ed31314f40ffe1</anchor>
-      <arglist>()</arglist>
+      <anchor>a9a8f061cc42ca9eccfa8ed55b103327a</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33983,6 +33991,13 @@
       <type>bool</type>
       <name>GetAdjacentNodeIndices</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
+      <anchor>afbd0acccfafb8327781f098138ad4f4c</anchor>
+      <arglist>(double position, int &amp;previousIndex, int &amp;nextIndex) const</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>GetAdjacentNodeIndices</name>
+      <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
       <anchor>a3287e7126fe5a32b1c4b1c5cb09fd9c2</anchor>
       <arglist>(const i2d::CVector2d &amp;position, int &amp;previousIndex, int &amp;nextIndex) const</arglist>
     </member>
@@ -34018,36 +34033,36 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>a3a6d0f04dbfd70c8ceef89a3120d9ff3</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a25fa6c7832ddd36414e9ae855b63d164</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>a913a57880f9c52b6faa1125244f25f33</anchor>
-      <arglist>() const</arglist>
+      <anchor>a6867e26bf02693cc9604e1e3f53caf46</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>abc6434bd57dca0f9cc2daa8596a7bbc0</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>aaddea827251904e4eef66d8eaa7e4a62</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>aac8d1fed40ec54b6b26e57e71c7bf59b</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>ab865f61342c340a87a15e5f2a12e89e5</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classi2d_1_1_c_polyline.html</anchorfile>
-      <anchor>ab85b092749d6d7b5211514166af128f7</anchor>
-      <arglist>(const IChangeable &amp;object) const</arglist>
+      <anchor>a4dea7f72b5762285ca147f37964d4537</anchor>
+      <arglist>(const IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -34072,8 +34087,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_polyline_comp.html</anchorfile>
-      <anchor>ae400b0ed7629bc96b9837a8598e7d238</anchor>
-      <arglist>()</arglist>
+      <anchor>a2ba2b65a36622fa4eb0077b40239dab1</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -34353,8 +34368,8 @@
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a0ad8025c43fa27b5f7d41f3abc372903</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8e212a25f35045646ce7e08876033335</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -34367,78 +34382,78 @@
       <type>virtual i2d::CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a8f2572d7cd5e3bb5ecabd41c5f7a9e42</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8ca64721b54cd31a323e6fdbcfc81fb1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a902c1469a1610d8c7c07d944122a5d8a</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a84e7bda8c6d71086d6ff73349435c0ca</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>af0d98aba8231c48b55bd6ad7e2013811</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a44ce26f46bc8b567c48e1b3b59e716d4</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>af7d280352e0ab3ce706d42e56f9a795f</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a8f2664ca152d97da54b34614a5360547</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a032e49207a37721d4fb352ca0f1812ec</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>af99ac4ed9ad4d3adc3e7f0b7faacf62a</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a0b0c38c3b0a4dc13673e6970ec73ceff</anchor>
-      <arglist>() const</arglist>
+      <anchor>a85451585cf781c0bc0db1c12df5bf4c3</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a403658023d97353d4720ab74899ba2c4</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>ae19f1013781a82375dd35d9619b54acc</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a751826fc216fe5205007749bad5ea4f9</anchor>
-      <arglist>() const</arglist>
+      <anchor>af1938713b03eef9a259898561235e327</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a4f70f2cc264c033ee6bb5d0c3394c188</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a61b13662ee4e56d2eb0121102f9e18d1</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>ad25c7f6b0f6d7785a25591425e6e2bf7</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a09ecae3628dfb2ffa31f8b78ada7bca1</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classi2d_1_1_c_polypoint.html</anchorfile>
-      <anchor>a658f4b764b932241410b5d69086ea580</anchor>
-      <arglist>(const IChangeable &amp;object) const</arglist>
+      <anchor>a6d6ad1cbf8b5811e342eb96cd3ea734d</anchor>
+      <arglist>(const IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -34587,92 +34602,92 @@
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a38d3e7c405d0c09d482988715d05bd6d</anchor>
-      <arglist>() const</arglist>
+      <anchor>a56a170aaee0ccdc0258c19d703cd0773</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a3b631be9d32febc81393130ca835cc9c</anchor>
-      <arglist>(const CVector2d &amp;position)</arglist>
+      <anchor>a88ed6c9231e8146785fa3538fdf43d99</anchor>
+      <arglist>(const CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a20ccb32471479079f6c7a41ca337bb8b</anchor>
-      <arglist>() const</arglist>
+      <anchor>a27ac43e8e2d0544b7caac2120cb507cd</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>ac0b5c1d29d941f1b67653f7fffe47553</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a8bbfeef76ac548adfe82b1720290c4fe</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a9ad485da3d0ad4aaa4591c89c8218e6a</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a8777a542fa63f1a9338f498991f3ccee</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a36255cb6de6433e6b645cc1ba09986cb</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a1e51b311bb6f8cc5691806e51c98a9b2</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a499d9efcf6b3a2c577aa37528e2c5b28</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>ab7641e9dbf63393234b8ce3e5b68addb</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>aa1dd589fc8532f8f5d99bd1eca29210f</anchor>
-      <arglist>() const</arglist>
+      <anchor>a32c30adb3bdaf9118bb5e400d2cdc6db</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>aba7e6284cea744314dac68cc90a2a27d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a1768bb73a66229d8cf18da5a53e52343</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>ae44aa4337a20dd436173dd0219ab33f9</anchor>
-      <arglist>() const</arglist>
+      <anchor>added900949d9daf1a80e1a85f8d7adc5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>ae272706676cf4206aeef888f3ff898d0</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a1b51b22de402b359e406d03658a92623</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a7e3e41202fe7ee9c482857f4a97f9ae8</anchor>
-      <arglist>(const istd::IChangeable &amp;object) const</arglist>
+      <anchor>a2eebf7025869f8eeff7a16841d743b7a</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_position2d.html</anchorfile>
-      <anchor>a6500f2793f50e7bc96416c14ed32b454</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a96ccd2e5d718df7b39d9fb52f412c350</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -34704,8 +34719,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_position2d_comp.html</anchorfile>
-      <anchor>a5fb51bb79ccb3cb2c585b3a70063f916</anchor>
-      <arglist>()</arglist>
+      <anchor>aca1cf386f1a6ab62ced70c596e5c6eed</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35280,78 +35295,78 @@
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a6aef57efad8a6ef12a7d6775ba12ee0f</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8a7e9dae80156b6a04787cd88081d8d5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a36544533ffc1a3211dc7016ef9a491ec</anchor>
-      <arglist>(const CVector2d &amp;position)</arglist>
+      <anchor>a04b072f88a76352d85b9972bb9160ae0</anchor>
+      <arglist>(const CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function">
       <type>CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>ada1674ec0120db8ef5086344ef30b212</anchor>
-      <arglist>() const</arglist>
+      <anchor>aeb40961f8c81726a4db0b8ade43391d1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>af9f161a5f264cdfb65d2f7b143a3e7ed</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a8ce9e450f4e624d43b4a2881c256db3c</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>af05ba6db56c5f9c35c52b4623df850c8</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>af234be33841e04d59c65699e4a15bf86</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a30f5ddcfc3770dfa3db9cadb10dec228</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a33c3746ecae89b77975a590821b099c4</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a008b7c942a0649fa036f3f4149ef3b2f</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a68ea7c2f2e45ab1b9fa5b714d107d2da</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a4d9f900c40a14c4260032ce5b0127096</anchor>
-      <arglist>() const</arglist>
+      <anchor>a1885a9bdafa7e8b0dcdc18984cc4462b</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a9ff4895de3f656fbfab3e396ace2eaa7</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>ac4909684660f9f02edfead236420dcfb</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>a5fba5551ed40dac2a84408c04bd158f3</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>aefe4ecd18e1eb790cd49cc1cc83cf47d</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_quadrangle.html</anchorfile>
-      <anchor>ab981eef410d88440f031d7cf28cc5283</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a43fe4b50ee7940fcf00cc0a045edf80a</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35369,8 +35384,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_quadrangle_comp.html</anchorfile>
-      <anchor>a3833c589a6d174f24a7655791b8d9525</anchor>
-      <arglist>()</arglist>
+      <anchor>a569940dabfd2fd6b78dddd44dea64fb5</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36454,8 +36469,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_rectangle_comp.html</anchorfile>
-      <anchor>aa5ee204d7fb2ef91d044832538feae5d</anchor>
-      <arglist>()</arglist>
+      <anchor>a161711f8fdd087df3c7ae0c8662648b6</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42807,22 +42822,22 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
-      <anchor>ac2780e41cd9c5180b2b26575f71c9191</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad6f2ab86d9df7cd8971801253121fa7b</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
-      <anchor>ac89e21d739778453ee1acf40f82180ff</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>ad4f0de0d9e8073022b9a86012ce3dfb0</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_spline.html</anchorfile>
-      <anchor>aa520a0e95a5a15b0f6b67e6957cc498a</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>acc49be3a7fe87f4f2e378ab5f46ee05c</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -42973,22 +42988,22 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
-      <anchor>ab49153d0cdcaef79cdbdf08896d65e79</anchor>
-      <arglist>() const</arglist>
+      <anchor>a938c58b3150d59fab8675b6d392abb2d</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
-      <anchor>a2476d62307a21cf56962ad18df1bfc27</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a4dc05626098d7cd57282163c7bf06356</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_spline_segment.html</anchorfile>
-      <anchor>a0f20d953d6136321e6cf222ebf2c45b3</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a1d7ded6a3cc9197e437c7340c6169211</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45781,8 +45796,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_tube_node.html</anchorfile>
-      <anchor>a79e6c45297898426dd783a36452f8ab1</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>afbff557e6612f98ec56d7f05ff10036a</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45819,29 +45834,29 @@
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
-      <anchor>a19f982e998ae80ae53035bdf311e14c3</anchor>
-      <arglist>(const i2d::CVector2d &amp;node)</arglist>
+      <anchor>a8cf441e343c7b2509709e97c3fe5b87e</anchor>
+      <arglist>(const i2d::CVector2d &amp;node) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
-      <anchor>a1dc55887592940014ec9eb342dd65896</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;node)</arglist>
+      <anchor>a7b28cebe096fa873b1c25029b311bb6d</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;node) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNodesCount</name>
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
-      <anchor>a2e0b6535804c5e678b2881dafe592381</anchor>
-      <arglist>(int count)</arglist>
+      <anchor>a039348bdaedd0323ad2cd45a778fcdd8</anchor>
+      <arglist>(int count) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_tube_polyline_comp.html</anchorfile>
-      <anchor>ac50329a9b70f6627eebae20a93d2110f</anchor>
-      <arglist>()</arglist>
+      <anchor>a11ca889130cc53e72d67c75233adc962</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -64081,57 +64096,57 @@
       <type>virtual const iser::ISerializable &amp;</type>
       <name>GetNodeData</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a544fb22bf92b68c168e22451dcb717d1</anchor>
-      <arglist>(int nodeIndex) const</arglist>
+      <anchor>aa3fab794286de11dfdca90b288454c57</anchor>
+      <arglist>(int nodeIndex) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable &amp;</type>
       <name>GetNodeDataRef</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a4b94f12d4fa71b118285ee195d348f12</anchor>
-      <arglist>(int nodeIndex)</arglist>
+      <anchor>ad3068b4610d0caaa9b29e3e227880985</anchor>
+      <arglist>(int nodeIndex) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Clear</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a7649960d99c6638f722848dd9f5282fd</anchor>
-      <arglist>()</arglist>
+      <anchor>ab00768a185410922339eee52a33d03e4</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNodesCount</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>af09f0fa0ad2445dcb4d2ae975fb0d838</anchor>
-      <arglist>(int nodesCount)</arglist>
+      <anchor>a92663d2d71ec1fa795bacb2772306705</anchor>
+      <arglist>(int nodesCount) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>ab9c08b5954b53350f55517d9043adf11</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+      <anchor>ae093f64398768bb0936d16a9824fd1e3</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a304572a8260cf331d878a211b1643e12</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
+      <anchor>af7e4477678c8f8fc77099aa6191ee36b</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a1df706697750c63cad83f66011448d15</anchor>
-      <arglist>(int index)</arglist>
+      <anchor>a6d8713ff8ccb25d3c943c7dbb99365b8</anchor>
+      <arglist>(int index) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a7f9ae310ba69af5674ffe2af74c106c4</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a020f6482d705fe69083f96ebf56a5616</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -64163,57 +64178,57 @@
       <type>virtual const iser::ISerializable &amp;</type>
       <name>GetNodeData</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a544fb22bf92b68c168e22451dcb717d1</anchor>
-      <arglist>(int nodeIndex) const</arglist>
+      <anchor>aa3fab794286de11dfdca90b288454c57</anchor>
+      <arglist>(int nodeIndex) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::ISerializable &amp;</type>
       <name>GetNodeDataRef</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a4b94f12d4fa71b118285ee195d348f12</anchor>
-      <arglist>(int nodeIndex)</arglist>
+      <anchor>ad3068b4610d0caaa9b29e3e227880985</anchor>
+      <arglist>(int nodeIndex) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>Clear</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a7649960d99c6638f722848dd9f5282fd</anchor>
-      <arglist>()</arglist>
+      <anchor>ab00768a185410922339eee52a33d03e4</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetNodesCount</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>af09f0fa0ad2445dcb4d2ae975fb0d838</anchor>
-      <arglist>(int nodesCount)</arglist>
+      <anchor>a92663d2d71ec1fa795bacb2772306705</anchor>
+      <arglist>(int nodesCount) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>ab9c08b5954b53350f55517d9043adf11</anchor>
-      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+      <anchor>ae093f64398768bb0936d16a9824fd1e3</anchor>
+      <arglist>(const i2d::CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InsertNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a304572a8260cf331d878a211b1643e12</anchor>
-      <arglist>(int index, const i2d::CVector2d &amp;position)</arglist>
+      <anchor>af7e4477678c8f8fc77099aa6191ee36b</anchor>
+      <arglist>(int index, const i2d::CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveNode</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a1df706697750c63cad83f66011448d15</anchor>
-      <arglist>(int index)</arglist>
+      <anchor>a6d8713ff8ccb25d3c943c7dbb99365b8</anchor>
+      <arglist>(int index) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_t_data_node_polyline.html</anchorfile>
-      <anchor>a7f9ae310ba69af5674ffe2af74c106c4</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a020f6482d705fe69083f96ebf56a5616</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
   </compound>
   <compound kind="class">

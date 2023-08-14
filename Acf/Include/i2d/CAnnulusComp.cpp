@@ -35,6 +35,10 @@ void CAnnulusComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
+	if (m_defaultObjectProviderCompPtr.IsValid()){
+		return;
+	}
+
 	ResetData();
 }
 
