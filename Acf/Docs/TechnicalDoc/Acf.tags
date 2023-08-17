@@ -21315,6 +21315,13 @@
       <anchor>adfb41515c43fc18425d471daf96957af</anchor>
       <arglist>()</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtgui_1_1_c_gui_application_comp.html</anchorfile>
+      <anchor>ad89a5f47b5ed19d796e5025353abf0a4</anchor>
+      <arglist>(m_trayIconToolTip)</arglist>
+    </member>
     <member kind="function" protection="protected" static="yes">
       <type>static InterfaceType *</type>
       <name>ExtractTrayMessages</name>
