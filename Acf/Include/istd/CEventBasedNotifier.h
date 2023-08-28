@@ -53,7 +53,7 @@ public:
 private:
 	CEventBasedNotifier(const CEventBasedNotifier&){}
 
-	CAsyncNotifier* m_asyncNotifierPtr;
+	CAsyncNotifier* m_asyncNotifierPtr = NULL;
 };
 
 

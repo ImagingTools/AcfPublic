@@ -4302,6 +4302,13 @@
       <arglist>(const istd::CIndex2d &amp;position)</arglist>
     </member>
     <member kind="function">
+      <type>QPointF</type>
+      <name>GetQPoint</name>
+      <anchorfile>namespaceiqt.html</anchorfile>
+      <anchor>a78fbd9e1ef0ae048ce68d45d4df8ccdd</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
+    </member>
+    <member kind="function">
       <type>istd::CIndex2d</type>
       <name>GetCIndex2d</name>
       <anchorfile>namespaceiqt.html</anchorfile>
@@ -11652,29 +11659,29 @@
       <type>virtual void</type>
       <name>SetSlavePtr</name>
       <anchorfile>classistd_1_1_c_change_delegator.html</anchorfile>
-      <anchor>a2ec277bca1065ae7f72e0c69e817fcf9</anchor>
-      <arglist>(istd::IChangeable *slavePtr)</arglist>
+      <anchor>a655c54892eae8098562b9962781d9e56</anchor>
+      <arglist>(istd::IChangeable *slavePtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>GetSlavePtr</name>
       <anchorfile>classistd_1_1_c_change_delegator.html</anchorfile>
-      <anchor>a1b8c1b30f6dad844cbec3ca317dd1c40</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8145db207c4b28fa2833a363db71ca68</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginChanges</name>
       <anchorfile>classistd_1_1_c_change_delegator.html</anchorfile>
-      <anchor>ac6f87a3ca8992cbc7b203f001b13a03a</anchor>
-      <arglist>()</arglist>
+      <anchor>a57555ef06349586d003f04aebb607059</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndChanges</name>
       <anchorfile>classistd_1_1_c_change_delegator.html</anchorfile>
-      <anchor>ae21695aea4c643a69654b1fac683739b</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+      <anchor>a7434afc0577579773b454d87a3e9f4f2</anchor>
+      <arglist>(const ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -21090,43 +21097,57 @@
       <type>virtual void</type>
       <name>Start</name>
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>a7d0d886d2e4a74255a9309154542e15e</anchor>
-      <arglist>(double elapsedTime=0)</arglist>
+      <anchor>a6f1959239bad6f915107acf77b0622d2</anchor>
+      <arglist>(double elapsedTime=0) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QDateTime</type>
       <name>GetStartTime</name>
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>ac5a00e3f63af5bdf5dc2fdd9f3ea2feb</anchor>
-      <arglist>() const</arglist>
+      <anchor>af4861b9e4085a004e2e9b89610948c28</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetElapsed</name>
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>aa13b6a2100015a780590513321622db0</anchor>
-      <arglist>() const</arglist>
+      <anchor>abfa7c23e925cae8b0e5ee668d81fc098</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetTimeTo</name>
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>a58e958ed0993d866a9ee42c32cfdbb39</anchor>
-      <arglist>(const ITimeStamp &amp;timeStamp) const</arglist>
+      <anchor>a45f3bc0db4c94ba8f3819dbf0fe11501</anchor>
+      <arglist>(const ITimeStamp &amp;timeStamp) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>WaitTo</name>
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>a152865911c9f11e8527f0c7385eff10e</anchor>
-      <arglist>(double time) const</arglist>
+      <anchor>a148299e6ed068514b405dc7ed55f1619</anchor>
+      <arglist>(double time) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetTimerResolution</name>
       <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
-      <anchor>a7071d5423ac17c9dde3a8a5103bc54ea</anchor>
-      <arglist>() const</arglist>
+      <anchor>a785f798f7808b904b5a8636277593808</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>QDateTime</type>
+      <name>m_timer</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a7038beecd21c169126605fbbf362458b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>double</type>
+      <name>m_timeShift</name>
+      <anchorfile>classistd_1_1_c_general_time_stamp.html</anchorfile>
+      <anchor>a481adcbe4a9c24a2182fc7c328b9a781</anchor>
+      <arglist></arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -62239,15 +62260,15 @@
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>aad9c7c05c71845b83d74d96a4b17c5b9</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a1aa98558a413b00103eb9d0e3f42db94</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>a817fecb579336994ccac3bb9b8bfc1ea</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab3c77607e39b901caa12fa6a23da4405</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -62300,15 +62321,15 @@
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>aad9c7c05c71845b83d74d96a4b17c5b9</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a1aa98558a413b00103eb9d0e3f42db94</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>a817fecb579336994ccac3bb9b8bfc1ea</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab3c77607e39b901caa12fa6a23da4405</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -62361,15 +62382,15 @@
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>aad9c7c05c71845b83d74d96a4b17c5b9</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a1aa98558a413b00103eb9d0e3f42db94</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classistd_1_1_t_cached_update_manager_wrap.html</anchorfile>
-      <anchor>a817fecb579336994ccac3bb9b8bfc1ea</anchor>
-      <arglist>(const IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>ab3c77607e39b901caa12fa6a23da4405</anchor>
+      <arglist>(const IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -62522,57 +62543,57 @@
       <type>virtual int</type>
       <name>GetElementsCount</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>a6373cd020e7009c36f3d849e94f505a9</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0716f26806e71d6d8ecb41486a1d50a1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ValueType &amp;</type>
       <name>operator[]</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>a96128eb841fa786be6c97a564dc071e8</anchor>
-      <arglist>(const KeyType &amp;key)</arglist>
+      <anchor>abe2b8820d023899db564b87137cc9421</anchor>
+      <arglist>(const KeyType &amp;key) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ValueType &amp;</type>
       <name>operator[]</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>acd19d059cc9829545ef0307bf14612e8</anchor>
-      <arglist>(const KeyType &amp;key) const</arglist>
+      <anchor>a09e0b7870515c96c001a6011f80621b8</anchor>
+      <arglist>(const KeyType &amp;key) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>FindIndex</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>a80eb0f21e83870a34a27dd3571f07565</anchor>
-      <arglist>(const KeyType &amp;key) const</arglist>
+      <anchor>a6459542a92cc58f6748d8df944d3f422</anchor>
+      <arglist>(const KeyType &amp;key) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ValueType *</type>
       <name>FindElement</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>a7d163d9be48c47525eaac410b18cebc5</anchor>
-      <arglist>(const KeyType &amp;key) const</arglist>
+      <anchor>a98c19980ef75e1538df798aea02c7b7b</anchor>
+      <arglist>(const KeyType &amp;key) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>GetKeys</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>ab0ba7c9512102748c9696aa87a7d28f0</anchor>
-      <arglist>(Keys &amp;result, bool doAppend=false) const</arglist>
+      <anchor>a34326939f79fd8a24c8b0006cbf879d3</anchor>
+      <arglist>(Keys &amp;result, bool doAppend=false) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const KeyType &amp;</type>
       <name>GetKeyAt</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>a246d46c6f48e14ef99a699d34a176687</anchor>
-      <arglist>(int index) const</arglist>
+      <anchor>abd77de390e8f3f78e8a72bb1d34e4bee</anchor>
+      <arglist>(int index) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ValueType &amp;</type>
       <name>GetValueAt</name>
       <anchorfile>classistd_1_1_t_cascaded_map.html</anchorfile>
-      <anchor>ab098c728ba24172244b1be443cc8206c</anchor>
-      <arglist>(int index) const</arglist>
+      <anchor>a015d8d7ffb5bee1444123276e789fae4</anchor>
+      <arglist>(int index) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -62612,15 +62633,15 @@
       <type>virtual void</type>
       <name>OnBeginChanges</name>
       <anchorfile>classistd_1_1_t_change_delegator.html</anchorfile>
-      <anchor>a29699fbebce4673a768445da789d9a8f</anchor>
-      <arglist>()</arglist>
+      <anchor>ac3197ab725366de2e5ddda45deacb6ae</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndChanges</name>
       <anchorfile>classistd_1_1_t_change_delegator.html</anchorfile>
-      <anchor>a181536cbb7bf3a5222e68908f23bf6e4</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aab2e8ba51bef14d7af00dda42d7cd5f8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63587,15 +63608,15 @@
       <type>virtual IFactoryInfo::KeyList</type>
       <name>GetFactoryKeys</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>a93694495e2ebeef4cc3e8470e51cce6e</anchor>
-      <arglist>() const</arglist>
+      <anchor>ababcac34902e317f16abf94131757f29</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual InterfaceType *</type>
       <name>CreateInstance</name>
       <anchorfile>classistd_1_1_t_composed_factory.html</anchorfile>
-      <anchor>aa5d3d444bb4a8e96a0d769f4c49902a8</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
+      <anchor>a0f4fb0ec14d579373b58c14b3445b845</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const override</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TSmartPtr&lt; FactoryInterface &gt;</type>
@@ -70817,29 +70838,29 @@
       <type>virtual int</type>
       <name>GetHierarchicalFlags</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a84518baff5c43fa1e8b985678e89b536</anchor>
-      <arglist>() const</arglist>
+      <anchor>aed5ab3b0e23245b6a3fc627d13f676ec</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChildsCount</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a8624f0470db0e3d87e735795cfc77681</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad25e57133d1030337f2c444dad1390ec</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Interface *</type>
       <name>GetChild</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a33ec72904e3e71467f67402ea5b231b2</anchor>
-      <arglist>(int index) const</arglist>
+      <anchor>aa6672ca5824de54277456c6ac91b4ec5</anchor>
+      <arglist>(int index) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Interface *</type>
       <name>GetParent</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>aa956672b3724ee6c52202f77c5512464</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac8dabc0c64aad01b82056cdc58d3dbc8</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>Interface *</type>
@@ -70878,29 +70899,29 @@
       <type>virtual int</type>
       <name>GetHierarchicalFlags</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a84518baff5c43fa1e8b985678e89b536</anchor>
-      <arglist>() const</arglist>
+      <anchor>aed5ab3b0e23245b6a3fc627d13f676ec</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChildsCount</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a8624f0470db0e3d87e735795cfc77681</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad25e57133d1030337f2c444dad1390ec</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual typename Base::InterfaceType *</type>
       <name>GetChild</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a33ec72904e3e71467f67402ea5b231b2</anchor>
-      <arglist>(int index) const</arglist>
+      <anchor>aa6672ca5824de54277456c6ac91b4ec5</anchor>
+      <arglist>(int index) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual typename Base::InterfaceType *</type>
       <name>GetParent</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>aa956672b3724ee6c52202f77c5512464</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac8dabc0c64aad01b82056cdc58d3dbc8</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>typename Base::InterfaceType *</type>
@@ -70939,29 +70960,29 @@
       <type>virtual int</type>
       <name>GetHierarchicalFlags</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a84518baff5c43fa1e8b985678e89b536</anchor>
-      <arglist>() const</arglist>
+      <anchor>aed5ab3b0e23245b6a3fc627d13f676ec</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChildsCount</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a8624f0470db0e3d87e735795cfc77681</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad25e57133d1030337f2c444dad1390ec</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual typename Base::InterfaceType *</type>
       <name>GetChild</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>a33ec72904e3e71467f67402ea5b231b2</anchor>
-      <arglist>(int index) const</arglist>
+      <anchor>aa6672ca5824de54277456c6ac91b4ec5</anchor>
+      <arglist>(int index) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual typename Base::InterfaceType *</type>
       <name>GetParent</name>
       <anchorfile>classistd_1_1_t_hierarchical_base.html</anchorfile>
-      <anchor>aa956672b3724ee6c52202f77c5512464</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac8dabc0c64aad01b82056cdc58d3dbc8</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>typename Base::InterfaceType *</type>
@@ -82988,15 +83009,15 @@
       <type>virtual IFactoryInfo::KeyList</type>
       <name>GetFactoryKeys</name>
       <anchorfile>classistd_1_1_t_single_factory.html</anchorfile>
-      <anchor>aea23dd86b7c98025f7352b839e1fadef</anchor>
-      <arglist>() const</arglist>
+      <anchor>a2b2c15d48def6869fe5f83854f75640f</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Interface *</type>
       <name>CreateInstance</name>
       <anchorfile>classistd_1_1_t_single_factory.html</anchorfile>
-      <anchor>a9190b921b9d54cf865e8bc21fcada5b9</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
+      <anchor>aed32638baf6f25312038ad1090728d31</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -87446,6 +87467,13 @@
       <anchorfile>namespaceiqt.html</anchorfile>
       <anchor>ae81c8dba7c84a471ea603c614e9104eb</anchor>
       <arglist>(const istd::CIndex2d &amp;position)</arglist>
+    </member>
+    <member kind="function">
+      <type>QPointF</type>
+      <name>GetQPoint</name>
+      <anchorfile>namespaceiqt.html</anchorfile>
+      <anchor>a78fbd9e1ef0ae048ce68d45d4df8ccdd</anchor>
+      <arglist>(const i2d::CVector2d &amp;position)</arglist>
     </member>
     <member kind="function">
       <type>istd::CIndex2d</type>

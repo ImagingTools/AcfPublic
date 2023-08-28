@@ -30,13 +30,6 @@
 #include <istd/CChangeNotifier.h>
 
 
-class ThreadBrute: public QThread
-{
-public:
-	using QThread::usleep;
-};
-
-
 namespace istd
 {
 
@@ -123,7 +116,7 @@ void CGeneralTimeStamp::WaitTo(double time) const
 {
 	double restMicroseconds;
 	while ((restMicroseconds = (time - GetElapsed()) * 1000000) >= 1){
-		ThreadBrute::usleep(quint32(restMicroseconds));
+		QThread::usleep(quint32(restMicroseconds));
 	}
 }
 
