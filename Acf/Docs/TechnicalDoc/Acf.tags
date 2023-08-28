@@ -9388,15 +9388,15 @@
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>a0771d60ca84763acfc817c86c0b5d8b4</anchor>
-      <arglist>() const</arglist>
+      <anchor>ab20adc766b6aa01e37089b31429d993c</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
       <anchorfile>classiser_1_1_c_archive_base.html</anchorfile>
-      <anchor>a339665cea7bc9ebf4d3ecfd74d70d9ac</anchor>
-      <arglist>(const CArchiveTag &amp;tag, const CArchiveTag &amp;subTag, int &amp;count)</arglist>
+      <anchor>a4fb11cc74917dcc26f8c46ca2b7f525a</anchor>
+      <arglist>(const CArchiveTag &amp;tag, const CArchiveTag &amp;subTag, int &amp;count) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const CArchiveTag &amp;</type>
@@ -9476,36 +9476,36 @@
       <type>virtual VersionIds</type>
       <name>GetVersionIds</name>
       <anchorfile>classiser_1_1_c_archive_header_info.html</anchorfile>
-      <anchor>a53177a3d02b7b1f4ccd1c2b7591a2744</anchor>
-      <arglist>() const</arglist>
+      <anchor>ab1bd80e1b410c97b4a2092e6afb9fab4</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classiser_1_1_c_archive_header_info.html</anchorfile>
-      <anchor>a8698672c0be4ab369249f2a2a5f63591</anchor>
-      <arglist>(int versionId, quint32 &amp;result) const</arglist>
+      <anchor>ac35b0b19415e42bc33dff6318bb69edb</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetVersionIdDescription</name>
       <anchorfile>classiser_1_1_c_archive_header_info.html</anchorfile>
-      <anchor>accd992d5769803791b48c55a36868621</anchor>
-      <arglist>(int versionId) const</arglist>
+      <anchor>a2a30dbdb4e5e0f6c548825c11b7501fa</anchor>
+      <arglist>(int versionId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_c_archive_header_info.html</anchorfile>
-      <anchor>a3ce4e0f269a3c38ce3c3a6ed0b480cf3</anchor>
-      <arglist>(int versionId, quint32 versionNumber) const</arglist>
+      <anchor>a18bf33ec3e4819c3294891d32bfea415</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiser_1_1_c_archive_header_info.html</anchorfile>
-      <anchor>a76950b48b1e00483bf3adfafa53c3bac</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a2c03ff4f770d3b2848e90e4215a227bb</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -10010,29 +10010,29 @@
       <type>virtual QString</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
-      <anchor>a78c791f79719deb3c663eab2db1fe858</anchor>
-      <arglist>() const</arglist>
+      <anchor>ada7d8dd937608427450862aa9853cdb1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
       <name>GetAttributeDefaultValue</name>
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
-      <anchor>a922b02089a009925a8f18783a4fc9b03</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0b4176e2b61a722dee26f56fd0ab9fcc</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetAttributeTypeId</name>
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
-      <anchor>aa3e0b13e7f0f546dbe8ac5ac31386a51</anchor>
-      <arglist>() const</arglist>
+      <anchor>a13027d5dd67570300952a3c256521051</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAttributeFlags</name>
       <anchorfile>classiattr_1_1_c_attribute_meta_info.html</anchorfile>
-      <anchor>a48305ab2c71437c0aae389f84b067a4f</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac8bc1f950ef03d88c8f50fccd4354d62</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10126,15 +10126,15 @@
       <type>virtual IAttributesProvider::AttributeIds</type>
       <name>GetAttributeMetaIds</name>
       <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
-      <anchor>a393b92f4224d24395db27b206fc7a0de</anchor>
-      <arglist>() const</arglist>
+      <anchor>a65977b621a80c513d33cde4735357af1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IAttributeMetaInfo *</type>
       <name>GetAttributeMetaInfo</name>
       <anchorfile>classiattr_1_1_c_attributes_meta_info_provider.html</anchorfile>
-      <anchor>ae6f659c3b01db294e4e47a7a4991f2c5</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>a6c0bb59729987ebca4595f748e7aba92</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10387,113 +10387,113 @@
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a80a623c1bcc846091f88d0405eb864e8</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>afdb3c4e806e7c5cd6336c71c119e9bfd</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>abd03686346ae6e8c9c2fde3996caa3d2</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>ad61dc586612b32138adfd6df1c672dc0</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a38921c16a12d05635122b2c18afff527</anchor>
-      <arglist>(bool &amp;value)</arglist>
+      <anchor>abeaba3dc20a8533605ef911786739b34</anchor>
+      <arglist>(bool &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>aba62737d57e629ac182b3d5f1cb2cf4b</anchor>
-      <arglist>(char &amp;value)</arglist>
+      <anchor>a48abe1991d9139d80d2c30588fdd685d</anchor>
+      <arglist>(char &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a2d7155f16d44f1a585714d8437074868</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
+      <anchor>a2fd9cad6db6789edde53d110a8d58c1f</anchor>
+      <arglist>(quint8 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>abbf8215b1cc7f0e7182a02f0b5614d1d</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
+      <anchor>a937f2f8833c5e70b2ceb05a653f2da19</anchor>
+      <arglist>(qint8 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>acf6fdc5522d06d4a2365217a6588d6fe</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
+      <anchor>a2f3f0663d9b1ec8227c354d8fd8d3fc9</anchor>
+      <arglist>(quint16 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>ab1359b3072962c068410bf178e79e26c</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
+      <anchor>a34ec8ac657a4f5779fef2cfaf961c0af</anchor>
+      <arglist>(qint16 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a7a1e927ac835e5756cb668aa969998c4</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
+      <anchor>ab6e4b0d6589982905b6657adc8ffa1f4</anchor>
+      <arglist>(quint32 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>ab9f25bc74ba6d330068bea54a0a2c6c3</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
+      <anchor>a8b390da5fb860eb2f181f133cc39d682</anchor>
+      <arglist>(qint32 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a1db406c153958635f9aa563f61c1d678</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
+      <anchor>a497df9933816f248528185a8789a0bab</anchor>
+      <arglist>(quint64 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a72958c541db55100741f141fa5e20a27</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
+      <anchor>ae3db20c309a86c381a5d9d2f38febbc7</anchor>
+      <arglist>(qint64 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a2adaf5932606b1d4dc200b5c11bb2bad</anchor>
-      <arglist>(float &amp;value)</arglist>
+      <anchor>aae8d6c1e44fadb058a7858b490e00627</anchor>
+      <arglist>(float &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a1d47bf5bd88df2da2fe845033ded522e</anchor>
-      <arglist>(double &amp;value)</arglist>
+      <anchor>a800fea0b1d125dc5ccc1212c2368d160</anchor>
+      <arglist>(double &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a9142837f1839412299c5ea8764b9fdbb</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
+      <anchor>a1f37a7057c672694ca819245b252c503</anchor>
+      <arglist>(QByteArray &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_read_archive_base.html</anchorfile>
-      <anchor>a394d6f2e37842deb2d5a92162341d8f1</anchor>
-      <arglist>(QString &amp;value)</arglist>
+      <anchor>a4a14ff92f7df4aa92f86d505ea3c1b43</anchor>
+      <arglist>(QString &amp;value) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
@@ -10518,113 +10518,113 @@
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a31671a29269c86b4f8ea42759127225b</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>a7dd53280cc693e1a443d29ecc4b79842</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>aa77bc6515354fa49697262cfd5c2c478</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>a7a1aba6d6f6be2e3b851b52729d2fd50</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a76fc17cbb6f258ae5afc7ec40ae4d9b3</anchor>
-      <arglist>(bool &amp;value)</arglist>
+      <anchor>aa7ae21f086f5a21372bcd23a4fe22276</anchor>
+      <arglist>(bool &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a4c5ec568765022587f24360e31f9f8f6</anchor>
-      <arglist>(char &amp;value)</arglist>
+      <anchor>a9d2931ba300ea126e1b160a766528255</anchor>
+      <arglist>(char &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a097314ad49709490d16de27d439ec19b</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
+      <anchor>abf6137eab940b49415c0bc5ff686cd4a</anchor>
+      <arglist>(quint8 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a94bea296e558c89380217bc6d0cb51e9</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
+      <anchor>a26a1bfc1cc138351a36653e5c115e236</anchor>
+      <arglist>(qint8 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a327a8ddda0b5c953b3115a55ddd65fa5</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
+      <anchor>a3403935fda5aca05d61b580425be3ed6</anchor>
+      <arglist>(quint16 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a4f589695d0133c5ad47af48e1cbc4499</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
+      <anchor>a806b478457c40c3be8df221f6d2e1cf1</anchor>
+      <arglist>(qint16 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a169a10a1d95f43b5af2bca43ccc19d58</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
+      <anchor>a5201846d9f546ccd8d55ea36bc182dc7</anchor>
+      <arglist>(quint32 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a2d7dcfb1b82933905dd5b242c35b21a2</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
+      <anchor>af0a5c9b064c9f68de7a4882656e4a251</anchor>
+      <arglist>(qint32 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a50be620cabd5891271641086f12f491d</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
+      <anchor>a92d13d4cd601d06ae000d46a6c52c6b6</anchor>
+      <arglist>(quint64 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a1ddc2fff549a44bed925f48217b6e16a</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
+      <anchor>ae3482adf3b90a3d7a2c8ca3f88c93740</anchor>
+      <arglist>(qint64 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a6deb8e846f77dafbccb8ba267d820c90</anchor>
-      <arglist>(float &amp;value)</arglist>
+      <anchor>a5d16ef68ab3b74019bfa3b7682a5935b</anchor>
+      <arglist>(float &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a7808dbe34925d87810ca13223e6b0c0c</anchor>
-      <arglist>(double &amp;value)</arglist>
+      <anchor>aa4bba83c0a8a3bb1a17c97e50de2a37b</anchor>
+      <arglist>(double &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a767eae20b44b814d160714cc5e371cfc</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
+      <anchor>af5f84cf4cfde5248be682e64c9e51a99</anchor>
+      <arglist>(QByteArray &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_binary_write_archive_base.html</anchorfile>
-      <anchor>a02d61c80e65fd753b8f8ce89f76a808f</anchor>
-      <arglist>(QString &amp;value)</arglist>
+      <anchor>ae4625c77e05b5575e1ef0c5cd193fa1f</anchor>
+      <arglist>(QString &amp;value) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -11123,29 +11123,29 @@
       <type>virtual bool</type>
       <name>ProcessData</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>a2a61a2b60d2c0ee1dfdeddb68d1d91b7</anchor>
-      <arglist>(void *data, int size)</arglist>
+      <anchor>af196bdc612633b9c9b8d1b920a2f099e</anchor>
+      <arglist>(void *data, int size) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessBits</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>af88e68f4fc1f1804ddae4116b132fe0e</anchor>
-      <arglist>(void *dataPtr, int bitsCount, int bytesCount)</arglist>
+      <anchor>a12ab91578612106821d303d351b14653</anchor>
+      <arglist>(void *dataPtr, int bitsCount, int bytesCount) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetPosition</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>a2409fb6eb217102d1fa52873beb375ce</anchor>
-      <arglist>()</arglist>
+      <anchor>afb22029fb9a66dbd950d0064d9886d3a</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsValid</name>
       <anchorfile>classiser_1_1_c_bit_memory_read_archive.html</anchorfile>
-      <anchor>a609db81ab46f2cc2fece45ec4f8c034f</anchor>
-      <arglist>() const</arglist>
+      <anchor>a249326e80f36196aeae8f0ee0766da22</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>int</type>
@@ -13959,36 +13959,36 @@
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a7f999ef897218fdadad222301ad85b11</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3369a056a7395d9a95c870690b41d469</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a17573e3da6e9fd50f5ca0a935a5e55a3</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>ab854ec7a18cd88d7cb884357566e60e0</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a670aedb78520573a8c0aa3e77f12c22a</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count)</arglist>
+      <anchor>a1315d579c32458132a005bd9ec6a1e61</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag, const iser::CArchiveTag &amp;subTag, int &amp;count) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>a825dfce8426844400dd7abf12ff2b3c4</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>aff4f3c983ed7b55c179fa49c910783a2</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>aabb2b2fb36b9ad1b66f8985a90a12919</anchor>
-      <arglist>(QString &amp;value)</arglist>
+      <anchor>a8d09869de08a594b15288a276d65cdfd</anchor>
+      <arglist>(QString &amp;value) override</arglist>
     </member>
     <member kind="function">
       <type>virtual bool</type>
@@ -14113,8 +14113,8 @@
       <type>virtual bool</type>
       <name>WriteTextNode</name>
       <anchorfile>classiser_1_1_c_compact_xml_write_archive_base.html</anchorfile>
-      <anchor>aae178975cbcda155f4b0512234425006</anchor>
-      <arglist>(const QByteArray &amp;text)</arglist>
+      <anchor>ab14da9958a9f7ab2f44b956c932b6783</anchor>
+      <arglist>(const QByteArray &amp;text) override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QXmlStreamWriter</type>
@@ -18256,29 +18256,29 @@
       <type>virtual bool</type>
       <name>IsAnyValueAllowed</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
-      <anchor>a167602689c1127dd68a7bd8e549096aa</anchor>
-      <arglist>() const</arglist>
+      <anchor>ac0e1707762f73cb9d91b673eb94e4436</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetEnumsCount</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
-      <anchor>a495654a2fe4884acf392e4e70cd27fc2</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad8e7d3c77a79df872d1163b46527f398</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetValueDescription</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
-      <anchor>a2a3a22eaaf05d9c74b9da6387de4d35c</anchor>
-      <arglist>(const iser::IObject &amp;value) const</arglist>
+      <anchor>a7bfd491ab7b404d67d90a598b3c8984a</anchor>
+      <arglist>(const iser::IObject &amp;value) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject &amp;</type>
       <name>GetEnum</name>
       <anchorfile>classiattr_1_1_c_enum_attribute_meta_info.html</anchorfile>
-      <anchor>a4ab098678e77e4450c4a149db0bf92f0</anchor>
-      <arglist>(int index) const</arglist>
+      <anchor>a8659d04453150e0fdb6a809d8aaa1351</anchor>
+      <arglist>(int index) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26820,8 +26820,8 @@
       <type>virtual bool</type>
       <name>ProcessData</name>
       <anchorfile>classiser_1_1_c_memory_read_archive.html</anchorfile>
-      <anchor>ab6a6ef4828de895ea994bc6c59c1cd14</anchor>
-      <arglist>(void *data, int size)</arglist>
+      <anchor>a1ed3056fc6cde72d15435b0184750f2d</anchor>
+      <arglist>(void *data, int size) override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static bool</type>
@@ -26834,8 +26834,8 @@
       <type>virtual int</type>
       <name>GetMaxStringLength</name>
       <anchorfile>classiser_1_1_c_memory_read_archive.html</anchorfile>
-      <anchor>a09549621a4e8ac6f6417bc24e0d89f9c</anchor>
-      <arglist>() const</arglist>
+      <anchor>a7c3a6203005423e090577b5f4210ae49</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>const quint8 *</type>
@@ -26923,8 +26923,8 @@
       <type>virtual bool</type>
       <name>ProcessData</name>
       <anchorfile>classiser_1_1_c_memory_write_archive.html</anchorfile>
-      <anchor>a845ce260db2f1832d55280d332c4b3c3</anchor>
-      <arglist>(void *data, int size)</arglist>
+      <anchor>a7d8b5cff4c62e485cd2497f4023fdc09</anchor>
+      <arglist>(void *data, int size) override</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QByteArray</type>
@@ -30465,15 +30465,15 @@
       <type>virtual bool</type>
       <name>GetMinimalValue</name>
       <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
-      <anchor>a7a2bef9d9dcd85a1fd8b9d024e8fc6b6</anchor>
-      <arglist>(iser::IObject &amp;result) const</arglist>
+      <anchor>a69103e778f2b45dfd29efe9a832746d6</anchor>
+      <arglist>(iser::IObject &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetMaximalValue</name>
       <anchorfile>classiattr_1_1_c_numeric_attribute_meta_info.html</anchorfile>
-      <anchor>a3dd67d8c9aa269bfce3bde65a0523ded</anchor>
-      <arglist>(iser::IObject &amp;result) const</arglist>
+      <anchor>a61f342e2eb1a5fff7b20581807f00546</anchor>
+      <arglist>(iser::IObject &amp;result) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -35510,22 +35510,22 @@
       <type>virtual bool</type>
       <name>IsStoring</name>
       <anchorfile>classiser_1_1_c_read_archive_base.html</anchorfile>
-      <anchor>a0495f07e76d04b6236c2441a117a2e89</anchor>
-      <arglist>() const</arglist>
+      <anchor>a327a95b35da84e4a39b8926d640cc4f9</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IVersionInfo &amp;</type>
       <name>GetVersionInfo</name>
       <anchorfile>classiser_1_1_c_read_archive_base.html</anchorfile>
-      <anchor>a3d540114b76f5068c20d9d20635ff989</anchor>
-      <arglist>() const</arglist>
+      <anchor>a060f63768aca73a5fbddcd064df6312f</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessBits</name>
       <anchorfile>classiser_1_1_c_read_archive_base.html</anchorfile>
-      <anchor>ad1237056eaf4746ff3a8d3edbe16c932</anchor>
-      <arglist>(void *dataPtr, int bitsCount, int bytesCount)</arglist>
+      <anchor>ac9c2954dfa53d081f3a79889cbed47ad</anchor>
+      <arglist>(void *dataPtr, int bitsCount, int bytesCount) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
@@ -43432,15 +43432,15 @@
       <type>virtual iser::IObject *</type>
       <name>CreateInstance</name>
       <anchorfile>classiattr_1_1_c_standard_attributes_factory.html</anchorfile>
-      <anchor>a6bc238ed20aa777e3e75edf8fb29e20f</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
+      <anchor>a1d6188c17b2ca6556a49d2721e785ccb</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual KeyList</type>
       <name>GetFactoryKeys</name>
       <anchorfile>classiattr_1_1_c_standard_attributes_factory.html</anchorfile>
-      <anchor>a84dd767866d50b06bdfdad65127c4500</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad8e7b0c4c8e46c47533ce5a6a73e0886</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static const CStandardAttributesFactory &amp;</type>
@@ -44887,99 +44887,99 @@
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>ad7a86e980a0176e6442dbec78580f142</anchor>
-      <arglist>(bool &amp;value)</arglist>
+      <anchor>a21bebeea03709641ced99d69c04f2fbc</anchor>
+      <arglist>(bool &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a5475d726932dfead09fce9c37034dde7</anchor>
-      <arglist>(char &amp;value)</arglist>
+      <anchor>a343f6b36fe7018e4b96b68364b4a3e64</anchor>
+      <arglist>(char &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>ae77ee5f04ade029f99d6f7201ef0f1f8</anchor>
-      <arglist>(quint8 &amp;value)</arglist>
+      <anchor>a523b2591be6f69c95bbd8f6015e20707</anchor>
+      <arglist>(quint8 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>aab4da617681c0e31b87e7eaf135c506e</anchor>
-      <arglist>(qint8 &amp;value)</arglist>
+      <anchor>ae89117bc39469437e09e91e500fb5ea8</anchor>
+      <arglist>(qint8 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>ace6f302093f220d6bf3994b956d33c1c</anchor>
-      <arglist>(quint16 &amp;value)</arglist>
+      <anchor>ace8ef21b878a214235e4c90336389806</anchor>
+      <arglist>(quint16 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a1253d0fc7b7670df40dd01cdfd20397f</anchor>
-      <arglist>(qint16 &amp;value)</arglist>
+      <anchor>a8d00aaac88d6628f2f6d0a72fd4a165f</anchor>
+      <arglist>(qint16 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a664980bdd1cc690fef2e6cec7625b944</anchor>
-      <arglist>(quint32 &amp;value)</arglist>
+      <anchor>a275c47e4de88ea1eda83b1604f9fa11e</anchor>
+      <arglist>(quint32 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>ab4a7519abda83943719f81afd8e1b015</anchor>
-      <arglist>(qint32 &amp;value)</arglist>
+      <anchor>a62fe45743fe88dc74bd6c06eb31e9dc3</anchor>
+      <arglist>(qint32 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>aa32c87bc2da9766356fa02496c4e6899</anchor>
-      <arglist>(quint64 &amp;value)</arglist>
+      <anchor>a535dc46cac41d7b970005b3d3fb84cb3</anchor>
+      <arglist>(quint64 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a50f844e45daf8b15434940e31a1c7dea</anchor>
-      <arglist>(qint64 &amp;value)</arglist>
+      <anchor>a669194b3a02cf92d155cc4ce2d28d427</anchor>
+      <arglist>(qint64 &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>a27e2a012d13f95cfabf3557fd0a3a00b</anchor>
-      <arglist>(float &amp;value)</arglist>
+      <anchor>a465f4690e9c9d12024c62cf01a5a8171</anchor>
+      <arglist>(float &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>af83f1151321f71053c0e48f177600e2f</anchor>
-      <arglist>(double &amp;value)</arglist>
+      <anchor>a56c54dabe1d4840fdf0f50b5cfdc19c4</anchor>
+      <arglist>(double &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>adb90ebc35d1e26aa4db0efe6e9eb97b5</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
+      <anchor>a8ecd75338b3c943691b85dd54cab5e30</anchor>
+      <arglist>(QByteArray &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessData</name>
       <anchorfile>classiser_1_1_c_text_read_archive_base.html</anchorfile>
-      <anchor>ac74b69ebe0e7f311c3d70c5f5aa24fd4</anchor>
-      <arglist>(void *dataPtr, int size)</arglist>
+      <anchor>a6db9aa22541ea038da1eeda6690be102</anchor>
+      <arglist>(void *dataPtr, int size) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -49382,22 +49382,22 @@
       <type>virtual bool</type>
       <name>IsStoring</name>
       <anchorfile>classiser_1_1_c_write_archive_base.html</anchorfile>
-      <anchor>a820248bc112c07087b13add21815e1ba</anchor>
-      <arglist>() const</arglist>
+      <anchor>a645fe55f7b8abb5a6d532f790c2b9378</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IVersionInfo &amp;</type>
       <name>GetVersionInfo</name>
       <anchorfile>classiser_1_1_c_write_archive_base.html</anchorfile>
-      <anchor>a49c76ca944d69e5b4f696b7ed0d20d87</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3ddbb65fec6ea0dfeffea0e233db85b0</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessBits</name>
       <anchorfile>classiser_1_1_c_write_archive_base.html</anchorfile>
-      <anchor>a93047c87be276b9f5827c9d64d31cd1a</anchor>
-      <arglist>(void *dataPtr, int bitsCount, int bytesCount)</arglist>
+      <anchor>ad6d19ea9e200c057750d6ad5391c53bd</anchor>
+      <arglist>(void *dataPtr, int bitsCount, int bytesCount) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -49494,43 +49494,43 @@
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a01ccb817149d9b9b191302dea6260681</anchor>
-      <arglist>() const</arglist>
+      <anchor>a16f3f45b3726e2a2f6be603c17820ac1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a16726dfa26654ada979b8e9a72ce6f14</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>a03f11c0750264addccf65be199326e08</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a1691fbe3480c5bf84e765d34bd04a2a4</anchor>
-      <arglist>(const CArchiveTag &amp;tag, const CArchiveTag &amp;subTag, int &amp;count)</arglist>
+      <anchor>ab5da4cf2736e1e7c9e7c0912047226a1</anchor>
+      <arglist>(const CArchiveTag &amp;tag, const CArchiveTag &amp;subTag, int &amp;count) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a8c6f65d1907f96396bf99111a84505cb</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>aae1675ce8951f1ceff0007692e81b6e4</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a0da0feeea9b39935cc00c917218fdb63</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
+      <anchor>ae0d001c185428e469331858b5a7c4236</anchor>
+      <arglist>(QByteArray &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a73ad1ce0033435af12353296fb48c1f9</anchor>
-      <arglist>(QString &amp;value)</arglist>
+      <anchor>a84ce5b8427a85ddfb372be7b1de866d5</anchor>
+      <arglist>(QString &amp;value) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -49564,8 +49564,8 @@
       <type>virtual bool</type>
       <name>ReadTextNode</name>
       <anchorfile>classiser_1_1_c_xml_read_archive_base.html</anchorfile>
-      <anchor>a81800f989dea46d276b3168fa17d6a88</anchor>
-      <arglist>(QByteArray &amp;text)</arglist>
+      <anchor>a489913bfca66b1580b5f467921ed352a</anchor>
+      <arglist>(QByteArray &amp;text) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="pure">
       <type>virtual bool</type>
@@ -49604,15 +49604,15 @@
       <type>virtual bool</type>
       <name>ReadToDelimeter</name>
       <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>ac4e4df82bfbe6438b9379f865a85531e</anchor>
-      <arglist>(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL)</arglist>
+      <anchor>acdd7ec8f8451a871f3350eadfc3bacdb</anchor>
+      <arglist>(const QByteArray &amp;delimeters, QByteArray &amp;result, bool skipDelimeter=true, char *foundDelimeterPtr=NULL) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classiser_1_1_c_xml_stream_read_archive_base.html</anchorfile>
-      <anchor>a2818137a59a6d0e19d0378152c406883</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const</arglist>
+      <anchor>aba44882cc302bb7c25e5a6b941bffb16</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QTextStream</type>
@@ -49684,8 +49684,8 @@
       <type>virtual bool</type>
       <name>WriteString</name>
       <anchorfile>classiser_1_1_c_xml_string_write_archive.html</anchorfile>
-      <anchor>a885cf7c3c4460ebe2bf7dcc1e74b6611</anchor>
-      <arglist>(const QByteArray &amp;value)</arglist>
+      <anchor>a73eb31069ba97852688a809e76378633</anchor>
+      <arglist>(const QByteArray &amp;value) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -49704,43 +49704,43 @@
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>ad6df3839ac6c000a2c9d79c53af12cb5</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0a590b6fd246deda39c0d78cd9dc240b</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a2ac6ac1a174a45ac9b4ead5906435eee</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>afd3723421cb22c97e9ae2d6b2ad7279b</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginMultiTag</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>af8df321e9c4c694a987dd090278988cf</anchor>
-      <arglist>(const CArchiveTag &amp;tag, const CArchiveTag &amp;subTag, int &amp;count)</arglist>
+      <anchor>a9684e934c49863bea2989ee7bd06254b</anchor>
+      <arglist>(const CArchiveTag &amp;tag, const CArchiveTag &amp;subTag, int &amp;count) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a64d00fe3fec35dcf628b31deae7f2669</anchor>
-      <arglist>(const CArchiveTag &amp;tag)</arglist>
+      <anchor>a9e9ac6c5465489a9578c08ea7f5bcaa5</anchor>
+      <arglist>(const CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a32eef62d0acba17d9589f08dacb2313f</anchor>
-      <arglist>(QByteArray &amp;value)</arglist>
+      <anchor>a01bd3241cc47b9de25cade43d6ac2580</anchor>
+      <arglist>(QByteArray &amp;value) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Process</name>
       <anchorfile>classiser_1_1_c_xml_write_archive_base.html</anchorfile>
-      <anchor>a4ce0fe3ae09f5da2e4e206863eb28c52</anchor>
-      <arglist>(QString &amp;value)</arglist>
+      <anchor>a58bb4e109977171eb33d8842662a9337</anchor>
+      <arglist>(QString &amp;value) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -50037,29 +50037,29 @@
       <type>virtual bool</type>
       <name>GetVersionNumber</name>
       <anchorfile>classiser_1_1_c_write_archive_base_1_1_empty_version_info.html</anchorfile>
-      <anchor>af2de6ddf68ec11b56f9b9542e01b5b25</anchor>
-      <arglist>(int versionId, quint32 &amp;result) const</arglist>
+      <anchor>a271dafe087321371d0fdc0a20d91a6ed</anchor>
+      <arglist>(int versionId, quint32 &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetVersionIdDescription</name>
       <anchorfile>classiser_1_1_c_write_archive_base_1_1_empty_version_info.html</anchorfile>
-      <anchor>a5ff4aa6b1ecea874213c0e9e40fc5f3c</anchor>
-      <arglist>(int versionId) const</arglist>
+      <anchor>a2055889ddd3ae4af899ffed634893d13</anchor>
+      <arglist>(int versionId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual VersionIds</type>
       <name>GetVersionIds</name>
       <anchorfile>classiser_1_1_c_write_archive_base_1_1_empty_version_info.html</anchorfile>
-      <anchor>a139542444938172dad97c93b9610cfed</anchor>
-      <arglist>() const</arglist>
+      <anchor>a352f0ebe9018cd5e16f3d7d278d52218</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetEncodedVersionName</name>
       <anchorfile>classiser_1_1_c_write_archive_base_1_1_empty_version_info.html</anchorfile>
-      <anchor>a1274b5ac4ad78f9fc6a1af9ef5389d6e</anchor>
-      <arglist>(int versionId, quint32 versionNumber) const</arglist>
+      <anchor>a32d462d481d5dcc7827f0fdf56cd0ab7</anchor>
+      <arglist>(int versionId, quint32 versionNumber) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -50582,6 +50582,13 @@
       <anchorfile>classiser_1_1_i_archive.html</anchorfile>
       <anchor>acd87fdc0a55410cdd8f3bec847cdc276</anchor>
       <arglist>(QString &amp;value)=0</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>TagAndProcess</name>
+      <anchorfile>classiser_1_1_i_archive.html</anchorfile>
+      <anchor>a62638a389b56ec177114e8974ae54115</anchor>
+      <arglist>(const CArchiveTag &amp;tag, Primitive &amp;value)</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
@@ -61729,15 +61736,15 @@
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a24501a153ffd1ff626eaf3fa976d23b0</anchor>
-      <arglist>() const</arglist>
+      <anchor>af965450ed5063d1a4deac4ecdd9f6f99</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiattr_1_1_t_attribute.html</anchorfile>
-      <anchor>a6c01dced06bb15c6ca30c7a5ccc910d0</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a1e18e1809af599fc471f1cd5735d0057</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function">
       <type>QByteArray</type>
@@ -64043,22 +64050,22 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>a48e723b546f2ac295c66c050cf51d6d5</anchor>
-      <arglist>() const</arglist>
+      <anchor>ae9c4c6df568e85e5ba0dfdf572f21b87</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>aa76477d92d3f5d0a55b6a19af4561a47</anchor>
-      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS)</arglist>
+      <anchor>aeeb9aa305cc888180ed5513fc2aa21be</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>a14b02eb2ca62fa3fa12c8802837c4d61</anchor>
-      <arglist>(const istd::IChangeable &amp;object) const</arglist>
+      <anchor>a903510ce4f82ada6405c37aa1d607982</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -64076,22 +64083,22 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>a48e723b546f2ac295c66c050cf51d6d5</anchor>
-      <arglist>() const</arglist>
+      <anchor>ae9c4c6df568e85e5ba0dfdf572f21b87</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>aa76477d92d3f5d0a55b6a19af4561a47</anchor>
-      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS)</arglist>
+      <anchor>aeeb9aa305cc888180ed5513fc2aa21be</anchor>
+      <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classiser_1_1_t_copy_serialized_wrap.html</anchorfile>
-      <anchor>a14b02eb2ca62fa3fa12c8802837c4d61</anchor>
-      <arglist>(const istd::IChangeable &amp;object) const</arglist>
+      <anchor>a903510ce4f82ada6405c37aa1d607982</anchor>
+      <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75972,8 +75979,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classiattr_1_1_t_multi_attribute.html</anchorfile>
-      <anchor>a521e39e50902c95dcb34d42c8c7376c9</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a5c91ad9c65e164f87d650fdd9fe43573</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function">
       <type>QByteArray</type>

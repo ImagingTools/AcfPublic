@@ -53,7 +53,7 @@ protected:
 				const QByteArray& delimeters,
 				QByteArray& result,
 				bool skipDelimeter = true,
-				char* foundDelimeterPtr = NULL);
+				char* foundDelimeterPtr = NULL) override;
 
 	// reimplemented (istd::ILogger)
 	virtual void DecorateMessage(
@@ -61,7 +61,7 @@ protected:
 				int id,
 				int flags,
 				QString& message,
-				QString& messageSource) const;
+				QString& messageSource) const override;
 
 	QTextStream m_stream;
 
