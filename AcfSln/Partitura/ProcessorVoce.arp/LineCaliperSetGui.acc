@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Caliper parameters GUI</Description>
+    <Keywords>Caliper Line Parameter Editor Tag='GUI &quot;Image Processing&quot;'</Keywords>
+    <ElementsList>
+        <Element Id="CaliperLineGui" PackageId="QtViewPck" ComponentId="Line2dParamsGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DisplayArrow" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="CaliperParamsGui" PackageId="QtIprPck" ComponentId="CaliperParamsGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="CaliperParamsSetGui" PackageId="QtGuiPck" ComponentId="ComposedParamsSetGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="DesignType" Type="Integer" ExportId="">
+                        <Data IsEnabled="true" Value="2"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Editors" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>CaliperLineGui</Value>
+                                <Value>CaliperParamsGui</Value>
+                                <Value>SmoothFilterParamsGui</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Ids" Type="Id[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Line</Value>
+                                <Value>Caliper</Value>
+                                <Value>SmoothFilter</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Names" Type="Text[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>Geometry</Value>
+                                <Value>Caliper</Value>
+                                <Value>Filter</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ShowAllShapes" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="true"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="SmoothFilterParamsGui" PackageId="QtMeasPck" ComponentId="NumericParamsGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="imod::IModelEditor" ComponentId="CaliperParamsSetGui"/>
+        <Interface InterfaceId="imod::IObserver" ComponentId="CaliperParamsSetGui"/>
+        <Interface InterfaceId="iqt2d::IViewExtender" ComponentId="CaliperParamsSetGui"/>
+        <Interface InterfaceId="iqtgui::IGuiObject" ComponentId="CaliperParamsSetGui"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>

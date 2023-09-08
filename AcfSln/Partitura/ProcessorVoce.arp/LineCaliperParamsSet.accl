@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <PositionMap>
+        <Element ComponentName="CaliperParamsSet" X="575" Y="350" Note=""/>
+        <Element ComponentName="Line" X="250" Y="475" Note=""/>
+        <Element ComponentName="SmoothFilterParams" X="600" Y="475" Note=""/>
+        <Element ComponentName="CaliperParams" X="900" Y="475" Note=""/>
+    </PositionMap>
+    <EmbeddedRegistries/>
+</Acf>

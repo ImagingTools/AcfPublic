@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Copy files processor with some text document conversions (tag replacement, adding header)</Description>
+    <Keywords></Keywords>
+    <ElementsList>
+        <Element Id="CopyFilesTree" PackageId="FileProcessingPck" ComponentId="CopyFilesTree">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="true" Value="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ExcludeFilters" Type="String[]" ExportId="ExcludeFilters">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="FileCopy" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="FileCopy"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Filters" Type="String[]" ExportId="Filters">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="InputSubDir" Type="String" ExportId="InputSubDir">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="OutputSubDir" Type="String" ExportId="OutputSubDir">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="RecursionDepth" Type="Integer" ExportId="RecursionDepth">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="FileCopy" PackageId="FileProcessingPck" ComponentId="FileInfoCopy">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="ApplicationInfo" Type="Reference" ExportId="ApplicationInfo">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="true" Value="true"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="IgnoreUnknownTags" Type="Boolean" ExportId="IgnoreUnknownTags">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="LicensePath" Type="String" ExportId="LicensePath">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ReplaceEmbeddedVariables" Type="Boolean" ExportId="ReplaceEmbeddedVariables">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ReplaceEnvironmentVariables" Type="Boolean" ExportId="ReplaceEnvironmentVariables">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SubstitutionTagExpr" Type="String" ExportId="SubstitutionTagExpr">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="UserSubstitutionTags" Type="String[]" ExportId="UserSubstitutionTags">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="UserSubstitutionValues" Type="String[]" ExportId="UserSubstitutionValues">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="ifileproc::IFileConversion" ComponentId="CopyFilesTree"/>
+        <Interface InterfaceId="istd::IPolymorphic" ComponentId="CopyFilesTree"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>
