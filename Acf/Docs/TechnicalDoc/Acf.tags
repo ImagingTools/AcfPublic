@@ -13680,22 +13680,22 @@
       <type>static void</type>
       <name>CreateMenu</name>
       <anchorfile>classiqtgui_1_1_c_command_tools.html</anchorfile>
-      <anchor>a1e5372ad1f66ebb6602611bd3eb94c06</anchor>
-      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, MenuType &amp;result)</arglist>
+      <anchor>a92b3ec2522ba8d6bd069d7669c852f8f</anchor>
+      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, MenuType &amp;result, const QVector&lt; int &gt; &amp;includedGroups=QVector&lt; int &gt;(), const QVector&lt; int &gt; &amp;excludedGroups=QVector&lt; int &gt;())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static int</type>
       <name>SetupToolbar</name>
       <anchorfile>classiqtgui_1_1_c_command_tools.html</anchorfile>
-      <anchor>adbfd019679674dc1467c6710b75d2471</anchor>
-      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QToolBar &amp;result, int prevGroupId=ibase::ICommand::GI_NONE)</arglist>
+      <anchor>a9d4b78f27259ec01cde70d8b7b468566</anchor>
+      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QToolBar &amp;result, int prevGroupId=ibase::ICommand::GI_NONE, const QVector&lt; int &gt; &amp;includedGroups=QVector&lt; int &gt;(), const QVector&lt; int &gt; &amp;excludedGroups=QVector&lt; int &gt;())</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static int</type>
       <name>SetupContextMenu</name>
       <anchorfile>classiqtgui_1_1_c_command_tools.html</anchorfile>
-      <anchor>acc630f785d668fef587af086e46079c1</anchor>
-      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QWidget &amp;menuOwner, int prevGroupId=ibase::ICommand::GI_NONE)</arglist>
+      <anchor>ab8e62111342cfd9d9505edc67e6a4061</anchor>
+      <arglist>(const iqtgui::CHierarchicalCommand &amp;command, QWidget &amp;menuOwner, int prevGroupId=ibase::ICommand::GI_NONE, const QVector&lt; int &gt; &amp;includedGroups=QVector&lt; int &gt;(), const QVector&lt; int &gt; &amp;excludedGroups=QVector&lt; int &gt;())</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42318,6 +42318,13 @@
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
       <anchor>af42445991a29be81209d923ebd727dd1</anchor>
       <arglist>(const QSettings &amp;settings)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type></type>
+      <name>I_TEXTATTR</name>
+      <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a57d1271d50dee8fff54f65dd568815fc</anchor>
+      <arglist>(m_defaultDocumentTitleAttrPtr)</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>iqtgui::IGuiObject *</type>
