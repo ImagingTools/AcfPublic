@@ -26,6 +26,8 @@
 
 // Qt includes
 #include <QtCore/QByteArray>
+#include <QtCore/QMutexLocker>
+#include <QtCore/QMutex>
 
 // ACF includes
 #include <istd/istd.h>
@@ -49,6 +51,13 @@ public:
 		Join base component ID and sub ID into composed component ID.
 	*/
 	static QByteArray JoinId(const QByteArray& baseId, const QByteArray& subId);
+
+protected:
+#if QT_VERSION >= 0x060000
+	static QRecursiveMutex s_lock;
+#else
+	static QMutex s_lock;
+#endif
 };
 
 
