@@ -34913,6 +34913,13 @@
       <anchor>a95db2766bdaba1174d0650e4be5ab142</anchor>
       <arglist>(iser::IArchive &amp;archive, EnumType &amp;enumValue, const QObject *objectPtr)</arglist>
     </member>
+    <member kind="function" static="yes">
+      <type>static bool</type>
+      <name>SerializeAssociativeContainer</name>
+      <anchorfile>classiser_1_1_c_primitive_types_serializer.html</anchorfile>
+      <anchor>a3220326f2ec29aa17210f46153d101d1</anchor>
+      <arglist>(iser::IArchive &amp;archive, ContainerType &amp;container, const QByteArray &amp;containerTagName, const QByteArray &amp;elementTagName=&quot;Element&quot;, const QByteArray &amp;keyTagId=&quot;Key&quot;, const QByteArray &amp;valueTagId=&quot;Value&quot;, const QByteArray &amp;containerComment=&quot;List of elements&quot;)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>iqtgui::CProcessStartCommandComp</name>
