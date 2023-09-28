@@ -3204,6 +3204,7 @@
     <name>CLogGuiComp.h</name>
     <path>D:/Temp/Qt5/Acf/Include/iloggui/</path>
     <filename>_c_log_gui_comp_8h.html</filename>
+    <includes id="_t_del_ptr_8h" name="TDelPtr.h" local="no" imported="no">istd/TDelPtr.h</includes>
     <includes id="_i_commands_provider_8h" name="ICommandsProvider.h" local="no" imported="no">ibase/ICommandsProvider.h</includes>
     <includes id="_i_file_persistence_8h" name="IFilePersistence.h" local="no" imported="no">ifile/IFilePersistence.h</includes>
     <includes id="_c_enableable_param_8h" name="CEnableableParam.h" local="no" imported="no">iprm/CEnableableParam.h</includes>
@@ -25496,6 +25497,13 @@
       <anchor>a2d6f12f1f392ba8da020850ef14f0d99</anchor>
       <arglist>(const MessagePtr &amp;messagePtr)</arglist>
     </member>
+    <member kind="signal">
+      <type>void</type>
+      <name>EmitClearAction</name>
+      <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
+      <anchor>a5a0fdd1ba289bfa67ac4b03fc980fcf0</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CLogGuiComp</name>
@@ -25848,52 +25856,52 @@
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_rootCommands</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>a011ea8c05d0bfb9e13575422a63fa75a</anchor>
+      <anchor>affad704beed22bd4984f52a657eb1395</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_infoCommand</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ab6eaba543d064a8ea02fe31b3ba6df08</anchor>
+      <anchor>a9d15c5599d9503317dea8151af37d660</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_warningCommand</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>af3798a1cecf3fe8e69989bcf6e168b8e</anchor>
+      <anchor>ab47bee067b9d2d0170e80ad48fc8a7c4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_errorCommand</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ac193c58e339bb4333985f918f21f5e5e</anchor>
+      <anchor>a11d374aa0c8c1401a2b7f86ff5ebbefe</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_clearCommand</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ad38fd3ff71a7c9980f695cc54b706c44</anchor>
+      <anchor>aaae44343003b1b00e9b178c2a0d4d9a2</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_exportCommand</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>aa0c858758daebed123efa9b77670f637</anchor>
+      <anchor>a4f757655e53f41b233db62c7b1c6d065</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>iqtgui::CHierarchicalCommand</type>
+      <type>istd::TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</type>
       <name>m_diagnosticCommand</name>
       <anchorfile>classiloggui_1_1_c_log_gui_comp.html</anchorfile>
-      <anchor>ab2d99b9f888f40549c0011c6c4e2a0d4</anchor>
+      <anchor>a44c90133f976e1aa065a7bf220231179</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -65542,6 +65550,109 @@
       <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
       <anchor>a68a5f39f761d95fff4bf04d35d987900</anchor>
       <arglist>(iqtgui::CGuiComponentDialog *ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>SetCastedOrRemove</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>ab1138022120c02f70f206f404cee6298</anchor>
+      <arglist>(SourceType *ptr)</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>void</type>
+      <name>Detach</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a0db00924e06e8a1cf2ca6f4acf7fd01f</anchor>
+      <arglist>()</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>TDelPtr&lt; iqtgui::CHierarchicalCommand &gt;</name>
+    <filename>classistd_1_1_t_del_ptr.html</filename>
+    <base>istd::TPointerBase</base>
+    <member kind="typedef">
+      <type>TPointerBase&lt; iqtgui::CHierarchicalCommand &gt;</type>
+      <name>BaseClass</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a87b57b7584e65b6b60e8a7c14dc58419</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a896ce8c6bef0468cb803e1c701d39ad5</anchor>
+      <arglist>(iqtgui::CHierarchicalCommand *ptr=NULL)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a0a1b4b4044e72a40eff06aae3b7ee2cc</anchor>
+      <arglist>(const TDelPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>aac1c3a51aa0a24ecd30833f592cc44b3</anchor>
+      <arglist>(TDelPtr &amp;&amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>~TDelPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a0fcab1cd48712954b560f29534489777</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a402b3bb1ac7c61782eedf605cc64a148</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>ad2e88db38d69bbee93059067d3ec1f08</anchor>
+      <arglist>(iqtgui::CHierarchicalCommand *ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>iqtgui::CHierarchicalCommand *</type>
+      <name>PopPtr</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a699e9ff86495a4b8e5f22cbdc285c2cf</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>TakeOver</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a44f838475fdc9654f29ba624593e88ec</anchor>
+      <arglist>(TDelPtr &amp;sourcePtr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a027e7984f7ca086ff3c3b1f247f43694</anchor>
+      <arglist>(const TDelPtr &amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>add9e3ee5dffb62ac60abf50537e23719</anchor>
+      <arglist>(TDelPtr &amp;&amp;ptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>TDelPtr &amp;</type>
+      <name>operator=</name>
+      <anchorfile>classistd_1_1_t_del_ptr.html</anchorfile>
+      <anchor>a68a5f39f761d95fff4bf04d35d987900</anchor>
+      <arglist>(iqtgui::CHierarchicalCommand *ptr)</arglist>
     </member>
     <member kind="function">
       <type>bool</type>
