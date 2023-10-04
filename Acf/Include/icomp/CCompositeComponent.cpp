@@ -46,12 +46,17 @@ CCompositeComponent::CCompositeComponent(bool manualAutoInit)
 	m_isParentOwner(false),
 	m_manualAutoInit(manualAutoInit),
 	m_autoInitialized(false)
+#if QT_VERSION < 0x060000
+	,m_mutex(QMutex::Recursive)
+#endif
 {
 }
 
 
 CCompositeComponent::~CCompositeComponent()
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (m_isParentOwner && (m_parentPtr != NULL)){
 		const_cast<ICompositeComponent*>(m_parentPtr)->OnSubcomponentDeleted(this);
 	}
@@ -62,6 +67,8 @@ CCompositeComponent::~CCompositeComponent()
 
 bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 {
+	QMutexLocker lock(&m_mutex);
+
 	bool retVal = false;
 
 	if ((m_contextPtr != NULL) && !m_autoInitialized){
@@ -103,6 +110,8 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 
 IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) const
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (m_contextPtr != NULL){
 		ComponentInfo& componentInfo = m_componentMap[componentId];
 		if (!componentInfo.isComponentInitialized){
@@ -128,6 +137,8 @@ IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) 
 
 const IComponentContext* CCompositeComponent::GetSubcomponentContext(const QByteArray& componentId) const
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (m_contextPtr != NULL){
 		ComponentInfo& componentInfo = m_componentMap[componentId];
 		if (!componentInfo.isContextInitialized){
@@ -152,6 +163,8 @@ const IComponentContext* CCompositeComponent::GetSubcomponentContext(const QByte
 
 IComponent* CCompositeComponent::CreateSubcomponent(const QByteArray& componentId) const
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (m_contextPtr != NULL){
 		ComponentPtr retVal;
 
@@ -169,6 +182,8 @@ IComponent* CCompositeComponent::CreateSubcomponent(const QByteArray& componentI
 
 void CCompositeComponent::OnSubcomponentDeleted(const IComponent* subcomponentPtr)
 {
+	QMutexLocker lock(&m_mutex);
+
 	Q_ASSERT(subcomponentPtr != NULL);
 
 	for (		ComponentMap::iterator iter = m_componentMap.begin();
@@ -184,6 +199,8 @@ void CCompositeComponent::OnSubcomponentDeleted(const IComponent* subcomponentPt
 
 			info.isComponentInitialized = false;
 
+			lock.unlock();
+
 			delete this;
 
 			return;
@@ -198,6 +215,8 @@ void CCompositeComponent::OnSubcomponentDeleted(const IComponent* subcomponentPt
 
 const ICompositeComponent* CCompositeComponent::GetParentComponent(bool ownerOnly) const
 {
+	QMutexLocker lock(&m_mutex);
+
 	if (!ownerOnly || m_isParentOwner){
 		return m_parentPtr;
 	}
@@ -208,6 +227,8 @@ const ICompositeComponent* CCompositeComponent::GetParentComponent(bool ownerOnl
 
 void* CCompositeComponent::GetInterface(const istd::CClassInfo& interfaceType, const QByteArray& subId)
 {
+	QMutexLocker lock(&m_mutex);
+
 	const CCompositeComponentContext* contextPtr = dynamic_cast<const CCompositeComponentContext*>(GetComponentContext());
 	if (contextPtr == NULL){
 		qCritical("Composite component doesn't use corresponding context");
@@ -289,6 +310,8 @@ void* CCompositeComponent::GetInterface(const istd::CClassInfo& interfaceType, c
 
 const IComponentContext* CCompositeComponent::GetComponentContext() const
 {
+	QMutexLocker lock(&m_mutex);
+
 	return m_contextPtr;
 }
 
@@ -298,6 +321,8 @@ void CCompositeComponent::SetComponentContext(
 			const ICompositeComponent* parentPtr,
 			bool isParentOwner)
 {
+	QMutexLocker lock(&m_mutex);
+
 	m_parentPtr = parentPtr;
 	m_isParentOwner = isParentOwner;
 
