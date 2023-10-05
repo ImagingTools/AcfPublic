@@ -39843,6 +39843,12 @@
       <anchor>accdd24a68fc1969b44c11c6fa07e5d4eac20dec0d300811b814855edb9ca2358b</anchor>
       <arglist></arglist>
     </member>
+    <member kind="enumvalue">
+      <name>UM_COMBOBOX_VERTICAL</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>accdd24a68fc1969b44c11c6fa07e5d4ea3b7461d6b78d6199a51fb04f24f0994a</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="enumeration">
       <type></type>
       <name>LabelPosition</name>
@@ -39946,6 +39952,12 @@
       <name>UM_RADIOBUTTON_VERTICAL</name>
       <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
       <anchor>accdd24a68fc1969b44c11c6fa07e5d4eac20dec0d300811b814855edb9ca2358b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>UM_COMBOBOX_VERTICAL</name>
+      <anchorfile>classiqtprm_1_1_c_selection_param_gui_comp.html</anchorfile>
+      <anchor>accdd24a68fc1969b44c11c6fa07e5d4ea3b7461d6b78d6199a51fb04f24f0994a</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
