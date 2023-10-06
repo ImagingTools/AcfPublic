@@ -27679,10 +27679,10 @@
       <arglist>() const</arglist>
     </member>
     <member kind="function">
-      <type>const istd::IChangeable::ChangeSet &amp;</type>
+      <type>istd::IChangeable::ChangeSet</type>
       <name>GetCumulatedChanges</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>a90ea6a4f2166e04981ece6eeacf51890</anchor>
+      <anchor>a6bb253b07f48c6164d898917994e940f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
