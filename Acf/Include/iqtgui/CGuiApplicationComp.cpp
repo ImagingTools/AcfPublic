@@ -315,6 +315,7 @@ void CGuiApplicationComp::ShowWindow()
 	#endif
 #endif
 	QWindow* windowHandle = NULL;
+	Q_UNUSED(windowHandle)
 
 	switch (uiStartMode){
 		case 1:

@@ -22542,13 +22542,6 @@
       <anchor>ab541ad2a4f71fa10e11dc1a31e5dcbe2</anchor>
       <arglist>(const QByteArray &amp;baseId, const QByteArray &amp;subId)</arglist>
     </member>
-    <member kind="variable" protection="protected" static="yes">
-      <type>static QMutex</type>
-      <name>s_lock</name>
-      <anchorfile>classistd_1_1_c_id_manip_base.html</anchorfile>
-      <anchor>a8c0f51b21c00bf6d5ebf9ac32e8f2821</anchor>
-      <arglist></arglist>
-    </member>
   </compound>
   <compound kind="class">
     <name>iprm::CIdParam</name>
