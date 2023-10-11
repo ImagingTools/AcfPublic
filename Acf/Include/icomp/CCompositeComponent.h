@@ -139,7 +139,6 @@ private:
 #else
 	mutable QMutex m_mutex;
 #endif
-
 };
 
 
