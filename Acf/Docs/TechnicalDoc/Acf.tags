@@ -1289,6 +1289,7 @@
     <name>CCachedEnvironmentManager.h</name>
     <path>D:/Temp/Qt5/Acf/Include/icomp/</path>
     <filename>_c_cached_environment_manager_8h.html</filename>
+    <includes id="_t_smart_ptr_8h" name="TSmartPtr.h" local="no" imported="no">istd/TSmartPtr.h</includes>
     <includes id="_i_serializable_8h" name="ISerializable.h" local="no" imported="no">iser/ISerializable.h</includes>
     <includes id="_t_copy_serialized_wrap_8h" name="TCopySerializedWrap.h" local="no" imported="no">iser/TCopySerializedWrap.h</includes>
     <includes id="_c_registry_8h" name="CRegistry.h" local="no" imported="no">icomp/CRegistry.h</includes>
@@ -37604,6 +37605,13 @@
     <name>icomp::CRegistry</name>
     <filename>classicomp_1_1_c_registry.html</filename>
     <base virtualness="virtual">icomp::IRegistry</base>
+    <member kind="function">
+      <type></type>
+      <name>CRegistry</name>
+      <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
+      <anchor>ae937422df5142a9168d3846dc614d6a0</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetElementIds</name>
