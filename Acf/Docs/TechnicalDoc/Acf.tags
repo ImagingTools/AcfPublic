@@ -80881,8 +80881,8 @@
       <anchor>afa330f688c6bbbb6af4197655cae8396</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QStringList</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QStringList</type>
       <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
       <anchor>ab10b8fc93f79677c4a868fb7570ef7ca</anchor>
@@ -80943,8 +80943,8 @@
       <anchor>afa330f688c6bbbb6af4197655cae8396</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QStringList</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QStringList</type>
       <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
       <anchor>ab10b8fc93f79677c4a868fb7570ef7ca</anchor>
@@ -81005,8 +81005,8 @@
       <anchor>afa330f688c6bbbb6af4197655cae8396</anchor>
       <arglist>(const QByteArray &amp;documentTypeId, const istd::IChangeable *dataObjectPtr, const QString &amp;currentFilePath) const</arglist>
     </member>
-    <member kind="function" protection="protected">
-      <type>QStringList</type>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QStringList</type>
       <name>CreateFileDialogFilters</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
       <anchor>ab10b8fc93f79677c4a868fb7570ef7ca</anchor>
