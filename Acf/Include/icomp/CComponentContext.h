@@ -27,7 +27,6 @@
 // Qt includes
 #include <QtCore/QByteArray>
 #include <QtCore/QMap>
-#include <QtCore/QMutex>
 
 // ACF includes
 #include <icomp/IComponentContext.h>
@@ -88,12 +87,6 @@ private:
 	mutable AttributeMap m_attributeMap;
 
 	QByteArray m_contextId;
-
-#if QT_VERSION >= 0x060000
-	mutable QRecursiveMutex m_attributeMapMutex;
-#else
-	mutable QMutex m_attributeMapMutex;
-#endif
 };
 
 
