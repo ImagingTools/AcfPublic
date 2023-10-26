@@ -46,20 +46,9 @@ bool CCachedEnvironmentManager::AddComposedComponent(
 			const icomp::CComponentAddress& address,
 			const icomp::IRegistry& registry)
 {
-	bool retVal = true;
-
 	PackageInfo& packageInfo = m_packagesMap[address.GetPackageId()];
 
-	QByteArray componentId = address.GetComponentId();
-
-	istd::TSmartPtr<Registry> registryPtr(new Registry);
-
-	retVal = registryPtr->CopyFrom(registry);
-	if (retVal){
-		packageInfo.registriesMap[componentId] = registryPtr;
-	}
-
-	return retVal;
+	return packageInfo.registriesMap[address.GetComponentId()].CopyFrom(registry);
 }
 
 
@@ -98,7 +87,9 @@ const icomp::IRegistry* CCachedEnvironmentManager::GetRegistry(
 	if (packageIter != m_packagesMap.constEnd()){
 		RegistriesMap::ConstIterator registryIter = packageIter->registriesMap.constFind(address.GetComponentId());
 		if (registryIter != packageIter->registriesMap.constEnd()){
-			return (*registryIter).GetPtr();
+			const icomp::IRegistry& registry = *registryIter;
+
+			return &registry;
 		}
 		else{
 			return NULL;
@@ -145,9 +136,8 @@ bool CCachedEnvironmentManager::Serialize(iser::IArchive& archive)
 				retVal = retVal && archive.EndTag(s_componentIdTag);
 
 				retVal = retVal && archive.BeginTag(s_registryDataTag);
-				Registry* registryPtr = const_cast<Registry*>(componentIter.value().GetPtr());
-				Q_ASSERT(registryPtr != nullptr);
-				retVal = retVal && registryPtr->Serialize(archive);
+				Registry& registry = const_cast<Registry&>(componentIter.value());
+				retVal = retVal && registry.Serialize(archive);
 				retVal = retVal && archive.EndTag(s_registryDataTag);
 
 				retVal = retVal && archive.EndTag(s_componentTag);
@@ -195,18 +185,10 @@ bool CCachedEnvironmentManager::Serialize(iser::IArchive& archive)
 					return false;
 				}
 
-				istd::TSmartPtr<Registry> registryPtr(new Registry);
-
+				Registry& registry = packageInfo.registriesMap[componentId];
 				retVal = retVal && archive.BeginTag(s_registryDataTag);
-				retVal = retVal && registryPtr->Serialize(archive);
+				retVal = retVal && registry.Serialize(archive);
 				retVal = retVal && archive.EndTag(s_registryDataTag);
-
-				if (retVal){
-					packageInfo.registriesMap[componentId] = registryPtr;
-				}
-				else{
-					Q_ASSERT(false);
-				}
 
 				retVal = retVal && archive.EndTag(s_componentTag);
 			}
