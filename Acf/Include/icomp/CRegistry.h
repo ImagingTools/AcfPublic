@@ -29,7 +29,9 @@
 
 // ACF includes
 #include <istd/TChangeDelegator.h>
+
 #include <imod/TModelWrap.h>
+
 #include <icomp/IRegistry.h>
 #include <icomp/CRegistryElement.h>
 
@@ -44,8 +46,6 @@ namespace icomp
 class CRegistry: virtual public IRegistry
 {
 public:
-	CRegistry();
-
 	// reimplemented (icomp::IRegistry)
 	virtual Ids GetElementIds() const;
 	virtual const ElementInfo* GetElementInfo(const QByteArray& elementId) const;
@@ -105,12 +105,6 @@ private:
 
 	QString m_description;
 	QString m_keywords;
-
-#if QT_VERSION >= 0x060000
-	mutable QRecursiveMutex m_mutex;
-#else
-	mutable QMutex m_mutex;
-#endif
 };
 
 
