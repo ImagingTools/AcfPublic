@@ -60,7 +60,7 @@ public:
 	/**
 		Copy constructor.
 	*/
-	TIndex(const TIndex& index);
+    TIndex(const TIndex& index);
 
 	/**
 		Check if this index is valid.
@@ -189,7 +189,8 @@ public:
 	TIndex operator+(const TIndex& index) const;
 	TIndex& operator+=(const TIndex& index);
 	TIndex operator-(const TIndex& index) const;
-	TIndex& operator-=(const TIndex& index);
+    TIndex& operator-=(const TIndex& index);
+    TIndex& operator=(const TIndex& index) = default;
 
 	// static methods
 	/**
