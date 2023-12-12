@@ -25293,29 +25293,29 @@
       <type>virtual void</type>
       <name>SetLogPtr</name>
       <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
-      <anchor>abd377565ca13633ed308867c3c31f862</anchor>
-      <arglist>(ilog::IMessageConsumer *logPtr)</arglist>
+      <anchor>ae9b699ffbf3e7e8a2fbdc6f3f06cee74</anchor>
+      <arglist>(ilog::IMessageConsumer *logPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ilog::IMessageConsumer *</type>
       <name>GetLogPtr</name>
       <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
-      <anchor>a6c99be0db900549ec878b1821877f615</anchor>
-      <arglist>() const</arglist>
+      <anchor>a4f8528d1773d928a0745845f1527c18d</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetTracingEnabled</name>
       <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
-      <anchor>a346ea48f77bcc49ce918d15a0d2d88a7</anchor>
-      <arglist>(bool trace)</arglist>
+      <anchor>a413d8932ab7b2983f787a83ed7eba44e</anchor>
+      <arglist>(bool trace) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTracingEnabled</name>
       <anchorfile>classilog_1_1_c_logger_base.html</anchorfile>
-      <anchor>ac4fe0e0bb23eef0a338223a031f53bcb</anchor>
-      <arglist>() const</arglist>
+      <anchor>ae6a8cbda35c4d6be63452f0100dc5185</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>bool</type>
