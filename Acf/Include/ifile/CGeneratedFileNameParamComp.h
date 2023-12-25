@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_CGeneratedFileNameParamComp_included
-#define ifile_CGeneratedFileNameParamComp_included
+#pragma once
 
 
 // ACF includes
@@ -49,12 +48,12 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ifile::IFileNameParam)
-    virtual void SetPath(const QString& path) override;
+	virtual void SetPath(const QString& path) override;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-    virtual void OnComponentCreated() override;
-    virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated() override;
+	virtual void OnComponentDestroyed() override;
 
 private:
 	I_ATTR(bool, m_autoDeleteAttrPtr);
@@ -64,8 +63,5 @@ private:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_CGeneratedFileNameParamComp_included
 
 

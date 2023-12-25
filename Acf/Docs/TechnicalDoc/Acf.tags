@@ -2605,7 +2605,6 @@
     <name>IFileSystemInfoProvider.h</name>
     <path>D:/Temp/Qt5/Acf/Include/ifile/</path>
     <filename>_i_file_system_info_provider_8h.html</filename>
-    <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <includes id="_c_system_8h" name="CSystem.h" local="no" imported="no">istd/CSystem.h</includes>
     <includes id="_i_options_list_8h" name="IOptionsList.h" local="no" imported="no">iprm/IOptionsList.h</includes>
     <class kind="class">ifile::IFileSystemInfoProvider</class>
@@ -2615,7 +2614,6 @@
     <name>IFileTypeInfo.h</name>
     <path>D:/Temp/Qt5/Acf/Include/ifile/</path>
     <filename>_i_file_type_info_8h.html</filename>
-    <includes id="_i_polymorphic_8h" name="IPolymorphic.h" local="no" imported="no">istd/IPolymorphic.h</includes>
     <includes id="_i_changeable_8h" name="IChangeable.h" local="no" imported="no">istd/IChangeable.h</includes>
     <class kind="class">ifile::IFileTypeInfo</class>
     <namespace>ifile</namespace>
@@ -7389,36 +7387,36 @@
       <type>virtual IElementStaticInfo::Ids</type>
       <name>GetRelatedMetaIds</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>ac45bb93c4b54a8f260a2f6e807cbd295</anchor>
-      <arglist>(int metaGroupId, int flags, int flagsMask) const</arglist>
+      <anchor>aaa77c4920a138d9b32e86f61c17e6c7d</anchor>
+      <arglist>(int metaGroupId, int flags, int flagsMask) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>a62715a1f5b5b10a914a2d214a042a461</anchor>
-      <arglist>() const</arglist>
+      <anchor>a871cd3dbed95869ad0a26342645c0088</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
       <name>GetAttributeDefaultValue</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>ac51ef1847c45b72fdb62bdcef643cd9f</anchor>
-      <arglist>() const</arglist>
+      <anchor>a46f54e055c49b76dc47b144567faf2d9</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetAttributeTypeId</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>a01e6880c2b48e90e93936c292c2aa848</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3c39778989786a7b85ab6cf60074f3c4</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAttributeFlags</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info_1_1_attr_as_optional_delegator.html</anchorfile>
-      <anchor>a0c2e3b4bb7bb67c2ceeb96a4b39e8e28</anchor>
-      <arglist>() const</arglist>
+      <anchor>a61fe6982720c858cd011abac7c0a128a</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -9116,8 +9114,8 @@
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
       <anchorfile>classifile_1_1_c_application_info_based_file_name_comp.html</anchorfile>
-      <anchor>a367406daca1909331e1b340f324aa449</anchor>
-      <arglist>() const</arglist>
+      <anchor>af1a60e1e11c0faeb5b0a436eff86c80d</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -10302,50 +10300,50 @@
       <type>virtual IComponent *</type>
       <name>CreateComponent</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>ad4795dfa2fa285dbd738d345b5d20063</anchor>
-      <arglist>() const</arglist>
+      <anchor>af423503f4fa0196d216694f97d8a0e17</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>aa05343fc02e522ea4c4507835e247520</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const</arglist>
+      <anchor>a3fd5f01c4fdb242461e8504625c71a67</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IAttributeStaticInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a4b81245728342f4576a85dcf17a4e65f</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>a52f759b019d40f6bd442e7410b16a18e</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a8d90b1a81167ea3767effd009f57f00d</anchor>
-      <arglist>(int metaGroupId) const</arglist>
+      <anchor>a58e4ed0f4c4f49621a4ac974c9217302</anchor>
+      <arglist>(int metaGroupId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a82bad3c6f1dd1a54153ac32e30a63820</anchor>
-      <arglist>(const QByteArray &amp;subcomponentId) const</arglist>
+      <anchor>ae861d73728e875dd8588c287e466736e</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iattr::IAttributesProvider::AttributeIds</type>
       <name>GetAttributeMetaIds</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a20270da03284a85a0e97425cd3318da8</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3278eeb679a1e2399446fbd452f1fa08</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iattr::IAttributeMetaInfo *</type>
       <name>GetAttributeMetaInfo</name>
       <anchorfile>classicomp_1_1_c_base_component_static_info.html</anchorfile>
-      <anchor>a5c7c890f5934d5bf4eb953ed296b3c5d</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>a7a52a19458da642ed3859f19c79db168</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
     <member kind="variable" static="yes">
       <type>static istd::CClassInfo</type>
@@ -11274,15 +11272,15 @@
       <type>virtual const icomp::IRegistry *</type>
       <name>GetRegistry</name>
       <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
-      <anchor>ac88773220dd30278bc0bfe4a7e06a254</anchor>
-      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const</arglist>
+      <anchor>a0ea6479d1d1530b30a3b61e1557bd182</anchor>
+      <arglist>(const icomp::CComponentAddress &amp;address, const icomp::IRegistry *contextRegistryPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicomp_1_1_c_cached_environment_manager.html</anchorfile>
-      <anchor>a88dea90c3aca8dcc127af7075c6254d1</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a8a2a5e007bba39a28eb50b5c0488ef76</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -12920,15 +12918,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_cmyk_to_rgb_transformation.html</anchorfile>
-      <anchor>a2392e59088430744b3aa195e692993b1</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
+      <anchor>a314dd3d8b750796af61b25bf4b8b072a</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_cmyk_to_rgb_transformation.html</anchorfile>
-      <anchor>a91fd6527150bd8e658c1a5e9bc983332</anchor>
-      <arglist>(const ArgumentType &amp;argument) const</arglist>
+      <anchor>a07d3996b8f0c75d119898fda0a876e26</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13744,8 +13742,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classifile_1_1_c_compact_xml_file_read_archive.html</anchorfile>
-      <anchor>a2214b043f5f8ec2357efa58e9f531c0e</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const</arglist>
+      <anchor>a34d6d9d98d4cb83276c45b83819fe5a2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -13799,8 +13797,8 @@
       <type>virtual bool</type>
       <name>WriteTextNode</name>
       <anchorfile>classifile_1_1_c_compact_xml_file_write_archive.html</anchorfile>
-      <anchor>aadad5301ea377c4f8cfd11d3a2c40513</anchor>
-      <arglist>(const QByteArray &amp;text)</arglist>
+      <anchor>a44e7a2909e9ff2e1dfd392367c62d78d</anchor>
+      <arglist>(const QByteArray &amp;text) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14339,8 +14337,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicomp_1_1_c_component_address.html</anchorfile>
-      <anchor>a77e4dc5ff47a36134f4f441444ca3b44</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a53e6cb7ca0e4941ef7b141116ac68187</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="friend">
       <type>friend uint</type>
@@ -14455,36 +14453,36 @@
       <type>virtual const QByteArray &amp;</type>
       <name>GetContextId</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>a47bb274cd65eb09e6a49fefe516c7dae</anchor>
-      <arglist>() const</arglist>
+      <anchor>a733a101639c266c85147f5146b665dd5</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IRegistryElement &amp;</type>
       <name>GetRegistryElement</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>ae5d125c2e769783d2bb74e6506b8dc34</anchor>
-      <arglist>() const</arglist>
+      <anchor>a308381358ef7158bda9395fd13443c14</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo &amp;</type>
       <name>GetStaticInfo</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>a7f77331ec92e490b4e8ed5debfa5bd9b</anchor>
-      <arglist>() const</arglist>
+      <anchor>a2dfd20b1c2c0fe4bd526c737cbc98870</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetParentContext</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>acb5bd803133a566dcf2893c823ed4706</anchor>
-      <arglist>() const</arglist>
+      <anchor>a5dd4b52bb393d225c129eacdddc06b54</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
       <name>GetAttribute</name>
       <anchorfile>classicomp_1_1_c_component_context.html</anchorfile>
-      <anchor>aa7a8df1758fcb7a5469c57d65dbd6d29</anchor>
-      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const</arglist>
+      <anchor>ac69cbfd88b3bcbbb4d5569347c709fbc</anchor>
+      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -14541,64 +14539,64 @@
       <type>virtual int</type>
       <name>GetComponentType</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a0b67550e134f93561ae842fa99979ffc</anchor>
-      <arglist>() const</arglist>
+      <anchor>ab3b4c42868e074f24553ebb314341aef</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IAttributeStaticInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>aa41fb8aee941cddd0479434e24f75076</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>aad294521ab51cfa111d592146a19add2</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>aabbfbe5708a2173502e4ea54d32cad9c</anchor>
-      <arglist>(const QByteArray &amp;embeddedId) const</arglist>
+      <anchor>a3f00a106bdad90c41f0bdc0dec7fd38e</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetDescription</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a49e2b75c49f2660bc60e582c2f1cc721</anchor>
-      <arglist>() const</arglist>
+      <anchor>a4d14053abb05557f4802b47d443508f1</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetKeywords</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>aa9bc6ccae991d4d4edf151b5a33c613c</anchor>
-      <arglist>() const</arglist>
+      <anchor>a439d71d36a0f47505f6ddd7d42685cb7</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>ac1a28ff1340a62afd8f50671587a5f4a</anchor>
-      <arglist>(int metaGroupId) const</arglist>
+      <anchor>abf12ad586f4b3a5b9e54ebbac31def2a</anchor>
+      <arglist>(int metaGroupId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a8f6d88c6f59f1c5de8ac22998e67d6a4</anchor>
-      <arglist>(const QByteArray &amp;subcomponentId) const</arglist>
+      <anchor>a45196ebd2c75db4a72ad219d2adfba18</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iattr::IAttributesProvider::AttributeIds</type>
       <name>GetAttributeMetaIds</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>a674537fe5aa2282752340f94775026e6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a9e543790cbd554209f86dcfff509137c</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iattr::IAttributeMetaInfo *</type>
       <name>GetAttributeMetaInfo</name>
       <anchorfile>classicomp_1_1_c_component_static_info_base.html</anchorfile>
-      <anchor>aa0b3610abe9c645eb3eb51b745193067</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>a630e50323352cd217c7888784072c291</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14673,8 +14671,8 @@
       <type>virtual MetaInfoPtr</type>
       <name>GetFileMetaInfo</name>
       <anchorfile>classifile_1_1_c_composed_file_meta_info_provider_comp.html</anchorfile>
-      <anchor>ad01b506f5f3b1da5d2c7f891aa22cae7</anchor>
-      <arglist>(const QString &amp;filePath, ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>ac9e6472e53c56cab9fe91d1df99122c4</anchor>
+      <arglist>(const QString &amp;filePath, ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -14694,43 +14692,43 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a7a8541c667114608e0179ad3aaa5da32</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const</arglist>
+      <anchor>a007fc34f528b8436232ad7ee1a7b6203</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a3a93cf20a65058e4565678e0da3466c2</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>a6d8bbf993858c8c94761a8034ea98348</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a0d5741982befc45a53ab6bab5158517c</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>aec069477285b60dd04003fc6aea1363e</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a009b726a975a1becf2365107691841a4</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
+      <anchor>a210e1baadaeab7551daae21086fcfbc4</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a6a01b7bd810696fa9ec74506822b5229</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+      <anchor>a979021d6d318383eba5335eb5d287c80</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetLastFilePath</name>
       <anchorfile>classifile_1_1_c_composed_file_persistence_comp.html</anchorfile>
-      <anchor>a5d8660099ed34af0d95eeb0549e6b634</anchor>
-      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const</arglist>
+      <anchor>aac8a85afe482dd13ddc2bcf2c004cc4d</anchor>
+      <arglist>(OperationType operationType=OT_UNKNOWN, PathType pathType=PT_COMPLETE) const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>QString</type>
@@ -15126,57 +15124,57 @@
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a3049234e4fd86906349c8cc79f6abebd</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>af3e4d2caf4633fc27a300ddf579e9cc2</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetSubcomponentContext</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>abb85a1de2cd921c77920da089fc239c2</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>a86c9481e4b5fffcfdceb70744f4fdace</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>CreateSubcomponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a15f6b5e4de73a674a13b48bbd10fedc3</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>a4cec3b5c71d2e70074c756cc55c42cc0</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSubcomponentDeleted</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a30eb8098644af9755c7d26fecfc77257</anchor>
-      <arglist>(const IComponent *subcomponentPtr)</arglist>
+      <anchor>ad7a38480985e2ec31b7734521018699f</anchor>
+      <arglist>(const IComponent *subcomponentPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICompositeComponent *</type>
       <name>GetParentComponent</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>ad1c50066925164f86755a75f7bfe6e69</anchor>
-      <arglist>(bool ownerOnly=false) const</arglist>
+      <anchor>afbae6624225060308ac431d1c6be6592</anchor>
+      <arglist>(bool ownerOnly=false) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void *</type>
       <name>GetInterface</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>af3ca584789d2b47cdd3306b31e79560a</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;)</arglist>
+      <anchor>aa7943a1554faba604d39b700c7ae4248</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, const QByteArray &amp;subId=&quot;&quot;) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetComponentContext</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>a7d9674a0d47b44490a4a4b99c0db2585</anchor>
-      <arglist>() const</arglist>
+      <anchor>a85dff984dec426523e6dfcf4371d3b39</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetComponentContext</name>
       <anchorfile>classicomp_1_1_c_composite_component.html</anchorfile>
-      <anchor>ae6657042080e37b072238b98a4ee1f32</anchor>
-      <arglist>(const icomp::IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)</arglist>
+      <anchor>ac976c48595ed730061896afb9a15c190</anchor>
+      <arglist>(const icomp::IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner) override</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>istd::TDelPtr&lt; icomp::IComponent &gt;</type>
@@ -15256,36 +15254,36 @@
       <type>virtual IComponent *</type>
       <name>CreateComponent</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>af18ce58e02c3d6ea5e5ee8457fc382ca</anchor>
-      <arglist>() const</arglist>
+      <anchor>a24b338612ef3bb0ae252a69c2e29f3e8</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetComponentType</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>a17d910118861f9999ff1712f9ca8bc8c</anchor>
-      <arglist>() const</arglist>
+      <anchor>a198f455189ff8d1bb9fbd29db5c6651b</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>a2582120e1b9b15d51050d94436ae425f</anchor>
-      <arglist>(const QByteArray &amp;embeddedId) const</arglist>
+      <anchor>aa7e9752180c5aee56950625a2e4f7b24</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetDescription</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>a6d25923fb36d720d9d75605c3b460576</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa4d1f2a3f02e85fc5f34a34b1eff9511</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetKeywords</name>
       <anchorfile>classicomp_1_1_c_composite_component_static_info.html</anchorfile>
-      <anchor>a8d3ae8508773f8b6f0d9754410317ff3</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0398c6e0cb12846a0c66f77118bd75d0</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>const IRegistry::ElementInfo *</type>
@@ -15435,15 +15433,15 @@
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
-      <anchor>a96800be872c24cd1cb4b63bb5f10e16c</anchor>
-      <arglist>(int metaGroupId) const</arglist>
+      <anchor>ac5fcfa6adcedada8c727272e2238d863</anchor>
+      <arglist>(int metaGroupId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_composite_package_static_info.html</anchorfile>
-      <anchor>a584f057dde9098ed3a5b8ab221c02802</anchor>
-      <arglist>(const QByteArray &amp;embeddedId) const</arglist>
+      <anchor>acf30b22c0153da01e3af9615f52c19a6</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -15475,8 +15473,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classifile_1_1_c_compressed_xml_file_read_archive.html</anchorfile>
-      <anchor>a1f030ef4e5eb11b6e6c15d54c7a36c77</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const</arglist>
+      <anchor>a8e34505c9066194a1fb60862c8c6d91f</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -16763,8 +16761,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_data_node_polyline_base.html</anchorfile>
-      <anchor>a277802da8b39c5bd00e55be9a227691e</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a34f7619ba7d681e3fa7117806c270526</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18306,57 +18304,57 @@
       <type>virtual bool</type>
       <name>LoadPackages</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>ac2730fdd9e172608330070369e76cc42</anchor>
-      <arglist>(const QString &amp;configFilePath=QString())</arglist>
+      <anchor>a51f1c9831cfb3b7820763aca8c67310f</anchor>
+      <arglist>(const QString &amp;configFilePath=QString()) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetPackageType</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a8790a754ead20538c34afc7b39e0f9ea</anchor>
-      <arglist>(const QByteArray &amp;packageId) const</arglist>
+      <anchor>a09dff3a24151ebc8ea7840b95fb7012a</anchor>
+      <arglist>(const QByteArray &amp;packageId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetPackagePath</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>abfad0ba19aab9426a83c7f316ec6a151</anchor>
-      <arglist>(const QByteArray &amp;packageId) const</arglist>
+      <anchor>ad9a708035baffde4732442a4559917c5</anchor>
+      <arglist>(const QByteArray &amp;packageId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetRegistryPath</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>ae2711f533efa27313f5e9410da8ec414</anchor>
-      <arglist>(const CComponentAddress &amp;address) const</arglist>
+      <anchor>a03b5b4bcf30d01cf206191b6176cfe37</anchor>
+      <arglist>(const CComponentAddress &amp;address) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IRegistry *</type>
       <name>GetRegistry</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>abcdf509bfe5a84a60fb8b3382dc042eb</anchor>
-      <arglist>(const CComponentAddress &amp;address, const IRegistry *contextRegistryPtr=NULL) const</arglist>
+      <anchor>a6d24c0eb2eaf66235ac83c1ad6d7a288</anchor>
+      <arglist>(const CComponentAddress &amp;address, const IRegistry *contextRegistryPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ComponentAddresses</type>
       <name>GetComponentAddresses</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a8581756e2cd406ec0673314974273530</anchor>
-      <arglist>(int typeFlag=CTF_ALL) const</arglist>
+      <anchor>a9a439c32520ef22b908789d8f96cc54c</anchor>
+      <arglist>(int typeFlag=CTF_ALL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetComponentMetaInfo</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>a9b66f938b35a0bcfaf9137f784eea13b</anchor>
-      <arglist>(const CComponentAddress &amp;address) const</arglist>
+      <anchor>a72312804f3c73b3c253b80a06c1d63bc</anchor>
+      <arglist>(const CComponentAddress &amp;address) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetPackageMetaInfo</name>
       <anchorfile>classicomp_1_1_c_environment_manager_base.html</anchorfile>
-      <anchor>aef43f81d2d1c747be1a12d2aa205f216</anchor>
-      <arglist>(const QByteArray &amp;packageId) const</arglist>
+      <anchor>aaf1f049909f642e817e9268a6b29f7c1</anchor>
+      <arglist>(const QByteArray &amp;packageId) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -19048,8 +19046,8 @@
       <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_factory_attribute.html</anchorfile>
-      <anchor>a64452ab18cb96630bbd289ae64683962</anchor>
-      <arglist>() const</arglist>
+      <anchor>a30b0943a9a00e600b4a2fb9c69383713</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -19537,8 +19535,8 @@
       <type>virtual const QString &amp;</type>
       <name>GetCurrentFilePath</name>
       <anchorfile>classifile_1_1_c_file_archive_info.html</anchorfile>
-      <anchor>a29c6f965d688e1a57ec95c4824cd5325</anchor>
-      <arglist>() const</arglist>
+      <anchor>a11ea55be103c8cffb0def0613e12f9cc</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QString</type>
@@ -19741,50 +19739,50 @@
       <type>virtual int</type>
       <name>GetPathType</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>aa77a09a1167a263917712764a6c0b3ce</anchor>
-      <arglist>() const</arglist>
+      <anchor>a2c076dd0c7e6b1f218390aeab2dbe12f</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>a7355e5e0c089f8c91cc272a0bc3229e3</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa9d08fda997cb1d2423c402d255e8a46</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetPath</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>af839a2b466214baeebe7dbe84c8fafcf</anchor>
-      <arglist>(const QString &amp;path)</arglist>
+      <anchor>a8b115d01ef96962c3bbfc23543629406</anchor>
+      <arglist>(const QString &amp;path) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>aaa3e44e743af08ba24ffd955cd24b86d</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>ab2903bdcdd31eaeb56871b43ad59895f</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>aadc897381dd9c504ef96403485563a20</anchor>
-      <arglist>() const</arglist>
+      <anchor>ae3dcd99fcc5d3ebcebc25f10cdf8d1c4</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>ac5698a67d6eb27402c5c30344367a324</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a00b12fb22242314c94bb29dc8c6913dd</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEqual</name>
       <anchorfile>classifile_1_1_c_file_name_param.html</anchorfile>
-      <anchor>a9e7ad7d7539bd340b15e3aa1124cdfbc</anchor>
-      <arglist>(const IChangeable &amp;object) const</arglist>
+      <anchor>aeefc87b2b02a361f19a86a17f20aa19e</anchor>
+      <arglist>(const IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>QString</type>
@@ -20106,43 +20104,43 @@
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a5d3af1bc796a4e4f6d868e1bfa2739d9</anchor>
-      <arglist>() const</arglist>
+      <anchor>a74a44f44aa1e6bfe7682bdf5dff84a9e</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>ad24f052beca32ef60daea1abdd15d0d1</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>ae41d1241af78a06f31b5d0093f7f1758</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>aca5a5deb64254edacc588d3333d385dc</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>a4d683351e9cf4fe2f076cd785631a066</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessData</name>
       <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>a971726afae602cae25db9b0897bab157</anchor>
-      <arglist>(void *data, int size)</arglist>
+      <anchor>abb79f681babec7b0b6eb42a8bd7d9090</anchor>
+      <arglist>(void *data, int size) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>ae984c10302caea7f38a475a48410c5b6</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const</arglist>
+      <anchor>a25ee3de9c4029b54686becab925b7a7d</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual int</type>
       <name>GetMaxStringLength</name>
       <anchorfile>classifile_1_1_c_file_read_archive.html</anchorfile>
-      <anchor>aab789085507fe0de8fb0758016928005</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa61d646b9933c2f21cd1973c0abc7802</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20510,15 +20508,15 @@
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>a7f69d1dc5f3e5f8eb9f3f09c85df2acf</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
+      <anchor>afd5ec2b55c1b14aff6376b9ad65b5c6d</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classifile_1_1_c_file_type_info_comp.html</anchorfile>
-      <anchor>af911daa6f475f65a8772bccdfd5ff16c</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+      <anchor>a878a61e38728c38b4a207e025a54edfc</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -20566,29 +20564,29 @@
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
       <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a0798e2dfe9ede9b77cf0515dd9afd214</anchor>
-      <arglist>() const</arglist>
+      <anchor>a5510376f61086e62dec07587bcb3e21e</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>BeginTag</name>
       <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>aa916bc5ed885551a4f46b49c144664b0</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>aad05055349e74b7372720df9eef91cea</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>EndTag</name>
       <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>abc6270ed63d8266382863591b3235f02</anchor>
-      <arglist>(const iser::CArchiveTag &amp;tag)</arglist>
+      <anchor>a0847c57d961f641ce45d130b27316f47</anchor>
+      <arglist>(const iser::CArchiveTag &amp;tag) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>ProcessData</name>
       <anchorfile>classifile_1_1_c_file_write_archive.html</anchorfile>
-      <anchor>a459620032ca511bd5e68446152bda45b</anchor>
-      <arglist>(void *data, int size)</arglist>
+      <anchor>a373a152be5ed5e1e2a2dcfc19e7d21ef</anchor>
+      <arglist>(void *data, int size) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22427,15 +22425,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_hsv_to_rgb_transformation.html</anchorfile>
-      <anchor>a34d5e49d8157761b2d1a03a259176a2a</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
+      <anchor>a3f46090994d677df57230998ba3e6bdc</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_hsv_to_rgb_transformation.html</anchorfile>
-      <anchor>a78bce71d7eb16d830d72c041fad8232b</anchor>
-      <arglist>(const ArgumentType &amp;argument) const</arglist>
+      <anchor>a497b82d4be0cb932de6f75e61847347b</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -27690,29 +27688,29 @@
       <type>virtual bool</type>
       <name>AttachObserver</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>a828e9b08fb20fa4938433b501ac9e8f3</anchor>
-      <arglist>(imod::IObserver *observerPtr)</arglist>
+      <anchor>a1ee74d19c2e5e75d5b7eb7ee871f1610</anchor>
+      <arglist>(imod::IObserver *observerPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>DetachObserver</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>abb8f4b17c26e01d27f6191ac4e610ac2</anchor>
-      <arglist>(imod::IObserver *observerPtr)</arglist>
+      <anchor>a08ca6f7fd35122324d623277202e64cb</anchor>
+      <arglist>(imod::IObserver *observerPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>DetachAllObservers</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>acdb901523fe0629132c28df2471d5985</anchor>
-      <arglist>()</arglist>
+      <anchor>ad5ba6576e4ec68cd54fc6e8e554c6279</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsAttached</name>
       <anchorfile>classimod_1_1_c_model_base.html</anchorfile>
-      <anchor>a9af9a5cb31c4b89b949d1fcc1b157bdc</anchor>
-      <arglist>(const imod::IObserver *observerPtr) const</arglist>
+      <anchor>a553da344f716dd93f2cc4577941a43df</anchor>
+      <arglist>(const imod::IObserver *observerPtr) const override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -28022,36 +28020,36 @@
       <type>virtual bool</type>
       <name>IsModelAttached</name>
       <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
-      <anchor>ae6e1eacb576981e5a1025b92bf64a986</anchor>
-      <arglist>(const imod::IModel *modelPtr) const</arglist>
+      <anchor>ade0b5e5eff763b0cc7429dd1a45537df</anchor>
+      <arglist>(const imod::IModel *modelPtr) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
-      <anchor>a5bc20eb0c9d2892bd77b8d157389067c</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ac00a0c6136ff260114c132650255c381</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
-      <anchor>ad975d56fc6b53f21101058a1a76ccea8</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a684387fb7b638c6257fd054d77c942c7</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
       <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
-      <anchor>a64e32bf98ba0f6f403987fa0934ff93a</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a09608aea8a973c4a8e42464fa2b44897</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classimod_1_1_c_model_update_bridge.html</anchorfile>
-      <anchor>a45ca6f7a8f11597205abe6c2325756a8</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a73bf81271c688a1571d41c515ae7602f</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28838,8 +28836,8 @@
       <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_multi_factory_attribute.html</anchorfile>
-      <anchor>a2511401efc43c9735d93cbfb885a8ba2</anchor>
-      <arglist>() const</arglist>
+      <anchor>acedf898cab74d81e4c732326e05ecdea</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -28947,36 +28945,36 @@
       <type>virtual bool</type>
       <name>IsModelAttached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>abf74f4d534de978da3a4ed6f76abb5df</anchor>
-      <arglist>(const IModel *modelPtr) const</arglist>
+      <anchor>a291de8f7952ef9dd6242e288a84fd255</anchor>
+      <arglist>(const IModel *modelPtr) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a4244448c597d00be69db6acf256d09fc</anchor>
-      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a7706bbd5f5b55ca39ac7be072aa917b8</anchor>
+      <arglist>(IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aa95c00bb92acfa85585ecc6fccabd410</anchor>
-      <arglist>(IModel *modelPtr)</arglist>
+      <anchor>a89c82fb46502bcfb775d0256376a14db</anchor>
+      <arglist>(IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>aa6b5ca21c74dca15d5f16c524456d45b</anchor>
-      <arglist>(IModel *modelPtr)</arglist>
+      <anchor>a0415ae945e11cb6e263a5f938066c85f</anchor>
+      <arglist>(IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classimod_1_1_c_multi_model_observer_base.html</anchorfile>
-      <anchor>a88786b6e7b8392095b7946e214d9fd9b</anchor>
-      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a75a5ed425988cfe8023e7f78352aeb87</anchor>
+      <arglist>(IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -30144,8 +30142,8 @@
       <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_multi_reference_attribute.html</anchorfile>
-      <anchor>ae5dc7dbd1b2f27fabc8befe70dbd67d5</anchor>
-      <arglist>() const</arglist>
+      <anchor>a55682d778134b43bf8e6058a9418320d</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -31875,29 +31873,29 @@
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>a01171a50ac498fce450b44951066e83c</anchor>
-      <arglist>(int metaGroupId) const</arglist>
+      <anchor>a19badcbc41ffe53109f97fdae0f77d1d</anchor>
+      <arglist>(int metaGroupId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo *</type>
       <name>GetEmbeddedComponentInfo</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>aa9705c5cc13ff4cdeb12fbeeee2393cb</anchor>
-      <arglist>(const QByteArray &amp;embeddedId) const</arglist>
+      <anchor>a3c610c064f7f952bfd88d85401783915</anchor>
+      <arglist>(const QByteArray &amp;embeddedId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetDescription</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>a0ed5b8868d5a56252b02209aebb54a06</anchor>
-      <arglist>() const</arglist>
+      <anchor>ade80dd3f458e8e5895242d0e1421ce35</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetKeywords</name>
       <anchorfile>classicomp_1_1_c_package_static_info.html</anchorfile>
-      <anchor>aea53cb2b450fc244d79854a73c7486d7</anchor>
-      <arglist>() const</arglist>
+      <anchor>a465c325f975266e94a911af2894b457c</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -33637,22 +33635,22 @@
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>aab373d069a4e8854c26831897ea6adae</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>a741f6bd9c21f7fe02df8e6072026b1e3</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a000b26aecfbe83b3fd541dd0c2d68bf1</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>add37347bbace7369870e8914c52c80cb</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_polygon.html</anchorfile>
-      <anchor>a182f9f6bb6d61a9ce367ae69e34b6983</anchor>
-      <arglist>() const</arglist>
+      <anchor>a047cbe1e5a1d9d1c5a5e5d9b676b3bd7</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -33677,8 +33675,8 @@
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classi2d_1_1_c_polygon_comp.html</anchorfile>
-      <anchor>af3b1a6d2898e31f0694cb78360fab020</anchor>
-      <arglist>()</arglist>
+      <anchor>af259c923b553905747ece16832c89514</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -36410,85 +36408,85 @@
       <type>virtual CVector2d</type>
       <name>GetCenter</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a240bd9b9de9fcf44b1d889ee2ea3c224</anchor>
-      <arglist>() const</arglist>
+      <anchor>a94a6e807c151d5a783a887dcf38c4c63</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>MoveCenterTo</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>adc3c5a147d9454bff9c98d17322ac6c6</anchor>
-      <arglist>(const CVector2d &amp;position)</arglist>
+      <anchor>adcf6b8459189496943cf6f3f284e5001</anchor>
+      <arglist>(const CVector2d &amp;position) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual CRectangle</type>
       <name>GetBoundingBox</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a1c16025314a332bad910a18033a07290</anchor>
-      <arglist>() const</arglist>
+      <anchor>a765a6380cd2924084e4e65e4fc857ca9</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>ac7255f6da8137970250ff79063c7809e</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>ab5f435cf951d28b966380537f475b6ad</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>InvTransform</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a93a38c4b97932ac545551e25198e4b53</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a9e46b40b7b654fc311271b894deb9033</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetTransformed</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a649057e8230a1c4efb22f1a7aa4c33fb</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>a8f0dc66515979a672fc66d9651145933</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvTransformed</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>abca5a319fa87d51e3480854c3deda1ed</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const</arglist>
+      <anchor>af334f51e4a94e47d5971b08f87538439</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, IObject2d &amp;result, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a2ab138c4afbedd9822c4091b180653b2</anchor>
-      <arglist>() const</arglist>
+      <anchor>a2a6e9802beb0f409977f6ca48bba3260</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>aaa9e66e407475792d749c755f0523a12</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a1b66971f53d18c8ebebe5dd391e58ce2</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>af72388f60e3fe1037694b4c8064a4077</anchor>
-      <arglist>() const</arglist>
+      <anchor>a5f9dead9b3ecd2c211882bd3fb4adef3</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a5c958721afe169631e3075ff89c9e777</anchor>
-      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
+      <anchor>abdde9c8b3a0ceaeca440b3f174cac334</anchor>
+      <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classi2d_1_1_c_rectangle.html</anchorfile>
-      <anchor>a1f3a07715c2e97104fad45888d589be7</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
+      <anchor>a9f4e32edcedab769c08eef0b7157b8ba</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -37400,8 +37398,8 @@
       <type>QByteArray</type>
       <name>GetFactoryId</name>
       <anchorfile>classicomp_1_1_c_reference_attribute.html</anchorfile>
-      <anchor>abc1602515713f7a59ff6ad482d9719f3</anchor>
-      <arglist>() const</arglist>
+      <anchor>ad2a138a96e65916e0f852d642791397d</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static QByteArray</type>
@@ -37630,92 +37628,92 @@
       <type>virtual Ids</type>
       <name>GetElementIds</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a53b696d4e9b4d6b6f01495d2ea1bc7ff</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa3193086a9cab466460416a86ba1bbd3</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ElementInfo *</type>
       <name>GetElementInfo</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a89d171c5f7a0a630d7820d1a96f87316</anchor>
-      <arglist>(const QByteArray &amp;elementId) const</arglist>
+      <anchor>a8a610e37dbeb8c6900d6d50c4bf9d8b4</anchor>
+      <arglist>(const QByteArray &amp;elementId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ElementInfo *</type>
       <name>InsertElementInfo</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a8b4f27336913e9fa867eaacbaba629a2</anchor>
-      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true)</arglist>
+      <anchor>a4cf89b9a9723a2445452536717d97033</anchor>
+      <arglist>(const QByteArray &amp;elementId, const icomp::CComponentAddress &amp;address, bool ensureElementCreated=true) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveElementInfo</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>aa6dbf2eb58e86d103f92e772942f7f79</anchor>
-      <arglist>(const QByteArray &amp;elementId)</arglist>
+      <anchor>a4a2560b0bdc71784e6ca941f50f74e8a</anchor>
+      <arglist>(const QByteArray &amp;elementId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameElement</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>aa232db834c5c8e24530c4b43ad011d73</anchor>
-      <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId)</arglist>
+      <anchor>a25a442b8bb0a64da3b6579b95f4781f7</anchor>
+      <arglist>(const QByteArray &amp;oldElementId, const QByteArray &amp;newElementId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Ids</type>
       <name>GetEmbeddedRegistryIds</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ab39215648e3553db91a33c02fd165d01</anchor>
-      <arglist>() const</arglist>
+      <anchor>af20bcec20dff34e2905665f261d3745b</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IRegistry *</type>
       <name>GetEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a3a06c2ca3437363f1db9db6c0dbe1a9a</anchor>
-      <arglist>(const QByteArray &amp;registryId) const</arglist>
+      <anchor>a4cbb280354455780349d96ef87d8ea02</anchor>
+      <arglist>(const QByteArray &amp;registryId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IRegistry *</type>
       <name>InsertEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ab6d97013c85838ea50f8a2eff5a6c8b4</anchor>
-      <arglist>(const QByteArray &amp;registryId)</arglist>
+      <anchor>aab130ed4cb97d235aabc7893802a5588</anchor>
+      <arglist>(const QByteArray &amp;registryId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>afc5a2c04f329e38ae6f7eb227616495f</anchor>
-      <arglist>(const QByteArray &amp;registryId)</arglist>
+      <anchor>a555f2189cc4531e5d722e827061fed1c</anchor>
+      <arglist>(const QByteArray &amp;registryId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RenameEmbeddedRegistry</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a04fd65717000df9bd9b352ca9fd81e17</anchor>
-      <arglist>(const QByteArray &amp;oldRegistryId, const QByteArray &amp;newRegistryId)</arglist>
+      <anchor>a452cb253592b04b3c911c1b7c7104c7a</anchor>
+      <arglist>(const QByteArray &amp;oldRegistryId, const QByteArray &amp;newRegistryId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ExportedInterfacesMap &amp;</type>
       <name>GetExportedInterfacesMap</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ac5819f136ca855e1b3acaf8dd7293ad4</anchor>
-      <arglist>() const</arglist>
+      <anchor>a7fb38a5c49529300d781dbd287083ae8</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ExportedElementsMap &amp;</type>
       <name>GetExportedElementsMap</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ab87bd5e544cfced763af7ed440eeee71</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0f5844501a5e75838bdd82c7354f7c17</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetElementInterfaceExported</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a999f44d683d151934a3bfbeb75a2bf23</anchor>
-      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true)</arglist>
+      <anchor>a85ab745f0b8f87be02298f679f3a6765</anchor>
+      <arglist>(const QByteArray &amp;elementId, const QByteArray &amp;interfaceName, bool state=true) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
@@ -37728,43 +37726,43 @@
       <type>virtual const QString &amp;</type>
       <name>GetDescription</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a6d6b0f2a83c40603f85ba02af7888d35</anchor>
-      <arglist>() const</arglist>
+      <anchor>af42b01668b61bc20dd988190169f6dca</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetDescription</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a2cad4fccd2f2909787df582521ebe26d</anchor>
-      <arglist>(const QString &amp;description)</arglist>
+      <anchor>a8ed8907b1b05e703e5a38f0806c654f8</anchor>
+      <arglist>(const QString &amp;description) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const QString &amp;</type>
       <name>GetKeywords</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a1f3ad8dd33d8d5b23a7af6bc83f2f6ba</anchor>
-      <arglist>() const</arglist>
+      <anchor>acfbaec84748807c18f126db177821f4d</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetKeywords</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a68ec6a1fd0e6c1756917b49faf2957cc</anchor>
-      <arglist>(const QString &amp;keywords)</arglist>
+      <anchor>a9c0d6484d0ef837bcca57685a9bc2451</anchor>
+      <arglist>(const QString &amp;keywords) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>a49626ece290ed49fa9777010ae844e68</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>ab0732338f9c9b1618f9c0db9799e21ef</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual quint32</type>
       <name>GetMinimalVersion</name>
       <anchorfile>classicomp_1_1_c_registry.html</anchorfile>
-      <anchor>ab7d4b4dbea861eb78a701e4bc29afb7a</anchor>
-      <arglist>(int versionId) const</arglist>
+      <anchor>acd01acf525791e4a43a5c026266025d5</anchor>
+      <arglist>(int versionId) const override</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>imod::TModelWrap&lt; istd::TChangeDelegator&lt; CRegistryElement &gt; &gt;</type>
@@ -38182,64 +38180,64 @@
       <type>virtual quint32</type>
       <name>GetElementFlags</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a00c49e252124e6ddbf122842a0df72c7</anchor>
-      <arglist>() const</arglist>
+      <anchor>a3abdc6187e549b5fc35d9c1dd688ae1a</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetElementFlags</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a47890eb5479818fcf6fd8bf89c7132ae</anchor>
-      <arglist>(quint32 flags)</arglist>
+      <anchor>a5009e6d98c0f9e6cf6de4ab6db368237</anchor>
+      <arglist>(quint32 flags) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual AttributeInfo *</type>
       <name>InsertAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a83f563734ecf207b21ab7a188d84ee4e</anchor>
-      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;attributeType)</arglist>
+      <anchor>afd010025569b9f0efdd807ce8200af05</anchor>
+      <arglist>(const QByteArray &amp;attributeId, const QByteArray &amp;attributeType) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IObject *</type>
       <name>CreateAttribute</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a0b8339665959c04bd7cab25c3cb2ddf2</anchor>
-      <arglist>(const QByteArray &amp;attributeType) const</arglist>
+      <anchor>a221349a93f473656d6af04d510a3abd5</anchor>
+      <arglist>(const QByteArray &amp;attributeType) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const AttributeInfo *</type>
       <name>GetAttributeInfo</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a56ad4df4dbd80b4aa5bba0cd9b66cfae</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>aaad9b4c66379efb4be4617ecbe0f6782</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveAttribute</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>ac978fab2635340db1bb7fc204f22f602</anchor>
-      <arglist>(const QByteArray &amp;attributeId)</arglist>
+      <anchor>a7ec71ed7442fc009f1b8858c9311a9d4</anchor>
+      <arglist>(const QByteArray &amp;attributeId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual AttributeIds</type>
       <name>GetAttributeIds</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>abbf7851e8e8b216e718fa05d8950ea5a</anchor>
-      <arglist>() const</arglist>
+      <anchor>ab0d1c657fbb620f07079a3e44d4e9619</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual iser::IObject *</type>
       <name>GetAttribute</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a4e81d843f4a2e9dc70238ae2ab652d74</anchor>
-      <arglist>(const QByteArray &amp;attributeId) const</arglist>
+      <anchor>acdc7ef8e4175c8311d17fedc610a4536</anchor>
+      <arglist>(const QByteArray &amp;attributeId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicomp_1_1_c_registry_element.html</anchorfile>
-      <anchor>a3c2c3f40b62e7a55fb467c6a00f9c488</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a10a858b4101100f6b473fde8930b8428</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>iser::IObject *</type>
@@ -38551,15 +38549,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_cmyk_transformation.html</anchorfile>
-      <anchor>a4ec106b98422cf68ebe96b4be03c25a4</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
+      <anchor>a8f28a81bdd30f061e15bfeecda54168d</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_cmyk_transformation.html</anchorfile>
-      <anchor>ac7e7a4899f1244b15b217bde55af045b</anchor>
-      <arglist>(const ArgumentType &amp;argument) const</arglist>
+      <anchor>a41e5af6c5d4c27dd4699788dfdc627bb</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38570,15 +38568,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_hsv_tranformation.html</anchorfile>
-      <anchor>a2d0df7661517d30656751be333169391</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
+      <anchor>ae4182b8a9c5bdd7e5bb0b73709559bd6</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_hsv_tranformation.html</anchorfile>
-      <anchor>ab0eef3df6823277d00c8e827c98eb355</anchor>
-      <arglist>(const ArgumentType &amp;argument) const</arglist>
+      <anchor>a67bb94a4b7f6d2e1be5a607d98a1689f</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -38589,15 +38587,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_xyz_transformation.html</anchorfile>
-      <anchor>af4a0865a037b4ada926303ce2b4fdfe5</anchor>
-      <arglist>(const icmm::CVarColor &amp;argument, icmm::CVarColor &amp;result) const</arglist>
+      <anchor>a647075a705c99ba4cbcee194dae3cbb5</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument, icmm::CVarColor &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icmm::CVarColor</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_rgb_to_xyz_transformation.html</anchorfile>
-      <anchor>a4fffcf0dd81d131ad3f03359ea33767d</anchor>
-      <arglist>(const icmm::CVarColor &amp;argument) const</arglist>
+      <anchor>a8778d9216bc3bf0c5ef8b93bfa7222b2</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -41075,29 +41073,29 @@
       <type>virtual const IRegistryElement &amp;</type>
       <name>GetRegistryElement</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a1d3d5cb6d0ff702a20bc6876fb934122</anchor>
-      <arglist>() const</arglist>
+      <anchor>a42a661fbaed84ff0752d6f5f97cf2be6</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentStaticInfo &amp;</type>
       <name>GetStaticInfo</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>aa9bd872bbad4478cf8653127f6d9691f</anchor>
-      <arglist>() const</arglist>
+      <anchor>a244f26b473c954d1ea528d69ffea9c11</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetParentContext</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>a55299dfbb15878968f058636ae3a0503</anchor>
-      <arglist>() const</arglist>
+      <anchor>a8186212e59389fc3b7d5107138f92a52</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
       <name>GetAttribute</name>
       <anchorfile>classicomp_1_1_c_sim_component_context_base.html</anchorfile>
-      <anchor>aa65f326ac1203560fe607443e38545f9</anchor>
-      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const</arglist>
+      <anchor>afe1973aa5fbd8ffeb0edc0a8dfc8d3fc</anchor>
+      <arglist>(const QByteArray &amp;attributeId, int *definitionLevelPtr=NULL) const override</arglist>
     </member>
     <member kind="typedef" protection="protected">
       <type>QMap&lt; QByteArray, IComponent * &gt;</type>
@@ -41720,8 +41718,8 @@
       <type>virtual void</type>
       <name>DecorateMessage</name>
       <anchorfile>classifile_1_1_c_simple_xml_file_read_archive.html</anchorfile>
-      <anchor>a4497c048284613f95a57a9959eb03558</anchor>
-      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const</arglist>
+      <anchor>a6021c81aa437e26a189a61c91087e8b2</anchor>
+      <arglist>(istd::IInformationProvider::InformationCategory category, int id, int flags, QString &amp;message, QString &amp;messageSource) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -42454,36 +42452,36 @@
       <type>virtual bool</type>
       <name>IsModelAttached</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>ad15b057524f017124cc9307193699096</anchor>
-      <arglist>(const imod::IModel *modelPtr=NULL) const</arglist>
+      <anchor>a934e68def9d26a0c3ac6bde65f7ec0d4</anchor>
+      <arglist>(const imod::IModel *modelPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>a9da0afcdb4714d69158e581ed30a63f5</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a2865fd838dd03d47fb40b442ec79472c</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>a0d277277ad535b1a294c47334c2c9aa0</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ac0d866ed24cd3f3cbc3d4acc6829c8f2</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeforeUpdate</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>ac9156787ef3aabd3fd672546a9a76c3b</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>a570e06cf6216ae1e74a9aabb971b1aff</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AfterUpdate</name>
       <anchorfile>classimod_1_1_c_single_model_observer_base.html</anchorfile>
-      <anchor>a223365676054a3038c0e49fb7dab3366</anchor>
-      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a19e9291ff1a1ea250b33a55c45afba44</anchor>
+      <arglist>(imod::IModel *modelPtr, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>
@@ -44378,43 +44376,43 @@
       <type>virtual QByteArray</type>
       <name>BeginSession</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>ac1dfe63de83aa7babf5d11e6c11c2bdf</anchor>
-      <arglist>(const QString &amp;subPath=QString(), const QByteArray &amp;proposedSessionId=QByteArray())</arglist>
+      <anchor>a2feb427e4b3e3bdc99ff25a2e5648fc9</anchor>
+      <arglist>(const QString &amp;subPath=QString(), const QByteArray &amp;proposedSessionId=QByteArray()) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>AddFileItem</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>a3dcd75212475c14babc1bb9c9eb6cd86</anchor>
-      <arglist>(const QByteArray &amp;sessionId, const QString &amp;filePath)</arglist>
+      <anchor>adfb8cd8af831af306f1c19cc78d799bc</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QString &amp;filePath) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetPath</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>aca3405585a1dbdb2847c9bff9d113890</anchor>
-      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id) const</arglist>
+      <anchor>a3e172502e060f613155f78a041966882</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>RemoveFileItem</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>a20eb971b72abe9e7c369c46c207525ea</anchor>
-      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id)</arglist>
+      <anchor>a1b71609b3b94209b59917d817798728b</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QByteArray &amp;id) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>FinishSession</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>a79866ea33bf2d2ed2962c1ec1b5bf952</anchor>
-      <arglist>(const QByteArray &amp;sessionId)</arglist>
+      <anchor>a25925f60c330ac0228a9d7ef12bb2cc3</anchor>
+      <arglist>(const QByteArray &amp;sessionId) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetAllSessions</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>a1f735c68455bfedbbe3b6c28f1f9c858</anchor>
-      <arglist>()</arglist>
+      <anchor>a28efcdd73c597609a04e2a6bd0078d8b</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44685,22 +44683,22 @@
       <type>virtual void</type>
       <name>WriteText</name>
       <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>abdefc2011dc2a240b237db11dda2f395</anchor>
-      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)</arglist>
+      <anchor>a90fccf2916b68314b49240938e2922a5</anchor>
+      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>a870ad0291d422c489b5055829b2ce677</anchor>
-      <arglist>()</arglist>
+      <anchor>a88713da775708694fbc282a7b743dbd6</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classifile_1_1_c_text_file_log_comp.html</anchorfile>
-      <anchor>ac26ec2b439ee3b2eafb058aba1ea9462</anchor>
-      <arglist>()</arglist>
+      <anchor>a573f1058f8ad81fb5f420a260123d163</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -44726,57 +44724,57 @@
       <type>virtual bool</type>
       <name>IsOperationSupported</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>af201b21896583bcdeef3484376401239</anchor>
-      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const</arglist>
+      <anchor>ad1e90c48be06101062948ea52ce1d679</anchor>
+      <arglist>(const istd::IChangeable *dataObjectPtr, const QString *filePathPtr=NULL, int flags=-1, bool beQuiet=true) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a5b7ee09f1a6469693f60677d2f12e9f4</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>afe0ae2edd6f059ee0836bcd470cd97e9</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a2232ef59a7de863e4394904265cbe908</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>a42b597ac8bb542846c1b6d137d451bfe</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetFileExtensions</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a1c48d4fcc37725192d1de7e6dcea1efd</anchor>
-      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const</arglist>
+      <anchor>ac7fe4b67e77d31ccb8763001330b9627</anchor>
+      <arglist>(QStringList &amp;result, const istd::IChangeable *dataObjectPtr=NULL, int flags=-1, bool doAppend=false) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetTypeDescription</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a89a38169b0b6be09ba2a75324df20dd1</anchor>
-      <arglist>(const QString *extensionPtr=NULL) const</arglist>
+      <anchor>a5c8587d1dfdc19ecef06b390aa1d44bc</anchor>
+      <arglist>(const QString *extensionPtr=NULL) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>WriteText</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a41fb39c8d07866ba1efb219f1ca4dfae</anchor>
-      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category)</arglist>
+      <anchor>ae5d93dc06ae46cb34eb0d41315aed123</anchor>
+      <arglist>(const QString &amp;text, istd::IInformationProvider::InformationCategory category) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>af0a0e1fce9f0fbcd2e5a2d7370d1b60a</anchor>
-      <arglist>()</arglist>
+      <anchor>a123b6dc299deb74b20ae49d1f8cc46d8</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classifile_1_1_c_text_file_log_streamer_comp.html</anchorfile>
-      <anchor>a6eee2e1f601f4e78fb7f4152897f9cfb</anchor>
-      <arglist>()</arglist>
+      <anchor>ae203ca1aaf7bf697bc89be60929b8b47</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45184,8 +45182,8 @@
       <type>virtual const QString &amp;</type>
       <name>GetPath</name>
       <anchorfile>classifile_1_1_c_time_stamp_file_name_param_comp.html</anchorfile>
-      <anchor>a972f816916d0b34a2377a3aedfeaa476</anchor>
-      <arglist>() const</arglist>
+      <anchor>a4e6602538848e59b8c910884b623669f</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -45899,8 +45897,8 @@
       <type>virtual bool</type>
       <name>Transform</name>
       <anchorfile>classi2d_1_1_c_tube_polyline.html</anchorfile>
-      <anchor>a2fb6df288d88a17d92bf4af5173cf439</anchor>
-      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL)</arglist>
+      <anchor>a8248f9767f9fc3cfbc344c892d77dd2f</anchor>
+      <arglist>(const ITransformation2d &amp;transformation, ITransformation2d::ExactnessMode mode=ITransformation2d::EM_NONE, double *errorFactorPtr=NULL) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -46453,12 +46451,12 @@
       <anchor>a8c43fe867b41b2bf84ae5dedec87dba8</anchor>
       <arglist>(double value)</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicmm_1_1_c_var_color.html</anchorfile>
-      <anchor>a1eb0ad2377f2a54579d2d22684d15c0e</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>aebaa820d2ffb4cba9eca8cd0024da30f</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -49985,12 +49983,12 @@
       <anchor>a347f7f02406bb196711f7e5524389790</anchor>
       <arglist>(const QString &amp;path)</arglist>
     </member>
-    <member kind="function">
-      <type>bool</type>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicomp_1_1_c_xpc_model.html</anchorfile>
-      <anchor>ae4585058f9f5ecd0a77aa2df94b42fc4</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a7dff0c82f574149dd0c5c9a80e6cc247</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -50001,15 +49999,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</anchorfile>
-      <anchor>ae0c610594d79512ca09f3343c6666b84</anchor>
-      <arglist>(const icmm::CVarColor &amp;argument, icmm::CVarColor &amp;result) const</arglist>
+      <anchor>a1f417be97441c7119bd32274873d3463</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument, icmm::CVarColor &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icmm::CVarColor</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_c_xyz_to_cie_lab_transformation.html</anchorfile>
-      <anchor>a8c656b1e8156f96fa8af8a990e0169a3</anchor>
-      <arglist>(const icmm::CVarColor &amp;argument) const</arglist>
+      <anchor>a71c821afea10eb712de6f1189c96b836</anchor>
+      <arglist>(const icmm::CVarColor &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -60406,8 +60404,8 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classimod_1_1_c_multi_model_dispatcher_base_1_1_observer_proxy.html</anchorfile>
-      <anchor>ab8f2dbce2aaf370d9d5a801916e8c8e7</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a738822ed3347bf211a9ad47d4d47ac9c</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -60699,8 +60697,8 @@
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_read_archive_ex.html</anchorfile>
-      <anchor>aaa2733426008a247584096d51e53ed8f</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const</arglist>
+      <anchor>acac3ff30761791bfe1cfb2169e040f9b</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -62221,50 +62219,50 @@
       <type>virtual const QByteArray &amp;</type>
       <name>GetAttributeId</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a35621216f45d76baad486c0ef157ab67</anchor>
-      <arglist>() const</arglist>
+      <anchor>a064b5bce2d94bdb80c15e7e58e261672</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>AddRelatedMetaId</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a2e953655f0e5cfaa0c09a0a68599ddb9</anchor>
-      <arglist>(int metaGroupId, const QByteArray &amp;id, int flags)</arglist>
+      <anchor>a652d9adff1b4c263fc28b213dd55c800</anchor>
+      <arglist>(int metaGroupId, const QByteArray &amp;id, int flags) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IElementStaticInfo::Ids</type>
       <name>GetRelatedMetaIds</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>aae3be4ad51dbfc8e859771fe22b0e179</anchor>
-      <arglist>(int metaGroupId, int flags, int flagsMask) const</arglist>
+      <anchor>ab020d9a49155a1995ba7fff830e4aa1c</anchor>
+      <arglist>(int metaGroupId, int flags, int flagsMask) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetAttributeDescription</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a879ebc8221623534ad7d72f537d0054c</anchor>
-      <arglist>() const</arglist>
+      <anchor>aff3fa9473ae37cbe774d475181e1472c</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const iser::IObject *</type>
       <name>GetAttributeDefaultValue</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>a1e7c9e9bde0cc70bf31cedc102b88918</anchor>
-      <arglist>() const</arglist>
+      <anchor>ab0104b2dc794335e1c610de3ed4f60ca</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QByteArray</type>
       <name>GetAttributeTypeId</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>ae75aebf8919fe9e8fcdc864b788e3dba</anchor>
-      <arglist>() const</arglist>
+      <anchor>a0c9fc4b1ff9f7709e627504bc84bdf44</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetAttributeFlags</name>
       <anchorfile>classicomp_1_1_t_attribute_static_info.html</anchorfile>
-      <anchor>aa239c6e08fb85ca64194f7b84e2267bc</anchor>
-      <arglist>() const</arglist>
+      <anchor>a5a96b4b807fa15fee9fa912acdc9e43c</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="struct">
@@ -62873,15 +62871,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_t_color_gradient.html</anchorfile>
-      <anchor>a468fb6feae118c8c9cd75438790dff94</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
+      <anchor>a016c3feb7c7eecbd9c62cc3077786ab9</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_t_color_gradient.html</anchorfile>
-      <anchor>a6c88921f73c33477318783ebcf4315ad</anchor>
-      <arglist>(const ArgumentType &amp;argument) const</arglist>
+      <anchor>a9c498134d4c74614e0b03ec3e04047f8</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -62980,15 +62978,15 @@
       <type>virtual IComponent *</type>
       <name>CreateComponent</name>
       <anchorfile>classicomp_1_1_t_component_static_info.html</anchorfile>
-      <anchor>a0d84252bd9c68bcb2311de45bf516430</anchor>
-      <arglist>() const</arglist>
+      <anchor>af8b091e2cbeeaca4ee6d374674d063df</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetComponentType</name>
       <anchorfile>classicomp_1_1_t_component_static_info.html</anchorfile>
-      <anchor>a9a307896a51e76f66e23833a69a17395</anchor>
-      <arglist>() const</arglist>
+      <anchor>a1a85b824890ac26c18440c9eb9dff958</anchor>
+      <arglist>() const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63020,8 +63018,8 @@
       <type>virtual void</type>
       <name>SetComponentContext</name>
       <anchorfile>classicomp_1_1_t_component_wrap.html</anchorfile>
-      <anchor>afa82ca73ed858f96d9bc882976254c58</anchor>
-      <arglist>(const IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)</arglist>
+      <anchor>a9b6ff9f70e25e78c2fb61e9ec082e761</anchor>
+      <arglist>(const IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63052,8 +63050,8 @@
       <type>virtual void</type>
       <name>SetComponentContext</name>
       <anchorfile>classicomp_1_1_t_component_wrap.html</anchorfile>
-      <anchor>afa82ca73ed858f96d9bc882976254c58</anchor>
-      <arglist>(const IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner)</arglist>
+      <anchor>a9b6ff9f70e25e78c2fb61e9ec082e761</anchor>
+      <arglist>(const IComponentContext *contextPtr, const ICompositeComponent *parentPtr, bool isParentOwner) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63248,8 +63246,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicmm_1_1_t_composed_color.html</anchorfile>
-      <anchor>a61e1e8aff788f717cb73c21f1354aa6e</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>aa021d992d6260836d236f340f33fbe31</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63443,8 +63441,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicmm_1_1_t_composed_color.html</anchorfile>
-      <anchor>a61e1e8aff788f717cb73c21f1354aa6e</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>aa021d992d6260836d236f340f33fbe31</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63638,8 +63636,8 @@
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicmm_1_1_t_composed_color.html</anchorfile>
-      <anchor>a61e1e8aff788f717cb73c21f1354aa6e</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>aa021d992d6260836d236f340f33fbe31</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -63658,15 +63656,15 @@
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_t_composed_color_gradient.html</anchorfile>
-      <anchor>ad5cc5d895c2591e47d3bfd6619ca9c30</anchor>
-      <arglist>(const Argument &amp;argument, Result &amp;result) const</arglist>
+      <anchor>a09a851deaabcd3f3bb5a1bd8356c8cca</anchor>
+      <arglist>(const Argument &amp;argument, Result &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual Result</type>
       <name>GetValueAt</name>
       <anchorfile>classicmm_1_1_t_composed_color_gradient.html</anchorfile>
-      <anchor>ae01aa422817ba90bd67e4e8a27ca0405</anchor>
-      <arglist>(const Argument &amp;argument) const</arglist>
+      <anchor>a2f1be083cbded69d623cd340c3bb857e</anchor>
+      <arglist>(const Argument &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -68539,15 +68537,15 @@
       <type>virtual Interface *</type>
       <name>CreateInstance</name>
       <anchorfile>classicomp_1_1_t_factory_member.html</anchorfile>
-      <anchor>a047024c027180f44c0680faa7efd075f</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
+      <anchor>a36dc330a809cc927923bed2ce850ba85</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual KeyList</type>
       <name>GetFactoryKeys</name>
       <anchorfile>classicomp_1_1_t_factory_member.html</anchorfile>
-      <anchor>aa2722ac8dfd3ffa052505ec65199f891</anchor>
-      <arglist>() const</arglist>
+      <anchor>ae0b2c7b4c74777e2c3c36288fc1717a2</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" static="yes">
       <type>static Interface *</type>
@@ -69297,15 +69295,15 @@
       <type>virtual int</type>
       <name>LoadFromFile</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a51b2170c78ba46b764c48029542cc09b</anchor>
-      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>a18f627dc4c1d69f79fe11553f9a9107b</anchor>
+      <arglist>(istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>SaveToFile</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp.html</anchorfile>
-      <anchor>a75994e0a68737e4e4e5f56225705d22b</anchor>
-      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const</arglist>
+      <anchor>a9d69ab4ee6a51cd0d0fbbea27b93e51e</anchor>
+      <arglist>(const istd::IChangeable &amp;data, const QString &amp;filePath=QString(), ibase::IProgressManager *progressManagerPtr=NULL) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -74616,8 +74614,8 @@
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classicomp_1_1_t_model_comp_wrap.html</anchorfile>
-      <anchor>a9529dd5df09334c54e05a22908805dc3</anchor>
-      <arglist>()</arglist>
+      <anchor>a3f88ff6a1dc94ceda9cb2d069ab28b44</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74799,57 +74797,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74889,57 +74887,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -74979,57 +74977,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75069,57 +75067,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75159,57 +75157,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75249,57 +75247,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75339,57 +75337,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75429,57 +75427,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75519,57 +75517,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75609,57 +75607,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75699,57 +75697,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75789,57 +75787,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75879,57 +75877,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -75969,57 +75967,57 @@
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a3c2b55932211a8dba594de80c9159f99</anchor>
-      <arglist>() const</arglist>
+      <anchor>aebd1cd3af14103e378c346d6babd5d72</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a2e7af99ba49dcffa07bdae384356aab6</anchor>
-      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const</arglist>
+      <anchor>a2a79a8903305cd972c2b63e307f698ca</anchor>
+      <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a5a1476e2fcbdae771a04baaade7b6c81</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>abb0c5fab3db888abf67c1ecf0895a0a8</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a474d21e7eb3dfc0ca5992650d80cf210</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aa1202b26b88c9c3e02a5e628580d30e4</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>BeginChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a165eadb7f82445dacbe0fb090345b9f3</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>afecc1c9df8dde5ada327aca9f1a86342</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>EndChangeGroup</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>ace769329338b660f8704efa1ab3115a1</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a10053c6d53b3d745a255e6ee6fd8846e</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnBeginGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>aceb231d5e9520566e35f9ba5c1d1bc76</anchor>
-      <arglist>()</arglist>
+      <anchor>adff2ea9dcf69f87c4679f9c5334b3988</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndGlobalChanges</name>
       <anchorfile>classimod_1_1_t_model_wrap.html</anchorfile>
-      <anchor>a64f53c4d57bdd469a002399b69506921</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a314238b17997ddac7f9d04f07ca599c2</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -76778,8 +76776,8 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_multi_model_observer_base.html</anchorfile>
-      <anchor>a00c07ed7933616a56d1eef0a2c2962fc</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a9ad8b9a34d4f0e427df99d71dcbf9271</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -83104,22 +83102,22 @@
       <type>virtual istd::IFactoryInfo::KeyList</type>
       <name>GetFactoryKeys</name>
       <anchorfile>classicomp_1_1_t_sim_components_factory.html</anchorfile>
-      <anchor>a606a7c383fadea577a8ab38b11aa7689</anchor>
-      <arglist>() const</arglist>
+      <anchor>a9290e4e439978fb00c4afa32b163bb6a</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual icomp::IComponent *</type>
       <name>CreateInstance</name>
       <anchorfile>classicomp_1_1_t_sim_components_factory.html</anchorfile>
-      <anchor>aae518363f66a71ef37990f2d2d018773</anchor>
-      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const</arglist>
+      <anchor>a2b223524c3cc1e4e9cc69ca0a27d5484</anchor>
+      <arglist>(const QByteArray &amp;keyId=&quot;&quot;) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>CreateSubcomponent</name>
       <anchorfile>classicomp_1_1_t_sim_components_factory.html</anchorfile>
-      <anchor>a92174f441f6794debe12884786b8245c</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>a8bb2a576e1ee9dffde2021520f68b75c</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -83161,43 +83159,43 @@
       <type>virtual const QByteArray &amp;</type>
       <name>GetContextId</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a0dbc5a837d6132ca857ba2477f1dd069</anchor>
-      <arglist>() const</arglist>
+      <anchor>a20290f1cfc2a5887fb0e9a5e0b07d071</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>GetSubcomponent</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a071a1c38ca7db8555c6de7f387977bd6</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>ac84f66a0f5b462e473cbf3a67117d5b2</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IComponentContext *</type>
       <name>GetSubcomponentContext</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a9f22ad91b4489231024a33239a022c45</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>a0393ae4c1caa40b7093e3b51f2435930</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual IComponent *</type>
       <name>CreateSubcomponent</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a7ce1e1d148c255018c7236871fdbfb1a</anchor>
-      <arglist>(const QByteArray &amp;componentId) const</arglist>
+      <anchor>ae6ead72183f635bbfc52e45cc88875db</anchor>
+      <arglist>(const QByteArray &amp;componentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSubcomponentDeleted</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a6f3df92db1b808ecaef7fca81fa6559e</anchor>
-      <arglist>(const IComponent *subcomponentPtr)</arglist>
+      <anchor>acb78635a2c88d1275fb4a3b84b0a868b</anchor>
+      <arglist>(const IComponent *subcomponentPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICompositeComponent *</type>
       <name>GetParentComponent</name>
       <anchorfile>classicomp_1_1_t_sim_component_wrap.html</anchorfile>
-      <anchor>a65146aaecb654786a95d59f8bb8ab637</anchor>
-      <arglist>(bool ownerOnly=false) const</arglist>
+      <anchor>acf8bdeef0f639fd9bd0631418b9c133e</anchor>
+      <arglist>(bool ownerOnly=false) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -83293,15 +83291,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ModelInterface *</type>
@@ -83361,15 +83359,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual i2d::ICalibration2d *</type>
@@ -83429,15 +83427,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ibase::ICommandsProvider *</type>
@@ -83497,15 +83495,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual ibase::IRuntimeStatusProvider *</type>
@@ -83565,15 +83563,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual idoc::IDocumentManager *</type>
@@ -83633,15 +83631,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual idoc::IDocumentMetaInfo *</type>
@@ -83701,15 +83699,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual idoc::IUndoManager *</type>
@@ -83769,15 +83767,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual IDocumentManager *</type>
@@ -83837,15 +83835,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iimg::IMultiBitmapProvider *</type>
@@ -83905,15 +83903,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual imod::IModel *</type>
@@ -83973,15 +83971,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IEnableableParam *</type>
@@ -84041,15 +84039,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IOptionsList *</type>
@@ -84109,15 +84107,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::IParamsSet *</type>
@@ -84177,15 +84175,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iprm::ISelectionParam *</type>
@@ -84245,15 +84243,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual iser::ISerializable *</type>
@@ -84313,15 +84311,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
@@ -84381,15 +84379,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>a4b565abfc347af34875a8d12063acd71</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>ae13cbb0eecb47f895e4eb269f237aa78</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classimod_1_1_t_single_model_observer_base.html</anchorfile>
-      <anchor>afd910059cfc9f6cc7f92d524f1252667</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>ab3755223cf5585c4e08623c837bc3752</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IInformationProvider *</type>
@@ -84630,22 +84628,22 @@
       <type>virtual Ids</type>
       <name>GetMetaIds</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a3a3eda9d4cf41874a777abf0d2ade6af</anchor>
-      <arglist>(int metaGroupId) const</arglist>
+      <anchor>ae317ac76f8951d583ab516e4dca26b13</anchor>
+      <arglist>(int metaGroupId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IElementStaticInfo *</type>
       <name>GetSubelementInfo</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a577b7bbe485b79c54a8134471a45643d</anchor>
-      <arglist>(const QByteArray &amp;subcomponentId) const</arglist>
+      <anchor>a5de4612b4354267a07f975bc4a68ebf0</anchor>
+      <arglist>(const QByteArray &amp;subcomponentId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void *</type>
       <name>GetComponentInterface</name>
       <anchorfile>classicomp_1_1_t_subelement_static_info.html</anchorfile>
-      <anchor>a0f775826f0bff09b71f7e38420e61fe6</anchor>
-      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const</arglist>
+      <anchor>a07982fb49e10df1e8ebf96f2b08f289d</anchor>
+      <arglist>(const istd::CClassInfo &amp;interfaceType, IComponent &amp;component, const QByteArray &amp;subId) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -86902,8 +86900,8 @@
       <type>virtual bool</type>
       <name>IsLogConsumed</name>
       <anchorfile>classifile_1_1_t_file_serializer_comp_1_1_write_archive_ex.html</anchorfile>
-      <anchor>abb472be572dd7b9ebb2352421f725d9f</anchor>
-      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const</arglist>
+      <anchor>affa434c5cb373cec163014b1c967ca69</anchor>
+      <arglist>(const istd::IInformationProvider::InformationCategory *, const int *flagsPtr=NULL) const override</arglist>
     </member>
   </compound>
   <compound kind="class">

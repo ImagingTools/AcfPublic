@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_CAutoPersistenceComp_included
-#define ifile_CAutoPersistenceComp_included
+#pragma once
 
 
 // Qt includes
@@ -269,8 +268,5 @@ private:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_CAutoPersistenceComp_included
 
 
