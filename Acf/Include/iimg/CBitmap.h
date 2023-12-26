@@ -1,0 +1,113 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iimg_CBitmap_included
+#define iimg_CBitmap_included
+
+
+// Qt includes
+#include <QtCore/QMutex>
+
+// ACF includes
+#include <istd/TOptDelPtr.h>
+#include <i2d/ICalibrationProvider.h>
+#include <iimg/CBitmapBase.h>
+#include <iimg/IQImageProvider.h>
+
+
+namespace iimg
+{
+
+
+/**
+	Bitmap implementation based on Qt QImage.
+*/
+class CBitmap:
+			public iimg::CBitmapBase,
+			virtual public IQImageProvider
+{
+	typedef iimg::CBitmapBase BaseClass;
+
+public:
+	static QByteArray GetTypeName();
+
+	CBitmap();
+	CBitmap(const CBitmap& bitmap);
+	CBitmap(const QImage& image);
+
+	QImage& GetQImageRef();
+
+	// reimplemented (iimg::IQImageProvider)
+	virtual const QImage& GetQImage() const override;
+	virtual bool CopyImageFrom(const QImage& image) override;
+
+	// reimplemented (iimg::IBitmap)
+	virtual bool IsFormatSupported(PixelFormat pixelFormat) const override;
+	virtual PixelFormat GetPixelFormat() const override;
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int pixelBitsCount = 0, int componentsCount = 0) override;
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0) override;
+	virtual int GetLinesDifference() const override;
+	virtual int GetPixelsDifference() const override;
+	virtual const void* GetLinePtr(int positionY) const override;
+	virtual void* GetLinePtr(int positionY) override;
+
+	// reimplemented (iimg::IRasterImage)
+	virtual void ResetImage() override;
+	virtual void ClearImage() override;
+	virtual istd::CIndex2d GetImageSize() const override;
+
+	// reimplemented (iser::IObject)
+	virtual QByteArray GetFactoryId() const override;
+
+	// reimplemented (istd::IChangeable)
+	virtual int GetSupportedOperations() const override;
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+
+protected:
+	QImage::Format CalcQtFormat(PixelFormat pixelFormat) const;
+	PixelFormat CalcFromQtFormat(QImage::Format imageFormat) const;
+	bool SetQImage(const QImage& image);
+
+private:
+	QImage m_image;
+	istd::TOptDelPtr<quint8, true> m_externalBuffer;
+
+	static QVector<QRgb> s_colorTableGray;
+	static QMutex s_colorTableLock;
+};
+
+
+// inline methods
+
+inline QImage& CBitmap::GetQImageRef()
+{
+	return m_image;
+}
+
+
+} // namespace iimg
+
+
+#endif //!iimg_CBitmap_included
+
+

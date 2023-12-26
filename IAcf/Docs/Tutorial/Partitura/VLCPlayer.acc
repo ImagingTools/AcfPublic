@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description></Description>
+    <Keywords></Keywords>
+    <ElementsList>
+        <Element Id="Application" PackageId="QtGuiPck" ComponentId="GuiApplication">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="MainGui" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="VideoView"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="AutoPersistence" PackageId="FilePck" ComponentId="AutoPersistence">
+            <Data IsEnabled="true" Flags="1">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="FileLoader" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="FileDialogLoader"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Object" Type="Reference" ExportId="">
+                        <Data IsEnabled="true" Value="VideoView"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="StoreOnEnd" Type="Boolean" ExportId="">
+                        <Data IsEnabled="true" Value="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="FileDialogLoader" PackageId="FileGuiPck" ComponentId="FileDialogLoader">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="Loaders" Type="Reference[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>MediaLoader</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="MediaLoader" PackageId="QtMmPck" ComponentId="MediaLoader">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+        <Element Id="VideoView" PackageId="QaxPck" ComponentId="VlcVideoViewGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap/>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="ibase::IApplication" ComponentId="Application"/>
+    </ExportedInterfaces>
+    <ExportedComponents/>
+</Acf>

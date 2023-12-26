@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="4054" Description="ACF"/>
+            <Version Id="1" Number="1505" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="328706" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <PositionMap>
+        <Element ComponentName="StandaloneApp" X="225" Y="225" Note=""/>
+        <Element ComponentName="VersionInfo" X="1050" Y="225" Note=""/>
+        <Element ComponentName="SplashScreen" X="325" Y="75" Note=""/>
+        <Element ComponentName="DataSequenceView" X="150" Y="600" Note=""/>
+        <Element ComponentName="ProcessorControlGui" X="500" Y="450" Note=""/>
+        <Element ComponentName="SampleLoader" X="825" Y="375" Note=""/>
+        <Element ComponentName="XmlSerializer" X="1050" Y="450" Note=""/>
+        <Element ComponentName="ProcessorControlDock" X="500" Y="325" Note=""/>
+        <Element ComponentName="GeneralDataSequence" X="500" Y="600" Note=""/>
+        <Element ComponentName="ModelBinder" X="325" Y="725" Note=""/>
+        <Element ComponentName="AboutDialog" X="125" Y="75" Note=""/>
+    </PositionMap>
+    <EmbeddedRegistries/>
+</Acf>

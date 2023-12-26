@@ -1,0 +1,244 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#include <iqtmm/CPlaybackControllerGuiComp.h>
+
+
+// ACF includes
+#include <istd/CChangeNotifier.h>
+
+#include <iqt/CSignalBlocker.h>
+
+
+namespace iqtmm
+{
+
+
+// protected methods
+
+// reimplemented (iqtgui::TGuiObserverWrap)
+
+void CPlaybackControllerGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& changeSet)
+{
+	Q_ASSERT(IsGuiCreated());
+
+	imm::IVideoController* objectPtr = GetObservedObject();
+	if (objectPtr != NULL){
+		int supportedFeatures = objectPtr->GetSupportedFeatures();
+		bool isPlayable = ((supportedFeatures & imm::IMediaController::SF_PLAY) != 0);
+		PlayButton->setEnabled(isPlayable);
+		TimeEdit->setEnabled(isPlayable);
+		PositionSlider->setEnabled(isPlayable);
+		FrameIndexSB->setEnabled(isPlayable);
+		RepeatButton->setEnabled(isPlayable);
+
+		bool isSeekEnabled = ((supportedFeatures & imm::IMediaController::SF_SEEK) != 0);
+
+		if (changeSet.Contains(imm::IMediaController::CF_STATUS) || changeSet.Contains(CF_INIT_EDITOR)){
+			iqt::CSignalBlocker block1(PositionSlider, true);
+			iqt::CSignalBlocker block2(FrameIndexSB, true);
+			iqt::CSignalBlocker block3(TimeEdit, true);
+
+			bool isPlaying = objectPtr->IsPlaying();
+			PlayButton->setChecked(isPlaying);
+
+			int framesCount = objectPtr->GetFramesCount();
+			if (framesCount > 1){
+				double mediumLength = objectPtr->GetMediumLength();
+				TimeEdit->setMaximumTime(QTime().addMSecs(mediumLength * 1000));
+				PositionSlider->setMaximum(framesCount);
+				FrameIndexSB->setMaximum(framesCount);
+				MaxFramesLabel->setText(QString::number(framesCount));
+			}
+			else{
+				isSeekEnabled = false;
+				TimeEdit->setTime(QTime());
+				PositionSlider->setValue(1);
+				FrameIndexSB->setValue(1);
+			}
+		}
+		PositionSlider->setEnabled(isSeekEnabled);
+		TimeEdit->setEnabled(isSeekEnabled);
+		FrameIndexSB->setEnabled(isSeekEnabled);
+
+		if (changeSet.Contains(imm::IMediaController::CF_MEDIA_POSITION) || changeSet.Contains(CF_INIT_EDITOR)){
+			iqt::CSignalBlocker block1(PositionSlider, true);
+			iqt::CSignalBlocker block2(FrameIndexSB, true);
+			iqt::CSignalBlocker block3(TimeEdit, true);
+
+			int currentFrame = objectPtr->GetCurrentFrame();
+			if (currentFrame >= 0){
+				PositionSlider->setValue(currentFrame + 1);
+				FrameIndexSB->setValue(currentFrame + 1);
+				TimeEdit->setTime(QTime().addMSecs(objectPtr->GetCurrentPosition() * 1000));
+			}
+		}
+	}
+}
+
+
+// reimplemented (iqtgui::CGuiComponentBase)
+
+void CPlaybackControllerGuiComp::OnGuiCreated()
+{
+	PlayButton->setVisible(*m_showPlayButtonAttrPtr);
+	PlayButton->setEnabled(false);
+	TimeEdit->setVisible(*m_showTimePositionAttrPtr);
+	TimeEdit->setEnabled(false);
+	PositionSlider->setVisible(*m_showPositionSliderAttrPtr);
+	PositionSlider->setEnabled(false);
+	IndexFrame->setVisible(*m_showFrameIndexAttrPtr);
+	FrameIndexSB->setEnabled(false);
+	RepeatButton->setVisible(*m_showRepeatButtonAttrPtr);
+	RepeatButton->setEnabled(false);
+
+	connect(&m_playTimer, SIGNAL(timeout()), this, SLOT(OnTimerTick()));
+
+	BaseClass::OnGuiCreated();
+}
+
+
+void CPlaybackControllerGuiComp::OnGuiDestroyed()
+{
+	m_playTimer.stop();
+
+	disconnect(&m_playTimer, SIGNAL(timeout()), this, SLOT(OnTimerTick()));
+
+	BaseClass::OnGuiDestroyed();
+}
+
+
+// private slots
+
+void CPlaybackControllerGuiComp::on_PlayButton_toggled(bool isToggled)
+{
+	imm::IVideoController* objectPtr = GetObservedObject();
+	if (objectPtr != NULL){
+		UpdateBlocker updateBlocker(this);
+
+		// if the controller doesn't support the auto playing of the content,
+		// we will create a timer and simulate playing manually:
+		if ((objectPtr->GetSupportedFeatures() & imm::IVideoController::SF_AUTO_PLAY) == 0){
+			int timerInterval = objectPtr->GetFrameInterval() * 1000;
+
+			if (isToggled){
+				m_playTimer.start(timerInterval);
+			}
+			else{
+				m_playTimer.stop();
+			}
+		}
+
+		objectPtr->SetPlaying(isToggled);
+	}
+}
+
+
+void CPlaybackControllerGuiComp::on_PositionSlider_valueChanged(int frameIndex)
+{
+	if (IsUpdateBlocked()){
+		return;
+	}
+
+	UpdateBlocker blocker(this);
+
+	Q_ASSERT(frameIndex > 0);
+
+	imm::IVideoController* objectPtr = GetObservedObject();
+	if (objectPtr != NULL){
+		objectPtr->SetCurrentFrame(frameIndex - 1);
+
+		FrameIndexSB->setValue(frameIndex);
+
+		double position = objectPtr->GetCurrentPosition();
+		TimeEdit->setTime(QTime().addMSecs(position * 1000));
+	}
+}
+
+
+void CPlaybackControllerGuiComp::on_FrameIndexSB_valueChanged(int frameIndex)
+{
+	if (IsUpdateBlocked()){
+		return;
+	}
+
+	UpdateBlocker blocker(this);
+
+	imm::IVideoController* objectPtr = GetObservedObject();
+	if (objectPtr != NULL){
+		objectPtr->SetCurrentFrame(frameIndex - 1);
+
+		PositionSlider->setValue(frameIndex);
+
+		double position = objectPtr->GetCurrentPosition();
+		TimeEdit->setTime(QTime().addMSecs(position * 1000));
+	}
+}
+
+
+void CPlaybackControllerGuiComp::on_TimeEdit_editingFinished()
+{
+	if (IsUpdateBlocked()){
+		return;
+	}
+
+	UpdateBlocker blocker(this);
+
+	imm::IVideoController* objectPtr = GetObservedObject();
+	if (objectPtr != NULL){
+		QTime time = TimeEdit->time();
+		double t = (time.hour() * 60.0 + time.minute()) * 60 + time.second() + time.msec() * 0.001;
+		objectPtr->SetCurrentPosition(t);
+
+		int frameIndex = objectPtr->GetCurrentFrame() + 1;
+		PositionSlider->setValue(frameIndex);
+		FrameIndexSB->setValue(frameIndex);
+	}
+}
+
+
+// private slots
+
+void CPlaybackControllerGuiComp::OnTimerTick()
+{
+	imm::IVideoController* objectPtr = GetObservedObject();
+	if (objectPtr != NULL){
+		int framesCount = objectPtr->GetFramesCount();
+		if (framesCount > 0){
+			int currentFrameIndex = objectPtr->GetCurrentFrame();
+			Q_ASSERT(currentFrameIndex < framesCount);
+			int nextCurrentFrameIndex = RepeatButton->isChecked() ? (currentFrameIndex + 1) % framesCount : currentFrameIndex + 1;
+			if (nextCurrentFrameIndex < framesCount){
+				objectPtr->SetCurrentFrame(nextCurrentFrameIndex);
+			}
+			else{
+				objectPtr->SetPlaying(false);
+				objectPtr->SetCurrentFrame(0);
+			}
+		}
+	}
+}
+
+
+} // namespace iqtmm
+
+
