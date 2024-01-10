@@ -72785,6 +72785,13 @@
       <anchor>a0e4255068db1bac4790883393dd0107c</anchor>
       <arglist>(const QByteArray &amp;themeId) override</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>CreateIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>ad5d6355774372e2ea47150b070abe4a8</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TMakeIconProviderCompWrap&lt; ibase::TLocalizableWrap&lt; CDialogGuiCompAttr &gt; &gt;</name>
@@ -72831,6 +72838,13 @@
       <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
       <anchor>a0e4255068db1bac4790883393dd0107c</anchor>
       <arglist>(const QByteArray &amp;themeId) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>CreateIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>ad5d6355774372e2ea47150b070abe4a8</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -72879,6 +72893,13 @@
       <anchor>a0e4255068db1bac4790883393dd0107c</anchor>
       <arglist>(const QByteArray &amp;themeId) override</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>CreateIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>ad5d6355774372e2ea47150b070abe4a8</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TMakeIconProviderCompWrap&lt; icomp::CComponentBase &gt;</name>
@@ -72926,6 +72947,13 @@
       <anchor>a0e4255068db1bac4790883393dd0107c</anchor>
       <arglist>(const QByteArray &amp;themeId) override</arglist>
     </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>CreateIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>ad5d6355774372e2ea47150b070abe4a8</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TMakeIconProviderCompWrap&lt; QObject &gt;</name>
@@ -72972,6 +73000,13 @@
       <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
       <anchor>a0e4255068db1bac4790883393dd0107c</anchor>
       <arglist>(const QByteArray &amp;themeId) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual QIcon</type>
+      <name>CreateIcon</name>
+      <anchorfile>classiqtgui_1_1_t_make_icon_provider_comp_wrap.html</anchorfile>
+      <anchor>ad5d6355774372e2ea47150b070abe4a8</anchor>
+      <arglist>(const QString &amp;iconName) const</arglist>
     </member>
   </compound>
   <compound kind="class">
