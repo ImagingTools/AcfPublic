@@ -68733,8 +68733,8 @@
       <type>virtual bool</type>
       <name>SerializeItem</name>
       <anchorfile>classibase_1_1_t_factorisable_container.html</anchorfile>
-      <anchor>a1f233bce71e9709eaef8f935fbadf7a5</anchor>
-      <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive, iser::CArchiveTag *parentTagPtr=NULL) override</arglist>
+      <anchor>aa372b3126a6fa0e4884770b32d713d41</anchor>
+      <arglist>(ItemClass &amp;item, iser::IArchive &amp;archive, iser::CArchiveTag *parentTagPtr=nullptr) override</arglist>
     </member>
     <member kind="variable" protection="protected">
       <type>istd::TIFactory&lt; InterfaceClass &gt; *</type>
