@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef imath_CVarMatrix_included
-#define imath_CVarMatrix_included
+#pragma once
 
 
 // ACF includes
@@ -318,8 +317,5 @@ inline CVarMatrix operator*(double value, const imath::CVarMatrix& matrix)
 
 
 } // namespace imath
-
-
-#endif // !imath_CVarMatrix_included
 
 

@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef imath_included
-#define imath_included
+#pragma once
 
 
 // Qt includes
@@ -73,6 +72,4 @@ inline double GetDegreeFromRadian(double radian)
 
 } // namespace imath
 
-
-#endif // !imath_included
 

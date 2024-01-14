@@ -3246,7 +3246,7 @@
     <name>CAkimaInterpolator.h</name>
     <path>D:/Temp/Qt5/Acf/Include/imath/</path>
     <filename>_c_akima_interpolator_8h.html</filename>
-    <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="no" imported="no">imath/TIMathFunction.h</includes>
+    <includes id="_i_sampled_function_interpolator_8h" name="ISampledFunctionInterpolator.h" local="no" imported="no">imath/ISampledFunctionInterpolator.h</includes>
     <class kind="class">imath::CAkimaInterpolator</class>
     <class kind="struct">imath::CAkimaInterpolator::Node</class>
     <namespace>imath</namespace>
@@ -3298,8 +3298,19 @@
     <name>CLinearInterpolator.h</name>
     <path>D:/Temp/Qt5/Acf/Include/imath/</path>
     <filename>_c_linear_interpolator_8h.html</filename>
-    <includes id="_t_i_math_function_8h" name="TIMathFunction.h" local="no" imported="no">imath/TIMathFunction.h</includes>
+    <includes id="_i_sampled_function_interpolator_8h" name="ISampledFunctionInterpolator.h" local="no" imported="no">imath/ISampledFunctionInterpolator.h</includes>
     <class kind="class">imath::CLinearInterpolator</class>
+    <namespace>imath</namespace>
+  </compound>
+  <compound kind="file">
+    <name>CSampledFunction.h</name>
+    <path>D:/Temp/Qt5/Acf/Include/imath/</path>
+    <filename>_c_sampled_function_8h.html</filename>
+    <includes id="_t_array_8h" name="TArray.h" local="no" imported="no">istd/TArray.h</includes>
+    <includes id="_t_index_8h" name="TIndex.h" local="no" imported="no">istd/TIndex.h</includes>
+    <includes id="_t_i_sampled_function_8h" name="TISampledFunction.h" local="no" imported="no">imath/TISampledFunction.h</includes>
+    <includes id="_i_sampled_function_interpolator_8h" name="ISampledFunctionInterpolator.h" local="no" imported="no">imath/ISampledFunctionInterpolator.h</includes>
+    <class kind="class">imath::CSampledFunction</class>
     <namespace>imath</namespace>
   </compound>
   <compound kind="file">
@@ -3403,6 +3414,14 @@
       <anchor>a162a1bb3b8d3047f22ed10e9d8cab1e3</anchor>
       <arglist></arglist>
     </member>
+  </compound>
+  <compound kind="file">
+    <name>ISampledFunctionInterpolator.h</name>
+    <path>D:/Temp/Qt5/Acf/Include/imath/</path>
+    <filename>_i_sampled_function_interpolator_8h.html</filename>
+    <includes id="_t_i_sampled_function_8h" name="TISampledFunction.h" local="no" imported="no">imath/TISampledFunction.h</includes>
+    <class kind="class">imath::ISampledFunctionInterpolator</class>
+    <namespace>imath</namespace>
   </compound>
   <compound kind="file">
     <name>IUnitInfo.h</name>
@@ -8185,7 +8204,7 @@
   <compound kind="class">
     <name>imath::CAkimaInterpolator</name>
     <filename>classimath_1_1_c_akima_interpolator.html</filename>
-    <base virtualness="virtual">imath::TIMathFunction</base>
+    <base virtualness="virtual">imath::ISampledFunctionInterpolator</base>
     <class kind="struct">imath::CAkimaInterpolator::Node</class>
     <member kind="typedef">
       <type>QMap&lt; double, Node &gt;</type>
@@ -8214,6 +8233,13 @@
       <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
       <anchor>ab572fff75ec34102a22ef3560424990f</anchor>
       <arglist>(double *positions, double *values, int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitFromFunction</name>
+      <anchorfile>classimath_1_1_c_akima_interpolator.html</anchorfile>
+      <anchor>ad0c101fff09645c90d04b60474a4e7f6</anchor>
+      <arglist>(const ISampledFunction &amp;function) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -24911,7 +24937,7 @@
   <compound kind="class">
     <name>imath::CLinearInterpolator</name>
     <filename>classimath_1_1_c_linear_interpolator.html</filename>
-    <base virtualness="virtual">imath::TIMathFunction</base>
+    <base virtualness="virtual">imath::ISampledFunctionInterpolator</base>
     <member kind="function">
       <type></type>
       <name>CLinearInterpolator</name>
@@ -24932,6 +24958,13 @@
       <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
       <anchor>a3e18222a065debe566981486437acadb</anchor>
       <arglist>(double *positions, double *values, int nodesCount)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>InitFromFunction</name>
+      <anchorfile>classimath_1_1_c_linear_interpolator.html</anchorfile>
+      <anchor>aafa8b70cafa1c4119fed2a62e8a69537</anchor>
+      <arglist>(const ISampledFunction &amp;function) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
@@ -38683,6 +38716,144 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imath::CSampledFunction</name>
+    <filename>classimath_1_1_c_sampled_function.html</filename>
+    <base virtualness="virtual">imath::TISampledFunction</base>
+    <member kind="typedef">
+      <type>istd::TIndex&lt; 1 &gt;</type>
+      <name>Index</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a0ab0cf41b3d2fd5a3febffbc4920bd68</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>af9f01a2d1fa7b8337c5c9903b3b2b148</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a246010c176497a2da513a4ff718fca58</anchor>
+      <arglist>(const CSampledFunction &amp;function)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a0d800ab5e44b40cbc566077ecc60d918</anchor>
+      <arglist>(const imath::ISampledFunction &amp;function)</arglist>
+    </member>
+    <member kind="function">
+      <type></type>
+      <name>CSampledFunction</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>ae9ff7ecb1cd8a604955dacc6e5a7eb2c</anchor>
+      <arglist>(int size, double defaultValue=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Reset</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a6ca65e22c10997fa2fb44ec48850f8be</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>Initialize</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>adb23c4c62e326c4ecb590bd6a530ef8a</anchor>
+      <arglist>(int size, double defaultValue=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>double</type>
+      <name>GetSampleValue</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>af4f7e6ff3dd56eeb9d55c4f539e1dcd2</anchor>
+      <arglist>(int index) const</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetSampleValue</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>aba4d51f68c70291dee91fb13b4683e8d</anchor>
+      <arglist>(int index, double value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetLogicalRange</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>aec3b887e2de442a482e66f20b51c5fdc</anchor>
+      <arglist>(const istd::CRange &amp;logicalRange)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>SetInterpolator</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a4e1ccaa8f7a454e383598edad819a426</anchor>
+      <arglist>(ISampledFunctionInterpolator *interpolatorPtr)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>CreateFunction</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a2c8ec6c479575344c201a2e5200582df</anchor>
+      <arglist>(double *dataPtr, const ArgumentType &amp;sizes) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetTotalSamplesCount</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>aebc526bad2d6a86cef54dbeb8d774e51</anchor>
+      <arglist>() const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetSampleAt</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a8caf4f2b29d1fbe81b32000fc0650002</anchor>
+      <arglist>(const SampleIndex &amp;index) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual int</type>
+      <name>GetGridSize</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>ad355ad3d5943fbcd20ee726449fd9554</anchor>
+      <arglist>(int dimensionIndex) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetLogicalRange</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>a3cd3444b6147cdb35b99b39e0c8eda28</anchor>
+      <arglist>(int dimensionIndex) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual istd::CRange</type>
+      <name>GetResultValueRange</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>aecd34ea81456fc54b9c91ba808a11582</anchor>
+      <arglist>(int dimensionIndex, int resultDimension=-1) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual bool</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>ae7887562cbe1a330c0182658c86ee2a3</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual ResultType</type>
+      <name>GetValueAt</name>
+      <anchorfile>classimath_1_1_c_sampled_function.html</anchorfile>
+      <anchor>aa63ce5a0ae8dc0c3ecfa27bb6def60c7</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>imath::CSampledFunction2d</name>
     <filename>classimath_1_1_c_sampled_function2d.html</filename>
     <base virtualness="virtual">imath::TISampledFunction</base>
@@ -38753,50 +38924,57 @@
       <type>virtual bool</type>
       <name>CreateFunction</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>ab70332c0378616e561f97beb921353fc</anchor>
-      <arglist>(double *dataPtr, const ArgumentType &amp;sizes)</arglist>
+      <anchor>a8f1b8621746173e9dff1fd89631ec83c</anchor>
+      <arglist>(double *dataPtr, const ArgumentType &amp;sizes) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTotalSamplesCount</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>acc114577f906c3605398a2cc33389e38</anchor>
-      <arglist>() const</arglist>
+      <anchor>af56fdd9b510206133d403a383371156b</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetGridSize</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>acfb87260b6c2c7351017a9d3f46f42ca</anchor>
-      <arglist>(int dimensionIndex) const</arglist>
+      <anchor>a19ab290f5d787b429fc8e79a75ccbdc2</anchor>
+      <arglist>(int dimensionIndex) const override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual double</type>
+      <name>GetSampleAt</name>
+      <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
+      <anchor>a61cb70fe8663698122b19d72469a43bc</anchor>
+      <arglist>(const SampleIndex &amp;index) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetLogicalRange</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>aaaf7e1aeef5001af82a95027ea57ba10</anchor>
-      <arglist>(int dimensionIndex) const</arglist>
+      <anchor>a04c12b44afaca48e07fef6cbef7f88a2</anchor>
+      <arglist>(int dimensionIndex) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetResultValueRange</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>a6e45035303d79544a986fa026e8e8f47</anchor>
-      <arglist>(int dimensionIndex, int resultDimension=-1) const</arglist>
+      <anchor>a23244520a0f22737e08876e36b89a703</anchor>
+      <arglist>(int dimensionIndex, int resultDimension=-1) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>a18b09e6a04287fc1f13d96edc14555be</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
+      <anchor>af9e28aaaa062006f2db615623583d786</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classimath_1_1_c_sampled_function2d.html</anchorfile>
-      <anchor>ab3da5d61d62e92c20258b444e87ef03c</anchor>
-      <arglist>(const ArgumentType &amp;argument) const</arglist>
+      <anchor>a06a00a18451b83e4429e9c38356425a9</anchor>
+      <arglist>(const ArgumentType &amp;argument) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -57791,6 +57969,18 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>imath::ISampledFunctionInterpolator</name>
+    <filename>classimath_1_1_i_sampled_function_interpolator.html</filename>
+    <base virtualness="virtual">imath::TIMathFunction</base>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>InitFromFunction</name>
+      <anchorfile>classimath_1_1_i_sampled_function_interpolator.html</anchorfile>
+      <anchor>ae22e2a35cb99faded78d98ab8a7a5e61</anchor>
+      <arglist>(const ISampledFunction &amp;function)=0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>i2d::ISceneController</name>
     <filename>classi2d_1_1_i_scene_controller.html</filename>
     <base virtualness="virtual">istd::IPolymorphic</base>
@@ -72212,6 +72402,20 @@
       <anchor>a635b1cce21e7750f3fa765fac2dbc59d</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>BaseClass::ResultType</type>
+      <name>ResultType</name>
+      <anchorfile>classimath_1_1_t_i_sampled_function.html</anchorfile>
+      <anchor>a470c15835e7b3efef69226a6109bc52a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>istd::TIndex&lt; ArgumentDimensions &gt;</type>
+      <name>SampleIndex</name>
+      <anchorfile>classimath_1_1_t_i_sampled_function.html</anchorfile>
+      <anchor>afe2a58d159d06b661ee15c3d19f68810</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function" virtualness="pure">
       <type>virtual bool</type>
       <name>CreateFunction</name>
@@ -72232,6 +72436,13 @@
       <anchorfile>classimath_1_1_t_i_sampled_function.html</anchorfile>
       <anchor>a94bb365d6e058085a455695bd5e02981</anchor>
       <arglist>(int dimensionIndex) const =0</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual double</type>
+      <name>GetSampleAt</name>
+      <anchorfile>classimath_1_1_t_i_sampled_function.html</anchorfile>
+      <anchor>ac936600ef603734fdc7a933911e39d34</anchor>
+      <arglist>(const SampleIndex &amp;index) const =0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual istd::CRange</type>
@@ -87641,11 +87852,13 @@
     <class kind="class">imath::CFixedPointManip</class>
     <class kind="class">imath::CGeneralUnitInfo</class>
     <class kind="class">imath::CLinearInterpolator</class>
+    <class kind="class">imath::CSampledFunction</class>
     <class kind="class">imath::CSampledFunction2d</class>
     <class kind="class">imath::CSplineSegmentFunction</class>
     <class kind="class">imath::CVarMatrix</class>
     <class kind="class">imath::CVarVector</class>
     <class kind="class">imath::IDoubleManip</class>
+    <class kind="class">imath::ISampledFunctionInterpolator</class>
     <class kind="class">imath::IUnitInfo</class>
     <class kind="class">imath::TFastVector</class>
     <class kind="class">imath::TFulcrumGrid</class>

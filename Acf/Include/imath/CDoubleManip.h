@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef imath_CDoubleManip_included
-#define imath_CDoubleManip_included
+#pragma once
 
 
+// ACF includes
 #include <imath/IDoubleManip.h>
 
 
@@ -125,8 +125,5 @@ inline double CDoubleManip::GetBiggerValue(const double& value) const
 
 
 } // namespace imath
-
-
-#endif // !imath_CDoubleManip_included
 
 

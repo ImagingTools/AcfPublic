@@ -27,6 +27,8 @@ namespace imath
 {
 
 
+// public methods
+
 CLinearInterpolator::CLinearInterpolator()
 	:m_isExtrapolationEnabled(false)
 {
@@ -50,6 +52,25 @@ void CLinearInterpolator::SetNodes(double* positions, double* values, int nodesC
 }
 
 
+bool CLinearInterpolator::InitFromFunction(const ISampledFunction& function)
+{
+	m_nodes.clear();
+
+	istd::CRange logicalRange = function.GetLogicalRange(0);
+	istd::CIntRange sampleRange = istd::CIntRange(0, function.GetTotalSamplesCount());
+
+	for (int i = 0; i < function.GetTotalSamplesCount(); i++) {
+		double sampleAlpha = sampleRange.GetAlphaFromValue(i);
+
+		double logicalPosition = logicalRange.GetValueFromAlpha(sampleAlpha);
+
+		m_nodes[logicalPosition] = function.GetSampleAt(istd::TIndex<1>(i));
+	}
+
+	return true;
+}
+
+
 // reimplemented (imath::TIMathFunction<double, double>)
 
 bool CLinearInterpolator::GetValueAt(const double& argument, double& result) const
@@ -70,11 +91,13 @@ bool CLinearInterpolator::GetValueAt(const double& argument, double& result) con
 
 		if (m_isExtrapolationEnabled && (nextIter == m_nodes.constBegin())){
 			//extrapolate x < x_first
-			Nodes::ConstIterator nextNextIter = nextIter + 1;
+			Nodes::ConstIterator nextNextIter = std::next(nextIter);
 			double nextNextPosition = nextNextIter.key();
 			double nextNextValue = nextNextIter.value();
+
 			double nodeDiff = (nextNextPosition - nextPosition);
 			Q_ASSERT(nodeDiff > 0);
+
 			double slope = (nextNextValue - nextValue) / nodeDiff;
 			result = nextValue - slope * (nextPosition - argument);
 
@@ -82,7 +105,7 @@ bool CLinearInterpolator::GetValueAt(const double& argument, double& result) con
 		}
 
 
-		Nodes::ConstIterator prevIter = nextIter - 1;
+		Nodes::ConstIterator prevIter = std::prev(nextIter);
 
 		double prevPosition = prevIter.key();
 		Q_ASSERT(prevPosition <= argument);
@@ -107,13 +130,16 @@ bool CLinearInterpolator::GetValueAt(const double& argument, double& result) con
 
 	else if (m_isExtrapolationEnabled){
 		/*extrapolate x > last_x*/
-		nextIter = m_nodes.constEnd() - 1;
+		nextIter = std::prev(m_nodes.constEnd());
+
 		double prevPosition = nextIter.key();
 		Q_ASSERT(prevPosition <= argument);
 		double prevValue = nextIter.value();
-		Nodes::ConstIterator prevIter = nextIter - 1;
+
+		Nodes::ConstIterator prevIter = std::prev(nextIter);
 		double prevPrevPosition = prevIter.key();
 		double prevPrevValue = prevIter.value();
+
 		double nodeDiff = (prevPosition - prevPrevPosition);
 		Q_ASSERT(nodeDiff > 0);
 

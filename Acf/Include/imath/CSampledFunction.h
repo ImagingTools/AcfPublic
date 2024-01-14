@@ -25,8 +25,9 @@
 
 // ACF includes
 #include <istd/TArray.h>
-#include <istd/CIndex2d.h>
+#include <istd/TIndex.h>
 #include <imath/TISampledFunction.h>
+#include <imath/ISampledFunctionInterpolator.h>
 
 
 namespace imath
@@ -34,27 +35,30 @@ namespace imath
 
 
 /**
-	Implementation of the resampled 2D-function.
+	Implementation of the resampled 1D-function.
 */
-class CSampledFunction2d: virtual public ISampledFunction2d
+class CSampledFunction: virtual public ISampledFunction
 {
 public:
-	CSampledFunction2d();
-	CSampledFunction2d(const CSampledFunction2d& function2d);
-	explicit CSampledFunction2d(const imath::ISampledFunction2d& function2d);
-	explicit CSampledFunction2d(const istd::CIndex2d& size, double defaultValue = 0);
+	typedef istd::TIndex<1> Index;
+
+	CSampledFunction();
+	CSampledFunction(const CSampledFunction& function);
+	explicit CSampledFunction(const imath::ISampledFunction& function);
+	explicit CSampledFunction(int size, double defaultValue = 0);
 
 	void Reset();
-	bool CreateGrid2d(const istd::CIndex2d& size, double defaultValue = 0);
-	istd::CIndex2d GetGridSize2d() const;
-	double GetSampleValue(const istd::CIndex2d& index) const;
-	void SetSampleValue(const istd::CIndex2d& index, double value);
+	bool Initialize(int size, double defaultValue = 0);
+	double GetSampleValue(int index) const;
+	void SetSampleValue(int index, double value);
+	void SetLogicalRange(const istd::CRange& logicalRange);
+	void SetInterpolator(ISampledFunctionInterpolator* interpolatorPtr);
 	
-	// reimplemented (imath::ISampledFunction2d)
+	// reimplemented (imath::ISampledFunction)
 	virtual bool CreateFunction(double* dataPtr, const ArgumentType& sizes) override;
 	virtual int GetTotalSamplesCount() const override;
-	virtual int GetGridSize(int dimensionIndex) const override;
 	virtual double GetSampleAt(const SampleIndex& index) const override;
+	virtual int GetGridSize(int dimensionIndex) const override;
 	virtual istd::CRange GetLogicalRange(int dimensionIndex) const override;
 	virtual istd::CRange GetResultValueRange(int dimensionIndex, int resultDimension = -1) const override;
 
@@ -63,33 +67,35 @@ public:
 	virtual ResultType GetValueAt(const ArgumentType& argument) const override;
 
 private:
-	typedef istd::TArray<double, 2> SamplesContainer;
-
+	typedef std::vector<double> SamplesContainer;
 	SamplesContainer m_samplesContainer;
+	istd::CRange m_logicalRange;
+
+	ISampledFunctionInterpolator* m_interpolatorPtr;
 };
 
 
 // public inline methods
 
-inline istd::CIndex2d CSampledFunction2d::GetGridSize2d() const
+inline double CSampledFunction::GetSampleValue(int index) const
 {
-	return m_samplesContainer.GetSizes();
+	Q_ASSERT(index>= 0 && index < m_samplesContainer.size());
+
+	return m_samplesContainer[index];
 }
 
 
-inline double CSampledFunction2d::GetSampleValue(const istd::CIndex2d& index) const
+inline void CSampledFunction::SetSampleValue(int index, double value)
 {
-	Q_ASSERT(index.IsInside(m_samplesContainer.GetSizes()));
+	Q_ASSERT(index >= 0 && index < m_samplesContainer.size());
 
-	return m_samplesContainer.GetAt(index);
+	m_samplesContainer[index] = value;
 }
 
 
-inline void CSampledFunction2d::SetSampleValue(const istd::CIndex2d& index, double value)
+inline void CSampledFunction::SetLogicalRange(const istd::CRange& logicalRange)
 {
-	Q_ASSERT(index.IsInside(m_samplesContainer.GetSizes()));
-
-	m_samplesContainer.SetAt(index, value);
+	m_logicalRange = logicalRange;
 }
 
 

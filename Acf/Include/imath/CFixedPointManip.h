@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef imath_CFixedPointManip_included
-#define imath_CFixedPointManip_included
+#pragma once
 
 
+// ACF includes
 #include <imath/CDoubleManip.h>
 
 
@@ -165,8 +165,5 @@ inline double CFixedPointManip::GetNormalValue(qint32 intValue) const
 
 
 } // namespace imath
-
-
-#endif // !imath_CFixedPointManip_included
 
 

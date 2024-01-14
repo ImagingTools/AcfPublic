@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef imath_TMultidimensionalPolynomial_included
-#define imath_TMultidimensionalPolynomial_included
+#pragma once
 
 
 // ACF includes
@@ -409,8 +408,5 @@ void TMultidimensionalPolynomial<Dimensions, Element>::CumulateRecursiveValueAt(
 
 
 } // namespace imath
-
-
-#endif // !imath_TMultidimensionalPolynomial_included
 
 
