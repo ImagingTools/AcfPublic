@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef imath_TISurjectFunction_included
-#define imath_TISurjectFunction_included
+#pragma once
 
 
+// ACF includes
 #include <imath/TIMathFunction.h>
 
 
@@ -63,8 +63,5 @@ typedef TISurjectFunction<double, double> ISurjectDoubleFunction;
 
 
 } // namespace imath
-
-
-#endif // !imath_TISurjectFunction_included
 
 

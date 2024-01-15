@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef imath_CFixedPointManip_included
-#define imath_CFixedPointManip_included
+#pragma once
 
 
+// ACF includes
 #include <imath/CDoubleManip.h>
 
 
@@ -72,17 +72,17 @@ public:
 	void SetRoundingType(RoundingType roundingType);
 
 	// reimplemented (imath::IDoubleManip)
-	virtual int GetPrecision() const;
+	virtual int GetPrecision() const override;
 
 	// reimplemented (imath::TIValueManip)
-	virtual double GetRounded(const double& value) const;
-	virtual bool IsEqual(const double& value1, const double& value2) const;
-	virtual bool IsSmaller(const double& value1, const double& value2) const;
-	virtual bool IsSmallerEqual(const double& value1, const double& value2) const;
-	virtual double GetSmallerValue(const double& value) const;
-	virtual double GetBiggerValue(const double& value) const;
-	virtual QString GetString(const double& value) const;
-	virtual bool GetParsed(const QString& text, double& result) const;
+	virtual double GetRounded(const double& value) const override;
+	virtual bool IsEqual(const double& value1, const double& value2) const override;
+	virtual bool IsSmaller(const double& value1, const double& value2) const override;
+	virtual bool IsSmallerEqual(const double& value1, const double& value2) const override;
+	virtual double GetSmallerValue(const double& value) const override;
+	virtual double GetBiggerValue(const double& value) const override;
+	virtual QString GetString(const double& value) const override;
+	virtual bool GetParsed(const QString& text, double& result) const override;
 
 protected:
 	typedef int (*RoundingFuntionPtr)(qreal value);
@@ -165,8 +165,5 @@ inline double CFixedPointManip::GetNormalValue(qint32 intValue) const
 
 
 } // namespace imath
-
-
-#endif // !imath_CFixedPointManip_included
 
 

@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef imath_TMultidimensionalPolynomial_included
-#define imath_TMultidimensionalPolynomial_included
+#pragma once
 
 
 // ACF includes
@@ -69,7 +68,7 @@ public:
 	virtual ResultType GetValueAt(const ArgumentType& argument) const;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
+	virtual bool Serialize(iser::IArchive& archive) override;
 
 	// static public methods
 	/**
@@ -409,8 +408,5 @@ void TMultidimensionalPolynomial<Dimensions, Element>::CumulateRecursiveValueAt(
 
 
 } // namespace imath
-
-
-#endif // !imath_TMultidimensionalPolynomial_included
 
 

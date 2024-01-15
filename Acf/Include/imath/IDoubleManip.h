@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef imath_IDoubleManip_included
-#define imath_IDoubleManip_included
+#pragma once
 
 
 // Qt includes
@@ -50,8 +49,5 @@ public:
 
 
 } // namespace imath
-
-
-#endif // !imath_IDoubleManip_included
 
 
