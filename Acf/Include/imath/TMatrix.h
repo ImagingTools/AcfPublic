@@ -20,13 +20,15 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TMatrix_included
+#define imath_TMatrix_included
 
 
-// ACF includes
 #include <istd/TArray.h>
 #include <istd/CIndex2d.h>
+
 #include <iser/CArchiveTag.h>
+
 #include <imath/TVector.h>
 
 
@@ -348,8 +350,6 @@ public:
 
 	const ElementType& operator[](const IndexType& index) const;
 	ElementType& operator[](const IndexType& index);
-
-    TMatrix<Width, Height, Element>& operator=(const TMatrix<Width, Height, Element>& matrix) = default;
 
 private:
 	typedef Element Elements[Width][Height];
@@ -1091,5 +1091,8 @@ typename TMatrix<Width, Height, Element>::ElementType& TMatrix<Width, Height, El
 
 
 } // namespace imath
+
+
+#endif // !imath_TMatrix_included
 
 

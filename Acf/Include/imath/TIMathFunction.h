@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TIMathFunction_included
+#define imath_TIMathFunction_included
 
 
-// ACF includes
 #include <istd/IPolymorphic.h>
 
 
@@ -64,5 +64,8 @@ typedef TIMathFunction<double, double> IDoubleFunction;
 
 
 } // namespace imath
+
+
+#endif // !imath_TIMathFunction_included
 
 

@@ -39,8 +39,8 @@ class CHsvToRgbTransformation: public icmm::IColorTransformation
 {
 public:
 	// reimplemented (icmm::IColorTransformation)
-	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const override;
-	virtual ResultType GetValueAt(const ArgumentType& argument) const override;
+	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const;
+	virtual ResultType GetValueAt(const ArgumentType& argument) const;
 };
 
 

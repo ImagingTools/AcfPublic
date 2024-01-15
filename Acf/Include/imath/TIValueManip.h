@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TIValueManip_included
+#define imath_TIValueManip_included
 
 
 // Qt includes
@@ -28,6 +29,7 @@
 
 // ACF includes
 #include <istd/IPolymorphic.h>
+
 #include <imath/imath.h>
 
 
@@ -88,5 +90,8 @@ public:
 
 
 } // namespace imath
+
+
+#endif // !imath_TIValueManip_included
 
 

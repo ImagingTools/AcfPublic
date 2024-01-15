@@ -58,14 +58,14 @@ public:
 	virtual void RegisterInterfaceExtractor(const QByteArray& interfaceName, InterfaceExtractorPtr extractorPtr);
 
 	//	reimplemented (icomp::IElementStaticInfo)
-	virtual Ids GetMetaIds(int metaGroupId) const override;
-	virtual const IElementStaticInfo* GetSubelementInfo(const QByteArray& subcomponentId) const override;
+	virtual Ids GetMetaIds(int metaGroupId) const;
+	virtual const IElementStaticInfo* GetSubelementInfo(const QByteArray& subcomponentId) const;
 
 	//	reimplemented (icomp::IComponentInterfaceExtractor)
 	virtual void* GetComponentInterface(
 				const istd::CClassInfo& interfaceType,
 				IComponent& component,
-				const QByteArray& subId) const override;
+				const QByteArray& subId) const;
 
 private:
 	typedef QMap<QByteArray, InterfaceExtractorPtr> InterfaceExtractors;

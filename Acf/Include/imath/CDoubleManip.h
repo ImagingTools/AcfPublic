@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_CDoubleManip_included
+#define imath_CDoubleManip_included
 
 
-// ACF includes
 #include <imath/IDoubleManip.h>
 
 
@@ -50,17 +50,17 @@ public:
 	void SetPointChar(char pointChar);
 
 	// reimplemented (imath::IDoubleManip)
-	virtual int GetPrecision() const override;
+	virtual int GetPrecision() const;
 
 	// reimplemented (imath::TIValueManip)
-	virtual double GetRounded(const double& value) const override;
-	virtual bool IsEqual(const double& value1, const double& value2) const override;
-	virtual bool IsSmaller(const double& value1, const double& value2) const override;
-	virtual bool IsSmallerEqual(const double& value1, const double& value2) const override;
-	virtual double GetSmallerValue(const double& value) const override;
-	virtual double GetBiggerValue(const double& value) const override;
-	virtual QString GetString(const double& value) const override;
-	virtual bool GetParsed(const QString& text, double& result) const override;
+	virtual double GetRounded(const double& value) const;
+	virtual bool IsEqual(const double& value1, const double& value2) const;
+	virtual bool IsSmaller(const double& value1, const double& value2) const;
+	virtual bool IsSmallerEqual(const double& value1, const double& value2) const;
+	virtual double GetSmallerValue(const double& value) const;
+	virtual double GetBiggerValue(const double& value) const;
+	virtual QString GetString(const double& value) const;
+	virtual bool GetParsed(const QString& text, double& result) const;
 
 protected:
 	enum{
@@ -125,5 +125,8 @@ inline double CDoubleManip::GetBiggerValue(const double& value) const
 
 
 } // namespace imath
+
+
+#endif // !imath_CDoubleManip_included
 
 

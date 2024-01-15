@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TFulcrumGridFunctionBase_included
+#define imath_TFulcrumGridFunctionBase_included
 
 
 // ACF includes
@@ -81,5 +82,8 @@ bool TFulcrumGridFunctionBase<Argument, Result, Fulcrums>::CalculateCache(const 
 
 
 } // namespace imath
+
+
+#endif // !imath_TFulcrumGridFunctionBase_included
 
 

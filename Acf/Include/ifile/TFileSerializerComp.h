@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_TFileSerializerComp_included
+#define ifile_TFileSerializerComp_included
 
 
 // Qt includes
@@ -57,11 +58,11 @@ public:
 	virtual int LoadFromFile(
 				istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
 	virtual int SaveToFile(
 				const istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
 
 	// Wrapper classes for archives
 	class ReadArchiveEx: public ReadArchive
@@ -93,7 +94,7 @@ public:
 		// reimplemented (istd::ILogger)
 		virtual bool IsLogConsumed(
 					const istd::IInformationProvider::InformationCategory* /*categoryPtr*/,
-					const int* flagsPtr = NULL) const override
+					const int* flagsPtr = NULL) const
 		{
 			static const istd::IInformationProvider::InformationCategory slaveCategory = istd::IInformationProvider::IC_INFO;
 
@@ -133,7 +134,7 @@ public:
 		// reimplemented (istd::ILogger)
 		virtual bool IsLogConsumed(
 					const istd::IInformationProvider::InformationCategory* /*categoryPtr*/,
-					const int* flagsPtr = NULL) const override
+					const int* flagsPtr = NULL) const
 		{
 			static const istd::IInformationProvider::InformationCategory slaveCategory = istd::IInformationProvider::IC_INFO;
 
@@ -244,5 +245,8 @@ void TFileSerializerComp<ReadArchive, WriteArchive>::OnReadError(const ReadArchi
 
 
 } // namespace ifile
+
+
+#endif // !ifile_TFileSerializerComp_included
 
 

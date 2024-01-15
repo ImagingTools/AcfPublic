@@ -42,10 +42,10 @@ public:
 	explicit TComponentStaticInfo(const IRealComponentStaticInfo* baseComponentPtr = NULL);
 
 	// reimplemented (icomp::IRealComponentStaticInfo)
-	virtual IComponent* CreateComponent() const override;
+	virtual IComponent* CreateComponent() const;
 
 	//	reimplemented (icomp::IComponentStaticInfo)
-	virtual int GetComponentType() const override;
+	virtual int GetComponentType() const;
 };
 
 

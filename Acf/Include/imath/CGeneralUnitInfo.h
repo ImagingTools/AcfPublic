@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_CGeneralUnitInfo_included
+#define imath_CGeneralUnitInfo_included
 
 
 // ACF includes
@@ -53,14 +54,14 @@ public:
 	void SetValueRange(const istd::CRange& range);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	//	reimplemented (imath::IUnitInfo)
-	virtual int GetUnitType() const override;
-	virtual QString GetUnitName() const override;
-	virtual double GetDisplayMultiplicationFactor() const override;
-	virtual istd::CRange GetValueRange() const override;
-	virtual const imath::IDoubleManip& GetValueManip() const override;
+	virtual int GetUnitType() const;
+	virtual QString GetUnitName() const;
+	virtual double GetDisplayMultiplicationFactor() const;
+	virtual istd::CRange GetValueRange() const;
+	virtual const imath::IDoubleManip& GetValueManip() const;
 
 private:
 	int m_type;
@@ -72,5 +73,8 @@ private:
 
 
 } // namespace imath
+
+
+#endif // !imath_CGeneralUnitInfo_included
 
 

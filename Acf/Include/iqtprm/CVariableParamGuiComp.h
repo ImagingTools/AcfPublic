@@ -66,7 +66,7 @@ public:
 
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnModelDetached(imod::IModel* modelPtr) override;
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 	// reimplemented (iqt2d::IViewExtender)
 	virtual void AddItemsToScene(iqt2d::IViewProvider* providerPtr, int flags);
@@ -77,11 +77,11 @@ protected:
 	void DetachCurrentType();
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiDestroyed() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 
 protected Q_SLOTS:
 	void on_TypeSelectorCB_currentIndexChanged(int index);

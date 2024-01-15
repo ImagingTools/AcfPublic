@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TFulcrumGrid_included
+#define imath_TFulcrumGrid_included
 
 
 // Qt includes
@@ -141,7 +142,7 @@ public:
 	virtual void RemoveLayer(int dimension, int layerIndex);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// operators
 	bool operator==(const TFulcrumGrid<Position, Fulcrums>& value) const;
@@ -578,5 +579,8 @@ const istd::IChangeable::ChangeSet TFulcrumGrid<Position, Fulcrums>::s_fulcrumPo
 
 
 } // namespace imath
+
+
+#endif // !imath_TFulcrumGrid_included
 
 

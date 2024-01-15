@@ -60,17 +60,17 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (idoc::IDocumentTemplate)
-	virtual ifile::IFilePersistence* GetFileLoader(const QByteArray& documentTypeId) const override;
+	virtual ifile::IFilePersistence* GetFileLoader(const QByteArray& documentTypeId) const;
 	virtual istd::IChangeable* CreateDocument(
 				QByteArray& documentTypeId,
 				bool initialize = true,
 				bool beQuiet = false,
-				bool* ignoredFlagPtr = NULL) const override;
+				bool* ignoredFlagPtr = NULL) const;
 	virtual istd::IPolymorphic* CreateView(
 				const QByteArray& documentTypeId,
 				istd::IChangeable* documentPtr,
-				const QByteArray& viewTypeId = QByteArray()) const override;
-	idoc::IUndoManager* CreateUndoManager(const QByteArray& documentTypeId, istd::IChangeable* documentPtr) const override;
+				const QByteArray& viewTypeId = QByteArray()) const;
+	idoc::IUndoManager* CreateUndoManager(const QByteArray& documentTypeId, istd::IChangeable* documentPtr) const;
 
 protected:
 	/**
@@ -83,7 +83,7 @@ protected:
 	virtual istd::IPolymorphic* ExtractViewInterface(icomp::IComponent* componentPtr) const;
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 private:
 	I_ATTR(bool, m_isNewSupportedAttrPtr);

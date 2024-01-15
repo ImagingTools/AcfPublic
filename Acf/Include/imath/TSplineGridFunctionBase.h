@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TSplineGridFunctionBase_included
+#define imath_TSplineGridFunctionBase_included
 
 
 // ACF includes
@@ -52,8 +53,8 @@ public:
 	typedef Degree DerivativeDegreeType;
 
 	// reimplemented (imath::TIMathFunction<Argument, Result>)
-	virtual bool GetValueAt(const Argument& argument, Result& result) const override;
-	virtual Result GetValueAt(const Argument& argument) const override;
+	virtual bool GetValueAt(const Argument& argument, Result& result) const;
+	virtual Result GetValueAt(const Argument& argument) const;
 
 protected:
 	/**
@@ -273,5 +274,8 @@ void TSplineGridFunctionBase<Argument, Result, Fulcrums, Degree>::CumulateRecurs
 
 
 } // namespace imath
+
+
+#endif // !imath_TSplineGridFunctionBase_included
 
 

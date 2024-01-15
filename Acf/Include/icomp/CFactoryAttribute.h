@@ -54,7 +54,7 @@ public:
 	explicit CFactoryAttribute(const QByteArray& value);
 
 	// reimplemented (iser::IObject)
-	QByteArray GetFactoryId() const override;
+	QByteArray GetFactoryId() const;
 
 	// static methods
 	static QByteArray GetTypeName();

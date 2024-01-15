@@ -20,12 +20,13 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_CSampledFunction2d_included
+#define imath_CSampledFunction2d_included
 
 
-// ACF includes
 #include <istd/TArray.h>
 #include <istd/CIndex2d.h>
+
 #include <imath/TISampledFunction.h>
 
 
@@ -51,16 +52,15 @@ public:
 	void SetSampleValue(const istd::CIndex2d& index, double value);
 	
 	// reimplemented (imath::ISampledFunction2d)
-	virtual bool CreateFunction(double* dataPtr, const ArgumentType& sizes) override;
-	virtual int GetTotalSamplesCount() const override;
-	virtual int GetGridSize(int dimensionIndex) const override;
-	virtual double GetSampleAt(const SampleIndex& index) const override;
-	virtual istd::CRange GetLogicalRange(int dimensionIndex) const override;
-	virtual istd::CRange GetResultValueRange(int dimensionIndex, int resultDimension = -1) const override;
+	virtual bool CreateFunction(double* dataPtr, const ArgumentType& sizes);
+	virtual int GetTotalSamplesCount() const;
+	virtual int GetGridSize(int dimensionIndex) const;
+	virtual istd::CRange GetLogicalRange(int dimensionIndex) const;
+	virtual istd::CRange GetResultValueRange(int dimensionIndex, int resultDimension = -1) const;
 
 	// reimplemented (imath::TIMathFunction)
-	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const override;
-	virtual ResultType GetValueAt(const ArgumentType& argument) const override;
+	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const;
+	virtual ResultType GetValueAt(const ArgumentType& argument) const;
 
 private:
 	typedef istd::TArray<double, 2> SamplesContainer;
@@ -94,5 +94,8 @@ inline void CSampledFunction2d::SetSampleValue(const istd::CIndex2d& index, doub
 
 
 } // namespace imath
+
+
+#endif // !imath_CSampledFunction2d_included
 
 

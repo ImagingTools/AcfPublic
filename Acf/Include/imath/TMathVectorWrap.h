@@ -20,12 +20,14 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TMathVectorWrap_included
+#define imath_TMathVectorWrap_included
 
 
 // ACF includes
 #include <iser/IArchive.h>
 #include <iser/CArchiveTag.h>
+
 #include <imath/imath.h>
 
 
@@ -86,7 +88,6 @@ public:
 		Return euclidian length square.
 	*/
 	typename Base::ElementType GetLength2() const;
-
 	/**
 		Return euclidian length.
 	*/
@@ -568,5 +569,8 @@ TMathVectorWrap<Base>::operator Base() const
 
 
 } // namespace imath
+
+
+#endif // !imath_TMathVectorWrap_included
 
 

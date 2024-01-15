@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CAutoPersistenceComp_included
+#define ifile_CAutoPersistenceComp_included
 
 
 // Qt includes
@@ -135,11 +136,11 @@ protected:
 	virtual bool StoreObject(const istd::IChangeable& object);
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 	// reimplemented (imod::CMultiModelDispatcherBase)
-	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 private Q_SLOTS:
 	/**
@@ -268,5 +269,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CAutoPersistenceComp_included
 
 

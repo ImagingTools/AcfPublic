@@ -20,14 +20,15 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_CAkimaInterpolator_included
+#define imath_CAkimaInterpolator_included
 
 
 // Qt includes
 #include <QtCore/QMap>
 
 // ACF includes
-#include <imath/ISampledFunctionInterpolator.h>
+#include <imath/TIMathFunction.h>
 
 
 namespace imath
@@ -37,7 +38,7 @@ namespace imath
 /**
 	1D interpolation using Akima method.
 */
-class CAkimaInterpolator: virtual public imath::ISampledFunctionInterpolator
+class CAkimaInterpolator: public virtual IDoubleFunction
 {
 public:
 	struct Node
@@ -53,12 +54,9 @@ public:
 
 	void SetNodes(double* positions, double* values, int nodesCount);
 
-	// reimplemented (imath::ISampledFunctionInterpolator)
-	virtual bool InitFromFunction(const ISampledFunction& function) override;
-
 	// reimplemented (imath::TIMathFunction<double, double>)
-	virtual bool GetValueAt(const double& argument, double& result) const override;
-	virtual double GetValueAt(const double& argument) const override;
+	virtual bool GetValueAt(const double& argument, double& result) const;
+	virtual double GetValueAt(const double& argument) const;
 
 protected:
 	Nodes m_nodes;
@@ -66,5 +64,8 @@ protected:
 
 
 } // namespace imath
+
+
+#endif // !imath_CAkimaInterpolator_included
 
 

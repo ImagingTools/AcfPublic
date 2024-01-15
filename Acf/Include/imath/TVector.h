@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_TVector_included
+#define imath_TVector_included
 
 
 // Qt includes
@@ -33,6 +34,7 @@
 
 // ACF includes
 #include <iser/IArchive.h>
+
 #include <imath/imath.h>
 
 
@@ -187,11 +189,9 @@ public:
 	bool operator<(const TVector<Size, Element>& vector) const;
 	bool operator>(const TVector<Size, Element>& vector) const;
 	bool operator<=(const TVector<Size, Element>& vector) const;
-    bool operator>=(const TVector<Size, Element>& vector) const;
+	bool operator>=(const TVector<Size, Element>& vector) const;
 
-    TVector<Size, Element>& operator=(const TVector<Size, Element>& vector) = default;
-
-    TVector<Size, Element> operator-() const;
+	TVector<Size, Element> operator-() const;
 
 	TVector<Size, Element> operator+(const TVector<Size, Element>& vector) const;
 	TVector<Size, Element> operator-(const TVector<Size, Element>& vector) const;
@@ -736,5 +736,8 @@ TVector<Size, Element> TVector<Size, Element>::s_zero(Element(0));
 
 
 } // namespace imath
+
+
+#endif // !imath_TVector_included
 
 

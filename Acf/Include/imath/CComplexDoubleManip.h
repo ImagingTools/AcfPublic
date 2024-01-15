@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_CComplexDoubleManip_included
+#define imath_CComplexDoubleManip_included
 
 
 // STL includes
@@ -61,12 +62,12 @@ public:
 	void SetPrecision(int precision);
 
 	// reimplemented (imath::TIValueManip)
-	virtual QString GetString(const double& value) const override;
-	virtual bool GetParsed(const QString& text, double& result) const override;
+	virtual QString GetString(const double& value) const;
+	virtual bool GetParsed(const QString& text, double& result) const;
 
 protected:
 	// reimplemented (imath::TIValueManip)
-	virtual qint32 GetInternalValue(double value) const override;
+	virtual qint32 GetInternalValue(double value) const;
 
 private:
 	double m_scaleFactor;
@@ -128,5 +129,8 @@ inline void CComplexDoubleManip::SetPrecision(int precision)
 
 
 } // namespace imath
+
+
+#endif // !imath_CComplexDoubleManip_included
 
 
