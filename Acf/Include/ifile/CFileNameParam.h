@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_CFileNameParam_included
-#define ifile_CFileNameParam_included
+#pragma once
 
 
 // ACF includes
@@ -41,17 +40,17 @@ class CFileNameParam: virtual public IFileNameParam
 public:
 
 	// reimplemented (ifile::IFileNameParam)
-	virtual int GetPathType() const;
-	virtual const QString& GetPath() const;
-	virtual void SetPath(const QString& path);
+	virtual int GetPathType() const override;
+	virtual const QString& GetPath() const override;
+	virtual void SetPath(const QString& path) override;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
+	virtual bool Serialize(iser::IArchive& archive) override;
 
 	// reimplemented (istd::IChangeable)
-	virtual int GetSupportedOperations() const;
-	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
-	virtual bool IsEqual(const IChangeable& object) const;
+	virtual int GetSupportedOperations() const override;
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual bool IsEqual(const IChangeable& object) const override;
 
 protected:
 	QString m_path;
@@ -59,8 +58,5 @@ protected:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_CFileNameParam_included
 
 

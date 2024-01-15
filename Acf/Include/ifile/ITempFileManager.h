@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_ITempFileManager_included
-#define ifile_ITempFileManager_included
+#pragma once
 
 
 // Qt includes
@@ -81,8 +80,5 @@ public:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_ITempFileManager_included
 
 

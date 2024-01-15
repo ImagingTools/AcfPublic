@@ -65,7 +65,7 @@ protected:
 	bool WriteXmlFooter();
 
 	// reimplemented (iser::CTextWriteArchiveBase)
-	bool WriteTextNode(const QByteArray& text);
+    bool WriteTextNode(const QByteArray& text) override;
 
 	// abstract methods
 	virtual bool WriteString(const QByteArray& value) = 0;

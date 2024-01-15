@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef imath_CSplineSegmentFunction_included
+#define imath_CSplineSegmentFunction_included
 
 
 namespace imath
@@ -61,5 +62,8 @@ inline double CSplineSegmentFunction::GetDerivativeKernelAt(double alpha)
 
 
 } // namespace imath
+
+
+#endif // !imath_CSplineSegmentFunction_included
 
 
