@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_IFileArchiveInfo_included
+#define ifile_IFileArchiveInfo_included
 
 
 // Qt includes
@@ -49,5 +50,8 @@ public:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_IFileArchiveInfo_included
 
 

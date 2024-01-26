@@ -70,24 +70,24 @@ public:
 	virtual void RegisterSubelementInfo(const QByteArray& subcomponentId, const IElementStaticInfo* staticInfoPtr);
 
 	//	reimplemented (icomp::IRealComponentStaticInfo)
-	virtual IComponent* CreateComponent() const override;
+	virtual IComponent* CreateComponent() const;
 
 	//	reimplemented (icomp::IComponentInterfaceExtractor)
 	virtual void* GetComponentInterface(
 				const istd::CClassInfo& interfaceType,
 				IComponent& component,
-				const QByteArray& subId) const override;
+				const QByteArray& subId) const;
 
 	//	reimplemented (icomp::IComponentStaticInfo)
-	virtual const IAttributeStaticInfo* GetAttributeInfo(const QByteArray& attributeId) const override;
+	virtual const IAttributeStaticInfo* GetAttributeInfo(const QByteArray& attributeId) const;
 
 	//	reimplemented (icomp::IElementStaticInfo)
-	virtual Ids GetMetaIds(int metaGroupId) const override;
-	virtual const IElementStaticInfo* GetSubelementInfo(const QByteArray& subcomponentId) const override;
+	virtual Ids GetMetaIds(int metaGroupId) const;
+	virtual const IElementStaticInfo* GetSubelementInfo(const QByteArray& subcomponentId) const;
 
 	//	reimplemented (iattr::IAttributesMetaInfoProvider)
-	virtual iattr::IAttributesProvider::AttributeIds GetAttributeMetaIds() const override;
-	virtual const iattr::IAttributeMetaInfo* GetAttributeMetaInfo(const QByteArray& attributeId) const override;
+	virtual iattr::IAttributesProvider::AttributeIds GetAttributeMetaIds() const;
+	virtual const iattr::IAttributeMetaInfo* GetAttributeMetaInfo(const QByteArray& attributeId) const;
 
 private:
 	const IRealComponentStaticInfo* m_baseComponentPtr;

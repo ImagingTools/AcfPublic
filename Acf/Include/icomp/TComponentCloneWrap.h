@@ -41,7 +41,7 @@ class TComponentCloneWrap: virtual public BaseClass, protected CInterfaceManipBa
 {
 public:
 	// pseudo-reimplemented (istd::IChangeable)
-	virtual istd::IChangeable* CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const override;
+	virtual istd::IChangeable* CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const;
 };
 
 

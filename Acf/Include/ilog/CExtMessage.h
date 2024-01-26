@@ -82,14 +82,14 @@ public:
 	void InsertAttachedObject(const iser::IObject* objectPtr, const QString& description = "");
 
 	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const override;
+	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (iser::IChangeable)
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_STRICT) override;
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_STRICT);
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 	static QByteArray GetTypeName();
 

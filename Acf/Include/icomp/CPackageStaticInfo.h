@@ -62,12 +62,12 @@ public:
 	virtual void RegisterEmbeddedComponentInfo(const QByteArray& embeddedId, const IComponentStaticInfo* componentInfoPtr);
 
 	// reimplemented (icomp::IElementStaticInfo)
-	virtual Ids GetMetaIds(int metaGroupId) const override;
-	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const override;
+	virtual Ids GetMetaIds(int metaGroupId) const;
+	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const;
 
 	// reimplemented (icomp::IComponentStaticInfo)
-	virtual const QString& GetDescription() const override;
-	virtual const QString& GetKeywords() const override;
+	virtual const QString& GetDescription() const;
+	virtual const QString& GetKeywords() const;
 
 private:
 	typedef QMap<QByteArray, const IComponentStaticInfo*> EmbeddedComponentInfos;

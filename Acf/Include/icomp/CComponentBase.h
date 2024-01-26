@@ -65,13 +65,13 @@ public:
 	CComponentBase();
 
 	// reimplemented (icomp::IComponent)
-	virtual const ICompositeComponent* GetParentComponent(bool ownerOnly = false) const override;
-	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const QByteArray& subId = "") override;
-	virtual const IComponentContext* GetComponentContext() const override;
+	virtual const ICompositeComponent* GetParentComponent(bool ownerOnly = false) const;
+	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const QByteArray& subId = "");
+	virtual const IComponentContext* GetComponentContext() const;
 	virtual void SetComponentContext(
 				const icomp::IComponentContext* contextPtr,
 				const ICompositeComponent* parentPtr,
-				bool isParentOwner) override;
+				bool isParentOwner);
 
 protected:
 	/**
@@ -161,7 +161,7 @@ inline bool CComponentBase::IsComponentActive() const
 #define I_END_COMPONENT\
 		return staticInfo;\
 	}\
-    virtual const icomp::IRealComponentStaticInfo& GetComponentStaticInfo() const override\
+	virtual const icomp::IRealComponentStaticInfo& GetComponentStaticInfo() const\
 	{\
 		return InitStaticInfo(NULL);\
 	}

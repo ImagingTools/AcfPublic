@@ -69,8 +69,8 @@ public:
 	bool AttachOrSetObject(ModelInterface* objectPtr);
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
-	virtual bool OnModelDetached(imod::IModel* modelPtr) override;
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 protected:
 	virtual ModelInterface* CastFromModel(imod::IModel* modelPtr) const;

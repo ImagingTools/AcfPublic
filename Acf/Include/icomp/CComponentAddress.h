@@ -66,7 +66,7 @@ public:
 	bool operator<(const CComponentAddress& address) const;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	friend uint qHash(const CComponentAddress& address, uint seed);
 
@@ -130,7 +130,7 @@ inline uint qHash(const CComponentAddress& address, uint seed = 0)
 {
 	Q_UNUSED(seed);
 
-	return uint(qHash(address.m_packageId) + qHash(address.m_packageId));
+	return qHash(address.m_packageId) + qHash(address.m_packageId);
 }
 
 

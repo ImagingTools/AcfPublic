@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CSimpleXmlFileWriteArchive_included
+#define ifile_CSimpleXmlFileWriteArchive_included
 
 
 // Qt includes
@@ -69,5 +70,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CSimpleXmlFileWriteArchive_included
 
 

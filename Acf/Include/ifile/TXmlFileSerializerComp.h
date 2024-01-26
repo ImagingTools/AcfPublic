@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_TXmlFileSerializerComp_included
+#define ifile_TXmlFileSerializerComp_included
 
 
 // Qt includes
@@ -59,11 +60,11 @@ public:
 	virtual int LoadFromFile(
 				istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
 	virtual int SaveToFile(
 				const istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
 
 protected:
 	class ReadArchiveEx: public ReadArchive
@@ -84,19 +85,13 @@ protected:
 		// reimplemented (istd::ILogger)
 		virtual bool IsLogConsumed(
 					const istd::IInformationProvider::InformationCategory* /*categoryPtr*/,
-					const int* flagsPtr = NULL) const override
+					const int* flagsPtr = NULL) const
 		{
 			static const istd::IInformationProvider::InformationCategory slaveCategory = istd::IInformationProvider::IC_INFO;
 
 			return (m_loggerPtr != NULL) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
 		}
-
-		virtual bool SendLogMessage(
-					istd::IInformationProvider::InformationCategory category,
-					int id,
-					const QString& message,
-					const QString& messageSource,
-					int flags = 0) const override
+		virtual bool SendLogMessage(istd::IInformationProvider::InformationCategory category, int id, const QString& message, const QString& messageSource, int flags = 0) const
 		{
 			if (m_loggerPtr != NULL){
 				QString correctedMessage = message;
@@ -125,7 +120,7 @@ protected:
 					bool serializeHeader,
 					const iser::CArchiveTag& rootTag,
 					const TXmlFileSerializerComp* loggerPtr)
-		:WriteArchive(filePath, infoPtr, serializeHeader, rootTag),
+		:	WriteArchive(filePath, infoPtr, serializeHeader, rootTag),
 			m_loggerPtr(loggerPtr)
 		{
 		}
@@ -134,19 +129,13 @@ protected:
 		// reimplemented (istd::ILogger)
 		virtual bool IsLogConsumed(
 					const istd::IInformationProvider::InformationCategory* /*categoryPtr*/,
-					const int* flagsPtr = NULL) const override
+					const int* flagsPtr = NULL) const
 		{
 			static const istd::IInformationProvider::InformationCategory slaveCategory = istd::IInformationProvider::IC_INFO;
 
 			return (m_loggerPtr != NULL) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
 		}
-
-		virtual bool SendLogMessage(
-					istd::IInformationProvider::InformationCategory category,
-					int id,
-					const QString& message,
-					const QString& messageSource,
-					int flags = 0) const override
+		virtual bool SendLogMessage(istd::IInformationProvider::InformationCategory category, int id, const QString& message, const QString& messageSource, int flags = 0) const
 		{
 			if (m_loggerPtr != NULL){
 				QString correctedMessage = message;
@@ -263,15 +252,15 @@ int TXmlFileSerializerComp<ReadArchive, WriteArchive>::SaveToFile(
 // protected methods
 
 template <class ReadArchive, class WriteArchive>
-void TXmlFileSerializerComp<ReadArchive, WriteArchive>::OnReadError(
-			const ReadArchive& /*archive*/,
-			const istd::IChangeable& /*data*/,
-			const QString& filePath) const
+void TXmlFileSerializerComp<ReadArchive, WriteArchive>::OnReadError(const ReadArchive& /*archive*/, const istd::IChangeable& /*data*/, const QString& filePath) const
 {
 	SendWarningMessage(MI_CANNOT_LOAD, QString(QObject::tr("Cannot load object from file ")) + filePath);
 }
 
 
 } // namespace ifile
+
+
+#endif // !ifile_TXmlFileSerializerComp_included
 
 

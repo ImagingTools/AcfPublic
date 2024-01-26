@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CCompactXmlFileWriteArchive_included
+#define ifile_CCompactXmlFileWriteArchive_included
 
 
-// Qt includes
 #include <QtXml/QDomDocument>
 #include <QtXml/QDomNode>
 #include <QtCore/QFile>
@@ -66,7 +66,7 @@ public:
 
 protected:
 	// reimplemented (iser::CTextWriteArchiveBase)
-	virtual bool WriteTextNode(const QByteArray& text) override;
+	virtual bool WriteTextNode(const QByteArray& text);
 
 private:
 	QFile m_file;
@@ -74,5 +74,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CCompactXmlFileWriteArchive_included
 
 

@@ -50,13 +50,13 @@ public:
 	CSelectableParamsSetGuiComp();
 
 	// reimplemented (imod::CSingleModelObserverBase)
-	virtual void BeforeUpdate(imod::IModel* modelPtr) override;
-	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void BeforeUpdate(imod::IModel* modelPtr);
+	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void OnGuiModelAttached() override;
-	virtual void OnGuiModelDetached() override;
+	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelDetached();
 
 private:
 	void EnsureDetachLastEditor();

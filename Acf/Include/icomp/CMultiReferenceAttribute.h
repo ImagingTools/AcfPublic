@@ -55,7 +55,7 @@ public:
 	CMultiReferenceAttribute(int elementsCount, QByteArray* valuesPtr);
 
 	// reimplemented (iser::IObject)
-	QByteArray GetFactoryId() const override;
+	QByteArray GetFactoryId() const;
 
 	// static methods
 	static QByteArray GetTypeName();
