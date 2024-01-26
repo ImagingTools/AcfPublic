@@ -54,6 +54,7 @@ public:
 	TComposedColor();
 	TComposedColor(const BaseClass& value);
 	explicit TComposedColor(const imath::CVarVector& vector);
+	TComposedColor<Size>(const TComposedColor<Size>& color) = default;
 
 	/**
 		Get color after components value rounding with specified precision.
@@ -112,7 +113,7 @@ public:
 	const TComposedColor<Size>& operator/=(double value);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
+	virtual bool Serialize(iser::IArchive& archive) override;
 };
 
 

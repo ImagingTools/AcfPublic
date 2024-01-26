@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_CFileTypeInfoComp_included
-#define ifile_CFileTypeInfoComp_included
+#pragma once
 
 
 // ACF includes
@@ -58,8 +57,8 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ifile::IFileTypeInfo)
-	virtual bool GetFileExtensions(QStringList& result, const istd::IChangeable* dataObjectPtr = NULL, int flags = -1, bool doAppend = false) const;
-	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const;
+	virtual bool GetFileExtensions(QStringList& result, const istd::IChangeable* dataObjectPtr = NULL, int flags = -1, bool doAppend = false) const override;
+	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const override;
 
 private:
 	I_MULTIATTR(QString, m_fileExtensionsAttrPtr);
@@ -74,8 +73,5 @@ private:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_CFileTypeInfoComp_included
 
 

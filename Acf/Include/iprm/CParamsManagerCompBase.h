@@ -28,7 +28,7 @@
 #include <QtCore/QVector>
 
 // ACF includes
-#include <istd/TSmartPtr.h>
+#include <istd/TDelPtr.h>
 #include <imod/TModelWrap.h>
 #include <imod/CModelUpdateBridge.h>
 #include <icomp/CComponentBase.h>
@@ -57,7 +57,7 @@ public:
 		I_ASSIGN_MULTI_0(m_fixedSetNamesAttrPtr, "FixedSetNames", "List of fixed parameter names", false);
 		I_ASSIGN_MULTI_0(m_fixedSetDescriptionsAttrPtr, "FixedSetDescriptions", "List of fixed parameter descriptions", false);
 		I_ASSIGN_MULTI_0(m_fixedSetIdsAttrPtr, "FixedSetIds", "List of fixed parameter IDs", false);
-		I_ASSIGN(m_defaultSetNameAttrPtr, "DefaultSetName", "Default name of parameter set. Use %1 to insert automatic enumeration", true, "<noname>");
+		I_ASSIGN(m_defaultSetNameAttrPtr, "DefaultSetName", "Default name of parameter set. Use %1 to insert automatic enumeration, %0 to substitute name of the corresponding factory (MultiParams only)", true, "<noname>");
 		I_ASSIGN(m_serializeSelectionAttrPtr, "SerializeSelection", "If enabled, the current parameter set selection will be serialized", true, true);
 		I_ASSIGN(m_defaultSelectedIndexAttrPtr, "DefaultSelection", "If enabled, the given parameter set will be automatically selected", false, -1);
 		I_ASSIGN(m_allowDisabledAttrPtr, "AllowDisabled", "Control if disabled parameters are supported", true, false);
@@ -140,9 +140,11 @@ public:
 
 protected:
 	void EnsureParamsSetModelDetached(iprm::IParamsSet* paramsSetPtr) const;
-	QString CalculateNewDefaultName() const;
 	int FindParamSetIndex(const QString& name) const;
 	int FindFixedParamSetIndex(const QString& name) const;
+
+	// virtual methods
+	virtual QString CalculateNewDefaultName(int typeIndex = -1) const;
 
 	// abstract methods
 
@@ -250,7 +252,7 @@ protected:
 		CParamsManagerCompBase* parentPtr;
 	};
 
-	typedef istd::TSmartPtr<ParamSet> ParamSetPtr;
+	typedef istd::TDelPtr<ParamSet> ParamSetPtr;
 
 	typedef QList<ParamSetPtr> ParamSets;
 

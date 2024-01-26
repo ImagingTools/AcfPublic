@@ -78,7 +78,7 @@ protected:
 	QIcon GetCategoryIcon(int category) const;
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
+	virtual void OnComponentCreated() override;
 
 private:
 	void CreateMessageText(QString& messageText, QString& detailedText, QIcon& statusIcon) const;
