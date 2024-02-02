@@ -20,13 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef iqtdoc_CExtendedDocumentTemplateComp_included
-#define iqtdoc_CExtendedDocumentTemplateComp_included
+#pragma once
 
 
 // ACF includes
 #include <idoc/CSingleDocumentTemplateComp.h>
-
 #include <iqtgui/IGuiObject.h>
 
 
@@ -47,11 +45,11 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (idoc::IDocumentTemplate)
-	virtual Ids GetDocumentTypeIdsForFile(const QString& filePath) const;
+	virtual Ids GetDocumentTypeIdsForFile(const QString& filePath) const override;
 
 protected:
 	// reimplemented (idoc::CSingleDocumentTemplateComp)
-	virtual istd::IPolymorphic* ExtractViewInterface(icomp::IComponent* componentPtr) const;
+	virtual istd::IPolymorphic* ExtractViewInterface(icomp::IComponent* componentPtr) const override;
 
 private:
 	I_FACT(iqtgui::IGuiObject, m_viewGuiCompFact);
@@ -59,8 +57,5 @@ private:
 
 
 } // namespace iqtdoc
-
-
-#endif // !iqtdoc_CExtendedDocumentTemplateComp_included
 
 

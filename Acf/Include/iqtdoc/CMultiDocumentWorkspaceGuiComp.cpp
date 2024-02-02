@@ -34,6 +34,8 @@
 #include <QtGui/QMessageBox>
 #include <QtGui/QTabBar>
 #endif
+#include <QtGui/QGuiApplication>
+
 
 // ACF includes
 #include <istd/CChangeNotifier.h>
@@ -131,6 +133,24 @@ void CMultiDocumentWorkspaceGuiComp::OnTryClose(bool* ignoredPtr)
 
 	if (ignoredPtr != NULL){
 		*ignoredPtr = (GetDocumentsCount() > 0);
+	}
+}
+
+
+void CMultiDocumentWorkspaceGuiComp::OnGuiDesignChanged()
+{
+	Q_ASSERT(IsGuiCreated());
+
+	BaseClass::OnGuiDesignChanged();
+
+	if (!m_workspaceBackgroundColorAttrPtr.IsValid()){
+		QMdiArea* workspacePtr = GetQtWidget();
+		Q_ASSERT(workspacePtr != nullptr);
+
+		Q_ASSERT(qApp != nullptr);
+		QPalette palette = ((QGuiApplication*)qApp)->palette();
+
+		workspacePtr->setBackground(palette.color(QPalette::Window));
 	}
 }
 

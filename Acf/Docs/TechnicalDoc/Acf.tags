@@ -17350,8 +17350,8 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a21cea3767ea3bbdd6bf363fa64b6493b</anchor>
-      <arglist>() const</arglist>
+      <anchor>aa45ad59a06f4d44a4646f8a1c2e04420</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -17371,22 +17371,22 @@
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a7ba9b66d43a71fe746c7bb77b03aa807</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a96c119543ebb8450228fe2499e9b96f3</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a63a09f8aba936edeea29efc64feabbcc</anchor>
-      <arglist>()</arglist>
+      <anchor>a5fc083647a399ceea5b97ff43a077968</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtdoc_1_1_c_document_import_export_command_comp.html</anchorfile>
-      <anchor>a380b4617f49715a00b4260e513e1202f</anchor>
-      <arglist>()</arglist>
+      <anchor>a75a7efd376503c111b0ef3a1da21ccf8</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -17460,29 +17460,29 @@
       <type>virtual void</type>
       <name>OnGuiModelAttached</name>
       <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
-      <anchor>af478835f0a896624f96c70b1284a601d</anchor>
-      <arglist>()</arglist>
+      <anchor>aea03004285cde7624bbb3e64364d6664</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiModelDetached</name>
       <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
-      <anchor>a8a1eb70deb856e71d11939922047ee35</anchor>
-      <arglist>()</arglist>
+      <anchor>a446e729dc7a8eaa3b3690506716af098</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateGui</name>
       <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
-      <anchor>a7cd16a97fb5dbfb5cbd3455d6b5cf3d2</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a9b0829f0e82ed0715c018110c1abf78d</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_document_meta_info_editor_comp.html</anchorfile>
-      <anchor>aeb05edd41a85c265cd0aa4873832fecb</anchor>
-      <arglist>()</arglist>
+      <anchor>a6df517fd4198e41cbb22ebd806655c57</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -17982,15 +17982,15 @@
       <type>virtual double</type>
       <name>GetHelpQuality</name>
       <anchorfile>classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html</anchorfile>
-      <anchor>a65f6d7abab3e0fce880c9b69d36969bc</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const</arglist>
+      <anchor>ac645cac33dee7278e10cfa95e5ceb688</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetHelpFilePath</name>
       <anchorfile>classiqtdoc_1_1_c_doxygen_help_file_provider_comp.html</anchorfile>
-      <anchor>a096c827c79d56c63cb0cccf05e754512</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const</arglist>
+      <anchor>ada9829eb0675095c3df79f140fbafaea</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::CClassInfo</type>
@@ -18560,15 +18560,15 @@
       <type>virtual Ids</type>
       <name>GetDocumentTypeIdsForFile</name>
       <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>aa8a356efb6de896e5853feee74d6eaca</anchor>
-      <arglist>(const QString &amp;filePath) const</arglist>
+      <anchor>a9402a0d308f9ac2d9a7bb5fc9a6a0d6c</anchor>
+      <arglist>(const QString &amp;filePath) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual istd::IPolymorphic *</type>
       <name>ExtractViewInterface</name>
       <anchorfile>classiqtdoc_1_1_c_extended_document_template_comp.html</anchorfile>
-      <anchor>a4057bce13d2546bb7b8bbc98137b87c6</anchor>
-      <arglist>(icomp::IComponent *componentPtr) const</arglist>
+      <anchor>abded589b324e1e0115d7985fa937b6ad</anchor>
+      <arglist>(icomp::IComponent *componentPtr) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -18594,36 +18594,36 @@
       <type>virtual const istd::IChangeable *</type>
       <name>GetDocumentPtr</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>aa16b9d3efc226787f973639c9d20fac6</anchor>
-      <arglist>() const</arglist>
+      <anchor>a73f4143d6703896e83ca12f834a726bf</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CreateMenu</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>a5a32ef7d9314896002cabd391790d7d2</anchor>
-      <arglist>()</arglist>
+      <anchor>a225c4464ac0607db9bd7337a97055164</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>a35bfedcb9eff75e7739818bc885585b6</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a01cf4fb9816e3a5f3ff6da3084bec735</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>a8679b6ff2daadcfac7aeac57b8b951a5</anchor>
-      <arglist>()</arglist>
+      <anchor>a0e03b7a9e65cffb375844a1f3405f4a5</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtdoc_1_1_c_external_open_document_command_comp.html</anchorfile>
-      <anchor>a2ddfc39a6def24e83c02f00c98073127</anchor>
-      <arglist>()</arglist>
+      <anchor>ae825b18177768daa52e6bd7eafece0a1</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22485,29 +22485,29 @@
       <type>virtual double</type>
       <name>GetHelpQuality</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
-      <anchor>a515d7d5408d783f39c065cc685d630c9</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const</arglist>
+      <anchor>aaf68d4efa4433cd9b7507fed01c56fba</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ShowHelp</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
-      <anchor>ab5ce3743718cae5ec7a8c4f1a4c352cb</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr)</arglist>
+      <anchor>a5864d383cfa25e3fbbbf869716df798b</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
-      <anchor>a29d97a7639d327e00428c751fabb55f8</anchor>
-      <arglist>()</arglist>
+      <anchor>ada66219fc265e156beef6273c30efd2e</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiShown</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_gui_comp.html</anchorfile>
-      <anchor>a60fe9c9243713f42a819015d9d91cf9f</anchor>
-      <arglist>()</arglist>
+      <anchor>a5d264b70d57ee04debbc8e37f9fb4879</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -22526,15 +22526,15 @@
       <type>virtual double</type>
       <name>GetHelpQuality</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
-      <anchor>a00cf859da7a70662727746cf51782809</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const</arglist>
+      <anchor>a671b31b6dfc858f38354eeada470f1f9</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ShowHelp</name>
       <anchorfile>classiqtdoc_1_1_c_html_help_viewer_comp.html</anchorfile>
-      <anchor>acc2789b3f51190c66cf7486144719572</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr)</arglist>
+      <anchor>a71594cc736d8f7c0b55ee9583affc22f</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -26113,15 +26113,15 @@
       <type>virtual bool</type>
       <name>OnModelAttached</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a6aa8e75cd8e75c9d302d5086607ce36c</anchor>
-      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask)</arglist>
+      <anchor>a4fb80a48a30778e0f83e370526892bc0</anchor>
+      <arglist>(imod::IModel *modelPtr, istd::IChangeable::ChangeSet &amp;changeMask) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>OnModelDetached</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a19730be3ed994b87e5502f985688636b</anchor>
-      <arglist>(imod::IModel *modelPtr)</arglist>
+      <anchor>abdc9efbf4afc71c3c00c936cd5541ef7</anchor>
+      <arglist>(imod::IModel *modelPtr) override</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -26288,71 +26288,78 @@
       <type>virtual void</type>
       <name>UpdateFixedCommands</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aaf4283360bfbf112011c5fbad7bea239</anchor>
-      <arglist>(iqtgui::CHierarchicalCommand &amp;fixedCommands)</arglist>
+      <anchor>a7dbad85a3668f9b93ab1d16dac7fceea</anchor>
+      <arglist>(iqtgui::CHierarchicalCommand &amp;fixedCommands) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>UpdateToolsCommands</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a88e7730a908da53d17f9322cf5127678</anchor>
-      <arglist>(iqtgui::CHierarchicalCommand &amp;toolsCommand)</arglist>
+      <anchor>a8dd8d51e1a221fa8abed715d51bfe472</anchor>
+      <arglist>(iqtgui::CHierarchicalCommand &amp;toolsCommand) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>AppendMenuActions</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>ade3896cc69b4f9dc0c94f07ea21dd54a</anchor>
-      <arglist>(iqtgui::CHierarchicalCommand &amp;menuCommands)</arglist>
+      <anchor>a44cfc7686e25b7a55e5d6b8206f71470</anchor>
+      <arglist>(iqtgui::CHierarchicalCommand &amp;menuCommands) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aedfd809588364a895120243984adf2e4</anchor>
-      <arglist>()</arglist>
+      <anchor>a672067f00d173486a80e4849ddbb7f74</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a845cfdf0201639524f85eef67b7c2226</anchor>
-      <arglist>()</arglist>
+      <anchor>ad6c3044ede081d4c24206cd6af6a24c9</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnRetranslate</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a1f0cc857873dadccccd5415e0139aae2</anchor>
-      <arglist>()</arglist>
+      <anchor>a16a9f873df9099436a173ce48e249522</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
+      <anchor>afe5ae1ee4430d523e4038ccc8df8e38c</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnUpdate</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>a10242b359fa213edcf3670661064cbec</anchor>
-      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>a83d789e0bdf07498f59058c6b6c81015</anchor>
+      <arglist>(const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>eventFilter</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aa8fe69479358817729eb1112e7b2cdf0</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+      <anchor>ab20bbfdb17956d27a3a5c46a56132c93</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>aa4c08680ba47610cdcf552c2a2dd56bd</anchor>
-      <arglist>()</arglist>
+      <anchor>ad843233b27d4313afb5efdb76c6b3b2b</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiqtdoc_1_1_c_main_window_gui_comp.html</anchorfile>
-      <anchor>ab4bb233368b482a0974f874a180a9ab6</anchor>
-      <arglist>()</arglist>
+      <anchor>a939236da2b136cd57ca00a727e62682c</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -28630,22 +28637,29 @@
       <type>virtual void</type>
       <name>SetActiveView</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a3dc37b89d22078bc13bd2c51be10e2cc</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+      <anchor>a4de971c4cb04cfe315cc98b1e710dbb8</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a92ace470d23646e33788eb7dae3ce453</anchor>
-      <arglist>() const</arglist>
+      <anchor>a29e4747670ba5caa16c3aa6928dc9af3</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnTryClose</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>ae079d6babcdb0c53964d21bec7d7cf40</anchor>
-      <arglist>(bool *ignoredPtr=NULL)</arglist>
+      <anchor>a95514c47edfd013b8bc66d0f7f14471c</anchor>
+      <arglist>(bool *ignoredPtr=NULL) override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual void</type>
+      <name>OnGuiDesignChanged</name>
+      <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
+      <anchor>a859771b860328254b516486bd771da6b</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -28700,106 +28714,106 @@
       <type>virtual istd::IChangeable *</type>
       <name>OpenSingleDocument</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a24a2819218fc5d2225dc42801bc3180a</anchor>
-      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr, ibase::IProgressManager *progressManagerPtr)</arglist>
+      <anchor>ae787bc5c2d5ab697f5e0fd2f079a864d</anchor>
+      <arglist>(const QString &amp;filePath, bool createView, const QByteArray &amp;viewTypeId, QByteArray &amp;documentTypeId, bool beQuiet, bool *ignoredPtr, ibase::IProgressManager *progressManagerPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>eventFilter</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a4a93ddf0897a72a4614b376f0e85216e</anchor>
-      <arglist>(QObject *sourcePtr, QEvent *eventPtr)</arglist>
+      <anchor>a4b02feb0360c5784c000c35df750eb21</anchor>
+      <arglist>(QObject *sourcePtr, QEvent *eventPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>adcde0bb0f99debe54e1fa7e0c3772dea</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
+      <anchor>a176ee3eb5e92efddf62ac69f63876cc7</anchor>
+      <arglist>(const QSettings &amp;settings) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSaveSettings</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>aa4d8551c80eed865e485fa7542ba2d43</anchor>
-      <arglist>(QSettings &amp;settings) const</arglist>
+      <anchor>a33d1bf9fbc2dbf66df2a4a6c701dc82e</anchor>
+      <arglist>(QSettings &amp;settings) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>CloseAllDocuments</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a80ae2ccd161eb6165365120d399568db</anchor>
-      <arglist>()</arglist>
+      <anchor>a20906d6ca0eedba8fccbda9fd67d83dd</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual QStringList</type>
       <name>GetOpenFilePaths</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>aa30ecd075b80116fcbd83e7472928769</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const</arglist>
+      <anchor>a8b838de607f99baed38d37bebddad2cb</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnViewRegistered</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>ae4e87b5c49cb7f95808d318f193b454c</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr, const SingleDocumentData &amp;documentData)</arglist>
+      <anchor>a5826b699dc499553bbe1d0eaed682bd8</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr, const SingleDocumentData &amp;documentData) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnViewRemoved</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>ada320e04b54d2643207ec49f42fb59b3</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+      <anchor>ac0159ca3cea5ef406c77c6bacf105d17</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>QueryDocumentSave</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a765391a61a2b335d598ae90cdf9f95c6</anchor>
-      <arglist>(const SingleDocumentData &amp;info, bool *ignoredPtr)</arglist>
+      <anchor>a35e802d03c2e6b8f32d1a0ffe56ad2e7</anchor>
+      <arglist>(const SingleDocumentData &amp;info, bool *ignoredPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a5c9420509bf5281e2e7b6a6cd0044987</anchor>
-      <arglist>()</arglist>
+      <anchor>a115e51b9def027aee0126e344e373a69</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a8305c96220199c63102571d512f112f1</anchor>
-      <arglist>()</arglist>
+      <anchor>ac877520e7e61697a9c273234ffd68c5c</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnRetranslate</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>adcf6b5c3fc6195386fe8307f0c91b690</anchor>
-      <arglist>()</arglist>
+      <anchor>a26dbff33907973145d1e7f73917ec73e</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiRetranslate</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a55f35caeaef529733737bf0761ecaee2</anchor>
-      <arglist>()</arglist>
+      <anchor>a178b7eca20c2af4683ef353700092000</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a8ef6732602a37df26dfbd5b7d68f9686</anchor>
-      <arglist>()</arglist>
+      <anchor>a893696f2f88224d1ae74ac33ccc7e81f</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndChanges</name>
       <anchorfile>classiqtdoc_1_1_c_multi_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a19f8fae81ea37bd945fe235beb8495f7</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+      <anchor>a2cbada71890c2b7a8cd4f5c914ffc861</anchor>
+      <arglist>(const ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="friend">
       <type>friend class</type>
@@ -42527,15 +42541,15 @@
       <type>virtual void</type>
       <name>SetActiveView</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a778ec972d0767c55d73f66a0547814ce</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+      <anchor>a3894d3566752721a62fc6e42fd319875</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnTryClose</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a986df33f813c864414ccd7463ccc8443</anchor>
-      <arglist>(bool *ignoredPtr=NULL)</arglist>
+      <anchor>a9beb293817abf59c0bb6972ed4927922</anchor>
+      <arglist>(bool *ignoredPtr=NULL) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -42555,78 +42569,78 @@
       <type>virtual QString</type>
       <name>GetOpenFilePath</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a9d8cd5c5f7a927da3e46f5eaf74cbb3a</anchor>
-      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const</arglist>
+      <anchor>ae60830d3d92810913d6a6903a53e3f65</anchor>
+      <arglist>(const QByteArray *documentTypeIdPtr=NULL) const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnViewRegistered</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a3890bb92f83a28794693780eecc63847</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+      <anchor>af6e6c116e8accf1dc5669f80ccb2b4cd</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnViewRemoved</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>aeb65477e13d111577a5b4197e75e4963</anchor>
-      <arglist>(istd::IPolymorphic *viewPtr)</arglist>
+      <anchor>a28cb50214d6fecaa8e9b237024f7d033</anchor>
+      <arglist>(istd::IPolymorphic *viewPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnDocumentRegistered</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>ae69ed87da4de91714e849363aadcaadd</anchor>
-      <arglist>()</arglist>
+      <anchor>a34f6a86cfe44ee88109c8c185fcf9008</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnDocumentClosed</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>afb9127c8b4524571a2e96b65af91e9d2</anchor>
-      <arglist>()</arglist>
+      <anchor>a011978148a73d3e7a144a91565abef53</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>QueryDocumentSave</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a8ff556b0bf7a11a033fc2401bf0c84c5</anchor>
-      <arglist>(bool *ignoredPtr)</arglist>
+      <anchor>a5f412a632aa3e7290837ffd17ba53b98</anchor>
+      <arglist>(bool *ignoredPtr) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a1d32fd9c978d4a5e521dbab764436f8e</anchor>
-      <arglist>()</arglist>
+      <anchor>a68cfcd241cc9370962e0e3f377022611</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a9a2374bbc870c07b88608211b47ef5c6</anchor>
-      <arglist>()</arglist>
+      <anchor>a479b2fbefe2a8bdff839999b14e41f9b</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>aa850551d1013f94eb821ad6debe10ace</anchor>
-      <arglist>()</arglist>
+      <anchor>ad2058b01ee2723326b253c55f9dbef27</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnEndChanges</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>a74509255352279895bb69b87a791fb56</anchor>
-      <arglist>(const ChangeSet &amp;changeSet)</arglist>
+      <anchor>ac2a71175c28f805b6955787c2d397d06</anchor>
+      <arglist>(const ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
       <anchorfile>classiqtdoc_1_1_c_single_document_workspace_gui_comp.html</anchorfile>
-      <anchor>af42445991a29be81209d923ebd727dd1</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
+      <anchor>a1cf0e27701f100a21d1c27a649913654</anchor>
+      <arglist>(const QSettings &amp;settings) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
@@ -42798,29 +42812,29 @@
       <type>virtual bool</type>
       <name>InitializeApplication</name>
       <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
-      <anchor>a7192448b4560dfdc0afdb8bc1fd527d6</anchor>
-      <arglist>(int argc, char **argv)</arglist>
+      <anchor>a4ff2b39895bf03a0d2d01cf75e8f15d8</anchor>
+      <arglist>(int argc, char **argv) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>Execute</name>
       <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
-      <anchor>ab584649d413025e79a05a2753de3ec96</anchor>
-      <arglist>(int argc, char **argv)</arglist>
+      <anchor>ab186bac419af31ccc993219ca2128efc</anchor>
+      <arglist>(int argc, char **argv) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetHelpText</name>
       <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
-      <anchor>ad5736ec34c3da819adeed74f5ebe4d20</anchor>
-      <arglist>() const</arglist>
+      <anchor>a00ce586d4ad969126f4939ae7b048932</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QStringList</type>
       <name>GetApplicationArguments</name>
       <anchorfile>classiqtdoc_1_1_c_singleton_doc_application_comp.html</anchorfile>
-      <anchor>aa2f867f2f7bdbc0ecee20ca6d3fb6b07</anchor>
-      <arglist>() const</arglist>
+      <anchor>af05c78753dfbdbdda045a7c59597904f</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
@@ -43957,15 +43971,15 @@
       <type>virtual double</type>
       <name>GetHelpQuality</name>
       <anchorfile>classiqtdoc_1_1_c_static_help_file_provider_comp.html</anchorfile>
-      <anchor>a7dd4e0b2ff0fb7a329f8033d5e22a3ac</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const</arglist>
+      <anchor>a54cee4c34c8790479fa067e7ea653cee</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
       <name>GetHelpFilePath</name>
       <anchorfile>classiqtdoc_1_1_c_static_help_file_provider_comp.html</anchorfile>
-      <anchor>a27213392d365b04c4dcf22f837041e5d</anchor>
-      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const</arglist>
+      <anchor>a727218e27b6c1c76b43b33b08bf03de7</anchor>
+      <arglist>(const QString &amp;contextText, const istd::IPolymorphic *contextObjectPtr) const override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -81262,15 +81276,15 @@
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a943e07ce3fa46e4e722c1b064e72c6cb</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
+      <anchor>a8c30965c34202c22ba38d1de2e8e3bd5</anchor>
+      <arglist>(const QSettings &amp;settings) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSaveSettings</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aa77a0e8eda110104d732aa450bebec26</anchor>
-      <arglist>(QSettings &amp;settings) const</arglist>
+      <anchor>a3b1e4d501cc0fb7763cd91701800fca6</anchor>
+      <arglist>(QSettings &amp;settings) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -81324,15 +81338,15 @@
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a943e07ce3fa46e4e722c1b064e72c6cb</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
+      <anchor>a8c30965c34202c22ba38d1de2e8e3bd5</anchor>
+      <arglist>(const QSettings &amp;settings) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSaveSettings</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aa77a0e8eda110104d732aa450bebec26</anchor>
-      <arglist>(QSettings &amp;settings) const</arglist>
+      <anchor>a3b1e4d501cc0fb7763cd91701800fca6</anchor>
+      <arglist>(QSettings &amp;settings) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -81386,15 +81400,15 @@
       <type>virtual void</type>
       <name>OnRestoreSettings</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>a943e07ce3fa46e4e722c1b064e72c6cb</anchor>
-      <arglist>(const QSettings &amp;settings)</arglist>
+      <anchor>a8c30965c34202c22ba38d1de2e8e3bd5</anchor>
+      <arglist>(const QSettings &amp;settings) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnSaveSettings</name>
       <anchorfile>classiqtdoc_1_1_t_qt_document_manager_wrap.html</anchorfile>
-      <anchor>aa77a0e8eda110104d732aa450bebec26</anchor>
-      <arglist>(QSettings &amp;settings) const</arglist>
+      <anchor>a3b1e4d501cc0fb7763cd91701800fca6</anchor>
+      <arglist>(QSettings &amp;settings) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>

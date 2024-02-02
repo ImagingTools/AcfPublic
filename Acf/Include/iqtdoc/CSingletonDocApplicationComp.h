@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef iqtdoc_CSingletonDocApplicationComp_included
-#define iqtdoc_CSingletonDocApplicationComp_included
+#pragma once
 
 
 // Qt includes
@@ -72,10 +71,10 @@ public:
 	CSingletonDocApplicationComp();
 
 	// reimplemented (ibase::IApplication)
-	virtual bool InitializeApplication(int argc, char** argv);
-	virtual int Execute(int argc, char** argv);
-	virtual QString GetHelpText() const;
-	virtual QStringList GetApplicationArguments() const;
+	virtual bool InitializeApplication(int argc, char** argv) override;
+	virtual int Execute(int argc, char** argv) override;
+	virtual QString GetHelpText() const override;
+	virtual QStringList GetApplicationArguments() const override;
 
 protected:
 	// reimplemented (imod::CSingleModelObserverBase)
@@ -131,6 +130,4 @@ private:
 
 } // namespace iqtdoc
 
-
-#endif // !iqtdoc_CSingletonDocApplicationComp_included
 
