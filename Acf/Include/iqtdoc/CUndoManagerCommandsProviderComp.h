@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef iqtdoc_CUndoCommandsProviderComp_included
-#define iqtdoc_CUndoCommandsProviderComp_included
+#pragma once
 
 
 // Qt includes
@@ -61,15 +60,15 @@ public:
 	CUndoManagerCommandsProviderComp();
 
 	// reimplemented (ibase::ICommandsProvider)
-	virtual const ibase::IHierarchicalCommand* GetCommands() const;
+	virtual const ibase::IHierarchicalCommand* GetCommands() const override;
 
 protected:
 	// reimplemented from (imod::CSingleModelObserverBase)
-	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
-	virtual void OnComponentDestroyed();
+	virtual void OnComponentCreated() override;
+	virtual void OnComponentDestroyed() override;
 
 private Q_SLOTS:
 	void OnUndoCommand();
@@ -87,8 +86,5 @@ private:
 
 
 } // namespace iqtdoc
-
-
-#endif // !iqtdoc_CUndoCommandsProviderComp_included
 
 

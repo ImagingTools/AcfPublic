@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef iqtdoc_TQtDocumentManagerWrap_included
-#define iqtdoc_TQtDocumentManagerWrap_included
+#pragma once
 
 
 // Qt includes
@@ -31,7 +30,6 @@
 #else
 #include <QtGui/QFileDialog>
 #endif
-
 
 // ACF includes
 #include <idoc/IDocumentManager.h>
@@ -53,8 +51,8 @@ public:
 	typedef typename BaseClass::Ids Ids;
 
 	// pseudo-reimplemented (iqtgui::TRestorableGuiWrap)
-	virtual void OnRestoreSettings(const QSettings& settings);
-	virtual void OnSaveSettings(QSettings& settings) const;
+	virtual void OnRestoreSettings(const QSettings& settings) override;
+	virtual void OnSaveSettings(QSettings& settings) const override;
 
 	// pseudo-reimplemented (idoc::CSingleDocumentManagerBase)
 	virtual QString GetSaveFilePath(const QByteArray& documentTypeId, const istd::IChangeable* dataObjectPtr, const QString& currentFilePath) const;
@@ -189,8 +187,5 @@ QStringList TQtDocumentManagerWrap<Base, Gui>::GetOpenFilePathesFromDialog(const
 
 
 } // namespace iqtdoc
-
-
-#endif // !iqtdoc_TQtDocumentManagerWrap_included
 
 

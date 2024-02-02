@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef iqtdoc_CHtmlHelpViewerComp_included
-#define iqtdoc_CHtmlHelpViewerComp_included
+#pragma once
 
 
 // Qt includes
@@ -59,10 +58,10 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (idoc::IHelpInfoProvider)
-	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
+	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const override;
 
 	// reimplemented (idoc::IHelpViewer)
-	virtual void ShowHelp(const QString& contextText, const istd::IPolymorphic* contextObjectPtr);
+	virtual void ShowHelp(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) override;
 
 private:
 	I_REF(idoc::IHelpFileProvider, m_helpFileProviderCompPtr);
@@ -72,8 +71,5 @@ private:
 
 
 } // namespace iqtdoc
-
-
-#endif // !iqtdoc_CHtmlHelpViewerComp_included
 
 
