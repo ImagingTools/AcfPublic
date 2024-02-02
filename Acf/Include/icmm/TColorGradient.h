@@ -55,8 +55,8 @@ public:
 	TColorGradient(const GradientColor& startColor, const GradientColor& endColor);
 
 	// reimplemented (icmm::IColorTransformation)
-	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const override;
-	virtual ResultType GetValueAt(const ArgumentType& argument) const override;
+	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const;
+	virtual ResultType GetValueAt(const ArgumentType& argument) const;
 
 private:
 	GradientColor m_startColor;

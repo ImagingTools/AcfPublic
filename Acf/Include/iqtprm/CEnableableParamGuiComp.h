@@ -51,13 +51,13 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiRetranslate() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiRetranslate();
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void OnGuiModelAttached() override;
-	virtual void UpdateModel() const override;
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnGuiModelAttached();
+	virtual void UpdateModel() const;
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 protected Q_SLOTS:
 	void on_EnableableCheck_stateChanged(int state);

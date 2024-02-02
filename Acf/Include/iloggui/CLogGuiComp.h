@@ -151,11 +151,11 @@ protected:
 	virtual bool IsMessageSupported(
 				int messageCategory = -1,
 				int messageId = -1,
-				const istd::IInformationProvider* messagePtr = NULL) const override;
-	virtual void AddMessage(const MessagePtr& messagePtr) override;
+				const istd::IInformationProvider* messagePtr = NULL) const;
+	virtual void AddMessage(const MessagePtr& messagePtr);
 
 	// reimplemented (ilog::IMessageContainer)
-	virtual void ClearMessages() override;
+	virtual void ClearMessages();
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated() override;

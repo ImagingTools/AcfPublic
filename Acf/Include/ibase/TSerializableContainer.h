@@ -46,7 +46,7 @@ public:
 	typedef TContainer<ItemClass, ContainerType> BaseClass;
 
 	// reimplemented (iser::Serializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 protected:
 	// abstract methods

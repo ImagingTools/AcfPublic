@@ -821,14 +821,6 @@ void CMainWindowGuiComp::OnRetranslate()
 }
 
 
-void CMainWindowGuiComp::OnGuiDesignChanged()
-{
-	BaseClass::OnGuiDesignChanged();
-
-	OnRetranslate();
-}
-
-
 // reimplemented (imod::TSingleModelObserverBase)
 
 void CMainWindowGuiComp::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)

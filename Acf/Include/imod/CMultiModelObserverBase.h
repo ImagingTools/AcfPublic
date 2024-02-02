@@ -77,11 +77,11 @@ public:
 	void SetObservedIds(const istd::IChangeable::ChangeSet& changeMask);
 
 	// reimplemented (imod::IObserver)
-	virtual bool IsModelAttached(const IModel* modelPtr) const override;
-	virtual bool OnModelAttached(IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
-	virtual bool OnModelDetached(IModel* modelPtr) override;
-	virtual void BeforeUpdate(IModel* modelPtr) override;
-	virtual void AfterUpdate(IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual bool IsModelAttached(const IModel* modelPtr) const;
+	virtual bool OnModelAttached(IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelDetached(IModel* modelPtr);
+	virtual void BeforeUpdate(IModel* modelPtr);
+	virtual void AfterUpdate(IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 protected:
 	/**

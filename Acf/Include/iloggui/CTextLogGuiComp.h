@@ -54,11 +54,11 @@ public:
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiRetranslate() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiRetranslate();
 
 private Q_SLOTS:
 	void DoFilter();

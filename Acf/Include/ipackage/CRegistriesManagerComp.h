@@ -73,23 +73,23 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (icomp::IExtPackagesManager)
-	virtual PathList GetConfigurationPathList(PathType pathType) const override;
-	virtual int GetPackageDefinitionLevel(const QByteArray& packageId) const override;
+	virtual PathList GetConfigurationPathList(PathType pathType) const;
+	virtual int GetPackageDefinitionLevel(const QByteArray& packageId) const;
 
 	// reimplemented (icomp::IPackagesManager)
-	virtual bool LoadPackages(const QString& configFilePath = QString()) override;
-	virtual int GetPackageType(const QByteArray& packageId) const override;
-	virtual QString GetPackagePath(const QByteArray& packageId) const override;
-	virtual QString GetRegistryPath(const icomp::CComponentAddress& address) const override;
+	virtual bool LoadPackages(const QString& configFilePath = QString());
+	virtual int GetPackageType(const QByteArray& packageId) const;
+	virtual QString GetPackagePath(const QByteArray& packageId) const;
+	virtual QString GetRegistryPath(const icomp::CComponentAddress& address) const;
 
 	// reimplemented (icomp::IRegistriesManager)
-	virtual const icomp::IRegistry* GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr = NULL) const override;
+	virtual const icomp::IRegistry* GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr = NULL) const;
 
 	// reimplemented (icomp::IComponentListProvider)
-	virtual ComponentAddresses GetComponentAddresses(int typeFlag = CTF_ALL) const override;
+	virtual ComponentAddresses GetComponentAddresses(int typeFlag = CTF_ALL) const;
 
 	// reimplemented (icomp::IRegistryLoader)
-	virtual const icomp::IRegistry* GetRegistryFromFile(const QString& path) const override;
+	virtual const icomp::IRegistry* GetRegistryFromFile(const QString& path) const;
 
 protected:
 	void RegisterPackageFile(const QString& file, int definitionLevel);
@@ -99,7 +99,7 @@ protected:
 	bool CheckAndMarkPath(PathList& pathList, const QDir& directory, const QString& path, QString& resultPath) const;
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 private:
 	struct RealPackageInfo

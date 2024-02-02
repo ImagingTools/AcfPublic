@@ -50,22 +50,22 @@ public:
 	CSingleDocumentManagerBase();
 
 	// reimplemented (idoc::IDocumentManager)
-	virtual idoc::IUndoManager* GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const override;
-	virtual int GetDocumentsCount() const override;
-	virtual istd::IChangeable& GetDocumentFromIndex(int index, DocumentInfo* documentInfoPtr = NULL) const override;
-	virtual int GetViewsCount(int documentIndex) const override;
-	virtual istd::IPolymorphic* GetViewFromIndex(int documentIndex, int viewIndex) const override;
-	virtual istd::IPolymorphic* GetActiveView() const override;
-	virtual istd::IChangeable* GetDocumentFromView(const istd::IPolymorphic& view, DocumentInfo* documentInfoPtr = NULL) const override;
-	virtual istd::IPolymorphic* AddViewToDocument(const istd::IChangeable& document, const QByteArray& viewTypeId = QByteArray()) override;
-	virtual QByteArray GetDocumentTypeId(const istd::IChangeable& document) const override;
+	virtual idoc::IUndoManager* GetUndoManagerForDocument(const istd::IChangeable* documentPtr) const;
+	virtual int GetDocumentsCount() const;
+	virtual istd::IChangeable& GetDocumentFromIndex(int index, DocumentInfo* documentInfoPtr = NULL) const;
+	virtual int GetViewsCount(int documentIndex) const;
+	virtual istd::IPolymorphic* GetViewFromIndex(int documentIndex, int viewIndex) const;
+	virtual istd::IPolymorphic* GetActiveView() const;
+	virtual istd::IChangeable* GetDocumentFromView(const istd::IPolymorphic& view, DocumentInfo* documentInfoPtr = NULL) const;
+	virtual istd::IPolymorphic* AddViewToDocument(const istd::IChangeable& document, const QByteArray& viewTypeId = QByteArray());
+	virtual QByteArray GetDocumentTypeId(const istd::IChangeable& document) const;
 	virtual bool InsertNewDocument(
 				const QByteArray& documentTypeId,
 				bool createView = true,
 				const QByteArray& viewTypeId = "",
 				istd::IChangeable** newDocumentPtr = NULL,
 				bool beQuiet = false,
-				bool* ignoredPtr = NULL) override;
+				bool* ignoredPtr = NULL);
 	virtual bool OpenDocument(
 				const QByteArray* documentTypeIdPtr,
 				const QString* fileNamePtr = NULL,
@@ -75,17 +75,17 @@ public:
 				FileToTypeMap* loadedMapPtr = NULL,
 				bool beQuiet = false,
 				bool* ignoredPtr = NULL,
-				ibase::IProgressManager* progressManagerPtr = NULL) override;
+				ibase::IProgressManager* progressManagerPtr = NULL);
 	virtual bool SaveDocument(
 				int documentIndex = -1,
 				bool requestFileName = false,
 				FileToTypeMap* savedMapPtr = NULL,
 				bool beQuiet = false,
 				bool* ignoredPtr = NULL,
-				ibase::IProgressManager* progressManagerPtr = NULL) override;
-	virtual bool SaveDirtyDocuments(bool beQuiet = false, bool* ignoredPtr = NULL) override;
-	virtual bool CloseDocument(int documentIndex = -1, bool beQuiet = false, bool* ignoredPtr = NULL) override;
-	virtual bool CloseView(istd::IPolymorphic* viewPtr = NULL, bool beQuiet = false, bool* ignoredPtr = NULL) override;
+				ibase::IProgressManager* progressManagerPtr = NULL);
+	virtual bool SaveDirtyDocuments(bool beQuiet = false, bool* ignoredPtr = NULL);
+	virtual bool CloseDocument(int documentIndex = -1, bool beQuiet = false, bool* ignoredPtr = NULL);
+	virtual bool CloseView(istd::IPolymorphic* viewPtr = NULL, bool beQuiet = false, bool* ignoredPtr = NULL);
 
 protected:
 	/**
@@ -139,7 +139,7 @@ protected:
 	void OnUndoManagerUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (imod::CSingleModelObserverBase)
-	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// abstract methods
 
@@ -192,7 +192,7 @@ private:
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)
-		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CSingleDocumentManagerBase& m_parent;

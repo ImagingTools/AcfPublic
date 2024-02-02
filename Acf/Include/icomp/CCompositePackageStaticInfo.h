@@ -56,8 +56,8 @@ public:
 	void RegisterEmbeddedComponent(const QByteArray& componentId);
 
 	//	reimplemented (icomp::IComponentStaticInfo)
-	virtual Ids GetMetaIds(int metaGroupId) const override;
-	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const override;
+	virtual Ids GetMetaIds(int metaGroupId) const;
+	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const;
 
 private:
 	struct ComponentInfo

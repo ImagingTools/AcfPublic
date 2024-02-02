@@ -61,13 +61,13 @@ public:
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void OnGuiModelAttached() override;
-	virtual void OnGuiModelDetached() override;
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiDestroyed() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 
 protected:
 	I_MULTIREF(iqtgui::IGuiObject, m_slaveGuisCompPtr);

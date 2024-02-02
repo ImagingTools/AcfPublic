@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iqtdoc_CSingleDocumentWorkspaceGuiComp_included
+#define iqtdoc_CSingleDocumentWorkspaceGuiComp_included
 
 
 // Qt includes
@@ -35,9 +36,11 @@
 #include <ibase/ICommandsProvider.h>
 #include <idoc/IDocumentTemplate.h>
 #include <idoc/CSingleDocumentManagerBase.h>
+
 #include <iqtgui/TGuiComponentBase.h>
 #include <iqtgui/TRestorableGuiWrap.h>
 #include <iqtgui/CHierarchicalCommand.h>
+
 #include <iqtdoc/TQtDocumentManagerWrap.h>
 
 
@@ -79,10 +82,10 @@ public:
 	CSingleDocumentWorkspaceGuiComp();
 
 	// reimplemented (idoc::IDocumentManager)
-	virtual void SetActiveView(istd::IPolymorphic* viewPtr) override;
+	virtual void SetActiveView(istd::IPolymorphic* viewPtr);
 
 	// reimplemented (iqtgui::IGuiObject)
-	virtual void OnTryClose(bool* ignoredPtr = NULL) override;
+	virtual void OnTryClose(bool* ignoredPtr = NULL);
 
 protected:
 	/**
@@ -96,25 +99,25 @@ protected:
 	virtual QString GenerateDocumentTitle() const;
 
 	// reimplemented (idoc::CSingleDocumentManagerBase)
-	virtual QString GetOpenFilePath(const QByteArray* documentTypeIdPtr = NULL) const override;
-	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr) override;
-	virtual void OnViewRemoved(istd::IPolymorphic* viewPtr) override;
-	virtual void OnDocumentRegistered() override;
-	virtual void OnDocumentClosed() override;
-	virtual bool QueryDocumentSave(bool* ignoredPtr) override;
+	virtual QString GetOpenFilePath(const QByteArray* documentTypeIdPtr = NULL) const;
+	virtual void OnViewRegistered(istd::IPolymorphic* viewPtr);
+	virtual void OnViewRemoved(istd::IPolymorphic* viewPtr);
+	virtual void OnDocumentRegistered();
+	virtual void OnDocumentClosed();
+	virtual bool QueryDocumentSave(bool* ignoredPtr);
 
 	// reimplemented (iqt:CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiDestroyed() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 	// reimplemented (istd:IChangeable)
-	virtual void OnEndChanges(const ChangeSet& changeSet) override;
+	virtual void OnEndChanges(const ChangeSet& changeSet);
 
 	// reimplemented (TRestorableGuiWrap)
-	virtual void OnRestoreSettings(const QSettings& settings) override;
+	virtual void OnRestoreSettings(const QSettings& settings);
 
 protected:
 	I_TEXTATTR(m_defaultDocumentTitleAttrPtr);
@@ -130,4 +133,6 @@ protected:
 
 } // namespace iqtdoc
 
+
+#endif // !iqtdoc_CSingleDocumentWorkspaceGuiComp_included
 

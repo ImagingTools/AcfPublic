@@ -20,12 +20,14 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iqtdoc_CDoxygenHelpFileProviderComp_included
+#define iqtdoc_CDoxygenHelpFileProviderComp_included
 
 
-// ACF includes
 #include <icomp/CComponentBase.h>
+
 #include <idoc/IHelpFileProvider.h>
+
 #include <iqtdoc/iqtdoc.h>
 
 
@@ -47,8 +49,8 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (idoc::IHelpFileProvider)
-	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const override;
-	virtual QString GetHelpFilePath(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const override;
+	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
+	virtual QString GetHelpFilePath(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
 
 protected:
 	virtual istd::CClassInfo CalcClassInfo(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
@@ -61,5 +63,8 @@ private:
 
 
 } // namespace iqtdoc
+
+
+#endif // !iqtdoc_CDoxygenHelpFileProviderComp_included
 
 

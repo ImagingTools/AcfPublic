@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CFileNameParamComp_included
+#define ifile_CFileNameParamComp_included
 
 
 // ACF includes
@@ -58,11 +59,11 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ifile::IFileNameParam)
-	virtual int GetPathType() const override;
+	virtual int GetPathType() const;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 private:
 	I_ATTR(QString, m_defaultDirAttrPtr);
@@ -78,5 +79,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CFileNameParamComp_included
 
 

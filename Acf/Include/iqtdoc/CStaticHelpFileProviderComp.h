@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iqtdoc_CStaticHelpFileProviderComp_included
+#define iqtdoc_CStaticHelpFileProviderComp_included
 
 
 // ACF includes
@@ -49,8 +50,8 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (idoc::IHelpFileProvider)
-	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const override;
-	virtual QString GetHelpFilePath(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const override;
+	virtual double GetHelpQuality(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
+	virtual QString GetHelpFilePath(const QString& contextText, const istd::IPolymorphic* contextObjectPtr) const;
 
 private:
 	I_REF(ifile::IFileNameParam, m_helpFileDirCompPtr);
@@ -61,5 +62,8 @@ private:
 
 
 } // namespace iqtdoc
+
+
+#endif // !iqtdoc_CStaticHelpFileProviderComp_included
 
 

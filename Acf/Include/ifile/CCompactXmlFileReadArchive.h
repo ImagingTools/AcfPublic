@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CCompactXmlFileReadArchive_included
+#define ifile_CCompactXmlFileReadArchive_included
 
 
 // Qt includes
@@ -66,7 +67,7 @@ protected:
 				int id,
 				int flags,
 				QString& message,
-				QString& messageSource) const override;
+				QString& messageSource) const;
 
 private:
 	QString m_openFileName;
@@ -74,5 +75,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CCompactXmlFileReadArchive_included
 
 

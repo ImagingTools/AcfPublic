@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iqtdoc_CDocumentImportExportCommandComp_included
+#define iqtdoc_CDocumentImportExportCommandComp_included
 
 
 // ACF includes
@@ -64,15 +65,15 @@ public:
 	CDocumentImportExportCommandComp();
 
 	// reimplemented (ibase::ICommandsProvider)
-	virtual const ibase::IHierarchicalCommand* GetCommands() const override;
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
 protected:
 	// reimplemented (imod::CSingleModelObserverBase)
-	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 protected Q_SLOTS:
 	virtual void OnImport();
@@ -97,6 +98,9 @@ protected:
 };
 
 
-} // namespace iqtdoc
+}  // namespace iqtdoc
+
+
+#endif // !iqtdoc_CDocumentImportExportCommandComp_included
 
 

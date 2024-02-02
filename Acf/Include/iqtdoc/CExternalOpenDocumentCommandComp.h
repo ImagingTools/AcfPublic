@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iqtdoc_CExternalOpenDocumentCommandComp_included
+#define iqtdoc_CExternalOpenDocumentCommandComp_included
 
 
 // ACF includes
@@ -50,17 +51,17 @@ protected:
 	virtual void UpdateCommands();
 
 	// reimplemented (ifilegui::CExternalOpenDocumentCommandCompBase)
-	virtual const istd::IChangeable* GetDocumentPtr() const override;
+	virtual const istd::IChangeable* GetDocumentPtr() const;
 
 	// reimplemented (iqtgui::CStartProcessCommandComp)
-	virtual void CreateMenu() override;
+	virtual void CreateMenu();
 
 	// reimplemented (imod::CSingleModelObserverBase)
-	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
@@ -71,6 +72,9 @@ private:
 };
 
 
-} // namespace iqtdoc
+}  // namespace iqtdoc
+
+
+#endif // iqtdoc_CExternalOpenDocumentCommandComp_included
 
 

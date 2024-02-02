@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CFileWriteArchive_included
+#define ifile_CFileWriteArchive_included
 
 
 // Qt includes
@@ -76,10 +77,10 @@ public:
 	void Flush();
 
 	// reimplemented (iser::IArchive)
-	virtual bool IsTagSkippingSupported() const override;
-	virtual bool BeginTag(const iser::CArchiveTag& tag) override;
-	virtual bool EndTag(const iser::CArchiveTag& tag) override;
-	virtual bool ProcessData(void* data, int size) override;
+	virtual bool IsTagSkippingSupported() const;
+	virtual bool BeginTag(const iser::CArchiveTag& tag);
+	virtual bool EndTag(const iser::CArchiveTag& tag);
+	virtual bool ProcessData(void* data, int size);
 
 protected:
 	struct TagStackElement
@@ -111,4 +112,6 @@ inline bool CFileWriteArchive::IsArchiveValid() const
 
 } // namespace ifile
 
+
+#endif // !ifile_CFileWriteArchive_included
 

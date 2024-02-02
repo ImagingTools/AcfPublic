@@ -70,11 +70,11 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateModel() const override;
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void UpdateModel() const;
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
+	virtual void OnGuiCreated();
 
 private Q_SLOTS:
 	void OnNameChanged(const QString& text);

@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iqtdoc_CMainWindowGuiComp_included
+#define iqtdoc_CMainWindowGuiComp_included
 
 
 // Qt includes
@@ -139,8 +140,8 @@ public:
 	CMainWindowGuiComp();
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
-	virtual bool OnModelDetached(imod::IModel* modelPtr) override;
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelDetached(imod::IModel* modelPtr);
 
 protected:
 	virtual bool OpenFile(const QString& fileName, const QByteArray* documentTypeIdPtr = NULL);
@@ -168,25 +169,24 @@ protected:
 	virtual bool IsMainWindowActive(int index) const;
 
 	// reimplemented (iqtgui::CSimpleMainWindowGuiComp)
-	virtual void UpdateFixedCommands(iqtgui::CHierarchicalCommand& fixedCommands) override;
-	virtual void UpdateToolsCommands(iqtgui::CHierarchicalCommand& toolsCommand) override;
-	virtual void AppendMenuActions(iqtgui::CHierarchicalCommand& menuCommands) override;
+	virtual void UpdateFixedCommands(iqtgui::CHierarchicalCommand& fixedCommands);
+	virtual void UpdateToolsCommands(iqtgui::CHierarchicalCommand& toolsCommand);
+	virtual void AppendMenuActions(iqtgui::CHierarchicalCommand& menuCommands);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiDestroyed() override;
-	virtual void OnRetranslate() override;
-	virtual void OnGuiDesignChanged() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
+	virtual void OnRetranslate();
 
 	// reimplemented (imod::TSingleModelObserverBase)
-	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (QObject)
-	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr) override;
+	virtual bool eventFilter(QObject* sourcePtr, QEvent* eventPtr);
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 protected Q_SLOTS:
 	void OnNew();
@@ -251,11 +251,11 @@ private:
 		explicit ActiveUndoManager(CMainWindowGuiComp& parent);
 
 		// reimplemented (imod::IObserver)
-		virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
+		virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
 
 	protected:
 		// reimplemented (imod::CSingleModelObserverBase)
-		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+		virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		CMainWindowGuiComp& m_parent;
@@ -275,7 +275,7 @@ private:
 
 	protected:
 		// reimplemented (istd::IChangeable)
-		virtual void OnEndChanges(const ChangeSet& changeSet) override;
+		virtual void OnEndChanges(const ChangeSet& changeSet);
 
 	private:
 		CMainWindowGuiComp& m_parent;
@@ -324,5 +324,8 @@ private:
 
 
 } // namespace iqtdoc
+
+
+#endif // !iqtdoc_CMainWindowGuiComp_included
 
 
