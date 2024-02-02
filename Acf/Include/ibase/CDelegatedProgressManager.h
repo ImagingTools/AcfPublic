@@ -71,10 +71,10 @@ public:
 	double GetCumulatedProgress() const;
 
 	// reimplemented (ibase::IProgressManager)
-	virtual int BeginProgressSession(const QByteArray& progressId, const QString& description, bool isCancelable = false);
-	virtual void EndProgressSession(int sessionId);
-	virtual void OnProgress(int sessionId, double currentProgress);
-	virtual bool IsCanceled(int sessionId) const;
+	virtual int BeginProgressSession(const QByteArray& progressId, const QString& description, bool isCancelable = false) override;
+	virtual void EndProgressSession(int sessionId) override;
+	virtual void OnProgress(int sessionId, double currentProgress) override;
+	virtual bool IsCanceled(int sessionId) const override;
 
 protected:
 	int GetOpenSessionsCount() const;
@@ -85,7 +85,7 @@ protected:
 	virtual void OnCancelable(bool cancelState);
 
 	// reimplemented (istd::IChangeable)
-	virtual void OnEndChanges(const ChangeSet& changeSet);
+	virtual void OnEndChanges(const ChangeSet& changeSet) override;
 
 private:
 	struct ProgressInfo

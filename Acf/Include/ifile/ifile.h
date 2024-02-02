@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_included
-#define ifile_included
+#pragma once
 
 
 #include <istd/istd.h>
@@ -41,6 +40,4 @@ namespace ifile
 
 } // namespace ifile
 
-
-#endif // !ifile_included
 
