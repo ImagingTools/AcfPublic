@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CFileReadArchive_included
+#define ifile_CFileReadArchive_included
 
 
 // Qt includes
@@ -62,10 +63,10 @@ public:
 	CFileReadArchive(const QString& filePath, bool supportTagSkipping = true, bool serializeHeader = true);
 
 	// reimplemented (ifile::IArchive)
-	virtual bool IsTagSkippingSupported() const override;
-	virtual bool BeginTag(const iser::CArchiveTag& tag) override;
-	virtual bool EndTag(const iser::CArchiveTag& tag) override;
-	virtual bool ProcessData(void* data, int size) override;
+	virtual bool IsTagSkippingSupported() const;
+	virtual bool BeginTag(const iser::CArchiveTag& tag);
+	virtual bool EndTag(const iser::CArchiveTag& tag);
+	virtual bool ProcessData(void* data, int size);
 	
 protected:
 	struct TagStackElement
@@ -81,10 +82,10 @@ protected:
 				int id,
 				int flags,
 				QString& message,
-				QString& messageSource) const override;
+				QString& messageSource) const;
 
 	// reimplemented (iser::CArchiveBase)
-	virtual int GetMaxStringLength() const override;
+	virtual int GetMaxStringLength() const;
 
 private:
 	QFile m_file;
@@ -98,5 +99,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CFileReadArchive_included
 
 

@@ -52,14 +52,14 @@ public:
 	};
 
 	// reimplemented (iser::IVersionInfo)
-	virtual VersionIds GetVersionIds() const override;
-	virtual bool GetVersionNumber(int versionId, quint32& result) const override;
-	virtual QString GetVersionIdDescription(int versionId) const override;
-	virtual QString GetEncodedVersionName(int versionId, quint32 versionNumber) const override;
+	virtual VersionIds GetVersionIds() const;
+	virtual bool GetVersionNumber(int versionId, quint32& result) const;
+	virtual QString GetVersionIdDescription(int versionId) const;
+	virtual QString GetEncodedVersionName(int versionId, quint32 versionNumber) const;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 private:
 	/**

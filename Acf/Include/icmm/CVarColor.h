@@ -126,7 +126,7 @@ public:
 	const CVarColor& operator/=(double value);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	bool Serialize(iser::IArchive& archive);
 };
 
 

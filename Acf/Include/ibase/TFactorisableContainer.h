@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ibase_TFactorisableContainer_included
+#define ibase_TFactorisableContainer_included
 
 
 // Qt includes
@@ -37,7 +38,7 @@ namespace ibase
 
 
 /**
-	Specific container implementation for factorisable items.
+	Specific container implementation for factorisable items. 
 
 	This container implementation supports following features:
 	\li Automatic memory management for created items
@@ -82,20 +83,17 @@ public:
 	*/
 	QByteArray GetElementKey(int elementIndex) const;
 
-	/**
-		Register factory instance for creation of container items.
-	*/
 	void RegisterItemFactory(istd::TIFactory<InterfaceClass>* itemFactoryPtr);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	bool Serialize(iser::IArchive& archive);
 
 protected:
 	virtual InterfaceClass* CreateElement(const QByteArray& itemKey);
 	virtual void OnElementCreated(InterfaceClass* elementPtr);
 
 	// reimplemented (ibase::TSerializableContainer)
-	virtual bool SerializeItem(ItemClass& item, iser::IArchive& archive, iser::CArchiveTag* parentTagPtr = nullptr) override;
+	virtual bool SerializeItem(ItemClass& item, iser::IArchive& archive, iser::CArchiveTag* parentTagPtr = NULL);
 
 protected:
 	istd::TIFactory<InterfaceClass>* m_itemFactoryPtr;
@@ -105,7 +103,7 @@ protected:
 template <class InterfaceClass>
 TFactorisableContainer<InterfaceClass>::TFactorisableContainer()
 {
-	m_itemFactoryPtr = nullptr;
+	m_itemFactoryPtr = NULL;
 }
 
 
@@ -147,7 +145,7 @@ InterfaceClass* TFactorisableContainer<InterfaceClass>::GetElement(int elementIn
 		return const_cast<InterfaceClass*>(BaseClass::GetAt(elementIndex).first.GetPtr());
 	}
 
-	return nullptr;
+	return NULL;
 }
 
 
@@ -192,7 +190,7 @@ bool TFactorisableContainer<InterfaceClass>::Serialize(iser::IArchive& archive)
 	static iser::CArchiveTag itemTag("Item", "Item", iser::CArchiveTag::TT_GROUP, &itemsTag);
 	static iser::CArchiveTag keyTag("ItemKey", "Factory key of the item", iser::CArchiveTag::TT_LEAF, &itemTag);
 
-	istd::CChangeNotifier notifier(archive.IsStoring()? nullptr: this, &istd::IChangeable::GetAllChanges());
+	istd::CChangeNotifier notifier(archive.IsStoring()? NULL: this, &istd::IChangeable::GetAllChanges());
 	Q_UNUSED(notifier);
 
 	if (!archive.IsStoring()){
@@ -223,7 +221,7 @@ bool TFactorisableContainer<InterfaceClass>::Serialize(iser::IArchive& archive)
 		if (!archive.IsStoring()){
 			item.second = itemKey;
 			InterfaceClass* interfacePtr = CreateElement(itemKey);
-			if (interfacePtr != nullptr){
+			if (interfacePtr != NULL){
 				item.first.SetPtr(interfacePtr);
 
 				BaseClass::PushBack(item);
@@ -251,11 +249,11 @@ bool TFactorisableContainer<InterfaceClass>::Serialize(iser::IArchive& archive)
 template <class InterfaceClass>
 InterfaceClass* TFactorisableContainer<InterfaceClass>::CreateElement(const QByteArray& itemKey)
 {
-	if (m_itemFactoryPtr != nullptr){
+	if (m_itemFactoryPtr != NULL){
 		istd::IPolymorphic* polymorphicPtr = m_itemFactoryPtr->CreateInstance(itemKey);
-		if (polymorphicPtr != nullptr){
+		if (polymorphicPtr != NULL){
 			InterfaceClass* interfacePtr = dynamic_cast<InterfaceClass*>(polymorphicPtr);
-			if (interfacePtr != nullptr){
+			if (interfacePtr != NULL){
 				OnElementCreated(interfacePtr);
 
 				return interfacePtr;
@@ -263,12 +261,12 @@ InterfaceClass* TFactorisableContainer<InterfaceClass>::CreateElement(const QByt
 			else{
 				delete polymorphicPtr;
 				
-				return nullptr;
+				return NULL;
 			}
 		}
 	}
 	
-	return nullptr;
+	return NULL;
 }
 
 
@@ -284,7 +282,7 @@ template <class InterfaceClass>
 bool TFactorisableContainer<InterfaceClass>::SerializeItem(ItemClass& item, iser::IArchive& archive, iser::CArchiveTag* /*parentTagPtr*/)
 {
 	iser::ISerializable* serializablePtr = dynamic_cast<iser::ISerializable*>(item.first.GetPtr());
-	if (serializablePtr != nullptr){
+	if (serializablePtr != NULL){
 		return serializablePtr->Serialize(archive);
 	}
 
@@ -294,4 +292,6 @@ bool TFactorisableContainer<InterfaceClass>::SerializeItem(ItemClass& item, iser
 
 } // namespace ibase
 
+
+#endif // !ibase_TFactorisableContainer_included
 

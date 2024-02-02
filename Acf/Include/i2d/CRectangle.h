@@ -299,38 +299,38 @@ public:
 	operator QRectF() const;
 
 	// reimplemented (i2d::IObject2d)
-	virtual CVector2d GetCenter() const override;
-	virtual void MoveCenterTo(const CVector2d& position) override;
-	virtual CRectangle GetBoundingBox() const override;
+	virtual CVector2d GetCenter() const;
+	virtual void MoveCenterTo(const CVector2d& position);
+	virtual CRectangle GetBoundingBox() const;
 	virtual bool Transform(
 				const ITransformation2d& transformation,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) override;
+				double* errorFactorPtr = NULL);
 	virtual bool InvTransform(
 				const ITransformation2d& transformation,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) override;
+				double* errorFactorPtr = NULL);
 	virtual bool GetTransformed(
 				const ITransformation2d& transformation,
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) const override;
+				double* errorFactorPtr = NULL) const;
 	virtual bool GetInvTransformed(
 				const ITransformation2d& transformation,
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) const override;
+				double* errorFactorPtr = NULL) const;
 
 	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const override;
+	virtual QByteArray GetFactoryId() const;
 	
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IChangeable)
-	virtual int GetSupportedOperations() const override;
-	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual int GetSupportedOperations() const;
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 	// static methods
 	/**

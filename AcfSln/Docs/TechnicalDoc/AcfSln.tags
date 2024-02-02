@@ -12004,148 +12004,141 @@
       <type>virtual bool</type>
       <name>CreateSequence</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a42a851bf7ffe3aa11c8b7f35807a67a2</anchor>
-      <arglist>(int samplesCount, int channelsCount=1) override</arglist>
+      <anchor>a7d81c3228991066bb926d9d0701f23ab</anchor>
+      <arglist>(int samplesCount, int channelsCount=1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateSequenceWithInfo</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a79a20b154b6924a78bb9e25523ac08e6</anchor>
-      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1) override</arglist>
+      <anchor>a8a021f5747dd23089fa8c1c827eb3af1</anchor>
+      <arglist>(const istd::TTransPtr&lt; const IDataSequenceInfo &gt; &amp;infoPtr, int samplesCount=-1, int channelsCount=-1)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const IDataSequenceInfo *</type>
       <name>GetSequenceInfo</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ab62b266632a5464140fc0effdd5bed2a</anchor>
-      <arglist>() const override</arglist>
+      <anchor>a0690359ee6ee5bf4a4eb77e920054041</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsEmpty</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a8ab25807d2bc37d2553754ffaae80e22</anchor>
-      <arglist>() const override</arglist>
+      <anchor>a0c7f33cc3c81971cc3b2602b4e50a4d8</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ResetSequence</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a4fd0f83c24ab2623ad272a42b8136ff7</anchor>
-      <arglist>() override</arglist>
+      <anchor>aaa419955272d59f1a1968a622bea8941</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSamplesCount</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ad79d1a3afeaf20fb0df16edff2812caf</anchor>
-      <arglist>() const override</arglist>
+      <anchor>abc967f581354b4a700deab1baf768f08</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetChannelsCount</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>adf75b5cf066d827f8335b10cfd51289c</anchor>
-      <arglist>() const override</arglist>
+      <anchor>a675df26255b0ff29005b115259fd5c35</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual double</type>
       <name>GetSample</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>aaa86fc1e54bb1dfe129c23a6d4236979</anchor>
-      <arglist>(int index, int channel=0) const override</arglist>
+      <anchor>afc5d6c0a769565b7b60b09db1a3f5da3</anchor>
+      <arglist>(int index, int channel=0) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>SetSample</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ae9f71b73dc557f04071f4f5e114982cf</anchor>
-      <arglist>(int index, int channel, double value) override</arglist>
+      <anchor>a418b1ef75d3a13cbee6a76cfd79c4c46</anchor>
+      <arglist>(int index, int channel, double value)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CreateFunction</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a718c19d17328b17498a074a6d1d1d265</anchor>
-      <arglist>(double *dataPtr, const ArgumentType &amp;sizes) override</arglist>
+      <anchor>a6694c61dbd08da4f072df162c131de20</anchor>
+      <arglist>(double *dataPtr, const ArgumentType &amp;sizes)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTotalSamplesCount</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ac18883d6957c3fbbd5ed8280d14dce4c</anchor>
-      <arglist>() const override</arglist>
+      <anchor>a6df7ce070d7a875076ae2213e5381938</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetGridSize</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a7a9fdfa4b8446fb785333b3af1e1b4e2</anchor>
-      <arglist>(int dimensionIndex) const override</arglist>
-    </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual double</type>
-      <name>GetSampleAt</name>
-      <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a69f19c7ff3e1a25815c3d65d04217ac6</anchor>
-      <arglist>(const SampleIndex &amp;index) const override</arglist>
+      <anchor>a298b2231b0f34771ce1464842678f1bf</anchor>
+      <arglist>(int dimensionIndex) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetLogicalRange</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ad4b79c56e5a965e0a7e0f79b24235c5d</anchor>
-      <arglist>(int dimensionIndex) const override</arglist>
+      <anchor>adcd3736b8313747086534c97c7f4e581</anchor>
+      <arglist>(int dimensionIndex) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::CRange</type>
       <name>GetResultValueRange</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>aa885e57116fd43f42f9a688ad40b61f2</anchor>
-      <arglist>(int dimensionIndex, int resultDimension=-1) const override</arglist>
+      <anchor>a99ea22b15e921e961e521f1b8f0d64d5</anchor>
+      <arglist>(int dimensionIndex, int resultDimension=-1) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a761e033ecf3de9b813cbb36a03e325fe</anchor>
-      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const override</arglist>
+      <anchor>a361df46d4314058572b0a5601f8670b3</anchor>
+      <arglist>(const ArgumentType &amp;argument, ResultType &amp;result) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual ResultType</type>
       <name>GetValueAt</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a5766f65acd75910ac0fde12b709b87b2</anchor>
-      <arglist>(const ArgumentType &amp;argument) const override</arglist>
+      <anchor>a6c62d96a9d5c961c79f7631e5e4e2108</anchor>
+      <arglist>(const ArgumentType &amp;argument) const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>abe90ddbaac2fe6d2c7c083daa36dc6d6</anchor>
-      <arglist>(iser::IArchive &amp;archive) override</arglist>
+      <anchor>a5b9a737242e540a06763ef9a432550ad</anchor>
+      <arglist>(iser::IArchive &amp;archive)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetSupportedOperations</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a61c9b53dbe37a6dd1a5fb84f52061e01</anchor>
-      <arglist>() const override</arglist>
+      <anchor>a7d1d668f2d8203efe9e9efd4ada91ff8</anchor>
+      <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>CopyFrom</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a92481f0cca8490581a9ec35cb095425d</anchor>
-      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
+      <anchor>ae08bffd4dc726916ba7343b3c913fb3b</anchor>
+      <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>a0d5e53a3c75aa50e94046e574032ddbf</anchor>
-      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
+      <anchor>a5dae022c0e50e26b5b9eb81b0079664d</anchor>
+      <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
     </member>
   </compound>
   <compound kind="class">

@@ -24,9 +24,10 @@
 #define ibase_CApplicationInfoComp_included
 
 
-// ACF includes
 #include <iser/IVersionInfo.h>
+
 #include <icomp/CComponentBase.h>
+
 #include <ibase/IApplicationInfo.h>
 
 
@@ -59,16 +60,16 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ibase::IApplicationInfo)
-	virtual QString GetApplicationAttribute(int attributeId, bool allowTranslation = true) const override;
-	virtual int GetMainVersionId() const override;
-	virtual const iser::IVersionInfo& GetVersionInfo() const override;
+	virtual QString GetApplicationAttribute(int attributeId, bool allowTranslation = true) const;
+	virtual int GetMainVersionId() const;
+	virtual const iser::IVersionInfo& GetVersionInfo() const;
 
 protected:
 	// reimplemented (iser::IVersionInfo)
-	virtual bool GetVersionNumber(int versionId, quint32& result) const override;
-	virtual QString GetVersionIdDescription(int versionId) const override;
-	virtual VersionIds GetVersionIds() const override;
-	virtual QString GetEncodedVersionName(int versionId, quint32 versionNumber) const override;
+	virtual bool GetVersionNumber(int versionId, quint32& result) const;
+	virtual QString GetVersionIdDescription(int versionId) const;
+	virtual VersionIds GetVersionIds() const;
+	virtual QString GetEncodedVersionName(int versionId, quint32 versionNumber) const;
 
 private:
 	I_TEXTATTR(m_companyNameAttrPtr);
