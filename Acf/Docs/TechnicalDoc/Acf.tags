@@ -44659,8 +44659,8 @@
       <type>virtual QByteArray</type>
       <name>AddFileItem</name>
       <anchorfile>classifile_1_1_c_temp_file_manager_comp.html</anchorfile>
-      <anchor>adfb8cd8af831af306f1c19cc78d799bc</anchor>
-      <arglist>(const QByteArray &amp;sessionId, const QString &amp;filePath) override</arglist>
+      <anchor>a0d76b15474e0ad1ef5c727127ceb99ef</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QString &amp;filePath, const QByteArray &amp;proposedSessionId=QByteArray()) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual QString</type>
@@ -58953,8 +58953,8 @@
       <type>virtual QByteArray</type>
       <name>AddFileItem</name>
       <anchorfile>classifile_1_1_i_temp_file_manager.html</anchorfile>
-      <anchor>ab2de0f0bce5c38ab6b7f73ea5ea0d895</anchor>
-      <arglist>(const QByteArray &amp;sessionId, const QString &amp;fileName)=0</arglist>
+      <anchor>a486c334e82035e2e0d934a1fd8005fdd</anchor>
+      <arglist>(const QByteArray &amp;sessionId, const QString &amp;fileName, const QByteArray &amp;proposedSessionId=QByteArray())=0</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual QString</type>
