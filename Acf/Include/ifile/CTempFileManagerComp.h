@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_CTempFileManagerComp_included
-#define ifile_CTempFileManagerComp_included
+#pragma once
 
 
 // ACF includes
@@ -48,12 +47,12 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ifile::ITempFileManager)
-	virtual QByteArray BeginSession(const QString& subPath = QString(), const QByteArray& proposedSessionId = QByteArray());
-	virtual QByteArray AddFileItem(const QByteArray& sessionId, const QString& filePath);
-	virtual QString GetPath(const QByteArray& sessionId, const QByteArray& id) const;
-	virtual bool RemoveFileItem(const QByteArray& sessionId, const QByteArray& id);
-	virtual void FinishSession(const QByteArray& sessionId);
-	virtual void ResetAllSessions();
+	virtual QByteArray BeginSession(const QString& subPath = QString(), const QByteArray& proposedSessionId = QByteArray()) override;
+	virtual QByteArray AddFileItem(const QByteArray& sessionId, const QString& filePath) override;
+	virtual QString GetPath(const QByteArray& sessionId, const QByteArray& id) const override;
+	virtual bool RemoveFileItem(const QByteArray& sessionId, const QByteArray& id) override;
+	virtual void FinishSession(const QByteArray& sessionId) override;
+	virtual void ResetAllSessions() override;
 
 private:
 	I_REF(ifile::IFileNameParam, m_rootFolderCompPtr);
@@ -79,8 +78,5 @@ private:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_CTempFileManagerComp_included
 
 

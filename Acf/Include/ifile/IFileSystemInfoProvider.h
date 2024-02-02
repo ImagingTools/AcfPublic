@@ -20,12 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef ifile_IFileSystemInfoProvider_included
-#define ifile_IFileSystemInfoProvider_included
+#pragma once
 
 
 // ACF includes
-#include <istd/IChangeable.h>
 #include <istd/CSystem.h>
 #include <iprm/IOptionsList.h>
 
@@ -55,8 +53,5 @@ public:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_IFileSystemInfoProvider_included
 
 

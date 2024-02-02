@@ -27,6 +27,7 @@
 // Qt includes
 #include <QtCore/QByteArray>
 #include <QtCore/QMap>
+#include <QtCore/QReadWriteLock>
 
 // ACF includes
 #include <istd/CClassInfo.h>
@@ -65,19 +66,19 @@ public:
 	bool EnsureAutoInitComponentsCreated() const;
 
 	// reimplemented (icomp::ICompositeComponent)
-	virtual IComponent* GetSubcomponent(const QByteArray& componentId) const;
-	virtual const IComponentContext* GetSubcomponentContext(const QByteArray& componentId) const;
-	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const;
-	virtual void OnSubcomponentDeleted(const IComponent* subcomponentPtr);
+	virtual IComponent* GetSubcomponent(const QByteArray& componentId) const override;
+	virtual const IComponentContext* GetSubcomponentContext(const QByteArray& componentId) const override;
+	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const override;
+	virtual void OnSubcomponentDeleted(const IComponent* subcomponentPtr) override;
 
 	// reimplemented (icomp::IComponent)
-	virtual const ICompositeComponent* GetParentComponent(bool ownerOnly = false) const;
-	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const QByteArray& subId = "");
-	virtual const IComponentContext* GetComponentContext() const;
+	virtual const ICompositeComponent* GetParentComponent(bool ownerOnly = false) const override;
+	virtual void* GetInterface(const istd::CClassInfo& interfaceType, const QByteArray& subId = "") override;
+	virtual const IComponentContext* GetComponentContext() const override;
 	virtual void SetComponentContext(
 				const icomp::IComponentContext* contextPtr,
 				const ICompositeComponent* parentPtr,
-				bool isParentOwner);
+				bool isParentOwner) override;
 
 protected:
 	typedef istd::TDelPtr<icomp::IComponent> ComponentPtr;
@@ -100,7 +101,9 @@ protected:
 private:
 	struct ComponentInfo
 	{
-		ComponentInfo(): isComponentInitialized(false), isContextInitialized(false){}
+		ComponentInfo()
+			:isComponentInitialized(false),
+			isContextInitialized(false){}
 		/**
 			Pointer to component context for some component type.
 		*/
@@ -133,6 +136,8 @@ private:
 
 	mutable bool m_autoInitialized;
 	mutable IRegistry::Ids m_autoInitComponentIds;
+
+	mutable QReadWriteLock m_mutex;
 };
 
 
