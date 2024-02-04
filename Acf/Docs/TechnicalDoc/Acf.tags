@@ -49495,6 +49495,13 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>SetupBackground</name>
+      <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
+      <anchor>a53a2e4c6132bd6e4ecfbf443300d192a</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqt2d_1_1_c_view_provider_gui_comp.html</anchorfile>
       <anchor>a00c5aee16212fa2937f7a6d7670a5796</anchor>
