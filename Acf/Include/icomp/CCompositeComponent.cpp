@@ -29,7 +29,6 @@
 #include <QtCore/QCoreApplication>
 #endif //QT_NO_DEBUG
 
-
 // ACF includes
 #include <istd/CClassInfo.h>
 #include <icomp/IComponentEnvironmentManager.h>
@@ -41,17 +40,20 @@ namespace icomp
 
 
 CCompositeComponent::CCompositeComponent(bool manualAutoInit)
-:	m_contextPtr(NULL),
+	:m_contextPtr(NULL),
 	m_parentPtr(NULL),
 	m_isParentOwner(false),
 	m_manualAutoInit(manualAutoInit),
-	m_autoInitialized(false)
+	m_autoInitialized(false),
+	m_mutex(QReadWriteLock::Recursive)
 {
 }
 
 
 CCompositeComponent::~CCompositeComponent()
 {
+	QWriteLocker lock(&m_mutex);
+
 	if (m_isParentOwner && (m_parentPtr != NULL)){
 		const_cast<ICompositeComponent*>(m_parentPtr)->OnSubcomponentDeleted(this);
 	}
@@ -62,6 +64,8 @@ CCompositeComponent::~CCompositeComponent()
 
 bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 {
+	QWriteLocker lock(&m_mutex);
+
 	bool retVal = false;
 
 	if ((m_contextPtr != NULL) && !m_autoInitialized){
@@ -104,14 +108,10 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) const
 {
 	if (m_contextPtr != NULL){
+		QWriteLocker lock(&m_mutex);
+
 		ComponentInfo& componentInfo = m_componentMap[componentId];
 		if (!componentInfo.isComponentInitialized){
-#ifndef QT_NO_DEBUG
-			if ((qApp != NULL) && QThread::currentThread() != qApp->thread()){
-				qWarning("Component %s initialized outside of an application thread\n", m_contextPtr->GetCompleteContextId().constData());
-			}
-#endif //QT_NO_DEBUG
-
 			componentInfo.isComponentInitialized = true;
 			componentInfo.isContextInitialized = true;
 
@@ -121,6 +121,8 @@ IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) 
 		return componentInfo.componentPtr.GetPtr();
 	}
 	else{
+		QReadLocker lock(&m_mutex);
+
 		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
 		if (iter != m_componentMap.constEnd()){
 			return iter.value().componentPtr.GetPtr();
@@ -135,6 +137,8 @@ IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) 
 const IComponentContext* CCompositeComponent::GetSubcomponentContext(const QByteArray& componentId) const
 {
 	if (m_contextPtr != NULL){
+		QWriteLocker lock(&m_mutex);
+
 		ComponentInfo& componentInfo = m_componentMap[componentId];
 		if (!componentInfo.isContextInitialized){
 			componentInfo.isContextInitialized = true;
@@ -145,6 +149,8 @@ const IComponentContext* CCompositeComponent::GetSubcomponentContext(const QByte
 		return componentInfo.contextPtr.GetPtr();
 	}
 	else{
+		QReadLocker lock(&m_mutex);
+
 		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
 		if (iter != m_componentMap.constEnd()){
 			return iter.value().contextPtr.GetPtr();
@@ -158,6 +164,8 @@ const IComponentContext* CCompositeComponent::GetSubcomponentContext(const QByte
 
 IComponent* CCompositeComponent::CreateSubcomponent(const QByteArray& componentId) const
 {
+	QWriteLocker lock(&m_mutex);
+
 	if (m_contextPtr != NULL){
 		ComponentPtr retVal;
 
@@ -175,6 +183,8 @@ IComponent* CCompositeComponent::CreateSubcomponent(const QByteArray& componentI
 
 void CCompositeComponent::OnSubcomponentDeleted(const IComponent* subcomponentPtr)
 {
+	QWriteLocker lock(&m_mutex);
+
 	Q_ASSERT(subcomponentPtr != NULL);
 
 	for (		ComponentMap::iterator iter = m_componentMap.begin();
@@ -189,6 +199,8 @@ void CCompositeComponent::OnSubcomponentDeleted(const IComponent* subcomponentPt
 			info.componentPtr.PopPtr();
 
 			info.isComponentInitialized = false;
+
+			lock.unlock();
 
 			delete this;
 
@@ -275,7 +287,7 @@ void* CCompositeComponent::GetInterface(const istd::CClassInfo& interfaceType, c
 				return subComponentPtr->GetInterface(interfaceType, JoinId(subRestId, restId));
 			}
 			else{
-				qCritical(	"Component %s: Subcomponent %s is registered as %s, but it cannot be accessed (interface %s)!",
+				qCritical("Component %s: Subcomponent %s is registered as %s, but it cannot be accessed (interface %s)!",
 							contextPtr->GetCompleteContextId().constData(),
 							subComponentId.constData(),
 							componentId.constData(),
@@ -283,7 +295,7 @@ void* CCompositeComponent::GetInterface(const istd::CClassInfo& interfaceType, c
 			}
 		}
 		else{
-			qCritical(	"Component %s: Subcomponent %s not found!",
+			qCritical("Component %s: Subcomponent %s not found!",
 						contextPtr->GetCompleteContextId().constData(),
 						componentId.constData());
 		}
@@ -304,6 +316,8 @@ void CCompositeComponent::SetComponentContext(
 			const ICompositeComponent* parentPtr,
 			bool isParentOwner)
 {
+	QWriteLocker lock(&m_mutex);
+
 	m_parentPtr = parentPtr;
 	m_isParentOwner = isParentOwner;
 
