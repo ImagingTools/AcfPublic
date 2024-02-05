@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CFileSystemInfoProviderComp_included
+#define ifile_CFileSystemInfoProviderComp_included
 
 
 // Qt includes
@@ -66,27 +67,27 @@ public:
 	CFileSystemInfoProviderComp();
 
 	// reimplemented (ifile::IFileSystemInfoProvider)
-	virtual const iprm::IOptionsList& GetDriveList() const override;
-	virtual const istd::CSystem::FileDriveInfo* GetFileDriveInfo(int driveIndex = -1) const override;
+	virtual const iprm::IOptionsList& GetDriveList() const;
+	virtual const istd::CSystem::FileDriveInfo* GetFileDriveInfo(int driveIndex = -1) const;
 
 	// reimplemented (iprm::IOptionsList)
-	virtual int GetOptionsFlags() const override;
-	virtual int GetOptionsCount() const override;
-	virtual QString GetOptionName(int index) const override;
-	virtual QString GetOptionDescription(int index) const override;
-	virtual QByteArray GetOptionId(int index) const override;
-	virtual bool IsOptionEnabled(int index) const override;
+	virtual int GetOptionsFlags() const;
+	virtual int GetOptionsCount() const;
+	virtual QString GetOptionName(int index) const;
+	virtual QString GetOptionDescription(int index) const;
+	virtual QByteArray GetOptionId(int index) const;
+	virtual bool IsOptionEnabled(int index) const;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 	// reimplemented (imod::CMultiModelDispatcherBase)
-	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (QThread)
-	virtual void run() override;
+	virtual void run();
 
 protected:
 	typedef std::vector<istd::CSystem::FileDriveDescriptor> DriveInfos;
@@ -118,5 +119,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CFileSystemInfoProviderComp_included
 
 

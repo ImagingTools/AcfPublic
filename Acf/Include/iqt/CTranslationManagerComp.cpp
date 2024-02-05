@@ -210,7 +210,7 @@ void CTranslationManagerComp::LoadTranslations()
 			if (*m_ignoreLocaleAttrPtr){
 				int pos = languageId.indexOf("_");
 				if (pos >= 0){
-					languageId.chop(languageId.length() - pos);
+					languageId.chop(languageId.count() - pos);
 				}
 			}
 

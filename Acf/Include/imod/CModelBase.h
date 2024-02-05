@@ -26,7 +26,6 @@
 
 // Qt includes
 #include <QtCore/QMap>
-#include <QtCore/QMutex>
 
 // ACF includes
 #include <imod/imod.h>
@@ -61,13 +60,13 @@ public:
 	*/
 	virtual Observers GetObservers() const;
 
-	istd::IChangeable::ChangeSet GetCumulatedChanges() const;
+	const istd::IChangeable::ChangeSet& GetCumulatedChanges() const;
 
 	// reimplemented (imod::IModel)
-	virtual bool AttachObserver(imod::IObserver* observerPtr) override;
-	virtual void DetachObserver(imod::IObserver* observerPtr) override;
-	virtual void DetachAllObservers() override;
-	virtual bool IsAttached(const imod::IObserver* observerPtr) const override;
+	virtual bool AttachObserver(imod::IObserver* observerPtr);
+	virtual void DetachObserver(imod::IObserver* observerPtr);
+	virtual void DetachAllObservers();
+	virtual bool IsAttached(const imod::IObserver* observerPtr) const;
 
 protected:
 	/**
@@ -137,21 +136,13 @@ private:
 	int m_blockCounter;
 	bool m_isDuringChanges;
 	istd::IChangeable::ChangeSet m_cumulatedChangeIds;
-
-#if QT_VERSION >= 0x060000
-	mutable QRecursiveMutex m_mutex;
-#else
-	mutable QMutex m_mutex;
-#endif
 };
 
 
 // public inline methods
 
-inline istd::IChangeable::ChangeSet CModelBase::GetCumulatedChanges() const
+inline const istd::IChangeable::ChangeSet& CModelBase::GetCumulatedChanges() const
 {
-	QMutexLocker lock(&m_mutex);
-
 	return m_cumulatedChangeIds;
 }
 

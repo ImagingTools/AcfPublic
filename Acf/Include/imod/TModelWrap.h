@@ -54,17 +54,17 @@ public:
 	void SetBaseObject(const Base& baseObject);
 
 	// pseudo-reimplemented (istd::IChangeable)
-	virtual int GetSupportedOperations() const override;
-	virtual istd::IChangeable* CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const override;
-	virtual void BeginChanges(const istd::IChangeable::ChangeSet& changeSet) override;
-	virtual void EndChanges(const istd::IChangeable::ChangeSet& changeSet) override;
-	virtual void BeginChangeGroup(const istd::IChangeable::ChangeSet& changeSet) override;
-	virtual void EndChangeGroup(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual int GetSupportedOperations() const;
+	virtual istd::IChangeable* CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const;
+	virtual void BeginChanges(const istd::IChangeable::ChangeSet& changeSet);
+	virtual void EndChanges(const istd::IChangeable::ChangeSet& changeSet);
+	virtual void BeginChangeGroup(const istd::IChangeable::ChangeSet& changeSet);
+	virtual void EndChangeGroup(const istd::IChangeable::ChangeSet& changeSet);
 
 protected:
 	// reimplemented (imod::CModelBase)
-	virtual void OnBeginGlobalChanges() override;
-	virtual void OnEndGlobalChanges(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnBeginGlobalChanges();
+	virtual void OnEndGlobalChanges(const istd::IChangeable::ChangeSet& changeSet);
 
 private:
 	Q_DISABLE_COPY(TModelWrap);

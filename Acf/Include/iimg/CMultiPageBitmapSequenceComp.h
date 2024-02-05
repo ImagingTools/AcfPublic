@@ -56,7 +56,7 @@ protected:
 	virtual istd::IChangeable* InsertPage(
 				const idoc::IDocumentMetaInfo* pageMetaInfoPtr = NULL,
 				const iprm::IParamsSet* pageParameterPtr = NULL,
-				int position = -1) override;
+				int position = -1);
 
 private:
 	I_FACT(iimg::IMultiBitmapProvider, m_multiBitmapFactoryCompPtr);

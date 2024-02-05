@@ -52,8 +52,8 @@ public:
 				const QString& keywords);
 
 	//	reimplemented (icomp::IComponentStaticInfo)
-	virtual const QString& GetDescription() const override;
-	virtual const QString& GetKeywords() const override;
+	virtual const QString& GetDescription() const;
+	virtual const QString& GetKeywords() const;
 
 private:
 	QByteArray m_logicalName;

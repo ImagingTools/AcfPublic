@@ -46,11 +46,11 @@ public:
 	typedef BitmapImpl BitmapType;
 
 	// reimplemented (istd::IChangeable)
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 protected:
 	// reimplemented (CMultiPageBitmapBase)
-	virtual IBitmap* CreateBitmap() const override;
+	virtual IBitmap* CreateBitmap() const;
 };
 
 

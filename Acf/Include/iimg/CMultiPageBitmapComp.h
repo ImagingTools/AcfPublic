@@ -54,7 +54,7 @@ public:
 
 protected:
 	// reimplemented (CMultiPageBitmapBase)
-	virtual IBitmap* CreateBitmap() const override;
+	virtual IBitmap* CreateBitmap() const;
 
 private:
 	I_FACT(IBitmap, m_bitmapFactoryCompPtr);

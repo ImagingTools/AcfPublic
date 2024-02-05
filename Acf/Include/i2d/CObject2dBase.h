@@ -42,35 +42,34 @@ class CObject2dBase: virtual public IObject2d
 public:
 	CObject2dBase();
 	CObject2dBase(const CObject2dBase& object2d);
-	CObject2dBase& operator=(const CObject2dBase& object2d) = default;
 
 	// reimplemented (i2d::ICalibrationProvider)
-	virtual const ICalibration2d* GetCalibration() const override;
+	virtual const ICalibration2d* GetCalibration() const;
 
 	// reimplemented (i2d::IObject2d)
-	virtual void SetCalibration(const ICalibration2d* calibrationPtr, bool releaseFlag = false) override;
+	virtual void SetCalibration(const ICalibration2d* calibrationPtr, bool releaseFlag = false);
 	virtual bool Transform(
 				const ITransformation2d& transformation,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) override;
+				double* errorFactorPtr = NULL);
 	virtual bool InvTransform(
 				const ITransformation2d& transformation,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) override;
+				double* errorFactorPtr = NULL);
 	virtual bool GetTransformed(
 				const ITransformation2d& transformation,
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) const override;
+				double* errorFactorPtr = NULL) const;
 	virtual bool GetInvTransformed(
 				const ITransformation2d& transformation,
 				IObject2d& result,
 				ITransformation2d::ExactnessMode mode = ITransformation2d::EM_NONE,
-				double* errorFactorPtr = NULL) const override;
+				double* errorFactorPtr = NULL) const;
 
 	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
-	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS);
 
 protected:
 	static const ChangeSet s_objectMovedChange;
