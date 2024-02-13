@@ -23703,6 +23703,13 @@
       <anchor>a5c14b9974408c1adc093f158263054be</anchor>
       <arglist>(const iser::IVersionInfo *versionInfoPtr=NULL, QJsonDocument::JsonFormat jsonFormat=QJsonDocument::Compact)</arglist>
     </member>
+    <member kind="function">
+      <type></type>
+      <name>~CJsonWriteArchiveBase</name>
+      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
+      <anchor>a445768600813aa5f60b5fd3e7234025f</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>IsTagSkippingSupported</name>
@@ -23864,6 +23871,20 @@
       <anchor>ae3c28228c082a9c10cf8835454f458f7</anchor>
       <arglist>(const iser::CArchiveTag &amp;tag, QString separator)</arglist>
     </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>WriteJsonHeader</name>
+      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
+      <anchor>a07e551873ae0efb3d8ffc79b526922c7</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" protection="protected">
+      <type>bool</type>
+      <name>Flush</name>
+      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
+      <anchor>a571ca2333e34ff1653efa001f24cf27e</anchor>
+      <arglist>()</arglist>
+    </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual bool</type>
       <name>WriteTextNode</name>
@@ -23925,13 +23946,6 @@
       <name>m_allowAttribute</name>
       <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
       <anchor>a002fbdcfabd5fb1dd890a07889d9b205</anchor>
-      <arglist></arglist>
-    </member>
-    <member kind="variable" protection="protected">
-      <type>bool</type>
-      <name>m_rootTagEnabled</name>
-      <anchorfile>classiser_1_1_c_json_write_archive_base.html</anchorfile>
-      <anchor>a8826122b1e7caa923e10859086e5eba4</anchor>
       <arglist></arglist>
     </member>
     <member kind="variable" protection="protected">
