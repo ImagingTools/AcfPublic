@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_CTimeStampFileNameParamComp_included
+#define ifile_CTimeStampFileNameParamComp_included
 
 
 // ACF includes
@@ -47,7 +48,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ifile::IFileNameParam)
-	virtual const QString& GetPath() const override;
+	virtual const QString& GetPath() const;
 
 private:
 	I_ATTR(QString, m_fileExtensionAttrPtr);
@@ -60,5 +61,8 @@ private:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_CTimeStampFileNameParamComp_included
 
 

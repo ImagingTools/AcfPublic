@@ -55,7 +55,7 @@ public:
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentDestroyed();
 };
 
 

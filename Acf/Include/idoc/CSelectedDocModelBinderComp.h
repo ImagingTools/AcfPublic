@@ -71,12 +71,12 @@ protected:
 	void TryDisconnectObservers();
 
 	// reimplemented (imod::IObserver)
-	virtual void BeforeUpdate(imod::IModel* modelPtr) override;
-	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void BeforeUpdate(imod::IModel* modelPtr);
+	virtual void AfterUpdate(imod::IModel* modelPtr, const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	I_REF(icomp::IComponent, m_observedObjectCompPtr);
@@ -98,17 +98,17 @@ private:
 	{
 	public:
 		// reimplemented (iprm::INameParam)
-		virtual const QString& GetName() const override;
-		virtual void SetName(const QString& name) override;
-		virtual bool IsNameFixed() const override;
+		virtual const QString& GetName() const;
+		virtual void SetName(const QString& name);
+		virtual bool IsNameFixed() const;
 
 		// reimplemented (ifile::IFileNameParam)
-		virtual int GetPathType() const override;
-		virtual const QString& GetPath() const override;
-		virtual void SetPath(const QString& path) override;
+		virtual int GetPathType() const;
+		virtual const QString& GetPath() const;
+		virtual void SetPath(const QString& path);
 
 		// reimplemented (iser::ISerializable)
-		virtual bool Serialize(iser::IArchive& archive) override;
+		virtual bool Serialize(iser::IArchive& archive);
 
 		QString name;
 		QString filePath;

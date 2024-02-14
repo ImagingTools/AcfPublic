@@ -42,24 +42,24 @@ public:
 	CGeneralBitmap(const CGeneralBitmap& bitmap);
 
 	// reimplemented (iimg::IBitmap)
-	virtual bool IsFormatSupported(PixelFormat pixelFormat) const override;
-	virtual PixelFormat GetPixelFormat() const override;
-	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int pixelBitsCount = 0, int componentsCount = 0) override;
-	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0) override;
-	virtual int GetLinesDifference() const override;
-	virtual int GetPixelsDifference() const override;
-	virtual const void* GetLinePtr(int positionY) const override;
-	virtual void* GetLinePtr(int positionY) override;
+	virtual bool IsFormatSupported(PixelFormat pixelFormat) const;
+	virtual PixelFormat GetPixelFormat() const;
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int pixelBitsCount = 0, int componentsCount = 0);
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0);
+	virtual int GetLinesDifference() const;
+	virtual int GetPixelsDifference() const;
+	virtual const void* GetLinePtr(int positionY) const;
+	virtual void* GetLinePtr(int positionY);
 
 	// reimplemented (iimg::IRasterImage)
-	virtual void ResetImage() override;
-	virtual void ClearImage() override;
-	virtual istd::CIndex2d GetImageSize() const override;
+	virtual void ResetImage();
+	virtual void ClearImage();
+	virtual istd::CIndex2d GetImageSize() const;
 
 	// reimplemented (istd::IChangeable)
-	virtual int GetSupportedOperations() const override;
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual int GetSupportedOperations() const;
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 	// operators
 	CGeneralBitmap& operator=(const CGeneralBitmap& bitmap);
@@ -129,7 +129,7 @@ inline const void* CGeneralBitmap::GetLinePtr(int positionY) const
 	Q_ASSERT(positionY >= 0);
 	Q_ASSERT(positionY < m_size.GetY());
 
-	return m_buffer.GetPtr() + quint64(m_linesDifference) * quint64(positionY);
+	return m_buffer.GetPtr() + m_linesDifference * positionY;
 }
 
 
@@ -138,7 +138,7 @@ inline void* CGeneralBitmap::GetLinePtr(int positionY)
 	Q_ASSERT(positionY >= 0);
 	Q_ASSERT(positionY < m_size.GetY());
 
-	return m_buffer.GetPtr() + quint64(m_linesDifference) * quint64(positionY);
+	return m_buffer.GetPtr() + m_linesDifference * positionY;
 }
 
 

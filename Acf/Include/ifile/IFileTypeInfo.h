@@ -20,13 +20,15 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_IFileTypeInfo_included
+#define ifile_IFileTypeInfo_included
 
 
 // Qt includes
 #include <QtCore/QString>
 
 // ACF includes
+#include <istd/IPolymorphic.h>
 #include <istd/IChangeable.h>
 
 
@@ -89,5 +91,8 @@ public:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_IFileTypeInfo_included
 
 

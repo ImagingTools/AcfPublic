@@ -66,22 +66,22 @@ public:
 	virtual void SetSource(const QString& source);
 
 	// reimplemented (istd::IInformationProvider)
-	virtual QDateTime GetInformationTimeStamp() const override;
-	virtual InformationCategory GetInformationCategory() const override;
-	virtual int GetInformationId() const override;
-	virtual QString GetInformationDescription() const override;
-	virtual QString GetInformationSource() const override;
-	virtual int GetInformationFlags() const override;
+	virtual QDateTime GetInformationTimeStamp() const;
+	virtual InformationCategory GetInformationCategory() const;
+	virtual int GetInformationId() const;
+	virtual QString GetInformationDescription() const;
+	virtual QString GetInformationSource() const;
+	virtual int GetInformationFlags() const;
 
 	// reimplemented (iser::IObject)
-	virtual QByteArray GetFactoryId() const override;
+	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 	static QByteArray GetMessageTypeId();
 

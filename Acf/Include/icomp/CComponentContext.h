@@ -27,7 +27,6 @@
 // Qt includes
 #include <QtCore/QByteArray>
 #include <QtCore/QMap>
-#include <QtCore/QMutex>
 
 // ACF includes
 #include <icomp/IComponentContext.h>
@@ -57,11 +56,11 @@ public:
 	QByteArray GetCompleteContextId() const;
 
 	// reimplemented (icomp::IComponentContext)
-	virtual const QByteArray& GetContextId() const override;
-	virtual const IRegistryElement& GetRegistryElement() const override;
-	virtual const IComponentStaticInfo& GetStaticInfo() const override;
-	virtual const IComponentContext* GetParentContext() const override;
-	virtual const iser::IObject* GetAttribute(const QByteArray& attributeId, int* definitionLevelPtr = NULL) const override;
+	virtual const QByteArray& GetContextId() const;
+	virtual const IRegistryElement& GetRegistryElement() const;
+	virtual const IComponentStaticInfo& GetStaticInfo() const;
+	virtual const IComponentContext* GetParentContext() const;
+	virtual const iser::IObject* GetAttribute(const QByteArray& attributeId, int* definitionLevelPtr = NULL) const;
 
 	// static methods
 	/**
@@ -88,12 +87,6 @@ private:
 	mutable AttributeMap m_attributeMap;
 
 	QByteArray m_contextId;
-
-#if QT_VERSION >= 0x060000
-	mutable QRecursiveMutex m_attributeMapMutex;
-#else
-	mutable QMutex m_attributeMapMutex;
-#endif
 };
 
 

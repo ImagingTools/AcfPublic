@@ -70,13 +70,13 @@ protected:
 	QByteArray GetSelectedParamsSetTypeId() const;
 
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void OnGuiModelAttached() override;
-	virtual void OnGuiModelDetached() override;
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiRetranslate() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiRetranslate();
 
 private:
 	I_ATTR(int, m_iconSizeAttrPtr);

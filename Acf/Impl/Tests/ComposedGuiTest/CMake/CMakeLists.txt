@@ -13,7 +13,10 @@ include(${ACFDIR}/Config/CMake/ApplicationConfig.cmake)
 include(${ACFDIR}/Config/CMake/AcfQt.cmake)
 include(${ACFDIR}/Config/CMake/WindeployQt.cmake)
 
-target_link_libraries(${PROJECT_NAME} AcfLoc icomp iwidgets)
+target_link_libraries(${PROJECT_NAME} AcfLoc icmpstr icomp iwidgets)
+
+find_package("Qt${QT_VERSION_MAJOR}" COMPONENTS PrintSupport REQUIRED)
+target_link_libraries(${PROJECT_NAME} Qt${QT_VERSION_MAJOR}::PrintSupport)
 
 include(${ACFDIR}/Config/CMake/AcfStdGui.cmake)
 include(${ACFDIR}/Config/CMake/AcfStd.cmake)

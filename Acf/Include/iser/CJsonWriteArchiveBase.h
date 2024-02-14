@@ -52,8 +52,6 @@ public:
 				const iser::IVersionInfo* versionInfoPtr = NULL,
 				QJsonDocument::JsonFormat jsonFormat = QJsonDocument::Compact);
 
-	~CJsonWriteArchiveBase();
-
 	// reimplemented (iser::IArchive)
 	virtual bool IsTagSkippingSupported() const;
 	virtual bool BeginTag(const iser::CArchiveTag& tag);
@@ -69,8 +67,6 @@ protected:
 	bool InitArchive(QIODevice* devicePtr, bool serializeHeader = false);
 	bool InitArchive(QByteArray& inputString, bool serializeHeader = false);
 	bool WriteTag(const iser::CArchiveTag& tag, QString separator);
-	bool WriteJsonHeader();
-	bool Flush();
 
 	// reimplemented (iser::CTextWriteArchiveBase)
 	virtual bool WriteTextNode(const QByteArray& text);
@@ -85,6 +81,7 @@ protected:
 
 	bool m_isSeparatorNeeded;	// idicate that separator must be added before something is outputted
 	bool m_allowAttribute;		// indicate if attribute outputting is allowed now
+	bool m_rootTagEnabled;
 
 	QList<const iser::CArchiveTag*> m_tagsStack;
 };

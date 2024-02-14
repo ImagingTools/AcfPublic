@@ -52,15 +52,15 @@ public:
 	};
 
 	// reimplemented (iimg::IQImageProvider)
-	virtual const QImage& GetQImage() const override;
-	virtual bool CopyImageFrom(const QImage& image) override;
+	virtual const QImage& GetQImage() const;
+	virtual bool CopyImageFrom(const QImage& image);
 
 protected:
 	virtual bool ConvertFromQImage(const QImage& image) = 0;
 	virtual bool ConvertToQImage(QImage& result) const = 0;
 
 	// reimplmented (istd::TCachedUpdateManagerWrap)
-	virtual bool CalculateCache(const ChangeSet& changeSet) override;
+	virtual bool CalculateCache(const ChangeSet& changeSet);
 
 private:
 	QImage m_image;

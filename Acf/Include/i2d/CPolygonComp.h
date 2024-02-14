@@ -50,7 +50,7 @@ public:
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 private:
 	I_MULTIATTR(double, m_xAttrPtr);

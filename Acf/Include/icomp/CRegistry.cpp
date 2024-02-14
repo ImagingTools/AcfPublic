@@ -60,24 +60,14 @@ static const iser::CArchiveTag s_interfaceIdTag("InterfaceId", "ID of exported i
 static const iser::CArchiveTag s_componentIdTag("ComponentId", "ID of component in registry implementing exported interface", iser::CArchiveTag::TT_LEAF, &s_interfaceTag);
 
 
+	
 // public methods
-
-CRegistry::CRegistry()
-#if QT_VERSION < 0x060000
-	:m_mutex(QMutex::Recursive)
-#endif
-{
-}
-
 
 // reimplemented (icomp::IRegistry)
 
 IRegistry::Ids CRegistry::GetElementIds() const
 {
 	Ids retVal;
-
-	QMutexLocker lock(&m_mutex);
-
 	for (		ComponentsMap::const_iterator iter = m_componentsMap.begin();
 				iter != m_componentsMap.end();
 				++iter){
@@ -90,8 +80,6 @@ IRegistry::Ids CRegistry::GetElementIds() const
 
 const IRegistry::ElementInfo* CRegistry::GetElementInfo(const QByteArray& elementId) const
 {
-	QMutexLocker lock(&m_mutex);
-
 	ComponentsMap::ConstIterator iter = m_componentsMap.constFind(elementId);
 	if (iter != m_componentsMap.constEnd()){
 		return &(iter.value());
@@ -106,8 +94,6 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 			const CComponentAddress& address,
 			bool ensureElementCreated)
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (m_componentsMap.contains(elementId)){
 		return NULL;
 	}
@@ -128,8 +114,6 @@ IRegistry::ElementInfo* CRegistry::InsertElementInfo(
 	newElement.address = address;
 	newElement.elementPtr.TakeOver(registryElementPtr);
 
-	lock.unlock();
-
 	return &newElement;
 }
 
@@ -138,8 +122,6 @@ bool CRegistry::RemoveElementInfo(const QByteArray& elementId)
 {
 	istd::CChangeNotifier notifier(this, &s_removeElementChangeSet);
 	Q_UNUSED(notifier);
-
-	QMutexLocker lock(&m_mutex);
 
 	// remove interfaces exported by this component:
 	bool isDone = false;
@@ -171,20 +153,17 @@ bool CRegistry::RemoveElementInfo(const QByteArray& elementId)
 		}
 	}
 
-	bool retVal = m_componentsMap.remove(elementId) > 0;
+	if (m_componentsMap.remove(elementId) <= 0){
+		return false;
+	}
 
-	lock.unlock();
-
-	return retVal;
+	return true;
 }
 
 
 IRegistry::Ids CRegistry::GetEmbeddedRegistryIds() const
 {
 	Ids retVal;
-
-	QMutexLocker lock(&m_mutex);
-
 	for (		EmbeddedRegistriesMap::const_iterator iter = m_embeddedRegistriesMap.begin();
 				iter != m_embeddedRegistriesMap.end();
 				++iter){
@@ -197,8 +176,6 @@ IRegistry::Ids CRegistry::GetEmbeddedRegistryIds() const
 
 IRegistry* CRegistry::GetEmbeddedRegistry(const QByteArray& registryId) const
 {
-	QMutexLocker lock(&m_mutex);
-
 	EmbeddedRegistriesMap::ConstIterator iter = m_embeddedRegistriesMap.constFind(registryId);
 	if (iter != m_embeddedRegistriesMap.constEnd()){
 		Q_ASSERT(iter.value().IsValid());
@@ -212,10 +189,7 @@ IRegistry* CRegistry::GetEmbeddedRegistry(const QByteArray& registryId) const
 
 IRegistry* CRegistry::InsertEmbeddedRegistry(const QByteArray& registryId)
 {
-	QMutexLocker lock(&m_mutex);
-
-	RegistryPtr newRegistryPtr;
-	newRegistryPtr.SetPtr(new CRegistry());
+	RegistryPtr newRegistryPtr(new CRegistry());
 
 	RegistryPtr& registryPtr = m_embeddedRegistriesMap[registryId];
 	if (registryPtr.IsValid()){
@@ -230,8 +204,6 @@ IRegistry* CRegistry::InsertEmbeddedRegistry(const QByteArray& registryId)
 
 bool CRegistry::RemoveEmbeddedRegistry(const QByteArray& registryId)
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (m_embeddedRegistriesMap.remove(registryId) <= 0){
 		return false;
 	}
@@ -245,8 +217,6 @@ bool CRegistry::RenameEmbeddedRegistry(const QByteArray& oldRegistryId, const QB
 	if (oldRegistryId == newRegistryId){
 		return true;
 	}
-
-	QMutexLocker lock(&m_mutex);
 
 	EmbeddedRegistriesMap::iterator oldIter = m_embeddedRegistriesMap.find(oldRegistryId);
 	if (oldIter == m_embeddedRegistriesMap.end()){
@@ -268,16 +238,12 @@ bool CRegistry::RenameEmbeddedRegistry(const QByteArray& oldRegistryId, const QB
 
 const IRegistry::ExportedInterfacesMap& CRegistry::GetExportedInterfacesMap() const
 {
-	QMutexLocker lock(&m_mutex);
-
 	return m_exportedInterfacesMap;
 }
 
 
 const IRegistry::ExportedElementsMap& CRegistry::GetExportedElementsMap() const
 {
-	QMutexLocker lock(&m_mutex);
-
 	return m_exportedComponentsMap;
 }
 
@@ -287,8 +253,6 @@ void CRegistry::SetElementInterfaceExported(
 			const QByteArray& interfaceName,
 			bool state)
 {
-	QMutexLocker lock(&m_mutex);
-
 	Q_ASSERT(!elementId.isEmpty());
 	Q_ASSERT(!interfaceName.isEmpty());
 
@@ -308,8 +272,6 @@ void CRegistry::SetElementExported(
 			const QByteArray& exportId,
 			const QByteArray& elementId)
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (!elementId.isEmpty()){
 		m_exportedComponentsMap[exportId] = elementId;
 	}
@@ -321,8 +283,6 @@ void CRegistry::SetElementExported(
 
 bool CRegistry::RenameElement(const QByteArray& oldElementId, const QByteArray& newElementId)
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (newElementId == oldElementId){
 		return true;
 	}
@@ -435,7 +395,7 @@ bool CRegistry::RenameElement(const QByteArray& oldElementId, const QByteArray& 
 			RemoveElementInfo(oldElementId);
 
 			// trigger update for the element observer:
-			istd::CChangeNotifier elementChangePtr(newElement.elementPtr.GetPtr());
+			istd::CChangeNotifier elementChangePtr(newElement.elementPtr.GetPtr());	
 		}
 
 		return true;
@@ -449,44 +409,32 @@ bool CRegistry::RenameElement(const QByteArray& oldElementId, const QByteArray& 
 
 const QString& CRegistry::GetDescription() const
 {
-	QMutexLocker lock(&m_mutex);
-
 	return m_description;
 }
 
 
 void CRegistry::SetDescription(const QString& description)
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (description != m_description){
 		istd::CChangeNotifier notifier(this);
 
 		m_description = description;
-
-		lock.unlock();
 	}
 }
 
 
 const QString& CRegistry::GetKeywords() const
 {
-	QMutexLocker lock(&m_mutex);
-
 	return m_keywords;
 }
 
 
 void CRegistry::SetKeywords(const QString& keywords)
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (keywords != m_keywords){
 		istd::CChangeNotifier notifier(this);
 
 		m_keywords = keywords;
-
-		lock.unlock();
 	}
 }
 
@@ -495,8 +443,6 @@ void CRegistry::SetKeywords(const QString& keywords)
 
 bool CRegistry::Serialize(iser::IArchive& archive)
 {
-	QMutexLocker lock(&m_mutex);
-
 	const iser::IVersionInfo& versionInfo = archive.GetVersionInfo();
 	quint32 frameworkVersion = quint32(-1);
 	versionInfo.GetVersionNumber(iser::IVersionInfo::AcfVersionId, frameworkVersion);
@@ -531,16 +477,12 @@ bool CRegistry::Serialize(iser::IArchive& archive)
 		retVal = retVal && archive.EndTag(s_keywordsTag);
 	}
 
-	lock.unlock();
-
 	return retVal;
 }
 
 
 quint32 CRegistry::GetMinimalVersion(int versionId) const
 {
-	QMutexLocker lock(&m_mutex);
-
 	if (versionId == iser::IVersionInfo::AcfVersionId){
 		if (!m_embeddedRegistriesMap.isEmpty()){
 			return 1637;
