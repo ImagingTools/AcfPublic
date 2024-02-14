@@ -28,6 +28,7 @@
 #include <QtCore/QMap>
 
 // ACF includes
+#include <istd/TSmartPtr.h>
 #include <iser/ISerializable.h>
 #include <iser/TCopySerializedWrap.h>
 #include <icomp/CRegistry.h>
@@ -60,14 +61,15 @@ public:
 	void InitializeStaticInfo();
 
 	// reimplemented (icomp::IRegistriesManager)
-	virtual const icomp::IRegistry* GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr = NULL) const;
+	virtual const icomp::IRegistry* GetRegistry(const icomp::CComponentAddress& address, const icomp::IRegistry* contextRegistryPtr = NULL) const override;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive);
+	virtual bool Serialize(iser::IArchive& archive) override;
 
 private:
 	typedef iser::TCopySerializedWrap<CRegistry> Registry;
-	typedef QMap<QByteArray, Registry> RegistriesMap;
+	typedef QMap<QByteArray, istd::TSmartPtr<Registry>> RegistriesMap;
+
 	struct PackageInfo
 	{
 		istd::TDelPtr<CCompositePackageStaticInfo> staticInfoPtr;

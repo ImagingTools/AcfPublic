@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_IFilePersistence_included
-#define ifile_IFilePersistence_included
+#pragma once
 
 
 // Qt includes
@@ -164,8 +163,5 @@ public:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_IFilePersistence_included
 
 

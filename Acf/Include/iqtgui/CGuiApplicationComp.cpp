@@ -190,7 +190,7 @@ int CGuiApplicationComp::Execute(int argc, char** argv)
 
 			m_lastWidgetGeometry = m_mainWidgetPtr->geometry();
 
-			QTimer::singleShot(0, this, SLOT(OnEventLoopStarted()));
+			QTimer::singleShot(0, this, &CGuiApplicationComp::OnEventLoopStarted);
 
 			// Start application loop:
 			retVal = QApplication::exec();
@@ -204,7 +204,7 @@ int CGuiApplicationComp::Execute(int argc, char** argv)
 		}
 		else{
 			if (m_trayIconPtr.IsValid()){
-				QTimer::singleShot(0, this, SLOT(OnEventLoopStarted()));
+				QTimer::singleShot(0, this, &CGuiApplicationComp::OnEventLoopStarted);
 
 				// Start application loop:
 				retVal = QApplication::exec();
