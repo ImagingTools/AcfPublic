@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_CFileListProviderComp_included
-#define ifile_CFileListProviderComp_included
+#pragma once
 
 
 // Qt includes
@@ -66,7 +65,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ifile::IFileListProvider)
-	virtual const QFileInfoList& GetFileList() const;
+	virtual const QFileInfoList& GetFileList() const override;
 
 	/**
 		Creates the list of files in a root directory \c root.
@@ -96,11 +95,11 @@ public:
 				istd::ILogger* loggerPtr = NULL);
 protected:
 	// reimplemented (imod::CSingleModelObserverBase)
-	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet);
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
-	virtual void OnComponentDestroyed();
+	virtual void OnComponentCreated() override;
+	virtual void OnComponentDestroyed() override;
 
 private Q_SLOTS:
 	void OnDirectoryContentChanged(const QString& directoryPath);
@@ -129,8 +128,5 @@ private:
 
 
 } // namespace ifile
-
-
-#endif //!ifile_CFileListProviderComp_included
 
 

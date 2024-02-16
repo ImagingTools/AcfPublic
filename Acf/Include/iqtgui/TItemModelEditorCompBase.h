@@ -63,10 +63,10 @@ protected:
 	using BaseClass::GetQtWidget;
 
 	// reimplemented (CGuiComponentBase)
-	virtual void OnGuiCreated();
+	virtual void OnGuiCreated() override;
 
 	// reimplemented (TGuiObserverWrap)
-	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelAttached() override;
 
 private:
 	I_ATTR(bool, m_sortingEnabledAttrPtr);

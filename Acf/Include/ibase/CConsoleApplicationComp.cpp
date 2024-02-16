@@ -72,7 +72,8 @@ bool CConsoleApplicationComp::InitializeApplication(int argc, char** argv)
 		return false;
 	}
 
-	connect(&m_consoleReader, SIGNAL(KeyPressedSignal(char)), this, SLOT(OnKeyPressed(char)));
+	connect(&m_consoleReader, &iqt::CConsoleReader::KeyPressedSignal, this, &CConsoleApplicationComp::OnKeyPressed);
+	connect(this, &CConsoleApplicationComp::EmitEventLoopStarted, this, &CConsoleApplicationComp::OnEventLoopStarted, Qt::QueuedConnection);
 
 	m_consoleReader.Start();
 
@@ -95,7 +96,7 @@ int CConsoleApplicationComp::Execute(int argc, char** argv)
 		return -1;
 	}
 
-	QTimer::singleShot(0, this, SLOT(OnEventLoopStarted()));
+	Q_EMIT EmitEventLoopStarted();
 	
 	int retVal = m_applicationPtr->exec();
 
