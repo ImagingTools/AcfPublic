@@ -34,6 +34,9 @@ namespace iimg
 
 /**
 	Standard device- and platform-independent bitmap definition.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 class CGeneralBitmap: public CBitmapBase
 {

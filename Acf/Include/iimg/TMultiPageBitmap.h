@@ -37,6 +37,9 @@ namespace iimg
 	Generic implementation of a multi-page bitmap.
 
 	\tparam	BitmapImpl	Type of the bitmap implementation.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 template <class BitmapImpl>
 class TMultiPageBitmap: public CMultiPageBitmapBase

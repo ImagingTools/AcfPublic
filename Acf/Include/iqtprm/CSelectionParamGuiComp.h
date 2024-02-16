@@ -165,7 +165,6 @@ protected Q_SLOTS:
 private:
 	void UpdateComboBoxesView();
 	void UpdateRadioButtonView();
-	void UpdateDescriptionFrame();
 	void UpdateSelectorLabel();
 	void ResetWidgets();
 	iprm::ISelectionParam* GetActiveSubselection(const iprm::ISelectionParam* selectionPtr) const;

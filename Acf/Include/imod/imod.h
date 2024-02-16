@@ -37,6 +37,7 @@
 
 	\ingroup Main
 	\ingroup ModelObserver
+	\ingroup DataModel
 */
 namespace imod
 {

@@ -35,6 +35,9 @@ namespace iimg
 
 /**
 	Base implementation of some \c iimg::IBitmap methods.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 class CBitmapBase:
 			public i2d::CObject2dBase,

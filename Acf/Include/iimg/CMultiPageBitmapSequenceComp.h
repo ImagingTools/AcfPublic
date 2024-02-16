@@ -36,6 +36,9 @@ namespace iimg
 
 /**
 	Realization of the multi-page bitmap sequence used the component factory for the instatiation of the single sequence frame.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 class CMultiPageBitmapSequenceComp:
 			public icomp::CComponentBase,

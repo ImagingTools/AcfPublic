@@ -37,6 +37,7 @@ namespace imod
 /**
 	Basic implementation of a multiple model observer.
 
+	\ingroup DataModel
 	\ingroup ModelObserver
 */
 template<class ModelInterface>
