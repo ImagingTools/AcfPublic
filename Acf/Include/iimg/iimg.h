@@ -33,6 +33,9 @@
 	\li istd
 	\li iser
 	\li	icmm
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 namespace iimg
 {

@@ -35,6 +35,7 @@
 #include <istd/CChangeNotifier.h>
 #include <iprm/IOptionsList.h>
 #include <iqt/CSignalBlocker.h>
+#include <iwidgets/iwidgets.h>
 
 
 namespace iqtprm
@@ -99,8 +100,6 @@ void CSelectionParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*cha
 		default:
 			Q_ASSERT(false);
 	}
-
-	UpdateDescriptionFrame();
 }
 
 
@@ -109,8 +108,6 @@ void CSelectionParamGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*cha
 void CSelectionParamGuiComp::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
-
-	DescriptionFrame->hide();
 
 	if (!m_infoLabelAttrPtr.IsValid() || (*m_uiModeAttrPtr > UM_COMBOBOX)){
 		InfoFrame->hide();
@@ -137,8 +134,6 @@ void CSelectionParamGuiComp::OnGuiShown()
 	}
 
 	UpdateSelectorLabel();
-
-	UpdateDescriptionFrame();
 }
 
 
@@ -176,8 +171,6 @@ void CSelectionParamGuiComp::OnGuiRetranslate()
 	}
 
 	UpdateSelectorLabel();
-
-	UpdateDescriptionFrame();
 }
 
 
@@ -230,8 +223,6 @@ void CSelectionParamGuiComp::OnSelectionChanged(int /*index*/)
 
 				selectionPtr = GetActiveSubselection(selectionPtr);
 			}
-
-			UpdateDescriptionFrame();
 		}
 
 		UpdateComboBoxesView();
@@ -267,9 +258,6 @@ void CSelectionParamGuiComp::OnRadioButtonSelectionChanged(bool isSelected)
 
 		if (needUpdateGui){
 			UpdateRadioButtonView();
-		}
-		else{
-			UpdateDescriptionFrame();
 		}
 	}
 }
@@ -454,12 +442,19 @@ void CSelectionParamGuiComp::UpdateComboBoxesView()
 			if (*m_disableWhenEmptyAttrPtr && (optionsCount <= 0)){
 				switchBoxPtr->setEnabled(false);
 			}
+
+			if (constraintsPtr != nullptr){
+				if (switchIndex < m_descriptionLabelList.count()) {
+					QLabel* descriptionLabelPtr = m_descriptionLabelList.at(switchIndex);
+					QString description = constraintsPtr->GetOptionDescription(selectedIndex);
+					descriptionLabelPtr->setText(description);
+					descriptionLabelPtr->setVisible(!description.isEmpty());
+				}
+			}
 		}
 	}
 
 	m_comboBoxes.SetCount(switchIndex);
-
-	UpdateDescriptionFrame();
 }
 
 
@@ -541,40 +536,6 @@ void CSelectionParamGuiComp::UpdateRadioButtonView()
 
 			if (selectedButtonPtr != NULL){
 				selectedButtonPtr->setChecked(true);
-			}
-		}
-	}
-}
-
-
-void CSelectionParamGuiComp::UpdateDescriptionFrame()
-{
-	DescriptionFrame->setVisible(false);
-
-	if (*m_uiModeAttrPtr > UM_COMBOBOX){
-		return;
-	}
-
-	iprm::ISelectionParam* selectionPtr = GetObservedObject();
-	if (selectionPtr != NULL){
-		int selectedIndex = selectionPtr->GetSelectedOptionIndex();
-		
-		const iprm::IOptionsList* constraintsPtr = selectionPtr->GetSelectionConstraints();
-		if ((constraintsPtr != NULL) && (selectedIndex >= 0) && (selectedIndex < constraintsPtr->GetOptionsCount())){
-
-			QString optionDescription = constraintsPtr->GetOptionDescription(selectedIndex);
-
-			// Elide description text if the UI is in FixedWidth-mode:
-			if (m_labelWidthAttrPtr.IsValid()){
-				DescriptionLabel->setToolTip(optionDescription);
-				QFontMetrics fontMetrics = GetQtWidget()->fontMetrics();
-				optionDescription = fontMetrics.elidedText(optionDescription, Qt::ElideRight, *m_labelWidthAttrPtr > GetQtWidget()->minimumWidth() ? *m_labelWidthAttrPtr : GetQtWidget()->minimumWidth());
-			}
-
-			DescriptionLabel->setText(optionDescription);
-
-			if (!optionDescription.isEmpty()){
-				DescriptionFrame->setVisible(true);
 			}
 		}
 	}
@@ -679,6 +640,9 @@ void CSelectionParamGuiComp::ResetWidgets()
 	m_radioButtonGroups.Reset();
 	m_radioButtonFramePtr.Reset();
 	m_selectorLabelPtr.Reset();
+	m_descriptionLabelList.clear();
+	m_optionsLabelList.clear();
+	m_optionInfoLabelList.clear();
 }
 
 

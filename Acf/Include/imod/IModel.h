@@ -40,6 +40,7 @@ class IObserver;
 	Common interface for model objects, that supports Model/Observer design pattern.
 	\sa IObserver
 
+	\ingroup DataModel
 	\ingroup ModelObserver
 */
 class IModel: virtual public istd::IPolymorphic

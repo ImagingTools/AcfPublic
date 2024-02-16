@@ -37,6 +37,9 @@ namespace iimg
 /**
 	Implementation of bitmap storing internal additionaly QImage object reflecting state of main bitmap after conversion to Qt formats.
 	It allows to working with Qt with other bitmap formats.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 class CReflectedBitmapBase:
 			public istd::TCachedUpdateManagerWrap<iimg::CGeneralBitmap>,
@@ -52,15 +55,15 @@ public:
 	};
 
 	// reimplemented (iimg::IQImageProvider)
-	virtual const QImage& GetQImage() const;
-	virtual bool CopyImageFrom(const QImage& image);
+	virtual const QImage& GetQImage() const override;
+	virtual bool CopyImageFrom(const QImage& image) override;
 
 protected:
 	virtual bool ConvertFromQImage(const QImage& image) = 0;
 	virtual bool ConvertToQImage(QImage& result) const = 0;
 
 	// reimplmented (istd::TCachedUpdateManagerWrap)
-	virtual bool CalculateCache(const ChangeSet& changeSet);
+	virtual bool CalculateCache(const ChangeSet& changeSet) override;
 
 private:
 	QImage m_image;

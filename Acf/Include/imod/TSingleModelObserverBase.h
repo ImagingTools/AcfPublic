@@ -42,6 +42,7 @@ namespace imod
 /**
 	Basic implementation for a single model observer with binding to concrete data object interface.
 
+	\ingroup DataModel
 	\ingroup ModelObserver
 */
 template <class ModelInterface>
@@ -69,8 +70,8 @@ public:
 	bool AttachOrSetObject(ModelInterface* objectPtr);
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
-	virtual bool OnModelDetached(imod::IModel* modelPtr);
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
+	virtual bool OnModelDetached(imod::IModel* modelPtr) override;
 
 protected:
 	virtual ModelInterface* CastFromModel(imod::IModel* modelPtr) const;

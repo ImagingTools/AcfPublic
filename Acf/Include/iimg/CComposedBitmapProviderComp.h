@@ -38,6 +38,9 @@ namespace iimg
 
 /**
 	Component for composition/grouping of more single bitmap providers.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 class CComposedBitmapProviderComp: 
 			public icomp::CComponentBase,
@@ -58,14 +61,14 @@ public:
 	CComposedBitmapProviderComp();
 
 	// reimplemented (iimg::IMultiBitmapProvider)
-	virtual const iprm::IOptionsList* GetBitmapListInfo() const;
-	virtual int GetBitmapsCount() const;
-	virtual const iimg::IBitmap* GetBitmap(int bitmapIndex) const;
+	virtual const iprm::IOptionsList* GetBitmapListInfo() const override;
+	virtual int GetBitmapsCount() const override;
+	virtual const iimg::IBitmap* GetBitmap(int bitmapIndex) const override;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
-	virtual void OnComponentDestroyed();
+	virtual void OnComponentCreated() override;
+	virtual void OnComponentDestroyed() override;
 
 private:
 	I_MULTIREF(iimg::IBitmapProvider, m_bitmapProvidersCompPtr);

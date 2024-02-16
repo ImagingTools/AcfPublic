@@ -38,6 +38,7 @@ namespace istd
 
 /**
 	Common interface for class providing some basic information object.
+	\ingroup Logging
 */
 class IInformationProvider: virtual public IChangeable
 {

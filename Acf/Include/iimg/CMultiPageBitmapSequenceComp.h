@@ -36,6 +36,9 @@ namespace iimg
 
 /**
 	Realization of the multi-page bitmap sequence used the component factory for the instatiation of the single sequence frame.
+
+	\ingroup ImageProcessing
+	\ingroup Geometry
 */
 class CMultiPageBitmapSequenceComp:
 			public icomp::CComponentBase,
@@ -56,7 +59,7 @@ protected:
 	virtual istd::IChangeable* InsertPage(
 				const idoc::IDocumentMetaInfo* pageMetaInfoPtr = NULL,
 				const iprm::IParamsSet* pageParameterPtr = NULL,
-				int position = -1);
+				int position = -1) override;
 
 private:
 	I_FACT(iimg::IMultiBitmapProvider, m_multiBitmapFactoryCompPtr);

@@ -37,6 +37,7 @@ namespace imod
 /**
 	Basic implementation of a multiple model observer.
 
+	\ingroup DataModel
 	\ingroup ModelObserver
 */
 template<class ModelInterface>
@@ -58,7 +59,7 @@ public:
 	ModelInterface* GetObjectPtr(int objectIndex) const;
 
 	// reimplemented (imod::IObserver)
-	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask);
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
 };
 
 
