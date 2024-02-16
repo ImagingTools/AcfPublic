@@ -36,7 +36,6 @@ namespace imod
 /**
 	Common interface for an model editor.
 
-	\ingroup DataModel
 	\ingroup ModelObserver
 */
 class IModelEditor: virtual public istd::IPolymorphic

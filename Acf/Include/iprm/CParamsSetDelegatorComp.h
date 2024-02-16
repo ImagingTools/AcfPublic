@@ -59,23 +59,23 @@ public:
 	CParamsSetDelegatorComp();
 
 	// reimplemented (iprm::IParamsSet)
-	virtual Ids GetParamIds(bool editableOnly = false) const override;
-	virtual const iser::ISerializable* GetParameter(const QByteArray& id) const override;
-	virtual iser::ISerializable* GetEditableParameter(const QByteArray& id) override;
+	virtual Ids GetParamIds(bool editableOnly = false) const;
+	virtual const iser::ISerializable* GetParameter(const QByteArray& id) const;
+	virtual iser::ISerializable* GetEditableParameter(const QByteArray& id);
 
 	// reimplemented (iser::IObject)
 	virtual QByteArray GetFactoryId() const;
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IChangeable)
-	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	I_REF(iprm::IParamsSet, m_slaveParamsSetCompPtr);

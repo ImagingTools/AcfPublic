@@ -46,7 +46,7 @@
 
 
 /**
-	This namespace contains non-UI utility classes based on Qt.
+	This namespace contains standard classes based on Qt.
 */
 namespace iqt
 {

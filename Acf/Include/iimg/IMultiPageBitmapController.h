@@ -35,9 +35,6 @@ namespace iimg
 
 /**
 	Interface of a controller for handling multi-page bitmaps.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class IMultiPageBitmapController: virtual public IMultiBitmapProvider
 {

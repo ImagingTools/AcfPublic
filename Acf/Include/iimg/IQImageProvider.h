@@ -38,9 +38,6 @@ namespace iimg
 
 /**
 	Interface for QImage object provider.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class IQImageProvider: virtual public istd::IPolymorphic
 {

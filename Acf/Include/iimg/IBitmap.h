@@ -35,9 +35,6 @@ namespace iimg
 
 /**
 	Definition of single plane bitmap.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class IBitmap: virtual public IRasterImage
 {

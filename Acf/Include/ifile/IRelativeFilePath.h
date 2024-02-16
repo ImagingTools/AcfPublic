@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_IRelativeFilePath_included
+#define ifile_IRelativeFilePath_included
 
 
 // ACF includes
@@ -39,5 +40,8 @@ public:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_IRelativeFilePath_included
 
 

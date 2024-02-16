@@ -73,8 +73,8 @@ protected:
 	virtual void OnSystemShutdown();
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
-	virtual void OnComponentDestroyed() override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 private:
 	class RuntimeStatusObserver: public imod::CMultiModelDispatcherBase
@@ -84,7 +84,7 @@ private:
 
 	protected:
 		// reimplemented (imod::CMultiModelDispatcherBase)
-		virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet) override;
+		virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 	private:
 		TRuntimeStatusHanderCompWrap& m_parent;

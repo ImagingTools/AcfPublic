@@ -41,9 +41,6 @@ namespace iimg
 
 /**
 	Bitmap loader component implementing interfaces \c ifile::IFilePersistence.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class CBitmapLoaderComp:
 			public QObject,

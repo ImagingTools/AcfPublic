@@ -143,18 +143,18 @@ public:
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void OnGuiModelAttached() override;
-	virtual void OnGuiModelDetached() override;
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnGuiModelAttached();
+	virtual void OnGuiModelDetached();
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual void OnGuiCreated() override;
-	virtual void OnGuiDestroyed() override;
-	virtual void OnGuiShown() override;
-	virtual void OnGuiRetranslate() override;
+	virtual void OnGuiCreated();
+	virtual void OnGuiDestroyed();
+	virtual void OnGuiShown();
+	virtual void OnGuiRetranslate();
 
 	// reimplemented (imod::CMultiModelDispatcherBase)
-	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
 protected Q_SLOTS:
 	void OnSelectionChanged(int index);
@@ -165,6 +165,7 @@ protected Q_SLOTS:
 private:
 	void UpdateComboBoxesView();
 	void UpdateRadioButtonView();
+	void UpdateDescriptionFrame();
 	void UpdateSelectorLabel();
 	void ResetWidgets();
 	iprm::ISelectionParam* GetActiveSubselection(const iprm::ISelectionParam* selectionPtr) const;

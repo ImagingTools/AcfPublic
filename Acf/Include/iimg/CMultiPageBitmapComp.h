@@ -35,9 +35,6 @@ namespace iimg
 
 /**
 	Realization of the multi-page bitmap used the component factory for the instatiation of the page bitmap.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class CMultiPageBitmapComp:
 			public icomp::CComponentBase,
@@ -57,7 +54,7 @@ public:
 
 protected:
 	// reimplemented (CMultiPageBitmapBase)
-	virtual IBitmap* CreateBitmap() const override;
+	virtual IBitmap* CreateBitmap() const;
 
 private:
 	I_FACT(IBitmap, m_bitmapFactoryCompPtr);

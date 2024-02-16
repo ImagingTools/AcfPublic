@@ -40,19 +40,19 @@ class CComponentStaticInfoBase: virtual public IComponentStaticInfo
 {
 public:
 	// reimplemented (icomp::IComponentStaticInfo)
-	virtual int GetComponentType() const override;
-	virtual const IAttributeStaticInfo* GetAttributeInfo(const QByteArray& attributeId) const override;
-	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const override;
-	virtual const QString& GetDescription() const override;
-	virtual const QString& GetKeywords() const override;
+	virtual int GetComponentType() const;
+	virtual const IAttributeStaticInfo* GetAttributeInfo(const QByteArray& attributeId) const;
+	virtual const IComponentStaticInfo* GetEmbeddedComponentInfo(const QByteArray& embeddedId) const;
+	virtual const QString& GetDescription() const;
+	virtual const QString& GetKeywords() const;
 
 	//	reimplemented (icomp::IElementStaticInfo)
-	virtual Ids GetMetaIds(int metaGroupId) const override;
-	virtual const IElementStaticInfo* GetSubelementInfo(const QByteArray& subcomponentId) const override;
+	virtual Ids GetMetaIds(int metaGroupId) const;
+	virtual const IElementStaticInfo* GetSubelementInfo(const QByteArray& subcomponentId) const;
 
 	//	reimplemented (iattr::IAttributesMetaInfoProvider)
-	virtual iattr::IAttributesProvider::AttributeIds GetAttributeMetaIds() const override;
-	virtual const iattr::IAttributeMetaInfo* GetAttributeMetaInfo(const QByteArray& attributeId) const override;
+	virtual iattr::IAttributesProvider::AttributeIds GetAttributeMetaIds() const;
+	virtual const iattr::IAttributeMetaInfo* GetAttributeMetaInfo(const QByteArray& attributeId) const;
 };
 
 

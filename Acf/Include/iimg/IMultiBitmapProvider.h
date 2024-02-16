@@ -35,9 +35,6 @@ namespace iimg
 
 /**
 	Supplier allowing to access of multiple produced bitmaps.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class IMultiBitmapProvider: virtual public istd::IChangeable
 {

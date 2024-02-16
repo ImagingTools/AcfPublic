@@ -37,9 +37,6 @@ namespace iimg
 	Generic implementation of a multi-page bitmap.
 
 	\tparam	BitmapImpl	Type of the bitmap implementation.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 template <class BitmapImpl>
 class TMultiPageBitmap: public CMultiPageBitmapBase
@@ -49,11 +46,11 @@ public:
 	typedef BitmapImpl BitmapType;
 
 	// reimplemented (istd::IChangeable)
-	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual istd::IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const;
 
 protected:
 	// reimplemented (CMultiPageBitmapBase)
-	virtual IBitmap* CreateBitmap() const override;
+	virtual IBitmap* CreateBitmap() const;
 };
 
 

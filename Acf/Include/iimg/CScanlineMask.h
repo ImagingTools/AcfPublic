@@ -47,9 +47,6 @@ namespace iimg
 
 /**
 	Representation of a 2D-region as container of bitmap line scans.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class CScanlineMask:
 			public i2d::CObject2dBase,
@@ -214,26 +211,26 @@ public:
 	void Dilate(int leftValue, int rightValue, int topValue, int bottomValue);
 
 	// reimplemented (i2d::IObject2d)
-	virtual i2d::CVector2d GetCenter() const override;
-	virtual void MoveCenterTo(const i2d::CVector2d& position) override;
-	virtual i2d::CRectangle GetBoundingBox() const override;
+	virtual i2d::CVector2d GetCenter() const;
+	virtual void MoveCenterTo(const i2d::CVector2d& position);
+	virtual i2d::CRectangle GetBoundingBox() const;
 
 	// reimplemented (iimg::IRasterImage)
-	virtual bool IsEmpty() const override;
-	virtual void ResetImage() override;
-	virtual void ClearImage() override;
-	virtual istd::CIndex2d GetImageSize() const override;
-	virtual int GetComponentsCount() const override;
-	virtual icmm::CVarColor GetColorAt(const istd::CIndex2d& position) const override;
-	virtual bool SetColorAt(const istd::CIndex2d& position, const icmm::CVarColor& color) override;
+	virtual bool IsEmpty() const;
+	virtual void ResetImage();
+	virtual void ClearImage();
+	virtual istd::CIndex2d GetImageSize() const;
+	virtual int GetComponentsCount() const;
+	virtual icmm::CVarColor GetColorAt(const istd::CIndex2d& position) const;
+	virtual bool SetColorAt(const istd::CIndex2d& position, const icmm::CVarColor& color);
 
 	// reimplemented (iser::ISerializable)
-	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual bool Serialize(iser::IArchive& archive);
 
 	// reimplemented (istd::IChangeable)
-	virtual int GetSupportedOperations() const override;
-	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
-	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual int GetSupportedOperations() const;
+	virtual bool CopyFrom(const istd::IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS);
+	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS);
 
 	bool operator==(const CScanlineMask& mask) const;
 	bool operator!=(const CScanlineMask& mask) const;

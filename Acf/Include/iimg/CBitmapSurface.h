@@ -35,9 +35,6 @@ namespace iimg
 
 /**
 	Union of a bitmap objects and its samples represented as a 2D sampled function.
-
-	\ingroup ImageProcessing
-	\ingroup Geometry
 */
 class CBitmapSurface: public iimg::CBitmap, public imath::CSampledFunction2d
 {
@@ -49,7 +46,7 @@ public:
 	CBitmapSurface(const CBitmapSurface& bitmap);
 
 	// reimplemented (istd::IChangeable)
-	virtual void OnEndChanges(const ChangeSet& changeSet) override;
+	virtual void OnEndChanges(const ChangeSet& changeSet);
 
 private:
 	void CreateSurfaceFromBitmap();

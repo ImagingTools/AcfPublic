@@ -41,7 +41,6 @@ class IModel;
 	Common interface for all classes implementing the Observer functionality
 	in the Model/Observer design pattern.
 
-	\ingroup DataModel
 	\ingroup ModelObserver
 */
 class IObserver: virtual public istd::IPolymorphic
