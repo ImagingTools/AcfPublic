@@ -9564,8 +9564,8 @@
       <type>void</type>
       <name>DoDocumentProcessing</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_command_comp.html</anchorfile>
-      <anchor>a0b56a66d2926f88dd6caf65246816564</anchor>
-      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId)</arglist>
+      <anchor>a3c7384733d9813674af4448755f430ed</anchor>
+      <arglist>(const istd::IChangeable *inputDocumentPtr, const QByteArray &amp;documentTypeId) override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -9597,6 +9597,13 @@
       <anchor>ae409c890d1aef50212a784fcbbb730d2</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>iqtgui::TMakeIconProviderCompWrap&lt; ibase::ICommandsProvider &gt;</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>a43e8cf059eb5a0c0362a7bf7e98fd5df</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CDocumentProcessingManagerCompBase</name>
@@ -9622,22 +9629,22 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>af8e0017d23d6d946d2ba2576c995da3b</anchor>
-      <arglist>() const</arglist>
+      <anchor>a478d8b644fc1c18577b2dadb2b040c7a</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>a85544fd405a619b295b1f1156c70804a</anchor>
-      <arglist>()</arglist>
+      <anchor>a2c4170eba6bed84e122be0c801279863</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentDestroyed</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>a89a8acd22b4aaf27f7472adaf164b78c</anchor>
-      <arglist>()</arglist>
+      <anchor>a18be080bccb1daf860b6c0807ebf70ca</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" virtualness="pure">
       <type>virtual void</type>
@@ -9648,10 +9655,17 @@
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
+      <name>OnDesignSchemaChanged</name>
+      <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
+      <anchor>aa69da5c47070ccfe24f6d8dd6726db58</anchor>
+      <arglist>(const QByteArray &amp;themeId) override</arglist>
+    </member>
+    <member kind="function" protection="protected" virtualness="virtual">
+      <type>virtual void</type>
       <name>OnModelChanged</name>
       <anchorfile>classiprocgui_1_1_c_document_processing_manager_comp_base.html</anchorfile>
-      <anchor>ad18327d1f372363d799dff5ac1ddf951</anchor>
-      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet)</arglist>
+      <anchor>aafd82073f57a471c8d5fd466690f7973</anchor>
+      <arglist>(int modelId, const istd::IChangeable::ChangeSet &amp;changeSet) override</arglist>
     </member>
     <member kind="function" protection="protected">
       <type></type>
