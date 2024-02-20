@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ifile_ITempFileManager_included
-#define ifile_ITempFileManager_included
+#pragma once
 
 
 // Qt includes
@@ -56,7 +55,7 @@ public:
 		Add a new file to the session.
 		The generated file path will be inside of the session's base folder.
 	*/
-	virtual QByteArray AddFileItem(const QByteArray& sessionId, const QString& fileName) = 0;
+	virtual QByteArray AddFileItem(const QByteArray& sessionId, const QString& fileName, const QByteArray& proposedSessionId = QByteArray()) = 0;
 
 	/**
 		Get the generated path of the file or folder by its ID.
@@ -81,8 +80,5 @@ public:
 
 
 } // namespace ifile
-
-
-#endif // !ifile_ITempFileManager_included
 
 

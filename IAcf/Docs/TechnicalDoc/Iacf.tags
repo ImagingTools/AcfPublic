@@ -406,7 +406,6 @@
   <compound kind="class">
     <name>iqwt::CHistogramViewComp</name>
     <filename>classiqwt_1_1_c_histogram_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CHistogramViewComp, imeas::IDataSequence &gt;</type>
       <name>BaseClass</name>
@@ -558,7 +557,6 @@
   <compound kind="class">
     <name>iocv::CLensDistorsionCalibration</name>
     <filename>classiocv_1_1_c_lens_distorsion_calibration.html</filename>
-    <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="function">
       <type></type>
       <name>CLensDistorsionCalibration</name>
@@ -725,7 +723,6 @@
     <name>iocv::CLensDistorsionCalibrationProviderComp</name>
     <filename>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</filename>
     <base>TSupplierCompWrap&lt; CLensDistorsionCalibration &gt;</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; CLensDistorsionCalibration &gt;</type>
       <name>BaseClass</name>
@@ -763,7 +760,6 @@
   <compound kind="class">
     <name>ilibav::CLibAvVideoDecoderComp</name>
     <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">icam::IBitmapAcquisition</base>
     <base virtualness="virtual">imeas::ISampleAcquisition</base>
     <base virtualness="virtual">imm::IVideoController</base>
@@ -1140,8 +1136,6 @@
   <compound kind="class">
     <name>icbox::CMemoryBankSerializerComp</name>
     <filename>classicbox_1_1_c_memory_bank_serializer_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
-    <base virtualness="virtual">ifile::IFilePersistence</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -1263,7 +1257,6 @@
   <compound kind="class">
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
     <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
@@ -1413,7 +1406,6 @@
   <compound kind="class">
     <name>iocv::COcvImage</name>
     <filename>classiocv_1_1_c_ocv_image.html</filename>
-    <base protection="private" virtualness="virtual">iimg::CBitmapBase</base>
     <member kind="function" static="yes">
       <type>static bool</type>
       <name>ConvertFromBitmap</name>
@@ -1432,7 +1424,6 @@
   <compound kind="class">
     <name>iocv::COcvIntrinsicCameraCalibration</name>
     <filename>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</filename>
-    <base virtualness="virtual">i2d::ICalibration2d</base>
     <member kind="typedef">
       <type>cv::Matx33d</type>
       <name>CameraMatrix</name>
@@ -1634,7 +1625,6 @@
     <name>iocv::COcvIntrinsicCameraCalibrationSupplierComp</name>
     <filename>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</filename>
     <base>TSupplierCompWrap&lt; COcvIntrinsicCameraCalibration &gt;</base>
-    <base virtualness="virtual">i2d::ICalibrationProvider</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; COcvIntrinsicCameraCalibration &gt;</type>
       <name>BaseClass</name>
@@ -2012,7 +2002,6 @@
   <compound kind="class">
     <name>iwin::CPerformanceTimeStamp</name>
     <filename>classiwin_1_1_c_performance_time_stamp.html</filename>
-    <base virtualness="virtual">istd::ITimeStamp</base>
     <member kind="function">
       <type></type>
       <name>CPerformanceTimeStamp</name>
@@ -2115,7 +2104,6 @@
   <compound kind="class">
     <name>iphonon::CPhononVideoViewGuiComp</name>
     <filename>classiphonon_1_1_c_phonon_video_view_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; QVideoWidget &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QVideoWidget &gt;</type>
@@ -2275,8 +2263,6 @@
   <compound kind="class">
     <name>iqwt::CProgressHistoryGuiComp</name>
     <filename>classiqwt_1_1_c_progress_history_gui_comp.html</filename>
-    <base>TDesignerGuiCompBase&lt; Ui::CProgressHistoryGuiComp &gt;</base>
-    <base>ibase::IProgressManager</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiCompBase&lt; Ui::CProgressHistoryGuiComp &gt;</type>
       <name>BaseClass</name>
@@ -2351,7 +2337,6 @@
   <compound kind="class">
     <name>iqwt::CQwtDataSequenceViewComp</name>
     <filename>classiqwt_1_1_c_qwt_data_sequence_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CQwtDataSequenceViewComp, imeas::IDataSequence &gt;</base>
     <member kind="typedef">
       <type>iqtgui::TDesignerGuiObserverCompBase&lt; Ui::CQwtDataSequenceViewComp, imeas::IDataSequence &gt;</type>
       <name>BaseClass</name>
@@ -2384,7 +2369,6 @@
   <compound kind="class">
     <name>idc1394::CSimpleCameraComp</name>
     <filename>classidc1394_1_1_c_simple_camera_comp.html</filename>
-    <base>ilog::TLoggerCompWrap</base>
     <base virtualness="virtual">iproc::TSyncProcessorWrap</base>
     <member kind="enumeration">
       <type></type>
@@ -2519,8 +2503,6 @@
   <compound kind="class">
     <name>iqwt3d::CSurfaceViewComp</name>
     <filename>classiqwt3d_1_1_c_surface_view_comp.html</filename>
-    <base>TDesignerGuiObserverCompBase&lt; Ui::CSurfaceViewComp, imath::ISampledFunction2d &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="enumvalue">
       <name>GI_QWT3D</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
@@ -2632,7 +2614,6 @@
   <compound kind="class">
     <name>iqsci::CTextEditor</name>
     <filename>classiqsci_1_1_c_text_editor.html</filename>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>QWidget</type>
       <name>BaseClass</name>
@@ -2749,8 +2730,6 @@
   <compound kind="class">
     <name>iqsci::CTextEditorGuiComp</name>
     <filename>classiqsci_1_1_c_text_editor_gui_comp.html</filename>
-    <base>TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</base>
-    <base virtualness="virtual">ibase::ICommandsProvider</base>
     <member kind="typedef">
       <type>iqtgui::TGuiObserverWrap&lt; iqtgui::TGuiComponentBase&lt; CTextEditor &gt;, imod::TSingleModelObserverBase&lt; idoc::ITextDocument &gt; &gt;</type>
       <name>BaseClass</name>
@@ -2811,7 +2790,6 @@
   <compound kind="class">
     <name>iwin::CTimeStampCacheComp</name>
     <filename>classiwin_1_1_c_time_stamp_cache_comp.html</filename>
-    <base>icomp::CComponentBase</base>
     <base virtualness="virtual">iinsp::ITimeStampProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
@@ -2838,7 +2816,6 @@
   <compound kind="class">
     <name>iqaxmm::CVlcVideoViewGuiComp</name>
     <filename>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</filename>
-    <base>TGuiComponentBase&lt; QFrame &gt;</base>
     <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QFrame &gt;</type>
@@ -3024,7 +3001,6 @@
     <name>iwin::TComPtr</name>
     <filename>classiwin_1_1_t_com_ptr.html</filename>
     <templarg></templarg>
-    <base>TPointerBase&lt; Type &gt;</base>
     <member kind="typedef">
       <type>istd::TPointerBase&lt; Type &gt;</type>
       <name>BaseClass</name>

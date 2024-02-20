@@ -65,10 +65,10 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (ibase::IApplication)
-	virtual bool InitializeApplication(int argc, char** argv);
-	virtual int Execute(int argc, char** argv);
-	virtual QString GetHelpText() const;
-	virtual QStringList GetApplicationArguments() const;
+	virtual bool InitializeApplication(int argc, char** argv) override;
+	virtual int Execute(int argc, char** argv) override;
+	virtual QString GetHelpText() const override;
+	virtual QStringList GetApplicationArguments() const override;
 
 protected:
 	/**
@@ -78,7 +78,10 @@ protected:
 	virtual void OnApplicationShutdown();
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentDestroyed();
+	virtual void OnComponentDestroyed() override;
+
+Q_SIGNALS:
+	void EmitEventLoopStarted();
 
 private Q_SLOTS:
 	void OnKeyPressed(char ch);
@@ -93,7 +96,7 @@ private:
 		void SetRuntimeStatus(IRuntimeStatusProvider::RuntimeStatus runtimeStatus);
 
 		// reimplemented (ibase::IRuntimeStatusProvider)
-		virtual IRuntimeStatusProvider::RuntimeStatus GetRuntimeStatus() const;
+		virtual IRuntimeStatusProvider::RuntimeStatus GetRuntimeStatus() const override;
 
 	private:
 		IRuntimeStatusProvider::RuntimeStatus m_status;
