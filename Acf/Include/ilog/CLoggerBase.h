@@ -51,10 +51,10 @@ public:
 	CLoggerBase();
 
 	// reimplemented (ilog::ILoggable)
-	virtual void SetLogPtr(ilog::IMessageConsumer* logPtr) override;
-	virtual ilog::IMessageConsumer* GetLogPtr() const override;
-	virtual void SetTracingEnabled(bool trace) override;
-	virtual bool IsTracingEnabled() const override;
+	virtual void SetLogPtr(ilog::IMessageConsumer* logPtr);
+	virtual ilog::IMessageConsumer* GetLogPtr() const;
+	virtual void SetTracingEnabled(bool trace);
+	virtual bool IsTracingEnabled() const;
 
 protected:
 	/**

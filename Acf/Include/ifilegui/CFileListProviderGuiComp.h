@@ -50,7 +50,7 @@ public:
 
 protected:
 	// reimplemented (iqtgui::TGuiObserverWrap)
-	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void UpdateGui(const istd::IChangeable::ChangeSet& changeSet);
 };
 
 

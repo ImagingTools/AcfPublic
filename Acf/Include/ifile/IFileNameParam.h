@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ifile_IFileNameParam_included
+#define ifile_IFileNameParam_included
 
 
 // Qt includes
@@ -68,5 +69,8 @@ public:
 
 
 } // namespace ifile
+
+
+#endif // !ifile_IFileNameParam_included
 
 

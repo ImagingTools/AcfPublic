@@ -71,23 +71,23 @@ public:
 				const istd::IChangeable* dataObjectPtr,
 				const QString* filePathPtr = NULL,
 				int flags = -1,
-				bool beQuiet = true) const override;
+				bool beQuiet = true) const;
 	virtual int LoadFromFile(
 				istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
 	virtual int SaveToFile(
 				const istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
 
 	// reimplemented (ifile::IFileTypeInfo)
-	virtual bool GetFileExtensions(QStringList& result, const istd::IChangeable* dataObjectPtr = NULL, int flags = -1, bool doAppend = false) const override;
-	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const override;
+	virtual bool GetFileExtensions(QStringList& result, const istd::IChangeable* dataObjectPtr = NULL, int flags = -1, bool doAppend = false) const;
+	virtual QString GetTypeDescription(const QString* extensionPtr = NULL) const;
 
 protected:
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated() override;
+	virtual void OnComponentCreated();
 
 protected:
 	virtual bool SerializeDocumentMetaInfo(const idoc::IMultiPageDocument& document, iser::IArchive& archive) const;

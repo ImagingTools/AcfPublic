@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iprocgui_CDocumentProcessingCommandComp_included
+#define iprocgui_CDocumentProcessingCommandComp_included
 
 
 // ACF includes
@@ -46,7 +47,7 @@ public:
 
 protected:
 	// reimplemented (iprocgui::CDocumentProcessingManagerCompBase)
-	void DoDocumentProcessing(const istd::IChangeable* inputDocumentPtr, const QByteArray& documentTypeId) override;
+	void DoDocumentProcessing(const istd::IChangeable* inputDocumentPtr, const QByteArray& documentTypeId);
 
 private:
 	I_REF(istd::IChangeable, m_outputDataCompPtr);
@@ -54,6 +55,7 @@ private:
 };
 
 
-} // namespace iprocgui
+} // namespace iproc
 
 
+#endif // !iprocgui_CDocumentProcessingCommandComp_included

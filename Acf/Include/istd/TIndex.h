@@ -189,8 +189,7 @@ public:
 	TIndex operator+(const TIndex& index) const;
 	TIndex& operator+=(const TIndex& index);
 	TIndex operator-(const TIndex& index) const;
-    TIndex& operator-=(const TIndex& index);
-    TIndex& operator=(const TIndex& index) = default;
+	TIndex& operator-=(const TIndex& index);
 
 	// static methods
 	/**

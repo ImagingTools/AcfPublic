@@ -20,7 +20,8 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef iprocgui_CDocumentProcessingManagerCompBase_included
+#define iprocgui_CDocumentProcessingManagerCompBase_included
 
 
 // Qt includes
@@ -34,7 +35,6 @@
 #include <iproc/IProcessor.h>
 #include <iqtgui/IGuiObject.h>
 #include <iqtgui/CHierarchicalCommand.h>
-#include <iqtgui/TMakeIconProviderCompWrap.h>
 
 
 namespace iprocgui
@@ -45,12 +45,11 @@ class CDocumentProcessingManagerCompBase:
 			public QObject,
 			public ilog::CLoggerComponentBase,
 			protected imod::CMultiModelDispatcherBase,
-			public iqtgui::TMakeIconProviderCompWrap <ibase::ICommandsProvider>
+			virtual public ibase::ICommandsProvider
 {
 	Q_OBJECT
 public:
 	typedef ilog::CLoggerComponentBase BaseClass;
-	typedef iqtgui::TMakeIconProviderCompWrap <ibase::ICommandsProvider> BaseClass2;
 	
 	I_BEGIN_BASE_COMPONENT(CDocumentProcessingManagerCompBase);
 		I_REGISTER_INTERFACE(ibase::ICommandsProvider);
@@ -83,11 +82,11 @@ public:
 	void SetProcessingCommandEnabled(bool isProcessingCommandEnabled = true);
 
 	// reimpemented (ibase::ICommandsProvider)
-	virtual const ibase::IHierarchicalCommand* GetCommands() const override;
+	virtual const ibase::IHierarchicalCommand* GetCommands() const;
 
 	// reimpemented (icomp::IComponent)
-	virtual void OnComponentCreated()override;
-	virtual void OnComponentDestroyed()override;
+	virtual void OnComponentCreated();
+	virtual void OnComponentDestroyed();
 
 	// abstract methods
 
@@ -97,16 +96,9 @@ public:
 	virtual void DoDocumentProcessing(const istd::IChangeable* inputDocumentPtr, const QByteArray& documentTypeId) = 0;
 
 protected:
-	// reimplemented (ibase::TDesignSchemaHandlerWrap)
-	virtual void OnDesignSchemaChanged(const QByteArray& themeId) override;
-
 	// reimplemented (imod::CMultiModelDispatcherBase)
-	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet) override;
+	virtual void OnModelChanged(int modelId, const istd::IChangeable::ChangeSet& changeSet);
 
-private Q_SLOTS:
-	void OnDoProcessing();
-
-protected:
 	I_REF(idoc::IDocumentManager, m_documentManagerCompPtr);
 	I_REF(imod::IModel, m_documentManagerModelCompPtr);
 	I_REF(iproc::IProcessor, m_processorCompPtr);
@@ -124,9 +116,15 @@ protected:
 	iqtgui::CHierarchicalCommand m_processingMenu;
 	iqtgui::CHierarchicalCommand m_rootCommands;
 	iqtgui::CHierarchicalCommand m_processingCommand;
+
+private Q_SLOTS:
+	void OnDoProcessing();
 };
 
 
-} // namespace iprocgui
+} // namespace iproc
+
+
+#endif // !iprocgui_CDocumentProcessingManagerCompBase_included
 
 

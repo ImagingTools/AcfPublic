@@ -47,8 +47,8 @@ public:
 	void AddGradient(const istd::CRange& intervall, const Gradient& gradient);
 
 	// reimplemented (icmm::IColorTransformation)
-	virtual bool GetValueAt(const Argument& argument, Result& result) const override;
-	virtual Result GetValueAt(const Argument& argument) const override;
+	virtual bool GetValueAt(const Argument& argument, Result& result) const;
+	virtual Result GetValueAt(const Argument& argument) const;
 
 private:
 	typedef QPair<istd::CRange, Gradient> IntervalGradient;

@@ -52,13 +52,13 @@ public:
 	TSimComponentsFactory();
 
 	// reimplemented (istd::IFactoryInfo)
-	virtual istd::IFactoryInfo::KeyList GetFactoryKeys() const override;
+	virtual istd::IFactoryInfo::KeyList GetFactoryKeys() const;
 
 	// reimplemented (istd::TIFactory<icomp::IComponent>)
-	virtual icomp::IComponent* CreateInstance(const QByteArray& keyId = "") const override;
+	virtual icomp::IComponent* CreateInstance(const QByteArray& keyId = "") const;
 
 	// reimplemented (icomp::ICompositeComponent)
-	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const override;
+	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const;
 
 private:
 	KeyList m_factoryKeys;
