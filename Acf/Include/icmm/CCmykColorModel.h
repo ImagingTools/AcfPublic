@@ -24,38 +24,30 @@
 
 
 // ACF includes
-#include <icmm/CHsvToRgbTransformation.h>
-#include <icmm/CRgbToCmykTransformation.h>
-#include <icmm/CCmykToRgbTransformation.h>
+#include <icmm/CCmyColorModel.h>
 
 
 namespace icmm
 {
 
 
-/**
-	Static provider of available color transformations.
-*/
-class CColorTransformationProvider: virtual public istd::IPolymorphic
+class CCmykColorModel: public CCmyColorModel
 {
 public:
-	enum ColorType
-	{
-		HsvColor = 0x0001,
-		CmykColor = 0x0010,
-		RgbColor = 0x0020,
-		LabColor = 0x0040
-	};
-
-	CColorTransformationProvider();
-
-	static IColorTransformation* GetColorTransformation(int inputColorType, int outputColorType);
-
-private:
-	static icmm::CHsvToRgbTransformation s_hsvToRgbTransform;
-	static icmm::CRgbToCmykTransformation s_rgbToCmykTransform;
-	static icmm::CCmykToRgbTransformation s_cmykToRgbTransform;
+	// reimplemented (icmm::IColorantList)
+	virtual QByteArrayList GetColorantIds() const override;
 };
+
+
+// public methods
+
+// reimplemented (icmm::IColorantList)
+
+inline QByteArrayList CCmykColorModel::GetColorantIds() const
+{
+	return {"Cyan", "Magenta", "Yellow", "Black"};
+}
+
 
 } // namespace icmm
 

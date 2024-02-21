@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icmm_TComposedColorGradient_included
-#define icmm_TComposedColorGradient_included	
+#pragma once
 
 
 // Qt includes
@@ -99,8 +98,5 @@ typedef TComposedColorGradient<CLinearGradient> CComposedLinearGradient;
 
 
 } // namespace icmm
-
-
-#endif // !icmm_TComposedColorGradient_included
 
 

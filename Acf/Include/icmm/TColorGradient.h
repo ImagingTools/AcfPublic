@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icmm_TColorGradient_included
-#define icmm_TColorGradient_included
+#pragma once
 
 
 // ACF includes
@@ -117,8 +116,5 @@ typedef TColorGradient<LinearGradientFunction> CLinearColorGradient;
 
 
 } // namespace icmm
-
-
-#endif // !icmm_TColorGradient_included
 
 

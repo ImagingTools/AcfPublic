@@ -20,12 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef icmm_CCmyk_included
-#define icmm_CCmyk_included
+#pragma once
 
 
+// ACF includes
 #include <iser/IArchive.h>
-
 #include <icmm/TComposedColor.h>
 
 
@@ -213,8 +212,5 @@ inline const CCmyk& CCmyk::operator/=(double value)
 
 
 } // namespace icmm
-
-
-#endif // !icmm_CCmyk_included
 
 

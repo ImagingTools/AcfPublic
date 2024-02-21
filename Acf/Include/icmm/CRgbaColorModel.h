@@ -24,38 +24,54 @@
 
 
 // ACF includes
-#include <icmm/CHsvToRgbTransformation.h>
-#include <icmm/CRgbToCmykTransformation.h>
-#include <icmm/CCmykToRgbTransformation.h>
+#include <icmm/CRgbColorModel.h>
 
 
 namespace icmm
 {
 
 
-/**
-	Static provider of available color transformations.
-*/
-class CColorTransformationProvider: virtual public istd::IPolymorphic
+class CRgbaColorModel: public CRgbColorModel
 {
 public:
-	enum ColorType
-	{
-		HsvColor = 0x0001,
-		CmykColor = 0x0010,
-		RgbColor = 0x0020,
-		LabColor = 0x0040
-	};
+	typedef CRgbColorModel BaseClass;
 
-	CColorTransformationProvider();
-
-	static IColorTransformation* GetColorTransformation(int inputColorType, int outputColorType);
-
-private:
-	static icmm::CHsvToRgbTransformation s_hsvToRgbTransform;
-	static icmm::CRgbToCmykTransformation s_rgbToCmykTransform;
-	static icmm::CCmykToRgbTransformation s_cmykToRgbTransform;
+	// reimplemented (icmm::IColorModel)
+	virtual int GetColorSpaceDimensionality() const override;
+	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
+	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
 };
+
+
+// public inline methods
+
+// reimplemented (icmm::IColorModel)
+
+int CRgbaColorModel::GetColorSpaceDimensionality() const
+{
+	return 4;
+}
+
+
+const imath::IUnitInfo* CRgbaColorModel::GetColorSpaceComponentInfo(int componentIndex) const
+{
+	Q_UNUSED(componentIndex);
+	Q_ASSERT(componentIndex >= 0);
+	Q_ASSERT(componentIndex < 0);
+
+	return &m_unitInfo;
+}
+
+
+QString CRgbaColorModel::GetColorSpaceComponentName(int componentIndex) const
+{
+	if (componentIndex == 3){
+		return "A";
+	}
+
+	return BaseClass::GetColorSpaceComponentName(componentIndex);
+}
+
 
 } // namespace icmm
 

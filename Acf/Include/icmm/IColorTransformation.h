@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icmm_IColorTransformation_included
-#define icmm_IColorTransformation_included
+#pragma once
 
 
 // ACF includes
@@ -42,8 +41,5 @@ class IColorTransformation: virtual public imath::TIMathFunction<icmm::CVarColor
 
 
 } // namespace icmm
-
-
-#endif // !icmm_IColorTransformation_included
 
 

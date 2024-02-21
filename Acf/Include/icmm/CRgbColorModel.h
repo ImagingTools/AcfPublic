@@ -24,38 +24,32 @@
 
 
 // ACF includes
-#include <icmm/CHsvToRgbTransformation.h>
-#include <icmm/CRgbToCmykTransformation.h>
-#include <icmm/CCmykToRgbTransformation.h>
+#include <imath/CGeneralUnitInfo.h>
+#include <icmm/IColorModel.h>
 
 
 namespace icmm
 {
 
 
-/**
-	Static provider of available color transformations.
-*/
-class CColorTransformationProvider: virtual public istd::IPolymorphic
+class CRgbColorModel: virtual public IColorModel
 {
 public:
-	enum ColorType
-	{
-		HsvColor = 0x0001,
-		CmykColor = 0x0010,
-		RgbColor = 0x0020,
-		LabColor = 0x0040
-	};
+	CRgbColorModel();
 
-	CColorTransformationProvider();
+	// reimplemented (IColorModel)
+	virtual ModelType GetModelType() const override;
+	virtual ModelClass GetModelClass() const override;
+	virtual ColorSpaceClass GetColorSpaceClass() const override;
+	virtual int GetColorSpaceDimensionality() const override;
+	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
+	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
+	virtual const icmm::IColorTransformation* CreateColorTranformation(const IColorModel& otherColorModel, const QByteArray& transformationId) const override;
 
-	static IColorTransformation* GetColorTransformation(int inputColorType, int outputColorType);
-
-private:
-	static icmm::CHsvToRgbTransformation s_hsvToRgbTransform;
-	static icmm::CRgbToCmykTransformation s_rgbToCmykTransform;
-	static icmm::CCmykToRgbTransformation s_cmykToRgbTransform;
+protected:
+	imath::CGeneralUnitInfo m_unitInfo;
 };
+
 
 } // namespace icmm
 

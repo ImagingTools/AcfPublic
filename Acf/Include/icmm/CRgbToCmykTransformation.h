@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icmm_CRgbToCmykTransformation_included
-#define icmm_CRgbToCmykTransformation_included
+#pragma once
 
 
 // ACF includes
@@ -45,8 +44,5 @@ public:
 
 
 } // namespace icmm
-
-
-#endif // !icmm_CRgbToCmykTransformation_included
 
 
