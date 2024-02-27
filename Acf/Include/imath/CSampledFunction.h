@@ -47,6 +47,8 @@ public:
 	explicit CSampledFunction(const imath::ISampledFunction& function);
 	explicit CSampledFunction(int size, double defaultValue = 0);
 
+	bool operator==(const CSampledFunction& other) const;
+
 	void Reset();
 	bool Initialize(int size, double defaultValue = 0);
 	double GetSampleValue(int index) const;
@@ -65,6 +67,13 @@ public:
 	// reimplemented (imath::TIMathFunction)
 	virtual bool GetValueAt(const ArgumentType& argument, ResultType& result) const override;
 	virtual ResultType GetValueAt(const ArgumentType& argument) const override;
+
+	// reimplemented (istd::IChangeable)
+	virtual int GetSupportedOperations() const override;
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual bool IsEqual(const IChangeable& object) const override;
+	virtual IChangeable* CloneMe(CompatibilityMode mode = CM_WITHOUT_REFS) const override;
+	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS) override;
 
 private:
 	typedef std::vector<double> SamplesContainer;
