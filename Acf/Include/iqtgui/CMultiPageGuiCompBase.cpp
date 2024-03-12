@@ -358,6 +358,8 @@ void CMultiPageGuiCompBase::OnGuiRetranslate()
 
 		m_pageIndexToInfoMap[pageIndex].pageTitle = name;
 	}
+
+	UpdateVisualElements();
 }
 
 
