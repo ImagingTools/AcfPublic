@@ -133,7 +133,7 @@ void CTranslationManagerComp::SwitchLanguage(int languageIndex)
 	}
 
 	if (languageIndex >= 0 && languageIndex < m_translatorsList.count()){
-		if (!m_installTranslatorAttrPtr.IsValid() ||  *m_installTranslatorAttrPtr){
+		if (m_installTranslatorAttrPtr.IsValid() && *m_installTranslatorAttrPtr){
 			EmitInstallTranslator(languageIndex);
 		}
 
