@@ -46,6 +46,8 @@ namespace iqtgui
 {
 
 
+// public methods
+
 // reimplemented (iqtgui::CMultiPageGuiCompBase)
 
 int CComposedGuiComp::GetPagesCount() const
@@ -106,13 +108,27 @@ void CComposedGuiComp::OnSaveSettings(QSettings& settings) const
 }
 
 
-// protected methods
-
 // reimplemented (iqtgui::CMultiPageGuiCompBase)
 
 int CComposedGuiComp::GetDesignType() const
 {
 	return *m_designTypeAttrPtr;
+}
+
+
+void CComposedGuiComp::CreatePages()
+{
+	BaseClass::CreatePages();
+
+	if (m_defaultPageSelectionCompPtr.IsValid()){
+		int index = m_defaultPageSelectionCompPtr->GetSelectedOptionIndex();
+		if (index >= 0 && index < m_pageModel.GetOptionsCount()){
+			m_pageModel.SetSelectedOptionIndex(index);
+		}
+		else{
+			m_pageModel.SetSelectedOptionIndex(-1);
+		}
+	}
 }
 
 
