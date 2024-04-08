@@ -47,7 +47,7 @@ namespace icmm
 enum ColorantUsage
 {
 	/**
-		No special usage of the process colorant.
+		No special usage of the colorant.
 	*/
 	CU_NONE,
 	CU_CYAN,
@@ -62,6 +62,7 @@ enum ColorantUsage
 	CU_BLACK,
 	CU_LIGHT_BLACK,
 	CU_LIGHT_LIGHT_BLACK,
+
 	/**
 		Colorant is used for expanding the gamut of the printing device.
 	*/
@@ -75,6 +76,7 @@ enum ColorantUsage
 
 I_DECLARE_ENUM(
 			ColorantUsage,
+			CU_NONE,
 			CU_CYAN,
 			CU_DARK_CYAN,
 			CU_LIGHT_CYAN,
