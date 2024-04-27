@@ -20,27 +20,25 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// ACF includes
+#include <istd/IChangeable.h>
+
+
+namespace ilog
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+class ITracingConfiguration: virtual public istd::IChangeable
 {
-	RS_ORIGINAL_VERSION =  5222,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	// -1 tracing off, 0 tracing all
+	virtual int GetTracingLevel() const = 0;
+	virtual void SetTracingLevel(int tracingLevel) = 0;
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
-
+} // namespace ilog
 

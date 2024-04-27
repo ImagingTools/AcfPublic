@@ -29,6 +29,7 @@
 #include <ilog/CConsoleLogComp.h>
 #include <ilog/CLogComp.h>
 #include <ilog/CStandardStreamBridgeComp.h>
+#include <ilog/CTracingConfiguration.h>
 
 #include <icomp/TModelCompWrap.h>
 #include <icomp/TMakeComponentWrap.h>
@@ -100,6 +101,7 @@ namespace BasePck
 typedef ilog::CConsoleLogComp ConsoleLog;
 typedef icomp::TModelCompWrap<ilog::CLogComp> Log;
 typedef ilog::CStandardStreamBridgeComp StandardStreamBridge;
+typedef ilog::CTracingConfiguration TracingConfiguration;
 
 typedef ibase::CInstantiatorComp Instantiator;
 typedef ibase::CVersionInfoComp VersionInfo;

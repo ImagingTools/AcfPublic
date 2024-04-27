@@ -53,8 +53,6 @@ public:
 	// reimplemented (ilog::ILoggable)
 	virtual void SetLogPtr(ilog::IMessageConsumer* logPtr) override;
 	virtual ilog::IMessageConsumer* GetLogPtr() const override;
-	virtual void SetTracingEnabled(bool trace) override;
-	virtual bool IsTracingEnabled() const override;
 
 protected:
 	/**
@@ -206,7 +204,6 @@ protected:
 
 private:
 	ilog::IMessageConsumer* m_logPtr;
-	bool m_isTracingEnabled;
 };
 
 

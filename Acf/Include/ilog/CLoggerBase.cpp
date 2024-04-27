@@ -33,8 +33,7 @@ namespace ilog
 
 
 CLoggerBase::CLoggerBase()
-:	m_logPtr(NULL),
-	m_isTracingEnabled(false)
+:	m_logPtr(NULL)
 {
 }
 
@@ -50,20 +49,6 @@ void CLoggerBase::SetLogPtr(ilog::IMessageConsumer* logPtr)
 ilog::IMessageConsumer* CLoggerBase::GetLogPtr() const
 {
 	return m_logPtr;
-}
-
-
-// Trace protocol
-
-void CLoggerBase::SetTracingEnabled(const bool trace)
-{
-	m_isTracingEnabled = trace;
-}
-
-
-bool CLoggerBase::IsTracingEnabled() const
-{
-	return m_isTracingEnabled;
 }
 
 
