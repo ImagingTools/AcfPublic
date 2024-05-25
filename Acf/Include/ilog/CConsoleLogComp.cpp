@@ -63,6 +63,8 @@ void CConsoleLogComp::WriteText(const QString& text, istd::IInformationProvider:
 	std::wcout << text.toLocal8Bit().constData();
 
 	SetConsoleColor(istd::IInformationProvider::IC_INFO);
+
+	std::wcout.flush();
 }
 
 
