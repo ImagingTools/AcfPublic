@@ -10,6 +10,7 @@
     </ConfigFiles>
     <PackageDirs>
         <Dir>../Bin/$(ConfigurationName)</Dir>
+ 	<Dir>$(IACFDIR_BUILD)/Bin/$(ConfigurationDir)</Dir>
         <Dir>../Partitura</Dir>
     </PackageDirs>
     <PackageFiles/>
