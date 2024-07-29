@@ -20,44 +20,40 @@
 ********************************************************************************/
 
 
-#pragma once
+#ifndef ibase_IProgressLogger_included
+#define ibase_IProgressLogger_included
 
-
-// Qt includes
-#include <QtWidgets/QProgressDialog>
 
 // ACF includes
-#include <ibase/CCumulatedProgressManagerBase.h>
+#include <istd/IPolymorphic.h>
 
 
-namespace iqtgui
+namespace ibase
 {
 
 
-class CProgressDialog: public QProgressDialog, public ibase::CCumulatedProgressManagerBase
+/**
+	Consume information about progress of some process.
+*/
+class IProgressLogger: virtual public istd::IPolymorphic
 {
-	Q_OBJECT
-
 public:
-	typedef QProgressDialog BaseClass;
+	/**
+		Callback function for a progress event.
+		\param	currentProgress	progress value in the range [0; 1].
+	*/
+	virtual void OnProgress(double currentProgress) = 0;
 
-	CProgressDialog(const QString& title, const QString& defaultText, QWidget* parentWidget = NULL);
-
-protected:
-	// reimplemented (ibase::CCumulatedProgressManagerBase)
-	void OnProgressChanged(double cumulatedValue) override;
-	void OnTasksChanged() override;
-
-Q_SIGNALS:
-	void TaskTextChanged(const QString& text);
-	void ProgressChanged(int progress);
-
-private:
-	QString m_lastTaskText;
-	int m_lastProgressValue;
+	/**
+		Check if this processing operation should be canceled.
+	*/
+	virtual bool IsCanceled() const = 0;
 };
 
 
-} // namespace iqtgui
+} // namespace ibase
+
+
+#endif // !ibase_IProgressLogger_included
 
 

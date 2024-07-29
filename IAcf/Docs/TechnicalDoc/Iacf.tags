@@ -2270,6 +2270,13 @@
       <anchor>ad48ff772c20b667e904d98f3d63602de</anchor>
       <arglist></arglist>
     </member>
+    <member kind="typedef">
+      <type>ibase::CCumulatedProgressManagerBase</type>
+      <name>BaseClass2</name>
+      <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
+      <anchor>a6ead0bb8049ffff48668bee524cf5481</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type></type>
       <name>CProgressHistoryGuiComp</name>
@@ -2278,32 +2285,32 @@
       <arglist>()</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual int</type>
-      <name>BeginProgressSession</name>
+      <type>virtual void</type>
+      <name>OpenTask</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>abf9909229acad8e2e7f8a5edb7c9adfa</anchor>
-      <arglist>(const QByteArray &amp;progressId, const QString &amp;description, bool isCancelable=false)</arglist>
+      <anchor>aa134debbb11939b74154f6650e132e55</anchor>
+      <arglist>(TaskBase *taskPtr, const TaskInfo &amp;taskInfo, double weight, bool isCancelable)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>EndProgressSession</name>
+      <name>CloseTask</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>ade8c421cbe34c1a1822da5a6b1241d9b</anchor>
-      <arglist>(int sessionId)</arglist>
+      <anchor>a3d5ade3cb045429e03679a1f6038b3e7</anchor>
+      <arglist>(TaskBase *taskPtr)</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
-      <name>OnProgress</name>
+      <name>ReportTaskProgress</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>ae2d9c01bd40a7301a53a1d4afb1cd44e</anchor>
-      <arglist>(int sessionId, double currentProgress)</arglist>
+      <anchor>a1bffe57397ab98fc270595194a00aae3</anchor>
+      <arglist>(TaskBase *taskPtr, double progress)</arglist>
     </member>
-    <member kind="function" virtualness="virtual">
-      <type>virtual bool</type>
-      <name>IsCanceled</name>
+    <member kind="slot" protection="protected">
+      <type>void</type>
+      <name>on_CancelButton_clicked</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>ab6f004467295b35c49f34332cef25e45</anchor>
-      <arglist>(int sessionId) const</arglist>
+      <anchor>a586a222e72dff2a785ae97fd24a089eb</anchor>
+      <arglist>()</arglist>
     </member>
     <member kind="function" protection="protected">
       <type>void</type>

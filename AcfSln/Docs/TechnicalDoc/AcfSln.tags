@@ -39931,6 +39931,20 @@
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressManager &gt;</type>
+      <name>CreateSubtaskManager</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3dd9ca2cdbbfb21b09bda1a25fcf4b01</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, const QByteArray &amp;taskId, const QString &amp;taskDescription, double weight=1.0)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressLogger &gt;</type>
+      <name>StartProgressLogger</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3ed6d6a1952975d88fec5a77f879e99c</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, bool isCancelable=false)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TSyncProcessorWrap&lt; IBitmapAcquisition &gt;</name>
@@ -40005,6 +40019,20 @@
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressManager &gt;</type>
+      <name>CreateSubtaskManager</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3dd9ca2cdbbfb21b09bda1a25fcf4b01</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, const QByteArray &amp;taskId, const QString &amp;taskDescription, double weight=1.0)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressLogger &gt;</type>
+      <name>StartProgressLogger</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3ed6d6a1952975d88fec5a77f879e99c</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, bool isCancelable=false)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TSyncProcessorWrap&lt; ICaliperProcessor &gt;</name>
@@ -40078,6 +40106,20 @@
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressManager &gt;</type>
+      <name>CreateSubtaskManager</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3dd9ca2cdbbfb21b09bda1a25fcf4b01</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, const QByteArray &amp;taskId, const QString &amp;taskDescription, double weight=1.0)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressLogger &gt;</type>
+      <name>StartProgressLogger</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3ed6d6a1952975d88fec5a77f879e99c</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, bool isCancelable=false)</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -40154,6 +40196,20 @@
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressManager &gt;</type>
+      <name>CreateSubtaskManager</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3dd9ca2cdbbfb21b09bda1a25fcf4b01</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, const QByteArray &amp;taskId, const QString &amp;taskDescription, double weight=1.0)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressLogger &gt;</type>
+      <name>StartProgressLogger</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3ed6d6a1952975d88fec5a77f879e99c</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, bool isCancelable=false)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TSyncProcessorWrap&lt; IFeatureToFeatureProcessor &gt;</name>
@@ -40228,6 +40284,20 @@
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
     </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressManager &gt;</type>
+      <name>CreateSubtaskManager</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3dd9ca2cdbbfb21b09bda1a25fcf4b01</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, const QByteArray &amp;taskId, const QString &amp;taskDescription, double weight=1.0)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressLogger &gt;</type>
+      <name>StartProgressLogger</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3ed6d6a1952975d88fec5a77f879e99c</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, bool isCancelable=false)</arglist>
+    </member>
   </compound>
   <compound kind="class">
     <name>TSyncProcessorWrap&lt; IImageToFeatureProcessor &gt;</name>
@@ -40301,6 +40371,20 @@
       <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
       <anchor>a6f942530e7a40f0cb4f7f3b0076e8410</anchor>
       <arglist>(const iprm::IParamsSet *paramsPtr)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressManager &gt;</type>
+      <name>CreateSubtaskManager</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3dd9ca2cdbbfb21b09bda1a25fcf4b01</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, const QByteArray &amp;taskId, const QString &amp;taskDescription, double weight=1.0)</arglist>
+    </member>
+    <member kind="function" protection="protected" static="yes">
+      <type>static std::unique_ptr&lt; ibase::IProgressLogger &gt;</type>
+      <name>StartProgressLogger</name>
+      <anchorfile>classiproc_1_1_t_sync_processor_wrap.html</anchorfile>
+      <anchor>a3ed6d6a1952975d88fec5a77f879e99c</anchor>
+      <arglist>(ibase::IProgressManager *managerPtr, bool isCancelable=false)</arglist>
     </member>
   </compound>
   <compound kind="class">
