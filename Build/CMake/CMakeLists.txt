@@ -3,6 +3,8 @@ cmake_minimum_required(VERSION 3.1.0)
 
 project(AcfAll)
 
+find_package(QT NAMES Qt6 Qt5 COMPONENTS Core)
+
 if(DEFINED ENV{QTDIR})
 	list(APPEND CMAKE_PREFIX_PATH $ENV{QTDIR})
 endif()
@@ -19,14 +21,17 @@ include("${ACFDIR}/Config/CMake/ProjectRoot.cmake")
 
 get_target_name(TARGETNAME)
 
-set(ACFLIBDIR "${CMAKE_CURRENT_LIST_DIR}/../../Acf/Lib/${CMAKE_BUILD_TYPE}_${TARGETNAME}")
-set(ACFSLNLIBDIR "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Lib/${CMAKE_BUILD_TYPE}_${TARGETNAME}")
+if(NOT DEFINED BUILDDIR)
+	set(BUILDDIR "${CMAKE_CURRENT_LIST_DIR}/../..")
+endif()
 
-add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../Acf/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../Acf/AuxInclude/${TARGETNAME}")
-add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/AuxInclude/${TARGETNAME}")
+message(TARGETNAME ${TARGETNAME})
+
+add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../Acf/Build/CMake/" "${BUILDDIR}/Acf/AuxInclude/${TARGETNAME}")
+add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../AcfSln/Build/CMake/" "${BUILDDIR}/AcfSln/AuxInclude/${TARGETNAME}")
 
 add_dependencies(AcfSlnLoc Acf)
 
 if(NOT DEFINED USE_IACF OR USE_IACF)
-	add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../IAcf/Build/CMake/" "${CMAKE_CURRENT_LIST_DIR}/../../IAcf/AuxInclude/${TARGETNAME}")
+	add_subdirectory("${CMAKE_CURRENT_LIST_DIR}/../../IAcf/Build/CMake/" "${BUILDDIR}/IAcf/AuxInclude/${TARGETNAME}")
 endif()
