@@ -32,7 +32,7 @@ namespace icmm
 {
 
 
-class IColorModel: virtual public istd::IPolymorphic
+class IColorModel: virtual public istd::IChangeable
 {
 public:
 	enum ModelType
@@ -69,9 +69,8 @@ public:
 	enum ColorSpaceClass
 	{
 		CSC_ADDITIVE,
-		CSC_SUBSRACTIVE,
-		CSC_CYLINDRIC,
-		CSC_CARTESIAN
+		CSC_SUBSTRACTIVE,
+		CSC_PERCEPTUAL
 	};
 
 	/**

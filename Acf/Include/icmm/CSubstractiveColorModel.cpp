@@ -45,7 +45,7 @@ IColorModel::ModelClass CSubstractiveColorModel::GetModelClass() const
 
 IColorModel::ColorSpaceClass CSubstractiveColorModel::GetColorSpaceClass() const
 {
-	return CSC_SUBSRACTIVE;
+	return CSC_SUBSTRACTIVE;
 }
 
 
