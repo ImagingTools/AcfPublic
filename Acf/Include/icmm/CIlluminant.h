@@ -24,33 +24,36 @@
 
 
 // ACF includes
-#include <icmm/IColorModel.h>
-#include <icmm/CTristimulusSpecification.h>
+#include <icmm/IIluminant.h>
 
 
 namespace icmm
 {
 
 
-class CCieLabColorModel: virtual public icmm::IColorModel
+class CIlluminant: virtual public IIluminant
 {
 public:
-	CCieLabColorModel(const CTristimulusSpecification& spec = CTristimulusSpecification());
+	CIlluminant(
+				StandardIlluminant illuminantType = StandardIlluminant::D65,
+				const QString& illuminantName = "D65",
+				const icmm::CVarColor& whitePoint = icmm::CVarColor());
+	CIlluminant(const CIlluminant& other);
 
-	// reimplemented (icmm::IColorModel)
-	virtual ModelType GetModelType() const override;
-	virtual ModelClass GetModelClass() const override;
-	virtual ColorSpaceClass GetColorSpaceClass() const override;
-	virtual int GetColorSpaceDimensionality() const override;
-	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
-	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
-	virtual const icmm::IColorTransformation* CreateColorTranformation(
-				const IColorModel& otherColorModel,
-				const QByteArray& transformationId = QByteArray()) const override;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
+	// reimplemented (IWhitePointProvider)
+	virtual icmm::CVarColor GetWhitePoint() const;
+
+	// reimplemented (IIluminant)
+	virtual void SetWhitePoint(const icmm::CVarColor& whitePoint) override;
+	virtual QString GetIllumninantName() const override;
+	virtual void SetIllumninantName(const QString& illuminantName) override;
+	virtual StandardIlluminant GetIllumninantType() const override;
+	virtual void SetIllumninantType(const StandardIlluminant& illuminantType) override;
 
 private:
-	CTristimulusSpecification m_spec;
+	StandardIlluminant m_illuminantType = StandardIlluminant::D65;
+	QString m_illuminantName = "D65";
+	icmm::CVarColor m_whitePoint;
 };
 
 

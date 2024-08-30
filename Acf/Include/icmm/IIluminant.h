@@ -24,33 +24,21 @@
 
 
 // ACF includes
-#include <icmm/IColorModel.h>
-#include <icmm/CTristimulusSpecification.h>
+#include <icmm/IWhitePointProvider.h>
 
 
 namespace icmm
 {
 
 
-class CCieLabColorModel: virtual public icmm::IColorModel
+class IIluminant: virtual public IWhitePointProvider
 {
 public:
-	CCieLabColorModel(const CTristimulusSpecification& spec = CTristimulusSpecification());
-
-	// reimplemented (icmm::IColorModel)
-	virtual ModelType GetModelType() const override;
-	virtual ModelClass GetModelClass() const override;
-	virtual ColorSpaceClass GetColorSpaceClass() const override;
-	virtual int GetColorSpaceDimensionality() const override;
-	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
-	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
-	virtual const icmm::IColorTransformation* CreateColorTranformation(
-				const IColorModel& otherColorModel,
-				const QByteArray& transformationId = QByteArray()) const override;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
-
-private:
-	CTristimulusSpecification m_spec;
+	virtual void SetWhitePoint(const icmm::CVarColor& whitePoint) = 0;
+	virtual QString GetIllumninantName() const = 0;
+	virtual void SetIllumninantName(const QString& illuminantName) = 0;
+	virtual StandardIlluminant GetIllumninantType() const = 0;
+	virtual void SetIllumninantType(const StandardIlluminant& illuminantType) = 0;
 };
 
 

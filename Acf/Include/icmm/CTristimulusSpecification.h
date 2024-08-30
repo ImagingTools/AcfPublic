@@ -24,33 +24,34 @@
 
 
 // ACF includes
-#include <icmm/IColorModel.h>
-#include <icmm/CTristimulusSpecification.h>
+#include <icmm/ITristimulusSpecification.h>
+#include <icmm/THierarchicalSpecificationWrap.h>
+#include <icmm/CIlluminant.h>
 
 
 namespace icmm
 {
 
 
-class CCieLabColorModel: virtual public icmm::IColorModel
+class CTristimulusSpecification: public THierarchicalSpecificationWrap<ITristimulusSpecification>
 {
 public:
-	CCieLabColorModel(const CTristimulusSpecification& spec = CTristimulusSpecification());
+	CTristimulusSpecification(
+				ObserverType observerType = ObserverType::TwoDegree,
+				AstmTableType method = AstmTableType::Unknown,
+				const CIlluminant& illuminant = CIlluminant());
 
-	// reimplemented (icmm::IColorModel)
-	virtual ModelType GetModelType() const override;
-	virtual ModelClass GetModelClass() const override;
-	virtual ColorSpaceClass GetColorSpaceClass() const override;
-	virtual int GetColorSpaceDimensionality() const override;
-	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
-	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
-	virtual const icmm::IColorTransformation* CreateColorTranformation(
-				const IColorModel& otherColorModel,
-				const QByteArray& transformationId = QByteArray()) const override;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
+	CTristimulusSpecification(const CTristimulusSpecification& other);
+
+	// reimplemented (ITristimulusSpecification)
+	virtual const IIluminant& GetIlluminant() const override;
+	virtual ObserverType GetObserverType() const override;
+	virtual AstmTableType GetMethod() const override;
 
 private:
-	CTristimulusSpecification m_spec;
+	ObserverType m_observerType = ObserverType::TwoDegree;
+	AstmTableType m_method = AstmTableType::Unknown;
+	CIlluminant m_illuminant;
 };
 
 

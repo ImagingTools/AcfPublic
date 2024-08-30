@@ -23,35 +23,38 @@
 #pragma once
 
 
+// STL includes
+#include <memory>
+
 // ACF includes
-#include <icmm/IColorModel.h>
-#include <icmm/CTristimulusSpecification.h>
+#include <istd/IChangeable.h>
 
 
 namespace icmm
 {
 
 
-class CCieLabColorModel: virtual public icmm::IColorModel
+class IColorSpecification: virtual public istd::IChangeable
 {
 public:
-	CCieLabColorModel(const CTristimulusSpecification& spec = CTristimulusSpecification());
+	typedef std::shared_ptr<const IColorSpecification> ConstColorSpecPtr;
+	typedef std::shared_ptr<IColorSpecification> ColorSpecPtr;
 
-	// reimplemented (icmm::IColorModel)
-	virtual ModelType GetModelType() const override;
-	virtual ModelClass GetModelClass() const override;
-	virtual ColorSpaceClass GetColorSpaceClass() const override;
-	virtual int GetColorSpaceDimensionality() const override;
-	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
-	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
-	virtual const icmm::IColorTransformation* CreateColorTranformation(
-				const IColorModel& otherColorModel,
-				const QByteArray& transformationId = QByteArray()) const override;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
+	enum class SpecType
+	{
+		Tristimulus,
+		Spectral
+	};
 
-private:
-	CTristimulusSpecification m_spec;
+	virtual SpecType GetSpecificationType() const = 0;
+	virtual ConstColorSpecPtr GetBaseSpecification() const;
 };
+
+
+inline IColorSpecification::ConstColorSpecPtr IColorSpecification::GetBaseSpecification() const
+{
+	return ConstColorSpecPtr();
+}
 
 
 } // namespace icmm

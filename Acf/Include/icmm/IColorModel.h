@@ -26,7 +26,7 @@
 // ACF includes
 #include <imath/IUnitInfo.h>
 #include <icmm/IColorTransformation.h>
-
+#include <icmm/IColorSpecification.h>
 
 namespace icmm
 {
@@ -52,12 +52,19 @@ public:
 		MT_COLORANTS,
 		MT_LUV,
 		MT_LAB,
+		MT_LCH,
 		MT_XYZ,
+		MT_YXY,
 
 		/**
 			Color model is defined by a set of spectral values.
 		*/
-		MI_SPECTRAL
+		MI_SPECTRAL,
+
+		/**
+			Base value for the user-defined model types.
+		*/
+		MI_USER = 1024
 	};
 
 	enum ModelClass
@@ -112,7 +119,17 @@ public:
 	virtual const icmm::IColorTransformation* CreateColorTranformation(
 				const IColorModel& otherColorModel,
 				const QByteArray& transformationId = QByteArray()) const = 0;
+
+	/**
+		Get model specification if available.
+	*/
+	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const
+	{
+		return IColorSpecification::ConstColorSpecPtr();
+	}
 };
 
 
 } // namespace icmm
+
+

@@ -20,11 +20,6 @@
 ********************************************************************************/
 
 
-#pragma once
-
-
-// ACF includes
-#include <icmm/IColorModel.h>
 #include <icmm/CTristimulusSpecification.h>
 
 
@@ -32,26 +27,43 @@ namespace icmm
 {
 
 
-class CCieLabColorModel: virtual public icmm::IColorModel
+CTristimulusSpecification::CTristimulusSpecification(
+			ObserverType observerType,
+			AstmTableType method,
+			const CIlluminant& illuminant)
+	:m_observerType(observerType),
+	m_method(method),
+	m_illuminant(illuminant)
 {
-public:
-	CCieLabColorModel(const CTristimulusSpecification& spec = CTristimulusSpecification());
+}
 
-	// reimplemented (icmm::IColorModel)
-	virtual ModelType GetModelType() const override;
-	virtual ModelClass GetModelClass() const override;
-	virtual ColorSpaceClass GetColorSpaceClass() const override;
-	virtual int GetColorSpaceDimensionality() const override;
-	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
-	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
-	virtual const icmm::IColorTransformation* CreateColorTranformation(
-				const IColorModel& otherColorModel,
-				const QByteArray& transformationId = QByteArray()) const override;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
 
-private:
-	CTristimulusSpecification m_spec;
-};
+CTristimulusSpecification::CTristimulusSpecification(const CTristimulusSpecification& other)
+	:m_illuminant(other.m_illuminant),
+	m_method(other.m_method),
+	m_observerType(other.m_observerType)
+{
+}
+
+
+// reimplemented (ITristimulusSpecification)
+
+const IIluminant& icmm::CTristimulusSpecification::GetIlluminant() const
+{
+	return m_illuminant;
+}
+
+
+ObserverType CTristimulusSpecification::GetObserverType() const
+{
+	return m_observerType;
+}
+
+
+AstmTableType CTristimulusSpecification::GetMethod() const
+{
+	return m_method;
+}
 
 
 } // namespace icmm

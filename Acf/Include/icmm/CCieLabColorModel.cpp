@@ -29,22 +29,9 @@ namespace icmm
 
 // public methods
 
-CCieLabColorModel::CCieLabColorModel(ObserverType observer, StandardIlluminant illuminant)
-	:m_observerType(observer),
-	m_illuminant(illuminant)
+CCieLabColorModel::CCieLabColorModel(const CTristimulusSpecification& spec)
+	:m_spec(spec)
 {
-}
-
-
-StandardIlluminant CCieLabColorModel::GetIlluminant() const
-{
-	return m_illuminant;
-}
-
-
-ObserverType CCieLabColorModel::GetObserverType() const
-{
-	return m_observerType;
 }
 
 
@@ -102,6 +89,12 @@ const icmm::IColorTransformation* CCieLabColorModel::CreateColorTranformation(
 	const QByteArray& /*transformationId*/) const
 {
 	return nullptr;
+}
+
+
+IColorSpecification::ConstColorSpecPtr CCieLabColorModel::GetSpecification() const
+{
+	return std::make_shared<CTristimulusSpecification>();
 }
 
 
