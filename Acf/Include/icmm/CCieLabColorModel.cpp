@@ -29,9 +29,14 @@ namespace icmm
 
 // public methods
 
-CCieLabColorModel::CCieLabColorModel(const CTristimulusSpecification& spec)
-	:m_spec(spec)
+CCieLabColorModel::CCieLabColorModel()
 {
+}
+
+
+CCieLabColorModel::CCieLabColorModel(const ITristimulusSpecification& spec)
+{
+	m_spec.CopyFrom(spec);
 }
 
 
@@ -94,7 +99,7 @@ const icmm::IColorTransformation* CCieLabColorModel::CreateColorTranformation(
 
 IColorSpecification::ConstColorSpecPtr CCieLabColorModel::GetSpecification() const
 {
-	return std::make_shared<CTristimulusSpecification>();
+	return std::make_shared<CTristimulusSpecification>(m_spec);
 }
 
 

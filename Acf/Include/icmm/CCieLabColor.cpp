@@ -20,60 +20,56 @@
 ********************************************************************************/
 
 
-#include <icmm/CTristimulusSpecification.h>
+#include <icmm/CCieLabColor.h>
 
 
 namespace icmm
 {
 
 
-CTristimulusSpecification::CTristimulusSpecification(
-			ObserverType observerType,
-			AstmTableType method,
-			const IIlluminant* illuminantPtr,
-			std::shared_ptr<ISpectralColorSpecification> baseSpec)
-	:m_observerType(observerType),
-	m_method(method)
-{
-	m_baseSpec = baseSpec;
-
-	if (illuminantPtr != nullptr){
-		m_illuminant.CopyFrom(*illuminantPtr);
-	}
-}
-
-
-CTristimulusSpecification::CTristimulusSpecification(const CTristimulusSpecification& other)
-	:m_illuminant(other.m_illuminant),
-	m_method(other.m_method),
-	m_observerType(other.m_observerType)
+CCieLabColor::CCieLabColor()
 {
 }
 
 
-// reimplemented (ITristimulusSpecification)
-
-const IIlluminant& icmm::CTristimulusSpecification::GetIlluminant() const
+CCieLabColor::CCieLabColor(const icmm::CLab& lab, const ITristimulusSpecification& spec)
+	:m_lab(lab)
 {
-	return m_illuminant;
+	m_modelPtr = std::make_shared<icmm::CCieLabColorModel>(spec);
 }
 
 
-ObserverType CTristimulusSpecification::GetObserverType() const
+// reimplemented (icmm::ICieLabColor)
+
+const icmm::CLab& CCieLabColor::GetLab() const
 {
-	return m_observerType;
+	return m_lab;
 }
 
 
-AstmTableType CTristimulusSpecification::GetMethod() const
+// reimplemented (icmm::IColorObject)
+
+icmm::CVarColor CCieLabColor::GetColor() const
 {
-	return m_method;
+	icmm::CVarColor varColor(3);
+
+	varColor.SetElement(0, m_lab.GetL());
+	varColor.SetElement(1, m_lab.GetA());
+	varColor.SetElement(2, m_lab.GetB());
+
+	return varColor;
 }
 
 
-std::shared_ptr<ISpectralColorSpecification> CTristimulusSpecification::GetBaseSpecification() const
+ConstColorModelPtr CCieLabColor::GetColorModel() const
 {
-	return m_baseSpec;
+	return m_modelPtr;
+}
+
+
+bool CCieLabColor::Serialize(iser::IArchive& /*archive*/)
+{
+	return false;
 }
 
 

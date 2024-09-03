@@ -24,30 +24,21 @@
 
 
 // ACF includes
-#include <icmm/IColorSpecification.h>
+#include <icmm/IWhitePointProvider.h>
 
 
 namespace icmm
 {
 
 
-template <class Base>
-class THierarchicalSpecificationWrap: public Base
+class IIlluminant: virtual public IWhitePointProvider
 {
 public:
-	void SetBaseSpecification(IColorSpecification::ConstColorSpecPtr baseSpecPtr)
-	{
-		m_baseSpecPtr = baseSpecPtr;
-	}
-
-	// pseudo-reimplemented (IColorSpecification)
-	virtual IColorSpecification::ConstColorSpecPtr GetBaseSpecification() const override
-	{
-		return m_baseSpecPtr;
-	}
-
-protected:
-	IColorSpecification::ConstColorSpecPtr m_baseSpecPtr;
+	virtual void SetWhitePoint(const icmm::CVarColor& whitePoint) = 0;
+	virtual QString GetIllumninantName() const = 0;
+	virtual void SetIllumninantName(const QString& illuminantName) = 0;
+	virtual StandardIlluminant GetIllumninantType() const = 0;
+	virtual void SetIllumninantType(const StandardIlluminant& illuminantType) = 0;
 };
 
 

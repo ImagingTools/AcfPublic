@@ -94,7 +94,7 @@ StandardIlluminant CIlluminant::GetIllumninantType() const
 
 void CIlluminant::SetIllumninantType(const StandardIlluminant& illuminantType)
 {
-	if (m_illuminantType != illuminantType) {
+	if (m_illuminantType != illuminantType){
 		istd::CChangeNotifier changeNotifier(this);
 
 		m_illuminantType = illuminantType;

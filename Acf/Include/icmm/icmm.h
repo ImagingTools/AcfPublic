@@ -120,7 +120,7 @@ enum class SpectrumType
 
 
 enum class DensityStatusType
-{
+{ 
 };
 
 

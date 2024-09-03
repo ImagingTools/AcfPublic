@@ -24,37 +24,31 @@
 
 
 // ACF includes
-#include <icmm/IColorModel.h>
-#include <icmm/CTristimulusSpecification.h>
+#include <imath/TISampledFunction.h>
+
+// GmgCore includes
+#include <icmm/ISpectrumInfoProvider.h>
 
 
 namespace icmm
 {
 
 
-class CCieLabColorModel: virtual public icmm::IColorModel
+/**
+	Common interface for a measured/sampled spectrum.
+	Spectrum is described as container of samples in the regular 1D-grid.
+	Sampling grid information can be retrieved via ISpectrumInfoProvider interface.
+	Sample values of the spectrum are accessable via imath::ISampledFunction interface
+	For getting the "real" spectral values use imath::IMathfunction interface.
+	Function domain is defined by the spectral range (\sa ISpectralInfo)
+	Function range is normally [0, 1],
+	but can also be acquired by \c GetResultValueRange method of imath::TISampledFunction.
+*/
+class ISpectrum: virtual public imath::ISampledFunction,
+				  virtual public ISpectrumInfoProvider,
+				  virtual public iser::ISerializable
 {
-public:
-	CCieLabColorModel();
-	CCieLabColorModel(const ITristimulusSpecification& spec);
-
-	// reimplemented (icmm::IColorModel)
-	virtual ModelType GetModelType() const override;
-	virtual ModelClass GetModelClass() const override;
-	virtual ColorSpaceClass GetColorSpaceClass() const override;
-	virtual int GetColorSpaceDimensionality() const override;
-	virtual const imath::IUnitInfo* GetColorSpaceComponentInfo(int componentIndex) const override;
-	virtual QString GetColorSpaceComponentName(int componentIndex) const override;
-	virtual const icmm::IColorTransformation* CreateColorTranformation(
-				const IColorModel& otherColorModel,
-				const QByteArray& transformationId = QByteArray()) const override;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
-
-private:
-	CTristimulusSpecification m_spec;
 };
 
 
 } // namespace icmm
-
-

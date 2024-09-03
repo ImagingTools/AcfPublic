@@ -24,37 +24,34 @@
 
 
 // ACF includes
+#include <icmm/ICieLabColor.h>
 #include <icmm/ITristimulusSpecification.h>
-#include <icmm/ISpectralColorSpecification.h>
-#include <icmm/CIlluminant.h>
+#include <icmm/CCieLabColorModel.h>
 
 
 namespace icmm
 {
 
 
-class CTristimulusSpecification: virtual public ITristimulusSpecification
+class CCieLabColor: virtual public ICieLabColor
 {
 public:
-	CTristimulusSpecification(
-				ObserverType observerType = ObserverType::TwoDegree,
-				AstmTableType method = AstmTableType::Unknown,
-				const IIlluminant* illuminantPtr = nullptr,
-				std::shared_ptr<ISpectralColorSpecification> baseSpec = std::shared_ptr<ISpectralColorSpecification>());
+	CCieLabColor();
+	CCieLabColor(const icmm::CLab& lab, const ITristimulusSpecification& spec);
 
-	CTristimulusSpecification(const CTristimulusSpecification& other);
+	// reimplemented (icmm::ICieLabColor)
+	virtual const icmm::CLab& GetLab() const override;
 
-	// reimplemented (ITristimulusSpecification)
-	virtual const IIlluminant& GetIlluminant() const override;
-	virtual ObserverType GetObserverType() const override;
-	virtual AstmTableType GetMethod() const override;
-	virtual std::shared_ptr<ISpectralColorSpecification> GetBaseSpecification() const override;
+	// reimplemented (icmm::IColorObject)
+	virtual icmm::CVarColor GetColor() const override;
+	virtual ConstColorModelPtr GetColorModel() const override;
+
+	// reimplemented (iser::IObject)
+	virtual bool Serialize(iser::IArchive& archive) override;
 
 private:
-	ObserverType m_observerType = ObserverType::TwoDegree;
-	AstmTableType m_method = AstmTableType::Unknown;
-	CIlluminant m_illuminant;
-	std::shared_ptr<ISpectralColorSpecification> m_baseSpec;
+	icmm::CLab m_lab;
+	std::shared_ptr<CCieLabColorModel> m_modelPtr;
 };
 
 
