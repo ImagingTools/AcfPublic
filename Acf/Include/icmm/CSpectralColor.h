@@ -24,29 +24,30 @@
 
 
 // ACF includes
-#include <imath/TISampledFunction.h>
-#include <icmm/ISpectrumInfoProvider.h>
+#include <icmm/IColorObject.h>
+#include <icmm/ISpectralColorSpecification.h>
 
 
 namespace icmm
 {
 
 
-/**
-	Common interface for a measured/sampled spectrum.
-	Spectrum is described as container of samples in the regular 1D-grid.
-	Sampling grid information can be retrieved via ISpectrumInfoProvider interface.
-	Sample values of the spectrum are accessable via imath::ISampledFunction interface
-	For getting the "real" spectral values use imath::IMathfunction interface.
-	Function domain is defined by the spectral range (\sa ISpectralInfo)
-	Function range is normally [0, 1],
-	but can also be acquired by \c GetResultValueRange method of imath::TISampledFunction.
-*/
-class ISpectrum:
-			virtual public imath::ISampledFunction,
-			virtual public ISpectrumInfoProvider,
-			virtual public iser::ISerializable
+class CSpectralColor: virtual public IColorObject
 {
+public:
+	CSpectralColor(ColorModelPtr modelPtr = ColorModelPtr());
+	CSpectralColor(const icmm::CVarColor& values, const ISpectralColorSpecification& spec);
+
+	// reimplemented (icmm::IColorObject)
+	virtual icmm::CVarColor GetColor() const override;
+	virtual ConstColorModelPtr GetColorModel() const override;
+
+	// reimplemented (iser::IObject)
+	virtual bool Serialize(iser::IArchive& archive) override;
+
+private:
+	icmm::CVarColor m_spectrumValues;
+	std::shared_ptr<IColorModel> m_modelPtr;
 };
 
 
