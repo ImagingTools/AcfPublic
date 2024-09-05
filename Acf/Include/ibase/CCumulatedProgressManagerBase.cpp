@@ -226,9 +226,10 @@ void CCumulatedProgressManagerBase::CloseTask(TaskBase* taskPtr)
 		if (taskIter->second.isCancelable) {
 			m_cancelableCounter--;
 		}
-		m_openTasks.erase(taskPtr);
 
-		m_closedTaskSum += 1;
+		m_closedTaskSum += taskIter->second.weight;
+
+		m_openTasks.erase(taskPtr);
 	}
 
 	locker.unlock();
@@ -259,11 +260,11 @@ void CCumulatedProgressManagerBase::TryUpdateCumulatedProgress()
 
 	QMutexLocker locker(&m_tasksMutex);
 	if (m_maxProgressSum > 0) {
-		double progressSum = m_closedTaskSum;
+		progressValue = m_closedTaskSum;
 
 		for (const auto& task : m_openTasks) {
 			const auto& taskInfo = task.second;
-			progressSum += taskInfo.progress;
+			progressValue += (taskInfo.progress * taskInfo.weight);
 		}
 	}
 	locker.unlock();
