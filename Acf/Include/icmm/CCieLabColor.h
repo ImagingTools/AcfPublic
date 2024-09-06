@@ -1,4 +1,4 @@
-/********************************************************************************
+ /********************************************************************************
 **
 **	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
 **
@@ -40,6 +40,7 @@ public:
 
 	// reimplemented (icmm::ICieLabColor)
 	virtual const icmm::CLab& GetLab() const override;
+	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
 
 	// reimplemented (icmm::IColorObject)
 	virtual icmm::CVarColor GetColor() const override;

@@ -51,6 +51,10 @@ const icmm::CLab& CCieLabColor::GetLab() const
 	return m_lab;
 }
 
+IColorSpecification::ConstColorSpecPtr CCieLabColor::GetSpecification() const
+{
+	return m_modelPtr->GetSpecification();
+}
 
 // reimplemented (icmm::IColorObject)
 
