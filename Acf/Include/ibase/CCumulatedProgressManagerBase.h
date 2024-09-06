@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef ibase_CCumulatedProgressManagerBase_included
-#define ibase_CCumulatedProgressManagerBase_included
+#pragma once
 
-// STD includes
+
+// STL includes
 #include <vector>
 #include <map>
 
@@ -80,9 +80,9 @@ public:
 	// reimplemented (ibase::IProgressManager)
 	void ResetProgressManager() override;
 	std::unique_ptr<IProgressManager> CreateSubtaskManager(
-			const QByteArray& taskId,
-			const QString& taskDescription,
-			double weight = 1.0) override;
+				const QByteArray& taskId,
+				const QString& taskDescription,
+				double weight = 1.0) override;
 	std::unique_ptr<IProgressLogger> StartProgressLogger(bool isCancelable = false) override;
 
 protected:
@@ -94,8 +94,9 @@ protected:
 	{
 	public:
 		TaskBase(CCumulatedProgressManagerBase* parentPtr, const TaskInfo& taskInfo, double weight, bool isCancelable);
-		void StopLogging();
 		virtual ~TaskBase();
+
+		void StopLogging();
 
 	protected:
 		CCumulatedProgressManagerBase* m_parentPtr;
@@ -146,8 +147,5 @@ private:
 
 
 } // namespace ibase
-
-
-#endif // !ibase_CCumulatedProgressManagerBase_included
 
 
