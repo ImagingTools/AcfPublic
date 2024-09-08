@@ -88,8 +88,8 @@ IShapeView* CViewLayer::GetViewPtr() const
 
 bool CViewLayer::IsShapeConnected(IShape* shapePtr)
 {
-	for (ShapeList::iterator it = m_shapes.begin(); it != m_shapes.end(); ++it) {
-		if (it->shapePtr == shapePtr) {
+	for (ShapeList::iterator it = m_shapes.begin(); it != m_shapes.end(); ++it){
+		if (it->shapePtr == shapePtr){
 			return true;
 		}
 	}
@@ -125,7 +125,7 @@ int CViewLayer::GetShapesCount() const
 QList<iview::IShape*> CViewLayer::GetShapes() const
 {
 	QList<iview::IShape*> result;
-	for (ShapeList::const_iterator it = m_shapes.begin(); it != m_shapes.end(); ++it) {
+	for (ShapeList::const_iterator it = m_shapes.begin(); it != m_shapes.end(); ++it){
 		result.push_back(it->shapePtr);
 	}
 	return result;
@@ -257,8 +257,8 @@ void CViewLayer::OnChangeShape(IShape* shapePtr)
 	Q_ASSERT(shapePtr != NULL);
 
 	ShapeList::iterator iter = m_shapes.begin();
-	for (; iter != m_shapes.end(); ++iter) {
-		if (iter->shapePtr == shapePtr) {
+	for (; iter != m_shapes.end(); ++iter){
+		if (iter->shapePtr == shapePtr){
 			break;
 		}
 	}
@@ -274,8 +274,8 @@ bool CViewLayer::DisconnectShape(IShape* shapePtr)
 	Q_ASSERT(shapePtr != NULL);
 
 	ShapeList::iterator iter = m_shapes.begin();
-	for (; iter != m_shapes.end(); ++iter) {
-		if (iter->shapePtr == shapePtr) {
+	for (; iter != m_shapes.end(); ++iter){
+		if (iter->shapePtr == shapePtr){
 			break;
 		}
 	}

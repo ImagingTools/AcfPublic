@@ -117,13 +117,13 @@ bool CInteractiveViewLayer::ConnectInteractiveShape(IInteractiveShape* shapePtr)
 		i2d::CRect boundingBox = shapePtr->GetBoundingBox();
 
 		ShapeList::iterator iter = m_activeShapes.begin();
-		for (; iter != m_activeShapes.end(); ++iter) {
-			if (iter->shapePtr == shapePtr) {
+		for (; iter != m_activeShapes.end(); ++iter){
+			if (iter->shapePtr == shapePtr){
 				break;
 			}
 		}
 
-		if (iter != m_activeShapes.end()) {
+		if (iter != m_activeShapes.end()){
 			iter->shapePtr = shapePtr;
 			iter->box = boundingBox;
 		}
@@ -357,8 +357,8 @@ void CInteractiveViewLayer::OnShapeFocused(IInteractiveShape* shapePtr)
 	Q_ASSERT(shapePtr != NULL);
 
 	ShapeList::iterator iter = m_activeShapes.begin();
-	for (; iter != m_activeShapes.end(); ++iter) {
-		if (iter->shapePtr == shapePtr) {
+	for (; iter != m_activeShapes.end(); ++iter){
+		if (iter->shapePtr == shapePtr){
 			break;
 		}
 	}
@@ -392,8 +392,8 @@ void CInteractiveViewLayer::OnShapeSelected(IInteractiveShape& shape, bool state
 {
 	if (state){
 		ShapeList::iterator iter = m_shapes.begin();
-		for (; iter != m_shapes.end(); ++iter) {
-			if (iter->shapePtr == &shape) {
+		for (; iter != m_shapes.end(); ++iter){
+			if (iter->shapePtr == &shape){
 				break;
 			}
 		}
@@ -404,13 +404,13 @@ void CInteractiveViewLayer::OnShapeSelected(IInteractiveShape& shape, bool state
 			m_shapes.erase(iter);
 
 			ShapeList::iterator it = m_activeShapes.begin();
-			for (; it != m_activeShapes.end(); ++it) {
-				if (it->shapePtr == &shape) {
+			for (; it != m_activeShapes.end(); ++it){
+				if (it->shapePtr == &shape){
 					break;
 				}
 			}
 
-			if (it != m_activeShapes.end()) {
+			if (it != m_activeShapes.end()){
 				it->shapePtr = &shape;
 				it->box = prevBoundingBox;
 			}
@@ -424,8 +424,8 @@ void CInteractiveViewLayer::OnShapeSelected(IInteractiveShape& shape, bool state
 	}
 	else{
 		ShapeList::iterator iter = m_activeShapes.begin();
-		for (; iter != m_activeShapes.end(); ++iter) {
-			if (iter->shapePtr == &shape) {
+		for (; iter != m_activeShapes.end(); ++iter){
+			if (iter->shapePtr == &shape){
 				break;
 			}
 		}
@@ -439,13 +439,13 @@ void CInteractiveViewLayer::OnShapeSelected(IInteractiveShape& shape, bool state
 			m_activeShapes.erase(iter);
 
 			ShapeList::iterator it = m_shapes.begin();
-			for (; it != m_shapes.end(); ++it) {
-				if (it->shapePtr == &shape) {
+			for (; it != m_shapes.end(); ++it){
+				if (it->shapePtr == &shape){
 					break;
 				}
 			}
 
-			if (it != m_shapes.end()) {
+			if (it != m_shapes.end()){
 				it->shapePtr = &shape;
 				it->box = prevBoundingBox;
 			}
@@ -469,8 +469,8 @@ void CInteractiveViewLayer::OnShapeSelected(IInteractiveShape& shape, bool state
 bool CInteractiveViewLayer::IsShapeConnected(IShape* shapePtr)
 {
 	ShapeList::iterator iter = m_activeShapes.begin();
-	for (; iter != m_activeShapes.end(); ++iter) {
-		if (iter->shapePtr == shapePtr) {
+	for (; iter != m_activeShapes.end(); ++iter){
+		if (iter->shapePtr == shapePtr){
 			break;
 		}
 	}
@@ -537,8 +537,8 @@ void CInteractiveViewLayer::OnChangeShape(IShape* shapePtr)
 	Q_ASSERT(shapePtr != NULL);
 
 	ShapeList::iterator iter = m_activeShapes.begin();
-	for (; iter != m_activeShapes.end(); ++iter) {
-		if (iter->shapePtr == shapePtr) {
+	for (; iter != m_activeShapes.end(); ++iter){
+		if (iter->shapePtr == shapePtr){
 			break;
 		}
 	}
@@ -562,8 +562,8 @@ bool CInteractiveViewLayer::DisconnectShape(IShape* shapePtr)
 	}
 
 	ShapeList::iterator iter = m_activeShapes.begin();
-	for (; iter != m_activeShapes.end(); ++iter) {
-		if (iter->shapePtr == shapePtr) {
+	for (; iter != m_activeShapes.end(); ++iter){
+		if (iter->shapePtr == shapePtr){
 			break;
 		}
 	}
@@ -649,7 +649,7 @@ void CInteractiveViewLayer::SetDragPosition(const istd::CIndex2d& position)
 
 void CInteractiveViewLayer::EndDrag()
 {
-	for (ShapeList::iterator iter = m_activeShapes.begin(); iter != m_activeShapes.end(); ++iter) {
+	for (ShapeList::iterator iter = m_activeShapes.begin(); iter != m_activeShapes.end(); ++iter){
 		IDraggable* draggablePtr = dynamic_cast<IDraggable*>(iter->shapePtr);
 		if ((draggablePtr != NULL) && draggablePtr->IsDraggable()){
 			draggablePtr->EndDrag();

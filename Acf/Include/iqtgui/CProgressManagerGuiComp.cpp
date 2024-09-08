@@ -39,7 +39,7 @@ void CProgressManagerGuiComp::OnProgressChanged(double cumulatedValue)
 {
 	int pogressValue = 1000 * cumulatedValue;
 
-	if (IsGuiCreated()) {
+	if (IsGuiCreated()){
 		ProgressBar->setValue(pogressValue);
 
 		qApp->processEvents(QEventLoop::ExcludeUserInputEvents);
@@ -50,8 +50,8 @@ void CProgressManagerGuiComp::OnProgressChanged(double cumulatedValue)
 void CProgressManagerGuiComp::OnTasksChanged()
 {
 	QWidget* widgetPtr = GetWidget();
-	if (widgetPtr != NULL) {
-		if (*m_automaticHideAttrPtr) {
+	if (widgetPtr != NULL){
+		if (*m_automaticHideAttrPtr){
 			auto openTasks = GetProcessedTasks();
 			widgetPtr->setVisible(!openTasks.empty());
 		}

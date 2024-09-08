@@ -38,7 +38,7 @@ CProgressGuiBridge::CProgressGuiBridge(QProgressBar* progressWidget, QAbstractBu
 		connect(m_cancelButtonPtr, SIGNAL(clicked()), this, SLOT(OnCancelButtonClicked()));
 	}
 
-	if (m_progresBarPtr != NULL) {
+	if (m_progresBarPtr != NULL){
 		m_progresBarPtr->setValue(0);
 
 		connect(this, SIGNAL(ProgressChanged(int)), m_progresBarPtr, SLOT(setValue(int)), Qt::QueuedConnection);
@@ -53,7 +53,7 @@ CProgressGuiBridge::CProgressGuiBridge(QProgressBar* progressWidget, QAbstractBu
 void CProgressGuiBridge::OnProgressChanged(double cumulatedValue)
 {
 	int progressValue = int(cumulatedValue * 100);
-	if (progressValue != m_lastProgressValue) {
+	if (progressValue != m_lastProgressValue){
 		m_lastProgressValue = progressValue;
 
 		Q_EMIT ProgressChanged(progressValue);

@@ -79,8 +79,8 @@ public:
 protected:
 	struct ShapeWithBoundingBox
 	{
-		ShapeWithBoundingBox() {}
-		ShapeWithBoundingBox(IShape* shapePtr, const i2d::CRect& box) : shapePtr(shapePtr), box(box) {}
+		ShapeWithBoundingBox(){}
+		ShapeWithBoundingBox(IShape* shapePtr, const i2d::CRect& box) : shapePtr(shapePtr), box(box){}
 
 		IShape* shapePtr;
 		i2d::CRect box;

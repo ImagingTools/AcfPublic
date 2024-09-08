@@ -97,10 +97,10 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 
 		for (		ComponentMap::iterator iter = m_componentMap.begin();
 					iter != m_componentMap.end();
-					++iter) {
+					++iter){
 			ComponentInfo& info = iter.value();
 			icomp::CCompositeComponent* compositeComponentPtr = dynamic_cast<icomp::CCompositeComponent*>(info.componentPtr.GetPtr());
-			if (compositeComponentPtr != NULL) {
+			if (compositeComponentPtr != NULL){
 				subComponentsList.push_back(compositeComponentPtr);
 			}
 		}
@@ -126,13 +126,13 @@ IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) 
 		QReadLocker readLock(&m_mutex);
 
 		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
-		if (iter == m_componentMap.constEnd()) {
+		if (iter == m_componentMap.constEnd()){
 			readLock.unlock();
 
 			QWriteLocker lock(&m_mutex);
 
 			ComponentInfo& componentInfo = m_componentMap[componentId];
-			if (!componentInfo.isComponentInitialized) {
+			if (!componentInfo.isComponentInitialized){
 				componentInfo.isComponentInitialized = true;
 				componentInfo.isContextInitialized = true;
 
@@ -145,7 +145,7 @@ IComponent* CCompositeComponent::GetSubcomponent(const QByteArray& componentId) 
 		}
 
 		ComponentInfo& componentInfo = m_componentMap[componentId];
-		if (!componentInfo.isComponentInitialized) {
+		if (!componentInfo.isComponentInitialized){
 			componentInfo.isComponentInitialized = true;
 			componentInfo.isContextInitialized = true;
 

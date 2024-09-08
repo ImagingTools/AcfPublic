@@ -149,11 +149,11 @@ void CNumericParamsGuiComp::UpdateGui(const istd::IChangeable::ChangeSet& /*chan
 						*m_postValidationEnabledAttrPtr);
 
 			if(		m_sliderTickPositionAttrPtr.IsValid() ||
-					m_sliderTickIntervalAttrPtr.IsValid()) {
+					m_sliderTickIntervalAttrPtr.IsValid()){
 
 				QSlider::TickPosition sliderTickPosition = QSlider::NoTicks;
 				if (m_sliderTickPositionAttrPtr.IsValid()){
-					switch (*m_sliderTickPositionAttrPtr) {
+					switch (*m_sliderTickPositionAttrPtr){
 					case 0:
 						sliderTickPosition = QSlider::NoTicks;
 						break;

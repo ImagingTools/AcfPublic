@@ -379,7 +379,7 @@ void COptionsManagerEditorComp::OnGuiCreated()
 
 void COptionsManagerEditorComp::UpdateButtonsVisibility()
 {
-	if (!IsGuiCreated()) {
+	if (!IsGuiCreated()){
 		return;
 	}
 	iprm::IOptionsManager* objectPtr = GetObservedObject();

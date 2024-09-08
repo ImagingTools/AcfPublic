@@ -41,8 +41,8 @@ namespace iqtgui
 class UIDummy
 {
 public:
-	void setupUi(QWidget*) {}
-	void retranslateUi(QWidget*) {}
+	void setupUi(QWidget*){}
+	void retranslateUi(QWidget*){}
 };
 
 

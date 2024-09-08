@@ -35,7 +35,7 @@ void CLine2dComp::OnComponentCreated()
 {
 	BaseClass::OnComponentCreated();
 
-	if (m_defaultObjectProviderCompPtr.IsValid()) {
+	if (m_defaultObjectProviderCompPtr.IsValid()){
 		return;
 	}
 

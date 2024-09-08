@@ -105,7 +105,7 @@ bool CIlluminant::IsEqual(const IChangeable& other) const
 {
 	const IIlluminant* objectPtr = dynamic_cast<const IIlluminant*>(&other);
 
-	if (objectPtr == nullptr) {
+	if (objectPtr == nullptr){
 		return false;
 	}
 

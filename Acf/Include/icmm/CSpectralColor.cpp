@@ -43,12 +43,6 @@ CSpectralColor::CSpectralColor(const ISpectralColorSpecification& spec)
 }
 
 
-// reimplemented (icmm::IColorObject)
-
-icmm::CVarColor CSpectralColor::GetColor() const
-{
-	return m_spectrumValues;
-}
 
 bool CSpectralColor::SetColor(const CVarColor& otherSpectrals)
 {
@@ -57,8 +51,18 @@ bool CSpectralColor::SetColor(const CVarColor& otherSpectrals)
 	}
 
 	m_spectrumValues.CopyFrom(otherSpectrals);
+
 	return true;
 }
+
+
+// reimplemented (icmm::IColorObject)
+
+icmm::CVarColor CSpectralColor::GetColor() const
+{
+	return m_spectrumValues;
+}
+
 
 ConstColorModelPtr CSpectralColor::GetColorModel() const
 {

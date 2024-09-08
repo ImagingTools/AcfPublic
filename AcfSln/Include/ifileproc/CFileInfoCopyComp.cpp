@@ -117,7 +117,7 @@ int CFileInfoCopyComp::ConvertFiles(
 	}
 #endif
 
-	for (int lineCounter = 1; !inputStream.atEnd(); ++lineCounter) {
+	for (int lineCounter = 1; !inputStream.atEnd(); ++lineCounter){
 		QString line = inputStream.readLine();
 
 		if (m_substitutionTagExprAttrPtr.IsValid()){
@@ -144,7 +144,7 @@ int CFileInfoCopyComp::ConvertFiles(
 
 				if (!substitutionTag.isEmpty()){
 					QString substituted;
-					if (ProcessSubstitutionTag(inputDir, outputDir, substitutionTag, substituted)) {
+					if (ProcessSubstitutionTag(inputDir, outputDir, substitutionTag, substituted)){
 						outputLine += substituted;
 					}
 					else{

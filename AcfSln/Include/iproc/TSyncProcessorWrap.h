@@ -229,7 +229,7 @@ std::unique_ptr<ibase::IProgressManager> TSyncProcessorWrap<Base>::CreateSubtask
 		const QString& taskDescription,
 		double weight)
 {
-	if (managerPtr != nullptr) {
+	if (managerPtr != nullptr){
 		return managerPtr->CreateSubtaskManager(taskId, taskDescription, weight);
 	}
 
@@ -240,7 +240,7 @@ std::unique_ptr<ibase::IProgressManager> TSyncProcessorWrap<Base>::CreateSubtask
 template <class Base>
 std::unique_ptr<ibase::IProgressLogger> TSyncProcessorWrap<Base>::StartProgressLogger(ibase::IProgressManager* managerPtr, bool isCancelable)
 {
-	if (managerPtr != nullptr) {
+	if (managerPtr != nullptr){
 		return managerPtr->StartProgressLogger(isCancelable);
 	}
 

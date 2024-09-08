@@ -97,7 +97,7 @@ void CSearchConstraintsComp::OnComponentCreated()
 		}
 
 		// model occurence count
-		if (m_modelOccurenceLimitationCompPtr.IsValid()) {
+		if (m_modelOccurenceLimitationCompPtr.IsValid()){
 			imath::CVarVector setCountContraints = m_modelOccurenceLimitationCompPtr->GetValues();
 			int maxCount = 10000;
 			int minCount = 0;

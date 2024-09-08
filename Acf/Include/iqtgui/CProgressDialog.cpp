@@ -53,7 +53,7 @@ CProgressDialog::CProgressDialog(const QString& description, const QString& defa
 void CProgressDialog::OnProgressChanged(double cumulatedValue)
 {
 	int progressValue = int(cumulatedValue * 100);
-	if (progressValue != m_lastProgressValue) {
+	if (progressValue != m_lastProgressValue){
 		m_lastProgressValue = progressValue;
 
 		Q_EMIT ProgressChanged(progressValue);
@@ -65,11 +65,11 @@ void CProgressDialog::OnTasksChanged()
 {
 	QString taskName;
 	auto tasksInfo = GetProcessedTasks(true, 1);
-	if (!tasksInfo.empty()) {
+	if (!tasksInfo.empty()){
 		taskName = tasksInfo[0].description;
 	}
 
-	if (taskName != m_lastTaskText) {
+	if (taskName != m_lastTaskText){
 		m_lastTaskText = taskName;
 
 		Q_EMIT TaskTextChanged(taskName);
