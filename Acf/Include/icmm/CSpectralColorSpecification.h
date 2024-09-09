@@ -34,16 +34,27 @@ namespace icmm
 
 class CSpectralColorSpecification: virtual public ISpectralColorSpecification
 {
-public:	
-	CSpectralColorSpecification(const ISpectrumInfo& spectrumInfo);
-	CSpectralColorSpecification(istd::CIntRange range, int step);
+public:
+	virtual ~CSpectralColorSpecification() {}
+
+	CSpectralColorSpecification(const CSpectralColorSpecification& spec);
 
 	// reimplemented (ISpectrumInfoProvider)
 	virtual const ISpectrumInfo* GetSpectrumInfo() const override;
+	virtual SpectrumType GetSpectrumType() const override;
 
+	// reimplemented (istd::IChangeable)
+	virtual bool IsEqual(const istd::IChangeable& other) const override;
+
+protected:
+	CSpectralColorSpecification(const ISpectrumInfo& spectrumInfo);
+	CSpectralColorSpecification(istd::CIntRange range, int step);
+
+	SpectrumType m_spectrumType;
 
 private:
 	CSpectrumInfo m_info;
+
 };
 
 

@@ -35,7 +35,7 @@ namespace icmm
 class CCieLabColor: virtual public ICieLabColor
 {
 public:
-	CCieLabColor(ColorModelPtr modelPtr = ColorModelPtr());
+	CCieLabColor(ColorModelPtr modelPtr);
 	CCieLabColor(const icmm::CLab& lab, const ITristimulusSpecification& spec);
 
 	// reimplemented (icmm::ICieLabColor)
@@ -45,6 +45,7 @@ public:
 	// reimplemented (icmm::IColorObject)
 	virtual icmm::CVarColor GetColor() const override;
 	virtual ConstColorModelPtr GetColorModel() const override;
+	virtual std::unique_ptr<IColorObject> CloneIntoUniquePtr() const override;
 
 	// reimplemented (iser::IObject)
 	virtual bool Serialize(iser::IArchive& archive) override;

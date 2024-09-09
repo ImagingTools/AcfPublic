@@ -28,12 +28,10 @@ namespace icmm
 
 
 // public methods
-
-CSpectralColorModel::CSpectralColorModel(const ISpectralColorSpecification& spec)
+CSpectralColorModel::CSpectralColorModel(ISpectralColorSpecification::ConstSpectralColorSpecPtr spec)
+	: m_spec(spec)
 {
-	m_spec->CopyFrom(spec);
 }
-
 
 // reimplemented (icmm::IColorModel)
 

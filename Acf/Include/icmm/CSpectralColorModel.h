@@ -35,7 +35,7 @@ namespace icmm
 class CSpectralColorModel: virtual public icmm::IColorModel
 {
 public:
-	CSpectralColorModel(const ISpectralColorSpecification& spec);
+	CSpectralColorModel(ISpectralColorSpecification::ConstSpectralColorSpecPtr spec);
 
 	// reimplemented (icmm::IColorModel)
 	virtual ModelType GetModelType() const override;
@@ -50,7 +50,7 @@ public:
 	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
 
 private:
-	std::shared_ptr<ISpectralColorSpecification> m_spec;
+	std::shared_ptr<const ISpectralColorSpecification> m_spec;
 };
 
 

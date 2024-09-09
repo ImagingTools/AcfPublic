@@ -40,12 +40,37 @@ CSpectralColorSpecification::CSpectralColorSpecification(istd::CIntRange range, 
 }
 
 // reimplemented (ISpectrumInfoProvider)
+CSpectralColorSpecification::CSpectralColorSpecification(const CSpectralColorSpecification& spec)
+{
+	m_info.CopyFrom(*spec.GetSpectrumInfo());
+	m_spectrumType = spec.GetSpectrumType();
+}
 
 const ISpectrumInfo* CSpectralColorSpecification::GetSpectrumInfo() const
 {
 	return &m_info;
 }
 
+bool CSpectralColorSpecification::IsEqual(const IChangeable& other) const
+{
+	const CSpectralColorSpecification* objectPtr =
+		dynamic_cast<const CSpectralColorSpecification*>(&other);
+
+	if (objectPtr == nullptr) {
+		return false;
+	}
+
+	bool isTypeSame = m_spectrumType == objectPtr->GetSpectrumType();
+	bool isInfoSame = m_info.IsEqual(*objectPtr->GetSpectrumInfo());
+
+	return isTypeSame && isInfoSame;
+
+}
+
+ISpectralColorSpecification::SpectrumType CSpectralColorSpecification::GetSpectrumType() const
+{
+	return m_spectrumType;
+}
 
 } // namespace icmm
 
