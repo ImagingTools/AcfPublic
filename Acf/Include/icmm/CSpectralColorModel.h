@@ -25,7 +25,7 @@
 
 // ACF includes
 #include <icmm/IColorModel.h>
-#include <icmm/CSpectralColorSpecification.h>
+#include <icmm/ISpectralColorSpecification.h>
 
 
 namespace icmm

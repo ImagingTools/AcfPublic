@@ -21,7 +21,7 @@
 
 
 #include <icmm/CSpectralColorModel.h>
-
+#include <icmm/CSpectrumInfo.h>
 
 namespace icmm
 {

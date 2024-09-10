@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <icmm/CSpectralColorSpecification.h>
+#include <icmm/CSpectralColorSpecificationBase.h>
 
 
 namespace icmm
@@ -28,33 +28,33 @@ namespace icmm
 
 
 
-CSpectralColorSpecification::CSpectralColorSpecification(const ISpectrumInfo& spectrumInfo)
+CSpectralColorSpecificationBase::CSpectralColorSpecificationBase(const ISpectrumInfo& spectrumInfo)
 {
 	m_info.CopyFrom(spectrumInfo);
 }
 
-CSpectralColorSpecification::CSpectralColorSpecification(istd::CIntRange range, int step)
+CSpectralColorSpecificationBase::CSpectralColorSpecificationBase(istd::CIntRange range, int step)
 {
 	m_info.SetRange(range);
 	m_info.SetStep(step);
 }
 
 // reimplemented (ISpectrumInfoProvider)
-CSpectralColorSpecification::CSpectralColorSpecification(const CSpectralColorSpecification& spec)
+CSpectralColorSpecificationBase::CSpectralColorSpecificationBase(const CSpectralColorSpecificationBase& spec)
 {
 	m_info.CopyFrom(*spec.GetSpectrumInfo());
 	m_spectrumType = spec.GetSpectrumType();
 }
 
-const ISpectrumInfo* CSpectralColorSpecification::GetSpectrumInfo() const
+const ISpectrumInfo* CSpectralColorSpecificationBase::GetSpectrumInfo() const
 {
 	return &m_info;
 }
 
-bool CSpectralColorSpecification::IsEqual(const IChangeable& other) const
+bool CSpectralColorSpecificationBase::IsEqual(const IChangeable& other) const
 {
-	const CSpectralColorSpecification* objectPtr =
-		dynamic_cast<const CSpectralColorSpecification*>(&other);
+	const CSpectralColorSpecificationBase* objectPtr =
+		dynamic_cast<const CSpectralColorSpecificationBase*>(&other);
 
 	if (objectPtr == nullptr) {
 		return false;
@@ -67,7 +67,7 @@ bool CSpectralColorSpecification::IsEqual(const IChangeable& other) const
 
 }
 
-ISpectralColorSpecification::SpectrumType CSpectralColorSpecification::GetSpectrumType() const
+ISpectralColorSpecification::SpectrumType CSpectralColorSpecificationBase::GetSpectrumType() const
 {
 	return m_spectrumType;
 }
