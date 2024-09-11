@@ -49,7 +49,7 @@ bool CSpectralColor::SetColor(const CVarColor& otherSpectrals)
 		return false;
 	}
 
-	m_spectrumValues.CopyFrom(otherSpectrals);
+	m_spectrumValues = otherSpectrals;
 
 	return true;
 }
