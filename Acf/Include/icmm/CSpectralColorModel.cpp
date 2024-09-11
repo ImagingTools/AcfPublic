@@ -56,6 +56,10 @@ IColorModel::ColorSpaceClass CSpectralColorModel::GetColorSpaceClass() const
 int CSpectralColorModel::GetColorSpaceDimensionality() const
 {
 	int componentCount = 0;
+    if (m_spec == nullptr)
+    {
+        return componentCount;
+    }
 
 	const ISpectrumInfo* infoPtr = m_spec->GetSpectrumInfo();
 	if (infoPtr != nullptr){
