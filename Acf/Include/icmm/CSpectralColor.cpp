@@ -39,13 +39,18 @@ CSpectralColor::CSpectralColor(ColorModelPtr modelPtr)
 
 CSpectralColor::CSpectralColor(std::shared_ptr<ISpectralColorSpecification> spec)
 {
+	if (spec == nullptr) {
+		m_modelPtr = nullptr;
+		return;
+	}
+
 	m_modelPtr = std::make_shared<icmm::CSpectralColorModel>(spec);
 }
 
 
 bool CSpectralColor::SetColor(const CVarColor& otherSpectrals)
 {
-	if(m_modelPtr->GetColorSpaceDimensionality() != otherSpectrals.GetElementsCount()){
+	if (m_modelPtr == nullptr || m_modelPtr->GetColorSpaceDimensionality() != otherSpectrals.GetElementsCount()) {
 		return false;
 	}
 
