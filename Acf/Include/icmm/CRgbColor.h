@@ -24,8 +24,8 @@
 
 
 // ACF includes
-#include "icmm/CRgb.h"
-#include "icmm/IColorModel.h"
+#include <icmm/CRgb.h>
+#include <icmm/IColorModel.h>
 #include <icmm/IRgbColor.h>
 #include <icmm/ITristimulusSpecification.h>
 
@@ -37,21 +37,20 @@ namespace icmm
 class CRgbColor: virtual public IRgbColor
 {
 public:
-    /**
-        Takes a ColorModel (if you want to get particular about the color specification)
-    */
+	/**
+		Takes a ColorModel (if you want to get particular about the color specification)
+	*/
+	CRgbColor(const icmm::CRgb& rgb, ColorModelPtr modelPtr);
 
-    CRgbColor(const icmm::CRgb& rgb, ColorModelPtr modelPtr);
+	/**
+		Just pass RGB-values; defaults the ColorModel to D50/2°
+	*/
+	CRgbColor(const icmm::CRgb& rgb);
 
-    /**
-        Just pass Rgb values; defaults the ColorModel to D50/2
-     */
-    CRgbColor(const icmm::CRgb& rgb);
+	void SetSpecification(const ITristimulusSpecification& spec);
 
-    void SetSpecification(const ITristimulusSpecification& spec);
-
-    // reimplemented (icmm::IRgbColor)
-    virtual const icmm::CRgb& GetRgb() const override;
+	// reimplemented (icmm::IRgbColor)
+	virtual const icmm::CRgb& GetRgb() const override;
 	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const override;
 
 	// reimplemented (icmm::IColorObject)
@@ -63,7 +62,7 @@ public:
 	virtual bool Serialize(iser::IArchive& archive) override;
 
 private:
-    icmm::CRgb m_rgb;
+	icmm::CRgb m_rgb;
 	std::shared_ptr<IColorModel> m_modelPtr;
 };
 

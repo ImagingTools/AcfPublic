@@ -113,10 +113,9 @@ int CSpectrumInfo::GetSupportedOperations() const
 }
 
 
-bool CSpectrumInfo::CopyFrom(const IChangeable& object, CompatibilityMode mode)
+bool CSpectrumInfo::CopyFrom(const IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const CSpectrumInfo* objectPtr = dynamic_cast<const CSpectrumInfo*>(&object);
-
 	if (objectPtr != nullptr){
 		istd::CChangeNotifier notifier(this);
 
@@ -132,7 +131,6 @@ bool CSpectrumInfo::CopyFrom(const IChangeable& object, CompatibilityMode mode)
 bool CSpectrumInfo::IsEqual(const IChangeable& object) const
 {
 	const CSpectrumInfo* objectPtr = dynamic_cast<const CSpectrumInfo*>(&object);
-
 	if (objectPtr != nullptr){
 		return *this == *objectPtr;
 	}
@@ -141,7 +139,7 @@ bool CSpectrumInfo::IsEqual(const IChangeable& object) const
 }
 
 
-istd::IChangeable* CSpectrumInfo::CloneMe(CompatibilityMode mode) const
+istd::IChangeable* CSpectrumInfo::CloneMe(CompatibilityMode /*mode*/) const
 {
 	istd::TDelPtr<CSpectrumInfo> clonePtr(new CSpectrumInfo());
 
@@ -153,7 +151,7 @@ istd::IChangeable* CSpectrumInfo::CloneMe(CompatibilityMode mode) const
 }
 
 
-bool CSpectrumInfo::ResetData(CompatibilityMode mode)
+bool CSpectrumInfo::ResetData(CompatibilityMode /*mode*/)
 {
 	istd::CChangeNotifier notifier(this);
 

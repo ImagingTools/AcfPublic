@@ -21,17 +21,23 @@
 
 
 #include <icmm/CSpectralColorModel.h>
+
+
+// ACF includes
 #include <icmm/CSpectrumInfo.h>
+
 
 namespace icmm
 {
 
 
 // public methods
+
 CSpectralColorModel::CSpectralColorModel(ISpectralColorSpecification::ConstSpectralColorSpecPtr spec)
-	: m_spec(spec)
+	:m_spec(spec)
 {
 }
+
 
 // reimplemented (icmm::IColorModel)
 
@@ -55,11 +61,11 @@ IColorModel::ColorSpaceClass CSpectralColorModel::GetColorSpaceClass() const
 
 int CSpectralColorModel::GetColorSpaceDimensionality() const
 {
-	int componentCount = 0;
-    if (m_spec == nullptr)
-    {
-        return componentCount;
+    if (m_spec == nullptr){
+        return 0;
     }
+
+	int componentCount = 0;
 
 	const ISpectrumInfo* infoPtr = m_spec->GetSpectrumInfo();
 	if (infoPtr != nullptr){

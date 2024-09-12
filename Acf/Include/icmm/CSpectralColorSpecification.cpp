@@ -20,29 +20,31 @@
 ********************************************************************************/
 
 
-#pragma once
-
-
-// ACF includes
-#include <icmm/CRgb.h>
-#include <icmm/IColorModel.h>
-#include <icmm/IColorObject.h>
+#include <icmm/CSpectralColorSpecification.h>
 
 
 namespace icmm
 {
 
 
-class IRgbColor : virtual public IColorObject
-{
-public:
-	virtual const icmm::CRgb& GetRgb() const = 0;
-	virtual IColorSpecification::ConstColorSpecPtr GetSpecification() const = 0;
 
-private:
-	icmm::CRgb m_Rgb;
-	std::shared_ptr<IColorModel> m_modelPtr;
-};
+CSpectralColorSpecification::CSpectralColorSpecification(const ISpectrumInfo& spectrumInfo)
+{
+	m_info.CopyFrom(spectrumInfo);
+}
+
+CSpectralColorSpecification::CSpectralColorSpecification(istd::CIntRange range, int step)
+{
+	m_info.SetRange(range);
+	m_info.SetStep(step);
+}
+
+// reimplemented (ISpectrumInfoProvider)
+
+const ISpectrumInfo* CSpectralColorSpecification::GetSpectrumInfo() const
+{
+	return &m_info;
+}
 
 
 } // namespace icmm

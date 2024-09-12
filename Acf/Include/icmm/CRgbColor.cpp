@@ -19,10 +19,12 @@
 **
 ********************************************************************************/
 
-#include "icmm/CRgb.h"
+
 #include <icmm/CRgbColor.h>
 
+
 // ACF includes
+#include <icmm/CRgb.h>
 #include <icmm/CRgbColorModel.h>
 
 

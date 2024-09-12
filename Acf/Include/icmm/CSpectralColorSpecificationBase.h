@@ -31,7 +31,7 @@
 namespace icmm
 {
 
-// rename to end with Base
+
 class CSpectralColorSpecificationBase: virtual public ISpectralColorSpecification
 {
 public:
@@ -54,7 +54,6 @@ protected:
 
 private:
 	CSpectrumInfo m_info;
-
 };
 
 
