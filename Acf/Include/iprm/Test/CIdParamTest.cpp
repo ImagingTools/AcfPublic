@@ -20,27 +20,19 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include "CIdParamTest.h"
 
 
-namespace istd
+void CIdParamTest::initTestCase()
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+}
+
+
+void CIdParamTest::cleanupTestCase()
 {
-	RS_ORIGINAL_VERSION =  5245,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	QFAIL("");
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
-
-
+I_ADD_TEST(CIdParamTest);

@@ -20,27 +20,25 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
+
+// Qt includes
+#include <QtCore/QObject>
+#include <QtTest/QtTest>
+
+// ACF includes
+#include <itest/CStandardTestExecutor.h>
+
+// ImtCore includes
+#include <iprm/CIdParam.h>
 
 
-namespace istd
+class CIdParamTest : public QObject
 {
-
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5245,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+	Q_OBJECT
+private slots:
+	void initTestCase();
+	void cleanupTestCase();
 };
-
-
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
 
 

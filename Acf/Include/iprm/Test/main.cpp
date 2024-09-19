@@ -20,27 +20,16 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <itest/CStandardTestExecutor.h>
+
+// Qt includes
+#include <QtCore/QCoreApplication>
 
 
-namespace istd
+int main(int argc, char *argv[])
 {
-
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5245,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
-
-
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
-
+	QCoreApplication app(argc, argv);
+	itest::CStandardTestExecutor instance;
+	return instance.RunTests(argc, argv);
+}
 
