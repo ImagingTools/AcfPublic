@@ -58,6 +58,7 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 		newHelperIterator.SetKey(tagId);
 		QString value = newHelperIterator.GetValue();
 		m_iterators.push_back(newHelperIterator);
+		m_tags.push_back(&tag);
 
 		return retVal;
 	}
@@ -71,6 +72,7 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 			QString value = helperIterator.GetValue();
 			newHelperIterator.SetValue(value);
 			m_iterators.push_back(newHelperIterator);
+			m_tags.push_back(&tag);
 		}
 		else{
 			QJsonObject jsonObject = helperIterator.GetObject();
@@ -78,6 +80,7 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 			newHelperIterator.SetValue(jsonObject);
 			newHelperIterator.SetKey(tagId);
 			m_iterators.push_back(newHelperIterator);
+			m_tags.push_back(&tag);
 		}
 	}
 	else {
@@ -87,6 +90,7 @@ bool CJsonReadArchiveBase::BeginTag(const iser::CArchiveTag& tag)
 			newHelperIterator.SetValue(jsonObject.value(tagId));
 			newHelperIterator.SetKey(tagId);
 			m_iterators.push_back(newHelperIterator);
+			m_tags.push_back(&tag);
 		}
 		else{
 			if (IsLogConsumed()){
@@ -127,6 +131,7 @@ bool CJsonReadArchiveBase::BeginMultiTag(const iser::CArchiveTag& tag, const ise
 			newHelperIterator.SetValue(jsonValue);
 			newHelperIterator.SetKey(tagId);
 			m_iterators.push_back(newHelperIterator);
+			m_tags.push_back(&tag);
 			count = jsonValue.toArray().count();
 		}
 	}
@@ -158,6 +163,7 @@ bool CJsonReadArchiveBase::EndTag(const iser::CArchiveTag& tag)
 	HelperIterator helperIterator = m_iterators.last();
 	if (helperIterator.GetKey() == tag.GetId()){
 		m_iterators.pop_back();
+		m_tags.pop_back();
 		if (!m_iterators.isEmpty() && m_iterators.last().isArray()){
 			m_iterators.last().NextElementArray();
 		}
@@ -213,6 +219,13 @@ bool CJsonReadArchiveBase::InitArchive(const QByteArray &inputString, bool seria
 
 bool CJsonReadArchiveBase::ReadStringNode(QString &text)
 {
+	bool openFakeTag = false;
+
+	if (m_iterators.last().isObject()){
+		openFakeTag = true;
+		BeginTag(*m_tags.last());
+	}
+
 	HelperIterator helperIterator = m_iterators.last();
 	QJsonObject jsonObject;
 
@@ -220,9 +233,15 @@ bool CJsonReadArchiveBase::ReadStringNode(QString &text)
 		text = helperIterator.GetValue();
 	}
 	else{
+		if (openFakeTag){
+			EndTag(*m_tags.last());
+		}
 		return false;
 	}
 
+	if (openFakeTag){
+		EndTag(*m_tags.last());
+	}
 	return true;
 }
 
