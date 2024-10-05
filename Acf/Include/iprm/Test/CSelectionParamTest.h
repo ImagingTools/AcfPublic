@@ -20,27 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// Qt includes
+#include <QtCore/QObject>
+#include <QtTest/QtTest>
+
+// ACF includes
+#include <itest/CStandardTestExecutor.h>
+#include <imod/TModelWrap.h>
+#include <iprm/CSelectionParam.h>
+
+
+class CSelectionParamTest: public QObject
 {
+	Q_OBJECT
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5260,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+private Q_SLOTS:
+	void initTestCase();
+
+	void GetSetTest();
+	void ResetTest();
+
+	void SerializeTest();
+	void CopyFromTest();
+	void CloneTest();
+	void IsEqualTest();
+
+	void cleanupTestCase();
+
+private:
+	imod::TModelWrap<iprm::CSelectionParam> m_param;
 };
-
-
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
 
 

@@ -20,7 +20,7 @@
 ********************************************************************************/
 
 
-#include <iprm/Test/CIdParamTest.h>
+#include <iprm/Test/CNameParamTest.h>
 
 
 // ACF includes
@@ -29,89 +29,86 @@
 #include <iser/CMemoryWriteArchive.h>
 
 
-void CIdParamTest::initTestCase()
+void CNameParamTest::initTestCase()
 {
-
 }
 
 
-void CIdParamTest::GetSetTest()
+void CNameParamTest::GetSetTest()
 {
-	QVERIFY(m_param.GetId().isEmpty());
+	QVERIFY(m_param.GetName().isEmpty());
 
-	m_param.SetId(m_id);
+	m_param.SetName(m_refValue);
 
-	QVERIFY(m_param.GetId() == m_id);
+	QVERIFY(m_param.GetName() == m_refValue);
 }
 
 
-void CIdParamTest::ResetTest()
+void CNameParamTest::ResetTest()
 {
-	QVERIFY(m_param.GetId() == m_id);
+	QVERIFY(m_param.GetName() == m_refValue);
 
 	QVERIFY(m_param.ResetData());
 
-	QVERIFY(m_param.GetId().isEmpty());
+	QVERIFY(m_param.GetName().isEmpty());
 }
 
 
-void CIdParamTest::SerializeTest()
+void CNameParamTest::SerializeTest()
 {
 	iser::CMemoryWriteArchive writeArchive(nullptr);
 
-	m_param.SetId(m_id);
+	m_param.SetName(m_refValue);
 
 	QVERIFY(m_param.Serialize(writeArchive));
 
 	QVERIFY(m_param.ResetData());
-	QVERIFY(m_param.GetId().isEmpty());
+	QVERIFY(m_param.GetName().isEmpty());
 
 	iser::CMemoryReadArchive readArchive(writeArchive);
 	QVERIFY(m_param.Serialize(readArchive));
 
-	QVERIFY(m_param.GetId() == m_id);
+	QVERIFY(m_param.GetName() == m_refValue);
 }
 
 
-void CIdParamTest::CopyFromTest()
+void CNameParamTest::CopyFromTest()
 {
-	iprm::CIdParam param;
+	iprm::CNameParam param;
 
-	QVERIFY(m_param.GetId() == m_id);
-	QVERIFY(param.GetId().isEmpty());
+	QVERIFY(m_param.GetName() == m_refValue);
+	QVERIFY(param.GetName().isEmpty());
 
 	QVERIFY(param.CopyFrom(m_param));
 
-	QVERIFY(param.GetId() == m_id);
+	QVERIFY(param.GetName() == m_refValue);
 }
 
 
-void CIdParamTest::CloneTest()
+void CNameParamTest::CloneTest()
 {
-	QVERIFY(m_param.GetId() == m_id);
+	QVERIFY(m_param.GetName() == m_refValue);
 
-	istd::TDelPtr<iprm::CIdParam> clonePtr;
+	istd::TDelPtr<iprm::CNameParam> clonePtr;
 	QVERIFY(clonePtr.SetCastedOrRemove(m_param.CloneMe()));
 	QVERIFY(clonePtr.IsValid());
 
-	QVERIFY(clonePtr->GetId() == m_id);
+	QVERIFY(clonePtr->GetName() == m_refValue);
 }
 
 
-void CIdParamTest::IsEqualTest()
+void CNameParamTest::IsEqualTest()
 {
-	iprm::CIdParam param;
-	param.SetId(m_id);
+	iprm::CNameParam param;
+	param.SetName(m_refValue);
 
 	QVERIFY(m_param.IsEqual(param));
 }
 
 
-void CIdParamTest::cleanupTestCase()
+void CNameParamTest::cleanupTestCase()
 {
 }
 
 
-I_ADD_TEST(CIdParamTest);
-
-
+I_ADD_TEST(CNameParamTest);

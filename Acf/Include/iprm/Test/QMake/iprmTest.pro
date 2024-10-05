@@ -1,16 +1,7 @@
 TARGET = iprmTest
 
-include(../../../../Config/QMake/ApplicationConfig.pri)
+include(../../../../Config/QMake/TestConfig.pri)
 include(../../../../Config/QMake/QtBaseConfig.pri)
 
-LIBS += -L../../../Lib/$$COMPILER_DIR
-LIBS += -listd -liser -liprm -litest
-
-QT += core gui testlib
-
-CONFIG += console
-
-include(../../../..//Config/QMake/AcfQt.pri)
-include(../../../..//Config/QMake/AcfStd.pri)
-include(../../../..//Config/QMake/CustomBuild.pri)
+LIBS += -liprm -limod -libase -liqt -lifile -lidoc -liser
 

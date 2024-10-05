@@ -22,6 +22,7 @@
 
 #pragma once
 
+
 // Qt includes
 #include <QtCore/QObject>
 #include <QtTest/QtTest>
@@ -31,15 +32,15 @@
 #include <iprm/CIdParam.h>
 
 
-class CIdParamTest : public QObject
+class CIdParamTest: public QObject
 {
 	Q_OBJECT
-private slots:
+
+private Q_SLOTS:
 	void initTestCase();
 
 	void GetSetTest();
 	void ResetTest();
-
 	void SerializeTest();
 	void CopyFromTest();
 	void CloneTest();
