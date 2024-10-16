@@ -22,8 +22,14 @@ include("${ACFDIR}/Config/CMake/ProjectRoot.cmake")
 get_target_name(TARGETNAME)
 
 if(NOT DEFINED BUILDDIR)
-	set(BUILDDIR "${CMAKE_CURRENT_LIST_DIR}/../..")
+	if(DEFINED ENV{ACF_OUTPUT_DIR})
+		set(BUILDDIR "$ENV{ACF_OUTPUT_DIR}")
+	else()
+		set(BUILDDIR "${CMAKE_CURRENT_LIST_DIR}/../..")
+	endif()
 endif()
+
+message("BUILDDIR: " ${BUILDDIR})
 
 message(TARGETNAME ${TARGETNAME})
 
