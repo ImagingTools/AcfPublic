@@ -1,0 +1,139 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iview_CLayerBase_included
+#define iview_CLayerBase_included
+
+
+// Qt includes
+#include <QtCore/QVector>
+
+// ACF includes
+#include <iview/IViewLayer.h>
+#include <iview/IShape.h>
+
+
+namespace iview
+{
+
+
+/**
+	Standard implementation of view layer.
+	It contains non interactive shapes only.
+*/
+class CViewLayer: virtual public IViewLayer
+{
+public:
+	CViewLayer();
+	virtual ~CViewLayer();
+
+	// reimplemented (iview::IViewLayer)
+	virtual void OnConnectView(IShapeView* viewPtr);
+	virtual void OnDisconnectView(IShapeView* viewPtr);
+	virtual IShapeView* GetViewPtr() const;
+	virtual bool IsShapeConnected(IShape* shapePtr);
+	virtual bool ConnectShape(IShape* shapePtr);
+	virtual int GetShapesCount() const;
+	virtual Shapes GetShapes() const;
+	virtual void UpdateAllShapes(const istd::IChangeable::ChangeSet& changeSet);
+	virtual void DisconnectAllShapes();
+	virtual void DrawShapes(QPainter& drawContext);
+	virtual bool IsVisible() const;
+	virtual void SetVisible(bool state = true);
+	
+	// reimplemented (iview::IDisplay)
+	virtual IDisplay* GetParentDisplayPtr() const;
+	virtual const CScreenTransform& GetTransform() const;
+	virtual i2d::CRect GetBoundingBox() const;
+	virtual i2d::CRect GetClientRect() const;
+	virtual const IColorSchema& GetColorSchema() const;
+	virtual void OnAreaInvalidated(const i2d::CRect& prevArea, const i2d::CRect& newArea);
+
+	// reimplemented (iview::IShapeObserver)
+	virtual void OnChangeShape(IShape* shapePtr);
+	virtual bool DisconnectShape(IShape* shapePtr);
+
+	// reimplemented (iview::ITouchable)
+	virtual TouchState IsTouched(istd::CIndex2d position) const;
+	virtual QString GetShapeDescriptionAt(istd::CIndex2d position) const;
+
+protected:
+	struct ShapeWithBoundingBox
+	{
+		ShapeWithBoundingBox(){}
+		ShapeWithBoundingBox(IShape* shapePtr, const i2d::CRect& box) : shapePtr(shapePtr), box(box){}
+
+		IShape* shapePtr;
+		i2d::CRect box;
+	};
+	typedef QVector<ShapeWithBoundingBox> ShapeList;
+
+	/**
+		\internal
+		Internal invalidate shape method.
+	*/
+	bool OnChangeShapeElement(ShapeList::Iterator elementIter);
+	
+	/**
+		\internal
+		Internal disconnect shape method.
+	*/
+	void DisconnectShapeElement(ShapeList& map, ShapeList::iterator iter);
+
+	void InvalidateBoundingBox();
+	i2d::CRect& GetBoundingBoxRef() const;
+	void SetBoundingBoxValid() const;
+
+	/**
+		Recalculate all shapes after view changes.
+	*/
+	virtual i2d::CRect RecalcAllShapes(const istd::IChangeable::ChangeSet& changeSet);
+	/**
+		Calculate bounding box for all shapes.
+	*/
+	virtual i2d::CRect CalcBoundingBox() const;
+
+	ShapeList m_shapes;
+
+private:
+	IShapeView* m_viewPtr;
+	bool m_isVisible;
+
+	mutable i2d::CRect m_boundingBox;
+	mutable bool m_isBoundingBoxValid;
+};
+
+
+// inline methods
+
+inline bool CViewLayer::IsVisible() const
+{
+	return m_isVisible;
+}
+
+
+} // namespace iview
+
+
+#endif // !iview_CLayerBase_included
+
+

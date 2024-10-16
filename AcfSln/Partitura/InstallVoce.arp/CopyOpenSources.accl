@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="5261" Description="ACF"/>
+            <Version Id="1" Number="2218" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="393732" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <PositionMap>
+        <Element ComponentName="Copy3rdParty" X="425" Y="225" Note=""/>
+        <Element ComponentName="CopyAllFiles" X="150" Y="350" Note=""/>
+        <Element ComponentName="CopyBuildProjects" X="975" Y="475" Note=""/>
+        <Element ComponentName="CopyCommon" X="311" Y="103" Note=""/>
+        <Element ComponentName="CopyImplOther" X="425" Y="475" Note=""/>
+        <Element ComponentName="CopyImplProjects" X="875" Y="100" Note=""/>
+        <Element ComponentName="CopyImplResources" X="700" Y="225" Note=""/>
+        <Element ComponentName="CopyImplSources" X="575" Y="100" Note=""/>
+        <Element ComponentName="CopyIncludeOther" X="125" Y="475" Note=""/>
+        <Element ComponentName="CopyIncludeProjects" X="875" Y="600" Note=""/>
+        <Element ComponentName="CopyIncludeResources" X="700" Y="475" Note=""/>
+        <Element ComponentName="CopyIncludeSources" X="575" Y="600" Note=""/>
+        <Element ComponentName="CopyInstallDatabase" X="125" Y="225" Note=""/>
+        <Element ComponentName="CopyPartituraUpgradeScript" X="325" Y="600" Note=""/>
+        <Element ComponentName="CopyQml" X="975" Y="225" Note=""/>
+        <Element ComponentName="CopyQmlProjects" X="1075" Y="350" Note=""/>
+        <Element ComponentName="CopySdl" X="750" Y="725" Note=""/>
+    </PositionMap>
+    <EmbeddedRegistries/>
+</Acf>
