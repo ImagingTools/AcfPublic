@@ -1,4 +1,0 @@
-Installation creation time: So Okt 13 12:03:47 2024
-ACF-Solutions Version: 2.1.2.290 (2218)
-Based on ACF Version: 2.0.3.672 (5262)
-Compiler code: VC15

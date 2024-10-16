@@ -1,3 +1,0 @@
-Installation creation time: So Okt 13 12:03:19 2024
-ACF Version: 2.0.3.672 (5262)
-Compiler code: VC15
