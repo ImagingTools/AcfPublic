@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ibase_IApplicationInfo_included
-#define ibase_IApplicationInfo_included
+#pragma once
 
 
 // Qt includes
@@ -50,6 +49,7 @@ public:
 		AA_COMPANY_NAME,
 		AA_PRODUCT_NAME,
 		AA_PRODUCT_EDITION,
+		AA_APPLICATION_ID,
 		AA_APPLICATION_NAME,
 		AA_APPLICATION_SUBNAME,
 		AA_APPLICATION_TYPE,
@@ -81,8 +81,5 @@ public:
 
 
 } // namespace ibase
-
-
-#endif // !ibase_IApplicationInfo_included
 
 
