@@ -134,8 +134,8 @@ int CRegistryCodeSaverComp::SaveToFile(
 			return OS_FAILED;
 		}
 
-		if (m_depfillePathAttrPtr.IsValid()) {
-			QFileInfo depFileInfo(*m_depfillePathAttrPtr);
+		if (m_depfilePathAttrPtr.IsValid()) {
+			QFileInfo depFileInfo(*m_depfilePathAttrPtr);
 			QDir depFileDir = depFileInfo.absoluteDir();
 			QFile depsFile(depFileInfo.absoluteFilePath());
 
@@ -148,8 +148,8 @@ int CRegistryCodeSaverComp::SaveToFile(
 
 			QTextStream depsStream(&depsFile);
 
-			depsStream << depFileDir.relativeFilePath(headerFilePath) << ":";
-			if (!WriteDependencies(Addresses(), realAddresses, true, depsStream)) {
+			depsStream << headerFilePath << ":";
+			if (!WriteDependencies(Addresses(), realAddresses, true, depsStream)){
 				depsFile.remove();
 
 				SendErrorMessage(0, "Depfile could not be written", "Source code generator");
@@ -158,8 +158,8 @@ int CRegistryCodeSaverComp::SaveToFile(
 			}
 			depsStream << "\n";
 
-			depsStream << depFileDir.relativeFilePath(filePath);
-			if (!WriteDependencies(composedAddresses, realAddresses, true, depsStream)) {
+			depsStream << filePath << ":";
+			if (!WriteDependencies(composedAddresses, realAddresses, true, depsStream)){
 				depsFile.remove();
 
 				SendErrorMessage(0, "Depfile could not be written", "Source code generator");
@@ -1142,15 +1142,14 @@ bool CRegistryCodeSaverComp::WriteDependencies(
 					++pathIter){
 			QFileInfo configFilePath(*pathIter);
 
-			auto filePath = configFilePath.absoluteFilePath();
+			auto filePath = QDir::toNativeSeparators(configFilePath.absoluteFilePath());
 
-			if (singleLine) {
+			if (singleLine){
 				stream << " " << filePath;
 			}
 			else {
 				stream << filePath << "\n";
 			}
-
 		}
 	}
 
