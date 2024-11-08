@@ -57,6 +57,7 @@ class CJsonMemoryWriteArchiveTest : public QObject
 private slots:
 	void initTestCase();
 
+	void ParamsSetSerializeTest();
 	void WriteTest();
 	void ReadTest();
 	void _Test();
