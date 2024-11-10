@@ -20,34 +20,17 @@
 ********************************************************************************/
 
 
-#pragma once
+#include <itest/CStandardTestExecutor.h>
 
 
-// Qt inclides
-#include <QtCore/QFile>
-
-// ACF includes
-#include <iser/CJsonReadArchiveBase.h>
+// Qt includes
+#include <QtCore/QCoreApplication>
 
 
-namespace ifile
+int main(int argc, char *argv[])
 {
-
-
-class CJsonFileReadArchive: public iser::CJsonReadArchiveBase
-{
-public:
-	typedef iser::CJsonReadArchiveBase BaseClass;
-
-	CJsonFileReadArchive(const QString& filePath = "", bool serializeHeader = true);
-
-	bool OpenFile(const QString& filePath);
-
-private:
-	QFile m_file;
-};
-
-
-} // namespace ifile
-
+	QCoreApplication app(argc, argv);
+	itest::CStandardTestExecutor instance;
+	return instance.RunTests(argc, argv);
+}
 

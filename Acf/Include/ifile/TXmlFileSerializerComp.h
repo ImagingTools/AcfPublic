@@ -59,11 +59,11 @@ public:
 	virtual int LoadFromFile(
 				istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = nullptr) const override;
 	virtual int SaveToFile(
 				const istd::IChangeable& data,
 				const QString& filePath = QString(),
-				ibase::IProgressManager* progressManagerPtr = NULL) const override;
+				ibase::IProgressManager* progressManagerPtr = nullptr) const override;
 
 protected:
 	class ReadArchiveEx: public ReadArchive
@@ -84,11 +84,11 @@ protected:
 		// reimplemented (istd::ILogger)
 		virtual bool IsLogConsumed(
 					const istd::IInformationProvider::InformationCategory* /*categoryPtr*/,
-					const int* flagsPtr = NULL) const override
+					const int* flagsPtr = nullptr) const override
 		{
 			static const istd::IInformationProvider::InformationCategory slaveCategory = istd::IInformationProvider::IC_INFO;
 
-			return (m_loggerPtr != NULL) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
+			return (m_loggerPtr != nullptr) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
 		}
 
 		virtual bool SendLogMessage(
@@ -98,7 +98,7 @@ protected:
 					const QString& messageSource,
 					int flags = 0) const override
 		{
-			if (m_loggerPtr != NULL){
+			if (m_loggerPtr != nullptr){
 				QString correctedMessage = message;
 				QString correctedMessageSource = messageSource;
 
@@ -134,11 +134,11 @@ protected:
 		// reimplemented (istd::ILogger)
 		virtual bool IsLogConsumed(
 					const istd::IInformationProvider::InformationCategory* /*categoryPtr*/,
-					const int* flagsPtr = NULL) const override
+					const int* flagsPtr = nullptr) const override
 		{
 			static const istd::IInformationProvider::InformationCategory slaveCategory = istd::IInformationProvider::IC_INFO;
 
-			return (m_loggerPtr != NULL) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
+			return (m_loggerPtr != nullptr) && m_loggerPtr->IsLogConsumed(&slaveCategory, flagsPtr);
 		}
 
 		virtual bool SendLogMessage(
@@ -148,7 +148,7 @@ protected:
 					const QString& messageSource,
 					int flags = 0) const override
 		{
-			if (m_loggerPtr != NULL){
+			if (m_loggerPtr != nullptr){
 				QString correctedMessage = message;
 				QString correctedMessageSource = messageSource;
 
@@ -197,11 +197,11 @@ int TXmlFileSerializerComp<ReadArchive, WriteArchive>::LoadFromFile(
 			\todo Change CompCastPtr to be sure that firstly the data will be casted to the interface, but NOT the first ISerializable in the composition.
 		*/
 		iser::ISerializable* serializablePtr = dynamic_cast<iser::ISerializable*>(&data);
-		if (serializablePtr == NULL){
+		if (serializablePtr == nullptr){
 			serializablePtr = CompCastPtr<iser::ISerializable>(&data);
 		}
 
-		Q_ASSERT(serializablePtr != NULL);
+		Q_ASSERT(serializablePtr != nullptr);
 
 		if (serializablePtr->Serialize(archive)){
 			return OS_OK;
@@ -239,10 +239,10 @@ int TXmlFileSerializerComp<ReadArchive, WriteArchive>::SaveToFile(
 			\todo Change CompCastPtr to be sure that firstly the data will be casted to the interface, but NOT the first ISerializable in the composition.
 		*/
 		const iser::ISerializable* serializablePtr = dynamic_cast<const iser::ISerializable*>(&data);
-		if(serializablePtr == NULL){
+		if(serializablePtr == nullptr){
 			serializablePtr = CompCastPtr<iser::ISerializable>(&data);
 		}
-		Q_ASSERT(serializablePtr != NULL);
+		Q_ASSERT(serializablePtr != nullptr);
 
 		if (!CheckMinimalVersion(*serializablePtr, archive.GetVersionInfo())){
 			SendWarningMessage(MI_UNSUPPORTED_VERSION, QObject::tr("Archive version is not supported, possible lost of data"));

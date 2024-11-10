@@ -23,31 +23,22 @@
 #pragma once
 
 
-// Qt inclides
-#include <QtCore/QFile>
+// Qt includes
+#include <QtCore/QObject>
+#include <QtTest/QtTest>
 
 // ACF includes
-#include <iser/CJsonReadArchiveBase.h>
+#include <itest/CStandardTestExecutor.h>
 
 
-namespace ifile
+class CCompactXmlDeviceArchiveTest : public QObject
 {
+	Q_OBJECT
 
-
-class CJsonFileReadArchive: public iser::CJsonReadArchiveBase
-{
-public:
-	typedef iser::CJsonReadArchiveBase BaseClass;
-
-	CJsonFileReadArchive(const QString& filePath = "", bool serializeHeader = true);
-
-	bool OpenFile(const QString& filePath);
-
-private:
-	QFile m_file;
+private Q_SLOTS:
+	void DoFileTest();
+	void DoMemoryTest();
+	void DoPersistenceComponentTest();
 };
-
-
-} // namespace ifile
 
 

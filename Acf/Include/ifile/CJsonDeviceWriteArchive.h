@@ -20,32 +20,16 @@
 ********************************************************************************/
 
 
-#pragma once
-
-
-// Qt inclides
-#include <QtCore/QFile>
-
-// ACF includes
-#include <iser/CJsonReadArchiveBase.h>
+// Qt includes
+#include <iser/CJsonWriteArchiveBase.h>
+#include <ifile/TDeviceWriteTextArchiveWrap.h>
 
 
 namespace ifile
 {
 
 
-class CJsonFileReadArchive: public iser::CJsonReadArchiveBase
-{
-public:
-	typedef iser::CJsonReadArchiveBase BaseClass;
-
-	CJsonFileReadArchive(const QString& filePath = "", bool serializeHeader = true);
-
-	bool OpenFile(const QString& filePath);
-
-private:
-	QFile m_file;
-};
+typedef TDeviceWriteTextArchiveWrap<iser::CJsonWriteArchiveBase> CJsonDeviceWriteArchive;
 
 
 } // namespace ifile
