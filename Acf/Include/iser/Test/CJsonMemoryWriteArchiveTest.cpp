@@ -46,7 +46,7 @@ void CJsonMemoryWriteArchiveTest::initTestCase()
 void CJsonMemoryWriteArchiveTest::WriteTest()
 {
 	{
-		iser::CJsonMemWriteArchive writeArchive(m_buffer);
+		iser::CJsonMemWriteArchive writeArchive;
 		QVERIFY(m_metaInfo.Serialize(writeArchive));
 	}
 }
@@ -79,7 +79,7 @@ void CJsonMemoryWriteArchiveTest::ParamsSetSerializeTest()
 
 	QByteArray buffer;
 	{
-		iser::CJsonMemWriteArchive writeArchive(buffer);
+		iser::CJsonMemWriteArchive writeArchive;
 
 		// serialize
 		const bool written = params.Serialize(writeArchive);
@@ -109,7 +109,7 @@ void CJsonMemoryWriteArchiveTest::ParamsSetSerializeTest()
 
 	QByteArray newBuffer;
 	{
-		iser::CJsonMemWriteArchive writeArchive(newBuffer);
+		iser::CJsonMemWriteArchive writeArchive;
 
 		// serialize
 		const bool written = newParams.Serialize(writeArchive);
@@ -132,7 +132,7 @@ void CJsonMemoryWriteArchiveTest::_Test()
 	model.value = 10;
 
 	{
-		iser::CJsonMemWriteArchive writeArchive(m_buffer);
+		iser::CJsonMemWriteArchive writeArchive;
 		QVERIFY(model.Serialize(writeArchive));
 	}
 
