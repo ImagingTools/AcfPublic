@@ -415,7 +415,7 @@ bool CPackagesLoaderComp::LoadConfigFile(const QString& configFile)
 		ifile::CSimpleXmlFileReadArchive archive(configFilePath);
 
 		if (!configurationData.Serialize(archive)){
-			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, tr("Cannot open configuration file: %1").arg(configFilePath));
+			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, tr("Cannot open configuration file: '%1' ('%2')").arg(configFilePath).arg(configFile), "Component Package Loader");
 
 			return false;
 		}
@@ -424,7 +424,7 @@ bool CPackagesLoaderComp::LoadConfigFile(const QString& configFile)
 		ifile::CCompactXmlFileReadArchive archive(configFilePath);
 
 		if (!configurationData.Serialize(archive)){
-			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, tr("Cannot open configuration file: %1").arg(configFilePath));
+			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, tr("Cannot open configuration file: '%1' ('%2')").arg(configFilePath).arg(configFile), "Component Package Loader");
 
 			return false;
 		}

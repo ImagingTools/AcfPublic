@@ -358,7 +358,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile, int defin
 		ifile::CSimpleXmlFileReadArchive archive(configFilePath);
 
 		if (!configurationData.Serialize(archive)){
-			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, QObject::tr("Cannot open configuration file: %1").arg(configFilePath));
+			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, QObject::tr("Cannot open configuration file: '%1' ('%2')").arg(configFilePath).arg(configFile));
 
 			return false;
 		}
@@ -367,7 +367,7 @@ bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile, int defin
 		ifile::CCompactXmlFileReadArchive archive(configFilePath);
 
 		if (!configurationData.Serialize(archive)){
-			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, QObject::tr("Cannot open configuration file: %1").arg(configFilePath));
+			SendErrorMessage(ifile::IFilePersistence::MI_CANNOT_LOAD, QObject::tr("Cannot open configuration file: '%1' ('%2')").arg(configFilePath).arg(configFile));
 
 			return false;
 		}
@@ -377,8 +377,8 @@ bool CRegistriesManagerComp::LoadConfigFile(const QString& configFile, int defin
 
 	int configFilesCount = configurationData.GetConfigFilesCount();
 	for (int i = 0; i < configFilesCount; ++i){
-		QString filePath = istd::CSystem::GetEnrolledPath(configurationData.GetConfFile(i));
-		retVal = LoadConfigFile(baseDir.absoluteFilePath(filePath), definitionLevel + 1) && retVal;
+		QString configFilePath = istd::CSystem::GetEnrolledPath(configurationData.GetConfFile(i));
+		retVal = LoadConfigFile(baseDir.absoluteFilePath(configFilePath), definitionLevel + 1) && retVal;
 	}
 
 	int packageDirsCount = configurationData.GetPackageDirsCount();
