@@ -95,7 +95,9 @@ void CJsonDeviceArchiveTest::DoMemoryTest()
 void CJsonDeviceArchiveTest::DoPersistenceComponentTest()
 {
 	typedef icomp::TSimComponentWrap<
-				ifile::TDeviceBasedSerializerComp<ifile::CJsonDeviceReadArchive, ifile::CJsonDeviceWriteArchive>> JsonDeviceSerializer;
+				ifile::TDeviceBasedSerializerComp<
+							ifile::CJsonDeviceReadArchive,
+							ifile::CJsonDeviceWriteArchive>> JsonDeviceSerializer;
 
 	JsonDeviceSerializer component;
 	component.InitComponent();
@@ -114,6 +116,7 @@ void CJsonDeviceArchiveTest::DoPersistenceComponentTest()
 	int state = component.ReadFromDevice(filePathParam2, file);
 	QVERIFY(state == ifile::IDeviceBasedPersistence::Successful);
 	QVERIFY(filePathParam2.IsEqual(filePathParam));
+	QVERIFY(filePathParam2.GetPath() == path);
 
 	file.remove();
 }

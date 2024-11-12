@@ -199,7 +199,7 @@ int CLensDistorsionCalibration::GetSupportedOperations() const
 bool CLensDistorsionCalibration::CopyFrom(const istd::IChangeable& object, CompatibilityMode /*mode*/)
 {
 	const CLensDistorsionCalibration* calibrationImplPtr = dynamic_cast<const CLensDistorsionCalibration*>(&object);
-	if (calibrationImplPtr != NULL) {
+	if (calibrationImplPtr != NULL){
 		istd::CChangeNotifier notifier(this);
 		Q_UNUSED(notifier);
 
@@ -209,7 +209,7 @@ bool CLensDistorsionCalibration::CopyFrom(const istd::IChangeable& object, Compa
 	}
 
 	const COcvIntrinsicCameraCalibration* intrinsicCameraCalibrationPtr = dynamic_cast<const COcvIntrinsicCameraCalibration*>(&object);
-	if (intrinsicCameraCalibrationPtr != NULL) {
+	if (intrinsicCameraCalibrationPtr != NULL){
 		istd::CChangeNotifier notifier(this);
 		Q_UNUSED(notifier);
 
@@ -226,7 +226,7 @@ bool CLensDistorsionCalibration::CopyFrom(const istd::IChangeable& object, Compa
 bool CLensDistorsionCalibration::IsEqual(const istd::IChangeable& object) const
 {
 	const CLensDistorsionCalibration* calibrationImplPtr = dynamic_cast<const CLensDistorsionCalibration*>(&object);
-	if (calibrationImplPtr != NULL) {
+	if (calibrationImplPtr != NULL){
 		return m_calibration.IsEqual(calibrationImplPtr->m_calibration);
 	}
 

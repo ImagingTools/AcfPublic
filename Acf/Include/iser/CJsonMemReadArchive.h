@@ -40,7 +40,7 @@ public:
 	typedef CJsonReadArchiveBase BaseClass;
 
 	CJsonMemReadArchive(const QByteArray& data, bool serializeHeader = true);
-
+	~CJsonMemReadArchive();
 private:
 	QBuffer m_buffer;
 };
