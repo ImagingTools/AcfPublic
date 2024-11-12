@@ -255,4 +255,6 @@ SUBDIRS += Compositor
 Compositor.file = ../../Impl/CompositorExe/QMake/Compositor.pro
 Compositor.depends = AuthorizationPck BlobPck ProcessingPck FileProcessingPck CameraPck EdgePck HotfolderPck InspectionPck IprPck MeasPck SignalPck WizardPck QtAuthorizationPck QtCameraPck QtExPck QtInspectionPck QtIprPck QtMeasPck QtMmPck QtSignalPck WizardGuiPck HotfolderGuiPck ProcessingGuiPck CompositorPck DocumentProcessingPck XpcEditor
 
-
+SUBDIRS += JsonArchiveIntergrationTest
+JsonArchiveIntergrationTest.file = ../../Tests/JsonArchiveIntergrationTest/QMake/JsonArchiveIntergrationTest.pro
+JsonArchiveIntergrationTest.depends = imeas
