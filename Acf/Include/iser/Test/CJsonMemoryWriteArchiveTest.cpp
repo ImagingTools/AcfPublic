@@ -20,15 +20,15 @@
 ********************************************************************************/
 
 
-#include "CJsonMemoryWriteArchiveTest.h"
+#include <iser/Test/CJsonMemoryWriteArchiveTest.h>
 
 
 // ACF includes
 #include <istd/TDelPtr.h>
+#include <imod/TModelWrap.h>
 #include <iser/CMemoryReadArchive.h>
 #include <iser/CMemoryWriteArchive.h>
-
-#include <iprm/CParamsSet.h>
+#include <iprm/CParamsSet.h>1
 #include <iprm/CTextParam.h>
 #include <iprm/CIdParam.h>
 #include <iprm/CNameParam.h>
@@ -62,7 +62,7 @@ void CJsonMemoryWriteArchiveTest::ReadTest()
 void CJsonMemoryWriteArchiveTest::ParamsSetSerializeTest()
 {
 	// create reference params
-	iprm::CParamsSet params;
+	imod::TModelWrap<iprm::CParamsSet> params;
 
 	iprm::CNameParam nameParam;
 	nameParam.SetName("Sam");
@@ -90,7 +90,7 @@ void CJsonMemoryWriteArchiveTest::ParamsSetSerializeTest()
 			 QString("Saved JSON is NOT valid. Error: '%1' at '%2'. \n DATA: \n %3").arg(jsonParserror.errorString(), QString::number(jsonParserror.offset), qPrintable(buffer)).toLocal8Bit());
 
 	// create new params
-	iprm::CParamsSet newParams;
+	imod::TModelWrap<iprm::CParamsSet> newParams;
 	iprm::CNameParam newNameParam;
 	newParams.SetEditableParameter("Name", &newNameParam);
 	iprm::CTextParam newTextParam;
@@ -109,7 +109,7 @@ void CJsonMemoryWriteArchiveTest::ParamsSetSerializeTest()
 }
 
 
-void CJsonMemoryWriteArchiveTest::_Test()
+void CJsonMemoryWriteArchiveTest::DoTest()
 {
 	m_buffer.clear();
 
@@ -127,11 +127,6 @@ void CJsonMemoryWriteArchiveTest::_Test()
 
 	iser::CJsonMemReadArchive readArchive(m_buffer);
 	QVERIFY(model.Serialize(readArchive));
-}
-
-
-void CJsonMemoryWriteArchiveTest::cleanupTestCase()
-{
 }
 
 

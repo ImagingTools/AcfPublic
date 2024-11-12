@@ -20,27 +20,30 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <iser/Test/CJsonMemoryReadArchiveTest.h>
 
 
-namespace istd
+// ACF includes
+#include <istd/TDelPtr.h>
+#include <iser/CJsonMemReadArchive.h>
+#include <iser/CJsonMemWriteArchive.h>
+#include <itest/CStandardTestExecutor.h>
+
+
+void CJsonMemoryReadArchiveTest::DoTest()
 {
+	Model model;
+	model.value = 42;
+	iser::CJsonMemWriteArchive writeArchive;
+	QVERIFY(model.Serialize(writeArchive));
+	QByteArray data = writeArchive.GetData();
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5293,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	Model model2;
+	model2.value = 0;
 
+	iser::CJsonMemReadArchive readArchive(data);
+	QVERIFY(model2.Serialize(readArchive));
+	QVERIFY(model2.value == 42);
+}
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
-
-
+I_ADD_TEST(CJsonMemoryReadArchiveTest);

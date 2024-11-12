@@ -22,6 +22,7 @@
 
 #pragma once
 
+
 // Qt includes
 #include <QtCore/QObject>
 #include <QtTest/QtTest>
@@ -60,9 +61,7 @@ private slots:
 	void WriteTest();
 	void ReadTest();
 	void ParamsSetSerializeTest();
-	void _Test();
-
-	void cleanupTestCase();
+	void DoTest();
 
 private:
 	idoc::CStandardDocumentMetaInfo m_metaInfo;
