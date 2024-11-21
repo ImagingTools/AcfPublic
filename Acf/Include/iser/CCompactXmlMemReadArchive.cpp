@@ -42,6 +42,7 @@ CCompactXmlMemReadArchive::CCompactXmlMemReadArchive(
 :	BaseClass(serializeHeader, rootTag)
 {
 	m_buffer.setData(inputString);
+	m_buffer.open(QIODevice::ReadOnly);
 
 	if (!BaseClass::SetContent(&m_buffer)){
 		return;
