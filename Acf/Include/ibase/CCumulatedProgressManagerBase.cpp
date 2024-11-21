@@ -323,7 +323,7 @@ void CCumulatedProgressManagerBase::Logger::OnProgress(double currentProgress)
 bool CCumulatedProgressManagerBase::Logger::IsCanceled() const
 {
 	if (m_parentPtr != nullptr){
-		m_parentPtr->IsCanceled();
+		return m_parentPtr->IsCanceled();
 	}
 
 	return false;
