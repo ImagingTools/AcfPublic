@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef itest_ITestContainer_included
-#define itest_ITestContainer_included
+#pragma once
 
 
 // ACF includes
@@ -43,8 +42,5 @@ public:
 
 
 } // namespace itest
-
-
-#endif // !itest_ITestContainer_included
 
 
