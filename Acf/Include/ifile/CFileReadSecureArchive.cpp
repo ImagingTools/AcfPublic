@@ -20,27 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <ifile/CFileReadSecureArchive.h>
 
 
-namespace istd
+namespace ifile
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+CFileReadSecureArchive::CFileReadSecureArchive(
+			const QString& filePath,
+			bool supportTagSkipping,
+			bool serializeHeader)
+	:BaseClass(filePath, supportTagSkipping, serializeHeader)
 {
-	RS_ORIGINAL_VERSION =  5330,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+}
 
 
-} // namespace istd
+// reimplemented (ifile::CFileReadArchive)
+
+bool CFileReadSecureArchive::ProcessData(void* data, int size)
+{
+	if (size <= 0){
+		return true;
+	}
+
+	quint8* dataPtr = (quint8*)data;
+
+	QVector<quint8> buffer(size);
+
+	return BaseClass::ProcessData(&buffer[0], size) && Decode(&buffer[0], dataPtr, size);
+}
 
 
-#endif // !istd_AcfVersion_included
+}	// namespace ifile
 
 

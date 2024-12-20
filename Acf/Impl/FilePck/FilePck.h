@@ -58,6 +58,8 @@
 #include <ifile/CJsonDeviceReadArchive.h>
 #include <ifile/CJsonDeviceWriteArchive.h>
 #include <ifile/TDeviceBasedSerializerComp.h>
+#include <ifile/CFileReadSecureArchive.h>
+#include <ifile/CFileWriteSecureArchive.h>
 
 
 /**
@@ -90,6 +92,7 @@ typedef ifile::CTempFileManagerComp TempFileManager;
 typedef ifile::TFileSerializerComp<ifile::CJsonFileReadArchive, ifile::CJsonFileWriteArchive> JsonFileSerializer;
 typedef ifile::TDeviceBasedSerializerComp<ifile::CCompactXmlDeviceReadArchive, ifile::CCompactXmlDeviceWriteArchive> CompactXmlDeviceSerializer;
 typedef ifile::TDeviceBasedSerializerComp<ifile::CJsonDeviceReadArchive, ifile::CJsonDeviceWriteArchive> JsonDeviceSerializer;
+typedef ifile::TFileSerializerComp<ifile::CFileReadSecureArchive, ifile::CFileWriteSecureArchive> SecureFileSerializer;
 
 
 } // namespace FilePck

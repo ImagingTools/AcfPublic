@@ -20,27 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// ACF includes
+#include <ifile/CFileWriteArchive.h>
+
+// QSF includes
+#include <ifile/CSimpleEncoder.h>
+
+
+namespace ifile
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+class CFileWriteSecureArchive:
+			public ifile::CFileWriteArchive,
+			protected ifile::CSimpleEncoder
 {
-	RS_ORIGINAL_VERSION =  5330,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	typedef ifile::CFileWriteArchive BaseClass;
+
+	explicit CFileWriteSecureArchive(
+				const QString& filePath,
+				const iser::IVersionInfo* versionInfoPtr = NULL,
+				bool supportTagSkipping = true,
+				bool serializeHeader = true);
+
+	// reimplemented (ifile::CFileWriteArchive)
+	virtual bool ProcessData(void* data, int size);
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace ifile
 
 

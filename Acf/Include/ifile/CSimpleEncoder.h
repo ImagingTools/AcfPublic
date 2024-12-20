@@ -20,27 +20,31 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// ACF includes
+#include <ifile/ifile.h>
+
+
+namespace ifile
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+class CSimpleEncoder
 {
-	RS_ORIGINAL_VERSION =  5330,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	enum EncodeValues
+	{
+		EV_INIT_OFFSET = 23,
+		EV_OFFSET = 97
+	};
+
+	static bool Encode(const quint8* dataPtr, quint8* resultPtr, int size);
+	static bool Decode(const quint8* dataPtr, quint8* resultPtr, int size);
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace ifile
 
 

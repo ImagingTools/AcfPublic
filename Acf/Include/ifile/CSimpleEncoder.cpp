@@ -20,27 +20,43 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <ifile/CSimpleEncoder.h>
 
 
-namespace istd
+namespace ifile
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+// public static methods
+
+bool CSimpleEncoder::Encode(const quint8* dataPtr, quint8* resultPtr, int size)
 {
-	RS_ORIGINAL_VERSION =  5330,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	quint8 carry = EV_INIT_OFFSET;
+	for (int i = 0; i < size; i++){
+		carry += dataPtr[i] + EV_OFFSET;
+		resultPtr[i] = carry;
+	}
+
+	return true;
+}
 
 
-} // namespace istd
+bool CSimpleEncoder::Decode(const quint8* dataPtr, quint8* resultPtr, int size)
+{
+	quint8 carry = EV_INIT_OFFSET;
+	for (int i = 0; i < size; i++){
+		carry += EV_OFFSET;
+
+		quint8 value = dataPtr[i] - carry;
+		resultPtr[i] = value;
+
+		carry += value;
+	}
+
+	return true;
+}
 
 
-#endif // !istd_AcfVersion_included
+} // namespace ifile
 
 
