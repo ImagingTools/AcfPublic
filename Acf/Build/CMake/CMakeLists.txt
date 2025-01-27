@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.26)
+
 message(VERBOSE ${CMAKE_CURRENT_LIST_DIR})
 
 project(Acf)

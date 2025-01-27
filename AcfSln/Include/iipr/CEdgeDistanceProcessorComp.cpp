@@ -262,7 +262,7 @@ void CEdgeDistanceProcessorComp::SetCaliperResults(
 			ICaliperParams::DirectionMode caliperDirectionMode,
 			CaliperLine& caliperLine) const
 {
-	Q_ASSERT(m_featuresMapperCompPtr.IsValid());	// validíty of features mapper should be checked on the beginning
+	Q_ASSERT(m_featuresMapperCompPtr.IsValid());	// validï¿½ty of features mapper should be checked on the beginning
 
 	int featuresCount = container.GetFeaturesCount();
 	Q_ASSERT ((featuresCount == 0) || (featuresCount == 1));

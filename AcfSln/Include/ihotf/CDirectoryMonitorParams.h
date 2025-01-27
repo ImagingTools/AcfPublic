@@ -44,7 +44,7 @@ class CDirectoryMonitorParams: virtual public ihotf::IDirectoryMonitorParams
 public:
 	CDirectoryMonitorParams();
 
-	// reimüplemented (ihotf::IDirectoryMonitorParams)
+	// reimï¿½plemented (ihotf::IDirectoryMonitorParams)
 	virtual WorkingMode GetWorkingMode() const;
 	virtual void SetWorkingMode(WorkingMode workginMode);
 	virtual double GetPollingInterval() const;

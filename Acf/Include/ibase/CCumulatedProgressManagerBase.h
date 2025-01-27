@@ -45,10 +45,34 @@ namespace ibase
 class CCumulatedProgressManagerBase: virtual public ibase::IProgressManager
 {
 public:
+	enum class TaskStatus
+	{
+		/**
+			Task was created, but not started.
+		*/
+		Created,
+
+		/**
+			Task is running. Progress information is beeing reported.
+		*/
+		Running,
+
+		/**
+			Task was finished. No progress information will be emitted anymore.
+		*/
+		Finished
+	};
+
 	struct TaskInfo
 	{
 		QByteArray id;
 		QString description;
+	};
+
+	struct TaskProgressInfo: public TaskInfo
+	{
+		TaskStatus status;
+		double progress = 0.0;
 	};
 
 	/**
@@ -71,7 +95,7 @@ public:
 		\param	preferSorted	Flag indicating, that the task list should be sorted from the most important to less important.
 		\param	maxCount		Maximal number of tasks should be returned.
 	*/
-	std::vector<TaskInfo> GetProcessedTasks(bool preferSorted = false, int maxCount = -1) const;
+	std::vector<TaskProgressInfo> GetProcessedTasks(bool preferSorted = false, int maxCount = -1) const;
 
 	bool IsCancelable() const;
 	bool IsCanceled() const;
@@ -83,7 +107,7 @@ public:
 				const QByteArray& taskId,
 				const QString& taskDescription,
 				double weight = 1.0) override;
-	std::unique_ptr<IProgressLogger> StartProgressLogger(bool isCancelable = false) override;
+	std::unique_ptr<IProgressLogger> StartProgressLogger(bool isCancelable = false, const QString& description = {}) override;
 
 protected:
 	// Methods designed to be overriden
@@ -106,13 +130,14 @@ protected:
 	// low level communication with logger and manager
 	virtual void OpenTask(TaskBase* taskPtr, const TaskInfo& taskInfo, double weight, bool isCancelable);
 	virtual void CloseTask(TaskBase* taskPtr);
-	virtual void ReportTaskProgress(TaskBase* taskPtr, double progress);
+	virtual void ReportTaskProgress(TaskBase* taskPtr, double progress, TaskStatus taskStatus);
 
 	void TryUpdateCumulatedProgress();
 
 private:
 	struct ProgressInfo
 	{
+		TaskStatus status = TaskStatus::Created;
 		double progress = 0;
 		double weight = 1;
 		bool isCancelable = false;

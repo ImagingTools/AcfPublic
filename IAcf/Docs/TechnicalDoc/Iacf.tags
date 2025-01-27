@@ -1,28 +1,28 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.9.1" doxygen_gitid="ef9b20ac7f8a8621fcfc299f8bd0b80422390f4b">
+<tagfile doxygen_version="1.13.2" doxygen_gitid="26342b775ea25e6fefb53220926b20702c56fcb3">
   <compound kind="file">
     <name>CMemoryBankSerializerComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/icbox/</path>
+    <path>Include/icbox/</path>
     <filename>_c_memory_bank_serializer_comp_8h.html</filename>
     <class kind="class">icbox::CMemoryBankSerializerComp</class>
     <namespace>icbox</namespace>
   </compound>
   <compound kind="file">
     <name>icbox.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/icbox/</path>
+    <path>Include/icbox/</path>
     <filename>icbox_8h.html</filename>
     <namespace>icbox</namespace>
   </compound>
   <compound kind="file">
     <name>CSimpleCameraComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/idc1394/</path>
+    <path>Include/idc1394/</path>
     <filename>_c_simple_camera_comp_8h.html</filename>
     <class kind="class">idc1394::CSimpleCameraComp</class>
     <namespace>idc1394</namespace>
   </compound>
   <compound kind="file">
     <name>CLibAvConverter.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/ilibav/</path>
+    <path>Include/ilibav/</path>
     <filename>_c_lib_av_converter_8h.html</filename>
     <class kind="class">ilibav::CLibAvConverter</class>
     <class kind="struct">ilibav::CLibAvConverter::Rgba</class>
@@ -37,7 +37,7 @@
   </compound>
   <compound kind="file">
     <name>CLibAvVideoDecoderComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/ilibav/</path>
+    <path>Include/ilibav/</path>
     <filename>_c_lib_av_video_decoder_comp_8h.html</filename>
     <class kind="class">ilibav::CLibAvVideoDecoderComp</class>
     <namespace>ilibav</namespace>
@@ -58,127 +58,127 @@
   </compound>
   <compound kind="file">
     <name>ilibav.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/ilibav/</path>
+    <path>Include/ilibav/</path>
     <filename>ilibav_8h.html</filename>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
     <name>inat.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/inat/</path>
+    <path>Include/inat/</path>
     <filename>inat_8h.html</filename>
     <namespace>inat</namespace>
   </compound>
   <compound kind="file">
     <name>TComPtr.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/inat/</path>
+    <path>Include/inat/</path>
     <filename>inat_2_t_com_ptr_8h.html</filename>
-    <includes id="inat_8h" name="inat.h" local="no" imported="no">inat/inat.h</includes>
+    <includes id="inat_8h" name="inat.h" local="no" import="no" module="no" objc="no">inat/inat.h</includes>
   </compound>
   <compound kind="file">
     <name>TComPtr.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iwin/</path>
+    <path>Include/iwin/</path>
     <filename>iwin_2_t_com_ptr_8h.html</filename>
     <class kind="class">iwin::TComPtr</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CCorrSearchProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_corr_search_processor_comp_8h.html</filename>
     <class kind="class">iocv::CCorrSearchProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CHoughBasedSearchProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_hough_based_search_processor_comp_8h.html</filename>
     <class kind="class">iocv::CHoughBasedSearchProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CLensDistorsionCalibration.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_lens_distorsion_calibration_8h.html</filename>
-    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
+    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" import="no" module="no" objc="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
     <class kind="class">iocv::CLensDistorsionCalibration</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CLensDistorsionCalibrationProviderComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_lens_distorsion_calibration_provider_comp_8h.html</filename>
-    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
-    <includes id="_c_lens_distorsion_calibration_8h" name="CLensDistorsionCalibration.h" local="no" imported="no">iocv/CLensDistorsionCalibration.h</includes>
+    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" import="no" module="no" objc="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
+    <includes id="_c_lens_distorsion_calibration_8h" name="CLensDistorsionCalibration.h" local="no" import="no" module="no" objc="no">iocv/CLensDistorsionCalibration.h</includes>
     <class kind="class">iocv::CLensDistorsionCalibrationProviderComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvAcquisitionComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_acquisition_comp_8h.html</filename>
     <class kind="class">iocv::COcvAcquisitionComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvAdaptiveBinarizationComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_adaptive_binarization_comp_8h.html</filename>
     <class kind="class">iocv::COcvAdaptiveBinarizationComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvBlobProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_blob_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvBlobProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvDenoisingProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_denoising_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvDenoisingProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvEdgeExtractorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_edge_extractor_comp_8h.html</filename>
     <class kind="class">iocv::COcvEdgeExtractorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvImage.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_image_8h.html</filename>
     <class kind="class">iocv::COcvImage</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvIntrinsicCameraCalibration.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_intrinsic_camera_calibration_8h.html</filename>
     <class kind="class">iocv::COcvIntrinsicCameraCalibration</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvIntrinsicCameraCalibrationSupplierComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_intrinsic_camera_calibration_supplier_comp_8h.html</filename>
-    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" imported="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
+    <includes id="_c_ocv_intrinsic_camera_calibration_8h" name="COcvIntrinsicCameraCalibration.h" local="no" import="no" module="no" objc="no">iocv/COcvIntrinsicCameraCalibration.h</includes>
     <class kind="class">iocv::COcvIntrinsicCameraCalibrationSupplierComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvMedianProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_median_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvMedianProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvMorphologicalProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_morphological_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvMorphologicalProcessorAttr</class>
     <class kind="class">iocv::COcvMorphologicalProcessorComp</class>
@@ -186,21 +186,21 @@
   </compound>
   <compound kind="file">
     <name>COcvPointGridExtractorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_point_grid_extractor_comp_8h.html</filename>
     <class kind="class">iocv::COcvPointGridExtractorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvResamplingProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_resampling_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvResamplingProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvSubdiv2d.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_subdiv2d_8h.html</filename>
     <class kind="class">iocv::COcvSubdiv2d</class>
     <class kind="struct">iocv::COcvSubdiv2d::Triangle</class>
@@ -208,144 +208,142 @@
   </compound>
   <compound kind="file">
     <name>COcvUndistortImageProcessorComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_undistort_image_processor_comp_8h.html</filename>
     <class kind="class">iocv::COcvUndistortImageProcessorComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>COcvVideoControllerComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>_c_ocv_video_controller_comp_8h.html</filename>
     <class kind="class">iocv::COcvVideoControllerComp</class>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>iocv.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iocv/</path>
+    <path>Include/iocv/</path>
     <filename>iocv_8h.html</filename>
     <namespace>iocv</namespace>
   </compound>
   <compound kind="file">
     <name>CPhononVideoViewGuiComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iphonon/</path>
+    <path>Include/iphonon/</path>
     <filename>_c_phonon_video_view_gui_comp_8h.html</filename>
     <class kind="class">iphonon::CPhononVideoViewGuiComp</class>
     <namespace>iphonon</namespace>
   </compound>
   <compound kind="file">
     <name>iphonon.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iphonon/</path>
+    <path>Include/iphonon/</path>
     <filename>iphonon_8h.html</filename>
     <namespace>iqtmm</namespace>
   </compound>
   <compound kind="file">
     <name>CVlcVideoViewGuiComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqaxmm/</path>
+    <path>Include/iqaxmm/</path>
     <filename>_c_vlc_video_view_gui_comp_8h.html</filename>
     <class kind="class">iqaxmm::CVlcVideoViewGuiComp</class>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
     <name>iqaxmm.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqaxmm/</path>
+    <path>Include/iqaxmm/</path>
     <filename>iqaxmm_8h.html</filename>
     <namespace>iqaxmm</namespace>
   </compound>
   <compound kind="file">
     <name>CTextEditor.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqsci/</path>
+    <path>Include/iqsci/</path>
     <filename>_c_text_editor_8h.html</filename>
     <class kind="class">iqsci::CTextEditor</class>
     <namespace>iqsci</namespace>
   </compound>
   <compound kind="file">
     <name>CTextEditorGuiComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqsci/</path>
+    <path>Include/iqsci/</path>
     <filename>_c_text_editor_gui_comp_8h.html</filename>
-    <includes id="_c_text_editor_8h" name="CTextEditor.h" local="no" imported="no">iqsci/CTextEditor.h</includes>
+    <includes id="_c_text_editor_8h" name="CTextEditor.h" local="no" import="no" module="no" objc="no">iqsci/CTextEditor.h</includes>
     <class kind="class">iqsci::CTextEditorGuiComp</class>
     <namespace>iqsci</namespace>
   </compound>
   <compound kind="file">
     <name>iqsci.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqsci/</path>
+    <path>Include/iqsci/</path>
     <filename>iqsci_8h.html</filename>
     <namespace>iqsci</namespace>
   </compound>
   <compound kind="file">
     <name>CHistogramViewComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqwt/</path>
+    <path>Include/iqwt/</path>
     <filename>_c_histogram_view_comp_8h.html</filename>
     <class kind="class">iqwt::CHistogramViewComp</class>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CProgressHistoryGuiComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqwt/</path>
+    <path>Include/iqwt/</path>
     <filename>_c_progress_history_gui_comp_8h.html</filename>
     <class kind="class">iqwt::CProgressHistoryGuiComp</class>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CQwtDataSequenceViewComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqwt/</path>
+    <path>Include/iqwt/</path>
     <filename>_c_qwt_data_sequence_view_comp_8h.html</filename>
     <class kind="class">iqwt::CQwtDataSequenceViewComp</class>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>iqwt.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqwt/</path>
+    <path>Include/iqwt/</path>
     <filename>iqwt_8h.html</filename>
     <namespace>iqwt</namespace>
   </compound>
   <compound kind="file">
     <name>CSurfaceViewComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqwt3d/</path>
+    <path>Include/iqwt3d/</path>
     <filename>_c_surface_view_comp_8h.html</filename>
     <class kind="class">iqwt3d::CSurfaceViewComp</class>
     <namespace>iqwt3d</namespace>
   </compound>
   <compound kind="file">
     <name>iqwt3d.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iqwt3d/</path>
+    <path>Include/iqwt3d/</path>
     <filename>iqwt3d_8h.html</filename>
     <namespace>iqwt3d</namespace>
   </compound>
   <compound kind="file">
     <name>CPerformanceTimeStamp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iwin/</path>
+    <path>Include/iwin/</path>
     <filename>_c_performance_time_stamp_8h.html</filename>
     <class kind="class">iwin::CPerformanceTimeStamp</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CSystem.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iwin/</path>
+    <path>Include/iwin/</path>
     <filename>_c_system_8h.html</filename>
     <class kind="class">iwin::CSystem</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>CTimeStampCacheComp.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iwin/</path>
+    <path>Include/iwin/</path>
     <filename>_c_time_stamp_cache_comp_8h.html</filename>
-    <includes id="_c_performance_time_stamp_8h" name="CPerformanceTimeStamp.h" local="no" imported="no">iwin/CPerformanceTimeStamp.h</includes>
+    <includes id="_c_performance_time_stamp_8h" name="CPerformanceTimeStamp.h" local="no" import="no" module="no" objc="no">iwin/CPerformanceTimeStamp.h</includes>
     <class kind="class">iwin::CTimeStampCacheComp</class>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="file">
     <name>iwin.h</name>
-    <path>D:/Temp/Qt5/IAcf/Include/iwin/</path>
+    <path>Include/iwin/</path>
     <filename>iwin_8h.html</filename>
     <namespace>iwin</namespace>
   </compound>
   <compound kind="class">
     <name>iocv::CCorrSearchProcessorComp</name>
     <filename>classiocv_1_1_c_corr_search_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
-    <base virtualness="virtual">iipr::ISearchConstraints</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; iipr::IImageToFeatureProcessor &gt;</type>
       <name>BaseClass</name>
@@ -378,21 +376,21 @@
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a643aaec2a281f045f823acc4215ad449</anchor>
+      <anchor>a422548b4cfa92f3e2c7ed164f19f3e09</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetScaleRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a19cce5b11f5ede7252623ae144f5c8e4</anchor>
+      <anchor>a38abc8972320782795ec38488dfa8c9b</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CIntRange &amp;</type>
       <name>GetResultsCountConstraints</name>
       <anchorfile>classiocv_1_1_c_corr_search_processor_comp.html</anchorfile>
-      <anchor>a591e1375091b58b5814d8e62ae54363f</anchor>
+      <anchor>aad807f1188729a734183f7bb745942c8</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -438,8 +436,6 @@
   <compound kind="class">
     <name>iocv::CHoughBasedSearchProcessorComp</name>
     <filename>classiocv_1_1_c_hough_based_search_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
-    <base virtualness="virtual">iipr::ISearchConstraints</base>
     <member kind="enumeration">
       <type></type>
       <name>ModelType</name>
@@ -515,21 +511,21 @@
       <type>virtual const istd::CRange &amp;</type>
       <name>GetRotationRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>a2ae8a27e27dca73b2bed320c953b248f</anchor>
+      <anchor>a29889e77905b3e3161a78405d9c02d2a</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CRange &amp;</type>
       <name>GetScaleRangeConstraints</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>a2b25b3bc9a7d606d8dd6ceeb45c7b52a</anchor>
+      <anchor>a4381df165f703f5b8168f7abcbc097e9</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const istd::CIntRange &amp;</type>
       <name>GetResultsCountConstraints</name>
       <anchorfile>classiocv_1_1_c_hough_based_search_processor_comp.html</anchorfile>
-      <anchor>adf4dc7f4e443d760f5474b17e97148d7</anchor>
+      <anchor>a6f8068a76a17a491adf22e1a88c7a98f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -575,35 +571,35 @@
       <type>virtual const i2d::CRectangle *</type>
       <name>GetArgumentArea</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a9470f4b95c5bee04ad411dfd899a4fc1</anchor>
+      <anchor>ab9bd8a785b81dd4e02b05b60dd5ffe6a</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CRectangle *</type>
       <name>GetResultArea</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a4e75bb49cf10a64fd7bb6f16d3b2d868</anchor>
+      <anchor>af5e5d29a0f1f97cb3a2b51eaf7cf68db</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a6ddb5f851430568bc4fbad190b130a09</anchor>
+      <anchor>ac203f03cb64f6dfb1a19e24b8f874e20</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetResultUnitInfo</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a377b7bd7403b41c81291f821459a195b</anchor>
+      <anchor>a2de8a65f500ae8b2e20d7095001c5159</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a25770f27d6b1670a4147c039b9caf321</anchor>
+      <anchor>a9ab4834806672a6ad41c016bd2e527ce</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -708,7 +704,7 @@
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a4ca02aae38fa0c287b683c41a7bd3215</anchor>
+      <anchor>afee97e1a189b086b20e20f183997253c</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -722,7 +718,6 @@
   <compound kind="class">
     <name>iocv::CLensDistorsionCalibrationProviderComp</name>
     <filename>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</filename>
-    <base>TSupplierCompWrap&lt; CLensDistorsionCalibration &gt;</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; CLensDistorsionCalibration &gt;</type>
       <name>BaseClass</name>
@@ -734,7 +729,7 @@
       <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration_provider_comp.html</anchorfile>
-      <anchor>a2a251745ef164450cde6ad3565003b72</anchor>
+      <anchor>a8a08e9872d6a8321f6fcf64cb57f743d</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -760,9 +755,6 @@
   <compound kind="class">
     <name>ilibav::CLibAvVideoDecoderComp</name>
     <filename>classilibav_1_1_c_lib_av_video_decoder_comp.html</filename>
-    <base virtualness="virtual">icam::IBitmapAcquisition</base>
-    <base virtualness="virtual">imeas::ISampleAcquisition</base>
-    <base virtualness="virtual">imm::IVideoController</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -1257,7 +1249,6 @@
   <compound kind="class">
     <name>iocv::COcvAcquisitionComp</name>
     <filename>classiocv_1_1_c_ocv_acquisition_comp.html</filename>
-    <base>iproc::TSyncProcessorWrap</base>
     <member kind="typedef">
       <type>ilog::CLoggerComponentBase</type>
       <name>BaseClass</name>
@@ -1304,7 +1295,6 @@
   <compound kind="class">
     <name>iocv::COcvAdaptiveBinarizationComp</name>
     <filename>classiocv_1_1_c_ocv_adaptive_binarization_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
@@ -1323,7 +1313,6 @@
   <compound kind="class">
     <name>iocv::COcvBlobProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_blob_processor_comp.html</filename>
-    <base>iblob::CBlobProcessorCompBase</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -1361,7 +1350,6 @@
   <compound kind="class">
     <name>iocv::COcvDenoisingProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_denoising_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
@@ -1380,7 +1368,6 @@
   <compound kind="class">
     <name>iocv::COcvEdgeExtractorComp</name>
     <filename>classiocv_1_1_c_ocv_edge_extractor_comp.html</filename>
-    <base>TSyncProcessorCompBase&lt; iedge::IEdgesExtractor &gt;</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; iedge::IEdgesExtractor &gt;</type>
       <name>BaseClass</name>
@@ -1449,7 +1436,7 @@
       <type>const CameraMatrix &amp;</type>
       <name>GetCameraMatrix</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>a8b48f6019f1f76b823afc16161a2d67b</anchor>
+      <anchor>a448b62df741c1b7f3a912adb6cfbece1</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -1463,7 +1450,7 @@
       <type>const DistorsionCoeff &amp;</type>
       <name>GetDistorsion</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>ad839b7e89fe7697618de552a42fd453a</anchor>
+      <anchor>a3b23bb785a4913389452ec2dfb855373</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function">
@@ -1477,35 +1464,35 @@
       <type>virtual const i2d::CRectangle *</type>
       <name>GetArgumentArea</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>ae283d394b19aa5585a8351b181a08709</anchor>
+      <anchor>ae7a3bdcd5d9d7e9b90dc82ccbe6a3a79</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CRectangle *</type>
       <name>GetResultArea</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>a53e535b66dc6c6933313e2f97af9938b</anchor>
+      <anchor>a8b008077183b41a6a2a7c92a0017a90b</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>ab45d49c1b9d0b00b52105e5f691358ee</anchor>
+      <anchor>a0e4287e454301b78e0b81e59d201e10f</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetResultUnitInfo</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>aea72c03463e2761cc647c05c9efdf9dd</anchor>
+      <anchor>a54e839efde8c01cf9e506737e3955eaa</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const ICalibration2d *</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>a5583d3de6e0a9324265c37b6073f8bba</anchor>
+      <anchor>a0d9439c313b93fab9b7d4be1bf5eb00f</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1610,7 +1597,7 @@
       <type>virtual istd::IChangeable *</type>
       <name>CloneMe</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>ac3c51fb49def30e858e29e347309849a</anchor>
+      <anchor>a7dcf17f56f283faa43e61b5788128353</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1624,7 +1611,6 @@
   <compound kind="class">
     <name>iocv::COcvIntrinsicCameraCalibrationSupplierComp</name>
     <filename>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</filename>
-    <base>TSupplierCompWrap&lt; COcvIntrinsicCameraCalibration &gt;</base>
     <member kind="typedef">
       <type>iinsp::TSupplierCompWrap&lt; COcvIntrinsicCameraCalibration &gt;</type>
       <name>BaseClass</name>
@@ -1643,7 +1629,7 @@
       <type>virtual const i2d::ICalibration2d *</type>
       <name>GetCalibration</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
-      <anchor>abb774607d4525855679246d6e29ec133</anchor>
+      <anchor>a4fd9edadfd3a70cd455155816c2e5a6a</anchor>
       <arglist>() const override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -1657,14 +1643,13 @@
       <type>static InteraceType *</type>
       <name>ExtractCalibration</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration_supplier_comp.html</anchorfile>
-      <anchor>a50120aae80035b1c14e9a1dbc8ca8b8a</anchor>
+      <anchor>a66b1f394ea28cbce90b1729f3a0a78a4</anchor>
       <arglist>(COcvIntrinsicCameraCalibrationSupplierComp &amp;parent)</arglist>
     </member>
   </compound>
   <compound kind="class">
     <name>iocv::COcvMedianProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_median_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
@@ -1683,7 +1668,6 @@
   <compound kind="class">
     <name>iocv::COcvMorphologicalProcessorAttr</name>
     <filename>classiocv_1_1_c_ocv_morphological_processor_attr.html</filename>
-    <base>iipr::CImageRegionProcessorCompBase</base>
     <member kind="typedef">
       <type>iipr::CImageRegionProcessorCompBase</type>
       <name>BaseClass</name>
@@ -1721,7 +1705,6 @@
   <compound kind="class">
     <name>iocv::COcvPointGridExtractorComp</name>
     <filename>classiocv_1_1_c_ocv_point_grid_extractor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
     <member kind="enumeration">
       <type></type>
       <name>Pattern</name>
@@ -1778,7 +1761,6 @@
   <compound kind="class">
     <name>iocv::COcvResamplingProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_resampling_processor_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
     <member kind="typedef">
       <type>iproc::CSyncProcessorCompBase</type>
       <name>BaseClass</name>
@@ -1809,7 +1791,6 @@
   <compound kind="class">
     <name>iocv::COcvUndistortImageProcessorComp</name>
     <filename>classiocv_1_1_c_ocv_undistort_image_processor_comp.html</filename>
-    <base>iipr::CImageProcessorCompBase</base>
     <member kind="typedef">
       <type>iipr::CImageProcessorCompBase</type>
       <name>BaseClass</name>
@@ -1828,8 +1809,6 @@
   <compound kind="class">
     <name>iocv::COcvVideoControllerComp</name>
     <filename>classiocv_1_1_c_ocv_video_controller_comp.html</filename>
-    <base>iproc::TSyncProcessorCompBase</base>
-    <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iproc::TSyncProcessorCompBase&lt; icam::IBitmapAcquisition &gt;</type>
       <name>BaseClass</name>
@@ -2104,7 +2083,6 @@
   <compound kind="class">
     <name>iphonon::CPhononVideoViewGuiComp</name>
     <filename>classiphonon_1_1_c_phonon_video_view_gui_comp.html</filename>
-    <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QVideoWidget &gt;</type>
       <name>BaseClass</name>
@@ -2288,22 +2266,22 @@
       <type>virtual void</type>
       <name>OpenTask</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>aa134debbb11939b74154f6650e132e55</anchor>
-      <arglist>(TaskBase *taskPtr, const TaskInfo &amp;taskInfo, double weight, bool isCancelable)</arglist>
+      <anchor>a70631b02b3b211dce6e9b74d8d66ef40</anchor>
+      <arglist>(TaskBase *taskPtr, const TaskInfo &amp;taskInfo, double weight, bool isCancelable) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>CloseTask</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>a3d5ade3cb045429e03679a1f6038b3e7</anchor>
-      <arglist>(TaskBase *taskPtr)</arglist>
+      <anchor>a9d3de6194a317a8a43e4c0a92adc4be5</anchor>
+      <arglist>(TaskBase *taskPtr) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual void</type>
       <name>ReportTaskProgress</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>a1bffe57397ab98fc270595194a00aae3</anchor>
-      <arglist>(TaskBase *taskPtr, double progress)</arglist>
+      <anchor>a281af2e32681a77e7971afba56307d00</anchor>
+      <arglist>(TaskBase *taskPtr, double progress, TaskStatus taskStatus) override</arglist>
     </member>
     <member kind="slot" protection="protected">
       <type>void</type>
@@ -2323,22 +2301,22 @@
       <type>virtual void</type>
       <name>OnGuiCreated</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>a281c80754008c993ff3a3f94e35d70f0</anchor>
-      <arglist>()</arglist>
+      <anchor>adbf47f2dcb9ae603112fce6ab01d4f7c</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnGuiDestroyed</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>a7ef71d154b9c28984b64bd2c0adbd33c</anchor>
-      <arglist>()</arglist>
+      <anchor>aa103e8ddb01580b65a464cf46a6ef3e6</anchor>
+      <arglist>() override</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
       <type>virtual void</type>
       <name>OnComponentCreated</name>
       <anchorfile>classiqwt_1_1_c_progress_history_gui_comp.html</anchorfile>
-      <anchor>a9d5083c9c19a879a6cef4a5643f844ae</anchor>
-      <arglist>()</arglist>
+      <anchor>ad3958153d5f50cde59cc837aa2cb3da0</anchor>
+      <arglist>() override</arglist>
     </member>
   </compound>
   <compound kind="class">
@@ -2376,7 +2354,6 @@
   <compound kind="class">
     <name>idc1394::CSimpleCameraComp</name>
     <filename>classidc1394_1_1_c_simple_camera_comp.html</filename>
-    <base virtualness="virtual">iproc::TSyncProcessorWrap</base>
     <member kind="enumeration">
       <type></type>
       <name>MessageId</name>
@@ -2513,7 +2490,7 @@
     <member kind="enumvalue">
       <name>GI_QWT3D</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df</anchor>
+      <anchor>a6b400a92034cef4fd4471b0e355fd7c0a207fb1c05fde188e8364c877e04ca0df</anchor>
       <arglist></arglist>
     </member>
     <member kind="typedef">
@@ -2526,7 +2503,7 @@
     <member kind="enumvalue">
       <name>GI_QWT3D</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>aeaf554c308f948855bb7911c7f31063ea207fb1c05fde188e8364c877e04ca0df</anchor>
+      <anchor>a6b400a92034cef4fd4471b0e355fd7c0a207fb1c05fde188e8364c877e04ca0df</anchor>
       <arglist></arglist>
     </member>
     <member kind="function">
@@ -2547,7 +2524,7 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqwt3d_1_1_c_surface_view_comp.html</anchorfile>
-      <anchor>a9efea9f38f018479749c9a882936fd46</anchor>
+      <anchor>a180fb8ac629d3758078989b2f5f3082f</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="slot" protection="protected">
@@ -2695,7 +2672,7 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqsci_1_1_c_text_editor.html</anchorfile>
-      <anchor>aba86a889fe9443182c2bb8a080975b68</anchor>
+      <anchor>a47bb4726483f694d835c780c90938f77</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
@@ -2748,7 +2725,7 @@
       <type>virtual const ibase::IHierarchicalCommand *</type>
       <name>GetCommands</name>
       <anchorfile>classiqsci_1_1_c_text_editor_gui_comp.html</anchorfile>
-      <anchor>a2d4a8f05bc374a2d5bd6bbb912898453</anchor>
+      <anchor>adb5271871cb28e8d7da762f69d77a51e</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="slot" protection="protected" virtualness="virtual">
@@ -2797,7 +2774,6 @@
   <compound kind="class">
     <name>iwin::CTimeStampCacheComp</name>
     <filename>classiwin_1_1_c_time_stamp_cache_comp.html</filename>
-    <base virtualness="virtual">iinsp::ITimeStampProvider</base>
     <member kind="typedef">
       <type>icomp::CComponentBase</type>
       <name>BaseClass</name>
@@ -2809,7 +2785,7 @@
       <type>virtual const istd::ITimeStamp *</type>
       <name>GetCurrentTimeStamp</name>
       <anchorfile>classiwin_1_1_c_time_stamp_cache_comp.html</anchorfile>
-      <anchor>ac7a8eee7d9958c94fce9915d25cfa940</anchor>
+      <anchor>a4f0a33d44885bc7410b20ee9b1dfbc9a</anchor>
       <arglist>() const</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -2823,7 +2799,6 @@
   <compound kind="class">
     <name>iqaxmm::CVlcVideoViewGuiComp</name>
     <filename>classiqaxmm_1_1_c_vlc_video_view_gui_comp.html</filename>
-    <base virtualness="virtual">imm::IVideoController</base>
     <member kind="typedef">
       <type>iqtgui::TGuiComponentBase&lt; QFrame &gt;</type>
       <name>BaseClass</name>
@@ -3007,7 +2982,7 @@
   <compound kind="class">
     <name>iwin::TComPtr</name>
     <filename>classiwin_1_1_t_com_ptr.html</filename>
-    <templarg></templarg>
+    <templarg>class Type</templarg>
     <member kind="typedef">
       <type>istd::TPointerBase&lt; Type &gt;</type>
       <name>BaseClass</name>
