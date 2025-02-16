@@ -42,15 +42,15 @@ CSpectrum::CSpectrum()
 
 
 CSpectrum::CSpectrum(const CSpectrum& other)
-	: CSampledFunction(other),
-	  m_step(0)
+	:CSampledFunction(other),
+	m_step(0)
 {
 	SetLogicalRange(other.GetLogicalRange(0));
 }
 
 
 CSpectrum::CSpectrum(int startWavelength, int endWavelength, int step, const std::vector<double>& spectrumSamples)
-	: CSampledFunction(int(spectrumSamples.size()))
+	:CSampledFunction(int(spectrumSamples.size()))
 {
 	int count = int(spectrumSamples.size());
 	for (int i = 0; i < count; i++){
@@ -219,3 +219,5 @@ bool CSpectrum::ResetData(CompatibilityMode /*mode*/)
 
 
 } // namespace icmm
+
+

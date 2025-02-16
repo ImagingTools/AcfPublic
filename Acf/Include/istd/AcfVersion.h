@@ -32,7 +32,7 @@ namespace istd
 */
 enum RepositoryState
 {
-	RS_ORIGINAL_VERSION =  5340,
+	RS_ORIGINAL_VERSION =  5342,
 	RS_DIRTY_FLAG = 0,
 	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
 };
