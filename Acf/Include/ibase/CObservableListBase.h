@@ -24,27 +24,39 @@
 
 
 // ACF includes
-#include <icmm/IColorantList.h>
-#include <icmm/IColorModel.h>
+#include <istd/IChangeable.h>
 
 
-namespace icmm
+namespace ibase
 {
 
 
-class ICieLabColor;
+/**
+	Base implementation for creating simple observable collection.
+	Contains helper methods for constructing ChangeSets.
 
-
-class ISubstractiveColorModel: virtual public icmm::IColorModel, virtual public icmm::IColorantList
+	\sa CListObserver
+ */
+class CObservableListBase
 {
 public:
-	/**
-		Get visual information/preview for the given colorant.
-	*/
-	virtual bool GetColorantVisualInfo(const ColorantId& colorantId, icmm::ICieLabColor& preview) const = 0;
+	enum ChangeFlags
+	{
+		CF_ELEMENT_ADDED = 0x382b230,
+		CF_ELEMENT_REMOVED,
+		CF_ELEMENT_UPDATED,
+		CF_RESET
+	};
+
+	inline static const QByteArray CN_INDEX_ID = QByteArrayLiteral("INDEX");
+
+protected:
+	static istd::IChangeable::ChangeSet ElementAddChanges(qsizetype index);
+	static istd::IChangeable::ChangeSet ElementRemoveChanges(qsizetype index);
+	static istd::IChangeable::ChangeSet ElementUpdatedChanges(qsizetype index);
 };
 
 
-} // namespace icmm
+} // namespace ibase
 
 

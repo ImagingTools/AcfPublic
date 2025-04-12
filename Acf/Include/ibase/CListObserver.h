@@ -24,27 +24,32 @@
 
 
 // ACF includes
-#include <icmm/IColorantList.h>
-#include <icmm/IColorModel.h>
+#include <ibase/CObservableListBase.h>
+#include <imod/CSingleModelObserverBase.h>
 
 
-namespace icmm
+namespace ibase
 {
 
 
-class ICieLabColor;
-
-
-class ISubstractiveColorModel: virtual public icmm::IColorModel, virtual public icmm::IColorantList
+/**
+	Base implementation for observing a list.
+	Routes ChangeSet change infos to specific virtual method
+*/
+class CListObserver: public imod::CSingleModelObserverBase
 {
 public:
-	/**
-		Get visual information/preview for the given colorant.
-	*/
-	virtual bool GetColorantVisualInfo(const ColorantId& colorantId, icmm::ICieLabColor& preview) const = 0;
+	// reimplemented (imod::CSingleModelObserverBase)
+	virtual void OnUpdate(const istd::IChangeable::ChangeSet& changeSet) override;
+
+protected:
+	virtual void OnListReset() = 0;
+	virtual void OnBeforeElementRemoved(qsizetype index) = 0;
+	virtual void OnAfterElementAdded(qsizetype index) = 0;
+	virtual void OnAfterElementUpdated(qsizetype index) = 0;
 };
 
 
-} // namespace icmm
+} // namespace ibase
 
 

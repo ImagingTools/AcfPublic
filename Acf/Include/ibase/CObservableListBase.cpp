@@ -20,31 +20,42 @@
 ********************************************************************************/
 
 
-#pragma once
+#include <ibase/CObservableListBase.h>
 
 
-// ACF includes
-#include <icmm/IColorantList.h>
-#include <icmm/IColorModel.h>
-
-
-namespace icmm
+namespace ibase
 {
 
 
-class ICieLabColor;
+// protected static methods
 
-
-class ISubstractiveColorModel: virtual public icmm::IColorModel, virtual public icmm::IColorantList
+istd::IChangeable::ChangeSet CObservableListBase::ElementAddChanges(qsizetype index)
 {
-public:
-	/**
-		Get visual information/preview for the given colorant.
-	*/
-	virtual bool GetColorantVisualInfo(const ColorantId& colorantId, icmm::ICieLabColor& preview) const = 0;
-};
+	istd::IChangeable::ChangeSet changeSet(CF_ELEMENT_ADDED);
+	changeSet.SetChangeInfo(CN_INDEX_ID, index);
+
+	return changeSet;
+}
 
 
-} // namespace icmm
+istd::IChangeable::ChangeSet CObservableListBase::ElementRemoveChanges(qsizetype index)
+{
+	istd::IChangeable::ChangeSet changeSet(CF_ELEMENT_REMOVED);
+	changeSet.SetChangeInfo(CN_INDEX_ID, index);
+
+	return changeSet;
+}
+
+
+istd::IChangeable::ChangeSet CObservableListBase::ElementUpdatedChanges(qsizetype index)
+{
+	istd::IChangeable::ChangeSet changeSet(CF_ELEMENT_UPDATED);
+	changeSet.SetChangeInfo(CN_INDEX_ID, index);
+
+	return changeSet;
+}
+
+
+} // namespace ibase
 
 

@@ -20,31 +20,34 @@
 ********************************************************************************/
 
 
-#pragma once
+#include <ibase/CListObserver.h>
 
 
-// ACF includes
-#include <icmm/IColorantList.h>
-#include <icmm/IColorModel.h>
-
-
-namespace icmm
+namespace ibase
 {
 
 
-class ICieLabColor;
+// public methods
 
+// reimplemented (imod::CSingleModelObserverBase)
 
-class ISubstractiveColorModel: virtual public icmm::IColorModel, virtual public icmm::IColorantList
+void CListObserver::OnUpdate(const istd::IChangeable::ChangeSet& changeSet)
 {
-public:
-	/**
-		Get visual information/preview for the given colorant.
-	*/
-	virtual bool GetColorantVisualInfo(const ColorantId& colorantId, icmm::ICieLabColor& preview) const = 0;
-};
+	if (changeSet.Contains(CObservableListBase::CF_ELEMENT_ADDED)) {
+		OnAfterElementAdded(changeSet.GetChangeInfo(CObservableListBase::CN_INDEX_ID).toInt());
+	}
+	if (changeSet.Contains(CObservableListBase::CF_ELEMENT_REMOVED)) {
+		OnBeforeElementRemoved(changeSet.GetChangeInfo(CObservableListBase::CN_INDEX_ID).toInt());
+	}
+	if (changeSet.Contains(CObservableListBase::CF_ELEMENT_UPDATED)) {
+		OnAfterElementUpdated(changeSet.GetChangeInfo(CObservableListBase::CN_INDEX_ID).toInt());
+	}
+	if (changeSet.Contains(istd::IChangeable::CF_ALL_DATA) || changeSet.Contains(CObservableListBase::CF_RESET)) {
+		OnListReset();
+	}
+}
 
 
-} // namespace icmm
+} // namespace ibase
 
 
