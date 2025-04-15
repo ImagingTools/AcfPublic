@@ -61,7 +61,7 @@ public:
 class ComparableItem: public QTreeWidgetItem
 {
 public:
-	bool operator<(const QTreeWidgetItem& item) const
+	virtual bool operator<(const QTreeWidgetItem& item) const override
 	{
 		int sortColumnIndex = item.treeWidget()->sortColumn();
 

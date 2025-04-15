@@ -74,7 +74,7 @@ protected:
 
 	protected:
 		// reimplemented (QThread)
-		virtual void run();
+		virtual void run() override;
 
 	private:
 		CConsoleReader& m_parent;

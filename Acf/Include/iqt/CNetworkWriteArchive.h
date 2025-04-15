@@ -74,7 +74,7 @@ public:
 	virtual bool Flush();
 
 	// reimplemented (iser::IArchive)
-	virtual bool ProcessData(void* dataPtr, int size);
+	virtual bool ProcessData(void* dataPtr, int size) override;
 	
 private Q_SLOTS:
 	void OnAuthentificationtRequired(const QNetworkProxy& proxy, QAuthenticator* authenticator) const;

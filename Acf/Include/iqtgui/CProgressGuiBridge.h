@@ -43,7 +43,7 @@ public:
 
 protected:
 	// reimplemented (ibase::CCumulatedProgressManagerBase)
-	void OnProgressChanged(double cumulatedValue) override;
+	virtual void OnProgressChanged(double cumulatedValue) override;
 
 protected Q_SLOTS:
 	void OnCancelButtonClicked();

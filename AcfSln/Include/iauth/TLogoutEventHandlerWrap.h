@@ -54,7 +54,7 @@ private:
 
 	protected:
 		// reimplemented (QObject)
-		bool eventFilter(QObject* object, QEvent* event) override;
+		virtual bool eventFilter(QObject* object, QEvent* event) override;
 
 	private:
 		TLogoutEventHandlerWrap& m_parent;

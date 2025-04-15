@@ -54,7 +54,7 @@ public:
 	virtual WidgetType* GetQtWidget() const;
 
 	// reimplemented (iqtgui::CGuiComponentBase)
-	virtual QWidget* CreateQtWidget(QWidget* parentPtr);
+	virtual QWidget* CreateQtWidget(QWidget* parentPtr) override;
 };
 
 

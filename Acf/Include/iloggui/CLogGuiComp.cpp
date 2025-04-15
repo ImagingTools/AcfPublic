@@ -61,7 +61,7 @@ public:
 	}
 
 	// reimplemented (QItemDelegate)
-	virtual QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index) const
+	virtual QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index) const override
 	{
 		QSize retVal = BaseClass::sizeHint(option, index);
 

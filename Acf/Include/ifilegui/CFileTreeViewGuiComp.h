@@ -142,7 +142,7 @@ private:
 	{
 	public:
 		// reimplemented (ifile::IFileNameParam)
-		virtual int GetPathType() const
+		virtual int GetPathType() const override
 		{
 			return PT_FILE;
 		}
@@ -166,7 +166,7 @@ private:
 		}
 
 		// reimplemented (QThread)
-		virtual void run()
+		virtual void run() override
 		{
 			m_parentPtr->DoTreeModelUpdate();
 		}

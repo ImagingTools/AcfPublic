@@ -54,8 +54,8 @@ public:
 
 protected:
 	// reimplemented (ibase::CCumulatedProgressManagerBase)
-	void OnProgressChanged(double cumulatedValue) override;
-	void OnTasksChanged() override;
+	virtual void OnProgressChanged(double cumulatedValue) override;
+	virtual void OnTasksChanged() override;
 
 	// reimplemented (iqtgui::CGuiComponentBase)
 	virtual void OnGuiCreated();

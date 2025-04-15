@@ -87,7 +87,7 @@ private:
 					std::unique_ptr<ibase::IProgressLogger>&& progressLoggerPtr);
 
 		// reimplemented (iser::ISerializable)
-		virtual bool Serialize(iser::IArchive& archive);
+		virtual bool Serialize(iser::IArchive& archive) override;
 
 		bool isCanceled;
 

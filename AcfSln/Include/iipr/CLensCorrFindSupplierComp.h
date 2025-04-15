@@ -72,7 +72,7 @@ public:
 	I_END_COMPONENT;
 
 	// reimplemented (i2d::ICalibrationProvider)
-	virtual const i2d::ICalibration2d* GetCalibration() const;
+	virtual const i2d::ICalibration2d* GetCalibration() const override;
 
 protected:
 	struct FeatureInfo
@@ -87,8 +87,8 @@ protected:
 	{
 	public:
 		// reimplemented (iipr::IFeaturesConsumer)
-		virtual void ResetFeatures();
-		virtual bool AddFeature(const imeas::INumericValue* featurePtr, bool* isFullPtr = NULL);
+		virtual void ResetFeatures() override;
+		virtual bool AddFeature(const imeas::INumericValue* featurePtr, bool* isFullPtr = NULL) override;
 	
 		Features features;
 	};
@@ -121,10 +121,10 @@ protected:
 	void UpdateHoughSpace(const i2d::CVector2d& point1, const i2d::CVector2d& point2, double weight, const i2d::CVector2d& imageCenter, ialgo::CHoughSpace2d& space) const;
 
 	// reimplemented (iinsp::TSupplierCompWrap)
-	virtual int ProduceObject(ProductType& result) const;
+	virtual int ProduceObject(ProductType& result) const override;
 
 	// reimplemented (icomp::CComponentBase)
-	virtual void OnComponentCreated();
+	virtual void OnComponentCreated() override;
 
 private:
 	// static template methods for sub element access

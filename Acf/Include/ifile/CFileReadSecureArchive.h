@@ -44,7 +44,7 @@ public:
 				bool serializeHeader = true);
 
 	// reimplemented (ifile::CFileReadArchive)
-	virtual bool ProcessData(void* data, int size);
+	virtual bool ProcessData(void* data, int size) override;
 };
 
 

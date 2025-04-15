@@ -61,7 +61,7 @@ public:
 
 protected:
 	// reimplemented (QObject)
-	virtual bool eventFilter(QObject* objectPtr, QEvent* eventPtr);
+	virtual bool eventFilter(QObject* objectPtr, QEvent* eventPtr) override;
 
 private Q_SLOTS:
 	void OnObjectDestroyed(QObject* objectPtr);
