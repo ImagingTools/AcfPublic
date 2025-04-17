@@ -128,9 +128,7 @@ void CTranslationManagerComp::SwitchLanguage(int languageIndex)
 		return;
 	}
 
-	if (m_currentLanguageIndex >= 0){
-		QCoreApplication::removeTranslator(m_translatorsList[m_currentLanguageIndex].translatorPtr.GetPtr());
-	}
+	int previousIndex = m_currentLanguageIndex;
 
 	if (languageIndex >= 0 && languageIndex < m_translatorsList.count()){
 		if (m_installTranslatorAttrPtr.IsValid() && *m_installTranslatorAttrPtr){
@@ -141,6 +139,10 @@ void CTranslationManagerComp::SwitchLanguage(int languageIndex)
 	}
 
 	lock.unlock();
+	
+	if (previousIndex >= 0){
+		QCoreApplication::removeTranslator(m_translatorsList[previousIndex].translatorPtr.GetPtr());
+	}
 
 	if (m_slaveTranslationManagerCompPtr.IsValid()){
 		m_slaveTranslationManagerCompPtr->SwitchLanguage(languageIndex);
