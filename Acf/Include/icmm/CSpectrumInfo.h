@@ -48,6 +48,7 @@ public:
 	// reimplemented (icmm::ISpectrumInfo)
 	virtual istd::CIntRange GetSpectralRange() const override;
 	virtual int GetStep() const override;
+	virtual int GetSamplesCount() const override;
 
 	// reimplemented (iser::ISerializable)
 	virtual bool Serialize(iser::IArchive& archive) override;

@@ -26,6 +26,7 @@
 // ACF includes
 #include <imath/TISampledFunction.h>
 #include <icmm/ISpectrumInfoProvider.h>
+#include <iser/ISerializable.h>
 
 
 namespace icmm
