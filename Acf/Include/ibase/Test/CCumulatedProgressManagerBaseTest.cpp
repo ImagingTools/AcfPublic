@@ -20,27 +20,30 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <ibase/Test/CCumulatedProgressManagerBaseTest.h>
 
 
-namespace istd
+// ACF includes
+#include <ibase/CCumulatedProgressManagerBase.h>
+
+
+void CCumulatedProgressManagerBaseTest::DoOverflowTest1()
 {
+	ibase::CCumulatedProgressManagerBase progress;
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5354,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	std::unique_ptr<ibase::IProgressLogger> loggerPtr = progress.StartProgressLogger();
+	loggerPtr->OnProgress(1);
+
+	std::unique_ptr<ibase::IProgressManager> subtaskPtr = progress.CreateSubtaskManager("subtask1", "", 0.5);
+	std::unique_ptr<ibase::IProgressLogger> subtaskLoggerPtr = subtaskPtr->StartProgressLogger();
+	subtaskLoggerPtr->OnProgress(1);
+
+	double cumulatedProgress = progress.GetCumulatedProgress();
+
+	QVERIFY(cumulatedProgress < 1 || qFuzzyCompare(cumulatedProgress, 1.0));
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+I_ADD_TEST(CCumulatedProgressManagerBaseTest);
 
 

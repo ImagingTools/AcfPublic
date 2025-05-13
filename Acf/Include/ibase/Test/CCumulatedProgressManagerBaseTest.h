@@ -20,27 +20,23 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// Qt includes
+#include <QtCore/QObject>
+#include <QtTest/QtTest>
+
+// ACF includes
+#include <itest/CStandardTestExecutor.h>
+
+
+class CCumulatedProgressManagerBaseTest : public QObject
 {
+	Q_OBJECT
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5354,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+private Q_SLOTS:
+	void DoOverflowTest1();
 };
-
-
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
 
 

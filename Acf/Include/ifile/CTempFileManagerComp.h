@@ -23,6 +23,9 @@
 #pragma once
 
 
+// Qt includes
+#include <QtCore/QMutex>
+
 // ACF includes
 #include <icomp/CComponentBase.h>
 #include <ifile/IFileNameParam.h>
@@ -74,6 +77,8 @@ private:
 
 	typedef QMap<QByteArray, Session> SessionMap;
 	SessionMap m_sessionsMap;
+
+	mutable QMutex m_mutex;
 };
 
 
