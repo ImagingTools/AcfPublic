@@ -1,2 +1,0 @@
-INCLUDEPATH += $(QWTDIR_6_2_0)/src
-LIBS += -L$(QWTDIR_6_2_0)/lib/$$COMPILER_DIR -lqwt
