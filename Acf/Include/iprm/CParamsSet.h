@@ -1,0 +1,144 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iprm_CParamsSet_included
+#define iprm_CParamsSet_included
+
+
+// Qt includes
+#include <QtCore/QMap>
+
+// ACF includes
+#include <istd/TOptDelPtr.h>
+#include <istd/TPointerVector.h>
+#include <imod/CModelUpdateBridge.h>
+#include <iprm/IParamsSet.h>
+
+
+namespace iprm
+{
+
+
+/**
+	Basic implementation of interface IParamsSet.
+*/
+class CParamsSet: virtual public IParamsSet
+{
+public:
+	struct ParameterInfo
+	{
+		ParameterInfo(const QByteArray& parameterId, iser::ISerializable* parameterPtr, bool releaseFlag = false)
+		{
+			this->parameterPtr.SetPtr(parameterPtr, releaseFlag);
+			this->parameterId = parameterId;
+		}
+
+		QByteArray parameterId;
+		istd::TOptDelPtr<iser::ISerializable> parameterPtr;
+	};
+	typedef istd::TPointerVector<ParameterInfo> ParameterInfos;
+
+	explicit CParamsSet(const IParamsSet* slaveSetPtr = NULL);
+
+	/**
+		Get slave parameter set.
+		Slave parameter set will be used for non editable parameter query.
+		If no slave parameter set is defined, it returns NULL.
+	*/
+	const IParamsSet* GetSlaveSet() const;
+	/**
+		Set slave parameter set.
+		Slave parameter set will be used for non editable parameter query.
+		\param	slaveSetPtr		slave parameter set, or NULL, if no set is used.
+	*/
+	void SetSlaveSet(const IParamsSet* slaveSetPtr);
+
+	/**
+		Set editable parameter in this set.
+		Editable parameters are stored in set directly, the non editable in slave sets.
+	*/
+	virtual bool SetEditableParameter(const QByteArray& id, iser::ISerializable* parameterPtr, bool releaseFlag = false);
+
+	/**
+		Get access to all parameters.
+	*/
+	const ParameterInfos& GetParameterInfos() const;
+
+	/**
+		Get ID of this parameters type.
+	*/
+	const QByteArray& GetParametersTypeId() const;
+	/**
+		Set ID of this parameters type.
+	*/
+	void SetParametersTypeId(const QByteArray& id);
+
+	// reimplemented (iser::IObject)
+	virtual QByteArray GetFactoryId() const override;
+
+	// reimplemented (iprm::IParamsSet)
+	virtual Ids GetParamIds(bool editableOnly = false) const override;
+	virtual const iser::ISerializable* GetParameter(const QByteArray& id) const override;
+	virtual iser::ISerializable* GetEditableParameter(const QByteArray& id) override;
+
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive) override;
+	virtual quint32 GetMinimalVersion(int versionId) const override;
+
+	// reimplemented (istd::IChangeable)
+	virtual bool CopyFrom(const IChangeable& object, CompatibilityMode mode = CM_WITHOUT_REFS) override;
+	virtual bool ResetData(CompatibilityMode mode = CM_WITHOUT_REFS) override;
+
+protected:
+	const ParameterInfo* FindParameterInfo(const QByteArray& parameterId) const;
+
+private:
+	ParameterInfos m_params;
+
+	QByteArray m_paramsTypeId;
+
+	const IParamsSet* m_slaveSetPtr;
+
+	imod::CModelUpdateBridge m_updateBridge;
+};
+
+
+// inline methods
+
+inline const IParamsSet* CParamsSet::GetSlaveSet() const
+{
+	return m_slaveSetPtr;
+}
+
+
+inline void CParamsSet::SetSlaveSet(const IParamsSet* slaveSetPtr)
+{
+	m_slaveSetPtr = slaveSetPtr;
+}
+
+
+} // namespace iprm
+
+
+#endif // !iprm_CParamsSet_included
+
+

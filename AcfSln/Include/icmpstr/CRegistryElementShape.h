@@ -1,0 +1,121 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef icmpstr_CRegistryElementShape_included
+#define icmpstr_CRegistryElementShape_included
+
+
+// Qt includes
+#include <QtCore/QDir>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QGraphicsItem>
+#else
+#include <QtGui/QGraphicsItem>
+#endif
+
+// ACF includes
+#include <imod/TSingleModelObserverBase.h>
+
+// ACF-Solutions includes
+#include <icmpstr/TObjectShapeBase.h>
+#include <icmpstr/CVisualRegistryElement.h>
+
+
+namespace icmpstr
+{
+
+
+class CVisualRegistryEditorComp;
+
+
+/**
+	Visualization of geometrical registry elements.
+*/
+class CRegistryElementShape: public icmpstr::TObjectShapeBase<QGraphicsRectItem, CVisualRegistryElement>
+{
+	Q_OBJECT
+
+public:
+	typedef icmpstr::TObjectShapeBase<QGraphicsRectItem, CVisualRegistryElement> BaseClass;
+
+	CRegistryElementShape(
+				CVisualRegistryEditorComp* registryViewPtr,
+				const icmpstr::ISceneProvider* providerPtr = NULL);
+
+	QRectF GetViewRect() const;
+
+	/**
+		Check consistency, if it is changed do update.
+	*/
+	void CheckConsistency();
+
+	// reimplemented (QGraphicsItem)
+	virtual QRectF boundingRect() const override;
+	virtual void paint(QPainter* painterPtr, const QStyleOptionGraphicsItem* stylePtr, QWidget* widgetPtr) override;
+	virtual void mouseMoveEvent(QGraphicsSceneMouseEvent* eventPtr) override;
+	virtual void mouseDoubleClickEvent(QGraphicsSceneMouseEvent* eventPtr) override;
+
+	// reimplemented (imod::IObserver)
+	virtual bool OnModelAttached(imod::IModel* modelPtr, istd::IChangeable::ChangeSet& changeMask) override;
+
+Q_SIGNALS:
+	void RectChanged(QRectF rect);
+	void SelectionChanged(bool state);
+
+protected:
+	enum
+	{
+		SIDE_OFFSET = 4,
+		SHADOW_OFFSET = 10
+	};
+
+	void CalcExportedInteraces(const CVisualRegistryElement& element);
+
+	// reimplemented (icmpstr::TObjectShapeBase)
+	virtual void UpdateGraphicsItem(const CVisualRegistryElement& element) override;
+
+	// reimplemented (TShapeBase)
+	virtual void OnSelectionChanged(bool isSelected) override;
+
+private:
+	CVisualRegistryEditorComp& m_registryView;
+
+	QStringList m_exportedInterfacesList;
+
+	QPointF m_lastClickPosition;
+
+	// shadows
+	QString m_addressString;
+	QIcon m_icon;
+	QColor m_backgroundColor;
+	QColor m_backgroundSelectedColor;
+	bool m_isConsistent;
+	int m_componentType;
+};
+
+
+} // namespace icmpstr
+
+
+#endif // !icmpstr_CRegistryElementShape_included
+
+
