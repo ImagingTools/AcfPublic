@@ -1,0 +1,196 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef ialgo_CHoughSpace2d_included
+#define ialgo_CHoughSpace2d_included
+
+
+// STL includes
+#include <cmath>
+
+// Qt includes
+#include <QtCore/QMultiMap>
+
+// ACF includes
+#include <i2d/CVector2d.h>
+#include <iimg/CGeneralBitmap.h>
+
+// ACF-Solutions includes
+#include <ialgo/TIHoughSpace.h>
+#include <ialgo/TSimpleSpaceResultConsumer.h>
+
+
+namespace ialgo
+{
+
+
+/**
+	Hough space used for 2d Hough transformations.
+*/
+class CHoughSpace2d:
+			public iimg::CGeneralBitmap,
+			virtual public TIHoughSpace<2>
+{
+public:
+	typedef iimg::CGeneralBitmap BaseClass;
+
+	typedef TSimpleSpaceResultConsumer<2> StdConsumer;
+
+	CHoughSpace2d();
+	CHoughSpace2d(const istd::CIndex2d& size, bool isWrappedX = false, bool isWrappedY = false);
+
+	bool CreateHoughSpace(
+				const istd::CIndex2d& size,
+				bool isWrappedX,
+				bool isWrappedY,
+				bool isFloatSpace);
+
+	/**
+		Set if this space to be wrapped horizontaly or not.
+		Space is horizonally wrapped if the left pixel is neighbour of the right one.
+	*/
+	void SetDimensionWrapped(int dimensionIndex, bool state);
+
+	/**
+		Apply some operation to each element.
+	*/
+	template <typename Operation>
+	void ApplyOperation(Operation operation);
+
+	/**
+		Combine this space with some other space.
+	*/
+	template <typename Operation>
+	void CombineWithSpace(const CHoughSpace2d& space, Operation operation);
+
+	// reimplemented (ialgo::TIHoughSpace<2>)
+	virtual istd::TIndex<2> GetSpaceSize() const override;
+	virtual bool CreateHoughSpace(const istd::TIndex<2>& size, const double& initValue = 0) override;
+	virtual bool IsDimensionWrapped(int dimensionIndex) const override;
+	virtual ExtensionMode GetExtensionMode(int dimensionIndex) const override;
+	virtual void IncreaseValueAt(const imath::TVector<2>& position, double value) override;
+	virtual void SmoothHoughSpace(const istd::TIndex<2>& iterations) override;
+	virtual bool AnalyseHoughSpace(
+				const double& minValue,
+				ResultsConsumer& resultProcessor) const override;
+	virtual bool ExtractToBitmap(iimg::IBitmap& bitmap) const override;
+	virtual bool GetSpacePosition(const imath::TVector<2>& position, imath::TVector<2>& result) const override;
+	virtual double GetSpaceDistance(const imath::TVector<2>& position1, const imath::TVector<2>& position2) const override;
+	virtual double GetSpaceDistance2(const imath::TVector<2>& position1, const imath::TVector<2>& position2) const override;
+
+	// reimplemented (iimg::CGeneralBitmap)
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, int pixelBitsCount = 0, int componentsCount = 0) override;
+	virtual bool CreateBitmap(PixelFormat pixelFormat, const istd::CIndex2d& size, void* dataPtr, bool releaseFlag, int linesDifference = 0) override;
+
+private:
+	bool m_isWrapped[2];
+};
+
+
+// inline methods
+
+inline double CHoughSpace2d::GetSpaceDistance(const imath::TVector<2>& position1, const imath::TVector<2>& position2) const
+{
+	return qSqrt(GetSpaceDistance2(position1, position2));
+}
+
+
+inline double CHoughSpace2d::GetSpaceDistance2(const imath::TVector<2>& position1, const imath::TVector<2>& position2) const
+{
+	istd::CIndex2d spaceSize = BaseClass::GetImageSize();
+
+	i2d::CVector2d diff = position2 - position1;
+	if (m_isWrapped[0]){
+		double offset = spaceSize.GetX() * 0.5;
+		diff.SetX(std::fmod(diff.GetX() + offset + spaceSize.GetX(),  spaceSize.GetX()) - offset);
+	}
+
+	if (m_isWrapped[1]){
+		double offset = spaceSize.GetY() * 0.5;
+		diff.SetY(std::fmod(diff.GetY() + offset + spaceSize.GetY(),  spaceSize.GetY()) - offset);
+	}
+
+	return diff.GetLength2();
+}
+
+
+// template methods
+
+template <typename Operation>
+void CHoughSpace2d::ApplyOperation(Operation operation)
+{
+
+	istd::CIndex2d size = BaseClass::GetImageSize();
+
+	for (int y = 0; y < size.GetY(); ++y){
+		if (BaseClass::GetPixelFormat() == PF_FLOAT32){
+			float* linePtr = (float*)BaseClass::GetLinePtr(y);
+			for (int x = 0; x < size.GetX(); ++x){
+				linePtr[x] = operation(linePtr[x]);
+			}
+		}
+		else{
+			Q_ASSERT(GetPixelFormat() == PF_GRAY32);
+
+			quint32* linePtr = (quint32*)BaseClass::GetLinePtr(y);
+			for (int x = 0; x < size.GetX(); ++x){
+				linePtr[x] = operation(linePtr[x]);
+			}
+		}
+	}
+}
+
+
+template <typename Operation>
+void CHoughSpace2d::CombineWithSpace(const CHoughSpace2d& space, Operation operation)
+{
+	istd::CIndex2d size = BaseClass::GetImageSize();
+	istd::CIndex2d spaceSize = space.GetImageSize();
+
+	istd::CIndex2d commonSize(qMin(size.GetX(), spaceSize.GetX()), qMin(size.GetY(), spaceSize.GetY()));
+	for (int y = 0; y < commonSize.GetY(); ++y){
+		if (BaseClass::GetPixelFormat() == PF_FLOAT32){
+			float* linePtr = (float*)BaseClass::GetLinePtr(y);
+			const float* spaceLinePtr = (const float*)space.GetLinePtr(y);
+			for (int x = 0; x < commonSize.GetX(); ++x){
+				linePtr[x] = operation(linePtr[x], spaceLinePtr[x]);
+			}
+		}
+		else{
+			Q_ASSERT(GetPixelFormat() == PF_GRAY32);
+
+			quint32* linePtr = (quint32*)BaseClass::GetLinePtr(y);
+			const quint32* spaceLinePtr = (const quint32*)space.GetLinePtr(y);
+			for (int x = 0; x < commonSize.GetX(); ++x){
+				linePtr[x] = operation(linePtr[x], spaceLinePtr[x]);
+			}
+		}
+	}
+}
+
+
+} // namespace ialgo
+
+
+#endif // !ialgo_CHoughSpace2d_included
+
+

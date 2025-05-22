@@ -1,0 +1,107 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#pragma once
+
+
+// Qt includes
+#include <QtCore/QJsonDocument>
+#include <QtCore/QJsonObject>
+#include <QtCore/QJsonArray>
+#include <QtCore/QVector>
+#include <QtCore/QDataStream>
+#include <QtCore/QBuffer>
+
+// ACF includes
+#include <iser/CTextWriteArchiveBase.h>
+#include <istd/TDelPtr.h>
+
+
+namespace iser
+{
+
+
+/**
+	Implementation of an ACF Archive serializing to JSON string
+*/
+class CJsonWriteArchiveBase: public iser::CTextWriteArchiveBase
+{
+public:
+	typedef iser::CTextWriteArchiveBase BaseClass;
+
+	~CJsonWriteArchiveBase();
+
+	void SetFormat(QJsonDocument::JsonFormat jsonFormat);
+
+	// reimplemented (iser::IArchive)
+	virtual bool IsTagSkippingSupported() const override;
+	virtual bool BeginTag(const iser::CArchiveTag& tag) override;
+	virtual bool BeginMultiTag(const iser::CArchiveTag& tag, const iser::CArchiveTag& subTag, int& count) override;
+	virtual bool EndTag(const iser::CArchiveTag& tag) override;
+	virtual bool Process(QString& value) override;
+	virtual bool Process(QByteArray& value) override;
+	virtual bool ProcessData(void* dataPtr, int size) override;
+
+	using BaseClass::Process;
+
+protected:
+	CJsonWriteArchiveBase(
+				const iser::IVersionInfo* versionInfoPtr,
+				bool serializeHeader,
+				const iser::CArchiveTag& rootTag);
+
+	bool InitStream(bool serializeHeader);
+	bool InitArchive(QIODevice* devicePtr);
+	bool InitArchive(QByteArray& inputString);
+	bool WriteTag(const iser::CArchiveTag& tag, QString separator);
+	bool WriteJsonHeader();
+	bool Flush();
+
+	// reimplemented (iser::CTextWriteArchiveBase)
+	virtual bool WriteTextNode(const QByteArray& text) override;
+
+protected:
+	QTextStream m_stream;
+	QBuffer m_buffer;
+	bool m_firstTag;
+	QJsonDocument::JsonFormat m_jsonFormat;
+	bool m_serializeHeader;
+	iser::CArchiveTag m_rootTag;
+
+	bool m_isSeparatorNeeded;	// idicate that separator must be added before something is outputted
+	bool m_allowAttribute;		// indicate if attribute outputting is allowed now
+
+	struct TagsStackItem
+	{
+		const iser::CArchiveTag* m_tagPtr;
+		bool m_isMultiTag;
+	};
+
+	bool m_quotationMarksRequired = false;
+
+	QList<TagsStackItem> m_tagsStack;
+};
+
+
+} // namespace iser
+
+

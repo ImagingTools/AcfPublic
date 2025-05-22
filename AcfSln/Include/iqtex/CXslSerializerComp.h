@@ -1,0 +1,84 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iqtex_CXslSerializerComp_included
+#define iqtex_CXslSerializerComp_included
+
+
+// Qt includes
+#include <QtCore/QString>
+
+// ACF includes
+#include <ifile/CFileSerializerCompBase.h>
+#include <ifile/IFileNameParam.h>
+
+
+namespace iqtex
+{
+
+
+/**
+	Template implementation of file serializer using loading and storing archive implementation.
+*/
+class CXslSerializerComp: public ifile::CFileSerializerCompBase
+{
+public:	
+	typedef ifile::CFileSerializerCompBase BaseClass;
+
+	I_BEGIN_COMPONENT(CXslSerializerComp);
+		I_ASSIGN(m_xslReadFilePath, "ReadTransformationFile", "Transformation file for reading action", false, "ReadTransformationFile");
+		I_ASSIGN(m_xslWriteFilePath, "WriteTransformationFile", "Transformation file for writing action", false, "WriteTransformationFile");
+	I_END_COMPONENT;
+
+	// reimplemented (ifile::IFilePersistence)
+	virtual bool IsOperationSupported(
+				const istd::IChangeable* dataObjectPtr,
+				const QString* filePathPtr = NULL,
+				int flags = -1,
+				bool beQuiet = true) const;
+	virtual OperationState LoadFromFile(
+				istd::IChangeable& data,
+				const QString& filePath = QString(),
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
+	virtual OperationState SaveToFile(
+				const istd::IChangeable& data,
+				const QString& filePath = QString(),
+				ibase::IProgressManager* progressManagerPtr = NULL) const;
+
+protected:
+	/**
+		Called if read error is occured.
+	*/
+	virtual void OnReadError(const iser::IArchive& archive, const istd::IChangeable& data, const QString& filePath) const;
+
+private:
+	I_REF(ifile::IFileNameParam, m_xslReadFilePath);
+	I_REF(ifile::IFileNameParam, m_xslWriteFilePath);
+};
+
+
+} // namespace iqtex
+
+
+#endif // !iqtex_CXslSerializerComp_included
+
+
