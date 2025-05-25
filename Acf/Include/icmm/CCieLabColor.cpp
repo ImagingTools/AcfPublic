@@ -33,7 +33,7 @@ namespace icmm
 
 CCieLabColor::CCieLabColor(const CCieLabColorModel* modelPtr)
 {
-	if (m_modelPtr != nullptr) {
+	if (modelPtr != nullptr){
 		m_modelPtr = std::make_shared<CCieLabColorModel>(modelPtr->GetTristimulusSpecification());
 	}
 }
@@ -49,6 +49,7 @@ CCieLabColor::CCieLabColor(const icmm::CLab& lab, const ITristimulusSpecificatio
 CCieLabColor::CCieLabColor(const CCieLabColor& color)
 {
 	m_modelPtr = color.m_modelPtr;
+
 	m_lab = color.m_lab;
 }
 
@@ -59,7 +60,12 @@ bool CCieLabColor::Initialize(const icmm::CLab& value, const ITristimulusSpecifi
 {
 	m_lab = value;
 
-	m_modelPtr->SetTristimulusSpecification(spec);
+	if (m_modelPtr){
+		m_modelPtr->SetTristimulusSpecification(spec);
+	}
+	else{
+		m_modelPtr = std::make_shared<icmm::CCieLabColorModel>(spec);
+	}
 
 	return true;
 }
@@ -73,7 +79,7 @@ const icmm::CLab& CCieLabColor::GetLab() const
 
 IColorSpecification::ConstColorSpecPtr CCieLabColor::GetSpecification() const
 {
-	return m_modelPtr->GetSpecification();
+	return m_modelPtr ? m_modelPtr->GetSpecification() : nullptr;
 }
 
 // reimplemented (icmm::IColorObject)
@@ -94,6 +100,7 @@ ConstColorModelPtr CCieLabColor::GetColorModel() const
 {
 	return m_modelPtr;
 }
+
 
 std::unique_ptr<IColorObject> CCieLabColor::CloneIntoUniquePtr() const
 {

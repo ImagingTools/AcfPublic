@@ -34,16 +34,16 @@ namespace iqt2d
 {
 
 
-template <class CircleBasedShape, class CircleBasedModel>
+template <class CircleBasedShape, class CircleBasedModel, class CircleBasedGui = Ui::CCircleParamsGuiComp>
 class TCircleBasedParamsGuiComp: 
 			public iqt2d::TShapeParamsGuiCompBase<
-						Ui::CCircleParamsGuiComp,
+						CircleBasedGui,
 						CircleBasedShape,
 						CircleBasedModel>
 {
 public:
 	typedef iqt2d::TShapeParamsGuiCompBase<
-		Ui::CCircleParamsGuiComp,
+		CircleBasedGui,
 		CircleBasedShape,
 		CircleBasedModel> BaseClass;
 
@@ -83,15 +83,15 @@ protected:
 
 // reimplemented (iqtgui::TGuiObserverWrap)
 
-template <class CircleBasedShape, class CircleBasedModel>
-void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::OnGuiModelAttached()
+template <class CircleBasedShape, class CircleBasedModel, class CircleBasedGui>
+void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel, CircleBasedGui>::OnGuiModelAttached()
 {
 	BaseClass::OnGuiModelAttached();
 }
 
 
-template <class CircleBasedShape, class CircleBasedModel>
-void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::UpdateModel() const
+template <class CircleBasedShape, class CircleBasedModel, class CircleBasedGui>
+void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel, CircleBasedGui>::UpdateModel() const
 {
 	Q_ASSERT(BaseClass::IsGuiCreated());
 
@@ -109,8 +109,8 @@ void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::UpdateModel(
 }
 
 
-template <class CircleBasedShape, class CircleBasedModel>
-void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
+template <class CircleBasedShape, class CircleBasedModel, class CircleBasedGui>
+void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel, CircleBasedGui>::UpdateGui(const istd::IChangeable::ChangeSet& /*changeSet*/)
 {
 	Q_ASSERT(BaseClass::IsGuiCreated());
 
@@ -133,8 +133,8 @@ void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::UpdateGui(co
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
-template <class CircleBasedShape, class CircleBasedModel>
-void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::OnGuiCreated()
+template <class CircleBasedShape, class CircleBasedModel, class CircleBasedGui>
+void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel, CircleBasedGui>::OnGuiCreated()
 {
 	BaseClass::OnGuiCreated();
 
@@ -153,8 +153,8 @@ void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::OnGuiCreated
 
 // reimplemented (iqtgui::CGuiComponentBase)
 
-template <class CircleBasedShape, class CircleBasedModel>
-void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel>::OnGuiRetranslate()
+template <class CircleBasedShape, class CircleBasedModel, class CircleBasedGui>
+void TCircleBasedParamsGuiComp<CircleBasedShape, CircleBasedModel, CircleBasedGui>::OnGuiRetranslate()
 {
 	BaseClass::OnGuiRetranslate();
 

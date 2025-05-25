@@ -27,7 +27,7 @@
 #include <QtCore/QIODevice>
 
 // ACF includes
-#include <istd/IChangeable.h>
+#include <istd/IPolymorphic.h>
 
 
 namespace ibase

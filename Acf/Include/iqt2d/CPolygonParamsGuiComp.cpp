@@ -54,6 +54,13 @@ void CPolygonParamsGuiComp::on_InsertButton_clicked()
 
 void CPolygonParamsGuiComp::on_RemoveButton_clicked()
 {
+	auto polygonPtr = GetObservedObject();
+	Q_ASSERT(polygonPtr != nullptr);
+
+	if (polygonPtr == nullptr){
+		return;
+	}
+
 	OnRemoveNode();
 }
 
