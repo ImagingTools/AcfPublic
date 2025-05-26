@@ -47,6 +47,7 @@ namespace ifile
 */
 class CTextFileLogComp: public ilog::CStreamLogCompBase
 {
+	Q_OBJECT
 public:
 	typedef ilog::CStreamLogCompBase BaseClass;
 
