@@ -38,6 +38,7 @@ namespace iprocgui
 
 void CDocumentProcessingManagerComp::DoDocumentProcessing(const istd::IChangeable* inputDocumentPtr, const QByteArray& documentTypeId)
 {
+
 	if (m_inPlaceProcessingAttrPtr.IsValid() && *m_inPlaceProcessingAttrPtr){
 		DoInPlaceProcessing(const_cast<istd::IChangeable*>(inputDocumentPtr));
 	}

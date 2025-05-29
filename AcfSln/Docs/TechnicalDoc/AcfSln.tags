@@ -1200,6 +1200,15 @@
     <namespace>idocproc</namespace>
   </compound>
   <compound kind="file">
+    <name>IDocumentProcessingParamsController.h</name>
+    <path>Include/idocproc/</path>
+    <filename>_i_document_processing_params_controller_8h.html</filename>
+    <class kind="class">idocproc::IDocumentProcessingParamsController</class>
+    <namespace>iprm</namespace>
+    <namespace>istd</namespace>
+    <namespace>idocproc</namespace>
+  </compound>
+  <compound kind="file">
     <name>CEdgeBasedFeaturesSupplierComp.h</name>
     <path>Include/iedge/</path>
     <filename>_c_edge_based_features_supplier_comp_8h.html</filename>
@@ -3113,6 +3122,7 @@
     <path>Include/iprocgui/</path>
     <filename>_c_document_processing_manager_comp_base_8h.html</filename>
     <includes id="_i_processor_8h" name="IProcessor.h" local="no" import="no" module="no" objc="no">iproc/IProcessor.h</includes>
+    <includes id="_i_document_processing_params_controller_8h" name="IDocumentProcessingParamsController.h" local="no" import="no" module="no" objc="no">idocproc/IDocumentProcessingParamsController.h</includes>
     <class kind="class">iprocgui::CDocumentProcessingManagerCompBase</class>
     <namespace>iprocgui</namespace>
   </compound>
@@ -31596,6 +31606,17 @@
     </member>
   </compound>
   <compound kind="class">
+    <name>idocproc::IDocumentProcessingParamsController</name>
+    <filename>classidocproc_1_1_i_document_processing_params_controller.html</filename>
+    <member kind="function" virtualness="pure">
+      <type>virtual bool</type>
+      <name>ConfigureParametersForDocument</name>
+      <anchorfile>classidocproc_1_1_i_document_processing_params_controller.html</anchorfile>
+      <anchor>a674476d890e0e961bd37091e9deb7855</anchor>
+      <arglist>(const istd::IChangeable &amp;document, iprm::IParamsSet &amp;params, QString *errorMessagePtr=nullptr) const =0</arglist>
+    </member>
+  </compound>
+  <compound kind="class">
     <name>iedge::IEdgeLinesProcessor</name>
     <filename>classiedge_1_1_i_edge_lines_processor.html</filename>
     <base virtualness="virtual">iproc::IProcessor</base>
@@ -39977,6 +39998,7 @@
     <name>idocproc</name>
     <filename>namespaceidocproc.html</filename>
     <class kind="class">idocproc::CRenderedDocumentPreviewGeneratorComp</class>
+    <class kind="class">idocproc::IDocumentProcessingParamsController</class>
   </compound>
   <compound kind="namespace">
     <name>iedge</name>
@@ -40289,6 +40311,10 @@
     <class kind="class">imm::IVideoInfo</class>
   </compound>
   <compound kind="namespace">
+    <name>iprm</name>
+    <filename>namespaceiprm.html</filename>
+  </compound>
+  <compound kind="namespace">
     <name>iproc</name>
     <filename>namespaceiproc.html</filename>
     <class kind="class">iproc::CCascadedProcessorComp</class>
@@ -40452,6 +40478,10 @@
     <class kind="class">isig::ITriggerConstraints</class>
     <class kind="class">isig::ITriggerController</class>
     <class kind="class">isig::ITriggerParams</class>
+  </compound>
+  <compound kind="namespace">
+    <name>istd</name>
+    <filename>namespaceistd.html</filename>
   </compound>
   <compound kind="namespace">
     <name>iweb</name>
