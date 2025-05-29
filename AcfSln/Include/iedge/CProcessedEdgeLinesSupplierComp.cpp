@@ -24,7 +24,7 @@
 
 // Qt includes
 #include <QtCore/QFile>
-#include <QtCore/QTextstream>
+#include <QtCore/QTextStream>
 
 
 namespace iedge

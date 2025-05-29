@@ -35,7 +35,7 @@ template<class InterfaceType>
 class TOptInterfacePtr
 {
 public:
-	typedef typename InterfaceType Interface;
+	typedef InterfaceType Interface;
 	typedef istd::TUniqueInterfacePtr<InterfaceType> UniqueInterfacePtr;
 	typedef istd::TSharedInterfacePtr<InterfaceType> SharedInterfacePtr;
 
