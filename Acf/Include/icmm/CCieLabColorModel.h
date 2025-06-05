@@ -35,7 +35,7 @@ namespace icmm
 class CCieLabColorModel: virtual public icmm::IColorModel
 {
 public:
-	CCieLabColorModel(const ITristimulusSpecification& spec);
+	CCieLabColorModel(const ITristimulusSpecification& spec = CTristimulusSpecification());
 
 	void SetTristimulusSpecification(const ITristimulusSpecification& spec);
 	const ITristimulusSpecification& GetTristimulusSpecification() const;
