@@ -33288,6 +33288,12 @@
       <arglist></arglist>
     </member>
     <member kind="enumvalue">
+      <name>TS_SKIP</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a4ee901f766489be61efdb2c973e4a5f5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
       <name>MI_BAD_PARAMS</name>
       <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
       <anchor>a71f0e6f70fcf044073f7055a0e0f5225a0670e38ef8e7cadcc77fcffde5b01b06</anchor>
@@ -33351,6 +33357,12 @@
       <name>TS_INVALID</name>
       <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
       <anchor>a53fe9860f57b67e209887f985cf3ea73ae6084d2b3eadd5d5928353a9d5b59594</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumvalue">
+      <name>TS_SKIP</name>
+      <anchorfile>classiproc_1_1_i_processor.html</anchorfile>
+      <anchor>a53fe9860f57b67e209887f985cf3ea73a4ee901f766489be61efdb2c973e4a5f5</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="pure">
