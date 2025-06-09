@@ -48,7 +48,7 @@ class IFileResourceTypeConstraints;
 class IFileResourcesManager: virtual public istd::IChangeable
 {
 public:
-	typedef istd::TSmartPtr<istd::IChangeable> DataObjectPtr;
+	typedef istd::TSharedInterfacePtr<istd::IChangeable> DataObjectPtr;
 	typedef QList<QByteArray> Ids;
 	typedef IFileMetaInfoProvider::MetaInfoPtr MetaInfoPtr;
 
