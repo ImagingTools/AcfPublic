@@ -21,6 +21,7 @@
 
 
 #include <icmm/CCmyColorModel.h>
+#include <icmm/CSubstractiveColorModel.h>
 
 
 namespace icmm
@@ -72,6 +73,11 @@ icmm::ColorantUsage CCmyColorModel::GetColorantUsage(const ColorantId& colorantI
 	}
 
 	return CU_NONE;
+}
+
+std::unique_ptr<ISubstractiveColorModel> CCmyColorModel::CreateSubspaceModel(const QStringList& colorantIds) const
+{
+	return CSubstractiveColorModel::CreateSubspaceModelFrom(*this, colorantIds);
 }
 
 
