@@ -145,20 +145,22 @@ public:
 	/**
 		This method can be used for serialization associatime containers i.e.: \c QHash, \c QMap \c std::map (since c++17)...
 	 */
-	template <typename ContainerType>
+	template <typename ContainerType, typename KeyType>
 	static bool SerializeAssociativeContainer(
 				iser::IArchive& archive,
 				ContainerType& container,
+				bool (*SerializeKeyFunction)(iser::IArchive&, KeyType& key),
 				const QByteArray& containerTagName,
 				const QByteArray& elementTagName = "Element",
 				const QByteArray& keyTagId = "Key",
 				const QByteArray& valueTagId = "Value",
 				const QByteArray& containerComment = "List of elements");
 
-	template <typename ContainerType>
+	template <typename ContainerType, typename KeyType>
 	static bool SerializeAssociativeObjectContainer(
 				iser::IArchive& archive,
 				ContainerType& container,
+				bool (*SerializeKeyFunction)(iser::IArchive&, KeyType& key),
 				const QByteArray& containerTagName,
 				const QByteArray& elementTagName = "Element",
 				const QByteArray& keyTagId = "Key",
@@ -412,10 +414,11 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 }
 
 
-template<typename ContainerType>
+template<typename ContainerType, typename KeyType>
 bool CPrimitiveTypesSerializer::SerializeAssociativeContainer(
 			IArchive& archive,
 			ContainerType& container,
+			bool (*SerializeKeyFunction)(iser::IArchive&, KeyType& key),
 			const QByteArray& containerTagName,
 			const QByteArray& elementTagName,
 			const QByteArray& keyTagId,
@@ -439,7 +442,7 @@ bool CPrimitiveTypesSerializer::SerializeAssociativeContainer(
 
 			typename ContainerType::key_type key = iterator.key();
 			retVal = retVal && archive.BeginTag(parameterKeyTag);
-			retVal = retVal && archive.Process(key);
+			retVal = retVal && SerializeKeyFunction(archive, key);
 			retVal = retVal && archive.EndTag(parameterKeyTag);
 
 			typename ContainerType::mapped_type value = iterator.value();
@@ -467,9 +470,8 @@ bool CPrimitiveTypesSerializer::SerializeAssociativeContainer(
 
 			typename ContainerType::key_type key;
 			retVal = retVal && archive.BeginTag(parameterKeyTag);
-			retVal = retVal && archive.Process(key);
+			retVal = retVal && SerializeKeyFunction(archive, key);
 			retVal = retVal && archive.EndTag(parameterKeyTag);
-
 			if (!retVal){
 				return false;
 			}
@@ -491,10 +493,11 @@ bool CPrimitiveTypesSerializer::SerializeAssociativeContainer(
 }
 
 
-template<typename ContainerType>
+template<typename ContainerType, typename KeyType>
 bool CPrimitiveTypesSerializer::SerializeAssociativeObjectContainer(
 	IArchive& archive,
 	ContainerType& container,
+	bool (*SerializeKeyFunction)(iser::IArchive&, KeyType& key),
 	const QByteArray& containerTagName,
 	const QByteArray& elementTagName,
 	const QByteArray& keyTagId,
@@ -518,7 +521,7 @@ bool CPrimitiveTypesSerializer::SerializeAssociativeObjectContainer(
 
 			typename ContainerType::key_type key = iterator.key();
 			retVal = retVal && archive.BeginTag(parameterKeyTag);
-			retVal = retVal && archive.Process(key);
+			retVal = retVal && SerializeKeyFunction(archive, key);
 			retVal = retVal && archive.EndTag(parameterKeyTag);
 
 			typename ContainerType::mapped_type value = iterator.value();
@@ -546,9 +549,8 @@ bool CPrimitiveTypesSerializer::SerializeAssociativeObjectContainer(
 
 			typename ContainerType::key_type key;
 			retVal = retVal && archive.BeginTag(parameterKeyTag);
-			retVal = retVal && archive.Process(key);
+			retVal = retVal && SerializeKeyFunction(archive, key);
 			retVal = retVal && archive.EndTag(parameterKeyTag);
-
 			if (!retVal){
 				return false;
 			}
