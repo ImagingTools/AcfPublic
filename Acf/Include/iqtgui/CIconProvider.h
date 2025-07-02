@@ -20,27 +20,38 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
+// Qt includes
+#include <QtCore/QByteArray>
+
+// ACF includes
+#include <iqtgui/iqtgui.h>
+
+
+namespace iqtgui
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+class CIconProvider
 {
-	RS_ORIGINAL_VERSION =  5403,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
+public:
+	virtual QIcon GetIcon(const QString& iconName) const;
+	virtual QString GetIconPath(const QString& iconName) const;
+	virtual QString GetStyleSheetPath(const QString& styleSheetPath) const;
+
+	QByteArray GetCurrentThemeId() const;
+	void SetThemeId(const QByteArray& themeId);
+
+protected:
+	virtual QIcon CreateIcon(const QString& iconName) const;
+
+private:
+	QByteArray m_themeId;
 };
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+}
 
 
