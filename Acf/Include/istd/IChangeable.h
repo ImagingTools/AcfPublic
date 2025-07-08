@@ -466,6 +466,9 @@ typedef istd::TUniqueInterfacePtr<istd::IChangeable> IChangeableUniquePtr;
 typedef istd::TSharedInterfacePtr<istd::IChangeable> IChangeableSharedPtr;
 
 
+bool AreObjectsEqual(const IChangeable* a, const IChangeable* b);
+
+
 } // namespace istd
 
 
