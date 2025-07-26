@@ -20,27 +20,35 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#include <icmm/icmm.h>
 
 
-namespace istd
+namespace icmm
 {
 
-/**
-	Enumeration for reflecting the state of ACF's SVN repository.
-*/
-enum RepositoryState
+
+bool IsCmyk(ColorantUsage usage)
 {
-	RS_ORIGINAL_VERSION =  5408,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
+	switch (usage){
+	case icmm::CU_CYAN:
+	case icmm::CU_DARK_CYAN:
+	case icmm::CU_LIGHT_CYAN:
+	case icmm::CU_MAGENTA:
+	case icmm::CU_DARK_MAGENTA:
+	case icmm::CU_LIGHT_MAGENTA:
+	case icmm::CU_YELLOW:
+	case icmm::CU_DARK_YELLOW:
+	case icmm::CU_LIGHT_YELLOW:
+	case icmm::CU_BLACK:
+	case icmm::CU_LIGHT_BLACK:
+	case icmm::CU_LIGHT_LIGHT_BLACK:
+		return true;
+	default:
+		return false;
+	}
+}
 
 
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+} // namespace icmm
 
 

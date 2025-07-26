@@ -31,6 +31,7 @@
 #include <QtCore/qmath.h>
 #endif
 
+// STL íncludes
 #include <initializer_list>
 
 // ACF includes
@@ -63,7 +64,7 @@ public:
 
 	/**
 		Initializer list constructor.
-	 */
+	*/
 	TVector(std::initializer_list<Element> values);
 
 	/**

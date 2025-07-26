@@ -67,7 +67,7 @@ public:
 
 	/**
 		Initializer list constructor.
-	 */
+	*/
 	TFastVector(std::initializer_list<Element> values);
 
 	template <int Size>
