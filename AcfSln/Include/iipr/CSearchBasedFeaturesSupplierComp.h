@@ -1,0 +1,164 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF-Solutions Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iipr_CSearchBasedFeaturesSupplierComp_included
+#define iipr_CSearchBasedFeaturesSupplierComp_included
+
+
+// ACF includes
+#include <i2d/IMultiCalibrationProvider.h>
+#include <i2d/CVector2d.h>
+#include <iprm/IParamsSet.h>
+#include <istd/IInformationProvider.h>
+
+// ACF-Solutions includes
+#include <iproc/IProcessor.h>
+#include <iinsp/ISupplier.h>
+#include <iinsp/TSupplierCompWrap.h>
+#include <iimg/IBitmapProvider.h>
+#include <icalib/CAffineCalibration2d.h>
+#include <iipr/IFeaturesProvider.h>
+#include <iipr/CFeaturesContainer.h>
+
+
+namespace iipr
+{
+
+
+class CSearchBasedFeaturesSupplierComp:
+			public iinsp::TSupplierCompWrap<CFeaturesContainer>,
+			virtual public IFeaturesProvider,
+			virtual public i2d::IMultiCalibrationProvider,
+			virtual public istd::IInformationProvider
+{
+public:
+	typedef iinsp::TSupplierCompWrap<CFeaturesContainer> BaseClass;
+
+	I_BEGIN_COMPONENT(CSearchBasedFeaturesSupplierComp);
+		I_REGISTER_INTERFACE(iipr::IFeaturesProvider);
+		I_REGISTER_INTERFACE(i2d::IMultiCalibrationProvider);
+		I_REGISTER_INTERFACE(istd::IInformationProvider);
+		I_ASSIGN(m_bitmapProviderCompPtr, "BitmapProvider", "Provide image to analyse", true, "BitmapProvider");
+		I_ASSIGN_TO(m_bitmapSupplierCompPtr, m_bitmapProviderCompPtr, false);
+		I_ASSIGN_TO(m_bitmapProviderModelCompPtr, m_bitmapProviderCompPtr, false);
+		I_ASSIGN(m_searchProcessorCompPtr, "Processor", "Calculate model positions in the image", true, "Processor");
+		I_ASSIGN(m_slaveInformationProviderCompPtr, "SlaveInformationProvider", "Used to provide the status if set", false, "SlaveInformationProvider");
+		I_ASSIGN(m_globalCalibrationPtr, "GlobalCalibration", "Setup the supplier global calibration", false, "GlobalCalibration");
+		I_ASSIGN(m_searchParamsManagerParamIdAttrPtr, "SearchParamsManagerParameterId", "ID of the parameter manager used for multi search", false, "SearchParamsManagerParamId");
+		I_ASSIGN(m_searchParamsIdAttrPtr, "SearchParamsId", "ID of standard search parameters", true, "SearchParamsId");
+		I_ASSIGN(m_anyNumberOfModelsAllowedAttr, "AnyNumberOfModelsAllowed", "If true and the nominal number of models is < 0, no error is generated on model search failure", true, false);
+	I_END_COMPONENT;
+
+	CSearchBasedFeaturesSupplierComp();
+
+	// reimplemented (i2d::IMultiCalibrationProvider)
+	virtual const iprm::IOptionsList* GetCalibrationSelectionContraints() const;
+	virtual int GetCalibrationsCount() const;
+	virtual const i2d::ICalibration2d* GetCalibration(int calibrationIndex) const;
+
+	// reimplemented (iipr::IFeaturesProvider)
+	virtual int GetFeaturesCount() const;
+	virtual const imeas::INumericValue& GetFeature(int index) const;
+
+	// reimplemented (istd::IInformationProvider)
+	virtual QDateTime GetInformationTimeStamp() const;
+	virtual istd::IInformationProvider::InformationCategory GetInformationCategory() const;
+	virtual int GetInformationId() const;
+	virtual QString GetInformationDescription() const;
+	virtual QString GetInformationSource() const;
+	virtual int GetInformationFlags() const;
+
+protected:
+	virtual istd::IInformationProvider::InformationCategory EvaluateResults(int featuresCount, int nominalModelsCount, QString& searchResultText) const;
+	
+	iinsp::ISupplier::WorkStatus SearchOneParamsSet(const iprm::IParamsSet* paramsPtr,
+					const iimg::IBitmap* bitmapPtr,
+					CFeaturesContainer& oneSearchResult,
+					istd::IInformationProvider::InformationCategory& informationCategory,
+					const QString& sourceName) const;
+	bool IsNegativeModelFound(const imeas::INumericValue* featurePtr, const QString& sourceName) const;
+	iinsp::ISupplier::WorkStatus LabelAndStoreResult(CFeaturesContainer& from, CFeaturesContainer& to, const QString& sourceName) const;
+	void UpdateCalibrationList(const CFeaturesContainer& results) const;
+
+	// reimplemented (iinsp::TSupplierCompWrap)
+	virtual bool InitializeWork();
+	virtual iinsp::ISupplier::WorkStatus ProduceObject(CFeaturesContainer& result) const;
+
+	// reimplemented (icomp::CComponentBase)
+	virtual void OnComponentCreated() override;
+	virtual void OnComponentDestroyed() override;
+
+private:
+
+	class CalibrationList : virtual public iprm::IOptionsList
+	{
+	public:
+		CalibrationList();
+
+		void SetParentPtr(CSearchBasedFeaturesSupplierComp* parentPtr);
+
+		// reimplemented (iprm::IOptionsList)
+		virtual int GetOptionsFlags() const;
+		virtual int GetOptionsCount() const;
+		virtual QString GetOptionName(int index) const;
+		virtual QString GetOptionDescription(int index) const;
+		virtual QByteArray GetOptionId(int index) const;
+		virtual bool IsOptionEnabled(int index) const;
+
+	private:
+		CSearchBasedFeaturesSupplierComp* m_parentPtr;
+	};
+
+private:
+	I_REF(iimg::IBitmapProvider, m_bitmapProviderCompPtr);
+	I_REF(iinsp::ISupplier, m_bitmapSupplierCompPtr);
+	I_REF(imod::IModel, m_bitmapProviderModelCompPtr);
+	I_REF(iproc::IProcessor, m_searchProcessorCompPtr);
+	I_REF(istd::IInformationProvider, m_slaveInformationProviderCompPtr);
+	I_REF(i2d::ICalibration2d, m_globalCalibrationPtr);
+	I_ATTR(QByteArray, m_searchParamsManagerParamIdAttrPtr);
+	I_ATTR(QByteArray, m_searchParamsIdAttrPtr);
+	I_ATTR(bool, m_anyNumberOfModelsAllowedAttr);
+
+	struct CalibrationInfo
+	{
+		icalib::CAffineCalibration2d calibration;
+		QByteArray calibrationId;
+		QString calibrationName;
+	};
+
+	typedef QVector<CalibrationInfo> Calibrations;
+	
+	mutable Calibrations m_calibrations;
+
+	imod::TModelWrap<CalibrationList> m_calibrationList;
+
+	mutable istd::IInformationProvider::InformationCategory m_defaultInformationCategory;
+};
+
+
+} // namespace iipr
+
+
+#endif // !iipr_CSearchBasedFeaturesSupplierComp_included
+
+

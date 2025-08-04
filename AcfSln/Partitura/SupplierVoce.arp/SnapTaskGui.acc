@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Acf>
+    <AcfHeader>
+        <VersionInfos>
+            <Version Id="0" Number="5010" Description="ACF"/>
+            <Version Id="1" Number="2177" Description="ACF-Solutions"/>
+            <Version Id="1023" Number="331522" Description="Qt Framework"/>
+        </VersionInfos>
+    </AcfHeader>
+    <Description>Image acquisition GUI for image acquisition task</Description>
+    <Keywords>Task Image Acquisition Camera GUI</Keywords>
+    <ElementsList>
+        <Element Id="BitmapDialogLoader" PackageId="AcfGuiVoce" ComponentId="BitmapDialogLoader">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="ExtensionFilter" Type="Id[]" ExportId="">
+                        <Data IsEnabled="true">
+                            <Values>
+                                <Value>bmp</Value>
+                            </Values>
+                        </Data>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="StartupDirectory" Type="Reference" ExportId="DefaultImageStoreDirectory">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+        <Element Id="ImageTaskGui" PackageId="QtCameraPck" ComponentId="SnapBitmapSupplierGui">
+            <Data IsEnabled="true" Flags="0">
+                <AttributeInfoMap>
+                    <AttributeInfo Id="BitmapFactory" Type="Factory" ExportId="BitmapFactory">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="BitmapLoader" Type="Reference" ExportId="BitmapLoader">
+                        <Data IsEnabled="true" Value="BitmapDialogLoader"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ConnectParametersToEditor" Type="Boolean" ExportId="ConnectParametersToEditor">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DefaultModel" Type="Reference" ExportId="DefaultModel">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DefaultStatusIcon" Type="String" ExportId="DefaultStatusIcon">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="DefaultStatusText" Type="Text" ExportId="DefaultStatusText">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EditorReadOnly" Type="Boolean" ExportId="EditorReadOnly">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="EnableVerbose" Type="Boolean" ExportId="EnableVerbose">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="Log" Type="Reference" ExportId="Log">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParamsLoader" Type="Reference" ExportId="ParamsLoader">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParamsSceneExtender" Type="Reference" ExportId="ParamsSceneExtender">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ParamsSetGui" Type="Reference" ExportId="CameraParamsSetGui">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SceneIdFilters" Type="Integer[]" ExportId="SceneIdFilters">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SlaveSceneExtender" Type="Reference" ExportId="SlaveSceneExtender">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SnapButtonText" Type="Id" ExportId="SnapButtonText">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SnapButtonTooltip" Type="Id" ExportId="SnapButtonTooltip">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="SnapInterval" Type="Integer" ExportId="SnapInterval">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ViewCalibrationMode" Type="Integer" ExportId="ViewCalibrationMode">
+                        <Data IsEnabled="true" Value="1"/>
+                    </AttributeInfo>
+                    <AttributeInfo Id="ViewExtenderMode" Type="Integer" ExportId="ViewExtenderMode">
+                        <Data IsEnabled="false"/>
+                    </AttributeInfo>
+                </AttributeInfoMap>
+            </Data>
+        </Element>
+    </ElementsList>
+    <EmbeddedRegistriesList/>
+    <ExportedInterfaces>
+        <Interface InterfaceId="iimg::IBitmapProvider" ComponentId="ImageTaskGui"/>
+        <Interface InterfaceId="imod::IModel" ComponentId="ImageTaskGui/VisualStatus"/>
+        <Interface InterfaceId="imod::IModelEditor" ComponentId="ImageTaskGui"/>
+        <Interface InterfaceId="imod::IObserver" ComponentId="ImageTaskGui"/>
+        <Interface InterfaceId="iqt2d::IViewExtender" ComponentId="ImageTaskGui"/>
+        <Interface InterfaceId="iqtgui::IGuiObject" ComponentId="ImageTaskGui"/>
+        <Interface InterfaceId="iqtgui::IVisualStatus" ComponentId="ImageTaskGui/VisualStatus"/>
+        <Interface InterfaceId="istd::IChangeable" ComponentId="ImageTaskGui/VisualStatus"/>
+    </ExportedInterfaces>
+    <ExportedComponents>
+        <Component ExportedId="OriginalBitmapProvider" ComponentId="ImageTaskGui/OriginalBitmapProvider"/>
+        <Component ExportedId="VisualStatus" ComponentId="ImageTaskGui/VisualStatus"/>
+    </ExportedComponents>
+</Acf>
