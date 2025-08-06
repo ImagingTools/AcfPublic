@@ -1,0 +1,78 @@
+/********************************************************************************
+**
+**	Copyright (C) 2007-2017 Witold Gantzke & Kirill Lepskiy
+**
+**	This file is part of the ACF Toolkit.
+**
+**	This file may be used under the terms of the GNU Lesser
+**	General Public License version 2.1 as published by the Free Software
+**	Foundation and appearing in the file LicenseLGPL.txt included in the
+**	packaging of this file.  Please review the following information to
+**	ensure the GNU Lesser General Public License version 2.1 requirements
+**	will be met: http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html.
+**
+**	If you are unsure which license is appropriate for your use, please
+**	contact us at info@imagingtools.de.
+**
+** 	See http://www.ilena.org or write info@imagingtools.de for further
+** 	information about the ACF.
+**
+********************************************************************************/
+
+
+#ifndef iwidgets_CItemDelegate_included
+#define iwidgets_CItemDelegate_included
+
+
+// Qt includes
+#include <QtCore/QtGlobal>
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QItemDelegate>
+#else
+#include <QtGui/QItemDelegate>
+#endif
+
+
+// ACF includes
+#include <iwidgets/iwidgets.h>
+
+
+namespace iwidgets
+{
+
+
+/**
+	Standard ACF item view delegator.
+*/
+class CItemDelegate: public QItemDelegate
+{
+public:
+	typedef QItemDelegate BaseClass;
+
+	CItemDelegate(int itemHeight = 20, QObject* parent = NULL);
+
+	/**
+		Set the item height.
+	*/
+	void SetItemHeight(int itemHeight);
+
+	/**
+		Get the item height.
+	*/
+	int GetItemHeight() const;
+
+	// reimplemented (QItemDelegate)
+	virtual QSize sizeHint(const QStyleOptionViewItem& option, const QModelIndex& index) const override;
+	virtual void paint(QPainter* painter, const QStyleOptionViewItem& option, const QModelIndex& index) const override;
+
+private:
+	int m_itemHeight;
+};
+
+
+} // namespace iwidgets
+
+
+#endif // !iwidgets_CItemDelegate_included
+
+
