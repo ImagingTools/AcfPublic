@@ -1,5 +1,0 @@
-Installation creation time: Mon Aug 4 08:13:03 2025
-IACF Version: 0.4.1.158 (925)
-Compiler code: VC17
-
-This distribution based on ACF 2.0.3.826 (5416) and ACF-Solutions 2.1.2.323 (2251)
