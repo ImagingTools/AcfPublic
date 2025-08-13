@@ -166,7 +166,7 @@ bool CSingleDocumentManagerBase::InsertNewDocument(
 			const QByteArray& documentTypeId,
 			bool createView,
 			const QByteArray& viewTypeId,
-			istd::IChangeable** newDocumentPtr,
+			istd::IChangeableSharedPtr* newDocumentPtr,
 			bool beQuiet,
 			bool* ignoredPtr)
 {
@@ -177,7 +177,7 @@ bool CSingleDocumentManagerBase::InsertNewDocument(
 
 	if ((ignoredPtr != NULL) && *ignoredPtr){
 		if (newDocumentPtr != NULL){
-			*newDocumentPtr = m_documentPtr.GetPtr();
+			*newDocumentPtr = m_documentPtr;
 		}
 
 		return true;
@@ -187,7 +187,7 @@ bool CSingleDocumentManagerBase::InsertNewDocument(
 		RegisterDocument();
 
 		if (newDocumentPtr != NULL){
-			*newDocumentPtr = m_documentPtr.GetPtr();
+			*newDocumentPtr = m_documentPtr;
 		}
 
 		return true;
@@ -202,7 +202,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 			const QString* fileNamePtr,
 			bool createView,
 			const QByteArray& viewTypeId,
-			istd::IChangeable** documentPtr,
+			istd::IChangeableSharedPtr* documentPtr,
 			FileToTypeMap* loadedMapPtr,
 			bool beQuiet,
 			bool* ignoredPtr,
@@ -235,7 +235,7 @@ bool CSingleDocumentManagerBase::OpenDocument(
 			}
 
 			if (documentPtr != NULL){
-				*documentPtr = m_documentPtr.GetPtr();
+				*documentPtr = m_documentPtr;
 			}
 		}
 		else{

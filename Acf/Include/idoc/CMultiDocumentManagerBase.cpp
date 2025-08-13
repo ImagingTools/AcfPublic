@@ -221,7 +221,7 @@ bool CMultiDocumentManagerBase::InsertNewDocument(
 			const QByteArray& documentTypeId,
 			bool createView,
 			const QByteArray& viewTypeId,
-			istd::IChangeable** newDocumentPtr,
+			istd::IChangeableSharedPtr* newDocumentPtr,
 			bool beQuiet,
 			bool* ignoredPtr)
 {
@@ -232,7 +232,7 @@ bool CMultiDocumentManagerBase::InsertNewDocument(
 
 		newDocumentDataPtr->isDirty = false;
 		if (newDocumentPtr != NULL){
-			*newDocumentPtr = newDocumentDataPtr->documentPtr.GetPtr();
+			*newDocumentPtr = newDocumentDataPtr->documentPtr;
 		}
 
 		return true;
@@ -247,7 +247,7 @@ bool CMultiDocumentManagerBase::OpenDocument(
 			const QString* fileNamePtr,
 			bool createView,
 			const QByteArray& viewTypeId,
-			istd::IChangeable** documentPtr,
+			istd::IChangeableSharedPtr* documentPtr,
 			FileToTypeMap* loadedMapPtr,
 			bool beQuiet,
 			bool* ignoredPtr,
@@ -281,8 +281,8 @@ bool CMultiDocumentManagerBase::OpenDocument(
 		if (documentTypeIdPtr != NULL){
 			documentTypeId = *documentTypeIdPtr;
 		}
-		istd::IChangeable* openDocumentPtr = OpenSingleDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr, progressManagerPtr);
-		if (openDocumentPtr != NULL){
+		istd::IChangeableSharedPtr openDocumentPtr = OpenSingleDocument(fileName, createView, viewTypeId, documentTypeId, beQuiet, ignoredPtr, progressManagerPtr);
+		if (openDocumentPtr.IsValid()){
 			if (loadedMapPtr != NULL){
 				loadedMapPtr->operator[](fileName) = documentTypeId;
 			}
@@ -559,7 +559,7 @@ bool CMultiDocumentManagerBase::CloseView(istd::IPolymorphic* viewPtr, bool beQu
 
 // protected methods
 
-istd::IChangeable* CMultiDocumentManagerBase::OpenSingleDocument(
+istd::IChangeableSharedPtr CMultiDocumentManagerBase::OpenSingleDocument(
 			const QString& filePath,
 			bool createView,
 			const QByteArray& viewTypeId,
@@ -608,7 +608,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenSingleDocument(
 
 		documentTypeId = existingInfoPtr->documentTypeId;
 
-		return existingInfoPtr->documentPtr.GetPtr();
+		return existingInfoPtr->documentPtr;
 	}
 
 	IDocumentTemplate::Ids documentIds = documentTemplatePtr->GetDocumentTypeIdsForFile(filePath);
@@ -637,7 +637,7 @@ istd::IChangeable* CMultiDocumentManagerBase::OpenSingleDocument(
 
 				infoPtr->isDirty = false;
 
-				return infoPtr.PopPtr()->documentPtr.GetPtr();
+				return infoPtr.PopPtr()->documentPtr;
 			}
 		}
 	}
@@ -888,8 +888,8 @@ bool CMultiDocumentManagerBase::SerializeOpenDocumentList(iser::IArchive& archiv
 			retVal = retVal && archive.Process(documentTypeId);
 			retVal = retVal && archive.EndTag(s_documentTypeIdTag);
 
-			istd::IChangeable* openDocumentPtr = OpenSingleDocument(filePath, false, "", documentTypeId, true, NULL, NULL);
-			if (openDocumentPtr == NULL){
+			istd::IChangeableSharedPtr openDocumentPtr = OpenSingleDocument(filePath, false, "", documentTypeId, true, NULL, NULL);
+			if (!openDocumentPtr.IsValid()){
 				return false;
 			}
 
