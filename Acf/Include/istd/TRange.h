@@ -24,6 +24,7 @@
 
 
 // STL includes
+#include <algorithm>
 #include <cmath>
 
 // Qt includes
