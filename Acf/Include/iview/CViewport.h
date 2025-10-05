@@ -68,6 +68,8 @@ public:
 
 	void SetShowInfoText(bool on);
 
+	void SetDrawBorder(bool on);
+
 	virtual void SetEditMode(int mode);
 
 	// reimplemented (iview::IShapeView)
@@ -115,6 +117,7 @@ protected:
 	virtual void mousePressEvent(QMouseEvent* event) override;
 	virtual void mouseReleaseEvent(QMouseEvent* event) override;
 	virtual void mouseMoveEvent(QMouseEvent* event) override;
+	virtual void leaveEvent(QEvent* event) override;
 
 	// reimplemented (iview::CViewBase)
 	virtual void SetMousePointer(MousePointerMode mode) override;
@@ -135,6 +138,7 @@ private:
 	CConsoleBase* m_framePtr = nullptr;
 
 	bool m_showInfoText = false;
+	bool m_drawBorder = true;
 	QString m_infoText;
 
 	friend class CConsoleBase;

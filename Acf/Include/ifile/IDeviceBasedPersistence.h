@@ -35,6 +35,11 @@ namespace ibase
 	class IProgressManager;
 }
 
+namespace istd
+{
+	class IChangeable;
+}
+
 
 namespace ifile
 {

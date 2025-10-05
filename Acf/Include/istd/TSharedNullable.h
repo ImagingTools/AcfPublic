@@ -58,6 +58,15 @@ public:
 	T& Emplace();
 	void SetNull();
 
+	bool isValid() const
+	{
+		return false;
+	}
+	bool isNull() const
+	{
+		return true;
+	}
+
 	// operators
 	TSharedNullable& operator=(const T& value);
 	TSharedNullable& operator=(T&& value);
@@ -105,6 +114,18 @@ public:
 private:
 	std::shared_ptr<TNullable<T>> m_dataPtr;
 };
+
+template <class T>
+bool Less(const istd::TSharedNullable<T> &lhs, const istd::TSharedNullable<T> &rhs)
+{
+	return *lhs < *rhs;
+}
+
+
+template <class T>
+inline uint qHash(const TSharedNullable<T> &key, uint seed){
+	return qHash(*key, seed);
+}
 
 
 // public methods

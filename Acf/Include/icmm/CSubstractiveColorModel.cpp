@@ -57,6 +57,7 @@ CSubstractiveColorModel::CSubstractiveColorModel(const ColorantIds& colorantIds)
 CSubstractiveColorModel::CSubstractiveColorModel(const CSubstractiveColorModel& other)
 	: CSubstractiveColorModel()
 {
+	CSubstractiveColorModelBase::operator=(other);
 	m_colorants.SetBaseObject(other.m_colorants);
 }
 
@@ -74,6 +75,7 @@ CSubstractiveColorModel::CSubstractiveColorModel(const ISubstractiveColorModel& 
 
 CSubstractiveColorModel& CSubstractiveColorModel::operator=(const CSubstractiveColorModel& other)
 {
+	CSubstractiveColorModelBase::operator=(other);
 	m_colorants.SetBaseObject(other.m_colorants);
 	return *this;
 }
@@ -351,6 +353,12 @@ bool CSubstractiveColorModel::Serialize(iser::IArchive& archive)
 	return retVal;
 }
 
+// reimplemented (istd::IChangeable)
+
+istd::IChangeable *CSubstractiveColorModel::CloneMe(CompatibilityMode /*mode*/) const
+{
+	return new CSubstractiveColorModel(*this);
+}
 
 // protected static methods
 
