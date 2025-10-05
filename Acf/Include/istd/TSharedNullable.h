@@ -122,12 +122,6 @@ bool Less(const istd::TSharedNullable<T> &lhs, const istd::TSharedNullable<T> &r
 }
 
 
-template <class T>
-inline uint qHash(const TSharedNullable<T> &key, uint seed){
-	return qHash(*key, seed);
-}
-
-
 // public methods
 
 template <class T>
@@ -433,4 +427,9 @@ bool TSharedNullable<T>::operator!=(const T& value) const
 
 } // namespace istd
 
+
+template <class T>
+inline unsigned int qHash(const istd::TSharedNullable<T> &key, unsigned int seed){
+	return qHash(*key, seed);
+}
 
