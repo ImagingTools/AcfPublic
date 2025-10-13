@@ -141,6 +141,12 @@ public:
 	static bool SerializeEnum(
 				iser::IArchive& archive,
 				EnumType& enumValue,
+				const QMetaObject* metaObjectPtr);
+
+	template <typename EnumType>
+	static bool SerializeEnum(
+				iser::IArchive& archive,
+				EnumType& enumValue,
 				const QObject* objectPtr);
 
 	/**
@@ -181,7 +187,6 @@ public:
 		istd::TIFactory<ObjectInterface>& objectFactoryPtr,
 		const QByteArray& tagName);
 };
-
 
 // public template methods
 
@@ -342,11 +347,27 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 }
 
 
+template<typename EnumType>
+bool CPrimitiveTypesSerializer::SerializeEnum(
+			IArchive& archive,
+			EnumType& enumValue,
+			const QObject* objectPtr)
+{
+	const QMetaObject* metaObjectPtr = nullptr;
+
+	if (objectPtr != nullptr){
+		metaObjectPtr = objectPtr->metaObject();
+	}
+
+	return SerializeEnum(archive, enumValue, metaObjectPtr);
+}
+
+
 template <typename EnumType>
 bool CPrimitiveTypesSerializer::SerializeEnum(
 			iser::IArchive& archive,
 			EnumType& enumValue,
-			const QObject* objectPtr)
+			const QMetaObject* metaObjectPtr)
 {
 	QByteArray enumValueAsText;
 	QMetaEnum foundEnumMeta;
@@ -354,9 +375,7 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 	QString enumTypeName = typeid(EnumType).name();
 	enumTypeName = enumTypeName.mid(enumTypeName.lastIndexOf(":") + 1);
 
-	if (objectPtr != NULL){
-		const QMetaObject* metaObjectPtr = objectPtr->metaObject();
-
+	if (metaObjectPtr != NULL){
 		// Iterate over all enums of the class:
 		int enumeratorsCount = metaObjectPtr->enumeratorCount();
 		for (int enumeratorIndex = 0; enumeratorIndex < enumeratorsCount; ++enumeratorIndex){
@@ -370,7 +389,7 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 				int keysCount = enumMeta.keyCount();
 				for (int keyIndex = 0; keyIndex < keysCount; ++keyIndex){
 				
-					if (enumMeta.value(keyIndex) == enumValue){
+					if (enumMeta.value(keyIndex) == (int)enumValue){
 						enumValueAsText = enumMeta.valueToKey(keyIndex);
 						break;
 					}
@@ -401,7 +420,7 @@ bool CPrimitiveTypesSerializer::SerializeEnum(
 		}
 	}
 	else{
-		int value = enumValue;
+		int value = (int)enumValue;
 
 		retVal = retVal && archive.Process(value);
 
