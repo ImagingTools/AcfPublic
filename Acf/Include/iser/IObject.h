@@ -20,12 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef iser_IObject_included
-#define iser_IObject_included
+#pragma once
 
 
 // Qt includes
-#include <QByteArray>
+#include <QtCore/QByteArray>
 
 // ACF includes
 #include <istd/TIFactory.h>
@@ -67,6 +66,4 @@ typedef istd::TSharedInterfacePtr<iser::IObject> IObjectSharedPtr;
 
 } // namespace iser
 
-
-#endif // !iser_IObject_included
 
