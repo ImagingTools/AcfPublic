@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_IRegistriesManager_included
-#define icomp_IRegistriesManager_included
+#pragma once
 
 
 // Qt includes
@@ -54,8 +53,5 @@ public:
 
 
 } // namespace icomp
-
-
-#endif // !icomp_IRegistriesManager_included
 
 

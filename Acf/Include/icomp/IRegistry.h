@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_IRegistry_included
-#define icomp_IRegistry_included
+#pragma once
 
 
 // Qt includes
@@ -31,9 +30,7 @@
 
 // ACF includes
 #include <istd/TDelPtr.h>
-
 #include <iser/ISerializable.h>
-
 #include <icomp/IRegistryElement.h>
 #include <icomp/CComponentAddress.h>
 
@@ -204,8 +201,5 @@ public:
 
 
 } //namespace icomp
-
-
-#endif // !icomp_IRegistry_included
 
 

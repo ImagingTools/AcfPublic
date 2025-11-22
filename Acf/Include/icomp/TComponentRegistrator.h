@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_TComponentRegistrator_included
-#define icomp_TComponentRegistrator_included
+#pragma once
 
 
 // Qt includes
@@ -99,8 +98,5 @@ const QString& TComponentRegistrator<Component>::GetKeywords() const
 
 
 } // namespace icomp
-
-
-#endif // !icomp_TComponentRegistrator_included
 
 
