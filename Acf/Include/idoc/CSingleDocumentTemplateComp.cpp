@@ -84,7 +84,7 @@ idoc::IDocumentTemplate::ViewUniquePtr CSingleDocumentTemplateComp::CreateView(
 				m_viewCompFact.IsValid() &&
 				IsDocumentTypeSupported(documentTypeId) &&
 				IsViewTypeSupported(viewTypeId)){
-		std::unique_ptr<icomp::IComponent> componentPtr(m_viewCompFact.CreateComponent());
+		icomp::IComponentUniquePtr componentPtr = (m_viewCompFact.CreateComponent());
 
 		imod::IObserver* observerPtr = m_viewCompFact.ExtractInterface(componentPtr.get());
 		ViewUniquePtr viewPtr = ExtractViewInterface(componentPtr);
@@ -127,7 +127,7 @@ idoc::IUndoManagerUniquePtr CSingleDocumentTemplateComp::CreateUndoManager(const
 
 // protected methods
 
-idoc::IDocumentTemplate::ViewUniquePtr CSingleDocumentTemplateComp::ExtractViewInterface(std::unique_ptr<icomp::IComponent>& componentPtr) const
+idoc::IDocumentTemplate::ViewUniquePtr CSingleDocumentTemplateComp::ExtractViewInterface(icomp::IComponentUniquePtr& componentPtr) const
 {
 	ViewUniquePtr viewPtr(componentPtr.get(), [&componentPtr, this]()
 	{

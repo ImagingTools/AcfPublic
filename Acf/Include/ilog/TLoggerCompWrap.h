@@ -20,13 +20,11 @@
 ********************************************************************************/
 
 
-#ifndef ilog_TLoggerCompWrap_included
-#define ilog_TLoggerCompWrap_included
+#pragma once
 
 
 // ACF includes
 #include <icomp/CComponentBase.h>
-#include <icomp/CComponentContext.h>
 #include <ilog/CLoggerBase.h>
 #include <ilog/ITracingConfiguration.h>
 
@@ -128,7 +126,7 @@ void TLoggerCompWrap<Base>::DecorateMessage(
 	BaseClass2::DecorateMessage(category, id, flags, message, messageSource);
 
 	if (*m_showComponentIdAttrPtr){
-		const icomp::CComponentContext* contextPtr = dynamic_cast<const icomp::CComponentContext*>(BaseClass::GetComponentContext());
+		const icomp::IComponentContext* contextPtr = BaseClass::GetComponentContext().get();
 		if (contextPtr != NULL){
 			if (messageSource.isEmpty()){
 				messageSource = contextPtr->GetContextId();
@@ -172,8 +170,5 @@ typedef TLoggerCompWrap<icomp::CComponentBase> CLoggerComponentBase;
 
 
 } // namespace ilog
-
-
-#endif // !ilog_TLoggerCompWrap_included
 
 

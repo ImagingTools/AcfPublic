@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef ipackage_CComponentAccessor_included
-#define ipackage_CComponentAccessor_included
+#pragma once
 
 
 // ACF includes
@@ -48,7 +47,7 @@ public:
 		\param	configFile  	(Optional) the configuration file.
 	*/
 	explicit CComponentAccessor(
-				const QString& registryFile, 
+				const QString& registryFile,
 				const QString& configFile = QString(),
 				bool isDiagnosticEnabled = false,
 				bool manualAutoInit = false);
@@ -70,7 +69,7 @@ private:
 	icomp::CCompositeComponent m_mainComponent;
 
 	istd::TDelPtr<icomp::IComponentStaticInfo> m_mainComponentStaticInfoPtr;
-	istd::TDelPtr<icomp::IComponentContext> m_mainComponentContextPtr;
+	icomp::IComponentContextSharedPtr m_mainComponentContextPtr;
 };
 
 
@@ -84,8 +83,4 @@ InterfaceType* CComponentAccessor::GetComponentInterface(const QByteArray& compo
 
 
 } // namespace ipackage
-
-
-#endif // !ipackage_CComponentAccessor_included
-
 

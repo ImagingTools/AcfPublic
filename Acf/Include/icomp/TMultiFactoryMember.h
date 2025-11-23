@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_TMultiFactoryMember_included
-#define icomp_TMultiFactoryMember_included
+#pragma once
 
 
 // ACF includes
@@ -61,7 +60,7 @@ public:
 	/**
 		Create component for specified index without extracting any interface.
 	*/
-	IComponent* CreateComponent(int index) const;
+	icomp::IComponentUniquePtr CreateComponent(int index) const;
 
 	/**
 		Create instance of interface for specified index.
@@ -115,10 +114,10 @@ bool TMultiFactoryMember<Interface>::IsValid() const
 
 
 template <class Interface>
-IComponent* TMultiFactoryMember<Interface>::CreateComponent(int index) const
+icomp::IComponentUniquePtr TMultiFactoryMember<Interface>::CreateComponent(int index) const
 {
 	if ((m_definitionComponentPtr != NULL) && BaseClass::IsValid()){
-		const ICompositeComponent* parentPtr = m_definitionComponentPtr->GetParentComponent();
+		const ICompositeComponent* parentPtr = dynamic_cast<const ICompositeComponent*>(m_definitionComponentPtr->GetParentComponent());
 		if (parentPtr != NULL){
 			const QByteArray& componentId = BaseClass::operator[](index);
 
@@ -134,20 +133,19 @@ IComponent* TMultiFactoryMember<Interface>::CreateComponent(int index) const
 		}
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 
 template <class Interface>
 istd::TUniqueInterfacePtr<Interface> TMultiFactoryMember<Interface>::CreateInstance(int index) const
 {
-	icomp::IComponent* newComponentPtr = CreateComponent(index);
-	if (newComponentPtr != nullptr){
-		return istd::TUniqueInterfacePtr<Interface>(newComponentPtr, [newComponentPtr](){
-			Interface* retVal = BaseClass2::ExtractInterface<Interface>(newComponentPtr);
-
-			return retVal;
-		});
+	IComponentUniquePtr newComponentPtr = CreateComponent(index);
+	if (newComponentPtr != nullptr) {
+		Interface* retVal = BaseClass2::ExtractInterface<Interface>(newComponentPtr.get());
+		if (retVal != NULL) {
+			return istd::TUniqueInterfacePtr<Interface>(newComponentPtr.release(), retVal);
+		}
 	}
 
 	return istd::TUniqueInterfacePtr<Interface>();
@@ -174,8 +172,5 @@ TMultiFactoryMember<Interface>::TMultiFactoryMember(const TMultiFactoryMember& p
 
 
 } // namespace icomp
-
-
-#endif // !icomp_TMultiFactoryMember_included
 
 

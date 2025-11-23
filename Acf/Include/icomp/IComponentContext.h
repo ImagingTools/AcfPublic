@@ -20,11 +20,12 @@
 ********************************************************************************/
 
 
-#ifndef icomp_IComponentContext_included
-#define icomp_IComponentContext_included
+#pragma once
 
 
+// ACF includes
 #include <istd/IPolymorphic.h>
+#include <istd/TInterfacePtr.h>
 
 
 namespace iser
@@ -87,9 +88,10 @@ public:
 };
 
 
+typedef std::unique_ptr<icomp::IComponentContext> IComponentContextUniquePtr;
+typedef std::shared_ptr<icomp::IComponentContext> IComponentContextSharedPtr;
+
+
 } // namespace icomp
-
-
-#endif // !icomp_IComponentContext_included
 
 

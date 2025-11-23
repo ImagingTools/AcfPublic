@@ -78,7 +78,7 @@ bool CGuiComponentBase::CreateGui(QWidget* parentPtr)
 				widgetId = *m_objectIdAttrPtr;
 			}
 			else{
-				widgetId = GetComponentId(GetComponentContext());
+				widgetId = GetComponentId(GetComponentContext().get());
 			}
 
 			componentId = QByteArray("Component [") + widgetId + QByteArray("]");

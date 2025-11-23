@@ -54,7 +54,7 @@ public:
 	const IRegistry& GetRegistry() const;
 
 	// reimplemented (icomp::IRealComponentStaticInfo)
-	virtual IComponent* CreateComponent() const override;
+	virtual IComponentUniquePtr CreateComponent() const override;
 
 	//	reimplemented (icomp::IComponentStaticInfo)
 	virtual int GetComponentType() const override;

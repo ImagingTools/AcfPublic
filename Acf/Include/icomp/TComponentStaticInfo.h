@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_TComponentStaticInfo_included
-#define icomp_TComponentStaticInfo_included
+#pragma once
 
 
 // ACF includes
@@ -42,7 +41,7 @@ public:
 	explicit TComponentStaticInfo(const IRealComponentStaticInfo* baseComponentPtr = NULL);
 
 	// reimplemented (icomp::IRealComponentStaticInfo)
-	virtual IComponent* CreateComponent() const override;
+	virtual IComponentUniquePtr CreateComponent() const override;
 
 	//	reimplemented (icomp::IComponentStaticInfo)
 	virtual int GetComponentType() const override;
@@ -61,11 +60,11 @@ TComponentStaticInfo<Component>::TComponentStaticInfo(const IRealComponentStatic
 // reimplemented (icomp::IRealComponentStaticInfo)
 
 template <class Component>
-IComponent* TComponentStaticInfo<Component>::CreateComponent() const
+IComponentUniquePtr TComponentStaticInfo<Component>::CreateComponent() const
 {
 	TComponentWrap<Component>* componentPtr = new TComponentWrap<Component>();
 
-	return componentPtr;
+	return IComponentUniquePtr(componentPtr);
 }
 
 
@@ -79,8 +78,5 @@ int TComponentStaticInfo<Component>::GetComponentType() const
 
 
 } // namespace icomp
-
-
-#endif // !icomp_TComponentStaticInfo_included
 
 

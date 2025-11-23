@@ -112,7 +112,6 @@ public:
 		m_interfacePtr = interfacePtr;
 	}
 
-
 	RootObjectPtr& GetBasePtr()
 	{
 		return m_rootPtr;
@@ -133,6 +132,11 @@ protected:
 	TInterfacePtr(istd::IPolymorphic* rootPtr, const ExtractInterfaceFunc& extractInterface)
 	{
 		SetPtr(rootPtr, extractInterface);
+	}
+
+	TInterfacePtr(istd::IPolymorphic* rootPtr, InterfaceType* interfacePtr)
+	{
+		SetPtr(rootPtr, interfacePtr);
 	}
 
 	/**
@@ -187,11 +191,11 @@ protected:
 };
 
 
-template <class InterfaceType>
-class TUniqueInterfacePtr : public TInterfacePtr<InterfaceType, std::unique_ptr<istd::IPolymorphic>>
+template <class InterfaceType, class RootIntefaceType = istd::IPolymorphic>
+class TUniqueInterfacePtr : public TInterfacePtr<InterfaceType, std::unique_ptr<RootIntefaceType>>
 {
 public:
-	typedef TInterfacePtr<InterfaceType, std::unique_ptr<istd::IPolymorphic>> BaseClass;
+	typedef TInterfacePtr<InterfaceType, std::unique_ptr<RootIntefaceType>> BaseClass;
 	typedef typename BaseClass::ExtractInterfaceFunc ExtractInterfaceFunc;
 
 	TUniqueInterfacePtr()
@@ -205,8 +209,13 @@ public:
 	{
 	}
 
-	TUniqueInterfacePtr(istd::IPolymorphic* rootPtr, const ExtractInterfaceFunc& extractInterface)
+	TUniqueInterfacePtr(RootIntefaceType* rootPtr, const ExtractInterfaceFunc& extractInterface)
 		:BaseClass(rootPtr, extractInterface)
+	{
+	}
+
+	TUniqueInterfacePtr(RootIntefaceType* rootPtr, InterfaceType* interfacePtr)
+		:BaseClass(rootPtr, interfacePtr)
 	{
 	}
 
@@ -283,16 +292,23 @@ public:
 };
 
 
-template <class InterfaceType>
-class TSharedInterfacePtr : public TInterfacePtr<InterfaceType, std::shared_ptr<istd::IPolymorphic>>
+template <class InterfaceType, class RootIntefaceType = istd::IPolymorphic>
+class TSharedInterfacePtr : public TInterfacePtr<InterfaceType, std::shared_ptr<RootIntefaceType>>
 {
 public:
-	typedef TInterfacePtr<InterfaceType, std::shared_ptr<istd::IPolymorphic>> BaseClass;
+	typedef TInterfacePtr<InterfaceType, std::shared_ptr<RootIntefaceType>> BaseClass;
 	typedef typename BaseClass::ExtractInterfaceFunc ExtractInterfaceFunc;
 
 	TSharedInterfacePtr()
 		:BaseClass()
 	{
+	}
+
+	~TSharedInterfacePtr()
+	{
+		BaseClass::m_rootPtr.reset();
+
+		BaseClass::m_interfacePtr = nullptr;
 	}
 
 
@@ -301,7 +317,7 @@ public:
 	{
 	}
 
-	TSharedInterfacePtr(istd::IPolymorphic* rootPtr, const ExtractInterfaceFunc& extractInterface)
+	TSharedInterfacePtr(RootIntefaceType* rootPtr, const ExtractInterfaceFunc& extractInterface)
 		:BaseClass(rootPtr, extractInterface)
 	{
 	}
@@ -466,6 +482,7 @@ public:
 protected:
 	ImplPtr m_implPtr;
 };
+
 
 } // namespace istd
 

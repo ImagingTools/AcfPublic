@@ -20,14 +20,12 @@
 ********************************************************************************/
 
 
-#ifndef icomp_TSimComponentsFactory_included
-#define icomp_TSimComponentsFactory_included
+#pragma once
 
 
 // ACF includes
 #include <istd/TIFactory.h>
 #include <istd/CClassInfo.h>
-
 #include <icomp/IComponent.h>
 #include <icomp/TComponentWrap.h>
 #include <icomp/TSimComponentWrap.h>
@@ -58,7 +56,7 @@ public:
 	virtual icomp::IComponent* CreateInstance(const QByteArray& keyId = "") const override;
 
 	// reimplemented (icomp::ICompositeComponent)
-	virtual IComponent* CreateSubcomponent(const QByteArray& componentId) const override;
+	virtual IComponentUniquePtr CreateSubcomponent(const QByteArray& componentId) const override;
 
 private:
 	KeyList m_factoryKeys;
@@ -103,7 +101,7 @@ icomp::IComponent* TSimComponentsFactory<Base>::CreateInstance(const QByteArray&
 // reimplemented (icomp::ICompositeComponent)
 
 template <class Base>
-IComponent* TSimComponentsFactory<Base>::CreateSubcomponent(const QByteArray& componentId) const
+IComponentUniquePtr TSimComponentsFactory<Base>::CreateSubcomponent(const QByteArray& componentId) const
 {
 	IComponent* componentPtr = BaseClass::CreateSubcomponent(componentId);
 	if (componentPtr != NULL){
@@ -115,8 +113,5 @@ IComponent* TSimComponentsFactory<Base>::CreateSubcomponent(const QByteArray& co
 
 
 } // namespace icomp
-
-
-#endif // !icomp_TSimComponentsFactory_included
 
 

@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_TAttributeStaticInfo_included
-#define icomp_TAttributeStaticInfo_included
+#pragma once
 
 
 // Qt includes
@@ -29,7 +28,6 @@
 
 // ACF includes
 #include <istd/CClassInfo.h>
-
 #include <icomp/IRealAttributeStaticInfo.h>
 #include <icomp/CBaseComponentStaticInfo.h>
 
@@ -188,8 +186,5 @@ int TAttributeStaticInfo<Attribute>::GetAttributeFlags() const
 
 
 } // namespace icomp
-
-
-#endif // !icomp_TAttributeStaticInfo_included
 
 

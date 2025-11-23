@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef icomp_TMultiAttributeMember_included
-#define icomp_TMultiAttributeMember_included
+#pragma once
 
 
 // ACF includes
@@ -161,8 +160,8 @@ bool TMultiAttributeMember<Attribute>::InitInternal(
 	Q_ASSERT(ownerPtr != NULL);
 
 	const QByteArray& attributeId = staticInfo.GetAttributeId();
-	const IComponentContext* componentContextPtr = ownerPtr->GetComponentContext();
-	if (componentContextPtr != NULL){
+	IComponentContextSharedPtr componentContextPtr = ownerPtr->GetComponentContext();
+	if (componentContextPtr.get()){
 		int definitionLevel = -1;
 		const iser::IObject* attributePtr = componentContextPtr->GetAttribute(attributeId, &definitionLevel);
 		m_attributePtr = dynamic_cast<const Attribute*>(attributePtr);
@@ -171,9 +170,9 @@ bool TMultiAttributeMember<Attribute>::InitInternal(
 			Q_ASSERT(definitionLevel >= 0);
 
 			if (definitionComponentPtr != NULL){
-				while (definitionLevel > 0){
+				while (definitionLevel > 0 && (ownerPtr != nullptr)){
 					ownerPtr = ownerPtr->GetParentComponent();
-					Q_ASSERT(ownerPtr != NULL);
+//					Q_ASSERT(ownerPtr != NULL);
 
 					--definitionLevel;
 				}
@@ -240,8 +239,5 @@ public:
 
 
 } // namespace icomp
-
-
-#endif // !icomp_TMultiAttributeMember_included
 
 
