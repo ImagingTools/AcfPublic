@@ -33,7 +33,7 @@ namespace icmm
 {
 
 
-class CTristimulusSpecification: virtual public ITristimulusSpecification
+class CTristimulusSpecification: virtual public ITristimulusSpecification, virtual public iser::ISerializable
 {
 public:
 	CTristimulusSpecification(
@@ -52,6 +52,9 @@ public:
 
 	// reimplemented (istd::IChangeable)
 	virtual bool IsEqual(const istd::IChangeable& other) const override;
+	
+	// reimplemented (iser::ISerializable)
+	virtual bool Serialize(iser::IArchive& archive) override;
 
 	bool operator==(const CTristimulusSpecification& other) const;
 
@@ -61,8 +64,8 @@ public:
 private:
 	ObserverType m_observerType;
 	AstmTableType m_method;
-	std::shared_ptr<IIlluminant> m_illuminant;
-	std::shared_ptr<ISpectralColorSpecification> m_baseSpec;
+	std::shared_ptr<IIlluminant> m_illuminantPtr;
+	std::shared_ptr<ISpectralColorSpecification> m_baseSpecPtr;
 };
 
 

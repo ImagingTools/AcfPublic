@@ -24,6 +24,7 @@
 
 
 // ACF includes
+#include <iser/ISerializable.h>
 #include <icmm/IColorSpecification.h>
 #include <icmm/ISpectrumInfoProvider.h>
 
@@ -32,7 +33,10 @@ namespace icmm
 {
 
 
-class ISpectralColorSpecification: virtual public IColorSpecification, virtual public ISpectrumInfoProvider
+class ISpectralColorSpecification:
+			virtual public IColorSpecification,
+			virtual public ISpectrumInfoProvider,
+			virtual public iser::ISerializable
 {
 public:
 	typedef std::shared_ptr<const ISpectralColorSpecification> ConstSpectralColorSpecPtr;
