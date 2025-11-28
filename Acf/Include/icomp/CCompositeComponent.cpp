@@ -116,9 +116,9 @@ bool CCompositeComponent::EnsureAutoInitComponentsCreated() const
 
 IComponentSharedPtr CCompositeComponent::GetSubcomponent(const QByteArray& componentId) const
 {
-	if (m_contextPtr != nullptr){
-		QWriteLocker lock(&m_mutex);
+	QWriteLocker lock(&m_mutex);
 
+	if (m_contextPtr != nullptr){
 		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
 		if (iter == m_componentMap.constEnd()){
 			ComponentInfo& componentInfo = m_componentMap[componentId];
@@ -144,8 +144,6 @@ IComponentSharedPtr CCompositeComponent::GetSubcomponent(const QByteArray& compo
 		}
 	}
 	else{
-		QReadLocker lock(&m_mutex);
-
 		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
 		if (iter != m_componentMap.constEnd()){
 			return iter.value().componentPtr;
@@ -161,9 +159,9 @@ IComponentSharedPtr CCompositeComponent::GetSubcomponent(const QByteArray& compo
 
 IComponentContextSharedPtr CCompositeComponent::GetSubcomponentContext(const QByteArray& componentId) const
 {
-	if (m_contextPtr != nullptr){
-		QWriteLocker lock(&m_mutex);
+	QWriteLocker lock(&m_mutex);
 
+	if (m_contextPtr != nullptr){
 		ComponentInfo& componentInfo = m_componentMap[componentId];
 		if (!componentInfo.isContextInitialized){
 			componentInfo.isContextInitialized = true;
@@ -174,8 +172,6 @@ IComponentContextSharedPtr CCompositeComponent::GetSubcomponentContext(const QBy
 		return componentInfo.contextPtr;
 	}
 	else{
-		QReadLocker lock(&m_mutex);
-
 		ComponentMap::ConstIterator iter = m_componentMap.constFind(componentId);
 		if (iter != m_componentMap.constEnd()){
 			return iter.value().contextPtr;
