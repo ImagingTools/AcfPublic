@@ -27,7 +27,6 @@
 #include <QtCore/QString>
 
 // ACF includes
-#include <istd/TSmartPtr.h>
 #include <ibase/IProgressManager.h>
 #include <idoc/IDocumentMetaInfo.h>
 
@@ -42,8 +41,6 @@ namespace ifile
 class IFileMetaInfoProvider: virtual public istd::IPolymorphic
 {
 public:
-	typedef istd::TSmartPtr<idoc::IDocumentMetaInfo> MetaInfoPtr;
-
 	/**
 		Create meta information of an existing file.
 		\param filePath					Path of the file.
@@ -51,7 +48,7 @@ public:
 		\return Pointer to the meta-info instance or \c NULL, if no information could be provided.
 		\note The caller of this method is responsible for the memory management of the created meta-info object.
 	*/
-	virtual MetaInfoPtr GetFileMetaInfo(const QString& filePath, ibase::IProgressManager* progressManagerPtr = NULL) const = 0;
+	virtual idoc::MetaInfoPtr GetFileMetaInfo(const QString& filePath, ibase::IProgressManager* progressManagerPtr = NULL) const = 0;
 };
 
 

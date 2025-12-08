@@ -117,6 +117,11 @@ public:
 		return m_rootPtr;
 	}
 
+	const RootObjectPtr& GetBasePtr() const
+	{
+		return m_rootPtr;
+	}
+
 protected:
 	TInterfacePtr()
 		:m_interfacePtr(nullptr)
@@ -261,6 +266,7 @@ public:
 		return BaseClass::m_rootPtr.release();
 	}
 
+
 	InterfaceType* PopInterfacePtr()
 	{
 		InterfaceType* retVal = BaseClass::m_interfacePtr;
@@ -272,6 +278,7 @@ public:
 		return retVal;
 	}
 
+
 	void TakeOver(TUniqueInterfacePtr<InterfaceType>& from)
 	{
 		BaseClass::m_interfacePtr = from.m_interfacePtr;
@@ -279,15 +286,36 @@ public:
 		BaseClass::m_rootPtr.reset(from.PopPtr());
 	}
 
+	
 	template<class SourceInterfaceType>
-	void MoveCastedPtr(TUniqueInterfacePtr<SourceInterfaceType>& source)
+	bool MoveCastedPtr(TUniqueInterfacePtr<SourceInterfaceType>& source)
 	{
 		InterfaceType* targetPtr = dynamic_cast<InterfaceType*>(source.GetPtr());
-		if (targetPtr != nullptr){
+		if (targetPtr != nullptr) {
 			BaseClass::m_rootPtr = std::move(source.GetBasePtr());
 
 			BaseClass::m_interfacePtr = targetPtr;
+
+			return true;
 		}
+
+		return false;
+	}
+
+	
+	template<class SourceInterfaceType>
+	bool MoveCastedPtr(TUniqueInterfacePtr<SourceInterfaceType>&& source)
+	{
+		InterfaceType* targetPtr = dynamic_cast<InterfaceType*>(source.GetPtr());
+		if (targetPtr != nullptr) {
+			BaseClass::m_rootPtr = std::move(source.GetBasePtr());
+
+			BaseClass::m_interfacePtr = targetPtr;
+
+			return true;
+		}
+
+		return false;
 	}
 };
 
@@ -305,6 +333,11 @@ public:
 	}
 
 	~TSharedInterfacePtr()
+	{
+		Reset();
+	}
+
+	void Reset()
 	{
 		BaseClass::m_rootPtr.reset();
 
@@ -334,11 +367,22 @@ public:
 	}
 
 	/**
+		Copy constructor.
+		This implementation has no function and is provided only for compatibility with STL.
+		The source pointer must be invalid (NULL).
+	*/
+	TSharedInterfacePtr(const std::shared_ptr<RootIntefaceType>& ptr)
+	{
+		BaseClass::m_rootPtr = ptr;
+		BaseClass::m_interfacePtr = dynamic_cast<InterfaceType*>(ptr.get());
+	}
+
+	/**
 		Move constructor.
 	*/
 	TSharedInterfacePtr(TSharedInterfacePtr&& ptr)
 	{
-		BaseClass::m_rootPtr = ptr.m_rootPtr;
+		BaseClass::m_rootPtr = std::move(ptr.m_rootPtr);
 		BaseClass::m_interfacePtr = ptr.m_interfacePtr;
 	}
 
@@ -389,6 +433,22 @@ public:
 		return *this;
 	}
 
+	template <typename OtherInterface>
+	static TSharedInterfacePtr<InterfaceType> CreateFromUnique(TUniqueInterfacePtr<OtherInterface>& uniquePtr)
+	{
+		TSharedInterfacePtr<InterfaceType> retVal;
+
+		InterfaceType* interfacePtr = dynamic_cast<InterfaceType*>(uniquePtr.GetPtr());
+		if (interfacePtr != nullptr) {
+			retVal.SetPtr(uniquePtr.GetBasePtr().get(), interfacePtr);
+
+			uniquePtr.PopPtr();
+		}
+
+		return retVal;
+	}
+
+
 	static TSharedInterfacePtr<InterfaceType> CreateFromUnique(TUniqueInterfacePtr<InterfaceType>& uniquePtr)
 	{
 		TSharedInterfacePtr<InterfaceType> retVal;
@@ -407,27 +467,68 @@ public:
 		return retVal;
 	}
 
-
 	template<class SourceInterfaceType>
-	void MoveCastedPtr(TUniqueInterfacePtr<SourceInterfaceType>& source)
+	bool MoveCastedPtr(TUniqueInterfacePtr<SourceInterfaceType>& source)
 	{
+		if (!source.IsValid()) {
+			Reset();
+
+			return true;
+		}
+
 		InterfaceType* targetPtr = dynamic_cast<InterfaceType*>(source.GetPtr());
 		if (targetPtr != nullptr){
 			BaseClass::m_rootPtr = std::move(source.GetBasePtr());
 
 			BaseClass::m_interfacePtr = targetPtr;
+
+			return true;
 		}
+
+		return false;
 	}
 
 	template<class SourceInterfaceType>
-	void SetCastedPtr(TSharedInterfacePtr<SourceInterfaceType>& source)
+	bool MoveCastedPtr(TUniqueInterfacePtr<SourceInterfaceType>&& source)
 	{
+		if (!source.IsValid()) {
+			Reset();
+
+			return true;
+		}
+		
 		InterfaceType* targetPtr = dynamic_cast<InterfaceType*>(source.GetPtr());
-		if (targetPtr != nullptr){
+		if (targetPtr != nullptr) {
+			BaseClass::m_rootPtr = std::move(source.GetBasePtr());
+
+			BaseClass::m_interfacePtr = targetPtr;
+
+			return true;
+		}
+
+		return false;
+	}
+
+
+	template<class SourceInterfaceType>
+	bool SetCastedPtr(const TSharedInterfacePtr<SourceInterfaceType>& source)
+	{
+		if (!source.IsValid()) {
+			Reset();
+
+			return true;
+		}
+
+		InterfaceType* targetPtr = dynamic_cast<InterfaceType*>(source.GetPtr());
+		if (targetPtr != nullptr) {
 			BaseClass::m_rootPtr = source.GetBasePtr();
 
 			BaseClass::m_interfacePtr = targetPtr;
+
+			return true;
 		}
+
+		return false;
 	}
 };
 

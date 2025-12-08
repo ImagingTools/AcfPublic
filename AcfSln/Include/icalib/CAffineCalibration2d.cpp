@@ -130,7 +130,7 @@ const imath::IUnitInfo* CAffineCalibration2d::GetResultUnitInfo() const
 }
 
 
-const i2d::ICalibration2d* CAffineCalibration2d::CreateCombinedCalibration(const i2d::ITransformation2d& transformation) const
+istd::TUniqueInterfacePtr<i2d::ICalibration2d> CAffineCalibration2d::CreateCombinedCalibration(const i2d::ITransformation2d& transformation) const
 {
 	const i2d::CAffineTransformation2d* affineTransformPtr = dynamic_cast<const i2d::CAffineTransformation2d*>(&transformation);
 	if (affineTransformPtr != NULL){
@@ -141,7 +141,7 @@ const i2d::ICalibration2d* CAffineCalibration2d::CreateCombinedCalibration(const
 		return combinedTransformPtr;
 	}
 
-	return NULL;
+	return nullptr;
 }
 
 
@@ -224,7 +224,7 @@ bool CAffineCalibration2d::CopyFrom(const istd::IChangeable& object, Compatibili
 }
 
 
-istd::IChangeable* CAffineCalibration2d::CloneMe(CompatibilityMode /*mode*/) const
+istd::IChangeableUniquePtr CAffineCalibration2d::CloneMe(CompatibilityMode /*mode*/) const
 {
 	return new CAffineCalibration2d(GetTransformation());
 }

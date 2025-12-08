@@ -227,7 +227,7 @@ iinsp::ISupplier::WorkStatus CPositionFromImageSupplierComp::ProduceObject(Produ
 		m_outputCalibrationPtr.SetPtr(outputTransformPtr);
 
 		if (inputCalibrationPtr != NULL){
-			m_outputCalibrationPtr.SetPtr(m_outputCalibrationPtr->CreateCombinedCalibration(*inputCalibrationPtr));
+			m_outputCalibrationPtr = m_outputCalibrationPtr->CreateCombinedCalibration(*inputCalibrationPtr);
 		}
 
 		return WS_OK;

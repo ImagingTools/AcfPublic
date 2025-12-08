@@ -85,7 +85,7 @@ bool CPointGrid::Serialize(iser::IArchive& archive)
 
 // reimplemented (istd::IChangeable)
 
-istd::IChangeable* CPointGrid::CloneMe(CompatibilityMode mode) const
+istd::IChangeableUniquePtr CPointGrid::CloneMe(CompatibilityMode mode) const
 {
 	istd::TDelPtr<CPointGrid> retVal(new CPointGrid);
 

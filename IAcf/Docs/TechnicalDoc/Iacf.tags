@@ -627,10 +627,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>a9ab4834806672a6ad41c016bd2e527ce</anchor>
+      <anchor>af26ceee2123262d79d23b219f31ec050</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -732,10 +732,10 @@
       <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiocv_1_1_c_lens_distorsion_calibration.html</anchorfile>
-      <anchor>afee97e1a189b086b20e20f183997253c</anchor>
+      <anchor>a673c605650717ffcd26320ecae3af88f</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1669,10 +1669,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>a0d9439c313b93fab9b7d4be1bf5eb00f</anchor>
+      <anchor>aa40d1c1fc2457975878fd134b8f739b3</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -1774,10 +1774,10 @@
       <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiocv_1_1_c_ocv_intrinsic_camera_calibration.html</anchorfile>
-      <anchor>a7dcf17f56f283faa43e61b5788128353</anchor>
+      <anchor>a01ab85b63e3d9d86a11e36560d19dbd8</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">

@@ -28,7 +28,7 @@
 #include <QtCore/QVariant>
 
 // ACF includes
-#include <istd/TSmartPtr.h>
+#include <istd/TInterfacePtr.h>
 #include <istd/IChangeable.h>
 
 
@@ -156,7 +156,7 @@ public:
 };
 
 
-typedef istd::TSmartPtr<IDocumentMetaInfo> MetaInfoPtr;
+typedef istd::TSharedInterfacePtr<IDocumentMetaInfo> MetaInfoPtr;
 
 
 } // namespace idoc

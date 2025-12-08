@@ -20,15 +20,12 @@
 ********************************************************************************/
 
 
-#ifndef imod_TModelWrap_included
-#define imod_TModelWrap_included
+#pragma once
 
 
 #include <istd/TDelPtr.h>
 #include <istd/IChangeable.h>
-
 #include <iser/TCopySerializedWrap.h>
-
 #include <imod/CModelBase.h>
 
 
@@ -56,7 +53,7 @@ public:
 
 	// pseudo-reimplemented (istd::IChangeable)
 	virtual int GetSupportedOperations() const override;
-	virtual istd::IChangeable* CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const override;
+	virtual istd::TUniqueInterfacePtr<istd::IChangeable> CloneMe(istd::IChangeable::CompatibilityMode mode = istd::IChangeable::CM_WITHOUT_REFS) const override;
 	virtual void BeginChanges(const istd::IChangeable::ChangeSet& changeSet) override;
 	virtual void EndChanges(const istd::IChangeable::ChangeSet& changeSet) override;
 	virtual void BeginChangeGroup(const istd::IChangeable::ChangeSet& changeSet) override;
@@ -99,15 +96,15 @@ int TModelWrap<Base>::GetSupportedOperations() const
 
 
 template <class Base>
-istd::IChangeable* TModelWrap<Base>::CloneMe(istd::IChangeable::CompatibilityMode mode) const
+istd::IChangeableUniquePtr TModelWrap<Base>::CloneMe(istd::IChangeable::CompatibilityMode mode) const
 {
-	istd::TDelPtr< TModelWrap<Base> > clonePtr(new TModelWrap<Base>());
+	istd::IChangeableUniquePtr clonePtr(new TModelWrap<Base>());
 
 	if (clonePtr->CopyFrom(*this, mode)){
-		return clonePtr.PopPtr();
+		return clonePtr;
 	}
 
-	return NULL;
+	return istd::IChangeableUniquePtr();
 }
 
 
@@ -158,8 +155,5 @@ void TModelWrap<Base>::OnEndGlobalChanges(const istd::IChangeable::ChangeSet& ch
 
 
 } // namespace imod
-
-
-#endif // !imod_TModelWrap_included
 
 

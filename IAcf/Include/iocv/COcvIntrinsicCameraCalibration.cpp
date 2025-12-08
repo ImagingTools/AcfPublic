@@ -97,7 +97,7 @@ const imath::IUnitInfo* COcvIntrinsicCameraCalibration::GetResultUnitInfo() cons
 }
 
 
-const i2d::ICalibration2d* COcvIntrinsicCameraCalibration::CreateCombinedCalibration(const ITransformation2d& /*transformation*/) const
+istd::TUniqueInterfacePtr<i2d::ICalibration2d> COcvIntrinsicCameraCalibration::CreateCombinedCalibration(const ITransformation2d& /*transformation*/) const
 {
 	return NULL;
 }
@@ -329,7 +329,7 @@ bool COcvIntrinsicCameraCalibration::IsEqual(const istd::IChangeable& object) co
 }
 
 
-istd::IChangeable* COcvIntrinsicCameraCalibration::CloneMe(CompatibilityMode /*mode*/) const
+istd::IChangeableUniquePtr COcvIntrinsicCameraCalibration::CloneMe(CompatibilityMode /*mode*/) const
 {
 	return new COcvIntrinsicCameraCalibration(*this);
 }

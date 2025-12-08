@@ -4121,10 +4121,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classicalib_1_1_c_affine_calibration2d.html</anchorfile>
-      <anchor>a8125fac595203b3e3080fb401826e84a</anchor>
+      <anchor>a2fc17ce9beb1e164f5b2f7bc17fb50d7</anchor>
       <arglist>(const i2d::ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -4142,10 +4142,10 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classicalib_1_1_c_affine_calibration2d.html</anchorfile>
-      <anchor>aa3641609a4c0d7d696316f7667904ae5</anchor>
+      <anchor>a81d25ede1f5685ad3d19cd8a34bde3d4</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5611,12 +5611,12 @@
   <compound kind="class">
     <name>icam::CBitmapSupplierMultiplexerComp</name>
     <filename>classicam_1_1_c_bitmap_supplier_multiplexer_comp.html</filename>
-    <base>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</base>
+    <base>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</base>
     <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_bitmap_supplier_multiplexer_comp.html</anchorfile>
-      <anchor>a27d3b91a6be62e73dca4ab5796299ec9</anchor>
+      <anchor>aafe195c69d48f9e146febf69f398ae33</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -5730,10 +5730,10 @@
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiblob_1_1_c_blob_feature.html</anchorfile>
-      <anchor>ad914bc208667d2f4ad743a820c8409a2</anchor>
+      <anchor>a62c47c69d423dda87a7b372470afdb4f</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -6433,119 +6433,119 @@
       <type>virtual const i2d::CRectangle *</type>
       <name>GetArgumentArea</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a5bd44ac1b537c51acca1a38d1b07074a</anchor>
-      <arglist>() const</arglist>
+      <anchor>af8c2c2f0e8de1e27fa3bef603a28ba5c</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const i2d::CRectangle *</type>
       <name>GetResultArea</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a7dbb5f359cb2da40aa2e2dcff9afb1dc</anchor>
-      <arglist>() const</arglist>
+      <anchor>add76c9899cd872bd063e4832e708d3b0</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetArgumentUnitInfo</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>aac6dee9758c9582ef46fabc98842c3a7</anchor>
-      <arglist>() const</arglist>
+      <anchor>a49f3db03b8ba139cea6e341d4f415a47</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual const imath::IUnitInfo *</type>
       <name>GetResultUnitInfo</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>ab2496cca2434fc35ebffa2745789716c</anchor>
-      <arglist>() const</arglist>
+      <anchor>af26a78e877cbf9ce8224aa2d92d02180</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a59dadacc5ac2150dbc927aa169c543c4</anchor>
-      <arglist>(const ITransformation2d &amp;transformation) const</arglist>
+      <anchor>aa5606c38c503aa0d34b4d88ff38213db</anchor>
+      <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual int</type>
       <name>GetTransformationFlags</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a67d10dff4baea755fff22139ae3d2e3e</anchor>
-      <arglist>() const</arglist>
+      <anchor>a1038bb7a4763219aed26ece5543671bb</anchor>
+      <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetDistance</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a76334811ce5cf9b75f28bd00f1260fbd</anchor>
-      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>a0e737be9160e569277b61b85798496ce</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPos1, const i2d::CVector2d &amp;origPos2, double &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetPositionAt</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>abccd0aa59eea7fcc6bb6a89975738485</anchor>
-      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>a1cc59c4107f89659ccf1f3720b6b5bcc</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvPositionAt</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>ac6937eff8d053b9458b301ab87731007</anchor>
-      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>aea5b07f6481607da7d583422dd753972</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CVector2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetLocalTransform</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a848423f328462c795ae06fd172e2f6e8</anchor>
-      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>a975ebdcf50a0de25fe9feb24d2400a2d</anchor>
+      <arglist>(const i2d::CVector2d &amp;origPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetLocalInvTransform</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a50ef7a00f37e0a11a6c8b29788f525f8</anchor>
-      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const</arglist>
+      <anchor>aa65bfacec7b9f9a3c60e86a506ee05f1</anchor>
+      <arglist>(const i2d::CVector2d &amp;transfPosition, i2d::CAffine2d &amp;result, ExactnessMode mode=EM_NONE) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetInvValueAt</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>af26b3804693e4cd114e5d919592a26bd</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const</arglist>
+      <anchor>ad06fd65da520e1871f0151e990fe4402</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetInvValueAt</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a7a429f341823f83304d01994321981d0</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument) const</arglist>
+      <anchor>a1d955ccefab8878fe4e728caed94dff9</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>GetValueAt</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a7cac1cf6fdaa430e78fb9875382db3ce</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const</arglist>
+      <anchor>ac8c53cf75cde724f9ad80e06077ed18c</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument, i2d::CVector2d &amp;result) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual i2d::CVector2d</type>
       <name>GetValueAt</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a11f91b0f75339c02e12761031bdd82ec</anchor>
-      <arglist>(const i2d::CVector2d &amp;argument) const</arglist>
+      <anchor>af0cb4e88a976e41b14bc4d93826a189a</anchor>
+      <arglist>(const i2d::CVector2d &amp;argument) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
       <type>virtual bool</type>
       <name>Serialize</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a04dd91530a050a151515ddc6b33846f9</anchor>
-      <arglist>(iser::IArchive &amp;archive)</arglist>
+      <anchor>a33edfd76fe4b96a63286e48288347fd1</anchor>
+      <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classicalib_1_1_c_calibration2d_proxy_comp.html</anchorfile>
-      <anchor>a2cd590041e7a242fa977189d8562398c</anchor>
+      <anchor>adb5f01cbca9db341b18d612298e7ee4f</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const</arglist>
     </member>
     <member kind="function" protection="protected" virtualness="virtual">
@@ -12038,10 +12038,10 @@
       <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classifileproc_1_1_c_file_naming_params.html</anchorfile>
-      <anchor>a938d6d7defcaeeee35ff0c117f3aef4a</anchor>
+      <anchor>a988dd70e62319c5cb88235329ff40685</anchor>
       <arglist>(istd::IChangeable::CompatibilityMode mode=istd::IChangeable::CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -12609,10 +12609,10 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_c_general_data_sequence.html</anchorfile>
-      <anchor>ad41d7ad2ecfef5041194dc32d34cefc9</anchor>
+      <anchor>aed3ae88bb1a0f4faccdea963426b8b41</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
@@ -12856,10 +12856,10 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_c_general_numeric_value.html</anchorfile>
-      <anchor>ad671407635bde5e7c588f0bd57fdac12</anchor>
+      <anchor>a1c4b55afbf0056422f19b36318313eeb</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
@@ -13051,10 +13051,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiipr_1_1_c_geometry_message.html</anchorfile>
-      <anchor>a7a3f4cc277d5105fcd6ad362b57ee2b4</anchor>
+      <anchor>ae1ffeecba2709991ed5e60b5dc670365</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" static="yes">
@@ -16224,10 +16224,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const i2d::ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classicalib_1_1_c_l_u_t_calibration2d.html</anchorfile>
-      <anchor>ac471b7463baa387de821c35478aed83c</anchor>
+      <anchor>ae1a95458633cd0c1d14600f0d41939c7</anchor>
       <arglist>(const i2d::ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -16315,10 +16315,10 @@
       <arglist>(const istd::IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classicalib_1_1_c_l_u_t_calibration2d.html</anchorfile>
-      <anchor>abfee6d39866ead6b5fb44af98c2a9ee5</anchor>
+      <anchor>a1b581c5b6262db14fba7d803f99796f1</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17530,12 +17530,12 @@
   <compound kind="class">
     <name>iipr::CMultiPointPosCorrSupplierComp</name>
     <filename>classiipr_1_1_c_multi_point_pos_corr_supplier_comp.html</filename>
-    <base>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt; &gt;</base>
+    <base>iinsp::TSupplierCompWrap&lt; istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt; &gt;</base>
     <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classiipr_1_1_c_multi_point_pos_corr_supplier_comp.html</anchorfile>
-      <anchor>ad339339c27600c58dda6b472480dcebb</anchor>
+      <anchor>a6d1a4f687c5634a464476ea271a0973c</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -17653,10 +17653,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classicalib_1_1_c_none_calibration2d.html</anchorfile>
-      <anchor>a9fc51c763527d1681a487122581a48ba</anchor>
+      <anchor>a88638a8d52cf9f9170a4b13cbbfc0c1f</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -18472,10 +18472,10 @@
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiipr_1_1_c_object_feature.html</anchorfile>
-      <anchor>a4bf9ca4aaa74fceb81b5f49d6db59140</anchor>
+      <anchor>ad5609506c3469df2eb1ad8cbaf5e44e5</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
@@ -19162,10 +19162,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classicalib_1_1_c_perspective_calibration2d.html</anchorfile>
-      <anchor>a0b5fe2e79536b350e152e934ecaa350a</anchor>
+      <anchor>a4e95f9b87a306f443a91ebe6344ff37f</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19267,10 +19267,10 @@
       <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classicalib_1_1_c_perspective_calibration2d.html</anchorfile>
-      <anchor>afb3a1e06392d92e57669d75a5edf790a</anchor>
+      <anchor>a6d8cb364a445ce2eabcdfa1d0e80ce48</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19467,10 +19467,10 @@
       <arglist>(iser::IArchive &amp;archive) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classicalib_1_1_c_point_grid.html</anchorfile>
-      <anchor>a8b18226f9e033c902e7930a85c7de768</anchor>
+      <anchor>ae323220efb1dd8b335d5096496250a70</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -19528,10 +19528,10 @@
       <arglist>(ValueTypeId valueTypeId) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiipr_1_1_c_point_grid_feature.html</anchorfile>
-      <anchor>aa6a9fb00b9da743af9b360a5e0c7fb15</anchor>
+      <anchor>ad776dcd592d805b614cef9217765f276</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
@@ -19583,10 +19583,10 @@
       <arglist>() override</arglist>
     </member>
     <member kind="variable" protection="protected">
-      <type>istd::TDelPtr&lt; const i2d::ICalibration2d &gt;</type>
+      <type>istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>m_outputCalibrationPtr</name>
       <anchorfile>classiipr_1_1_c_position_from_image_supplier_comp.html</anchorfile>
-      <anchor>ad2ed01ca1a3ed5c8d263f999b75adb98</anchor>
+      <anchor>afb9098663545062df6720710e7ccbfe2</anchor>
       <arglist></arglist>
     </member>
   </compound>
@@ -23805,10 +23805,10 @@
       <arglist>(const IChangeable &amp;object, CompatibilityMode mode=CM_WITHOUT_REFS) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiipr_1_1_c_search_feature.html</anchorfile>
-      <anchor>a0de448536eaa9c1d303bc4c073e3bcd1</anchor>
+      <anchor>aa4e9034e8c1b4bdc46a5f0e489ad4aa5</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
   </compound>
@@ -24000,12 +24000,12 @@
   <compound kind="class">
     <name>icam::CSelectableBitmapSupplierComp</name>
     <filename>classicam_1_1_c_selectable_bitmap_supplier_comp.html</filename>
-    <base>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</base>
+    <base>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TUniqueInterfacePtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</base>
     <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TUniqueInterfacePtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_selectable_bitmap_supplier_comp.html</anchorfile>
-      <anchor>a0878648031fd0641b8b42c19a60c19e2</anchor>
+      <anchor>a9687dd577c714da2bf4e0e50b4bd11fc</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -24702,10 +24702,10 @@
       <arglist>() const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual const ICalibration2d *</type>
+      <type>virtual istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;</type>
       <name>CreateCombinedCalibration</name>
       <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
-      <anchor>a628f89a561ebfd5a1bd4010b29d52e5e</anchor>
+      <anchor>a1d3e5a027a0f22e53455a1ce90a90a01</anchor>
       <arglist>(const ITransformation2d &amp;transformation) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -24807,10 +24807,10 @@
       <arglist>(const istd::IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classicalib_1_1_c_simple_lens_correction.html</anchorfile>
-      <anchor>a6b78875f8b38ee432567fa94804229eb</anchor>
+      <anchor>af3d43e3d2086828dd4969bb6adc062d4</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -25178,12 +25178,12 @@
   <compound kind="class">
     <name>icam::CSnapBitmapSupplierCompBase</name>
     <filename>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</filename>
-    <base>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</base>
+    <base>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</base>
     <member kind="typedef">
-      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TDelPtr&lt; const i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</type>
+      <type>iinsp::TSupplierCompWrap&lt; QPair&lt; istd::TUniqueInterfacePtr&lt; i2d::ICalibration2d &gt;, iimg::IBitmapSharedPtr &gt; &gt;</type>
       <name>BaseClass</name>
       <anchorfile>classicam_1_1_c_snap_bitmap_supplier_comp_base.html</anchorfile>
-      <anchor>a7c82b4ec410706227c130d814f5eda02</anchor>
+      <anchor>a3c17c74de6b2e449b593e011cbd08fd1</anchor>
       <arglist></arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -28760,10 +28760,10 @@
       <arglist>(const IChangeable &amp;object) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classiweb_1_1_c_web_server_status.html</anchorfile>
-      <anchor>a4beec5421c7fab424d5b5b3598d759d2</anchor>
+      <anchor>a407775f1dd800d3d1f4c4ee2577b922b</anchor>
       <arglist>(CompatibilityMode mode=CM_WITHOUT_REFS) const override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
@@ -38626,7 +38626,7 @@
       <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_STRICT) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_t_measurement_message.html</anchorfile>
       <anchor>a86a6f74f170bca1937f28fb210a0df3d</anchor>
@@ -38708,7 +38708,7 @@
       <arglist>(const istd::IChangeable &amp;object, istd::IChangeable::CompatibilityMode mode=CM_STRICT) override</arglist>
     </member>
     <member kind="function" virtualness="virtual">
-      <type>virtual istd::IChangeable *</type>
+      <type>virtual istd::IChangeableUniquePtr</type>
       <name>CloneMe</name>
       <anchorfile>classimeas_1_1_t_measurement_value.html</anchorfile>
       <anchor>a3dd04e2e84bfe35aa5113df2108c8ae2</anchor>
@@ -39523,10 +39523,10 @@
       <arglist></arglist>
     </member>
     <member kind="typedef" protection="protected">
-      <type>QMap&lt; const iqt2d::IViewProvider *, istd::TDelPtr&lt; i2d::ICalibration2d &gt; &gt;</type>
+      <type>QMap&lt; const iqt2d::IViewProvider *, istd::TSharedInterfacePtr&lt; i2d::ICalibration2d &gt; &gt;</type>
       <name>ProviderToCalibrationMap</name>
       <anchorfile>classiqtinsp_1_1_t_supplier_gui_comp_base.html</anchorfile>
-      <anchor>a98c8315e8c42118a60222ab7f80bf5bf</anchor>
+      <anchor>a4f332df00c0f2736847a0df2dd2ed1f3</anchor>
       <arglist></arglist>
     </member>
     <member kind="enumvalue" protection="protected">
@@ -39888,10 +39888,10 @@
     <class kind="class">icalib::CSimpleLensCorrectionComp</class>
     <class kind="class">icalib::CStaticCalibrationProviderComp</class>
     <member kind="function">
-      <type>istd::IChangeable *</type>
+      <type>istd::IChangeableUniquePtr</type>
       <name>FactorizeFrom</name>
       <anchorfile>namespaceicalib.html</anchorfile>
-      <anchor>aa3631ef2bfe08336efe89e708e91b53d</anchor>
+      <anchor>acda0c051cf6e7f8858d2060c2c9dd976</anchor>
       <arglist>(const istd::IChangeable *calibPtr)</arglist>
     </member>
   </compound>

@@ -65,7 +65,7 @@ const imath::IUnitInfo* CLensDistorsionCalibration::GetResultUnitInfo() const
 }
 
 
-const i2d::ICalibration2d* CLensDistorsionCalibration::CreateCombinedCalibration(const ITransformation2d& /*transformation*/) const
+istd::TUniqueInterfacePtr<i2d::ICalibration2d> CLensDistorsionCalibration::CreateCombinedCalibration(const ITransformation2d& /*transformation*/) const
 {
 	return NULL;
 }
@@ -234,7 +234,7 @@ bool CLensDistorsionCalibration::IsEqual(const istd::IChangeable& object) const
 }
 
 
-istd::IChangeable* CLensDistorsionCalibration::CloneMe(CompatibilityMode /*mode*/) const
+istd::IChangeableUniquePtr CLensDistorsionCalibration::CloneMe(CompatibilityMode /*mode*/) const
 {
 	return new CLensDistorsionCalibration(*this);
 }

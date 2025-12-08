@@ -86,7 +86,7 @@ imath::CVarVector CPointGridFeature::GetComponentValue(CPointGridFeature::ValueT
 
 // reimplemented (istd::IChangeable)
 
-istd::IChangeable* CPointGridFeature::CloneMe(CompatibilityMode mode) const
+istd::IChangeableUniquePtr CPointGridFeature::CloneMe(CompatibilityMode mode) const
 {
 	istd::TDelPtr<CPointGridFeature> retVal(new CPointGridFeature);
 

@@ -352,15 +352,14 @@ bool CStandardDocumentMetaInfo::CopyFrom(const IChangeable& object, Compatibilit
 }
 
 
-istd::IChangeable* CStandardDocumentMetaInfo::CloneMe(CompatibilityMode mode) const
+istd::IChangeableUniquePtr CStandardDocumentMetaInfo::CloneMe(CompatibilityMode mode) const
 {
-	istd::TDelPtr<CStandardDocumentMetaInfo> clonePtr(new CStandardDocumentMetaInfo);
-	if (clonePtr->CopyFrom(*this, mode))
-	{
-		return clonePtr.PopPtr();
+	istd::IChangeableUniquePtr clonePtr(new CStandardDocumentMetaInfo);
+	if (clonePtr->CopyFrom(*this, mode)){
+		return clonePtr;
 	}
 
-	return NULL;
+	return istd::IChangeableUniquePtr();
 }
 
 
