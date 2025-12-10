@@ -70,6 +70,8 @@ public:
 
 	void SetDrawBorder(bool on);
 
+	void SetMousePointerCursor(int mode, const QCursor& cursor);
+
 	virtual void SetEditMode(int mode);
 
 	// reimplemented (iview::IShapeView)

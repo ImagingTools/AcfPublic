@@ -149,6 +149,12 @@ void CViewport::SetDrawBorder(bool on)
 }
 
 
+void CViewport::SetMousePointerCursor(int mode, const QCursor& cursor)
+{
+	m_mousePointerModes[mode] = cursor;
+}
+
+
 // reimplemented (iview::IShapeView)
 
 void CViewport::SetFitArea(const i2d::CRectangle& area)
@@ -388,7 +394,7 @@ void CViewport::mousePressEvent(QMouseEvent* eventPtr)
 	istd::CIndex2d pos = iqt::GetCIndex2d(eventPtr->pos());
 	Qt::MouseButton buttonState = eventPtr->button();
 
-	bool isConsumed = BaseClass::OnMouseButton(pos, buttonState, true);
+	bool isConsumed = OnMouseButton(pos, buttonState, true);
 	if (isConsumed){
 		Update();
 	}
@@ -408,7 +414,7 @@ void CViewport::mouseReleaseEvent(QMouseEvent* eventPtr)
 
 	Qt::MouseButton buttonState = eventPtr->button();
 
-	bool isConsumed = BaseClass::OnMouseButton(pos, buttonState, false);
+	bool isConsumed = OnMouseButton(pos, buttonState, false);
 	if (isConsumed){
 		Update();
 	}

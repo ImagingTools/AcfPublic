@@ -135,8 +135,8 @@ Q_SIGNALS:
 	void OnCloseSignal();
 
 protected:
-	void UpdateZoomInOutState();
-	void UpdateScrollbarsValues();
+	virtual void UpdateZoomInOutState();
+	virtual void UpdateScrollbarsValues();
 
 	virtual bool OnKeyPressed(int key, Qt::KeyboardModifiers modifiers);
 
@@ -173,7 +173,7 @@ protected:
 
 	iview::CViewport* m_viewPtr = nullptr;
 
-private:
+protected:
 	bool ConnectSignalSlots();
 
 	QVBoxLayout* m_mainLayoutPtr;
