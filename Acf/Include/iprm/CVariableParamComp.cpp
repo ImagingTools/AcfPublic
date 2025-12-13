@@ -65,7 +65,7 @@ QByteArray CVariableParamComp::GetParameterTypeId() const
 
 iser::ISerializable* CVariableParamComp::GetParameter() const
 {
-	return m_paramPtr.GetPtr();
+	return const_cast<iser::ISerializable*>(m_paramPtr.GetPtr());
 }
 
 

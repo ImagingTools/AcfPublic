@@ -133,7 +133,7 @@ public:
 
 
 	template <class T>
-	bool SetCastedPtr(const TSharedInterfacePtr<T>& source)
+	bool SetCastedPtr(TSharedInterfacePtr<T>& source)
 	{
 		if (!source.IsValid()) {
 			Reset();
