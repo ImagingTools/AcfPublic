@@ -20,27 +20,29 @@
 ********************************************************************************/
 
 
-#ifndef istd_AcfVersion_included
-#define istd_AcfVersion_included
+#pragma once
 
 
-namespace istd
-{
+#include <itest/CStandardTestExecutor.h>
+
+// Qt includes
+#include <QtCore/QCoreApplication>
+
 
 /**
-	Enumeration for reflecting the state of ACF's SVN repository.
+	Macro to define the standard main function for ACF test executables.
+	This eliminates code duplication across test main.cpp files.
+	
+	Usage:
+	#include <itest/TestMain.h>
+	I_TEST_MAIN()
 */
-enum RepositoryState
-{
-	RS_ORIGINAL_VERSION =  5454,
-	RS_DIRTY_FLAG = 0,
-	RS_USE_VERSION = RS_ORIGINAL_VERSION + RS_DIRTY_FLAG
-};
-
-
-} // namespace istd
-
-
-#endif // !istd_AcfVersion_included
+#define I_TEST_MAIN() \
+int main(int argc, char *argv[]) \
+{ \
+	QCoreApplication app(argc, argv); \
+	itest::CStandardTestExecutor instance; \
+	return instance.RunTests(argc, argv); \
+}
 
 

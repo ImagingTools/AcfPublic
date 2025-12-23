@@ -20,8 +20,7 @@
 ********************************************************************************/
 
 
-#ifndef iser_CMemoryReadArchive_included
-#define iser_CMemoryReadArchive_included
+#pragma once
 
 
 // ACF includes
@@ -79,13 +78,24 @@ protected:
 	// reimplemented (iser::CArchiveBase)
 	virtual int GetMaxStringLength() const override;
 
+	/**
+		Pointer to the memory buffer used for reading data.
+	*/
 	const quint8* m_bufferPtr;
+
+	/**
+		Size of the memory buffer used for reading data.
+	*/
 	int m_bufferSize;
 
 	/**
 		Current position in the buffer from which data will be read next.
 	*/
 	int m_readPosition;
+
+	/**
+		Indicates whether the archive is in valid state.
+	*/
 	bool m_isValid;
 
 	/**
@@ -96,8 +106,5 @@ protected:
 
 
 } // namespace iser
-
-
-#endif // !iser_CMemoryReadArchive_included
 
 
