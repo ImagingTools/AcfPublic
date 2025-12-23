@@ -830,7 +830,7 @@ inline TRange<ValueType>& TRange<ValueType>::operator*=(double value)
 	m_minValue *= value;
 	m_maxValue *= value;
 
-	return this;
+	return *this;
 }
 
 
@@ -847,7 +847,7 @@ inline TRange<ValueType>& TRange<ValueType>::operator/=(double value)
 		m_minValue = m_maxValue = 0.0;
 	}
 
-	return this;
+	return *this;
 }
 
 

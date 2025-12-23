@@ -20,10 +20,10 @@
 ********************************************************************************/
 
 
-#ifndef icomp_CBaseComponentStaticInfo_included
-#define icomp_CBaseComponentStaticInfo_included
+#pragma once
 
 
+// ACF includes
 #include <icomp/IRealComponentStaticInfo.h>
 #include <icomp/CComponentStaticInfoBase.h>
 
@@ -104,8 +104,5 @@ private:
 
 
 } // namespace icomp
-
-
-#endif // !icomp_CBaseComponentStaticInfo_included
 
 

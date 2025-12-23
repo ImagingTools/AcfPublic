@@ -81,8 +81,17 @@ protected:
 
 	const quint8* m_bufferPtr;
 	int m_bufferSize;
+
+	/**
+		Current position in the buffer from which data will be read next.
+	*/
 	int m_readPosition;
 	bool m_isValid;
+
+	/**
+		Start position of actual data in the buffer (after header, if any)
+	*/
+	int m_startPosition;
 };
 
 

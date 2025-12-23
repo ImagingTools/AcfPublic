@@ -127,6 +127,9 @@ SUBDIRS += AcfLoc
 AcfLoc.file = ../../Impl/AcfLoc/QMake/AcfLoc.pro
 
 # Tests
+SUBDIRS += i2dTest
+i2dTest.file = ../../Include/i2d/Test/QMake/i2dTest.pro
+
 SUBDIRS += istdTest
 istdTest.file = ../../Include/istd/Test/QMake/istdTest.pro
 

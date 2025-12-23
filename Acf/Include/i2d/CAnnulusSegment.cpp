@@ -111,8 +111,10 @@ void CAnnulusSegment::SetEndAngle(double angle)
 
 bool CAnnulusSegment::Contains(const i2d::CVector2d& point) const
 {
-	double r = point.GetLength();
-	double phi = qAtan2(point.GetY(), point.GetX());
+	i2d::CVector2d refPoint = point - GetPosition();
+
+	double r = refPoint.GetLength();
+	double phi = qAtan2(refPoint.GetY(), refPoint.GetX());
 
 	if (r < GetInnerRadius() || r > GetOuterRadius()){
 		return false;
@@ -129,12 +131,12 @@ bool CAnnulusSegment::Contains(const i2d::CVector2d& point) const
 		phi += I_2PI;
 
 	if (GetBeginAngle() < GetEndAngle()){
-		if (phi > GetBeginAngle() && phi < GetEndAngle()){
+		if (phi >= GetBeginAngle() && phi <= GetEndAngle()){
 			return true;
 		}
 	}
 	else if (GetBeginAngle() > GetEndAngle()){
-		if (phi > GetBeginAngle() && phi > GetEndAngle()){
+		if (phi >= GetBeginAngle() && phi <= GetEndAngle()){
 			return true;
 		}
 	}

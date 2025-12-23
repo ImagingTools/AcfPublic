@@ -558,7 +558,7 @@ void TRanges<ValueType>::Union(const TRanges<ValueType>& rangesList)
 				}
 				else if (point < listPoint){
 					if (listState){
-						iter = m_switchPoints.remove(iter);
+						iter = m_switchPoints.erase(iter);
 					}
 					else{
 						++iter;
@@ -575,7 +575,7 @@ void TRanges<ValueType>::Union(const TRanges<ValueType>& rangesList)
 			}
 			else{
 				if (listState){
-					m_switchPoints.remove(iter, m_switchPoints.end());
+					m_switchPoints.erase(iter, m_switchPoints.end());
 				}
 
 				return;
@@ -741,7 +741,7 @@ void TRanges<ValueType>::Intersection(const TRanges<ValueType>& rangesList)
 				}
 				else if (point < listPoint){
 					if (!listState){
-						iter = m_switchPoints.remove(iter);
+						iter = m_switchPoints.erase(iter);
 					}
 					else{
 						++iter;
@@ -758,7 +758,7 @@ void TRanges<ValueType>::Intersection(const TRanges<ValueType>& rangesList)
 			}
 			else{
 				if (!listState){
-					m_switchPoints.remove(iter, m_switchPoints.end());
+					m_switchPoints.erase(iter, m_switchPoints.end());
 				}
 
 				return;
@@ -833,7 +833,7 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 
 			// range can be moved using kernel size
 			m_switchPoints.erase(iter++);
-			iter = m_switchPoints.insert(iter, point - rightValueAbs);
+			iter = m_switchPoints.insert(iter, point - leftValueAbs);
 		}
 		else{
 			// move point forward
@@ -851,7 +851,7 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 
 			// range can be moved using kernel size
 			m_switchPoints.erase(iter++);
-			iter = m_switchPoints.insert(iter, point + leftValueAbs);
+			iter = m_switchPoints.insert(iter, point + rightValueAbs);
 		}
 
 		++iter;
@@ -862,7 +862,7 @@ void TRanges<ValueType>::Dilate(ValueType leftValue, ValueType rightValue)
 template <typename ValueType>
 void TRanges<ValueType>::RemoveGaps(ValueType value, bool gapState)
 {
-	if (gapState){
+	if (!gapState){
 		Dilate(value, value);
 		Erode(value, value);
 	}
